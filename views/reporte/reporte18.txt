@@ -1,0 +1,14 @@
+evento1;El Escorial(Rest);lorena arbelaez;2010-09-23;07:15:00;50000
+reunion de la empresa;Gaud&iacute;;roger;2010-05-12;08:30:00;50000
+evento de lorena;El Escorial(Rest);lorena arbelaez;2010-09-02;08:15:00;1200000
+evento lor1;Dal&iacute;;lor1;2010-09-11;11:00:00;1200001
+lorrrrrrrrrrrrrrr;Dal&iacute;;rrrr;2010-09-22;00:00:25;34
+matrimonio;Dal&iacute;;andrea;2010-09-08;12:30:00;89
+fffdddddfff;El Escorial(Rest);ffffff;2010-09-30;00:00:25;7888
+Capacitación COLPATRIA;Gaud&iacute;;César Rodríguez;2010-09-29;08:00:00;600000
+fddsf;Dal&iacute;;dfssdfsfd;2010-09-17;07:30:00;545454
+www;Mir&oacute;;www;2010-05-12;08:30:00;55
+FAMILIAR;Picasso;PDRO;2010-09-11;07:00:00;1000000
+hhhhh;Dal&iacute;;hhhh;2010-09-08;00:00:25;4
+
+Total eventos corporativos (12)

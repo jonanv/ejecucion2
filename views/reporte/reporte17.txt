@@ -1,0 +1,8 @@
+234;2010-09-17;08:30:00;servicio de sauna...;sauna
+120;2010-09-13;09:00:00;njnj;turco
+123;2010-09-25;09:15:00;ee;gimnacio
+145;2010-09-01;10:00:00;cdcddc;turco
+serv pruba foto;2010-09-22;10:15:00;cdcddc;sauna
+706;2010-09-22;09:45:00;Temperatura máxima de 50 grados;sauna
+Total  (6)
+Desde la fecha 2010-09-01 hasta 2010-09-30

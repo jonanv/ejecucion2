@@ -1,0 +1,6 @@
+1;2010-09-18;11:15:00;servicio cuarto de lino;colchon
+1;2010-09-22;07:45:00;njn;pantalon
+1;2010-09-28;08:00:00;cxc;1
+1;2010-10-06;08:00:00;dsds;Almohada
+Total  (4)
+Desde la fecha 2010-07-01 hasta 2010-11-24

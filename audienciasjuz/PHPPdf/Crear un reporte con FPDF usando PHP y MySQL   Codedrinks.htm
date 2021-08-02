@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/ -->
+<html lang="es-ES"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="http://cdn.api.twitter.com/1/urls/count.json?callback=WPCOMSharing.update_twitter_count&url=http%3A%2F%2Fwww.codedrinks.com%2Fcrear-un-reporte-con-fpdf-usando-php-y-mysql%2F&_=1377402836296"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crear un reporte con FPDF usando PHP y MySQL | Codedrinks</title>
+
+<link rel="alternate" type="application/rss+xml" title="Codedrinks RSS Feed" href="http://www.codedrinks.com/feed/">
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" media="all" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/style.css">
+<link href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/css" rel="stylesheet" type="text/css">
+<link href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/css(1)" rel="stylesheet" type="text/css">
+<script src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/ddsmoothmenu.js" type="text/javascript"></script><style type="text/css"></style>
+<script src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/custom.js" type="text/javascript"></script>
+
+<!-- respond.js (add media query support for IE) -->
+<!--[if lt IE 9]>
+	<script src="http://www.codedrinks.com/wp-content/themes/codedrink/js/respond.js"></script>
+<![endif]-->
+
+<!-- html5.js (HTML5 Shiv for IE) -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- wp_header -->
+<link rel="alternate" type="application/rss+xml" title="Codedrinks » Crear un reporte con FPDF usando PHP y MySQL RSS de los comentarios" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/feed/">
+<link rel="stylesheet" id="jetpack-widgets-css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="sharedaddy-css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/sharing.css" type="text/css" media="all">
+<link rel="stylesheet" id="widget-grid-and-list-css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/widget-grid-and-list.css" type="text/css" media="all">
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/jquery.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.codedrinks.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.codedrinks.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Wallpaper: Energy" href="http://www.codedrinks.com/wallpaper-energy/">
+<link rel="next" title="PostgreSQL 9.0" href="http://www.codedrinks.com/postgresql-9-0/">
+<meta name="generator" content="WordPress 3.5.2">
+<link rel="shortlink" href="http://wp.me/pUIsl-9">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Crear un reporte con FPDF usando PHP y MySQL">
+<meta property="og:url" content="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/">
+<meta property="og:description" content="En este post realizaremos un historial clínico de un paciente, en el cual contendrá los datos generales del paciente y un listado de las consultas médicas que realizo, el historial estará en format...">
+<meta property="og:site_name" content="Codedrinks">
+
+<!-- All in One SEO Pack 2.0.2 by Michael Torbert of Semper Fi Web Design[138,191] -->
+<link rel="canonical" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/Crear un reporte con FPDF usando PHP y MySQL   Codedrinks.htm">
+<!-- /all in one seo pack -->
+<link rel="stylesheet" type="text/css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/services.css"></head>
+<body class="single single-post postid-9 single-format-standard">
+	<div id="pagewrap">
+		<header id="header" class="pagewidth">
+
+			<hgroup>
+				<h1 id="site-logo"><a href="http://www.codedrinks.com/">Codedrinks</a></h1>
+				<h2 id="site-description">Compartiendo conocimiento</h2>
+			</hgroup>
+			
+			<div id="publicidad-header">
+				<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5068357563753948";
+/* Banner superior */
+google_ad_slot = "2997526584";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			</div>
+	
+
+						
+		
+
+		</header>
+		<!-- /#header -->
+		<div id="body" class="pagewidth clearfix">			
+		<div id="content" class="clearfix">
+		
+								
+					
+					
+<article id="post-9" class="post-9 post type-post status-publish format-standard hentry category-mysql category-php post clearfix ">
+
+	<time datetime="2010-09-13" class="post-date" pubdate="">
+			<div class="mes">sep</div> 			
+			<div class="anio"> 2010 </div> 
+			<div class="dia"> 13 </div> 
+	</time>
+	
+	<h1 class="post-title"><a href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/Crear un reporte con FPDF usando PHP y MySQL   Codedrinks.htm">Crear un reporte con FPDF usando PHP y MySQL</a></h1>
+
+	<p class="post-meta"> 
+		<span class="post-author">PUBLICADO POR: <a href="http://www.codedrinks.com/author/sun2012/" title="Entradas de sun2012" rel="author">sun2012</a></span>
+		<span class="post-category">CATEGORIAS:<a href="http://www.codedrinks.com/category/mysql/" title="Ver todas las entradas en MySQL" rel="category tag">MySQL</a>, <a href="http://www.codedrinks.com/category/php/" title="Ver todas las entradas en PHP" rel="category tag">PHP</a></span>
+							<span class="post-comment"><a href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/#comments" title="Comentarios en Crear un reporte con FPDF usando PHP y MySQL">32 Comentarios</a></span>
+			</p>
+	<div class="post-content">	
+	<p>En este post realizaremos un historial clínico de un paciente, en el cual contendrá los datos generales del paciente y un listado de las consultas médicas que realizo, el historial estará en formato PDF.</p>
+<p>Para realizar esto utilizaremos: el lenguaje de programación PHP, el gestor de base de datos MySQL y la librería <a href="http://www.fpdf.org/">FPDF</a>.<br>
+<span id="more-9"></span><br>
+Lo primero es realizar nuestra base de datos la cual llamaremos clínica, en donde contendrá las siguientes tablas y la siguiente estructura.</p>
+<p>Tabla pacientes</p>
+<div><div id="highlighter_321399" class="syntaxhighlighter  sql"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="sql keyword">CREATE</code> <code class="sql keyword">TABLE</code> <code class="sql plain">IF </code><code class="sql color1">NOT</code> <code class="sql plain">EXISTS `pacientes` (</code></div><div class="line number2 index1 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`id_paciente` </code><code class="sql keyword">bigint</code><code class="sql plain">(20) unsigned </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code> <code class="sql plain">AUTO_INCREMENT,</code></div><div class="line number3 index2 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`clave` </code><code class="sql keyword">varchar</code><code class="sql plain">(10) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number4 index3 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`nombre` </code><code class="sql keyword">varchar</code><code class="sql plain">(80) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number5 index4 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`apellido_paterno` </code><code class="sql keyword">varchar</code><code class="sql plain">(80) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number6 index5 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`apellido_materno` </code><code class="sql keyword">varchar</code><code class="sql plain">(80) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number7 index6 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`sexo` </code><code class="sql keyword">varchar</code><code class="sql plain">(2) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number8 index7 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`domicilio` text </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number9 index8 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql keyword">PRIMARY</code> <code class="sql keyword">KEY</code> <code class="sql plain">(`id_paciente`)</code></div><div class="line number10 index9 alt1"><code class="sql plain">) ENGINE=MyISAM&nbsp; </code><code class="sql keyword">DEFAULT</code> <code class="sql plain">CHARSET=latin1;</code></div></div></td></tr></tbody></table></div></div>
+<p>Tabla médicos</p>
+<div><div id="highlighter_231223" class="syntaxhighlighter  sql"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="sql keyword">CREATE</code> <code class="sql keyword">TABLE</code> <code class="sql plain">IF </code><code class="sql color1">NOT</code> <code class="sql plain">EXISTS `medicos` (</code></div><div class="line number2 index1 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`id_medico` </code><code class="sql keyword">bigint</code><code class="sql plain">(20) unsigned </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code> <code class="sql plain">AUTO_INCREMENT,</code></div><div class="line number3 index2 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`cedula` </code><code class="sql keyword">varchar</code><code class="sql plain">(10) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number4 index3 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`nombre_medico` </code><code class="sql keyword">varchar</code><code class="sql plain">(200) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number5 index4 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql keyword">PRIMARY</code> <code class="sql keyword">KEY</code> <code class="sql plain">(`id_medico`)</code></div><div class="line number6 index5 alt1"><code class="sql plain">) ENGINE=MyISAM </code><code class="sql keyword">DEFAULT</code> <code class="sql plain">CHARSET=latin1;</code></div></div></td></tr></tbody></table></div></div>
+<p>Tabla consultas_medicas</p>
+<div><div id="highlighter_689210" class="syntaxhighlighter  sql"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="sql keyword">CREATE</code> <code class="sql keyword">TABLE</code> <code class="sql plain">IF </code><code class="sql color1">NOT</code> <code class="sql plain">EXISTS `consultas_medicas` (</code></div><div class="line number2 index1 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`id_consulta` </code><code class="sql keyword">bigint</code><code class="sql plain">(20) unsigned </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code> <code class="sql plain">AUTO_INCREMENT,</code></div><div class="line number3 index2 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`fecha_consulta` </code><code class="sql keyword">date</code> <code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number4 index3 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`id_paciente` </code><code class="sql keyword">int</code><code class="sql plain">(5) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number5 index4 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`id_medico` </code><code class="sql keyword">int</code><code class="sql plain">(5) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number6 index5 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`consultorio` </code><code class="sql keyword">varchar</code><code class="sql plain">(20) </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number7 index6 alt2"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql plain">`diagnostico` text </code><code class="sql color1">NOT</code> <code class="sql color1">NULL</code><code class="sql plain">,</code></div><div class="line number8 index7 alt1"><code class="sql spaces">&nbsp;&nbsp;</code><code class="sql keyword">PRIMARY</code> <code class="sql keyword">KEY</code> <code class="sql plain">(`id_consulta`)</code></div><div class="line number9 index8 alt2"><code class="sql plain">) ENGINE=MyISAM </code><code class="sql keyword">DEFAULT</code> <code class="sql plain">CHARSET=latin1;</code></div></div></td></tr></tbody></table></div></div>
+<p>Des pues creamos los siguientes archivos:</p>
+<p>conexion.php<br>
+Contiene los parámetros para conectarse a la base de datos y realiza las conexiones.</p>
+<div><div id="highlighter_410531" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">&lt;php </code><code class="php keyword">class</code> <code class="php plain">DB{&nbsp;&nbsp; </code><code class="php keyword">var</code> <code class="php variable">$conect</code><code class="php plain">;&nbsp;&nbsp;&nbsp; </code><code class="php keyword">var</code> <code class="php variable">$BaseDatos</code><code class="php plain">;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="php keyword">var</code> <code class="php variable">$Servidor</code><code class="php plain">;&nbsp; </code><code class="php keyword">var</code> <code class="php variable">$Usuario</code><code class="php plain">;&nbsp;&nbsp; </code><code class="php keyword">var</code> <code class="php variable">$Clave</code><code class="php plain">;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="php keyword">function</code> <code class="php plain">DB(){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="php variable">$this</code><code class="php plain">---&gt;BaseDatos = </code><code class="php string">"clinica"</code><code class="php plain">;</code></div><div class="line number2 index1 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Servidor = </code><code class="php string">"localhost"</code><code class="php plain">;</code></div><div class="line number3 index2 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Usuario = </code><code class="php string">"clinic"</code><code class="php plain">;</code></div><div class="line number4 index3 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Clave = </code><code class="php string">"clinica123"</code><code class="php plain">;</code></div><div class="line number5 index4 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">function</code> <code class="php plain">conectar() {</code></div><div class="line number8 index7 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code><code class="php plain">(!(</code><code class="php variable">$con</code><code class="php plain">=@mysql_connect(</code><code class="php variable">$this</code><code class="php plain">-&gt;Servidor,</code><code class="php variable">$this</code><code class="php plain">-&gt;Usuario,</code><code class="php variable">$this</code><code class="php plain">-&gt;Clave))){</code></div><div class="line number9 index8 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code><code class="php string">"Error al conectar a la base de datos"</code><code class="php plain">;</code></div><div class="line number10 index9 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">exit</code><code class="php plain">();</code></div><div class="line number11 index10 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number12 index11 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code> <code class="php plain">(!@mysql_select_db(</code><code class="php variable">$this</code><code class="php plain">-&gt;BaseDatos,</code><code class="php variable">$con</code><code class="php plain">)){</code></div><div class="line number13 index12 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">"Error al seleccionar la base de datos"</code><code class="php plain">;</code></div><div class="line number14 index13 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">exit</code><code class="php plain">();</code></div><div class="line number15 index14 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number16 index15 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;conect=</code><code class="php variable">$con</code><code class="php plain">;</code></div><div class="line number17 index16 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">return</code> <code class="php plain">true;</code></div><div class="line number18 index17 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number19 index18 alt2"><code class="php plain">}</code></div><div class="line number20 index19 alt1"><code class="php plain">?&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>index.php<br>
+Realiza el listado de los pacientes en la base de datos y envía la orden de generar el archivo PDF, para ello manda el identificador del paciente por medio de la url y lo recibe el archivo reporte_historial.php por $_GET.</p>
+<div><div id="highlighter_349417" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">&lt;?php</code></div><div class="line number2 index1 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">include_once</code><code class="php plain">(</code><code class="php string">"conexion.php"</code><code class="php plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$con</code> <code class="php plain">= </code><code class="php keyword">new</code> <code class="php plain">DB;</code></div><div class="line number5 index4 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$pacientes</code> <code class="php plain">= </code><code class="php variable">$con</code><code class="php plain">-&gt;conectar();</code></div><div class="line number6 index5 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$strConsulta</code> <code class="php plain">= </code><code class="php string">"SELECT id_paciente, clave, nombre, apellido_paterno, apellido_materno from pacientes"</code><code class="php plain">;</code></div><div class="line number7 index6 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$pacientes</code> <code class="php plain">= mysql_query(</code><code class="php variable">$strConsulta</code><code class="php plain">);</code></div><div class="line number8 index7 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$numfilas</code> <code class="php plain">= mysql_num_rows(</code><code class="php variable">$pacientes</code><code class="php plain">);</code></div><div class="line number9 index8 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number10 index9 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">'&lt;table cellpadding="0" cellspacing="0" width="100%"&gt;'</code><code class="php plain">;</code></div><div class="line number11 index10 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">'&lt;thead&gt;&lt;tr&gt;&lt;td&gt;No.&lt;/td&gt;&lt;td&gt;CLAVE&lt;/td&gt;&lt;td&gt;NOMBRE&lt;/td&gt;&lt;td&gt;HISTORIAL&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;'</code><code class="php plain">;</code></div><div class="line number12 index11 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">for</code> <code class="php plain">(</code><code class="php variable">$i</code><code class="php plain">=0; </code><code class="php variable">$i</code><code class="php plain">&lt;</code><code class="php variable">$numfilas</code><code class="php plain">; </code><code class="php variable">$i</code><code class="php plain">++)</code></div><div class="line number13 index12 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">{</code></div><div class="line number14 index13 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$fila</code> <code class="php plain">= mysql_fetch_array(</code><code class="php variable">$pacientes</code><code class="php plain">);</code></div><div class="line number15 index14 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$numlista</code> <code class="php plain">= </code><code class="php variable">$i</code> <code class="php plain">+ 1;</code></div><div class="line number16 index15 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">'&lt;tr&gt;&lt;td&gt;'</code><code class="php plain">.</code><code class="php variable">$numlista</code><code class="php plain">.</code><code class="php string">'&lt;/td&gt;'</code><code class="php plain">;</code></div><div class="line number17 index16 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">'&lt;td&gt;'</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'clave'</code><code class="php plain">].</code><code class="php string">'&lt;/td&gt;'</code><code class="php plain">;</code></div><div class="line number18 index17 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">'&lt;td&gt;'</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'nombre'</code><code class="php plain">].</code><code class="php string">' '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'apellido_paterno'</code><code class="php plain">].</code><code class="php string">' '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'apellido_materno'</code><code class="php plain">].</code><code class="php string">'&lt;/td&gt;'</code><code class="php plain">;</code></div><div class="line number19 index18 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">'&lt;td&gt;&lt;a href="reporte_historial.php?id='</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'id_paciente'</code><code class="php plain">].</code><code class="php string">'"&gt;ver&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;'</code><code class="php plain">;</code></div><div class="line number20 index19 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number21 index20 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php functions">echo</code> <code class="php string">"&lt;/table&gt;"</code><code class="php plain">;</code></div><div class="line number22 index21 alt1"><code class="php plain">?&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>reporte_historial.php<br>
+Realiza el reporte mediante la librería FPDF.<br>
+1. En la primera parte llamamos a la libreria fpdf y al archivo conexion para conectar php con la base de datos.</p>
+<div><div id="highlighter_163961" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">&lt;?php </code><code class="php comments">// incluimos la libreria fpdf </code></div><div class="line number2 index1 alt1"><code class="php keyword">require</code><code class="php plain">(</code><code class="php string">'fpdf/fpdf.php'</code><code class="php plain">); </code></div><div class="line number3 index2 alt2"><code class="php comments">// incluimos la conexion a la base de datos </code></div><div class="line number4 index3 alt1"><code class="php keyword">require</code><code class="php plain">(</code><code class="php string">'conexion.php'</code><code class="php plain">);</code></div></div></td></tr></tbody></table></div></div>
+<p>2. Le insertamos una clase que tiene las siguientes funciones: crear tablas, encabezado y pie. Esta clase fue tomada de los tutoriales de la página oficial de la librería FPDF. Ya que la función multiCell no permite ordenarse por tablas y la función Cell solo funciona en un solo renglón y no mostraría cuando hay muchos más caracteres.</p>
+<div><div id="highlighter_362671" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div><div class="line number50 index49 alt1">50</div><div class="line number51 index50 alt2">51</div><div class="line number52 index51 alt1">52</div><div class="line number53 index52 alt2">53</div><div class="line number54 index53 alt1">54</div><div class="line number55 index54 alt2">55</div><div class="line number56 index55 alt1">56</div><div class="line number57 index56 alt2">57</div><div class="line number58 index57 alt1">58</div><div class="line number59 index58 alt2">59</div><div class="line number60 index59 alt1">60</div><div class="line number61 index60 alt2">61</div><div class="line number62 index61 alt1">62</div><div class="line number63 index62 alt2">63</div><div class="line number64 index63 alt1">64</div><div class="line number65 index64 alt2">65</div><div class="line number66 index65 alt1">66</div><div class="line number67 index66 alt2">67</div><div class="line number68 index67 alt1">68</div><div class="line number69 index68 alt2">69</div><div class="line number70 index69 alt1">70</div><div class="line number71 index70 alt2">71</div><div class="line number72 index71 alt1">72</div><div class="line number73 index72 alt2">73</div><div class="line number74 index73 alt1">74</div><div class="line number75 index74 alt2">75</div><div class="line number76 index75 alt1">76</div><div class="line number77 index76 alt2">77</div><div class="line number78 index77 alt1">78</div><div class="line number79 index78 alt2">79</div><div class="line number80 index79 alt1">80</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php keyword">class</code> <code class="php plain">PDF </code><code class="php keyword">extends</code> <code class="php plain">FPDF { </code><code class="php keyword">var</code> <code class="php variable">$widths</code><code class="php plain">; </code><code class="php keyword">var</code> <code class="php variable">$aligns</code><code class="php plain">; </code><code class="php keyword">function</code> <code class="php plain">SetWidths(</code><code class="php variable">$w</code><code class="php plain">) {&nbsp;&nbsp;&nbsp; </code><code class="php variable">$this</code><code class="php plain">-&gt;widths=</code><code class="php variable">$w</code><code class="php plain">;</code></div><div class="line number2 index1 alt1"><code class="php plain">}</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="php keyword">function</code> <code class="php plain">SetAligns(</code><code class="php variable">$a</code><code class="php plain">)</code></div><div class="line number5 index4 alt2"><code class="php plain">{</code></div><div class="line number6 index5 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;aligns=</code><code class="php variable">$a</code><code class="php plain">;</code></div><div class="line number7 index6 alt2"><code class="php plain">}</code></div><div class="line number8 index7 alt1">&nbsp;</div><div class="line number9 index8 alt2"><code class="php keyword">function</code> <code class="php plain">Row(</code><code class="php variable">$data</code><code class="php plain">)</code></div><div class="line number10 index9 alt1"><code class="php plain">{</code></div><div class="line number11 index10 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$nb</code><code class="php plain">=0;</code></div><div class="line number12 index11 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">for</code><code class="php plain">(</code><code class="php variable">$i</code><code class="php plain">=0;</code><code class="php variable">$iNbLines</code><code class="php plain">(</code><code class="php variable">$this</code><code class="php plain">-&gt;widths[</code><code class="php variable">$i</code><code class="php plain">],</code><code class="php variable">$data</code><code class="php plain">[</code><code class="php variable">$i</code><code class="php plain">]));</code></div><div class="line number13 index12 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$h</code><code class="php plain">=4*</code><code class="php variable">$nb</code><code class="php plain">;</code></div><div class="line number14 index13 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;CheckPageBreak(</code><code class="php variable">$h</code><code class="php plain">);</code></div><div class="line number15 index14 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">for</code><code class="php plain">(</code><code class="php variable">$i</code><code class="php plain">=0;</code><code class="php variable">$iwidths</code><code class="php plain">[</code><code class="php variable">$i</code><code class="php plain">];</code></div><div class="line number16 index15 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$a</code><code class="php plain">=isset(</code><code class="php variable">$this</code><code class="php plain">-&gt;aligns[</code><code class="php variable">$i</code><code class="php plain">]) ? </code><code class="php variable">$this</code><code class="php plain">-&gt;aligns[</code><code class="php variable">$i</code><code class="php plain">] : </code><code class="php string">'L'</code><code class="php plain">;</code></div><div class="line number17 index16 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$x</code><code class="php plain">=</code><code class="php variable">$this</code><code class="php plain">-&gt;GetX();</code></div><div class="line number18 index17 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$y</code><code class="php plain">=</code><code class="php variable">$this</code><code class="php plain">-&gt;GetY();</code></div><div class="line number19 index18 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Rect(</code><code class="php variable">$x</code><code class="php plain">,</code><code class="php variable">$y</code><code class="php plain">,</code><code class="php variable">$w</code><code class="php plain">,</code><code class="php variable">$h</code><code class="php plain">);</code></div><div class="line number20 index19 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;MultiCell(</code><code class="php variable">$w</code><code class="php plain">,4,</code><code class="php variable">$data</code><code class="php plain">[</code><code class="php variable">$i</code><code class="php plain">],0,</code><code class="php variable">$a</code><code class="php plain">);</code></div><div class="line number21 index20 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;SetXY(</code><code class="php variable">$x</code><code class="php plain">+</code><code class="php variable">$w</code><code class="php plain">,</code><code class="php variable">$y</code><code class="php plain">);</code></div><div class="line number22 index21 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number23 index22 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Ln(</code><code class="php variable">$h</code><code class="php plain">);</code></div><div class="line number24 index23 alt1"><code class="php plain">}</code></div><div class="line number25 index24 alt2">&nbsp;</div><div class="line number26 index25 alt1"><code class="php keyword">function</code> <code class="php plain">CheckPageBreak(</code><code class="php variable">$h</code><code class="php plain">)</code></div><div class="line number27 index26 alt2"><code class="php plain">{</code></div><div class="line number28 index27 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code><code class="php plain">(</code><code class="php variable">$this</code><code class="php plain">-&gt;GetY()+</code><code class="php variable">$h</code><code class="php plain">&gt;</code><code class="php variable">$this</code><code class="php plain">-&gt;PageBreakTrigger)</code></div><div class="line number29 index28 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;AddPage(</code><code class="php variable">$this</code><code class="php plain">-&gt;CurOrientation);</code></div><div class="line number30 index29 alt1"><code class="php plain">}</code></div><div class="line number31 index30 alt2">&nbsp;</div><div class="line number32 index31 alt1"><code class="php keyword">function</code> <code class="php plain">NbLines(</code><code class="php variable">$w</code><code class="php plain">,</code><code class="php variable">$txt</code><code class="php plain">)</code></div><div class="line number33 index32 alt2"><code class="php plain">{</code></div><div class="line number34 index33 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$cw</code><code class="php plain">=&amp;</code><code class="php variable">$this</code><code class="php plain">-&gt;CurrentFont[</code><code class="php string">'cw'</code><code class="php plain">];</code></div><div class="line number35 index34 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code><code class="php plain">(</code><code class="php variable">$w</code><code class="php plain">==0)</code></div><div class="line number36 index35 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$w</code><code class="php plain">=</code><code class="php variable">$this</code><code class="php plain">-&gt;w-</code><code class="php variable">$this</code><code class="php plain">-&gt;rMargin-</code><code class="php variable">$this</code><code class="php plain">-&gt;x;</code></div><div class="line number37 index36 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$wmax</code><code class="php plain">=(</code><code class="php variable">$w</code><code class="php plain">-2*</code><code class="php variable">$this</code><code class="php plain">-&gt;cMargin)*1000/</code><code class="php variable">$this</code><code class="php plain">-&gt;FontSize;</code></div><div class="line number38 index37 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$s</code><code class="php plain">=</code><code class="php functions">str_replace</code><code class="php plain">(</code><code class="php string">"\r"</code><code class="php plain">,</code><code class="php string">''</code><code class="php plain">,</code><code class="php variable">$txt</code><code class="php plain">);</code></div><div class="line number39 index38 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$nb</code><code class="php plain">=</code><code class="php functions">strlen</code><code class="php plain">(</code><code class="php variable">$s</code><code class="php plain">);</code></div><div class="line number40 index39 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code><code class="php plain">(</code><code class="php variable">$nb</code><code class="php plain">&gt;0 </code><code class="php keyword">and</code> <code class="php variable">$s</code><code class="php plain">[</code><code class="php variable">$nb</code><code class="php plain">-1]==</code><code class="php string">"\n"</code><code class="php plain">)</code></div><div class="line number41 index40 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$nb</code><code class="php plain">--;</code></div><div class="line number42 index41 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$sep</code><code class="php plain">=-1;</code></div><div class="line number43 index42 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$i</code><code class="php plain">=0;</code></div><div class="line number44 index43 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$j</code><code class="php plain">=0;</code></div><div class="line number45 index44 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$l</code><code class="php plain">=0;</code></div><div class="line number46 index45 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$nl</code><code class="php plain">=1;</code></div><div class="line number47 index46 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">while</code><code class="php plain">(</code><code class="php variable">$i</code><code class="php variable">$wmax</code><code class="php plain">)</code></div><div class="line number48 index47 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">{</code></div><div class="line number49 index48 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code><code class="php plain">(</code><code class="php variable">$sep</code><code class="php plain">==-1)</code></div><div class="line number50 index49 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">{</code></div><div class="line number51 index50 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">if</code><code class="php plain">(</code><code class="php variable">$i</code><code class="php plain">==</code><code class="php variable">$j</code><code class="php plain">)</code></div><div class="line number52 index51 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$i</code><code class="php plain">++;</code></div><div class="line number53 index52 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number54 index53 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">else</code></div><div class="line number55 index54 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$i</code><code class="php plain">=</code><code class="php variable">$sep</code><code class="php plain">+1;</code></div><div class="line number56 index55 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$sep</code><code class="php plain">=-1;</code></div><div class="line number57 index56 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$j</code><code class="php plain">=</code><code class="php variable">$i</code><code class="php plain">;</code></div><div class="line number58 index57 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$l</code><code class="php plain">=0;</code></div><div class="line number59 index58 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$nl</code><code class="php plain">++;</code></div><div class="line number60 index59 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number61 index60 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">else</code></div><div class="line number62 index61 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$i</code><code class="php plain">++;</code></div><div class="line number63 index62 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number64 index63 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">return</code> <code class="php variable">$nl</code><code class="php plain">;</code></div><div class="line number65 index64 alt2"><code class="php plain">}</code></div><div class="line number66 index65 alt1">&nbsp;</div><div class="line number67 index66 alt2"><code class="php keyword">function</code> <code class="php plain">Header()</code></div><div class="line number68 index67 alt1"><code class="php plain">{</code></div><div class="line number69 index68 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;SetFont(</code><code class="php string">'Arial'</code><code class="php plain">,</code><code class="php string">''</code><code class="php plain">,10);</code></div><div class="line number70 index69 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Text(65,14,</code><code class="php string">'Clinica el sol naciente'</code><code class="php plain">,0,</code><code class="php string">'C'</code><code class="php plain">, 0);</code></div><div class="line number71 index70 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Ln(30);</code></div><div class="line number72 index71 alt1"><code class="php plain">}</code></div><div class="line number73 index72 alt2">&nbsp;</div><div class="line number74 index73 alt1"><code class="php keyword">function</code> <code class="php plain">Footer()</code></div><div class="line number75 index74 alt2"><code class="php plain">{</code></div><div class="line number76 index75 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;SetY(-15);</code></div><div class="line number77 index76 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;SetFont(</code><code class="php string">'Arial'</code><code class="php plain">,</code><code class="php string">'B'</code><code class="php plain">,8);</code></div><div class="line number78 index77 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$this</code><code class="php plain">-&gt;Cell(100,10,</code><code class="php string">'Historial medico'</code><code class="php plain">,0,0,</code><code class="php string">'L'</code><code class="php plain">);</code></div><div class="line number79 index78 alt2"><code class="php plain">}</code></div><div class="line number80 index79 alt1"><code class="php plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>3. Recibir el id del paciente, para ello lo obtenemos mediante $_GET.</p>
+<div><div id="highlighter_532556" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php variable">$paciente</code><code class="php plain">= </code><code class="php variable">$_GET</code><code class="php plain">[</code><code class="php string">'id'</code><code class="php plain">];</code></div></div></td></tr></tbody></table></div></div>
+<p>4. Mostrar los datos del paciente.</p>
+<div><div id="highlighter_926257" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php comments">// creamos el objeto FPDF</code></div><div class="line number2 index1 alt1"><code class="php variable">$pdf</code><code class="php plain">=</code><code class="php keyword">new</code> <code class="php plain">PDF(</code><code class="php string">'L'</code><code class="php plain">,</code><code class="php string">'mm'</code><code class="php plain">,</code><code class="php string">'Letter'</code><code class="php plain">); </code><code class="php comments">// vertical, milimetros y tamaño</code></div><div class="line number3 index2 alt2"><code class="php variable">$pdf</code><code class="php plain">-&gt;Open();</code></div><div class="line number4 index3 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;AddPage(); </code><code class="php comments">// agregamos la pagina</code></div><div class="line number5 index4 alt2"><code class="php variable">$pdf</code><code class="php plain">-&gt;SetMargins(20,20,20); </code><code class="php comments">// definimos los margenes en este caso estan en milimetros</code></div><div class="line number6 index5 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;Ln(10); </code><code class="php comments">// dejamos un pequeño espacio de 10 milimetros</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="php comments">// Realizamos la consulta</code></div><div class="line number9 index8 alt2"><code class="php variable">$con</code> <code class="php plain">= </code><code class="php keyword">new</code> <code class="php plain">DB;</code></div><div class="line number10 index9 alt1"><code class="php variable">$pacientes</code> <code class="php plain">= </code><code class="php variable">$con</code><code class="php plain">-&gt;conectar();</code></div><div class="line number11 index10 alt2"><code class="php comments">// $paciente contiene el id del paciente a consultar, obtiene los datos de la tabla pacientes</code></div><div class="line number12 index11 alt1"><code class="php variable">$strConsulta</code> <code class="php plain">= </code><code class="php string">"SELECT * from pacientes where id_paciente =&nbsp; '$paciente'"</code><code class="php plain">;</code></div><div class="line number13 index12 alt2"><code class="php variable">$pacientes</code> <code class="php plain">= mysql_query(</code><code class="php variable">$strConsulta</code><code class="php plain">);</code></div><div class="line number14 index13 alt1"><code class="php variable">$fila</code> <code class="php plain">= mysql_fetch_array(</code><code class="php variable">$pacientes</code><code class="php plain">);</code></div><div class="line number15 index14 alt2"><code class="php comments">// listamos los datos con Cell</code></div><div class="line number16 index15 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;SetFont(</code><code class="php string">'Arial'</code><code class="php plain">,</code><code class="php string">''</code><code class="php plain">,12); </code><code class="php comments">// definimos el tipo de letra y el tamaño</code></div><div class="line number17 index16 alt2"><code class="php comments">// Cell esta formado por (posición de inicio, ancho, texto, borde, cambio de linea, posición del texto)</code></div><div class="line number18 index17 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;Cell(0,6,</code><code class="php string">'Clave: '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'clave'</code><code class="php plain">],0,1);</code></div><div class="line number19 index18 alt2"><code class="php variable">$pdf</code><code class="php plain">-&gt;Cell(0,6,</code><code class="php string">'Nombre: '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'nombre'</code><code class="php plain">].</code><code class="php string">' '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'apellido_paterno'</code><code class="php plain">].</code><code class="php string">' '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'apellido_materno'</code><code class="php plain">],0,1);</code></div><div class="line number20 index19 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;Cell(0,6,</code><code class="php string">'Sexo: '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'sexo'</code><code class="php plain">],0,1);</code></div><div class="line number21 index20 alt2"><code class="php variable">$pdf</code><code class="php plain">-&gt;Cell(0,6,</code><code class="php string">'Domicilio: '</code><code class="php plain">.</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'domicilio'</code><code class="php plain">],0,1);</code></div><div class="line number22 index21 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;Ln(10);</code></div></div></td></tr></tbody></table></div></div>
+<p>5. Listar el historial del paciente<br>
+Para listar el historial medico en forma de tablas llamaremos a las funciones antes declaradas de la siguientes forma, primero creamos el encabezado de nuestra tabla de la siguiente manera:</p>
+<div><div id="highlighter_6331" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php comments">// Para realizar esto utilizaremos la funcion Row()</code></div><div class="line number2 index1 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;SetFont(</code><code class="php string">'Arial'</code><code class="php plain">,</code><code class="php string">''</code><code class="php plain">,10);</code></div><div class="line number3 index2 alt2"><code class="php comments">// tipo y tamaño de letra</code></div><div class="line number4 index3 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;SetWidths(</code><code class="php keyword">array</code><code class="php plain">(60, 60, 60, 60));</code></div><div class="line number5 index4 alt2"><code class="php comments">// Definimos el tamaño de las columnas, tomando en cuenta que las declaramos en milimetros, ya que nuestra hoja esta en milimetros.</code></div><div class="line number6 index5 alt1"><code class="php variable">$pdf</code><code class="php plain">-&gt;Row(</code><code class="php keyword">array</code><code class="php plain">(</code><code class="php string">'FECHA'</code><code class="php plain">, </code><code class="php string">'MEDICO'</code><code class="php plain">, </code><code class="php string">'CONSULTORIO'</code><code class="php plain">, </code><code class="php string">'DIAGNOSTICO'</code><code class="php plain">));</code></div><div class="line number7 index6 alt2"><code class="php comments">// creamos nuestra fila con las columnas fecha(fecha de la visita al medico), medico(nombre del medico que nos atendio), consultorio y el diagnostico en esa visita.</code></div></div></td></tr></tbody></table></div></div>
+<p>Despues de crear el encabezado de nuestra tabla obtendremos el historial desde la base de datos y lo mostraremos en nuestro archivo pdf creado, seguiremos utilizando la función Row().</p>
+<div><div id="highlighter_551943" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php variable">$historial</code> <code class="php plain">= </code><code class="php variable">$con</code><code class="php plain">-&gt;conectar(); </code><code class="php comments">// Creamos nuestra conexión a la base de datos</code></div><div class="line number2 index1 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">// Realizamos nuestra consulta</code></div><div class="line number3 index2 alt2"><code class="php variable">$strConsulta</code> <code class="php plain">= "SELECT consultas_medicas.fecha_consulta, consultas_medicas.consultorio, consultas_medicas.diagnostico, medicos.nombre_medico</code></div><div class="line number4 index3 alt1"><code class="php plain">FROM consultas_medicas</code></div><div class="line number5 index4 alt2"><code class="php plain">Inner Join pacientes ON consultas_medicas.id_paciente = pacientes.id_paciente</code></div><div class="line number6 index5 alt1"><code class="php plain">Inner Join medicos ON consultas_medicas.id_medico = medicos.id_medico</code></div><div class="line number7 index6 alt2"><code class="php plain">WHERE pacientes.id_paciente = </code><code class="php string">'$paciente'</code><code class="php plain">";</code></div><div class="line number8 index7 alt1"><code class="php comments">// ejecutamos la consulta</code></div><div class="line number9 index8 alt2"><code class="php variable">$historial</code> <code class="php plain">= mysql_query(</code><code class="php variable">$strConsulta</code><code class="php plain">);</code></div><div class="line number10 index9 alt1"><code class="php comments">// listamos la tabla de historial de visitas de cada paciente</code></div><div class="line number11 index10 alt2"><code class="php variable">$numfilas</code> <code class="php plain">= mysql_num_rows(</code><code class="php variable">$historial</code><code class="php plain">);</code></div><div class="line number12 index11 alt1"><code class="php keyword">for</code> <code class="php plain">(</code><code class="php variable">$i</code><code class="php plain">=0; </code><code class="php variable">$iRow</code><code class="php plain">(</code><code class="php keyword">array</code><code class="php plain">(</code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'fecha_consulta'</code><code class="php plain">], </code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'consultorio'</code><code class="php plain">], </code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'nombre_medico'</code><code class="php plain">], </code><code class="php variable">$fila</code><code class="php plain">[</code><code class="php string">'diagnostico'</code><code class="php plain">]));</code></div><div class="line number13 index12 alt2"><code class="php plain">}</code></div><div class="line number14 index13 alt1"><code class="php comments">//La ultima linea</code></div><div class="line number15 index14 alt2"><code class="php variable">$pdf</code><code class="php plain">-&gt;Output(); lo que hace es cerrar el archivo y enviarlo al navegador.</code></div></div></td></tr></tbody></table></div></div>
+<p>Actualizacones:</p>
+<ul>
+<li>Se colorean la filas de titulo y las de datos en el historial en pdf, para realizar esto se le agrego el valor true al parametro fill dentro de la función MultiCell que es la que permite heredar de SetFillColor el color de fondo en formato rgb.</li>
+</ul>
+<p>A continuación les dejo el código y la base de datos para descargar.<br>
+Descarga: <a href="http://www.mediafire.com/?qbrf4nmqs02908t">reporte_clinica</a>.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Compártelo:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=facebook&nb=1" title="Compartir en Facebook" id="sharing-facebook-9"><span>Facebook<span class="share-count">11</span></span></a></li><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=twitter&nb=1" title="Haz clic para compartir en Twitter" id="sharing-twitter-9"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=google-plus-1&nb=1" title="Haz clic para compartir en Google+" id="sharing-google-9"><span>Google +1</span></a></li><li class="share-tumblr"><a rel="nofollow" class="share-tumblr sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=tumblr&nb=1" title="Haz clic para compartir en Tumblr"><span>Tumblr</span></a></li><li class="share-pinterest"><a rel="nofollow" class="share-pinterest sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=pinterest&nb=1" title="Haz clic para compartir en Pinterest"><span>Pinterest</span></a></li><li class="share-stumbleupon"><a rel="nofollow" class="share-stumbleupon sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=stumbleupon&nb=1" title="Haz clic para compartir en StumbleUpon"><span>StumbleUpon</span></a></li><li class="share-reddit"><a rel="nofollow" class="share-reddit sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=reddit&nb=1" title="Haz clic para compartir en Reddit"><span>Reddit</span></a></li><li class="share-digg"><a rel="nofollow" class="share-digg sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=digg&nb=1" title="Haz clic para enviar a Digg"><span>Digg</span></a></li><li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?share=linkedin&nb=1" title="Haz clic aquí para compartir en LinkedIn" id="sharing-linkedin-9"><span>LinkedIn</span></a></li><li class="share-end"></li></ul></div></div></div>	</div>
+		<div class="clear"></div>
+</article>
+<!-- /.post -->					
+											
+					 
+		
+						
+			
+			<div id="publicidad-post-bottom">
+								<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3787686710985945";
+/* code1 */
+google_ad_slot = "4811239305";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			</div>
+			
+<!-- You can start editing here. -->
+
+	<h2 class="h2comments">32 Comentarios <a href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/#respond" class="addComment">+ Deja un comentario</a></h2>
+
+	<ul class="commentlist">
+	   <li class="comment even thread-even depth-1 clearfix" id="li-comment-78">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/55924094c2281679a11ea5328d6e8f51" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-55924094c2281679a11ea5328d6e8f51-0">     <div id="comment-78">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Roman Hernandez</strong> <span>6 diciembre, 2012 a las 14:03	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Excelente ejemplo, muy sencillo y altamente funcional.<br>
+gracias</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=78#respond" onclick="return addComment.moveForm(&quot;comment-78&quot;, &quot;78&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2 clearfix" id="li-comment-232">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/8df2d09b2594784dba93a03b6d3b2049" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-8df2d09b2594784dba93a03b6d3b2049-0">     <div id="comment-232">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>carlos espinoza</strong> <span>23 enero, 2013 a las 12:52	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Hola muy buen aporte pero al checar tu codigo me tope con esta linea for ($i=0; $iRow(array($fila['fecha_consulta'], $fila['consultorio'], $fila['nombre_medico'], $fila['diagnostico']));<br>
+no logro comprender como es que funciona este for</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=232#respond" onclick="return addComment.moveForm(&quot;comment-232&quot;, &quot;232&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1 clearfix" id="li-comment-237">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/bf125c01180ab1b78338167d39dc3b65" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-bf125c01180ab1b78338167d39dc3b65-0">     <div id="comment-237">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong><a href="http://www.enlace.edu.mx/" rel="external nofollow" class="url">Emmanuel</a></strong> <span>31 enero, 2013 a las 12:32	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Muchas gracias justo lo que andaba buscando super claro y funcionando!!!1</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=237#respond" onclick="return addComment.moveForm(&quot;comment-237&quot;, &quot;237&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1 clearfix" id="li-comment-245">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/147f0a7269f96f323a9da6eb5cda84c9" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-147f0a7269f96f323a9da6eb5cda84c9-0">     <div id="comment-245">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>ponzho</strong> <span>12 febrero, 2013 a las 11:15	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>me marca varios errores de sintaxsis</p>
+<p>while($i$wmax)//error<br>
+{<br>
+   if($sep==-1)<br>
+   {<br>
+	if($i==$j)<br>
+	    $i++;<br>
+   }<br>
+   else<br>
+      $i=$sep+1;<br>
+   $sep=-1;<br>
+   $j=$i;<br>
+   $l=0;<br>
+   $nl++;<br>
+   }<br>
+   else        //error<br>
+       $i++;<br>
+   }<br>
+return $nl;<br>
+}<br>
+en el while falta hacer la comparacion creo que es mientras $i&lt;$wmax y hay un else sin un if<br>
+al final tres llaves que cierran, cuando solo hay dos que abren</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=245#respond" onclick="return addComment.moveForm(&quot;comment-245&quot;, &quot;245&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-sun2012 bypostauthor even depth-2 clearfix" id="li-comment-247">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-0">     <div id="comment-247">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>13 febrero, 2013 a las 12:02	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Hola, pues que yo vea todas están cerradas, puedes bajar el archivo y probarlo funciona perfectamente, saludos.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=247#respond" onclick="return addComment.moveForm(&quot;comment-247&quot;, &quot;247&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-sun2012 bypostauthor odd alt depth-2 clearfix" id="li-comment-248">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-1">     <div id="comment-248">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>13 febrero, 2013 a las 12:12	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>HOla, si tienes razon en el post tiene unos errores, es que el script que pinta el  code creo que los borro, pero el de descarga esta corecto.<br>
+si no puedes checar en <a href="http://www.fpdf.org/en/script/script3.php" rel="nofollow">http://www.fpdf.org/en/script/script3.php</a> esta el script original</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=248#respond" onclick="return addComment.moveForm(&quot;comment-248&quot;, &quot;248&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment even depth-2 clearfix" id="li-comment-462">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/46da6560a6273ae44c4116be4ec08fd7" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-46da6560a6273ae44c4116be4ec08fd7-0">     <div id="comment-462">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Mario</strong> <span>17 agosto, 2013 a las 21:55	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Buen trabajo, pero tengo una duda yo tengo la URL de mis imagenes de productos y estoy haciendo esto:<br>
+$URimg= “../photos/”.$fila['imagen'];<br>
+$imagen = ”;<br>
+$pdf-&gt;Row(array($fila['Cantidad'], $fila['ItemDes'], $fila['ItemCod'], $fila['PrecioUnitario'], $fila['Importe'],$imagen));</p>
+<p>como observaras estoy adaptando tu ejemplo en uno propio, y lo que hago es agregarle la ruta completa a una variable para posteriormente imprimir en el array, pero no me muestra la imagen mas al contrario solo me muestra esto:  por mencionar un ejemplo.<br>
+gracias</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=462#respond" onclick="return addComment.moveForm(&quot;comment-462&quot;, &quot;462&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-sun2012 bypostauthor odd alt depth-3 clearfix" id="li-comment-463">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-2">     <div id="comment-463">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>22 agosto, 2013 a las 14:37	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Hola, es que en fpdf existe al funcion Image(‘logo_pb.png’,10,8,33) para mostrar imagenes, saludos.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=463#respond" onclick="return addComment.moveForm(&quot;comment-463&quot;, &quot;463&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-4 clearfix" id="li-comment-467">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/46da6560a6273ae44c4116be4ec08fd7" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-46da6560a6273ae44c4116be4ec08fd7-1">     <div id="comment-467">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong><a href="http://web.monicar.com.bo/" rel="external nofollow" class="url">Mario</a></strong> <span>23 agosto, 2013 a las 16:39	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Gracias Oscar por responder, mira si puedes agregarme al Skype mi cuenta es marioarroyovaca .<br>
+mira yo quiero hacerlo dinamicamente es decir quiero realizar una proforma en la cual debo de mostrar las imagenes y fijate como le paso los datos:<br>
+while($fila=mysql_fetch_assoc($SqlArchivo))<br>
+	{<br>
+		$URimg= “../photos/”.$fila['imagen'];<br>
+		$imagen = ”;<br>
+		$pdf-&gt;Row(array($fila['Cantidad'], $fila['ItemDes'], $fila['ItemCod'], $fila['PrecioUnitario'], $fila['Importe'], $imagen));</p>
+<p>	}<br>
+el PDF me genera bien pero solo que la parte donde estoy imprimiendo $imagen me imprime lo siguiente:  es decir solo me imprime totalmente plano. y si te comento que estoy utilizando lo que me mencionas y me muestra bien por cierto el logo de la empresa.<br>
+function Header()<br>
+{<br>
+	$this-&gt;SetFont(‘Arial’,'B’,10);<br>
+	$this-&gt;Image(‘../CapaPresentacion/Imagenes/system_logo.png’,20,10,45,22);<br>
+	$this-&gt;Text(116,14,’PRESUPUESTO DE VENTA’,0,’C', 0);<br>
+	$this-&gt;Image(‘../CapaPresentacion/Imagenes/system_logo.png’,224,10,35,18);<br>
+	$this-&gt;Ln(30);<br>
+}</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=467#respond" onclick="return addComment.moveForm(&quot;comment-467&quot;, &quot;467&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-sun2012 bypostauthor odd alt depth-5 clearfix" id="li-comment-471">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-3">     <div id="comment-471">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>24 agosto, 2013 a las 18:18	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>en vez de $imagen seria Image(‘$image’,20,10,45,22); aun que necesitarías  aumentar ala posicion segun el tamaño de tu tabla ya que los dos datos primeros son el eje x y y y lod emas el tamaño, jeje</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+               </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment byuser comment-author-sun2012 bypostauthor even depth-3 clearfix" id="li-comment-464">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-4">     <div id="comment-464">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>22 agosto, 2013 a las 14:39	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p><a href="http://www.fpdf.org/es/doc/image.htm" rel="nofollow">http://www.fpdf.org/es/doc/image.htm</a></p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=464#respond" onclick="return addComment.moveForm(&quot;comment-464&quot;, &quot;464&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-246">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/147f0a7269f96f323a9da6eb5cda84c9" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-147f0a7269f96f323a9da6eb5cda84c9-1">     <div id="comment-246">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>ponzho</strong> <span>12 febrero, 2013 a las 11:41	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>ya descargue el ejemplo, ahi si esta correctamente el codigo y todo, muchas gracias funciona de maravilla y muy practico</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=246#respond" onclick="return addComment.moveForm(&quot;comment-246&quot;, &quot;246&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1 clearfix" id="li-comment-260">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/496de846cbb7d075ded8131549747dc8" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-496de846cbb7d075ded8131549747dc8-0">     <div id="comment-260">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>ezequiel</strong> <span>5 marzo, 2013 a las 0:57	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>sencillo eso? Es código morse sobre todo las funciones. No quiero imaginarme un ejemplo avanzado, yo lo único que quiero es generar un reporte y parece q tenes que poner un código de 140 renglones.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=260#respond" onclick="return addComment.moveForm(&quot;comment-260&quot;, &quot;260&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-281">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/638f7db46e47b0e902928c4500f3a889" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-638f7db46e47b0e902928c4500f3a889-0">     <div id="comment-281">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Aida</strong> <span>22 marzo, 2013 a las 20:47	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Excelente ejemplo, funciona de maravilla.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=281#respond" onclick="return addComment.moveForm(&quot;comment-281&quot;, &quot;281&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1 clearfix" id="li-comment-325">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/71c88b7b71dfb631d0a18ba4036b0439" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-71c88b7b71dfb631d0a18ba4036b0439-0">     <div id="comment-325">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Alberto</strong> <span>12 abril, 2013 a las 11:06	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Muy buen ejemplo, te agradesco mucho por haberlo compartido, lo he ejecutado y va de 10.</p>
+<p>Aprovechando me gustaría consultarte como puedo hacer para repetir las filas del titulo de la tabla (fecha, médico, consultorio y diagnóstico) en las siguientes hojas del historial médico, ya que cuando se generá el pdf que contiene más de 1 página la fila del título de la tabla (fecha, médico, consultorio y diagnóstico) ya no aparece, sino que solo en la primera.</p>
+<p>De antemano gracias</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=325#respond" onclick="return addComment.moveForm(&quot;comment-325&quot;, &quot;325&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-sun2012 bypostauthor odd alt depth-2 clearfix" id="li-comment-340">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-5">     <div id="comment-340">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>18 abril, 2013 a las 17:25	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Hola, pues si puedes seccionar el numero de registros por pagina, saludos.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=340#respond" onclick="return addComment.moveForm(&quot;comment-340&quot;, &quot;340&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-3 clearfix" id="li-comment-398">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/74b23cfbd6594e7517def291088c9bc9" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-74b23cfbd6594e7517def291088c9bc9-0">     <div id="comment-398">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>jaironman</strong> <span>9 junio, 2013 a las 23:38	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>hola no entendi del todo tu explicacion por favor puedes explicarla mejor, es que estoy utilizando esta herramienta para reportes que tienen varias paginas y me gustaria que los nombres de las tablas esten en cada pagina.. te agradezco de antemano</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=398#respond" onclick="return addComment.moveForm(&quot;comment-398&quot;, &quot;398&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-377">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/10740ba102eb48f253b887f4a9adf1c4" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-10740ba102eb48f253b887f4a9adf1c4-0">     <div id="comment-377">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>jristokolev</strong> <span>24 mayo, 2013 a las 11:27	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Prueben esta libreria para generar reportes. Una de las mejores opciones que he visto. No esta del todo completa pero otra opcion para hacernos la vida mas facil.<br>
+<a href="https://github.com/yordis/reportexpress" rel="nofollow">https://github.com/yordis/reportexpress</a></p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=377#respond" onclick="return addComment.moveForm(&quot;comment-377&quot;, &quot;377&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-sun2012 bypostauthor even depth-2 clearfix" id="li-comment-378">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-6">     <div id="comment-378">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>24 mayo, 2013 a las 18:24	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>hola, pues la verdad este post ya esta desactualizado la nueva versión de fpdf ya trae las funciones integradas y es como usar un datagrid, en breve loa actualizare, saludos.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=378#respond" onclick="return addComment.moveForm(&quot;comment-378&quot;, &quot;378&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-even depth-1 clearfix" id="li-comment-402">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/a46e1a154ca1a150fa39caafa8bed9b6" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-a46e1a154ca1a150fa39caafa8bed9b6-0">     <div id="comment-402">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>henry</strong> <span>13 junio, 2013 a las 6:46	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>excelente tuto, muchas gracias por compartirlo.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=402#respond" onclick="return addComment.moveForm(&quot;comment-402&quot;, &quot;402&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1 clearfix" id="li-comment-420">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/a20c2d7793bc2239a6222ab913473beb" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-a20c2d7793bc2239a6222ab913473beb-0">     <div id="comment-420">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Alex</strong> <span>1 julio, 2013 a las 9:54	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>tengo el siguente error</p>
+<p>( ! ) Notice: Undefined index: id_paciente in C:\wamp\www\dcsystems\reporte_historialmed.php on line 127</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=420#respond" onclick="return addComment.moveForm(&quot;comment-420&quot;, &quot;420&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-sun2012 bypostauthor odd alt depth-2 clearfix" id="li-comment-421">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-7">     <div id="comment-421">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>1 julio, 2013 a las 18:49	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>mándame tu código y base a <a href="mailto:omarchin2@hotmail.com">omarchin2@hotmail.com</a> para checarlo que tiene, saludos.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=421#respond" onclick="return addComment.moveForm(&quot;comment-421&quot;, &quot;421&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-even depth-1 clearfix" id="li-comment-426">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/a20c2d7793bc2239a6222ab913473beb" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-a20c2d7793bc2239a6222ab913473beb-1">     <div id="comment-426">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Lexar</strong> <span>5 julio, 2013 a las 14:19	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Hola abra la manera de insertar hora y fecha a un reporte que estoy generando?</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=426#respond" onclick="return addComment.moveForm(&quot;comment-426&quot;, &quot;426&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment byuser comment-author-denker odd alt depth-2 clearfix" id="li-comment-428">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/b278f023b381894482a77c1945e909c0" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-b278f023b381894482a77c1945e909c0-0">     <div id="comment-428">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>denker</strong> <span>9 julio, 2013 a las 11:34	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Hola, para la fecha y la hora puedes ocupar la funcion time <a href="http://php.net/manual/es/function.time.php" rel="nofollow">http://php.net/manual/es/function.time.php</a></p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=428#respond" onclick="return addComment.moveForm(&quot;comment-428&quot;, &quot;428&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment even thread-odd thread-alt depth-1 clearfix" id="li-comment-436">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/ab23507f7914e85eb632318945dc5e4e" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-ab23507f7914e85eb632318945dc5e4e-0">     <div id="comment-436">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Andres</strong> <span>15 julio, 2013 a las 13:46	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Como hago para mermar el tamaño de las celdas FECHA, MEDICO, CONSULTORIO y DIAGNOSTICO?? he intentado cambiar algunas cosas pero no me ha dado resultado. Muchas gracias!</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=436#respond" onclick="return addComment.moveForm(&quot;comment-436&quot;, &quot;436&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-even depth-1 clearfix" id="li-comment-444">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/80dcca1187f00b1c9f305b59cb21674e" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-80dcca1187f00b1c9f305b59cb21674e-0">     <div id="comment-444">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>vale</strong> <span>24 julio, 2013 a las 10:51	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Parse error: syntax error, unexpected ‘)’, expecting ‘;’ in C:\xampp\htdocs\Nueva carpeta\reporte_historial.php on line 21</p>
+<p>Me sale este error y no se como resolverlo cuando le doy clic al enlace VER MAS…en el diagnostico del paciente</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=444#respond" onclick="return addComment.moveForm(&quot;comment-444&quot;, &quot;444&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment even depth-2 clearfix" id="li-comment-445">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/80dcca1187f00b1c9f305b59cb21674e" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-80dcca1187f00b1c9f305b59cb21674e-1">     <div id="comment-445">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>vale</strong> <span>24 julio, 2013 a las 10:53	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>for($i=0;$iNbLines($this-&gt;widths[$i],$data[$i])); en esta linea</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=445#respond" onclick="return addComment.moveForm(&quot;comment-445&quot;, &quot;445&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-448">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/f51127bbe21b6c02cfe2239007830053" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-f51127bbe21b6c02cfe2239007830053-0">     <div id="comment-448">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong><a href="http://www.yosoykari.com/" rel="external nofollow" class="url">Kari Robledo</a></strong> <span>25 julio, 2013 a las 23:11	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Muchas gracias, me sirvió mucho para un proyecto.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=448#respond" onclick="return addComment.moveForm(&quot;comment-448&quot;, &quot;448&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment even thread-even depth-1 clearfix" id="li-comment-453">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/351b0b77ef000e02b370cf2f96fe5608" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-351b0b77ef000e02b370cf2f96fe5608-0">     <div id="comment-453">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Bryan</strong> <span>4 agosto, 2013 a las 19:41	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Excelente Esta Información Me Sirvió Bastante de guía.<br>
+una preguntacomo hago para meter un dato que extraje de la base de datos en el header(Cabecera) de la pagina Gracias</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=453#respond" onclick="return addComment.moveForm(&quot;comment-453&quot;, &quot;453&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-456">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/839fb43aa034cd7b7220a1cce6b80b61" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-839fb43aa034cd7b7220a1cce6b80b61-0">     <div id="comment-456">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Oscar</strong> <span>6 agosto, 2013 a las 14:45	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>como puedo hacer para repetir las filas del titulo de la tabla (fecha, médico, consultorio y diagnóstico) en las siguientes hojas del historial médico, ya que cuando se generá el pdf que contiene más de 1 página la fila del título de la tabla (fecha, médico, consultorio y diagnóstico) ya no aparece, sino que solo en la primera.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=456#respond" onclick="return addComment.moveForm(&quot;comment-456&quot;, &quot;456&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+   <li class="comment byuser comment-author-sun2012 bypostauthor even thread-even depth-1 clearfix" id="li-comment-458">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/aa2defe6ec6684a1ebf00d2d4ad1195d" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-aa2defe6ec6684a1ebf00d2d4ad1195d-8">     <div id="comment-458">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>sun2012</strong> <span>10 agosto, 2013 a las 13:29	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>los encabezados de tu tabla ponlos en al funcion header y listo, saludos.</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=458#respond" onclick="return addComment.moveForm(&quot;comment-458&quot;, &quot;458&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+<ul class="children">
+   <li class="comment odd alt depth-2 clearfix" id="li-comment-461">
+	 <img alt="" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/839fb43aa034cd7b7220a1cce6b80b61" class="avatar avatar-38 photo grav-hashed grav-hijack" height="38" width="38" id="grav-839fb43aa034cd7b7220a1cce6b80b61-1">     <div id="comment-461">
+	  <div class="comment-meta commentmetadata clearfix">
+	    <strong>Oscar</strong> <span>14 agosto, 2013 a las 11:02	  </span>
+	  </div>
+	  
+      <div class="text">
+		  <p>Sos un genio , ya lo hice y funciona de mil maravillas!!!</p>
+<p>Muchisimas gracias !!</p>
+	  </div>
+	  
+	  
+      <div class="reply">
+         <a class="comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/?replytocom=461#respond" onclick="return addComment.moveForm(&quot;comment-461&quot;, &quot;461&quot;, &quot;respond&quot;, &quot;9&quot;)">Responder</a>      </div>
+     </div>
+</li>
+</ul>
+</li>
+	</ul>
+ 
+
+
+<div id="respond">
+
+<h2 id="commentsForm">Que te pareció el contenido, déjanos un comentario!!</h2>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/#respond" style="display:none;">Clic para cancelar respuesta.</a></small>
+</div>
+
+
+<form action="http://www.codedrinks.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><label for="author">Nombre (required)</label>
+<input type="text" name="author" id="author" class="usericon" value="" size="22" tabindex="1" aria-required="true">
+</p>
+
+<p><label for="email">Email (No será publicado) (obligatorio)</label>
+<input type="text" name="email" id="email" class="mailicon" value="" size="22" tabindex="2" aria-required="true">
+</p>
+
+<p><label for="url">Website</label>
+<input type="text" name="url" id="url" class="webicon" value="" size="22" tabindex="3">
+</p>
+
+
+
+<p><label for="comment">Comentario</label>
+<textarea name="comment" id="comment" cols="75" rows="10" tabindex="4" class="texticon"></textarea></p>
+<p><small><strong>XHTML:</strong> Puedes usar estas etiquetas: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>
+<p><input name="submit" type="submit" id="submit" class="button" tabindex="5" value="ENVIAR COMENTARIO">
+<input type="hidden" name="comment_post_ID" value="9" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="bc294d2142"></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments" style="display: inline;">Recibir un email con los siguientes comentarios a esta entrada.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Recibir un email con cada nuevo post.</label></p>
+</form>
+
+</div>
+
+		</div>
+		<!-- /#content -->
+	<aside id="sidebar">
+		<section class="widget">
+			<h4 class="widgettitle">¿QUIERES ALGO?</h4>
+			<div id="searchform-wrap">
+				<form id="searchform" action="" method="get">
+					<input type="text" id="s" name="s" value="" class="searchtext">
+				</form>
+			</div>
+			</section>
+ 
+	
+				<section class="widget" style="padding: 10px;">
+				
+					<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-5068357563753948";
+						/* lateral code */
+						google_ad_slot = "2505025199";
+						google_ad_width = 300;
+						google_ad_height = 250;
+						//--
+					</script>
+					<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+				
+				</section>
+								<div id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widgettitle">Lo más reciente</h4>		<ul>
+					<li>
+				<a href="http://www.codedrinks.com/codeigniter-instalacion-y-configuracion-basica/" title="Codeigniter: Instalación y configuración básica">Codeigniter: Instalación y configuración básica</a>
+						</li>
+					<li>
+				<a href="http://www.codedrinks.com/mural-ly-herramienta-web-para-brainstorming/" title="Mural.ly: Herramienta web para brainstorming">Mural.ly: Herramienta web para brainstorming</a>
+						</li>
+					<li>
+				<a href="http://www.codedrinks.com/todos-los-estudiantes-deberian-tener-la-oportunidad-de-aprender-a-programar/" title="Todos los estudiantes deberían tener la oportunidad de aprender a programar">Todos los estudiantes deberían tener la oportunidad de aprender a programar</a>
+						</li>
+					<li>
+				<a href="http://www.codedrinks.com/ejemplo-de-drag-and-drop-jquery-con-php-y-mysql/" title="Ejemplo de Drag and Drop jQuery con PHP y MySQL">Ejemplo de Drag and Drop jQuery con PHP y MySQL</a>
+						</li>
+					<li>
+				<a href="http://www.codedrinks.com/5-sets-de-iconos-minimalistas-free/" title="5 sets de iconos minimalistas – Free">5 sets de iconos minimalistas – Free</a>
+						</li>
+					<li>
+				<a href="http://www.codedrinks.com/redireccionar-los-correos-de-tu-dominio-a-outlook-com/" title="Redireccionar los correos de tu dominio a outlook.com">Redireccionar los correos de tu dominio a outlook.com</a>
+						</li>
+					<li>
+				<a href="http://www.codedrinks.com/atari-breakout-en-google/" title="Atari Breakout en Google">Atari Breakout en Google</a>
+						</li>
+				</ul>
+		</div><div id="top-posts-2" class="widget widget_top-posts"><h4 class="widgettitle">Lo más pedido</h4><ul><li><a href="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/Crear un reporte con FPDF usando PHP y MySQL   Codedrinks.htm" class="bump-view" data-bump-view="tp">Crear un reporte con FPDF usando PHP y MySQL</a></li>
+<li><a href="http://www.codedrinks.com/ejemplo-jqgrid-mostrar-datos-de-una-base-de-datos-mysql/" class="bump-view" data-bump-view="tp">Ejemplo jQgrid: Mostrar datos de una base de datos MySQL</a></li>
+<li><a href="http://www.codedrinks.com/google-api-chart-ejemplo-de-grafica-de-barras-con-php-jquery-y-mysql/" class="bump-view" data-bump-view="tp">Google API Chart: Ejemplo de grafica de barras con PHP, jQuery y MySQL</a></li>
+<li><a href="http://www.codedrinks.com/formulario-de-login-con-php-y-mysql/" class="bump-view" data-bump-view="tp">Formulario de Login con PHP y MySql</a></li>
+<li><a href="http://www.codedrinks.com/paginacion-de-registros-de-una-base-mysql-con-php-y-jquery-parte-1/" class="bump-view" data-bump-view="tp">Paginación de registros de una base MySQL con PHP y jQuery - Parte 1</a></li>
+<li><a href="http://www.codedrinks.com/caja-de-texto-con-opcion-de-autocompletado-utilizando-php-mysql-y-jquery/" class="bump-view" data-bump-view="tp">Caja de texto con opción de autocompletado utilizando PHP, MySQL y jQuery</a></li>
+<li><a href="http://www.codedrinks.com/declarar-variables-en-php/" class="bump-view" data-bump-view="tp">Declarar variables en PHP</a></li>
+<li><a href="http://www.codedrinks.com/verificar-disponibilidad-de-un-nombre-de-usuario-con-php-jquery-y-mysql/" class="bump-view" data-bump-view="tp">Verificar disponibilidad de un nombre de usuario con PHP, jQuery y MySql</a></li>
+<li><a href="http://www.codedrinks.com/guardar-la-informacion-de-un-formulario-en-una-base-mysql-con-ajax-de-jquery-y-php/" class="bump-view" data-bump-view="tp">Guardar la informacion de un formulario en una base MySQL con AJAX de jQuery y PHP</a></li>
+</ul></div><div id="categories-2" class="widget widget_categories"><h4 class="widgettitle">De lo que se habla</h4>		<ul>
+	<li class="cat-item cat-item-4"><a href="http://www.codedrinks.com/category/c-sharp/" title="Ver todas las entradas archivadas en c sharp">c sharp</a> (5)
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.codedrinks.com/category/codeigniter/" title="Ver todas las entradas archivadas en CodeIgniter">CodeIgniter</a> (1)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.codedrinks.com/category/css/" title="Ver todas las entradas archivadas en CSS">CSS</a> (7)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.codedrinks.com/category/flash/" title="Ver todas las entradas archivadas en Flash">Flash</a> (2)
+</li>
+	<li class="cat-item cat-item-23"><a href="http://www.codedrinks.com/category/frameworks-php/" title="Ver todas las entradas archivadas en Frameworks PHP">Frameworks PHP</a> (1)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://www.codedrinks.com/category/html5/" title="Ver todas las entradas archivadas en HTML5">HTML5</a> (1)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://www.codedrinks.com/category/iconos/" title="Ver todas las entradas archivadas en Iconos">Iconos</a> (6)
+</li>
+	<li class="cat-item cat-item-12"><a href="http://www.codedrinks.com/category/illustrator/" title="Ver todas las entradas archivadas en Illustrator">Illustrator</a> (2)
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.codedrinks.com/category/internet/" title="Ver todas las entradas archivadas en Internet">Internet</a> (1)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://www.codedrinks.com/category/java/" title="Ver todas las entradas archivadas en Java">Java</a> (1)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.codedrinks.com/category/jquery/" title="Ver todas las entradas archivadas en jQuery">jQuery</a> (19)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.codedrinks.com/category/mysql/" title="Ver todas las entradas archivadas en MySQL">MySQL</a> (19)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.codedrinks.com/category/ocio/" title="Ver todas las entradas archivadas en Ocio">Ocio</a> (4)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.codedrinks.com/category/photoshop/" title="Ver todas las entradas archivadas en Photoshop">Photoshop</a> (1)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.codedrinks.com/category/php/" title="Ver todas las entradas archivadas en PHP">PHP</a> (34)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.codedrinks.com/category/python/" title="Ver todas las entradas archivadas en Python">Python</a> (6)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://www.codedrinks.com/category/recomendaciones/" title="Ver todas las entradas archivadas en Recomendaciones">Recomendaciones</a> (7)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://www.codedrinks.com/category/recursos/" title="Ver todas las entradas archivadas en Recursos">Recursos</a> (21)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.codedrinks.com/category/tutoriales/" title="Ver todas las entradas archivadas en Tutoriales">Tutoriales</a> (7)
+</li>
+		</ul>
+</div><div id="facebook-likebox-2" class="widget widget_facebook_likebox"><h4 class="widgettitle"><a href="http://www.facebook.com/pages/Codedrinks/376624692426466">Facebook</a></h4><iframe src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/likebox.htm" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 320px;  height: 432px; background: #000"></iframe></div><div id="archives-2" class="widget widget_archive"><h4 class="widgettitle">Archivo</h4>		<ul>
+			<li><a href="http://www.codedrinks.com/2013/08/" title="agosto 2013">agosto 2013</a>&nbsp;(1)</li>
+	<li><a href="http://www.codedrinks.com/2013/07/" title="julio 2013">julio 2013</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2013/06/" title="junio 2013">junio 2013</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2013/05/" title="mayo 2013">mayo 2013</a>&nbsp;(4)</li>
+	<li><a href="http://www.codedrinks.com/2013/04/" title="abril 2013">abril 2013</a>&nbsp;(3)</li>
+	<li><a href="http://www.codedrinks.com/2013/03/" title="marzo 2013">marzo 2013</a>&nbsp;(3)</li>
+	<li><a href="http://www.codedrinks.com/2013/02/" title="febrero 2013">febrero 2013</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2013/01/" title="enero 2013">enero 2013</a>&nbsp;(1)</li>
+	<li><a href="http://www.codedrinks.com/2012/12/" title="diciembre 2012">diciembre 2012</a>&nbsp;(6)</li>
+	<li><a href="http://www.codedrinks.com/2012/11/" title="noviembre 2012">noviembre 2012</a>&nbsp;(19)</li>
+	<li><a href="http://www.codedrinks.com/2012/01/" title="enero 2012">enero 2012</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2011/12/" title="diciembre 2011">diciembre 2011</a>&nbsp;(1)</li>
+	<li><a href="http://www.codedrinks.com/2011/11/" title="noviembre 2011">noviembre 2011</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2011/08/" title="agosto 2011">agosto 2011</a>&nbsp;(1)</li>
+	<li><a href="http://www.codedrinks.com/2011/05/" title="mayo 2011">mayo 2011</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2011/04/" title="abril 2011">abril 2011</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2011/01/" title="enero 2011">enero 2011</a>&nbsp;(10)</li>
+	<li><a href="http://www.codedrinks.com/2010/12/" title="diciembre 2010">diciembre 2010</a>&nbsp;(9)</li>
+	<li><a href="http://www.codedrinks.com/2010/09/" title="septiembre 2010">septiembre 2010</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2010/08/" title="agosto 2010">agosto 2010</a>&nbsp;(1)</li>
+	<li><a href="http://www.codedrinks.com/2010/07/" title="julio 2010">julio 2010</a>&nbsp;(2)</li>
+	<li><a href="http://www.codedrinks.com/2010/06/" title="junio 2010">junio 2010</a>&nbsp;(7)</li>
+	<li><a href="http://www.codedrinks.com/2010/05/" title="mayo 2010">mayo 2010</a>&nbsp;(17)</li>
+		</ul>
+</div>
+	</aside>
+	<!-- /#sidebar -->
+
+	
+	<!-- /body -->
+</div>
+</div> <!-- /#pagewrap -->
+	<footer id="footer" class="pagewidth clearfix">
+		<div class="footer-content">
+				
+	
+						
+ 
+		<div id="back-top"></div>
+	<div class="footer-text clearfix">
+			Codedrinks © 2013	Powered by <a href="http://wordpress.org/">WordPress</a> 
+	</div>
+	</div>
+	</footer>
+	<!-- /#footer --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11960240-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- wp_footer -->
+	<div style="display:none">
+	<div class="grofile-hash-map-55924094c2281679a11ea5328d6e8f51">
+	</div>
+	<div class="grofile-hash-map-8df2d09b2594784dba93a03b6d3b2049">
+	</div>
+	<div class="grofile-hash-map-bf125c01180ab1b78338167d39dc3b65">
+	</div>
+	<div class="grofile-hash-map-147f0a7269f96f323a9da6eb5cda84c9">
+	</div>
+	<div class="grofile-hash-map-aa2defe6ec6684a1ebf00d2d4ad1195d">
+	</div>
+	<div class="grofile-hash-map-46da6560a6273ae44c4116be4ec08fd7">
+	</div>
+	<div class="grofile-hash-map-496de846cbb7d075ded8131549747dc8">
+	</div>
+	<div class="grofile-hash-map-638f7db46e47b0e902928c4500f3a889">
+	</div>
+	<div class="grofile-hash-map-71c88b7b71dfb631d0a18ba4036b0439">
+	</div>
+	<div class="grofile-hash-map-74b23cfbd6594e7517def291088c9bc9">
+	</div>
+	<div class="grofile-hash-map-10740ba102eb48f253b887f4a9adf1c4">
+	</div>
+	<div class="grofile-hash-map-a46e1a154ca1a150fa39caafa8bed9b6">
+	</div>
+	<div class="grofile-hash-map-a20c2d7793bc2239a6222ab913473beb">
+	</div>
+	<div class="grofile-hash-map-b278f023b381894482a77c1945e909c0">
+	</div>
+	<div class="grofile-hash-map-ab23507f7914e85eb632318945dc5e4e">
+	</div>
+	<div class="grofile-hash-map-80dcca1187f00b1c9f305b59cb21674e">
+	</div>
+	<div class="grofile-hash-map-f51127bbe21b6c02cfe2239007830053">
+	</div>
+	<div class="grofile-hash-map-351b0b77ef000e02b370cf2f96fe5608">
+	</div>
+	<div class="grofile-hash-map-839fb43aa034cd7b7220a1cce6b80b61">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/www.codedrinks.com\/crear-un-reporte-con-fpdf-usando-php-y-mysql\/":9}	</script>
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/sharing.js"></script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=600,height=600' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+							<script type="text/javascript">
+			jQuery(document).on('ready', function(){
+				jQuery('body').on('click', 'a.share-pinterest', function(e){
+					e.preventDefault();
+
+					// Load Pinterest Bookmarklet code
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.src = window.location.protocol + "//assets.pinterest.com/js/pinmarklet.js?r=" + ( Math.random() * 99999999 );
+					var x = document.getElementsByTagName("script")[0];
+					x.parentNode.insertBefore(s, x);
+
+					// Trigger Stats
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.src = this + ( this.toString().indexOf( '?' ) ? '&' : '?' ) + 'js_only=1';
+					var x = document.getElementsByTagName("script")[0];
+					x.parentNode.insertBefore(s, x);
+				});
+			});
+			</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+		<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/shCore.js"></script>
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/shBrushSql.js"></script>
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/shBrushPhp.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.codedrinks.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.codedrinks.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Crear un reporte con FPDF usando PHP y MySQL   Codedrinks_files/wpgroho.js"></script>
+
+	<script src="http://stats.wordpress.com/e-201334.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:2.3',blog:'13517261',post:'9',tz:'-6'});
+	var load_cmc = function(){linktracker_init(13517261,9,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+
+</body></html>

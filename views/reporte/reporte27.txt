@@ -1,0 +1,11 @@
+pasajero2;2010-06-11;10:00:00;Hotel-Aeropuerto;10000
+pasajero3;2010-06-11;09:00:00;Aeropuerto-Hotel;10000
+pasajero4;2010-06-11;10:00:00;Hotel-Aeropuerto;10000
+pasajero1;2010-06-11;07:00:00;Hotel-Aeropuerto;0
+pasajero5;2010-06-17;07:00:00;Aeropuerto-Hotel;10000
+Pablo;2010-07-29;06:00:00;Hotel-Aeropuerto;10000
+Pablo;2010-09-01;06:00:00;Hotel-Aeropuerto;5000
+NMBNJIK;2010-09-10;06:00:00;Hotel-Aeropuerto;0
+ffff;2010-11-09;10:30:00;medellin;44444
+Total  (9)
+Desde la fecha 2010-05-01 hasta 2010-11-27

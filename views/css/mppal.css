@@ -1,0 +1,101 @@
+/*----------------------------------------------------------------*/
+/*********************** Resetiar Documento ***********************/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+
+/*----------------------------------------------------------------*/
+/************************** Documento *****************************/
+body 
+{
+	margin: 0px;
+	background-color:#CEE6CF;
+	/*background: #FFF url(../images/crm_fondoppal.png) repeat-x;*/
+	
+}
+*
+{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+a:focus 
+{
+	outline: none;
+}
+
+/*----------------------------------------------------------------*/
+/*********************** Menu Principal **************************/
+#ppal 
+{
+	width: 1024px;
+	height: auto;
+	margin: 0px auto;
+}			
+#top 
+{
+	width: 1024px;
+	height: 146px;
+	/*background: url(../images/crm_mppal_top2.png) no-repeat;*/
+}
+#bar 
+{
+	/*width: 1024px;
+	height: 64px;*/
+	
+	width: 1024px;
+	height: 64px;
+	/*background: url(../images/crm_mppal_bar.png) no-repeat;*/
+	
+}
+#bar #perfil 
+{
+	float: left;
+	width: 140px;
+	text-align: left;
+	margin: 28px 10px 10px 130px;
+}
+#bar #cargo 
+{
+	float: left;
+	width: 140px;
+	text-align: left;
+	margin: 28px 10px 10px 50px;
+}
+#bar #email 
+{
+	float: left;
+	width: 250px;
+	text-align: left;
+	margin: 28px 10px 10px 64px;
+}
+#bar #cerrar 
+{
+	float: left;
+	width: 30px;
+	text-align: right;
+	
+	/*margin: 23px 10px 0px 120px;*/
+	
+	margin: -680px -190px 0px 1335px;
+}
+#content 
+{
+	width:1024px;
+	height: 390px;
+	text-align: center;
+	/*background: url(../images/crm_mppal_con.png) no-repeat;*/
+	
+	position: absolute;
+	left: -150px; /*corre la ventana a la izquierda*/
+	top: 150px; /*corre la ventana arriba*/
+	
+	
+	
+}

@@ -1,0 +1,3 @@
+hijo1;musica, arte
+hijo2;deporte,musica
+

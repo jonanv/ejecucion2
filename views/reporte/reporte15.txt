@@ -1,0 +1,5 @@
+Carro;MAQ415;Cuidelo;2010-09-09 13:02:14
+Carro;JHNC1256;;2010-09-13 07:17:07
+Carro;HJJ23;;2010-09-13 07:17:41
+Total de Vehiculos(3)
+Desde la fecha 2010-09-01 hasta 2010-09-30

@@ -1,0 +1,3 @@
+cliente1;gonzales;10537700;nlorenaarbelaez@gmail.com;dddd;2010-01-01
+cliente 2; Aristizabal;8100;nlorena_arbelaez@hotmail.com;Empresa;2010-01-01
+Total=  (2)

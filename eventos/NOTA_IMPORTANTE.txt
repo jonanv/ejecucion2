@@ -1,0 +1,11 @@
+PARA AJUSTAR ESTA HERRAMIENTA A UNA NUEVA TABLA CON MAS O MENOS COLUMNAS 
+SE DEBE TENER ENCUENTA QUE SE DEBE CREAR UNA TABLA CON LOS MISMOS CAMPOS DE LA TABLA
+Y LOS ARCHIVOS A MODIFICAR SON:
+
+index.php
+clase.php
+eventos\resources\functions.js
+eventos\templates\clientesGrid
+eventos\templates\clientForm
+eventos\templates\clientForm2
+eventos\templates\layout
