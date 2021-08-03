@@ -89,28 +89,28 @@ function AJAXCrearObjeto(){
 //---------------------------------ALERTAS--------------------------------------------------------
 	
 function notificacion(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	alertify.log("ALERTA AVISOS DE REMATES DISPONIBLES PARA APROBAR"); 
 	return false;
 }
 
 function audiencia(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	alertify.log("ALERTA AUDIENCIAS PARA GESTIONAR"); 
 	return false;
 }
 
 function actividad(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	alertify.log("ALERTA ACTIVIDADES PARA GESTIONAR"); 
 	return false;
 }
 
 function tareasincerrar(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	//alertify.log("ALERTA TAREAS A DESPACHO, SIN CERRAR"); //COLOR NEGRO
 	//alertify.success("ALERTA TAREAS A DESPACHO, SIN CERRAR"); //COLOR VERDE
@@ -153,7 +153,7 @@ function Reporte_Excel(id_reporte){
 	
 		//alert (datos_reporte_2);
 	
-		location.href="/ejecucion/index.php?controller=archivo&action=listadoExcel&datos_reporte_2="+datos_reporte_2;
+		location.href="/laborales/index.php?controller=archivo&action=listadoExcel&datos_reporte_2="+datos_reporte_2;
 	
 	}
 	
@@ -182,7 +182,7 @@ function Reporte_Excel(id_reporte){
 	
 		//alert (datos_reporte_2);
 	
-		location.href="/ejecucion/index.php?controller=archivo&action=listadoExcel&datos_reporte_2="+datos_reporte_2;
+		location.href="/laborales/index.php?controller=archivo&action=listadoExcel&datos_reporte_2="+datos_reporte_2;
 	
 	}
 	

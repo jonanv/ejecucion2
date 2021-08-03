@@ -55,7 +55,7 @@ $pdf->SetTitle('TRASLADO EN LISTA 110');
 
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\ejecucion\views\tcpdf\examples\images
+//C:\wamp\www\laborales\views\tcpdf\examples\images
 //$pdf->SetHeaderData('tcpdf_logo4.jpg', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 

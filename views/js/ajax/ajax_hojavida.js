@@ -95,9 +95,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -761,7 +761,7 @@ $(function(){
 			
 				
 				
-				window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/HOJA_VIDA.php?id_hv="+$('#id_hv').val());
+				window.open("http://"+ipservidor+"/laborales/views/tcpdf/HOJA_VIDA.php?id_hv="+$('#id_hv').val());
 			
 			}		
 		
@@ -772,7 +772,7 @@ $(function(){
 	
 		var id_hv     = $(this).attr('data-idhv');
 		
-		window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/HOJA_VIDA.php?id_hv="+id_hv);
+		window.open("http://"+ipservidor+"/laborales/views/tcpdf/HOJA_VIDA.php?id_hv="+id_hv);
 		
 	
 	});
@@ -783,7 +783,7 @@ $(function(){
 	/*$('#JQueryFTD_Demo_lista').fileTree({
 							  
 	  
-		root: '/wamp/www/ejecucion/HOJASDEVIDA/'+folder_usuario_L+'/',
+		root: '/wamp/www/laborales/HOJASDEVIDA/'+folder_usuario_L+'/',
 		
 								 
 		script: 'views/viewstree/jqueryFileTree.php',
@@ -1338,9 +1338,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -1428,9 +1428,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -1517,9 +1517,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -1590,9 +1590,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -2093,10 +2093,10 @@ function Traer_Datos_Hoja_Vida(idvalor){
 					$('#JQueryFTD_Demo_1').fileTree({
 							  //root: '/windows/',
 							  
-							  //root: '/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES',
+							  //root: '/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES',
 							  
 			  
-							  root: '/wamp/www/ejecucion/HOJASDEVIDA/'+folder_usuario_1+'/',
+							  root: '/wamp/www/laborales/HOJASDEVIDA/'+folder_usuario_1+'/',
 							  
 							 
 							  script: 'views/viewstree/jqueryFileTree.php',
@@ -2156,7 +2156,7 @@ function Traer_Datos_Hoja_Vida(idvalor){
 					$('#JQueryFTD_Demo_1').fileTree({
 							  //root: '/windows/',
 							  
-							  //root: '/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES',
+							  //root: '/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES',
 							  
 			  
 							  root: '',
@@ -2245,7 +2245,7 @@ function Traer_Datos_Hoja_Vida(idvalor){
 				$('#JQueryFTD_Demo_1').fileTree({
 							  //root: '/windows/',
 							  
-							  //root: '/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES',
+							  //root: '/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES',
 							  
 			  
 							  root: '',
@@ -2387,7 +2387,7 @@ function Eliminar_Soporte(idfila){
 		dataString += '&id_central_eliminar='+id_central_eliminar;
 		dataString += '&cont_idc='+cont_idc;
 		
-		/*Ejecutamos la función ajax de jQuery*/		
+		/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 		$.ajax({
 				
 			//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -2503,7 +2503,7 @@ function Eliminar_Soporte_2(idfila){
 		dataString += '&id_central_eliminar='+id_central_eliminar;
 		dataString += '&cont_idc='+cont_idc;
 		
-		/*Ejecutamos la función ajax de jQuery*/		
+		/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 		$.ajax({
 				
 			//url:'views/popupbox/subir.php', //Url a donde la enviaremos

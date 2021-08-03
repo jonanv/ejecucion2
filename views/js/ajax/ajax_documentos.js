@@ -86,7 +86,7 @@ $(function(){
 					//EN LA FUNCION DEL MODELO documentosMode.php, FUNCION traer_datos_consecutivo, SE DEJA 
 					//PRA QUE EL SISTEMA NO PRESENTE NINGUNA FALLA.
 					
-					//CAPTURO LOS DATOS DE LA SIGLA Y EL AÑO ACTUAL
+					//CAPTURO LOS DATOS DE LA SIGLA Y EL Aï¿½O ACTUAL
 					//Y SE ASIGNA AL CAMPO siglas DE LA VISTA documentos_generar.php
 					//ESTO CON EL OBJETO DE COSNTRUIR UN NUMERO UNICO DE DOCUMENTO
 					//EN LA TABLA documentos_internos CAMPO numero, BASADO EN EL CAMPO id
@@ -207,7 +207,7 @@ $(function(){
 				//var ipservidor = "190.217.24.24";
 				var ipservidor = ip;
 
-				window.open("http://"+ipservidor+"/ejecucion/views/PHPPdf/Reporte_Cartel.php?id="+id);
+				window.open("http://"+ipservidor+"/laborales/views/PHPPdf/Reporte_Cartel.php?id="+id);
 				
 	});
 	
@@ -447,7 +447,7 @@ function AgregarCampos(nunpartes,iddocumento){
 			// >= 0 SI SU RETORNO ES -1 QUIERE DECIR QUE EL CAMPO NO ES FECHA
 			//ES IMPORTANTE RECALCAR QUE PARA ESTO SE DEBE DEFINIR EN LA TABLA pa_tipodocumento
 			//COLUMNA PARTESDOCUMENTO, CUAL DE LAS PARTE SERA FECHA SIMPLEMENTE
-			//COLOCANDO LA PALABRA (FECHA,Fecha,fecha), LA CUAL PUEDE IR ACOMPAÑADA DE OTRAS PALABRAS
+			//COLOCANDO LA PALABRA (FECHA,Fecha,fecha), LA CUAL PUEDE IR ACOMPAï¿½ADA DE OTRAS PALABRAS
 			var identificadorcampo1 = partesdoc[nextinput].indexOf('FECHA');
 			var identificadorcampo2 = partesdoc[nextinput].indexOf('Fecha');
 			var identificadorcampo3 = partesdoc[nextinput].indexOf('fecha');
@@ -546,7 +546,7 @@ function AgregarCampos_Con_Contenido(nunpartes,iddocumento,contenidopartes){
 			// >= 0 SI SU RETORNO ES -1 QUIERE DECIR QUE EL CAMPO NO ES FECHA
 			//ES IMPORTANTE RECALCAR QUE PARA ESTO SE DEBE DEFINIR EN LA TABLA pa_tipodocumento
 			//COLUMNA PARTESDOCUMENTO, CUAL DE LAS PARTE SERA FECHA SIMPLEMENTE
-			//COLOCANDO LA PALABRA (FECHA,Fecha,fecha), LA CUAL PUEDE IR ACOMPAÑADA DE OTRAS PALABRAS
+			//COLOCANDO LA PALABRA (FECHA,Fecha,fecha), LA CUAL PUEDE IR ACOMPAï¿½ADA DE OTRAS PALABRAS
 			var identificadorcampo1 = partesdoc[nextinput].indexOf('FECHA');
 			var identificadorcampo2 = partesdoc[nextinput].indexOf('Fecha');
 			var identificadorcampo3 = partesdoc[nextinput].indexOf('fecha');

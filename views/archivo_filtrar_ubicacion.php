@@ -3017,7 +3017,7 @@ $tiene_ta_3  = 0;
 
 
 										<td colspan="4">
-											<a id="btaudi" href="/ejecucion/audiencias/index.php"><img src="views/images/audi.png" width="30" height="30" title="AGENDA AUDIENCIAS" />AGENDA AUDIENCIAS</a>
+											<a id="btaudi" href="/laborales/audiencias/index.php"><img src="views/images/audi.png" width="30" height="30" title="AGENDA AUDIENCIAS" />AGENDA AUDIENCIAS</a>
 
 											<!-- <marquee behavior="alternate" bgcolor="#EFEFEF" scrollamount="2" scrolldelay="10" width="150" height="20">ALERTA</marquee> -->
 

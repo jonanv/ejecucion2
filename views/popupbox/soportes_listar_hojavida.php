@@ -60,10 +60,10 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 	$('#JQueryFTD_Demo').fileTree({
 			      //root: '/windows/',
 				  
-				  //root: '/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES',
+				  //root: '/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES',
 				  
   
-				  root: '/wamp/www/ejecucion/HOJASDEVIDA/'+folder_usuario+'/',
+				  root: '/wamp/www/laborales/HOJASDEVIDA/'+folder_usuario+'/',
 				  
 				 
 			      script: 'views/viewstree/jqueryFileTree.php',

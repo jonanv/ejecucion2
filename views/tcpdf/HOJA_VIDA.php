@@ -49,7 +49,7 @@ $query = "SELECT t1.id,t1.foto,t1.cedula,t1.nombre,t1.direccion,t1.correo,t2.des
 $sql = mysql_query($query);
 $row = mysql_fetch_array($sql);
 
-$completar_ruta_foto = "C:/wamp/www/ejecucion/"; 
+$completar_ruta_foto = "C:/wamp/www/laborales/"; 
 
 $dato1g = $completar_ruta_foto.$row['foto'];
 //$dato1g = $row['foto'];
@@ -176,7 +176,7 @@ $pdf->SetTitle('Hoja de Vida: '.$dato2g);
 
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\ejecucion\views\tcpdf\examples\images
+//C:\wamp\www\laborales\views\tcpdf\examples\images
 //$pdf->SetHeaderData('tcpdf_logo4.jpg', 58, '', 'OFICINA DE EJCUCION CILVIL MUNICIPAL DE MANIZALES');
 $pdf->SetHeaderData('', 0, 'HOJA DE VIDA', $dato3g);
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));

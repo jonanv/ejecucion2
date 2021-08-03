@@ -244,7 +244,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 			//alert($('#datospartes').val());
 			
 
-			/*Ejecutamos la función ajax de jQuery*/		
+			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 			$.ajax({
 			
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -494,7 +494,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 				
 				dataString += '&id_msg='+id_msg;
 			
-				/*Ejecutamos la función ajax de jQuery*/		
+				/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 				$.ajax({
 				
 					//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -569,10 +569,10 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 	$('#JQueryFTD_Demo').fileTree({
 			      //root: '/windows/',
 				  
-				  //root: '/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES',
+				  //root: '/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES',
 				  
   
-				  root: '/wamp/www/ejecucion/HOJASDEVIDA/'+folder_usuario+'/',
+				  root: '/wamp/www/laborales/HOJASDEVIDA/'+folder_usuario+'/',
 				  
 				 
 			      script: 'views/viewstree/jqueryFileTree.php',
@@ -1009,7 +1009,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 $(document).ready(function() {
 	
 	
-	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
+	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
 	 $.datepicker.regional['es'] = {
 	 closeText: 'Cerrar',
 	 prevText: '< Ant',
@@ -1017,9 +1017,9 @@ $(document).ready(function() {
 	 currentText: 'Hoy',
 	 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 	 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-	 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miï¿½rcoles', 'Jueves', 'Viernes', 'Sï¿½bado'],
+	 dayNamesShort: ['Dom','Lun','Mar','Miï¿½','Juv','Vie','Sï¿½b'],
+	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sï¿½'],
 	 weekHeader: 'Sm',
 	 dateFormat: 'yy-mm-dd',
 	 firstDay: 1,

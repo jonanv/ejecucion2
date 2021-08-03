@@ -32,16 +32,16 @@ $identificador_archivo = trim($_POST['identificador_archivo']);
 //SOPORTES_ESTUDIOS, SOPORTES_EXPERIENCIA_LABORAL, ANTECEDENTES_CERTIFICADOS
 //SE NECESITA LA RUTA ABSOLUTA ($ruta), PERO PARA GRABAR EN LA TABLA hv_rutas_archivos LA RUTA
 //SOLO ES NECESARIO HASTA 'HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_ESTUDIOS/"
-//PARA QUE ABRA OTRA VENTANA CON EL PDF http://172.16.176.194/ejecucion/HOJASDEVIDA/38/SOPORTES_ESTUDIOS/2_acta_grado.pdf
-//DE ESTA FORMA NO ABRIRIA C:/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES_ESTUDIOS/2_acta_grado.pdf
+//PARA QUE ABRA OTRA VENTANA CON EL PDF http://172.16.176.194/laborales/HOJASDEVIDA/38/SOPORTES_ESTUDIOS/2_acta_grado.pdf
+//DE ESTA FORMA NO ABRIRIA C:/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES_ESTUDIOS/2_acta_grado.pdf
 
 //ESTUDIO
 if($identificador_archivo == "E"){
 	
-	//$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_ESTUDIOS/";
+	//$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_ESTUDIOS/";
 	//$ruta_BD = 'HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_ESTUDIOS/";
 	
-	$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$idusuario."/SOPORTES_ESTUDIOS/";
+	$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$idusuario."/SOPORTES_ESTUDIOS/";
 	$ruta_BD = 'HOJASDEVIDA/'.$idusuario."/SOPORTES_ESTUDIOS/";
 	
 	
@@ -50,20 +50,20 @@ if($identificador_archivo == "E"){
 //EXPERIENCIA LABORAL
 if($identificador_archivo == "L"){
 	
-	//$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_EXPERIENCIA_LABORAL/";
+	//$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_EXPERIENCIA_LABORAL/";
 	//$ruta_BD = 'HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_EXPERIENCIA_LABORAL/";
 	
-	$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$idusuario."/SOPORTES_EXPERIENCIA_LABORAL/";
+	$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$idusuario."/SOPORTES_EXPERIENCIA_LABORAL/";
 	$ruta_BD = 'HOJASDEVIDA/'.$idusuario."/SOPORTES_EXPERIENCIA_LABORAL/";
 }
 
 //ACTOS ADMINISTRATIVOS
 if($identificador_archivo == "AD"){
 	
-	//$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$_SESSION['idUsuario']."/ACTOS_ADMINISTRATIVOS/";
+	//$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$_SESSION['idUsuario']."/ACTOS_ADMINISTRATIVOS/";
 	//$ruta_BD = 'HOJASDEVIDA/'.$_SESSION['idUsuario']."/ACTOS_ADMINISTRATIVOS/";
 	
-	$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$idusuario."/ACTOS_ADMINISTRATIVOS/";
+	$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$idusuario."/ACTOS_ADMINISTRATIVOS/";
 	$ruta_BD = 'HOJASDEVIDA/'.$idusuario."/ACTOS_ADMINISTRATIVOS/";
 	
 }
@@ -71,10 +71,10 @@ if($identificador_archivo == "AD"){
 //ANTECEDENTES / CERTIFICADOS
 if($identificador_archivo == "A"){
 	
-	//$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$_SESSION['idUsuario']."/ANTECEDENTES_CERTIFICADOS/";
+	//$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$_SESSION['idUsuario']."/ANTECEDENTES_CERTIFICADOS/";
 	//$ruta_BD = 'HOJASDEVIDA/'.$_SESSION['idUsuario']."/ANTECEDENTES_CERTIFICADOS/";
 	
-	$ruta    = 'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$idusuario."/ANTECEDENTES_CERTIFICADOS/";
+	$ruta    = 'C:/wamp/www/laborales/HOJASDEVIDA/'.$idusuario."/ANTECEDENTES_CERTIFICADOS/";
 	$ruta_BD = 'HOJASDEVIDA/'.$idusuario."/ANTECEDENTES_CERTIFICADOS/";
 	
 	$id_estudio = $idusuario;
@@ -105,7 +105,7 @@ $error_transaccion = 0; //variable para detectar error
 
 $error_moverarchivo = 0; //variable para detectar error cuando se sube un archivo y no guardar la ruta en hv_rutas_archivos
 
-//Conexión a la base de datos
+//Conexiï¿½n a la base de datos
 $conexion = db_connect($dbdefault_dbname);
 		
 if($conexion > 0){
@@ -133,7 +133,7 @@ if($conexion > 0){
 				
 				$error_moverarchivo = 0;
 			}
-		if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
+		if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
 			{
 				$mensage .= '-> No se pudo subir el archivo <b>'.$NombreOriginal.'</b> debido al siguiente Error: n'.$key['error']; 
 				
