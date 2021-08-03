@@ -120,10 +120,10 @@ $(document).ready(function() {
 		//alert(juzgadodestino);
 		
 		if($("#ckdespacho").is(':checked')) {  
-            //alert("Está activado"); 
+            //alert("Estï¿½ activado"); 
 			adespacho = 1; 
         } else {  
-            //alert("No está activado"); 
+            //alert("No estï¿½ activado"); 
 			adespacho = 0; 
         }  
 		
@@ -451,10 +451,10 @@ $(document).ready(function() {
 		//alert(juzgadodestino);
 		
 		if($("#ckautoaprueba").is(':checked')) {  
-            //alert("Está activado"); 
+            //alert("Estï¿½ activado"); 
 			autoaprueba = 1; 
         } else {  
-            //alert("No está activado"); 
+            //alert("No estï¿½ activado"); 
 			autoaprueba = 0; 
         }  
 		
@@ -576,7 +576,7 @@ $(document).ready(function() {
 			document.frm.asignadoa.value.length      == 0 
 		){
 		
-			alert("Definir Actuación Interna, Fecha Final y Asignado A");
+			alert("Definir Actuaciï¿½n Interna, Fecha Final y Asignado A");
 			document.getElementById('fecha_actusfti').style.borderColor='#FF0000';
 			document.getElementById('actuacion').style.borderColor='#FF0000';
 			document.getElementById('asignadoa').style.borderColor='#FF0000';
@@ -705,7 +705,7 @@ function crearFormAccionado(form,frm) {
     ele = document.createElement('input'); 
   ele.type = '<label>'; 
   ele.name = 'apellido1'+numf2; 
-  ele.value= 'Descripción: ';
+  ele.value= 'Descripciï¿½n: ';
   ele.id= 'estilo_medio';
   ele.disabled= 'true';
   contenedor.appendChild(ele); 
@@ -882,20 +882,20 @@ location.href="index.php?controller=correspondencia&action=listarDocumentos";
 </script>
 
 <style type="text/css">
-<!--
+
 .Estilo2 {
 color: #0000CC;
 cursor:pointer;
 text-decoration: underline; 
 }
--->
+
 </style>
 </head>
 
 <body>
-<!---->
+
 <?php require 'header.php'; ?>
-<!---->
+
 <?php require 'secc_archivo.php'; ?>
 
 <?php require 'funciones/Funciones.php'; 
@@ -904,7 +904,7 @@ $funcion = new Funciones();
 
 <div id ="block"></div>
 <div id="popupbox"></div>
-<!---->
+
 <table border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="views/images/crm_fondo_top.png" width="954" height="40" /></td>
@@ -935,7 +935,7 @@ $funcion = new Funciones();
 				$fechaquearchiva = $field[fechaquearchiva];
 			}
 		   	
-			//VARIABLE CUANDO SE LE DA FIÇECHA DE FIN DE TERMINO A PROCESO
+			//VARIABLE CUANDO SE LE DA FIï¿½ECHA DE FIN DE TERMINO A PROCESO
 			//PARA QUE APAREZCA EN LAS ALERTAS DE VENCE TERMINOS
 			$fecha_terminos  = $field[fecha_terminos];
 			
@@ -1012,12 +1012,12 @@ $i=$k=0;
 //$ii=$kk=$jj=0;
   ?>
   		
-       <td><input type="text" name="fecha" id="txt_input" class="required" value="<?php echo $fecha;?>" readonly="readonly" title="Fecha del día Actual"/>
+       <td><input type="text" name="fecha" id="txt_input" class="required" value="<?php echo $fecha;?>" readonly="readonly" title="Fecha del dï¿½a Actual"/>
          <input name="cantidad" type="hidden" id="cantidad" value="0" />
          <input name="cantidad1" type="hidden" id="cantidad1" value="0" />
          <input type="hidden" name="temp" id="temp" />
-		<!-- <a id="new" href="javascript:void(0);" title="Acciones del Proceso"><img src="/ejecucion/eventos/imagenes/toggle_f2.png" width="35" height="35" title="Acciones del Proceso"/>Acciones del Proceso</a> -->
-		<input type="text" name="fechaactualsistema" id="txt_input" class="required" value="<?php echo $field[fecha];?>" readonly="readonly" title="Fecha de la ultima actualización del Proceso por parte de un Funcionario de la Oficina de Ejecución de Sentencias"/>
+		<!-- <a id="new" href="javascript:void(0);" title="Acciones del Proceso"><img src="/laborales/eventos/imagenes/toggle_f2.png" width="35" height="35" title="Acciones del Proceso"/>Acciones del Proceso</a> -->
+		<input type="text" name="fechaactualsistema" id="txt_input" class="required" value="<?php echo $field[fecha];?>" readonly="readonly" title="Fecha de la ultima actualizaciï¿½n del Proceso por parte de un Funcionario de la Oficina de Ejecuciï¿½n de Sentencias"/>
 		<input type="text" name="fechacarga" id="txt_input" class="required" value="<?php echo $field[fecharegistrosistema];?>" readonly="readonly" title="Fecha de Registro del Proceso Cuando es Cargado al Sistema por Primera vez"/>
 		
 		</td>
@@ -1163,7 +1163,7 @@ $i=$k=0;
              <td><input type="text" name="demandante" id="txt_input" maxlength="1000" class=""  onchange="" value="<?php echo $field[demandante]; ?>"/></td>
              </tr>
              <tr>
-             <td>Cédula Demandado: </td>
+             <td>Cï¿½dula Demandado: </td>
              <td><input type="text" name="cedula_demandado" id="txt_input" maxlength="1000" class=""  onchange="" value="<?php echo $field[cedula_demandado]; ?>"/></td>
              </tr>
              <tr>
@@ -1295,7 +1295,7 @@ $i=$k=0;
            <td><input type="text" name="caja" id="txt_input_corto" class="" maxlength="3"  onchange="construir_posicion(frm)" value="<?php echo $caja; ?>"/></td>
            </tr>
           <tr>
-          <td>Posición</td>
+          <td>Posiciï¿½n</td>
           <td><input type="text" name="posicion" id="txt_input" readonly="readonly" class="" value="<?php echo  $posicion; ?>" />
 		  <input type="hidden" name="posicion_antigua" id="posicion_antigua" value="<?php echo $posicion;?>" /></td>
           </tr>
@@ -1322,7 +1322,7 @@ $i=$k=0;
            <td><input type="text" name="caja" id="txt_input_corto" readonly="readonly" class="" maxlength="3"  onchange="construir_posicion(frm)" value="<?php echo $caja; ?>"/></td>
            </tr>
           <tr>
-          <td>Posición</td>
+          <td>Posiciï¿½n</td>
           <td><input type="text" name="posicion" id="txt_input" readonly="readonly" class="" value="<?php echo  $posicion; ?>" />
 		  <input type="hidden" name="posicion_antigua" id="posicion_antigua" value="<?php echo $posicion;?>" /></td>
           </tr>
@@ -1340,7 +1340,7 @@ $i=$k=0;
 			  if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
 			  
 					<tr>
-						<td>Observación</td>
+						<td>Observaciï¿½n</td>
 						<td><textarea name="observacionesarchivo" id="txt_input" cols="45" rows="5" maxlength = "1000" ><?php echo $field[observacion_archivo]; ?></textarea> </td>
 					</tr>
 		  <?php }?>
@@ -1352,7 +1352,7 @@ $i=$k=0;
 		  	if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
 				
 				<tr>
-					<td>Observación</td>
+					<td>Observaciï¿½n</td>
 					<td><textarea name="observacionesarchivo" id="txt_input" cols="45" rows="5" maxlength = "1000"><?php echo $field[observacion_archivo]; ?></textarea> </td>
 				</tr>
 		
@@ -1361,7 +1361,7 @@ $i=$k=0;
 			else{  ?>
 			
 				<tr>
-					<td>Observación</td>
+					<td>Observaciï¿½n</td>
 					<td><textarea name="observacionesarchivo" id="txt_input" cols="45" rows="5" maxlength = "1000" readonly="readonly"><?php echo $field[observacion_archivo]; ?></textarea> </td>
 				</tr>
 		<?php
@@ -1422,7 +1422,7 @@ $i=$k=0;
 			   
 				   <table>
 						<tr>
-							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ÚLTIMA ACTUACIÓN DESPACHO</strong></div></td>
+							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ï¿½LTIMA ACTUACIï¿½N DESPACHO</strong></div></td>
 						</tr>
 						
 						<tr>
@@ -1448,7 +1448,7 @@ $i=$k=0;
 			   
 				   <table> 
 						<tr>
-							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ÚLTIMA ACTUACIÓN SECRETARIA</strong></div></td>
+							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ï¿½LTIMA ACTUACIï¿½N SECRETARIA</strong></div></td>
 						</tr>
 						
 						<tr>
@@ -1480,15 +1480,15 @@ $i=$k=0;
 		   <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51)) { ?>
 		   
 		   <tr>
-				<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>TRÁMITE INTERNO DE PROCESO</strong></div>
+				<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>TRï¿½MITE INTERNO DE PROCESO</strong></div>
 				<input type="hidden" name="codradicado" id="codradicad" value="<?php echo $field[id]; ?>" /></td>
 		   </tr>
 			 
 		   <tr>
-				<td width="288">Actuación Interna:</td>
+				<td width="288">Actuaciï¿½n Interna:</td>
 				<td width="501"><select name="actuacion" id="actuacion" style="width:258px">
 				
-					<option value="" selected="selected">Seleccionar Actuación</option>
+					<option value="" selected="selected">Seleccionar Actuaciï¿½n</option>
 					 <?php
 						while($row = $datos_actuacion->fetch()){
 				
@@ -1501,7 +1501,7 @@ $i=$k=0;
             </tr>
 			
 			<tr>
-				<!-- ES LA FECHA DE ESTADO DE LA ÚLTIMA ACTUACIÓN SECRETARIA
+				<!-- ES LA FECHA DE ESTADO DE LA ï¿½LTIMA ACTUACIï¿½N SECRETARIA
 				SE UTILIZA EL FORMATO Y-n-j EN VEZ DE Y-m-d YA QUE AL REALIZAR LA OPERACION
 				DE CALCULAR LA FECHA FINAL SEGUN LOS DIAS LA FECHA INICIAL DEBE ESTAR DE LA SIGUIENTE 
 				MANERA 2014-11-5 (Y-n-j) Y NO DE ESTA 2014-11-05 (Y-m-d) YA QUE EL CERO DEL DIA
@@ -1512,7 +1512,7 @@ $i=$k=0;
 			</tr>
 			
 			<tr>
-                <td>Días</td>
+                <td>Dï¿½as</td>
                 <td><input type="text" name="diasti" id="txt_input" onkeyup="DiasHabiles()" value="<?php echo $dias; ?>"/></td>
             </tr>
 			
@@ -1667,7 +1667,7 @@ $i=$k=0;
              <tr>
                <td>&nbsp;</td>
                <td>
-			   		<input type="button" name="btn_input_accionado" id="btn_input_grande" value="Adicionar Descripción"  onclick="crearFormAccionado(this,frm)" />
+			   		<input type="button" name="btn_input_accionado" id="btn_input_grande" value="Adicionar Descripciï¿½n"  onclick="crearFormAccionado(this,frm)" />
 					
 					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51){ ?>
 							<!-- <span style="cursor:pointer"><img src="views/images/salir.png"  width="30" alt="" title="Registrar Salida" onclick="vinculoSalida(<?php echo $field[id];?>)" style="float:right " /></span> -->
@@ -1724,7 +1724,7 @@ $i=$k=0;
 					<a id="bt108" href="javascript:void(0);"><img src="views/images/t108.png" width="30" height="30" title="TRASLADO ART. 108"/>TRASLADO ART. 110</a>
 				</td>
 				<!-- <td>
-					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRÁMITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRÁMITE"/>Desactivar</a>
+					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRï¿½MITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRï¿½MITE"/>Desactivar</a>
 				</td> -->
 				
 			</tr>
@@ -1756,7 +1756,7 @@ $i=$k=0;
 					<a id="btterminos" href="javascript:void(0);"><img src="views/images/terminos.jpg" width="30" height="30" title="TERMINOS"/>TERMINOS</a>
 				</td>
 				<!-- <td>
-					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRÁMITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRÁMITE"/>Desactivar</a>
+					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRï¿½MITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRï¿½MITE"/>Desactivar</a>
 				</td> -->
 				
 			</tr>
