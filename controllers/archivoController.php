@@ -776,6 +776,7 @@ class archivoController extends controllerBase
 		if ($_SESSION['id'] != "") {
 			require 'models/archivoModel.php';
 			$ls = new archivoModel();
+
 			//ID USUARIOS PERTENECIENTES AL JUZGADO J1, J2 ESTO CON EL OBJETO QUE UN USUARIO DE UN JUZGADO NO VEA LA INFORMACION DEL OTRO
 			$campos               = 'usuario';
 			$nombrelista          = 'pa_usuario_acciones';
@@ -783,7 +784,7 @@ class archivoController extends controllerBase
 			$campoordenar         = 'id';
 			$datosusuario_juzgado = $ls->get_lista_usuario_acciones($campos, $nombrelista, $idaccion, $campoordenar);
 			$usuarios_juzgado     = $datosusuario_juzgado->fetch();
-			$usuariosa_juzgado	  = explode("////", $usuarios_juzgado[usuario]);
+			$usuariosa_juzgado	  = explode("////", $usuarios_juzgado['usuario']);
 
 			$usuariosa_juzgado_1  = explode("****", $usuariosa_juzgado[0]);
 
@@ -801,7 +802,7 @@ class archivoController extends controllerBase
 				$pertenece_juzgado = 2;
 			}
 
-			$data['pertenece_juzgado']   = $pertenece_juzgado;
+			$data['pertenece_juzgado'] = $pertenece_juzgado;
 
 			//NO ES NINGUN USUARIO DEL JUZGADO 1 O 2
 			if ($pertenece_juzgado == 0) {

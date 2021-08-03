@@ -281,7 +281,6 @@ $usuariosENTI     = $datosusuarioENTI->fetch();
 $usuariosaENTI2	  = explode("////", $usuariosENTI[usuario]);
 
 if (in_array($_SESSION['idUsuario'], $usuariosaENTI2, true)) {
-
 	$bandera_entitulos = 1;
 }
 
@@ -296,7 +295,6 @@ $usuariosaHCET2	  = explode("////", $usuariosHCET1[usuario]);
 $banderaHCET      = 0;
 
 if (in_array($_SESSION['idUsuario'], $usuariosaHCET2, true)) {
-
 	$banderaHCET = 1;
 }
 
@@ -508,7 +506,7 @@ $tiene_ta_3  = 0;
 			$("#fechater").datepicker({
 				changeFirstDay: false
 			});
-			$('#filaterminos').hide(); 
+			$('#filaterminos').hide();
 			// <!--$('#filareparto').hide();-- >
 			$('#filaliquidacion').hide();
 
@@ -2216,7 +2214,9 @@ $tiene_ta_3  = 0;
 								</tr>
 								<tr>
 									<td>Radicado:</td>
-									<td><input type="text" name="radicado" id="radicado" value="<?php echo $_GET['nombre4']; ?>" onkeypress="consultar_2(frm)" /><input type="hidden" name="lista_ciudades" id="hiddenField3" value="<?php echo $cad_ciu; ?>" />
+									<td>
+										<input type="text" name="radicado" id="radicado" value="<?php echo $_GET['nombre4']; ?>" onkeypress="consultar_2(frm)" />
+										<input type="hidden" name="lista_ciudades" id="hiddenField3" value="<?php echo $cad_ciu; ?>" />
 										<input type="hidden" name="lista_ciudades_id" id="hiddenField4" value="<?php echo $cad_ciu_id; ?>" />
 										<input type="hidden" name="lista_ciudades_iddepa" id="hiddenField5" value="<?php echo $cad_ciu_iddepa; ?>" />
 										<input type="hidden" name="lista_actuaciones_nombre" id="hiddenField6" value="<?php echo $cad_act; ?>" />
@@ -2520,7 +2520,7 @@ $tiene_ta_3  = 0;
 
 																		<!-- <td><a class="vtrevisado" href="javascript:void(0);" data-id="<?php //echo $row['id']; 
 																																			?>" data-radicado="<?php //echo $row['radicado']; 
-																																														?>"><img src="views/images/revi1.jpg" width="35" height="35" title="REVISADO"/></a></td> -->
+																																								?>"><img src="views/images/revi1.jpg" width="35" height="35" title="REVISADO"/></a></td> -->
 
 
 																	</tr>
@@ -3535,9 +3535,9 @@ all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada
 											<td></td>
 											<!-- <td><a name="<?php //echo "nuevaOBS".$Co;
 																?>" id="<?php //echo "nuevaOBS".$Co;
-																									?>" title="<?php //echo "nuevaOBS".$Co;
-																																			?>" onclick="Obtener_Fila_Tabla(this.parentNode.parentNode.rowIndex)" href="javascript:void(0);" data-radicado_obs="<?php //echo trim($field[radicado]);
-																																																																							?>"><img src="views/images/nuevaobs.png" width="30" height="30"/></a> </td> -->
+																		?>" title="<?php //echo "nuevaOBS".$Co;
+																					?>" onclick="Obtener_Fila_Tabla(this.parentNode.parentNode.rowIndex)" href="javascript:void(0);" data-radicado_obs="<?php //echo trim($field[radicado]);
+																																																									?>"><img src="views/images/nuevaobs.png" width="30" height="30"/></a> </td> -->
 
 											<!-- <td><a id="nuevaOBS" name="nuevaOBS" href="javascript:void(0);" data-radicado_obs="<?php //echo trim($field[radicado]);
 																																	?>"><img src="views/images/nuevaobs.png" width="30" height="30"/></a></td> -->
