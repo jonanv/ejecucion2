@@ -30618,16 +30618,10 @@ if ($row_count === false)
 		
 					
 					//SQL A EJECUTAR 
-	
-					$SQL_1 = "UPDATE ubicacion_expediente SET
-					
-								  digitalizado = 1
-								  
-							  WHERE id    = '$id_radi_digi'";			
+					$SQL_1 = "UPDATE ubicacion_expediente 
+								SET digitalizado = 1
+								WHERE id = '$id_radi_digi'";			
 											
-						
-					
-					
 					$error_transaccion   = 0; //variable para detectar error
 					$msg = " ";
 					

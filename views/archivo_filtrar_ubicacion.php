@@ -400,7 +400,7 @@ $tiene_ta_3  = 0;
 	<!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>  -->
 
 	<script src="views/js/jquery.easySlider.js" type="text/javascript"></script>
-	<script src="views/js/jquer|y.simplemodal.js" type="text/javascript"></script>
+	<script src="views/js/jquery.simplemodal.js" type="text/javascript"></script>
 	<script src="views/js/jquery.validate_NV.js" type="text/javascript"></script>
 
 	<!--------------------------------------- PATA LAS FECHAS ----------------------------------------------------------------------- -->

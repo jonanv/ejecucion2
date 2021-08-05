@@ -143,7 +143,7 @@ $(document).ready(function() {
 		var idradicado = $(this).attr('data-idtutela');
 		
 		$.get("funciones/traer_datos_radicado_justiciaXXI.php?idradicado="+idradicado, function(cadena){
-				
+				console.log(cadena);
 	
 				//alert(cadena);
 				
@@ -333,7 +333,8 @@ $(document).ready(function() {
 										
 											$datosproceso_2X = explode("//////",$datosproceso_2[$i]);
 											
-											
+											// Envia radicado
+											print_r($datosproceso_2X[0]);
 											$EXISTE_PROCESO = $modelo->get_datos_PROCESO_MIGRAR(trim($datosproceso_2X[0]));
 											
 											
@@ -391,7 +392,14 @@ $(document).ready(function() {
 												
 												<td style="text-align:center">
 												
-													<a class="migrar_tutela" href="javascript:void(0);" data-idtutela="<?php echo trim($datosproceso_2X[0]);?>"><img src="views/images/migrarT.png" width="45" height="45" title="MIGRAR TUTELA"/></a>
+													<a class="migrar_tutela" 
+														href="javascript:void(0);" 
+														data-idtutela="<?php echo trim($datosproceso_2X[0]);?>">
+														<img src="views/images/migrarT.png"
+															width="45" 
+															height="45" 
+															title="MIGRAR TUTELA"/>
+													</a>
 												
 												</td>
 												

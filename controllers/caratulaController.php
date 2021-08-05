@@ -598,6 +598,7 @@ class caratulaController extends controllerBase
 			//$filtro = $model->get_datos_proceso(2);
 
 			$filtro = $model->get_datos_proceso_x(2);
+			print_r($filtro);
 
 			$data['datosproceso'] = $filtro;
 
