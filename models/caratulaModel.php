@@ -630,7 +630,8 @@ class caratulaModel extends modelBase
 					 WHERE [A103FECHREPA] =  convert(datetime, '$fechaactual', 121) 
 					 AND [A103ANOTACTS] LIKE '%reparto%' 
 					 AND [A103CONSPROC] NOT IN(01,02,03,04,05,06,07,08,09,10) 
-					 AND [A103LLAVPROC] LIKE '%170014303%'");
+					 AND [A103LLAVPROC] LIKE '%170013105%'");
+					// AND [A103LLAVPROC] LIKE '%170014303%'");
 
 			//SQL PARA LA SALA DISCIPLINARIA  
 			/*$sql = ("SELECT [A103LLAVPROC],[A103ANOTACTS],[A103FECHREPA]

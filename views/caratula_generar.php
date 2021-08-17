@@ -126,7 +126,7 @@ EJENPLODE ESTO LO VEMOS EN EL FORMULARIO permisos.php UBICADO EN views\popupbox
 
 $(document).ready(function() {
 
-	<!-- TABLA id:frm_editar2-->
+	// <!-- TABLA id:frm_editar2-->
 	/*$('#frm_editar1').dataTable( { 
 		'sPaginationType': 'full_numbers',
 		
