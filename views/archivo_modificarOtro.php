@@ -10,7 +10,7 @@
 	//SE CAPTURA DE LA TABLA ubicacion_expediente
 	$digitalizado_1 = $modelo->get_proceso_digitalizado($id_radicado_2);
 	$digitalizado_2 = $digitalizado_1->fetch();
-	$digitalizado_3 = $digitalizado_2[digitalizado];
+	$digitalizado_3 = $digitalizado_2['digitalizado'];
 	
 	//echo $digitalizado_3;
 	
@@ -670,7 +670,7 @@ $(document).ready(function() {
 			
 			$.get("funciones/traer_fecha_termino_2.php?fechat="+fechat, function(cadena){
 			
-				//alert(cadena);
+				// alert(cadena);
 			
 				//location.href="index.php?controller=archivo&action=Registrar_Termino&id="+id+"&radicado="+radicado+"&fechatermino="+fechat+"&obst="+obst;
 				
@@ -3199,7 +3199,10 @@ $i=$k=0;
 			<tr>
 	
 				<td colspan="2">
-					<a id="btterminos" href="javascript:void(0);"><img src="views/images/terminos.jpg" width="30" height="30" title="TERMINOS"/><button type="button" class="btn btn-primary btn-xs">TERMINOS</button></a>
+					<a id="btterminos" href="javascript:void(0);">
+						<img src="views/images/terminos.jpg" width="30" height="30" title="TERMINOS"/>
+						<button type="button" class="btn btn-primary btn-xs">TERMINOS</button>
+					</a>
 				</td>
 				<!-- <td>
 					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TR�MITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TR�MITE"/>Desactivar</a>
@@ -3220,7 +3223,9 @@ $i=$k=0;
 			<td>
 				<br><label style="width:180px; height:23px; border-color:#000000; font-size:14px ">Observacion</label><br>
             	<input name="obsertermino" id="obsertermino" type="text" size="50">
-				<a class="fijartermino" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>"><img src="views/images/terminos.jpg" width="30" height="30" title="FIJAR FECHA TERMINO"/></a>
+				<a class="fijartermino" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>">
+					<img src="views/images/terminos.jpg" width="30" height="30" title="FIJAR FECHA TERMINO"/>
+				</a>
 				
 			</td>
 			

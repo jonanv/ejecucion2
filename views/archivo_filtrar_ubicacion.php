@@ -3128,7 +3128,7 @@ $tiene_ta_3  = 0;
 																		<td><?php echo $row[observacion_termino]; ?></td>
 																		<td><?php echo $row[termino_revisado]; ?></td>
 
-																		<?php if ($row[termino_revisado] == "SI") { ?>
+																		<?php if ($row['termino_revisado'] == "SI") { ?>
 
 																			<td>-</td>
 																			<td>-</td>
@@ -3146,7 +3146,11 @@ $tiene_ta_3  = 0;
 																			<td>-</td>
 																			<td>-</td>
 
-																			<td><a class="vtrevisado" href="javascript:void(0);" data-id="<?php echo $row['id']; ?>" data-radicado="<?php echo $row['radicado']; ?>"><img src="views/images/revi1.jpg" width="35" height="35" title="REVISADO" /></a></td>
+																			<td>
+																				<a class="vtrevisado" href="javascript:void(0);" data-id="<?php echo $row['id']; ?>" data-radicado="<?php echo $row['radicado']; ?>">
+																					<img src="views/images/revi1.jpg" width="35" height="35" title="REVISADO" />
+																				</a>
+																			</td>
 																		<?php } ?>
 
 																	</tr>
@@ -3190,7 +3194,9 @@ $tiene_ta_3  = 0;
 
 											<td colspan="4">
 
-												<a id="btREMASA" href="javascript:void(0);"><img src="views/images/rema3.jpg" width="35" height="35" title="ALERTA AVISOS DE REMATES DISPONIBLES PARA APROBAR" />ALERTA AVISOS DE REMATES DISPONIBLES PARA APROBAR</a>
+												<a id="btREMASA" href="javascript:void(0);">
+													<img src="views/images/rema3.jpg" width="35" height="35" title="ALERTA AVISOS DE REMATES DISPONIBLES PARA APROBAR" />ALERTA AVISOS DE REMATES DISPONIBLES PARA APROBAR
+												</a>
 
 												<!-- <marquee behavior="alternate" bgcolor="#EFEFEF" scrollamount="2" scrolldelay="10" width="450" height="20">ALERTA VISUALIZAR REMATE SIN APROBAR, CANTIDAD: <?php //echo $cantregisrema; 
 																																																				?></marquee> -->
@@ -3209,7 +3215,9 @@ $tiene_ta_3  = 0;
 
 											<td colspan="4">
 
-												<a id="btREMASA" href="javascript:void(0);"><img src="views/images/rema3.jpg" width="35" height="35" title="CONSULTAR AVISOS DE REMATES APROBADOS" />CONSULTAR AVISOS DE REMATES APROBADOS</a>
+												<a id="btREMASA" href="javascript:void(0);">
+													<img src="views/images/rema3.jpg" width="35" height="35" title="CONSULTAR AVISOS DE REMATES APROBADOS" />CONSULTAR AVISOS DE REMATES APROBADOS
+												</a>
 
 												<!-- <marquee behavior="alternate" bgcolor="#EFEFEF" scrollamount="2" scrolldelay="10" width="450" height="20">ALERTA VISUALIZAR REMATE SIN APROBAR, CANTIDAD: <?php //echo $cantregisrema; 
 																																																				?></marquee> -->
@@ -3537,7 +3545,7 @@ all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada
 																?>" id="<?php //echo "nuevaOBS".$Co;
 																		?>" title="<?php //echo "nuevaOBS".$Co;
 																					?>" onclick="Obtener_Fila_Tabla(this.parentNode.parentNode.rowIndex)" href="javascript:void(0);" data-radicado_obs="<?php //echo trim($field[radicado]);
-																																																									?>"><img src="views/images/nuevaobs.png" width="30" height="30"/></a> </td> -->
+																																																		?>"><img src="views/images/nuevaobs.png" width="30" height="30"/></a> </td> -->
 
 											<!-- <td><a id="nuevaOBS" name="nuevaOBS" href="javascript:void(0);" data-radicado_obs="<?php //echo trim($field[radicado]);
 																																	?>"><img src="views/images/nuevaobs.png" width="30" height="30"/></a></td> -->

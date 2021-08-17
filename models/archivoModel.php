@@ -12251,9 +12251,6 @@ if ($row_count === false)
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------
 
-	
-		
-		
 			try {  
 			
 				$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12262,24 +12259,25 @@ if ($row_count === false)
 				$this->db->beginTransaction();
 				
 			  
-					$this->db->exec("UPDATE ubicacion_expediente SET fecha='$fechalog',idusuario = '$idusuario',
-					                 fecha_terminos = '$fechatermino',termino_revisado = '',observacion_termino = '$obst' 
-									 where id='$id'");
+					$this->db->exec(
+						"UPDATE ubicacion_expediente 
+						SET fecha='$fechalog', idusuario = '$idusuario', fecha_terminos = '$fechatermino', termino_revisado = '', observacion_termino = '$obst' 
+						WHERE id='$id'");
 						
-					$this->db->exec("INSERT INTO detalle_correspondencia (idcorrespondencia,fecha,observacion,idusuario) 
-					                 VALUES('$id','$fecharegistro','$observacion','$idusuario')");
+					$this->db->exec("INSERT INTO detalle_correspondencia (idcorrespondencia, fecha, observacion, idusuario) 
+					                 VALUES('$id', '$fecharegistro', '$observacion', '$idusuario')");
 						
-					$this->db->exec("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) 
+					$this->db->exec("INSERT INTO log (fecha, accion, detalle,idusuario, idtipolog) 
 					                 VALUES ('$fechalog', '$accion','$detalle','$idusuario','$tipolog')");
 					
-					
-					
-				
+
 				//SE TERMINA LA TRANSACCION  
 				$this->db->commit();
 				
 				
-				print'<script languaje="Javascript">location.href="index.php?controller=archivo&action=mensajes&nombre=2"</script>';
+				print'<script languaje="Javascript">
+						location.href="index.php?controller=archivo&action=mensajes&nombre=2"
+					</script>';
 			  
 			} 
 			catch (Exception $e) {
