@@ -22781,15 +22781,14 @@ if ($row_count === false)
 											
 										);*/
 										
-			$listar = $this->db->prepare("
-			
-										 	SELECT
+			$listar = $this->db->prepare("SELECT
 											t1.id,t1.idradicado,t1.fecha,t1.hora,t1.folios,
 											t1.folio_i,t1.folio_f,t1.cuaderno,
 											t1.foto,t1.tipo,t1.ruta,t1.des,t1.idusuario,
 											t2.empleado AS registra,
 											CONCAT(t3.empleado,'/',t1.fechaedita,'/',t1.horaedita) AS edita,
-											t4.des AS descuaderno,t4.orden,t1.idcorrespondencia,t5.id_memo_externo,t6.nombre AS dependencia,
+											t4.des AS descuaderno,
+											t4.orden,t1.idcorrespondencia,t5.id_memo_externo,t6.nombre AS dependencia,
 											t1.fecha_creacion,t1.fecha_de,t1.fecha_a,t1.origen,t1.obs,t7.origen AS norigen,t1.orden_documento,
 											t1.para_estado,t1.fecha_estado,t1.otra
 											FROM ((((((expe_digital t1
@@ -22803,13 +22802,8 @@ if ($row_count === false)
 											AND t1.estado != 3
 											ORDER BY t4.orden,t1.orden_documento"
 											/*ORDER BY t1.cuaderno,folio_i*/
-											
 										);
 										
-										
-										
-			
-			
 			/*$SQL = "
 			
 										 	SELECT

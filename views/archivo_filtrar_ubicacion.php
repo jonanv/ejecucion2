@@ -2842,7 +2842,10 @@ $tiene_ta_3  = 0;
 										<td colspan="4">
 
 
-											<a id="generar_excel_MEMOSC" href="javascript:void(0);" style="float:left "><img src="views/images/excos1.png" width="65" height="65" title="REPORTE ENTRADA MEMORIALES SIN COSTAS" />REPORTE ENTRADA MEMORIALES SIN COSTAS</a>
+											<a id="generar_excel_MEMOSC" href="javascript:void(0);" style="float:left ">
+												<img src="views/images/excos1.png" width="65" height="65" title="REPORTE ENTRADA MEMORIALES SIN COSTAS" />
+												REPORTE ENTRADA MEMORIALES SIN COSTAS
+											</a>
 
 										</td>
 
@@ -2882,7 +2885,10 @@ $tiene_ta_3  = 0;
 										<td colspan="4">
 
 
-											<a id="generar_excel_memoad" href="javascript:void(0);"><img src="views/images/excel.jpg" width="45" height="45" title="REPORTE EXCEL MEMORIALES Y PROCESO A DESPACHO" />REPORTE EXCEL MEMORIALES Y PROCESO A DESPACHO</a>
+											<a id="generar_excel_memoad" href="javascript:void(0);">
+												<img src="views/images/excel.jpg" width="45" height="45" title="REPORTE EXCEL MEMORIALES Y PROCESO A DESPACHO" />
+												REPORTE EXCEL MEMORIALES Y PROCESO A DESPACHO
+											</a>
 
 
 
