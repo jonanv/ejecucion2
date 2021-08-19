@@ -348,29 +348,19 @@ EJENPLODE ESTO LO VEMOS EN EL FORMULARIO permisos.php UBICADO EN views\popupbox
 
 
 									<tr>
-
 										<td>
 											<label style="width:151px; color:#FF0000; font-size:16px">Observacion</label><br><br>
-
 										</td>
-
 										<td colspan="3">
-
 											<select name="obserie" id="obserie" class="required">
-
 												<option value="" selected="selected">Seleccionar Observacion</option>
-
 												<?php
-												while ($row = $datosobser->fetch()) {
-
-													echo "<option value=\"" . $row[id] . "\">" . $row[observacion] . "</option>";
-												}
+													while ($row = $datosactu->fetch()) {
+														echo "<option value=\"" . $row['id'] . "\">" . $row['acc_descripcion'] . "</option>";
+													}
 												?>
 											</select>
 										</td>
-
-
-
 									</tr>
 
 									<tr>
@@ -413,21 +403,14 @@ EJENPLODE ESTO LO VEMOS EN EL FORMULARIO permisos.php UBICADO EN views\popupbox
 									</tr>
 
 
-									<tr>
+									<!-- <tr>
 
 										<td colspan="4">
 											<center><label style="width:151px; color:#FF0000; font-size:14px">PARA TRAMITE INTERNO</label><br><br></center>
 
 										</td>
-
-
-
 									</tr>
-
-
 									<tr>
-
-
 										<td colspan="4">
 
 
@@ -435,17 +418,16 @@ EJENPLODE ESTO LO VEMOS EN EL FORMULARIO permisos.php UBICADO EN views\popupbox
 											<select name="actuacion" id="actuacion">
 
 												<option value="" selected="selected">Seleccionar Actuacion</option>
-
 												<?php
-												while ($row = $datosactu->fetch()) {
+													while ($row = $datosactu->fetch()) {
 
-													echo "<option value=\"" . $row[id] . "\">" . $row[acc_descripcion] . "</option>";
-												}
+														echo "<option value=\"" . $row[id] . "\">" . $row[acc_descripcion] . "</option>";
+													}
 												?>
 											</select>
 										</td>
 
-									</tr>
+									</tr> -->
 
 									<tr>
 										<!-- ES LA FECHA DE ESTADO DE LA �LTIMA ACTUACI�N SECRETARIA

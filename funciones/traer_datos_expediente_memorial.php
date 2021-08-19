@@ -67,11 +67,3 @@
 
 	//cierro conexion a la db
 	mysql_close($conexion);
-	
-?>
-   
-
-	
-
-	
-	
