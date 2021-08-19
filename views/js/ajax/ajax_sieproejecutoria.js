@@ -98,9 +98,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -519,9 +519,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -609,9 +609,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -698,9 +698,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -771,9 +771,9 @@ $(function(){
 		   //cedula: "Defina Cedula",
            
 		   /*lastname: "Debe introducir su apellido.",
-            email : "Debe introducir un email válido.",
-            phone : "El número de teléfono introducido no es correcto.",
-            years : "Debe introducir solo números.",
+            email : "Debe introducir un email vï¿½lido.",
+            phone : "El nï¿½mero de telï¿½fono introducido no es correcto.",
+            years : "Debe introducir solo nï¿½meros.",
             message : "El campo Mensaje es obligatorio.",*/
         },
         submitHandler: function(form){
@@ -1425,7 +1425,7 @@ function Adicionar_Memorial(datostabla){
 					
 					resultado2 = resultado[id].split("//////");
 					
-					tabla = reemplazarCadena("</table>", " ", tabla);
+					// tabla = reemplazarCadena("</table>", " ", tabla);
 					
 					tabla+='<tr>';
 					
@@ -1435,12 +1435,13 @@ function Adicionar_Memorial(datostabla){
 					
 					tabla+='<td>'+resultado2[13]+'</td>';
 					
+					tabla+='<td>' + 
+								'<button type=button name=btdireccion id=btdireccion onclick="Adicionar_Parte(1,this.parentNode.parentNode.rowIndex)" style="border-style:none; background-color:#FFFFFF">' + 
+									'<img src="views/images/flecha.jpg" width="40" height="40" title="ADICIONAR RADICADO"/>' +
+								'</button>' + 
+							'</td>';
 					
-					
-					
-					tabla+='<td><button type=button name=btdireccion id=btdireccion onclick="Adicionar_Parte(1,this.parentNode.parentNode.rowIndex)" style="border-style:none; background-color:#FFFFFF"><img src="views/images/flecha.jpg" width="40" height="40" title="ADICIONAR RADICADO"/></button></td>';
-					
-					tabla+='</tr></table>';
+					tabla+='</tr>';
 					
 					document.getElementById('cont2').innerHTML=tabla;
 					

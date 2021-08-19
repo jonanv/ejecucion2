@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title><?= titulo ?></title>
+  <title><?php echo $titulo ?></title>
   <script src="views/js/jquery.js" type="text/javascript"></script>
   <script src="views/js/jquery.easySlider.js" type="text/javascript"></script>
   <script src="views/js/jquery.validate.js" type="text/javascript"></script>
