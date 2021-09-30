@@ -1398,7 +1398,7 @@ function Adicionar_Memorial(datostabla) {
 
 		var tabla = document.getElementById('cont2').innerHTML;
 
-		for (var id = 0; id < Filas - 1; id++) {
+		for (var id = Filas - 2; id < Filas - 1; id++) {
 			//tabla=tabla.substring(0,(tabla.length-8)); 
 
 			resultado2 = resultado[id].split("//////");

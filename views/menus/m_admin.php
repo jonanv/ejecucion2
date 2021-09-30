@@ -81,7 +81,7 @@ $usuariosaAUDI2X   = explode("////",$usuariosAUDI1X[usuario]);
 
 ?>
 <style type="text/css">
-<!--
+
 #apDiv1 {
 	position:absolute;
 	width:200px;
@@ -113,7 +113,7 @@ $usuariosaAUDI2X   = explode("////",$usuariosAUDI1X[usuario]);
 	text-align:left;
 	font-size:11px;
 }
--->
+
 </style>
 
 
@@ -208,14 +208,14 @@ $(document).ready(function() {
 //---------------------------------ALERTAS--------------------------------------------------------
 	
 function notificacion(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	alertify.log("ALERTA OBSERVACIONES ASIGNADAS PARA DAR RESPUESTA, DAR CLIC MODULO SIEPRO / MENU EXPEDIENTES / ASIGNAR OBSERVACION"); 
 	return false;
 }
 
 function notificacion_tutela(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	var iduser = "<?php echo $idusuario; ?>" ;
 	
@@ -263,7 +263,7 @@ function notificacion_tutela(){
 
 
 function notificacion_solicitudes_tecnicas(){
-    //una notificación normal
+    //una notificaciï¿½n normal
 	
 	var iduser = "<?php echo $idusuario; ?>" ;
 	

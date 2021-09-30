@@ -421,7 +421,7 @@ EJENPLODE ESTO LO VEMOS EN EL FORMULARIO permisos.php UBICADO EN views\popupbox
 												<?php
 													while ($row = $datosactu->fetch()) {
 
-														echo "<option value=\"" . $row[id] . "\">" . $row[acc_descripcion] . "</option>";
+														echo "<option value=\"" . $row['id'] . "\">" . $row['acc_descripcion'] . "</option>";
 													}
 												?>
 											</select>

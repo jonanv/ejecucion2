@@ -1158,9 +1158,9 @@ class archivoController extends controllerBase
 			$cantidad = count($rs1);
 			$i = 0;
 			while ($i < $cantidad) {
-				$vector_juz[$i] = $rs1[$i][nombre_juz];
-				$vector_caj[$i] = $rs1[$i][caja];
-				$vector_pros[$i] = $rs1[$i][proces];
+				$vector_juz[$i] = $rs1[$i]['nombre_juz'];
+				$vector_caj[$i] = $rs1[$i]['caja'];
+				$vector_pros[$i] = $rs1[$i]['proces'];
 
 				$i = $i + 1;
 			}
