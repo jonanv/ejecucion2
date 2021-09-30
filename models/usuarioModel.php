@@ -1747,7 +1747,7 @@ class usuarioModel extends modelBase{
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -2114,7 +2114,7 @@ class usuarioModel extends modelBase{
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -2298,7 +2298,7 @@ class usuarioModel extends modelBase{
 		session_unset();
 		session_destroy();
 		
-		header("refresh: 0;URL=/ejecucion/");
+		header("refresh: 0;URL=/laborales/");
 		die();
     }
 	
@@ -2315,7 +2315,7 @@ class usuarioModel extends modelBase{
 		$nombre_user = $_SESSION['nombre'];
 		
 		/*$dato1U = trim($_POST['dato1U']);//DOC INDENTIDAD
-		$dato2U = md5(trim($_POST['dato2U']));//CONTRASEÑA	
+		$dato2U = md5(trim($_POST['dato2U']));//CONTRASEï¿½A	
 		$dato3U = utf8_decode(trim($_POST['dato3U']));//NOMBRE
 		$dato4U = utf8_decode(trim($_POST['dato4U']));//CORREO	
 		$dato5U = trim($_POST['dato5U']);//ES ABOGADO
@@ -2327,12 +2327,12 @@ class usuarioModel extends modelBase{
 		//QUE ALGUNOS CAMPOS NO SE DEFINAN Y DEBEN QUEDAR NULL
 		//EN LA BASE DE DATOS
 		$dato1U   = (!empty($_POST['dato1U'])) ?  $_POST['dato1U']   : NULL ;//DOC IDENTIDAD
-		//$dato2U   = (!empty($_POST['dato2U'])) ?  $_POST['dato2U']   : NULL ;//CONTRASEÑA	
+		//$dato2U   = (!empty($_POST['dato2U'])) ?  $_POST['dato2U']   : NULL ;//CONTRASEï¿½A	
 		$dato3U   = (!empty($_POST['dato3U'])) ?  $_POST['dato3U']   : NULL ;//NOMBRE
 		$dato4U   = (!empty($_POST['dato4U'])) ?  $_POST['dato4U']   : NULL ;//CORREO	
 		
 		
-		//SI SE DEFINE UNA NUEVA CONTRASEÑA EN EL FORMULARIO
+		//SI SE DEFINE UNA NUEVA CONTRASEï¿½A EN EL FORMULARIO
 		if(!empty($_POST['dato2U'])){
 		
 			//$dato2U   = (!empty($_POST['dato2U']))   ?  $_POST['dato2U']   : NULL ;
@@ -2404,7 +2404,7 @@ class usuarioModel extends modelBase{
 								");	*/		
 								
 				
-					//SI SE DEFINE UNA NUEVA CONTRASEÑA EN EL FORMULARIO
+					//SI SE DEFINE UNA NUEVA CONTRASEï¿½A EN EL FORMULARIO
 					if(!empty($_POST['dato2U'])){
 				
 						$stmt = $this->db->prepare("
@@ -2443,7 +2443,7 @@ class usuarioModel extends modelBase{
 					
 					$stmt->bindParam(':dato1U', $dato1U);
 					
-					//SI SE DEFINE UNA NUEVA CONTRASEÑA EN EL FORMULARIO
+					//SI SE DEFINE UNA NUEVA CONTRASEï¿½A EN EL FORMULARIO
 					if(!empty($_POST['dato2U'])){
 					
 						$stmt->bindParam(':dato2U', md5($dato2U));
