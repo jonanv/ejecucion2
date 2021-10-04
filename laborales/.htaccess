@@ -1,0 +1,9 @@
+# Habilita la sobreescritura de reglas o configuraciones en el servidor apache
+RewriteEngine On
+
+# Impide que se pueda ver el listado de contenidos de un directorio
+Options All -Indexes
+
+# Url amigables
+# Regla de reescritura con expresión regular
+# RewriteRule ^([-a-zA-Z0-9ñÑ_/]+)$ index.php?route=$1
