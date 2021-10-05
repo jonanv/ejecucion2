@@ -18,8 +18,8 @@
         $view = new ViewsController();
         $viewResponse = $view->getViewController();
 
-        if ($viewResponse === "index") {
-            require_once "./views/pages/index.php";
+        if ($viewResponse == "index") {
+            require_once "./views/pages/login.php";
         } elseif ($viewResponse == "login") {
             require_once "./views/pages/login.php";
         } elseif ($viewResponse == "forgot-password") {

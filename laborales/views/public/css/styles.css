@@ -1,0 +1,32 @@
+html,
+body {
+    width: 100%;
+    /* height: 100% !important; */
+    background-color: #E6E6E6;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ------------------------------ page-404 - page-500 ------------------------------ */
+section.header-404,
+section.header-500 {
+    align-items: center;
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+}
+
+section.page-404,
+section.page-500 {
+    align-items: center;
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    justify-content: center;
+}
+
+.font-size-70 {
+    font-size: 70px !important;
+}

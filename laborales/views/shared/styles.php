@@ -4,3 +4,6 @@
 <link rel="stylesheet" href="<?php echo SERVERURL ?>views/plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style - Bootstrap -->
 <link rel="stylesheet" href="<?php echo SERVERURL ?>views/plugins/adminlte/css/adminlte.min.css">
+
+<!-- Styles -->
+<link rel="stylesheet" href="<?php echo SERVERURL ?>views/public/css/styles.css">
