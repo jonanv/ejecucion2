@@ -10,25 +10,39 @@
 </head>
 
 <body class="hold-transition sidebar-collapse layout-fixed layout-top-nav">
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <div class="spinner-border text-dark fa-2x" role="status" style="width: 3rem; height: 3rem;">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
 
-    <!-- Wrapper -->
-    <div class="wrapper">
+    <?php include "./views/shared/loading.php"; ?>
 
-        <?php 
-        include "./views/shared/header.php"; 
-        include "./views/shared/menu.php";
-        include "./views/shared/content-wrapper.php";
-        include "./views/shared/footer.php";
-        ?>
+    <?php
+        require_once "./controllers/ViewsController.php";
+        $view = new ViewsController();
+        $viewResponse = $view->getViewController();
 
-    </div>
-    <!-- ./wrapper -->
+        if ($viewResponse === "index") {
+            require_once "./views/pages/index.php";
+        } elseif ($viewResponse == "login") {
+            require_once "./views/pages/login.php";
+        } elseif ($viewResponse == "forgot-password") {
+            require_once "./views/pages/forgot-password.php";
+        } elseif ($viewResponse == "recover-password") {
+            require_once "./views/pages/recover-password.php";
+        } elseif ($viewResponse == "404") {
+            require_once "./views/pages/404.php";
+        } else {
+    ?>
+            <!-- Wrapper -->
+            <div class="wrapper">
+                <?php 
+                include "./views/shared/header.php"; 
+                include "./views/shared/menu.php";
+                include "./views/shared/content-wrapper.php";
+                include "./views/shared/footer.php";
+                ?>
+            </div>
+            <!-- ./wrapper -->
+    <?php 
+        } 
+    ?>
 
     <?php include "./views/shared/scripts.php"; ?>
 </body>
