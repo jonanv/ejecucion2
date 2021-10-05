@@ -5,5 +5,7 @@
 <!-- Theme style - Bootstrap -->
 <link rel="stylesheet" href="<?php echo SERVERURL ?>views/plugins/adminlte/css/adminlte.min.css">
 
-<!-- Styles -->
+<!-- Animate -->
+<link rel="stylesheet" href="<?php echo SERVERURL ?>views/public/libs/animate/animate.min.css">
+<!-- .css -->
 <link rel="stylesheet" href="<?php echo SERVERURL ?>views/public/css/styles.css">
