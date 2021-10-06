@@ -1,5 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper"
+    id="app-entry-guardianships">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container">
@@ -23,71 +24,122 @@
         <div class="container">
             <!-- Small boxes (Stat box) -->
 
-            <div class="">
+            <div class="column">
 
                 <div class="card">
                     <div class="card-header bg-secondary">
-                        Filtrar proceso
+                        FILTRAR PROCESO
                     </div>
                     <div class="card-body">
-                        <form class="was-validated" autocomplete="off">
+                        <form class="was-validated" 
+                            autocomplete="off">
+
                             <div class="form-row">
+
                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Fecha inicial</label>
-                                    <input type="text" class="form-control is-valid" id="dateStart" required>
-                                    <div class="invalid-feedback">
+                                    <label for="startDate">Fecha inicial</label>
+                                    <div class="input-group date"
+                                        id="startdate_datepicker" 
+                                        data-target-input="nearest">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                data-target="#startdate_datepicker" 
+                                                data-toggle="datetimepicker">
+                                                <i class="fas fa-calendar-alt"
+                                                >
+                                                <!-- [class.text-danger]="getNameHolder"
+                                                [class.text-success]="f.nameHolder?.valid" -->
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <input type="text" 
+                                            class="form-control is-valid datetimepicker-input" 
+                                            id="startDate" 
+                                            placeholder="Fecha inicial"
+                                            required
+                                            data-inputmask-alias="datetime" 
+                                            data-inputmask-inputformat="dd/mm/yyyy" 
+                                            data-mask
+                                            data-target="#startdate_datepicker">
+                                    </div>
+                                    <div class="invalid-feedback mt-0">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar nombre completo</span>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Fecha final</label>
-                                    <input type="text" class="form-control" id="dateEnd">
+                                    <input type="text" 
+                                        class="form-control" 
+                                        id="endDate"
+                                        placeholder="Fecha inicial"
+                                        required>
                                 </div>
+                                
                             </div>
+
                             <div class="form-group">
                                 <label for="inputAddress">Radicado</label>
-                                <input type="number" class="form-control" id="radicado" placeholder="Radicado" min="0">
+                                <input type="number" 
+                                    class="form-control" 
+                                    id="radicado" 
+                                    placeholder="Radicado" 
+                                    min="0"
+                                    required>
                             </div>
+
                             <button type="submit" class="btn btn-primary">Consultar</button>
                             <button type="button" class="btn btn-primary">Limpiar</button>
+
                         </form>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-striped">
+
+                        <table id="table_datatable" 
+                            class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th data-priority="1">ID</th>
+                                    <th>Estado</th>
+                                    <th>Radicado</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Migrar</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
+                                    <td>NO MIGRADA</td>
+                                    <td>17001310500320210045700</td>
+                                    <td>2021-10-06</td>
+                                    <td>08:23</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-block" 
+                                            type="button">
+                                            <i class="fas fa-cloud-download-alt"></i>
+                                            Migrar
+                                        </button>
+                                        <!-- TODO: aplicar el loading a los botones -->
+                                        <!-- <button class="btn btn-primary" 
+                                            type="button" 
+                                            disabled>
+                                            <span class="spinner-border spinner-border-sm" 
+                                                role="status" 
+                                                aria-hidden="true">
+                                            </span>
+                                            Loading...
+                                        </button> -->
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
                 </div>
                 
