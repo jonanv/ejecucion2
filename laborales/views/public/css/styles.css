@@ -57,3 +57,30 @@ span i.text-success::before {
 .a_link {
     cursor: pointer;
 }
+
+/* ------------------------------ vuevalidate ------------------------------ */
+
+input {
+    border: 1px solid silver;
+    border-radius: 4px;
+    background: white;
+    padding: 5px 10px;
+}
+
+.dirty {
+    border-color: #5A5 !important;
+    background-color: #EFE !important;
+}
+
+.dirty:focus {
+    outline-color: #8E8 !important;
+}
+
+.error {
+    border-color: red !important;
+    background-color: #FDD !important;
+}
+
+.error:focus {
+    outline-color: #F99 !important;
+}

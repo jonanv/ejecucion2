@@ -34,8 +34,8 @@
 <!-- Axios -->
 <script src="<?php echo SERVERURL ?>views/public/libs/axios/axios.min.js"></script>
 <!-- Vuelidate -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/vuelidate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/validators.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/vuelidate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/validators.min.js"></script>
 <!-- .js -->
 <!-- <script src="<?php echo SERVERURL ?>views/public/js/jquery.validate.min.js"></script>
 <script src="<?php echo SERVERURL ?>views/public/js/validator_form.js"></script> -->
