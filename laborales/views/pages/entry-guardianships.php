@@ -48,41 +48,35 @@
                                         id="startdate_datepicker" 
                                         data-target-input="nearest">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"
+                                            <div class="input-group-text"
                                                 data-target="#startdate_datepicker" 
                                                 data-toggle="datetimepicker">
                                                 <i class="fas fa-calendar-alt"
-                                                    v-bind:class="{ 'text-danger': $v.startDate.$invalid,  'text-success': !$v.startDate.$invalid }"
-                                                >
-                                                <!-- [class.text-danger]="getNameHolder"
-                                                [class.text-success]="f.nameHolder?.valid" -->
+                                                    v-bind:class="{ 
+                                                        'text-danger': $v.startDate.$error && $v.startDate.$invalid, 
+                                                        'text-success': !$v.startDate.$error && !$v.startDate.$invalid && $v.startDate.$dirty 
+                                                    }">
                                                 </i>
-                                            </span>
+                                            </div>
                                         </div>
-                                        <!--  type="text"
-                                            class="form-control datetimepicker-input" 
-                                            id="startDate" 
-                                            placeholder="Fecha inicial"
-                                            required
-                                            data-inputmask-alias="datetime" 
+                                        <!-- data-inputmask-alias="datetime" 
                                             data-inputmask-inputformat="dd/mm/yyyy" 
                                             data-mask -->
                                         <input 
                                             type="text"
-                                            class="form-control" 
+                                            class="input-vuevalidate datetimepicker-input" 
                                             id="startDate" 
-                                            placeholder="Fecha inicial"
+                                            placeholder="dd/mm/yyyy"
                                             required
-                                            minlength="5"
-                                            data-target="#startdate_datepicker"
-                                            v-model="$v.startDate.$model" 
+                                            maxlength="10"
+                                            data-target="#startdate_datepicker" 
                                             v-bind:class="status($v.startDate)"
-                                            >
-                                            <!-- v-bind:class="status($v.startDate)" -->
-                                            <!-- v-bind:class="{ 'is-invalid': $v.startDate.$invalid, 'is-valid': !$v.startDate.$invalid }" -->
+                                            v-bind:value="startDate"
+                                            v-model="$v.startDate.$model"
+                                            @focusout="touchedVuevalidate($v.startDate);">
                                     </div>
                                     <div class="mt-0"
-                                        v-if="$v.startDate.$invalid">
+                                        v-if="$v.startDate.$error && $v.startDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar fecha inicial</span>
                                         </div>
@@ -112,10 +106,25 @@
 
                             <button type="submit" 
                                 class="btn btn-primary"
-                                @click="btnConsultRadicado();">
-                                Consultar
+                                @click="btnConsultRadicado();"
+                                v-bind:disabled="submitStatus === 'PENDING'">
+                                <span class="spinner-border spinner-border-sm" 
+                                    role="status" 
+                                    aria-hidden="true"
+                                    v-bind:class="{ 'd-none': submitStatus !== 'PENDING'}">
+                                </span>
+                                <span v-if="submitStatus === 'PENDING'">Enviando...</span>
+                                <span v-if="submitStatus !== 'PENDING' ||  submitStatus === null">Consultar</span>
                             </button>
-                            <button type="button" class="btn btn-primary">Limpiar</button>
+                            <button type="reset" 
+                                class="btn btn-primary"
+                                @click="$v.$reset">
+                                Limpiar
+                            </button>
+
+                            <p v-if="submitStatus === 'OK'">Gracias por su envío!</p>
+                            <p v-if="submitStatus === 'ERROR'">Por favor, rellene el formulario correctamente.</p>
+                            <p v-if="submitStatus === 'PENDING'">Enviando...</p>
 
                         </form>
 

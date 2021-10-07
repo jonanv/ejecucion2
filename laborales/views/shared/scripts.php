@@ -49,7 +49,7 @@
 
         //Date picker
         $('#startdate_datepicker').datetimepicker({
-            format: 'L'
+            format: 'DD/MM/YYYY'
         });
 
         $("#table_datatable").DataTable({

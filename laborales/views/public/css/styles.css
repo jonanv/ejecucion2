@@ -32,13 +32,13 @@ section.page-500 {
 }
 
 /* ------------------------------ Estilos validate ------------------------------ */
-.is-invalid {
+/* .is-invalid {
     background-color: rgba(255, 0, 0, .1) !important;
 }
 
 .is-valid {
     background-color: rgba(0, 255, 0, .1) !important;
-}
+} */
 
 form span.badge {
     font-size: 11.5px;
@@ -54,17 +54,14 @@ span i.text-success::before {
     opacity: .8;
 }
 
-.a_link {
-    cursor: pointer;
-}
-
 /* ------------------------------ vuevalidate ------------------------------ */
 
-input {
+input.input-vuevalidate {
     border: 1px solid silver;
     border-radius: 4px;
     background: white;
     padding: 5px 10px;
+    flex: 1 1 auto;
 }
 
 .dirty {
