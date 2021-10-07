@@ -36,10 +36,6 @@
                             novalidate
                             v-on:submit.prevent>
 
-                            <!-- <input v-model="$v.text.$model" 
-                                :class="status($v.text)">
-                            <pre>{{ $v }}</pre> -->
-
                             <div class="form-row">
 
                                 <div class="form-group col-md-6">
@@ -75,34 +71,108 @@
                                             v-model="$v.startDate.$model"
                                             @focusout="touchedVuevalidate($v.startDate);">
                                     </div>
-                                    <div class="mt-0"
-                                        v-if="$v.startDate.$error && $v.startDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.startDate.required && $v.startDate.$error && $v.startDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar fecha inicial</span>
                                         </div>
                                     </div>
+                                    <div class="mt-0" v-if="$v.startDate.maxLength && $v.startDate.$error && $v.startDate.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar máximo {{ $v.startDate.$params.maxLength.max }} caracteres</span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Fecha final</label>
-                                    <input type="text" 
-                                        class="form-control" 
-                                        id="endDate"
-                                        placeholder="Fecha inicial"
-                                        required>
-                                </div> -->
+                                <div class="form-group col-md-6">
+                                    <label for="endDate">Fecha final</label>
+                                    <div class="input-group date"
+                                        id="enddate_datepicker" 
+                                        data-target-input="nearest">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"
+                                                data-target="#enddate_datepicker" 
+                                                data-toggle="datetimepicker">
+                                                <i class="fas fa-calendar-alt"
+                                                    v-bind:class="{ 
+                                                        'text-danger': $v.endDate.$error && $v.endDate.$invalid, 
+                                                        'text-success': !$v.endDate.$error && !$v.endDate.$invalid && $v.endDate.$dirty 
+                                                    }">
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <input 
+                                            type="text"
+                                            class="input-vuevalidate datetimepicker-input" 
+                                            id="endDate" 
+                                            placeholder="dd/mm/yyyy"
+                                            required
+                                            maxlength="10"
+                                            data-target="#startdate_datepicker" 
+                                            v-bind:class="status($v.endDate)"
+                                            v-bind:value="endDate"
+                                            v-model="$v.endDate.$model"
+                                            @focusout="touchedVuevalidate($v.endDate);">
+                                    </div>
+                                    <div class="mt-0" v-if="!$v.endDate.required && $v.endDate.$error && $v.endDate.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar fecha final</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-0" v-if="$v.endDate.maxLength && $v.endDate.$error && $v.endDate.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar máximo {{ $v.endDate.$params.maxLength.max }} caracteres</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 
                             </div>
 
-                            <!-- <div class="form-group">
-                                <label for="inputAddress">Radicado</label>
-                                <input type="number" 
-                                    class="form-control" 
-                                    id="radicado" 
-                                    placeholder="Radicado" 
-                                    min="0"
-                                    required>
-                            </div> -->
+                            <div class="form-group">
+                                <label for="radicado">Radicado</label>
+                                <div class="input-group date">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-file-contract"
+                                                v-bind:class="{ 
+                                                    'text-danger': $v.radicado.$error && $v.radicado.$invalid, 
+                                                    'text-success': !$v.radicado.$error && !$v.radicado.$invalid && $v.radicado.$dirty 
+                                                }">
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <!-- 17001310500120210035500 
+                                        17001-31-05-001-2021-00355-00 
+                                        data-inputmask='"mask": "17001-99-99-999-9999-99999-99"'
+                                        data-mask-->
+                                    <input 
+                                        type="text"
+                                        class="input-vuevalidate" 
+                                        id="radicado" 
+                                        placeholder="Radicado"
+                                        required
+                                        maxlength="23"
+                                        min="0"
+                                        v-bind:class="status($v.radicado)"
+                                        v-bind:value="radicado"
+                                        v-model="$v.radicado.$model"
+                                        @focusout="touchedVuevalidate($v.radicado);">
+                                </div>
+                                <div class="mt-0" v-if="!$v.radicado.required && $v.radicado.$error && $v.radicado.$invalid">
+                                    <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                    </div>
+                                </div>
+                                <div class="mt-0" v-if="$v.radicado.maxLength && $v.radicado.$error && $v.radicado.$invalid">
+                                    <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar máximo {{ $v.radicado.$params.maxLength.max }} numeros</span>
+                                    </div>
+                                </div>
+                                <div class="mt-0" v-if="!$v.radicado.numeric && $v.radicado.$error && $v.radicado.$invalid">
+                                    <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar solo números</span>
+                                    </div>
+                                </div>
+                            </div>
 
                             <button type="submit" 
                                 class="btn btn-primary"
