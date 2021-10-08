@@ -55,9 +55,6 @@
                                                 </i>
                                             </div>
                                         </div>
-                                        <!-- data-inputmask-alias="datetime" 
-                                            data-inputmask-inputformat="dd/mm/yyyy" 
-                                            data-mask -->
                                         <input 
                                             type="text"
                                             class="input-vuevalidate datetimepicker-input" 
@@ -66,19 +63,20 @@
                                             required
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
+                                            v-mask="'##/##/####'"
                                             v-bind:class="status($v.startDate)"
                                             v-bind:value="startDate"
-                                            v-model="$v.startDate.$model"
+                                            v-model.trim="$v.startDate.$model"
                                             @focusout="touchedVuevalidate($v.startDate);">
                                     </div>
                                     <div class="mt-0" v-if="!$v.startDate.required && $v.startDate.$error && $v.startDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar fecha inicial</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="$v.startDate.maxLength && $v.startDate.$error && $v.startDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.startDate.minLength && $v.startDate.$error && $v.startDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar máximo {{ $v.startDate.$params.maxLength.max }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.startDate.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -108,19 +106,20 @@
                                             required
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
+                                            v-mask="'##/##/####'"
                                             v-bind:class="status($v.endDate)"
                                             v-bind:value="endDate"
-                                            v-model="$v.endDate.$model"
+                                            v-model.trim="$v.endDate.$model"
                                             @focusout="touchedVuevalidate($v.endDate);">
                                     </div>
                                     <div class="mt-0" v-if="!$v.endDate.required && $v.endDate.$error && $v.endDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar fecha final</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="$v.endDate.maxLength && $v.endDate.$error && $v.endDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.endDate.minLength && $v.endDate.$error && $v.endDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar máximo {{ $v.endDate.$params.maxLength.max }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.endDate.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -140,21 +139,18 @@
                                             </i>
                                         </div>
                                     </div>
-                                    <!-- 17001310500120210035500 
-                                        17001-31-05-001-2021-00355-00 
-                                        data-inputmask='"mask": "17001-99-99-999-9999-99999-99"'
-                                        data-mask-->
                                     <input 
                                         type="text"
                                         class="input-vuevalidate" 
                                         id="radicado" 
-                                        placeholder="Radicado"
+                                        placeholder="17001-31-05-001-2021-00355-00"
                                         required
-                                        maxlength="23"
+                                        maxlength="29"
                                         min="0"
+                                        v-mask="'17001-##-##-###-####-#####-##'"
                                         v-bind:class="status($v.radicado)"
                                         v-bind:value="radicado"
-                                        v-model="$v.radicado.$model"
+                                        v-model.trim="$v.radicado.$model"
                                         @focusout="touchedVuevalidate($v.radicado);">
                                 </div>
                                 <div class="mt-0" v-if="!$v.radicado.required && $v.radicado.$error && $v.radicado.$invalid">
@@ -162,14 +158,9 @@
                                         <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                     </div>
                                 </div>
-                                <div class="mt-0" v-if="$v.radicado.maxLength && $v.radicado.$error && $v.radicado.$invalid">
+                                <div class="mt-0" v-if="!$v.radicado.minLength && $v.radicado.$error && $v.radicado.$invalid">
                                     <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar máximo {{ $v.radicado.$params.maxLength.max }} numeros</span>
-                                    </div>
-                                </div>
-                                <div class="mt-0" v-if="!$v.radicado.numeric && $v.radicado.$error && $v.radicado.$invalid">
-                                    <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar solo números</span>
+                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.radicado.$params.minLength.min }} numeros</span>
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +189,7 @@
 
                         </form>
 
-                        <pre>{{ $v }}</pre>
+                        <!-- <pre>{{ $v }}</pre> -->
 
                     </div>
                 </div>

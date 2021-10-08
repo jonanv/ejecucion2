@@ -7,3 +7,6 @@
 - fontAwesome: v5.15.3
 - vue: v2.6.12
 - axios: v0.21.1
+- vuelidate: v0.7.6
+- validators: v0.7.6
+- v-mask: v2.0.1

@@ -20,8 +20,6 @@
 <script src="<?php echo SERVERURL ?>views/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- Moment JS -->
 <script src="<?php echo SERVERURL ?>views/plugins/moment/moment.min.js"></script>
-<!-- InputMask -->
-<script src="<?php echo SERVERURL ?>views/plugins/inputmask/jquery.inputmask.min.js"></script>
 <!-- date-range-picker -->
 <script src="<?php echo SERVERURL ?>views/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap color picker -->
@@ -36,22 +34,8 @@
 <!-- Vuelidate -->
 <script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/vuelidate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/validators.min.js"></script>
-<!-- .js -->
-<!-- <script src="<?php echo SERVERURL ?>views/public/js/jquery.validate.min.js"></script>
-<script src="<?php echo SERVERURL ?>views/public/js/validator_form.js"></script> -->
-
-<script>
-    $(function() {
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });
-        //Money Euro
-        $('[data-mask]').inputmask();
-
-        
-
-        
-    });
-</script>
+<!-- V-mask -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/v-mask/2.0.1/v-mask.min.js"></script>
 
 <?php
     if (isset($_GET['route'])) {

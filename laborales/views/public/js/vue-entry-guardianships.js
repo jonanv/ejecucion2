@@ -3,6 +3,8 @@ const url = 'api/Api.php';
 Vue.use(window.vuelidate.default);
 const { required, minLength, maxLength, numeric } = window.validators;
 
+Vue.use(VueMask.VueMaskPlugin);
+
 const app = new Vue({
     el: "#app-entry-guardianships",
     data: {
@@ -24,9 +26,8 @@ const app = new Vue({
         },
         radicado: {
             required,
-            numeric,
-            minLength: minLength(23),
-            maxLength: maxLength(23)
+            minLength: minLength(29),
+            maxLength: maxLength(29),
         }
     },
     created() {
@@ -59,6 +60,7 @@ const app = new Vue({
             app.startDate = document.getElementById('startDate').value;
             app.endDate = document.getElementById('endDate').value;
             app.radicado = document.getElementById('radicado').value;
+            console.log(app.radicado);
 
             console.log('submit!');
             
