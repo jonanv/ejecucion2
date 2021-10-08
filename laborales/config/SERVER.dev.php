@@ -15,12 +15,21 @@
         // $_ENV["pass"] = 'admin';
         // $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
 
-        // WINDOWS
+        // WINDOWS MySQL
         $_ENV["host"] = 'localhost';
         $_ENV["db"] = 'laborales';
         $_ENV["user"] = 'root';
         $_ENV["pass"] = 'Ejecuc10n2014';
         $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
+
+        // WINDOWS SQLServer
+        // $serverName = "C07003-OF13319\SQLEXPRESS"; //serverName\instanceName
+		// $connectionInfo = array("Database" => "ConsejoPN", "UID" => "sa", "PWD" => "Ejecuc10n2014");
+
+        $_ENV['serverName'] = 'C07003-OF13319\SQLEXPRESS';
+        $_ENV['uid'] = 'sa';
+        $_ENV['pwd'] = 'Ejecuc10n2014';
+        $_ENV['databaseName'] = 'ConsejoPN';
     } else {
         // SERVIDOR - naufragodev
         // $_ENV["host"] = 'localhost';

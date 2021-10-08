@@ -186,7 +186,7 @@
                             
                             <div class="alerts"
                                 v-if="submitStatus === 'OK' || submitStatus === 'ERROR' || submitStatus === 'PENDING'">
-                                <div class="alert alert-default-success alert-dismissible fade show my-2" 
+                                <div class="alert alert-default-success alert-dismissible fade show my-2 animate__animated animate__fadeIn animate__fast" 
                                     role="alert"
                                     v-if="submitStatus === 'OK'">
                                     !Gracias por su envío!
@@ -194,7 +194,7 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="alert alert-default-danger alert-dismissible fade show my-2" 
+                                <div class="alert alert-default-danger alert-dismissible fade show my-2 animate__animated animate__fadeIn animate__fast" 
                                     role="alert"
                                     v-if="submitStatus === 'ERROR'">
                                     Por favor, rellene el formulario correctamente.
@@ -202,7 +202,7 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="alert alert-default-info alert-dismissible fade show my-2" 
+                                <div class="alert alert-default-info alert-dismissible fade show my-2 animate__animated animate__fadeIn animate__fast" 
                                     role="alert"
                                     v-if="submitStatus === 'PENDING'">
                                     <span class="spinner-border spinner-border-sm" 
