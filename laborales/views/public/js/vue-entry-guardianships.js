@@ -60,6 +60,8 @@ const app = new Vue({
             app.startDate = document.getElementById('startDate').value;
             app.endDate = document.getElementById('endDate').value;
             app.radicado = document.getElementById('radicado').value;
+
+            console.log(app.submitStatus);
             console.log(app.radicado);
 
             console.log('submit!');

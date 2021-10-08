@@ -55,6 +55,7 @@
                                                 </i>
                                             </div>
                                         </div>
+                                        <!-- TODO: Validar que las fechas sean correctas -->
                                         <input 
                                             type="text"
                                             class="input-vuevalidate datetimepicker-input" 
@@ -182,10 +183,39 @@
                                 @click="$v.$reset">
                                 Limpiar
                             </button>
-
-                            <p v-if="submitStatus === 'OK'">Gracias por su envío!</p>
-                            <p v-if="submitStatus === 'ERROR'">Por favor, rellene el formulario correctamente.</p>
-                            <p v-if="submitStatus === 'PENDING'">Enviando...</p>
+                            
+                            <div class="alerts"
+                                v-if="submitStatus === 'OK' || submitStatus === 'ERROR' || submitStatus === 'PENDING'">
+                                <div class="alert alert-default-success alert-dismissible fade show my-2" 
+                                    role="alert"
+                                    v-if="submitStatus === 'OK'">
+                                    !Gracias por su envío!
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="alert alert-default-danger alert-dismissible fade show my-2" 
+                                    role="alert"
+                                    v-if="submitStatus === 'ERROR'">
+                                    Por favor, rellene el formulario correctamente.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="alert alert-default-info alert-dismissible fade show my-2" 
+                                    role="alert"
+                                    v-if="submitStatus === 'PENDING'">
+                                    <span class="spinner-border spinner-border-sm" 
+                                        role="status" 
+                                        aria-hidden="true"
+                                        v-bind:class="{ 'd-none': submitStatus !== 'PENDING'}">
+                                    </span>
+                                    Enviando...
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
 
                         </form>
 
@@ -222,16 +252,6 @@
                                             <i class="fas fa-cloud-download-alt"></i>
                                             Migrar
                                         </button>
-                                        <!-- TODO: aplicar el loading a los botones -->
-                                        <!-- <button class="btn btn-primary" 
-                                            type="button" 
-                                            disabled>
-                                            <span class="spinner-border spinner-border-sm" 
-                                                role="status" 
-                                                aria-hidden="true">
-                                            </span>
-                                            Loading...
-                                        </button> -->
                                     </td>
                                 </tr>
                             </tbody>
