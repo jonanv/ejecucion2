@@ -226,7 +226,8 @@
 
                 <div class="card">
                     <div class="card-body">
-
+                        
+                        <!-- TODO: Aplicar loading a la tabla -->
                         <table id="table_datatable" 
                             class="table table-bordered table-striped">
                             <thead>
@@ -240,18 +241,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>NO MIGRADA</td>
-                                    <td>17001310500320210045700</td>
-                                    <td>2021-10-06</td>
-                                    <td>08:23</td>
+                                <tr v-for="(guardianship, index) in entry_guardianships_list" :key="index">
+                                    <th scope="row">{{ (index + 1) }}</th>
+                                    <td>
+                                        <!-- <span class="badge"
+                                            v-bind:class="{ 'badge-danger': shift_phone_call.id_process === null, 'badge-dark': shift_phone_call.id_process !== null }">
+                                            <!-- {{ shift_phone_call.id_process === null ? 'Sin tipo de solicitud asignada' : shift_phone_call.process_name }} -->
+                                            <!-- NO MIGRADA 
+                                        </span> -->
+                                    </td>
+                                    <td>{{ guardianship.A103LLAVPROC }}</td>
+                                    <td>{{ moment(guardianship.A103FECHREPA, 'YYYY-MM-DD h:mm:ss').format('YYYY-MM-DD') }}</td>
+                                    <td>{{ moment(guardianship.A103HORAREPA, 'h:mm:ss').format('LTS') }}</td>
                                     <td>
                                         <button class="btn btn-primary btn-block" 
                                             type="button">
                                             <i class="fas fa-cloud-download-alt"></i>
                                             Migrar
                                         </button>
+                                        <!-- TODO: Aplicar loading al boton de migrar -->
                                     </td>
                                 </tr>
                             </tbody>

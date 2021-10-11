@@ -78,6 +78,7 @@ const app = new Vue({
             }
         },
         // PROCEDIMIENTOS
+        // Listar
         getEntryGuardianships: function() {
             axios.post(url, {option: 'getEntryGuardianships'})
                 .then((response) => {
@@ -88,6 +89,13 @@ const app = new Vue({
                         init.initDatetimepicker();
                         init.initDataTables();
                     });
+                });
+        },
+        // Listar
+        getProcessExist: function(radicado) {
+            axios.post(url, {option: 'getProcessExist', radicado:radicado})
+                then((response) => {
+                    console.log(response);
                 });
         },
         initDatetimepicker: function() {
