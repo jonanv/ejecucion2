@@ -3,7 +3,7 @@
     class ConnectionModel {
         public static function connectMySQL() {
             try {
-                $link = new PDO(
+                $conn = new PDO(
                     "mysql:host=" . $_ENV["host"] . ";dbname=" . $_ENV["db"] . "",
                     "" . $_ENV["user"] . "",
                     "" . $_ENV["pass"] . "",
@@ -13,29 +13,13 @@
                     )
                 );
                 // echo "Connected successfully";
-                return $link;
+                return $conn;
             } catch (PDOException $e) {
                 echo "Connection failed: " . $e->getMessage();
             }
         }
 
-        // $serverName = "ServerName";
         public static function connectSQLServer() {
-            // $serverName = $_ENV['serverName'];
-            // $connectionInfo = array(
-            //     "UID" => $_ENV['uid'],
-            //     "PWD" => $_ENV['pwd'],
-            //     "Database" => $_ENV['databaseName']
-            // );
-
-            // /* Connect using SQL Server Authentication. */
-            // $conn = sqlsrv_connect($serverName, $connectionInfo);
-
-            // $params = array();
-			// $options =  array("Scrollable" => SQLSRV_CURSOR_KEYSET);
-			// $stmt = sqlsrv_query($conn, $sql, $params, $options);
-            // return $conn;
-
             try {
                 $conn = new PDO( "sqlsrv:Server=" . $_ENV['serverName'] . ";Database=" . $_ENV['databaseName'] . "",
                     "" . $_ENV['uid'] . "", 

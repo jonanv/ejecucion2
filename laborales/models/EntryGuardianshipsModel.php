@@ -10,7 +10,7 @@
 
             $query = 
                 "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
-                FROM [ConsejoPN].[dbo].[T103DAINFOPROC]
+                FROM [T103DAINFOPROC]
                 WHERE [A103FECHREPA] = '2021-10-11'
                 AND [A103ANOTACTS] LIKE '%reparto%' 
                 AND [A103CONSPROC] NOT IN(01, 02, 03, 04, 05, 06, 07, 08, 09, 10) 
@@ -23,7 +23,6 @@
                 $data = "error";
             }
             return $data;
-            $response->close();
             $response = null;
         }
     }

@@ -49,8 +49,8 @@
                                                 data-toggle="datetimepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.startDate.$error && $v.startDate.$invalid, 
-                                                        'text-success': !$v.startDate.$error && !$v.startDate.$invalid && $v.startDate.$dirty 
+                                                        'text-danger': $v.form.startDate.$error && $v.form.startDate.$invalid, 
+                                                        'text-success': !$v.form.startDate.$error && !$v.form.startDate.$invalid && $v.form.startDate.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -65,19 +65,19 @@
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
                                             v-mask="'##/##/####'"
-                                            v-bind:class="status($v.startDate)"
-                                            v-bind:value="startDate"
-                                            v-model.trim="$v.startDate.$model"
-                                            @focusout="touchedVuevalidate($v.startDate);">
+                                            v-bind:class="status($v.form.startDate)"
+                                            v-bind:value="form.startDate"
+                                            v-model.trim="$v.form.startDate.$model"
+                                            @focusout="touchedVuelidate($v.form.startDate);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.startDate.required && $v.startDate.$error && $v.startDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.startDate.required && $v.form.startDate.$error && $v.form.startDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="!$v.startDate.minLength && $v.startDate.$error && $v.startDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.startDate.minLength && $v.form.startDate.$error && $v.form.startDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.startDate.$params.minLength.min }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.startDate.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -93,8 +93,8 @@
                                                 data-toggle="datetimepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.endDate.$error && $v.endDate.$invalid, 
-                                                        'text-success': !$v.endDate.$error && !$v.endDate.$invalid && $v.endDate.$dirty 
+                                                        'text-danger': $v.form.endDate.$error && $v.form.endDate.$invalid, 
+                                                        'text-success': !$v.form.endDate.$error && !$v.form.endDate.$invalid && $v.form.endDate.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -108,19 +108,19 @@
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
                                             v-mask="'##/##/####'"
-                                            v-bind:class="status($v.endDate)"
-                                            v-bind:value="endDate"
-                                            v-model.trim="$v.endDate.$model"
-                                            @focusout="touchedVuevalidate($v.endDate);">
+                                            v-bind:class="status($v.form.endDate)"
+                                            v-bind:value="form.endDate"
+                                            v-model.trim="$v.form.endDate.$model"
+                                            @focusout="touchedVuelidate($v.form.endDate);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.endDate.required && $v.endDate.$error && $v.endDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.endDate.required && $v.form.endDate.$error && $v.form.endDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="!$v.endDate.minLength && $v.endDate.$error && $v.endDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.endDate.minLength && $v.form.endDate.$error && $v.form.endDate.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.endDate.$params.minLength.min }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.endDate.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -134,8 +134,8 @@
                                         <div class="input-group-text">
                                             <i class="fas fa-file-contract"
                                                 v-bind:class="{ 
-                                                    'text-danger': $v.radicado.$error && $v.radicado.$invalid, 
-                                                    'text-success': !$v.radicado.$error && !$v.radicado.$invalid && $v.radicado.$dirty 
+                                                    'text-danger': $v.form.radicado.$error && $v.form.radicado.$invalid, 
+                                                    'text-success': !$v.form.radicado.$error && !$v.form.radicado.$invalid && $v.form.radicado.$dirty 
                                                 }">
                                             </i>
                                         </div>
@@ -149,19 +149,19 @@
                                         maxlength="29"
                                         min="0"
                                         v-mask="'17001-##-##-###-####-#####-##'"
-                                        v-bind:class="status($v.radicado)"
-                                        v-bind:value="radicado"
-                                        v-model.trim="$v.radicado.$model"
-                                        @focusout="touchedVuevalidate($v.radicado);">
+                                        v-bind:class="status($v.form.radicado)"
+                                        v-bind:value="form.radicado"
+                                        v-model.trim="$v.form.radicado.$model"
+                                        @focusout="touchedVuelidate($v.form.radicado);">
                                 </div>
-                                <div class="mt-0" v-if="!$v.radicado.required && $v.radicado.$error && $v.radicado.$invalid">
+                                <div class="mt-0" v-if="!$v.form.radicado.required && $v.form.radicado.$error && $v.form.radicado.$invalid">
                                     <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                         <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                     </div>
                                 </div>
-                                <div class="mt-0" v-if="!$v.radicado.minLength && $v.radicado.$error && $v.radicado.$invalid">
+                                <div class="mt-0" v-if="!$v.form.radicado.minLength && $v.form.radicado.$error && $v.form.radicado.$invalid">
                                     <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.radicado.$params.minLength.min }} numeros</span>
+                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.radicado.$params.minLength.min }} numeros</span>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +219,7 @@
 
                         </form>
 
-                        <!-- <pre>{{ $v }}</pre> -->
+                        <!-- <pre>{{ $v.form }}</pre> -->
 
                     </div>
                 </div>

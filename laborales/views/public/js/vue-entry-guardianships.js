@@ -8,34 +8,34 @@ Vue.use(VueMask.VueMaskPlugin);
 const app = new Vue({
     el: "#app-entry-guardianships",
     data: {
-        startDate: '',
-        endDate: '',
-        radicado: '',
+        form: {
+            startDate: '',
+            endDate: '',
+            radicado: '',
+        },
         submitStatus: null,
+        entry_guardianships_list: []
     },
     validations: {
-        startDate: {
-            required,
-            minLength: minLength(10),
-            maxLength: maxLength(10)
+        form: {
+            startDate: {
+                required,
+                minLength: minLength(10),
+                maxLength: maxLength(10)
+            },
+            endDate: {
+                required,
+                minLength: minLength(10),
+                maxLength: maxLength(10)
+            },
+            radicado: {
+                required,
+                minLength: minLength(29),
+                maxLength: maxLength(29),
+            }
         },
-        endDate: {
-            required,
-            minLength: minLength(10),
-            maxLength: maxLength(10)
-        },
-        radicado: {
-            required,
-            minLength: minLength(29),
-            maxLength: maxLength(29),
-        }
     },
     created() {
-        let init = this;
-        init.$nextTick(function() {
-            init.initDatetimepicker();
-            init.initDataTables();
-        });
         this.getEntryGuardianships();
     },
     computed: {
@@ -50,20 +50,20 @@ const app = new Vue({
                 dirty: validation.$dirty
             }
         },
-        touchedVuevalidate(validation) {
-            app.startDate = document.getElementById('startDate').value;
-            app.endDate = document.getElementById('endDate').value;
-            app.radicado = document.getElementById('radicado').value;
+        touchedVuelidate(validation) {
+            app.form.startDate = document.getElementById('startDate').value;
+            app.form.endDate = document.getElementById('endDate').value;
+            app.form.radicado = document.getElementById('radicado').value;
             validation.$touch();
         },
         // BOTONES
         btnConsultRadicado: function() {
-            app.startDate = document.getElementById('startDate').value;
-            app.endDate = document.getElementById('endDate').value;
-            app.radicado = document.getElementById('radicado').value;
+            app.form.startDate = document.getElementById('startDate').value;
+            app.form.endDate = document.getElementById('endDate').value;
+            app.form.radicado = document.getElementById('radicado').value;
 
             console.log(app.submitStatus);
-            console.log(app.radicado);
+            console.log(app.form.radicado);
 
             console.log('submit!');
             
@@ -80,8 +80,14 @@ const app = new Vue({
         // PROCEDIMIENTOS
         getEntryGuardianships: function() {
             axios.post(url, {option: 'getEntryGuardianships'})
-                .then(($response) => {
-                    console.log($response);
+                .then((response) => {
+                    console.log(response);
+                    app.entry_guardianships_list = response.data;
+                    let init = this;
+                    init.$nextTick(function() {
+                        init.initDatetimepicker();
+                        init.initDataTables();
+                    });
                 });
         },
         initDatetimepicker: function() {
