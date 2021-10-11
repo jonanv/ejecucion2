@@ -36,6 +36,7 @@ const app = new Vue({
             init.initDatetimepicker();
             init.initDataTables();
         });
+        this.getEntryGuardianships();
     },
     computed: {
 
@@ -43,7 +44,7 @@ const app = new Vue({
     methods: {
         // VALIDACIÓN
         status(validation) {
-            console.log(validation);
+            // console.log(validation);
             return {
                 error: validation.$error,
                 dirty: validation.$dirty
@@ -77,6 +78,12 @@ const app = new Vue({
             }
         },
         // PROCEDIMIENTOS
+        getEntryGuardianships: function() {
+            axios.post(url, {option: 'getEntryGuardianships'})
+                .then(($response) => {
+                    console.log($response);
+                });
+        },
         initDatetimepicker: function() {
             //Date picker
             $('#startdate_datepicker, #enddate_datepicker').datetimepicker({
