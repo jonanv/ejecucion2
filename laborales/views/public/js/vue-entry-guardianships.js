@@ -83,16 +83,28 @@ const app = new Vue({
                 }, 4000);
             }
         },
-        btnMigrateGuardianship: function(index, radicado) {
+        btnMigrateGuardianship: function(radicado) {
             // this.migrateStatus = 'PENDING';
 
-            console.log(index);
             console.log(radicado);
 
             // setTimeout(() => {
             //     console.log('Proceso migrada');
             //     this.migrateStatus = 'OK';
             // }, 4000);
+            axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
+                .then((response) => {
+                    console.log(response);
+                    if (response.data) {
+                        axios.post(url, {option: 'migrateGuardianship', radicado:radicado, process:response.data})
+                            .then((response) => {
+                                console.log(response);
+                            });
+                    }
+                    else {
+                        // NO EXISTEN DATOS EN JUSTICIA XXI, NO ES POSIBLE MIGRAR TUTELA
+                    }
+                });
         },
         // PROCEDIMIENTOS
         // Listar

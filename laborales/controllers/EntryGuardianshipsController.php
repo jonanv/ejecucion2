@@ -9,5 +9,10 @@
             $response = EntryGuardianshipsModel::getProcessExistModel($radicado);
             return $response;
         }
+
+        public static function getProcessInJusticiaController($radicado) {
+            $response = EntryGuardianshipsModel::getProcessInJusticiaModel($radicado);
+            return $response;
+        }
     }
 ?>

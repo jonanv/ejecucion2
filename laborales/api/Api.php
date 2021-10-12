@@ -25,6 +25,11 @@
             $response = array("ok", $response_entry_guardianships, $response_guardianships);
             echo json_encode($response);
         }
+
+        public function getProcessInJusticia($radicado) {
+            $response = EntryGuardianshipsController::getProcessInJusticiaController($radicado);
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -34,7 +39,7 @@
     $option = (isset($_POST['option'])) ? $_POST['option'] : '';
 
     // EntryGuardianships
-    // $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
+    $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
 
     $obj = new Api();
     switch ($option) {
@@ -43,9 +48,9 @@
             $obj->getEntryGuardianships();
             break;
 
-        // case 'processExist':
-        //     $obj->getProcessExist($radicado);
-        //     break;
+        case 'getProcessInJusticia':
+            $obj->getProcessInJusticia($radicado);
+            break;
     }
 
     // Envira el array final en formato json a JS

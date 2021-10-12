@@ -274,7 +274,7 @@
                                         <td>
                                             <button type="button"
                                                 class="btn btn-primary btn-block" 
-                                                @click="btnMigrateGuardianship(index, guardianship.A103LLAVPROC);"
+                                                @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
                                                 v-bind:disabled="migrateStatus === 'PENDING'">
                                                 <span class="spinner-border spinner-border-sm" 
                                                     role="status" 
@@ -284,7 +284,7 @@
                                                 <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
                                                 <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
                                                     <i class="fas fa-cloud-download-alt"></i>
-                                                    Migrar
+                                                    Migrar tutela
                                                 </span>
                                             </button>
                                         </td>
