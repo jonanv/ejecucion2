@@ -26,7 +26,7 @@
 
             <div class="column">
 
-                <div class="card">
+                <div class="card card animate__animated animate__fadeIn animate__fast">
                     <div class="card-header bg-secondary">
                         FILTRAR PROCESO
                     </div>
@@ -224,47 +224,75 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <!-- Preloader -->
+                <div class="card"  
+                    v-if="loading">
                     <div class="card-body">
-                        
-                        <!-- TODO: Aplicar loading a la tabla -->
-                        <table id="table_datatable" 
-                            class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th data-priority="1">ID</th>
-                                    <th>Estado</th>
-                                    <th>Radicado</th>
-                                    <th>Fecha</th>
-                                    <th>Hora</th>
-                                    <th>Migrar</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(guardianship, index) in entry_guardianships_list" :key="index">
-                                    <th scope="row">{{ (index + 1) }}</th>
-                                    <td>
-                                        <!-- <span class="badge"
-                                            v-bind:class="{ 'badge-danger': shift_phone_call.id_process === null, 'badge-dark': shift_phone_call.id_process !== null }">
-                                            <!-- {{ shift_phone_call.id_process === null ? 'Sin tipo de solicitud asignada' : shift_phone_call.process_name }} -->
-                                            <!-- NO MIGRADA 
-                                        </span> -->
-                                    </td>
-                                    <td>{{ guardianship.A103LLAVPROC }}</td>
-                                    <td>{{ moment(guardianship.A103FECHREPA, 'YYYY-MM-DD h:mm:ss').format('YYYY-MM-DD') }}</td>
-                                    <td>{{ moment(guardianship.A103HORAREPA, 'h:mm:ss').format('LTS') }}</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-block" 
-                                            type="button">
-                                            <i class="fas fa-cloud-download-alt"></i>
-                                            Migrar
-                                        </button>
-                                        <!-- TODO: Aplicar loading al boton de migrar -->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
 
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="spinner-border text-dark fa-2x" 
+                                role="status" 
+                                style="width: 3rem; height: 3rem;">
+                                <span class="sr-only">Cargando...</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div v-if="!loading">
+                    <div class="card animate__animated animate__fadeIn animate__fast">
+                        <div class="card-body">
+                            
+                            <table id="table_datatable" 
+                                class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th data-priority="1">ID</th>
+                                        <th>Estado</th>
+                                        <th>Radicado</th>
+                                        <th>Fecha</th>
+                                        <th>Hora</th>
+                                        <th>Migrar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(guardianship, index) in entry_guardianships_list" :key="index">
+                                        <th scope="row">{{ (index + 1) }}</th>
+                                        <td>
+                                            <span class="badge"
+                                                v-bind:class="{ 'badge-danger': process_exist_list[index] === false, 'badge-success': process_exist_list[index] !== false }">
+                                                <i class="fas fa-times-circle" v-if="process_exist_list[index] === false"></i>
+                                                <i class="fas fa-check-circle" v-else></i>
+                                                {{ process_exist_list[index] === false ? 'NO MIGRADA' : 'MIGRADA' }}
+                                            </span>
+                                        </td>
+                                        <td>{{ guardianship.A103LLAVPROC }}</td>
+                                        <td>{{ moment(guardianship.A103FECHREPA, 'YYYY-MM-DD h:mm:ss').format('YYYY-MM-DD') }}</td>
+                                        <td>{{ moment(guardianship.A103HORAREPA, 'h:mm:ss').format('LTS') }}</td>
+                                        <td>
+                                            <button type="button"
+                                                class="btn btn-primary btn-block" 
+                                                @click="btnMigrateGuardianship(index, guardianship.A103LLAVPROC);"
+                                                v-bind:disabled="migrateStatus === 'PENDING'">
+                                                <span class="spinner-border spinner-border-sm" 
+                                                    role="status" 
+                                                    aria-hidden="true"
+                                                    v-bind:class="{ 'd-none': migrateStatus !== 'PENDING'}">
+                                                </span>
+                                                <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
+                                                <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
+                                                    <i class="fas fa-cloud-download-alt"></i>
+                                                    Migrar
+                                                </span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                        </div>
                     </div>
                 </div>
                 

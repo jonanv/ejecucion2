@@ -3,6 +3,6 @@
     <div class="spinner-border text-dark fa-2x" 
         role="status" 
         style="width: 3rem; height: 3rem;">
-        <span class="sr-only">Loading...</span>
+        <span class="sr-only">Cargando...</span>
     </div>
 </div>

@@ -14,7 +14,10 @@ const app = new Vue({
             radicado: '',
         },
         submitStatus: null,
-        entry_guardianships_list: []
+        migrateStatus: null,
+        entry_guardianships_list: [],
+        process_exist_list: [],
+        loading: true,
     },
     validations: {
         form: {
@@ -34,6 +37,9 @@ const app = new Vue({
                 maxLength: maxLength(29),
             }
         },
+    },
+    beforeCreate() {
+        this.loading = true;
     },
     created() {
         this.getEntryGuardianships();
@@ -77,25 +83,32 @@ const app = new Vue({
                 }, 4000);
             }
         },
+        btnMigrateGuardianship: function(index, radicado) {
+            // this.migrateStatus = 'PENDING';
+
+            console.log(index);
+            console.log(radicado);
+
+            // setTimeout(() => {
+            //     console.log('Proceso migrada');
+            //     this.migrateStatus = 'OK';
+            // }, 4000);
+        },
         // PROCEDIMIENTOS
         // Listar
         getEntryGuardianships: function() {
+            this.loading = true;
             axios.post(url, {option: 'getEntryGuardianships'})
                 .then((response) => {
                     console.log(response);
-                    app.entry_guardianships_list = response.data;
+                    app.entry_guardianships_list = response.data[1];
+                    app.process_exist_list = response.data[2];
+                    this.loading = false;
                     let init = this;
                     init.$nextTick(function() {
                         init.initDatetimepicker();
                         init.initDataTables();
                     });
-                });
-        },
-        // Listar
-        getProcessExist: function(radicado) {
-            axios.post(url, {option: 'getProcessExist', radicado:radicado})
-                then((response) => {
-                    console.log(response);
                 });
         },
         initDatetimepicker: function() {

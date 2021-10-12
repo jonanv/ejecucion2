@@ -11,12 +11,18 @@
     class Api {
         // EntryGuardianships
         public function getEntryGuardianships() {
-            $response = EntryGuardianshipsController::getGuardianshipsOfDayController();
-            echo json_encode($response);
-        }
+            $response_entry_guardianships = EntryGuardianshipsController::getGuardianshipsOfDayController();
+            $response_guardianships = array();
 
-        public function getProcessExist($radicado) {
-            $response = EntryGuardianshipsController::getProcessExistController($radicado);
+            foreach ($response_entry_guardianships as $key => $value) {
+                if ($value['A103LLAVPROC'] != null) {
+                    $response_exist_guardianships = EntryGuardianshipsController::getProcessExistController($value['A103LLAVPROC']);
+                    array_push($response_guardianships, $response_exist_guardianships);
+                } else {
+                    array_push($response_guardianships, null);
+                }
+            }
+            $response = array("ok", $response_entry_guardianships, $response_guardianships);
             echo json_encode($response);
         }
     }
@@ -28,7 +34,7 @@
     $option = (isset($_POST['option'])) ? $_POST['option'] : '';
 
     // EntryGuardianships
-    $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
+    // $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
 
     $obj = new Api();
     switch ($option) {
@@ -37,9 +43,9 @@
             $obj->getEntryGuardianships();
             break;
 
-        case 'processExist':
-            $obj->getProcessExist($radicado);
-            break;
+        // case 'processExist':
+        //     $obj->getProcessExist($radicado);
+        //     break;
     }
 
     // Envira el array final en formato json a JS
