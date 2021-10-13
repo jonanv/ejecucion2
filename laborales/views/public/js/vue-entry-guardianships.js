@@ -86,12 +86,13 @@ const app = new Vue({
         btnMigrateGuardianship: function(radicado) {
             // this.migrateStatus = 'PENDING';
 
-            console.log(radicado);
-
             // setTimeout(() => {
             //     console.log('Proceso migrada');
             //     this.migrateStatus = 'OK';
             // }, 4000);
+            
+            console.log(radicado);
+
             axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
                 .then((response) => {
                     console.log(response);
@@ -99,6 +100,7 @@ const app = new Vue({
                         axios.post(url, {option: 'migrateGuardianship', radicado:radicado, process:response.data})
                             .then((response) => {
                                 console.log(response);
+                                app.getEntryGuardianships();
                             });
                     }
                     else {

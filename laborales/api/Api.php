@@ -30,6 +30,11 @@
             $response = EntryGuardianshipsController::getProcessInJusticiaController($radicado);
             echo json_encode($response);
         }
+
+        public function migrateGuardianship($radicado, $process) {
+            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process);
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -40,16 +45,21 @@
 
     // EntryGuardianships
     $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
+    $process = (isset($_POST['process'])) ? $_POST['process'] : '';
 
     $obj = new Api();
     switch ($option) {
         // EntryGuardianships
-        case 'getEntryGuardianships':
+        case 'getEntryGuardianships': // 
             $obj->getEntryGuardianships();
             break;
 
-        case 'getProcessInJusticia':
+        case 'getProcessInJusticia': // 
             $obj->getProcessInJusticia($radicado);
+            break;
+
+        case 'migrateGuardianship': // Create
+            $obj->migrateGuardianship($radicado, $process);
             break;
     }
 

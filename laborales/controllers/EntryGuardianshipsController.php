@@ -14,5 +14,10 @@
             $response = EntryGuardianshipsModel::getProcessInJusticiaModel($radicado);
             return $response;
         }
+
+        public static function migrateGuardianshipController($radicado, $process) {
+            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process);
+            return $response;
+        }
     }
 ?>

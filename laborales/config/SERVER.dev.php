@@ -32,7 +32,7 @@
         $_ENV['serverName'] = '192.168.89.20'; //serverName\instanceName
         $_ENV['uid'] = 'usuariooecm';
         $_ENV['pwd'] = 'OficinaECM';
-        $_ENV['databaseName'] = 'ConsejoPN';
+        $_ENV['databaseName'] = 'consejoPN';
     } else {
         // SERVIDOR - naufragodev
         // $_ENV["host"] = 'localhost';
@@ -52,5 +52,5 @@
         $_ENV['serverName'] = '192.168.89.20'; //serverName\instanceName
         $_ENV['uid'] = 'usuariooecm';
         $_ENV['pwd'] = 'OficinaECM';
-        $_ENV['databaseName'] = 'ConsejoPN';
+        $_ENV['databaseName'] = 'consejoPN';
     }
