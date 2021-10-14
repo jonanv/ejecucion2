@@ -168,7 +168,7 @@
                                     aria-hidden="true"
                                     v-bind:class="{ 'd-none': submitStatus !== 'PENDING'}">
                                 </span>
-                                <span v-if="submitStatus === 'PENDING'">Enviando...</span>
+                                <span v-if="submitStatus === 'PENDING'">Consultando...</span>
                                 <span v-if="submitStatus !== 'PENDING' ||  submitStatus === null">Consultar</span>
                             </button>
                             <button type="reset" 
@@ -182,7 +182,7 @@
                                 <div class="alert alert-default-success alert-dismissible fade show my-2 animate__animated animate__fadeIn animate__fast" 
                                     role="alert"
                                     v-if="submitStatus === 'OK'">
-                                    !Gracias por su envío!
+                                    !Consulta exitosa!
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -203,7 +203,7 @@
                                         aria-hidden="true"
                                         v-bind:class="{ 'd-none': submitStatus !== 'PENDING'}">
                                     </span>
-                                    Enviando...
+                                    Consultando...
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>

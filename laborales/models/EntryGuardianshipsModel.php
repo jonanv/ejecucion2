@@ -96,7 +96,7 @@
             }else if ($original_court == '002') {
                 $idjuzgado = 16;
             }
-
+            // TODO: Oganizar metodo para que quede mas limpio
 
             try {
                 $conn = ConnectionModel::connectMySQL();
