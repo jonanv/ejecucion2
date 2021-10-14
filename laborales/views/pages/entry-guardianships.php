@@ -24,7 +24,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content pb-1">
         <div class="container">
             <!-- Small boxes (Stat box) -->
 
@@ -149,7 +149,6 @@
                                         class="input-vuevalidate" 
                                         id="radicado" 
                                         placeholder="17001-31-05-001-2021-00355-00"
-                                        required
                                         maxlength="29"
                                         min="0"
                                         v-mask="'17001-##-##-###-####-#####-##'"
@@ -158,21 +157,11 @@
                                         v-model.trim="$v.form.radicado.$model"
                                         @focusout="touchedVuelidate($v.form.radicado);">
                                 </div>
-                                <div class="mt-0" v-if="!$v.form.radicado.required && $v.form.radicado.$error && $v.form.radicado.$invalid">
-                                    <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                    </div>
-                                </div>
-                                <div class="mt-0" v-if="!$v.form.radicado.minLength && $v.form.radicado.$error && $v.form.radicado.$invalid">
-                                    <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                        <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.radicado.$params.minLength.min }} numeros</span>
-                                    </div>
-                                </div>
                             </div>
 
                             <button type="submit" 
                                 class="btn btn-primary"
-                                @click="btnConsultRadicado();"
+                                @click="btnGetProcessesInJusticia();"
                                 v-bind:disabled="submitStatus === 'PENDING'">
                                 <span class="spinner-border spinner-border-sm" 
                                     role="status" 

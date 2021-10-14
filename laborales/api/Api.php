@@ -35,6 +35,22 @@
             $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process);
             echo json_encode($response);
         }
+
+        public function getProcessesInJusticia($data) {
+            $response_processes_in_justicia = EntryGuardianshipsController::getProcessesInJusticiaController($data);
+            $response_processes = array();
+
+            foreach ($response_processes_in_justicia as $key => $value) {
+                if ($value['A103LLAVPROC'] != null) {
+                    $response_exist_guardianships = EntryGuardianshipsController::getProcessExistController($value['A103LLAVPROC']);
+                    array_push($response_processes, $response_exist_guardianships);
+                } else {
+                    array_push($response_processes, null);
+                }
+            }
+            $response = array("ok", $response_processes_in_justicia, $response_processes);
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -46,6 +62,8 @@
     // EntryGuardianships
     $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
     $process = (isset($_POST['process'])) ? $_POST['process'] : '';
+    $startDate = (isset($_POST['startDate'])) ? $_POST['startDate'] : '';
+    $endDate = (isset($_POST['endDate'])) ? $_POST['endDate'] : '';
 
     $obj = new Api();
     switch ($option) {
@@ -60,6 +78,15 @@
 
         case 'migrateGuardianship': // Create
             $obj->migrateGuardianship($radicado, $process);
+            break;
+
+        case 'getProcessesInJusticia': //
+            $data = array(
+                "startDate" => $startDate,
+                "endDate" => $endDate,
+                "radicado" => $radicado
+            );
+            $obj->getProcessesInJusticia($data);
             break;
     }
 

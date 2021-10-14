@@ -147,11 +147,10 @@
                         $query = 
                             "INSERT INTO ubicacion_expediente (idusuario, fecha, fecharegistrosistema, piso, idjuzgado,
                             radicado, demandante, cedula_demandante, demandado, cedula_demandado, idclase_proceso) 
-                            VALUES (:idusuario, :fechalog, :fechalog, 4, :idjuzgado,
+                            VALUES (:idusuario, DATE_FORMAT(NOW(),'%Y-%m-%d'), DATE_FORMAT(NOW(),'%Y-%m-%d'), 4, :idjuzgado,
                             :radicado, :nomdemandante, :docdemandante, :nomdemandado, :docdemandado, 12)";
                         $response = $conn->prepare($query);
                         $response->bindParam(":idusuario", $idusuario, PDO::PARAM_INT);
-                        $response->bindParam(":fechalog", $fechalog, PDO::PARAM_STR);
                         $response->bindParam(":idjuzgado", $idjuzgado, PDO::PARAM_INT);
                         $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
                         $response->bindParam(":nomdemandante", $nomdemandante, PDO::PARAM_STR);
@@ -176,10 +175,42 @@
                 $conn->rollBack();
                 echo $e->getMessage();
             }
-
-            
         }
 
-        
+        public static function getProcessesInJusticiaModel($data) {
+            if ($data['radicado'] == null) {
+                $query = 
+                    "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
+                    FROM [T103DAINFOPROC]
+                    WHERE [A103ANOTACTS] LIKE '%reparto%'
+                    AND [A103FECHREPA] >= CONVERT(DATETIME, :startDate, 121) 
+                    AND [A103FECHREPA] <= CONVERT(DATETIME, :endDate, 121)
+                    ORDER BY [A103HORAREPA] ASC";
+                $response = ConnectionModel::connectSQLServer()->prepare($query);
+                $response->bindParam(":startDate", $data['startDate'], PDO::PARAM_STR);
+                $response->bindParam(":endDate", $data['endDate'], PDO::PARAM_STR);
+            } else {
+                $query = 
+                    "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
+                    FROM [T103DAINFOPROC]
+                    WHERE [A103ANOTACTS] LIKE '%reparto%'
+                    AND ( [A103FECHREPA] >= CONVERT(DATETIME, :startDate, 121) 
+                    AND [A103FECHREPA] <= CONVERT(DATETIME, :endDate, 121) )
+                    AND [A103LLAVPROC] LIKE '%' + :radicado + '%'
+                    ORDER BY [A103HORAREPA] ASC";
+                $response = ConnectionModel::connectSQLServer()->prepare($query);
+                $response->bindParam(":startDate", $data['startDate'], PDO::PARAM_STR);
+                $response->bindParam(":endDate", $data['endDate'], PDO::PARAM_STR);
+                $response->bindParam(":radicado", $data['radicado'], PDO::PARAM_STR);
+            }
+
+            if ($response->execute()) {
+                $data = $response->fetchAll(PDO::FETCH_ASSOC);
+            } else {
+                $data = "error";
+            }
+            return $data;
+            $response = null;
+        }
     }
 ?>
