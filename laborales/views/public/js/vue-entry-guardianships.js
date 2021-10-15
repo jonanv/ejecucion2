@@ -1,10 +1,4 @@
 const url = 'api/Api.php';
-
-Vue.use(window.vuelidate.default);
-const { required, minLength, maxLength, numeric } = window.validators;
-
-Vue.use(VueMask.VueMaskPlugin);
-
 const app = new Vue({
     el: "#app-entry-guardianships",
     data: {

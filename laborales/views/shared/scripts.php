@@ -32,10 +32,12 @@
 <!-- Axios -->
 <script src="<?php echo SERVERURL ?>views/public/libs/axios/axios.min.js"></script>
 <!-- Vuelidate -->
-<script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/vuelidate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuelidate@0.7.6/dist/validators.min.js"></script>
+<script src="<?php echo SERVERURL ?>views/public/libs/vuelidate/vuelidate.min.js"></script>
+<script src="<?php echo SERVERURL ?>views/public/libs/vuelidate/validators.min.js"></script>
 <!-- V-mask -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/v-mask/2.0.1/v-mask.min.js"></script>
+<script src="<?php echo SERVERURL ?>views/public/libs/v-mask/v-mask.min.js"></script>
+<!-- Vue libs -->
+<script src="<?php echo SERVERURL ?>views/public/js/vue-libs.js"></script>
 
 <?php
     if (isset($_GET['route'])) {
@@ -45,7 +47,11 @@
         $response = "index";
     }
 
-    if (($response == "admin")) { ?>
+    if (($response == "index")) { ?>
+        <script src="<?php echo SERVERURL ?>views/public/js/vue-login.js"></script>
+<?php } elseif (($response == "login")) {?>
+        <script src="<?php echo SERVERURL ?>views/public/js/vue-login.js"></script>
+<?php } elseif (($response == "admin")) {?>
         <script src="<?php echo SERVERURL ?>views/public/js/vue-admin.js"></script>
 <?php } elseif (($response == "entry-guardianships")) { ?>
         <script src="<?php echo SERVERURL ?>views/public/js/vue-entry-guardianships.js"></script>

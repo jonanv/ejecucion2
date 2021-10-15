@@ -9,4 +9,4 @@
 - axios: v0.21.1
 - vuelidate: v0.7.6
 - validators: v0.7.6
-- v-mask: v2.0.1
+- v-mask: v2.2.1
