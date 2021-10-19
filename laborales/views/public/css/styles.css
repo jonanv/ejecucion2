@@ -56,12 +56,18 @@ span i.text-success::before {
 
 /* ------------------------------ vuevalidate ------------------------------ */
 
-input.input-vuevalidate {
+input.input-vuelidate {
     border: 1px solid silver;
     border-radius: 4px;
     background: white;
     padding: 5px 10px;
     flex: 1 1 auto;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+input.input-vuelidate:focus-visible {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 .dirty {

@@ -21,26 +21,35 @@
                     </span>
                 </p>
 
-                <form action="" 
-                    method="post"
+                <form class="login_form was-validated" 
                     autocomplete="off"
-                    class="login_form">
+                    novalidate
+                    v-on:submit.prevent>
+
                     <div class="input-group mb-3">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
-                        <input type="text" 
-                            class="form-control" 
-                            placeholder="Cédula" 
-                            name="id_employee_login"
-                            id="id_employee_login"
-                            require
-                            value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['id_employee_login']; } ?>"
+                        <!-- 
                             data-inputmask="'alias': 'integer', 'groupSeparator': '.'" 
-                            data-mask>
+                            data-mask -->
+                        <input type="text" 
+                            class="input-vuelidate" 
+                            id="id_employee_login"
+                            name="id_employee_login"
+                            placeholder="Cédula" 
+                            required
+                            min="0"
+                            value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['id_employee_login']; } ?>"
+                            v-mask="'#.###.###'"
+                            v-bind:class="status($v.form.id_employee_login)"
+                            v-bind:value="form.id_employee_login"
+                            v-model.trim="$v.form.id_employee_login.$model"
+                            @focusout="touchedVuelidate($v.form.id_employee_login);">
                     </div>
+
                     <div class="input-group mb-3">
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -48,13 +57,18 @@
                             </div>
                         </div>
                         <input type="password" 
-                            class="form-control" 
+                            class="input-vuelidate" 
                             placeholder="Contraseña"
                             name="password_login"
                             id="password_login"
-                            require
-                            value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['password_login']; } ?>">
+                            required
+                            value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['password_login']; } ?>"
+                            v-bind:class="status($v.form.password_login)"
+                            v-bind:value="form.password_login"
+                            v-model.trim="$v.form.password_login.$model"
+                            @focusout="touchedVuelidate($v.form.password_login);">
                     </div>
+
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
@@ -72,12 +86,14 @@
                         <!-- /.col -->
                         <div class="col-12 mb-1">
                             <button type="submit" 
-                                class="btn btn-primary btn-block">
+                                class="btn btn-primary btn-block"
+                                @click="btnLogin();">
                                 Ingresar
                             </button>
                         </div>
                         <!-- /.col -->
                     </div>
+
                 </form>
 
                 <p class="mt-2 mb-1">
@@ -92,6 +108,8 @@
         <!-- /.card -->
     </div>
     <!-- /.login-box -->
+    
+    <pre>{{ $v.form }}</pre>
 
 </div>
 

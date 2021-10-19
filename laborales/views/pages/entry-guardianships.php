@@ -62,7 +62,7 @@
                                         <!-- TODO: Validar que las fechas sean correctas -->
                                         <input 
                                             type="text"
-                                            class="input-vuevalidate datetimepicker-input" 
+                                            class="input-vuelidate datetimepicker-input" 
                                             id="startDate" 
                                             placeholder="dd/mm/yyyy"
                                             required
@@ -105,7 +105,7 @@
                                         </div>
                                         <input 
                                             type="text"
-                                            class="input-vuevalidate datetimepicker-input" 
+                                            class="input-vuelidate datetimepicker-input" 
                                             id="endDate" 
                                             placeholder="dd/mm/yyyy"
                                             required
@@ -146,7 +146,7 @@
                                     </div>
                                     <input 
                                         type="text"
-                                        class="input-vuevalidate" 
+                                        class="input-vuelidate" 
                                         id="radicado" 
                                         placeholder="17001-31-05-001-2021-00355-00"
                                         maxlength="29"

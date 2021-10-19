@@ -49,9 +49,6 @@ const app = new Vue({
             }
         },
         touchedVuelidate(validation) {
-            app.form.startDate = document.getElementById('startDate').value;
-            app.form.endDate = document.getElementById('endDate').value;
-            app.form.radicado = document.getElementById('radicado').value;
             validation.$touch();
         },
         // BOTONES
