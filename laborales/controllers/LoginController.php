@@ -38,11 +38,11 @@
                         $_SESSION['ipplataforma'] = $response['ipplataforma'];
 
                         if (isset($_POST["remember"])) {
-                            setcookie("id_employee_login", str_replace('.', '', $_POST["id_employee_login"]), time() + (60 * 60 * 24 * 30));
-                            setcookie("password_login", $_POST["password_login"], time() + (60 * 60 * 24 * 30));
+                            setcookie("nombre_usuario", str_replace('.', '', $_POST["id_employee_login"]), time() + (60 * 60 * 24 * 30));
+                            setcookie("contrasena", $_POST["password_login"], time() + (60 * 60 * 24 * 30));
                         } else {
-                            setcookie("id_employee_login", null);
-                            setcookie("password_login", null);
+                            setcookie("nombre_usuario", null);
+                            setcookie("contrasena", null);
                         }
 
                         echo '<script>

@@ -47,7 +47,7 @@
                                 placeholder="Cédula" 
                                 required
                                 min="0"
-                                value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['id_employee_login']; } ?>"
+                                value="<?php if (isset($_COOKIE['nombre_usuario'])) { echo $_COOKIE['nombre_usuario']; } ?>"
                                 v-bind:class="status($v.form.id_employee_login)"
                                 v-bind:value="form.id_employee_login"
                                 v-model.trim="$v.form.id_employee_login.$model"
@@ -84,7 +84,7 @@
                                 name="password_login"
                                 id="password_login"
                                 required
-                                value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['password_login']; } ?>"
+                                value="<?php if (isset($_COOKIE['nombre_usuario'])) { echo $_COOKIE['contrasena']; } ?>"
                                 v-bind:class="status($v.form.password_login)"
                                 v-bind:value="form.password_login"
                                 v-model.trim="$v.form.password_login.$model"
@@ -95,6 +95,11 @@
                                 <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                             </div>
                         </div>
+                        <div class="mt-0" v-if="!$v.form.password_login.minLength && $v.form.password_login.$error && $v.form.password_login.$invalid">
+                            <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.password_login.$params.minLength.min }} caracteres</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -103,7 +108,7 @@
                                 <input type="checkbox" 
                                     id="remember"
                                     name="remember"
-                                    <?php if (isset($_COOKIE['id_employee_login'])) { ?>
+                                    <?php if (isset($_COOKIE['nombre_usuario'])) { ?>
                                         checked
                                     <?php } ?>>
                                 <label for="remember">

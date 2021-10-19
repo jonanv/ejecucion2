@@ -15,7 +15,8 @@ const app = new Vue({
                 minLength: minLength(6)
             },
             password_login: {
-                required
+                required,
+                minLength: minLength(5)
             }
         }
     },

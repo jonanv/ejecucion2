@@ -84,9 +84,8 @@
             $fechalog   = $datehour[0];
             // TODO: Organizar fecha con DATE_FORMAT(NOW(),'%Y-%m-%d')
             $horalog    = $datehour[1];
-
-            // $idusuario = $_SESSION['idUsuario'];
-            $idusuario = 8;
+            
+            $idusuario = $_SESSION['idUsuario'];
             $accion  = "Se realiza Migracion de Tutela: " . $radicado;
             $detalle = $_SESSION['nombre'] . " " . $accion . " " . $fechalog . " " . "a las: " . $horalog;
             $tipolog = 1;
