@@ -1,3 +1,7 @@
+<?php
+    require_once "./views/shared/session-start.php";
+?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->

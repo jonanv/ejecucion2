@@ -1,5 +1,5 @@
 <?php
-
+    require_once "./views/shared/session-start.php";
 ?>
 
 <!-- Content Wrapper. Contains page content -->

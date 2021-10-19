@@ -24,7 +24,9 @@
                 <form class="login_form was-validated" 
                     autocomplete="off"
                     novalidate
-                    v-on:submit.prevent>
+                    method="post"
+                    >
+                    <!-- v-on:submit.prevent -->
 
                     <div class="form-group">
                         <div class="input-group">
@@ -142,11 +144,12 @@
     </div>
     <!-- /.login-box -->
     
-    <pre>{{ $v.form }}</pre>
+    <!-- <pre>{{ $v.form }}</pre> -->
 
 </div>
 
 <?php
+    // TODO: Implementar login por la forma vue que va al API
     if (isset($_SESSION["validate_sesion"]) && $_SESSION["validate_sesion"] == "ok") {
         echo "<script>
                 window.location = '" . SERVERURL . "?route=admin';

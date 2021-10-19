@@ -1,7 +1,7 @@
 <?php
     class ViewsModel {
         protected function getViewModel($view) {
-            $whiteList = array("admin", "entry-guardianships");
+            $whiteList = array("admin", "logout", "entry-guardianships");
 
             if (in_array($view, $whiteList)) {
                 if (is_file("./views/pages/" . $view . ".php")) {

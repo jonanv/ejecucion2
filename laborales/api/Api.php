@@ -4,9 +4,11 @@
 
     // Models
     require_once "../models/EntryGuardianshipsModel.php";
+    require_once "../models/LoginModel.php";
     
     // Controllers
     require_once "../controllers/EntryGuardianshipsController.php";
+    require_once "../controllers/LoginController.php";
 
     class Api {
         // EntryGuardianships
@@ -51,6 +53,12 @@
             $response = array("ok", $response_processes_in_justicia, $response_processes);
             echo json_encode($response);
         }
+
+        // Login
+        public function getLogin($data) {
+            $response = LoginController::getLoginController($data);
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -64,6 +72,10 @@
     $process = (isset($_POST['process'])) ? $_POST['process'] : '';
     $startDate = (isset($_POST['startDate'])) ? $_POST['startDate'] : '';
     $endDate = (isset($_POST['endDate'])) ? $_POST['endDate'] : '';
+    
+    // Login
+    $id_employee_login = (isset($_POST['id_employee_login'])) ? $_POST['id_employee_login'] : '';
+    $password_login = (isset($_POST['password_login'])) ? $_POST['password_login'] : '';
 
     $obj = new Api();
     switch ($option) {
@@ -88,6 +100,15 @@
             );
             $obj->getProcessesInJusticia($data);
             break;
+
+        // Login
+        // case 'getLogin':
+        //     $data = array(
+        //         "id_employee_login" => $id_employee_login,
+        //         "password_login" => $password_login,
+        //     );
+        //     $obj->getLogin($data);
+        //     break;
     }
 
     // Envira el array final en formato json a JS

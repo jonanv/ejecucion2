@@ -53,14 +53,17 @@ const app = new Vue({
             console.log(password_login);
 
             this.$v.$touch();
-            if (this.$v.$invalid) {
-                this.submitStatus = 'ERROR';
-            } else {
-                this.submitStatus = 'PENDING';
-                setTimeout(() => {
-                    this.submitStatus = 'OK';
-                }, 4000);
-            }
+            // if (this.$v.$invalid) {
+            //     this.submitStatus = 'ERROR';
+            // } else {
+            //     this.submitStatus = 'PENDING';
+
+            //     axios.post(url, {option: 'getLogin', id_employee_login:id_employee_login, password_login:password_login})
+            //         .then((response) => {
+            //             console.log(response);
+            //             this.submitStatus = 'OK';
+            //         });
+            // }
         }
         // CONFIGURACIONES
     },
