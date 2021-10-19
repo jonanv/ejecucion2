@@ -23,13 +23,13 @@
         $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
 
         // WINDOWS SQLServer
-        // $_ENV['serverName'] = 'C07003-OF13319\SQLEXPRESS'; //serverName\instanceName
+        // $_ENV['serverName'] = 'C07003-OF13319\SQLEXPRESS'; // serverName\instanceName
         // $_ENV['uid'] = 'sa';
         // $_ENV['pwd'] = 'Ejecuc10n2014';
         // $_ENV['databaseName'] = 'ConsejoPN';
 
         // WINDOWS SQLServer - ramajudicial
-        $_ENV['serverName'] = '192.168.89.20'; //serverName\instanceName
+        $_ENV['serverName'] = '192.168.89.20'; // serverName\instanceName
         $_ENV['uid'] = 'usuariooecm';
         $_ENV['pwd'] = 'OficinaECM';
         $_ENV['databaseName'] = 'consejoPN';
@@ -49,7 +49,7 @@
         $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
 
         // SERVIDOR SQLServer - ramajudicial
-        $_ENV['serverName'] = '192.168.89.20'; //serverName\instanceName
+        $_ENV['serverName'] = '192.168.89.20'; // serverName\instanceName
         $_ENV['uid'] = 'usuariooecm';
         $_ENV['pwd'] = 'OficinaECM';
         $_ENV['databaseName'] = 'consejoPN';

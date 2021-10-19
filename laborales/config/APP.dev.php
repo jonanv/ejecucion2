@@ -1,8 +1,9 @@
 <?php
+    // Rutal local
     // const SERVERURL = "http://localhost:8888/laborales/"; // MAC
     const SERVERURL = "http://localhost/laborales/"; // WINDOWS
 
-    // ruta del servidor
+    // Ruta del servidor
     // const SERVERURL = "https://laborales.naufragodev.com.co/"; // SERVER NAUFRAGO
     // const SERVERURL = "http://190.217.24.24/laborales/"; // SERVER RAMAJUDICIAL
     const COMPANY   = "SIEPRO laborales";

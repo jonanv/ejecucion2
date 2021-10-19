@@ -1,0 +1,25 @@
+pecl/sqlsrv requires PHP (version >= 7.3.0), installed version is 5.6.33
+
+Connecting MAMP to SQL Server
+
+
+How can I add additional PHP versions to MAMP
+
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazVoWERjRk1hMnZYLWFNdzNWclN6RlpDYWtVZ3xBQ3Jtc0trc2tzODMyR3ZjMDdYQUpENU1oTFdhbXRzeTM5dV9YT0VkajhvbG5aMGdXbUg0SjVHX2lTZXRzaVRBUGpoNmxZRnVsREQta05YUl82U3Nhd2h5dHZyR2poaVRidklEdkhIU2ZzaFV4U09yVG5HaGNrTQ&q=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F16783558%2Fhow-can-i-add-additional-php-versions-to-mamp
+
+download Additional PHP versions from the link:
+https://www.mamp.info/en/downloads/
+
+then copy the unzip folder to:
+/Applications/MAMP/bin/php/
+
+Install driver for MAMP:
+sudo pecl install pdo_sqlsrv sqlsrv
+
+Uninstall:
+sudo pecl uninstall pdo_sqlsrv sqlsrv
+
+Configure php.ini
+
+extension= pdo_sqlsrv.so
+extension= sqlsrv.so
