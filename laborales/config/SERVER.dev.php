@@ -26,7 +26,7 @@
         // $_ENV['serverName'] = 'C07003-OF13319\SQLEXPRESS'; // serverName\instanceName
         // $_ENV['uid'] = 'sa';
         // $_ENV['pwd'] = 'Ejecuc10n2014';
-        // $_ENV['databaseName'] = 'ConsejoPN';
+        // $_ENV['databaseName'] = 'consejoPN';
 
         // WINDOWS SQLServer - ramajudicial
         $_ENV['serverName'] = '192.168.89.20'; // serverName\instanceName

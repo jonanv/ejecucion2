@@ -5,12 +5,14 @@ const app = new Vue({
         form: {
             id_employee_login: '',
             password_login: ''
-        }
+        },
+        submitStatus: null
     },
     validations: {
         form: {
             id_employee_login: {
-                required
+                required,
+                minLength: minLength(6)
             },
             password_login: {
                 required
@@ -49,6 +51,16 @@ const app = new Vue({
         login: function(id_employee_login, password_login) {
             console.log(id_employee_login);
             console.log(password_login);
+
+            this.$v.$touch();
+            if (this.$v.$invalid) {
+                this.submitStatus = 'ERROR';
+            } else {
+                this.submitStatus = 'PENDING';
+                setTimeout(() => {
+                    this.submitStatus = 'OK';
+                }, 4000);
+            }
         }
         // CONFIGURACIONES
     },
