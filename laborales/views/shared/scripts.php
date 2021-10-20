@@ -20,8 +20,6 @@
 <script src="<?php echo SERVERURL ?>views/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- Moment JS -->
 <script src="<?php echo SERVERURL ?>views/plugins/moment/moment.min.js"></script>
-<!-- InputMask -->
-<script src="<?php echo SERVERURL ?>views/plugins/inputmask/jquery.inputmask.min.js"></script>
 <!-- date-range-picker -->
 <script src="<?php echo SERVERURL ?>views/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap color picker -->
@@ -41,12 +39,6 @@
 <!-- Vue libs -->
 <script src="<?php echo SERVERURL ?>views/public/js/vue-libs.js"></script>
 
-<script>
-    $(function() {
-        $('[data-mask]').inputmask();
-    });
-</script>
-
 <?php
     if (isset($_GET['route'])) {
         $route = explode("/", $_GET['route']);
@@ -63,4 +55,6 @@
         <script src="<?php echo SERVERURL ?>views/public/js/vue-admin.js"></script>
 <?php } elseif (($response == "entry-guardianships")) { ?>
         <script src="<?php echo SERVERURL ?>views/public/js/vue-entry-guardianships.js"></script>
+<?php } elseif (($response == "executory")) { ?>
+        <script src="<?php echo SERVERURL ?>views/public/js/vue-executory.js"></script>
 <?php } ?>

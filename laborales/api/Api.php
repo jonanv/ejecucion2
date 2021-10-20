@@ -5,10 +5,12 @@
     // Models
     require_once "../models/EntryGuardianshipsModel.php";
     require_once "../models/LoginModel.php";
+    require_once "../models/ExecutoryModel.php";
     
     // Controllers
     require_once "../controllers/EntryGuardianshipsController.php";
     require_once "../controllers/LoginController.php";
+    require_once "../controllers/ExecutoryController.php";
 
     class Api {
         // EntryGuardianships
@@ -62,6 +64,12 @@
             $response = LoginController::getLoginController($data);
             echo json_encode($response);
         }
+
+        // Executory
+        public function getProcess($radicado) {
+            $response = ExecutoryController::getProcessController($radicado);
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -112,6 +120,10 @@
         //     );
         //     $obj->getLogin($data);
         //     break;
+
+        case 'getProcess': //
+            $obj->getProcess($radicado);
+            break;
     }
 
     // Envira el array final en formato json a JS

@@ -94,6 +94,7 @@
             }else if ($original_court == '002') {
                 $idjuzgado = 16;
             }
+            // TODO: Implementar el codigo 003 para laborales (3) y su juzgado
             // TODO: Oganizar metodo para que quede mas limpio
 
             try {

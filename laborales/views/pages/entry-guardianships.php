@@ -30,7 +30,7 @@
 
             <div class="column">
 
-                <div class="card card animate__animated animate__fadeIn animate__fast">
+                <div class="card animate__animated animate__fadeIn animate__fast">
                     <div class="card-header bg-secondary">
                         FILTRAR PROCESO
                     </div>
@@ -59,9 +59,8 @@
                                                 </i>
                                             </div>
                                         </div>
-                                        <!-- TODO: Validar que las fechas sean correctas -->
-                                        <input 
-                                            type="text"
+                                        <!-- TODO: Validar que las fechas sean correctas, la final no puede ser menor que la inicial -->
+                                        <input type="text"
                                             class="input-vuelidate datetimepicker-input" 
                                             id="startDate" 
                                             placeholder="dd/mm/yyyy"
@@ -103,8 +102,7 @@
                                                 </i>
                                             </div>
                                         </div>
-                                        <input 
-                                            type="text"
+                                        <input type="text"
                                             class="input-vuelidate datetimepicker-input" 
                                             id="endDate" 
                                             placeholder="dd/mm/yyyy"
@@ -133,7 +131,7 @@
 
                             <div class="form-group">
                                 <label for="radicado">Radicado</label>
-                                <div class="input-group date">
+                                <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <i class="fas fa-file-contract"
@@ -144,8 +142,7 @@
                                             </i>
                                         </div>
                                     </div>
-                                    <input 
-                                        type="text"
+                                    <input type="text"
                                         class="input-vuelidate" 
                                         id="radicado" 
                                         placeholder="17001-31-05-001-2021-00355-00"
@@ -163,11 +160,11 @@
                                 class="btn btn-primary"
                                 @click="btnGetProcessesInJusticia();"
                                 v-bind:disabled="submitStatus === 'PENDING'">
-                                <span class="spinner-border spinner-border-sm" 
+                                <i class="spinner-border spinner-border-sm" 
                                     role="status" 
                                     aria-hidden="true"
                                     v-bind:class="{ 'd-none': submitStatus !== 'PENDING'}">
-                                </span>
+                                </i>
                                 <span v-if="submitStatus === 'PENDING'">Consultando...</span>
                                 <span v-if="submitStatus !== 'PENDING' ||  submitStatus === null">Consultar</span>
                             </button>
