@@ -69,7 +69,7 @@
             $response = null;
         }
 
-        public static function migrateGuardianshipModel($radicado, $process) {
+        public static function migrateGuardianshipModel($radicado, $process, $id_usuario, $nombre_usuario) {
             $zip_code = substr($radicado, 0, 5);
             $corporation = substr($radicado, 5, 2);
             $specialty = substr($radicado, 7, 2);
@@ -85,9 +85,8 @@
             // TODO: Organizar fecha con DATE_FORMAT(NOW(),'%Y-%m-%d')
             $horalog    = $datehour[1];
             
-            $idusuario = $_SESSION['idUsuario'];
             $accion  = "Se realiza Migracion de Tutela: " . $radicado;
-            $detalle = $_SESSION['nombre'] . " " . $accion . " " . $fechalog . " " . "a las: " . $horalog;
+            $detalle = $nombre_usuario . " " . $accion . " " . $fechalog . " " . "a las: " . $horalog;
             $tipolog = 1;
 
             if ($original_court == '001') {
@@ -107,7 +106,7 @@
                 $response = $conn->prepare($query);
                 $response->bindParam(":accion", $accion, PDO::PARAM_STR);
                 $response->bindParam(":detalle", $detalle, PDO::PARAM_STR);
-                $response->bindParam(":idusuario", $idusuario, PDO::PARAM_INT);
+                $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
                 $response->bindParam(":tipolog", $tipolog, PDO::PARAM_INT);
                 if ($response->execute()) {
                     $query = 
@@ -149,7 +148,7 @@
                             VALUES (:idusuario, DATE_FORMAT(NOW(),'%Y-%m-%d'), DATE_FORMAT(NOW(),'%Y-%m-%d'), 4, :idjuzgado,
                             :radicado, :nomdemandante, :docdemandante, :nomdemandado, :docdemandado, 12)";
                         $response = $conn->prepare($query);
-                        $response->bindParam(":idusuario", $idusuario, PDO::PARAM_INT);
+                        $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
                         $response->bindParam(":idjuzgado", $idjuzgado, PDO::PARAM_INT);
                         $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
                         $response->bindParam(":nomdemandante", $nomdemandante, PDO::PARAM_STR);

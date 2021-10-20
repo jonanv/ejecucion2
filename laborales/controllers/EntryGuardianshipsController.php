@@ -15,8 +15,8 @@
             return $response;
         }
 
-        public static function migrateGuardianshipController($radicado, $process) {
-            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process);
+        public static function migrateGuardianshipController($radicado, $process, $id_usuario, $nombre_usuario) {
+            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_usuario, $nombre_usuario);
             return $response;
         }
 
