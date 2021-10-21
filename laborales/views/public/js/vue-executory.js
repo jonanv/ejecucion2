@@ -18,9 +18,9 @@ const app = new Vue({
             position: '',
             observation: '',
             additional_observation: '',
-            startDate: '',
+            start_date: '',
             days: '',
-            endDate: '',
+            end_date: '',
             assigned_to: ''
         },
         loading: true,
@@ -62,6 +62,18 @@ const app = new Vue({
                 required
             },
             posicion: {
+                required
+            },
+            start_date: {
+                required
+            },
+            days: {
+                required
+            },
+            end_date: {
+                required
+            },
+            assigned_to: {
                 required
             },
 
