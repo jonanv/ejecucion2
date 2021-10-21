@@ -6,7 +6,7 @@ const app = new Vue({
             radicado: '',
         },
         form_process: {
-            id: '',
+            idradicado: '',
             radicado: '',
             id_plaintiff: '',
             plaintiff: '',
@@ -32,6 +32,39 @@ const app = new Vue({
                 required,
                 minLength: minLength(29)
             }
+        },
+        form_process: {
+            idradicado: {
+                required
+            },
+            radicado: {
+                required
+            },
+            cedula_demandante: {
+                required
+            },
+            demandante: {
+                required
+            },
+            cedula_demandado: {
+                required
+            },
+            demandado: {
+                required
+            },
+            jo: {
+                required
+            },
+            jd: {
+                required
+            },
+            claseproceso: {
+                required
+            },
+            posicion: {
+                required
+            },
+
         }
     },
     beforeCreate() {
@@ -61,6 +94,9 @@ const app = new Vue({
 
             app.getProcess(app.form.radicado);
         },
+        btnRegisterExecutory: function() {
+            this.$v.form_process.$touch();
+        },
         // PROCEDIMIENTOS
         getProcess: function(radicado) {
             let radicado_format = radicado.replace(/\-/g, '');
@@ -73,9 +109,10 @@ const app = new Vue({
                 axios.post(url, {option: 'getProcess', radicado:radicado_format})
                     .then((response) => {
                         console.log(response);
-                        // $('#id').val(response.data.idradicado);
-                        // $('#id').text(response.data.idradicado);
-                        document.getElementById('id').innerHTML(response.data.idradicado);
+
+                        this.$v.form_process.$touch();
+                        app.form_process = response.data;
+                        // TODO: Organizar nombres de acuerdo a la respuesta o como estan definidos en el form
                         this.submitStatus = 'OK'
                     });
             }
