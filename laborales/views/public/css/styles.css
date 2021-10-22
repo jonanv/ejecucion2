@@ -56,7 +56,8 @@ span i.text-success::before {
 
 /* ------------------------------ vuevalidate ------------------------------ */
 
-input.input-vuelidate {
+input.input-vuelidate,
+select.select-vuelidate {
     border: 1px solid silver;
     border-radius: 4px;
     background: white;
@@ -67,7 +68,16 @@ input.input-vuelidate {
     width: 1%;
 }
 
-input.input-vuelidate:focus-visible {
+select.select-vuelidate {
+    height: calc(2.25rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #757575;
+}
+
+input.input-vuelidate:focus-visible,
+select.select-vuelidate:focus-visible {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
 }

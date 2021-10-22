@@ -70,6 +70,16 @@
             $response = ExecutoryController::getProcessController($radicado);
             echo json_encode($response);
         }
+
+        public function getAllActionsFolder() {
+            $response = ExecutoryController::getAllActionsFolderController();
+            echo json_encode($response);
+        }
+
+        public function getAllUsers() {
+            $response = ExecutoryController::getAllUsersController();
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -120,9 +130,18 @@
         //     );
         //     $obj->getLogin($data);
         //     break;
-
+        
+        // Executory
         case 'getProcess': //
             $obj->getProcess($radicado);
+            break;
+
+        case 'getAllActionsFolder': //
+            $obj->getAllActionsFolder();
+            break;
+
+        case 'getAllUsers': //
+            $obj->getAllUsers();
             break;
     }
 

@@ -24,4 +24,35 @@
             return $data;
             $response = null;
         }
+
+        public static function getAllActionsFolderModel() {
+            $query = 
+                "SELECT * 
+                FROM accion_expediente 
+                ORDER BY acc_descripcion";
+            $response = ConnectionModel::connectMySQL()->prepare($query);
+            if ($response->execute()) {
+                $data = $response->fetchAll(PDO::FETCH_ASSOC);
+            } else {
+                $data = "error";
+            }
+            return $data;
+            $response = null;
+        }
+
+        public static function getAllUsersModel() {
+            $query = 
+                "SELECT * 
+                FROM pa_usuario 
+                WHERE nombre_usuario NOT LIKE '%D%'
+                ORDER BY empleado";
+            $response = ConnectionModel::connectMySQL()->prepare($query);
+            if ($response->execute()) {
+                $data = $response->fetchAll(PDO::FETCH_ASSOC);
+            } else {
+                $data = "error";
+            }
+            return $data;
+            $response = null;
+        }
     }
