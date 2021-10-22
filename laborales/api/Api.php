@@ -91,8 +91,8 @@
     // EntryGuardianships
     $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
     $process = (isset($_POST['process'])) ? $_POST['process'] : '';
-    $startDate = (isset($_POST['startDate'])) ? $_POST['startDate'] : '';
-    $endDate = (isset($_POST['endDate'])) ? $_POST['endDate'] : '';
+    $start_date = (isset($_POST['start_date'])) ? $_POST['start_date'] : '';
+    $end_date = (isset($_POST['end_date'])) ? $_POST['end_date'] : '';
     
     // Login
     $id_employee_login = (isset($_POST['id_employee_login'])) ? $_POST['id_employee_login'] : '';
@@ -115,8 +115,8 @@
 
         case 'getProcessesInJusticia': //
             $data = array(
-                "startDate" => $startDate,
-                "endDate" => $endDate,
+                "start_date" => $start_date,
+                "end_date" => $end_date,
                 "radicado" => $radicado
             );
             $obj->getProcessesInJusticia($data);

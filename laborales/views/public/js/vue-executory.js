@@ -17,7 +17,6 @@ const app = new Vue({
             process_class: '',
             position: '',
             observation: '',
-            additional_observation: '',
             start_date: '',
             days: '',
             end_date: '',
@@ -75,10 +74,13 @@ const app = new Vue({
                 maxLength: maxLength(10)
             },
             days: {
-                required
+                required,
+                numeric
             },
             end_date: {
-                required
+                required,
+                minLength: minLength(10),
+                maxLength: maxLength(10)
             },
             assigned_to: {
                 required
@@ -88,6 +90,11 @@ const app = new Vue({
     },
     beforeCreate() {
         this.loading = true;
+        let init = this;
+        init.$nextTick(function() {
+            init.initDatetimepicker();
+            init.initDataTables();
+        });
     },
     created() {
         this.getAllActionsFolder();
@@ -106,11 +113,14 @@ const app = new Vue({
             }
         },
         touchedVuelidate(validation) {
+            app.form_process.start_date = document.getElementById('start_date').value;
+            app.form_process.end_date = document.getElementById('end_date').value;
+
             validation.$touch();
         },
         // BOTONES
         btnGetProcess: function() {
-            app.form.radicado = document.getElementById('radicado').value;
+            console.log(app.form_process);
 
             app.getProcess(app.form.radicado);
         },
@@ -123,11 +133,6 @@ const app = new Vue({
                 .then((response) => {
                     // console.log(response);
                     app.actions_folder_list = response.data;
-                    let init = this;
-                    init.$nextTick(function() {
-                        init.initDatetimepicker();
-                        init.initDataTables();
-                    });
                 });
         },
         getAllUsers: function() {

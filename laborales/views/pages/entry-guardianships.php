@@ -30,7 +30,7 @@
 
             <div class="column">
 
-                <div class="card animate__animated animate__fadeIn animate__fast">
+                <div class="card">
                     <div class="card-header bg-secondary">
                         FILTRAR PROCESO
                     </div>
@@ -43,7 +43,7 @@
                             <div class="form-row">
 
                                 <div class="form-group col-md-6">
-                                    <label for="startDate">Fecha inicial</label>
+                                    <label for="start_date">Fecha inicial</label>
                                     <div class="input-group date"
                                         id="startdate_datepicker" 
                                         data-target-input="nearest">
@@ -53,8 +53,8 @@
                                                 data-toggle="datetimepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form.startDate.$error && $v.form.startDate.$invalid, 
-                                                        'text-success': !$v.form.startDate.$error && !$v.form.startDate.$invalid && $v.form.startDate.$dirty 
+                                                        'text-danger': $v.form.start_date.$error && $v.form.start_date.$invalid, 
+                                                        'text-success': !$v.form.start_date.$error && !$v.form.start_date.$invalid && $v.form.start_date.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -62,31 +62,32 @@
                                         <!-- TODO: Validar que las fechas sean correctas, la final no puede ser menor que la inicial -->
                                         <input type="text"
                                             class="input-vuelidate datetimepicker-input" 
-                                            id="startDate" 
+                                            id="start_date" 
+                                            name="start_date" 
                                             placeholder="dd/mm/yyyy"
                                             required
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
                                             v-mask="'##/##/####'"
-                                            v-bind:class="status($v.form.startDate)"
-                                            v-bind:value="form.startDate"
-                                            v-model.trim="$v.form.startDate.$model"
-                                            @focusout="touchedVuelidate($v.form.startDate);">
+                                            v-bind:class="status($v.form.start_date)"
+                                            v-bind:value="form.start_date"
+                                            v-model.trim="$v.form.start_date.$model"
+                                            @focusout="touchedVuelidate($v.form.start_date);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form.startDate.required && $v.form.startDate.$error && $v.form.startDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.start_date.required && $v.form.start_date.$error && $v.form.start_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form.startDate.minLength && $v.form.startDate.$error && $v.form.startDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.start_date.minLength && $v.form.start_date.$error && $v.form.start_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.startDate.$params.minLength.min }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.start_date.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label for="endDate">Fecha final</label>
+                                    <label for="end_date">Fecha final</label>
                                     <div class="input-group date"
                                         id="enddate_datepicker" 
                                         data-target-input="nearest">
@@ -96,33 +97,34 @@
                                                 data-toggle="datetimepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form.endDate.$error && $v.form.endDate.$invalid, 
-                                                        'text-success': !$v.form.endDate.$error && !$v.form.endDate.$invalid && $v.form.endDate.$dirty 
+                                                        'text-danger': $v.form.end_date.$error && $v.form.end_date.$invalid, 
+                                                        'text-success': !$v.form.end_date.$error && !$v.form.end_date.$invalid && $v.form.end_date.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate datetimepicker-input" 
-                                            id="endDate" 
+                                            id="end_date" 
+                                            name="end_date" 
                                             placeholder="dd/mm/yyyy"
                                             required
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
                                             v-mask="'##/##/####'"
-                                            v-bind:class="status($v.form.endDate)"
-                                            v-bind:value="form.endDate"
-                                            v-model.trim="$v.form.endDate.$model"
-                                            @focusout="touchedVuelidate($v.form.endDate);">
+                                            v-bind:class="status($v.form.end_date)"
+                                            v-bind:value="form.end_date"
+                                            v-model.trim="$v.form.end_date.$model"
+                                            @focusout="touchedVuelidate($v.form.end_date);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form.endDate.required && $v.form.endDate.$error && $v.form.endDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.end_date.required && $v.form.end_date.$error && $v.form.end_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form.endDate.minLength && $v.form.endDate.$error && $v.form.endDate.$invalid">
+                                    <div class="mt-0" v-if="!$v.form.end_date.minLength && $v.form.end_date.$error && $v.form.end_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.endDate.$params.minLength.min }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form.end_date.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>

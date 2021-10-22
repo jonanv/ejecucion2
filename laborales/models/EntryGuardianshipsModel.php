@@ -182,24 +182,24 @@
                     "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
                     FROM [T103DAINFOPROC]
                     WHERE [A103ANOTACTS] LIKE '%reparto%'
-                    AND [A103FECHREPA] >= CONVERT(DATETIME, :startDate, 121) 
-                    AND [A103FECHREPA] <= CONVERT(DATETIME, :endDate, 121)
+                    AND [A103FECHREPA] >= CONVERT(DATETIME, :start_date, 121) 
+                    AND [A103FECHREPA] <= CONVERT(DATETIME, :end_date, 121)
                     ORDER BY [A103HORAREPA] ASC";
                 $response = ConnectionModel::connectSQLServer()->prepare($query);
-                $response->bindParam(":startDate", $data['startDate'], PDO::PARAM_STR);
-                $response->bindParam(":endDate", $data['endDate'], PDO::PARAM_STR);
+                $response->bindParam(":start_date", $data['start_date'], PDO::PARAM_STR);
+                $response->bindParam(":end_date", $data['end_date'], PDO::PARAM_STR);
             } else {
                 $query = 
                     "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
                     FROM [T103DAINFOPROC]
                     WHERE [A103ANOTACTS] LIKE '%reparto%'
-                    AND ( [A103FECHREPA] >= CONVERT(DATETIME, :startDate, 121) 
-                    AND [A103FECHREPA] <= CONVERT(DATETIME, :endDate, 121) )
+                    AND ( [A103FECHREPA] >= CONVERT(DATETIME, :start_date, 121) 
+                    AND [A103FECHREPA] <= CONVERT(DATETIME, :end_date, 121) )
                     AND [A103LLAVPROC] LIKE '%' + :radicado + '%'
                     ORDER BY [A103HORAREPA] ASC";
                 $response = ConnectionModel::connectSQLServer()->prepare($query);
-                $response->bindParam(":startDate", $data['startDate'], PDO::PARAM_STR);
-                $response->bindParam(":endDate", $data['endDate'], PDO::PARAM_STR);
+                $response->bindParam(":start_date", $data['start_date'], PDO::PARAM_STR);
+                $response->bindParam(":end_date", $data['end_date'], PDO::PARAM_STR);
                 $response->bindParam(":radicado", $data['radicado'], PDO::PARAM_STR);
             }
 

@@ -3,8 +3,8 @@ const app = new Vue({
     el: "#app-entry-guardianships",
     data: {
         form: {
-            startDate: '',
-            endDate: '',
+            start_date: '',
+            end_date: '',
             radicado: '',
         },
         submitStatus: null,
@@ -15,12 +15,12 @@ const app = new Vue({
     },
     validations: {
         form: {
-            startDate: {
+            start_date: {
                 required,
                 minLength: minLength(10),
                 maxLength: maxLength(10)
             },
-            endDate: {
+            end_date: {
                 required,
                 minLength: minLength(10),
                 maxLength: maxLength(10)
@@ -32,6 +32,11 @@ const app = new Vue({
     },
     beforeCreate() {
         this.loading = true;
+        let init = this;
+        init.$nextTick(function() {
+            init.initDatetimepicker();
+            init.initDataTables();
+        });
     },
     created() {
         this.getEntryGuardianships();
@@ -49,15 +54,18 @@ const app = new Vue({
             }
         },
         touchedVuelidate(validation) {
+            app.form.start_date = document.getElementById('start_date').value;
+            app.form.end_date = document.getElementById('end_date').value;
+            
             validation.$touch();
         },
         // BOTONES
         btnGetProcessesInJusticia: function() {
-            app.form.startDate = document.getElementById('startDate').value;
-            app.form.endDate = document.getElementById('endDate').value;
-            app.form.radicado = document.getElementById('radicado').value;
+            // app.form.start_date = document.getElementById('start_date').value;
+            // app.form.end_date = document.getElementById('end_date').value;
+            // app.form.radicado = document.getElementById('radicado').value;
             
-            app.getProcessesInJusticia(app.form.startDate, app.form.endDate, app.form.radicado);
+            app.getProcessesInJusticia(app.form.start_date, app.form.end_date, app.form.radicado);
         },
         btnMigrateGuardianship: function(radicado) {
             // TODO: partcionar radicado y enviar junto con partes
@@ -96,19 +104,14 @@ const app = new Vue({
                     app.entry_guardianships_list = response.data[1];
                     app.process_exist_list = response.data[2];
                     this.loading = false;
-                    let init = this;
-                    init.$nextTick(function() {
-                        init.initDatetimepicker();
-                        init.initDataTables();
-                    });
                 });
         },
         migrateGuardianship: function() {
 
         },
-        getProcessesInJusticia: function(startDate, endDate, radicado) {
-            let startDate_format = moment(startDate, 'DD/MM/YYYY').format('YYYY-MM-DD');
-            let endDate_format = moment(endDate, 'DD/MM/YYYY').format('YYYY-MM-DD');;
+        getProcessesInJusticia: function(start_date, end_date, radicado) {
+            let start_date_format = moment(start_date, 'DD/MM/YYYY').format('YYYY-MM-DD');
+            let end_date_format = moment(end_date, 'DD/MM/YYYY').format('YYYY-MM-DD');;
             let radicado_format = radicado.replace(/\-/g, '');
             this.loading = true;
 
@@ -119,7 +122,7 @@ const app = new Vue({
             } else {
                 this.submitStatus = 'PENDING';
 
-                axios.post(url, {option: 'getProcessesInJusticia', startDate:startDate_format, endDate:endDate_format, radicado:radicado_format})
+                axios.post(url, {option: 'getProcessesInJusticia', start_date:start_date_format, end_date:end_date_format, radicado:radicado_format})
                     .then((response) => {
                         console.log(response);
                         app.entry_guardianships_list = response.data[1];

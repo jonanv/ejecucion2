@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-secondary">
                         DATOS PROCESO
                     </div>
                     <div class="card-body">
@@ -132,6 +132,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="id_radicado"
+                                            name="id_radicado"
                                             placeholder="Id radicado"
                                             disabled
                                             readonly
@@ -163,6 +164,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="radicado"
+                                            name="radicado"
                                             placeholder="Radicado"
                                             disabled
                                             readonly
@@ -198,6 +200,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="id_plaintiff"
+                                            name="id_plaintiff"
                                             placeholder="Cédula demandante"
                                             disabled
                                             readonly
@@ -229,6 +232,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="plaintiff"
+                                            name="plaintiff"
                                             placeholder="Demandante"
                                             disabled
                                             readonly
@@ -260,6 +264,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="id_defendant"
+                                            name="id_defendant"
                                             placeholder="Cédula demandado"
                                             disabled
                                             readonly
@@ -291,6 +296,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="defendant"
+                                            name="defendant"
                                             placeholder="Demandado"
                                             disabled
                                             readonly
@@ -326,6 +332,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="original_court"
+                                            name="original_court"
                                             placeholder="Juzgado origen"
                                             disabled
                                             readonly
@@ -357,6 +364,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="destination_court"
+                                            name="destination_court"
                                             placeholder="Juzgado destino"
                                             disabled
                                             readonly
@@ -388,6 +396,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="process_class"
+                                            name="process_class"
                                             placeholder="Clase proceso"
                                             disabled
                                             readonly
@@ -419,6 +428,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="position"
+                                            name="position"
                                             placeholder="Posición"
                                             disabled
                                             readonly
@@ -451,7 +461,7 @@
                                     </div>
                                     <select class="select-vuelidate" 
                                         id="observation"
-                                        name="shift_type" 
+                                        name="observation" 
                                         placeholder="Observacion"
                                         v-bind:class="status($v.form_process.observation)"
                                         v-bind:value="form_process.observation"
@@ -495,6 +505,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="start_date"
+                                            name="start_date"
                                             placeholder="Fecha inicial"
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
@@ -532,6 +543,7 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="days"
+                                            name="days"
                                             placeholder="Días"
                                             v-bind:class="status($v.form_process.days)"
                                             v-bind:value="form_process.days"
@@ -543,13 +555,22 @@
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
+                                    <div class="mt-0" v-if="!$v.form_process.days.numeric && $v.form_process.days.$error && $v.form_process.days.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar un numero</span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     <label for="end_date">Fecha final</label>
-                                    <div class="input-group">
+                                    <div class="input-group date"
+                                        id="enddate_datepicker" 
+                                        data-target-input="nearest">
                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">
+                                            <div class="input-group-text"
+                                                data-target="#enddate_datepicker" 
+                                                data-toggle="datetimepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
                                                         'text-danger': $v.form_process.end_date.$error && $v.form_process.end_date.$invalid, 
@@ -561,7 +582,11 @@
                                         <input type="text"
                                             class="input-vuelidate"
                                             id="end_date"
+                                            name="end_date"
                                             placeholder="Fecha final"
+                                            maxlength="10"
+                                            data-target="#enddate_datepicker" 
+                                            v-mask="'##/##/####'"
                                             v-bind:class="status($v.form_process.end_date)"
                                             v-bind:value="form_process.end_date"
                                             v-model.trim="$v.form_process.end_date.$model"
@@ -570,6 +595,11 @@
                                     <div class="mt-0" v-if="!$v.form_process.end_date.required && $v.form_process.end_date.$error && $v.form_process.end_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-0" v-if="!$v.form_process.end_date.minLength && $v.form_process.end_date.$error && $v.form_process.end_date.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_process.end_date.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -613,6 +643,76 @@
 
                             </div>
 
+                            <div class="card">
+                                <div class="card-header bg-secondary">
+                                    OBSERVACIONES
+                                </div>
+                                <div class="card-body">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header bg-secondary">
+                                    RADICADOS
+                                </div>
+                                <div class="card-body">
+                                    
+                                <table id="table_datatable" 
+                                    class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th data-priority="1">ID</th>
+                                            <th>Estado</th>
+                                            <th>Radicado</th>
+                                            <th>Fecha</th>
+                                            <th>Hora</th>
+                                            <th>Migrar</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- <tbody>
+                                        <tr v-for="(guardianship, index) in entry_guardianships_list" :key="index">
+                                            <th scope="row">{{ (index + 1) }}</th>
+                                            <td>
+                                                <span class="badge"
+                                                    v-bind:class="{ 'badge-danger': process_exist_list[index] === false, 'badge-success': process_exist_list[index] !== false }">
+                                                    <i class="fas fa-times-circle" v-if="process_exist_list[index] === false"></i>
+                                                    <i class="fas fa-check-circle" v-else></i>
+                                                    {{ process_exist_list[index] === false ? 'NO MIGRADA' : 'MIGRADA' }}
+                                                </span>
+                                            </td>
+                                            <td>{{ guardianship.A103LLAVPROC }}</td>
+                                            <td>{{ moment(guardianship.A103FECHREPA, 'YYYY-MM-DD h:mm:ss').format('YYYY-MM-DD') }}</td>
+                                            <td>{{ moment(guardianship.A103HORAREPA, 'h:mm:ss').format('LTS') }}</td>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-block" 
+                                                    @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
+                                                    v-bind:disabled="migrateStatus === 'PENDING'"
+                                                    v-if="process_exist_list[index] === false">
+                                                    <span class="spinner-border spinner-border-sm" 
+                                                        role="status" 
+                                                        aria-hidden="true"
+                                                        v-bind:class="{ 'd-none': migrateStatus !== 'PENDING'}">
+                                                    </span>
+                                                    <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
+                                                    <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
+                                                        <i class="fas fa-cloud-download-alt"></i>
+                                                        Migrar tutela
+                                                    </span>
+                                                </button>
+                                                <span class="badge badge-success"
+                                                    v-else>
+                                                    TUTELA MIGRADA
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody> -->
+                                </table>
+
+                                </div>
+                            </div>
+
                             <button type="submit"
                                 class="btn btn-primary"
                                 @click="btnRegisterExecutory();">
@@ -620,27 +720,12 @@
                             </button>
 
                         </form>
+
+                        <!-- <pre>{{ $v.form_process }}</pre> -->
+
                     </div>
                 </div>
 
-                <!-- <div class="card">
-                    <div class="card-header">
-                        OBSERVACIONES
-                    </div>
-                    <div class="card-body">
-                        
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        RADICADOS
-                    </div>
-                    <div class="card-body">
-                        
-                    </div>
-                </div> -->
-                
             </div>
             <!-- /.row -->
             
