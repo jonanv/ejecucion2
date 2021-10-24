@@ -16,16 +16,20 @@ const app = new Vue({
             destination_court: '',
             process_class: '',
             position: '',
-            observation: '',
+            additional_observation: '',
             start_date: '',
             days: '',
             end_date: '',
-            assigned_to: ''
+            assigned_to: '',
+            date: '',
+            user: '',
+            observation: ''
         },
         loading: true,
         submitStatus: null,
         actions_folder_list: [],
-        users: []
+        users: [],
+        radicados_executory_list: []
     },
     validations: {
         form: {
@@ -65,7 +69,7 @@ const app = new Vue({
             position: {
                 required
             },
-            observation: {
+            additional_observation: {
                 required
             },
             start_date: {
@@ -165,6 +169,9 @@ const app = new Vue({
                         app.form_process.destination_court = response.data.jd;
                         app.form_process.process_class = response.data.claseproceso;
                         app.form_process.position = response.data.posicion;
+                        app.form_process.date = response.data.fecha;
+                        app.form_process.user = response.data.empleado;
+                        app.form_process.observation = response.data.observacion;
                         app.form_process.start_date = document.getElementById('start_date').value;
                         this.submitStatus = 'OK'
                     });

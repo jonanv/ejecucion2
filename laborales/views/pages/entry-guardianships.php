@@ -295,7 +295,7 @@
                 </div>
                 
             </div>
-            <!-- /.row -->
+            <!-- /.column -->
             
         </div><!-- /.container-fluid -->
     </section>

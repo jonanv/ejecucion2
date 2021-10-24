@@ -447,26 +447,26 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="observation">Observacion</label>
+                                <label for="additional_observation">Observacion</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <i class="fas fa-comment"
                                                 v-bind:class="{ 
-                                                    'text-danger': $v.form_process.observation.$error && $v.form_process.observation.$invalid, 
-                                                    'text-success': !$v.form_process.observation.$error && !$v.form_process.observation.$invalid && $v.form_process.observation.$dirty 
+                                                    'text-danger': $v.form_process.additional_observation.$error && $v.form_process.additional_observation.$invalid, 
+                                                    'text-success': !$v.form_process.additional_observation.$error && !$v.form_process.additional_observation.$invalid && $v.form_process.additional_observation.$dirty 
                                                 }">
                                             </i>
                                         </div>
                                     </div>
                                     <select class="select-vuelidate" 
-                                        id="observation"
-                                        name="observation" 
+                                        id="additional_observation"
+                                        name="additional_observation" 
                                         placeholder="Observacion"
-                                        v-bind:class="status($v.form_process.observation)"
-                                        v-bind:value="form_process.observation"
-                                        v-model.trim="$v.form_process.observation.$model"
-                                        @focusout="touchedVuelidate($v.form_process.observation);">
+                                        v-bind:class="status($v.form_process.additional_observation)"
+                                        v-bind:value="form_process.additional_observation"
+                                        v-model.trim="$v.form_process.additional_observation.$model"
+                                        @focusout="touchedVuelidate($v.form_process.additional_observation);">
                                         <option value="" disabled="" selected="">
                                             Seleccione una opción
                                         </option>
@@ -476,7 +476,7 @@
                                         </option>
                                     </select>
                                 </div>
-                                <div class="mt-0" v-if="!$v.form_process.observation.required && $v.form_process.observation.$error && $v.form_process.observation.$invalid">
+                                <div class="mt-0" v-if="!$v.form_process.additional_observation.required && $v.form_process.additional_observation.$error && $v.form_process.additional_observation.$invalid">
                                     <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                         <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                     </div>
@@ -585,6 +585,8 @@
                                             name="end_date"
                                             placeholder="Fecha final"
                                             maxlength="10"
+                                            disabled
+                                            readonly
                                             data-target="#enddate_datepicker" 
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form_process.end_date)"
@@ -642,82 +644,37 @@
                                 </div>
 
                             </div>
-
-                            <div class="card">
-                                <div class="card-header bg-secondary">
-                                    OBSERVACIONES
-                                </div>
-                                <div class="card-body">
-                                    
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header bg-secondary">
-                                    RADICADOS
-                                </div>
-                                <div class="card-body">
-                                    
-                                <table id="table_datatable" 
+                            
+                            <div class="form-group">
+    
+                                <label for="">Última observación</label>
+                                <table id="" 
                                     class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th data-priority="1">ID</th>
-                                            <th>Estado</th>
-                                            <th>Radicado</th>
-                                            <th>Fecha</th>
-                                            <th>Hora</th>
-                                            <th>Migrar</th>
+                                            <th data-priority="1">Fecha</th>
+                                            <th>Observación</th>
+                                            <th>Usuario</th>
+                                            <th>Adicionar</th>
                                         </tr>
                                     </thead>
-                                    <!-- <tbody>
-                                        <tr v-for="(guardianship, index) in entry_guardianships_list" :key="index">
-                                            <th scope="row">{{ (index + 1) }}</th>
-                                            <td>
-                                                <span class="badge"
-                                                    v-bind:class="{ 'badge-danger': process_exist_list[index] === false, 'badge-success': process_exist_list[index] !== false }">
-                                                    <i class="fas fa-times-circle" v-if="process_exist_list[index] === false"></i>
-                                                    <i class="fas fa-check-circle" v-else></i>
-                                                    {{ process_exist_list[index] === false ? 'NO MIGRADA' : 'MIGRADA' }}
-                                                </span>
-                                            </td>
-                                            <td>{{ guardianship.A103LLAVPROC }}</td>
-                                            <td>{{ moment(guardianship.A103FECHREPA, 'YYYY-MM-DD h:mm:ss').format('YYYY-MM-DD') }}</td>
-                                            <td>{{ moment(guardianship.A103HORAREPA, 'h:mm:ss').format('LTS') }}</td>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">{{ form_process.date }}</th>
+                                            <td>{{ form_process.observation }}</td>
+                                            <td>{{ form_process.user }}</td>
                                             <td>
                                                 <button type="button"
-                                                    class="btn btn-primary btn-block" 
-                                                    @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
-                                                    v-bind:disabled="migrateStatus === 'PENDING'"
-                                                    v-if="process_exist_list[index] === false">
-                                                    <span class="spinner-border spinner-border-sm" 
-                                                        role="status" 
-                                                        aria-hidden="true"
-                                                        v-bind:class="{ 'd-none': migrateStatus !== 'PENDING'}">
-                                                    </span>
-                                                    <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
-                                                    <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
-                                                        <i class="fas fa-cloud-download-alt"></i>
-                                                        Migrar tutela
-                                                    </span>
+                                                    class="btn btn-primary">
+                                                    <i class="fas fa-plus-circle"></i>
+                                                    Adicionar
                                                 </button>
-                                                <span class="badge badge-success"
-                                                    v-else>
-                                                    TUTELA MIGRADA
-                                                </span>
                                             </td>
                                         </tr>
-                                    </tbody> -->
+                                    </tbody>
                                 </table>
-
-                                </div>
+    
                             </div>
-
-                            <button type="submit"
-                                class="btn btn-primary"
-                                @click="btnRegisterExecutory();">
-                                Registrar
-                            </button>
 
                         </form>
 
@@ -726,8 +683,76 @@
                     </div>
                 </div>
 
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        RADICADOS
+                    </div>
+                    <div class="card-body">
+                        
+                        <table id="table_datatable" 
+                            class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th data-priority="1">ID</th>
+                                    <th>Radicado</th>
+                                    <th>Observación</th>
+                                    <th>Días</th>
+                                    <th>Fecha inicial</th>
+                                    <th>Asignado a</th>
+                                    <th>Fecha audiencia</th>
+                                    <th>Hora audiencia</th>
+                                    <th>Observación audiencia</th>
+                                    <th>A despacho</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(radicado, index) in radicados_executory_list" :key="index">
+                                    <th scope="row">{{ (index + 1) }}</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <!-- <button type="button"
+                                            class="btn btn-primary btn-block" 
+                                            @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
+                                            v-bind:disabled="migrateStatus === 'PENDING'"
+                                            v-if="process_exist_list[index] === false">
+                                            <span class="spinner-border spinner-border-sm" 
+                                                role="status" 
+                                                aria-hidden="true"
+                                                v-bind:class="{ 'd-none': migrateStatus !== 'PENDING'}">
+                                            </span>
+                                            <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
+                                            <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
+                                                <i class="fas fa-cloud-download-alt"></i>
+                                                Migrar tutela
+                                            </span>
+                                        </button>
+                                        <span class="badge badge-success"
+                                            v-else>
+                                            TUTELA MIGRADA
+                                        </span> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button type="submit"
+                            class="btn btn-primary"
+                            @click="btnRegisterExecutory();">
+                            Registrar
+                        </button>
+
+                    </div>
+                </div>
+
             </div>
-            <!-- /.row -->
+            <!-- /.column -->
             
         </div><!-- /.container-fluid -->
     </section>

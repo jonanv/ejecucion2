@@ -35,7 +35,6 @@ const app = new Vue({
         let init = this;
         init.$nextTick(function() {
             init.initDatetimepicker();
-            init.initDataTables();
         });
     },
     created() {
@@ -103,7 +102,12 @@ const app = new Vue({
                     console.log(response);
                     app.entry_guardianships_list = response.data[1];
                     app.process_exist_list = response.data[2];
+
                     this.loading = false;
+                    let init = this;
+                    init.$nextTick(function() {
+                        init.initDataTables();
+                    });
                 });
         },
         migrateGuardianship: function() {

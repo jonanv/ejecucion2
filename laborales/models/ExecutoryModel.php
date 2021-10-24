@@ -13,7 +13,8 @@
                 LEFT JOIN juzgado_destino pr ON ubi.idjuzgado_reparto = pr.id
                 LEFT JOIN detalle_correspondencia dc ON ubi.id = dc.idcorrespondencia
                 LEFT JOIN pa_usuario u ON dc.idusuario = u.id
-                WHERE ubi.radicado LIKE CONCAT('%', :radicado, '%')";
+                WHERE ubi.radicado LIKE CONCAT('%', :radicado, '%')
+                ORDER BY dc.fecha DESC";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
             if ($response->execute()) {
