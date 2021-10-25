@@ -1,3 +1,36 @@
+const NEXT_DAY = {
+    SUNDAY: 0,
+    MONDAY: 1,
+    TUESDAY: 2,
+    WEDNESDAY: 3,
+    THURSDAY: 4,
+    FRIDAY: 5,
+    SATURDAY: 6,
+    NONE: 7
+}
+const EASTER_WEEK_HOLIDAYS = [
+    { day: -3, daysToSum: NEXT_DAY.NONE, celebration: 'Jueves Santo' },
+    { day: -2, daysToSum: NEXT_DAY.NONE, celebration: 'Viernes Santo' },
+    { day: 39, daysToSum: NEXT_DAY.MONDAY, celebration: 'Ascensión del Señor' },
+    { day: 60, daysToSum: NEXT_DAY.MONDAY, celebration: 'Corphus Christi' },
+    { day: 68, daysToSum: NEXT_DAY.MONDAY, celebration: 'Sagrado Corazón de Jesús' }
+];
+const HOLIDAYS = [
+    { day: '01-01', daysToSum: NEXT_DAY.NONE, celebration: 'Año Nuevo' },
+    { day: '05-01', daysToSum: NEXT_DAY.NONE, celebration: 'Día del Trabajo' },
+    { day: '07-20', daysToSum: NEXT_DAY.NONE, celebration: 'Día de la Independencia' },
+    { day: '08-07', daysToSum: NEXT_DAY.NONE, celebration: 'Batalla de Boyacá' },
+    { day: '12-08', daysToSum: NEXT_DAY.NONE, celebration: 'Día de la Inmaculada Concepción' },
+    { day: '12-25', daysToSum: NEXT_DAY.NONE, celebration: 'Día de Navidad' },
+    { day: '01-06', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de los Reyes Magos' },
+    { day: '03-19', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de San José' },
+    { day: '06-29', daysToSum: NEXT_DAY.MONDAY, celebration: 'San Pedro y San Pablo' },
+    { day: '08-15', daysToSum: NEXT_DAY.MONDAY, celebration: 'La Asunción de la Virgen' },
+    { day: '10-12', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de la Raza' },
+    { day: '11-01', daysToSum: NEXT_DAY.MONDAY, celebration: 'Todos los Santos' },
+    { day: '11-11', daysToSum: NEXT_DAY.MONDAY, celebration: 'Independencia de Cartagena' }
+];
+const MILLISECONDS_DAY = 86400000;
 const url = 'api/Api.php';
 const app = new Vue({
     el: '#app-executory',
@@ -187,9 +220,6 @@ const app = new Vue({
             }
         },
         calculateDaysToEndDate: function() {
-            // app.form_process.start_date = document.getElementById('start_date').value;
-            // app.form_process.days = document.getElementById('days').value;
-
             let days = app.form_process.days;
             
             // 0: "Sunday"
@@ -199,24 +229,109 @@ const app = new Vue({
             // 4: "Thursday"
             // 5: "Friday"
             // 6: "Saturday"
+            let end_date = '';
             for (let day = 1; day <= days; day++) {
                 let date = moment(app.form_process.start_date, 'DD/MM/YYYY');
-                let date_end = date.add(parseInt(day), 'days');
-                console.log(date_end.format('DD/MM/YYYY'));
+                end_date = date.add(parseInt(day), 'days');
+                // console.log(end_date.format('DD/MM/YYYY'));
 
-                let dayWeek = date_end.day();
-                console.log(dayWeek);
-                if (dayWeek === 0 || dayWeek === 6) {
-                    console.log('fin de semana');
-                } else {
-                    console.log('dia de semana');
+                let dayWeek = end_date.day();
+                // console.log(dayWeek);
+                if (dayWeek === 0 || dayWeek === 6 || this.isHoliday(end_date)) {
+                    days++;
                 }
             }
-            // let dayWeek = moment().day();
-            // console.log(dayWeek);
-            // console.log(moment().isoWeekday(dayWeek));
+            app.form_process.end_date = end_date.format('DD/MM/YYYY');
+        },
+        isHoliday: function(end_date) {
+            let date = end_date.format('YYYY-MM-DD');
+            // let date = '2021-08-16';
+            // console.log(date);
+            let year = end_date.format('YYYY');
+            // console.log(year);
 
-            // app.form_process.end_date = date_end.format('DD/MM/YYYY');
+            // Dias festivos en Colombia
+            let holidays = this.getColombiaHolidaysByYear(year);
+            // console.log(holidays);
+
+            let isColombiaHoliday = false;
+            for (let holiday in holidays) {
+                // console.log(holidays[holiday].holiday);
+                if (holidays[holiday].holiday == date) {
+                    app.holidayCelebration = holidays[holiday].celebration;
+                    isColombiaHoliday = true;
+                }
+            }
+            return isColombiaHoliday;
+        },
+        // Metodos para los dias festivos de acuerdo al año
+        getColombiaHolidaysByYear: function(year) {
+            if (!year) {
+                throw 'No year provided'
+            } else {
+                year = year.toString();
+                if (!year.match(/^\d*$/g)) {
+                    throw 'The year is not a number'
+                } else if (year < 1970 || year > 99999) {
+                    throw 'The year should be greater to 1969 and smaller to 100000'
+                } else {
+                    var normalHolidays = HOLIDAYS.map((element, index, array) => {
+                        return {
+                            holiday: this.nextDay(year.toString().concat('-').concat(element.day), element.daysToSum),
+                            celebrationDay: year.toString().concat('-').concat(element.day),
+                            celebration: element.celebration
+                        };
+                    });
+                    var sunday = new Date(this.butcherAlgorithm(year));
+                    var easterWeekHolidays = EASTER_WEEK_HOLIDAYS.map((element, index, array) => {
+                        var day = new Date(sunday.getTime() + element.day * MILLISECONDS_DAY);
+                        return {
+                            holiday: this.nextDay(this.getFormattedDate(day.getUTCFullYear(), day.getUTCMonth() + 1, day.getUTCDate()), element.daysToSum),
+                            celebrationDay: this.getFormattedDate(day.getUTCFullYear(), day.getUTCMonth() + 1, day.getUTCDate()),
+                            celebration: element.celebration
+                        };
+                    });
+                    return normalHolidays.concat(easterWeekHolidays).sort((a, b) => {
+                        return new Date(a.holiday) - new Date(b.holiday);
+                    });
+                    ;
+                }
+            }
+        },
+        butcherAlgorithm: function(year) {
+            var year = parseInt(year);
+            var A = year % 19;
+            var B = Math.floor(year / 100);
+            var C = year % 100;
+            var D = Math.floor(B / 4);
+            var E = B % 4;
+            var F = Math.floor((B + 8) / 25);
+            var G = Math.floor((B - F + 1) / 3);
+            var H = (19 * A + B - D - G + 15) % 30;
+            var I = Math.floor(C / 4);
+            var K = C % 4;
+            var L = (32 + 2 * E + 2 * I - H - K) % 7;
+            var M = Math.floor((A + 11 * H + 22 * L) / 451);
+            var N = H + L - 7 * M + 114;
+            var month = Math.floor(N / 31);
+            var day = 1 + (N % 31);
+            return this.getFormattedDate(year, month, day);
+        },
+        nextDay: function(day, sum) {
+            var date = new Date(day);
+            var newDate = (sum === 7 ? date : new Date(date.getTime() + (((7 + sum) - date.getUTCDay()) % 7) * MILLISECONDS_DAY));
+            return this.getFormattedDate(newDate.getUTCFullYear(), newDate.getUTCMonth() + 1, newDate.getUTCDate());
+        },
+        addZero: function(number) {
+            number = number.toString();
+            if (number > 0 && number < 10 && !number.startsWith('0')) {
+                return '0'.concat(number);
+            } else {
+                return number;
+            }
+        },
+        getFormattedDate: function(year, month, day) {
+            return year.toString().concat('-').concat(this.addZero(month)).concat('-').concat(this.addZero(day));
         },
         // CONFIGURACIONES
         initDatetimepicker: function() {
