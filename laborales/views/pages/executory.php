@@ -81,7 +81,7 @@
                                 <div class="form-group col-md-2">
                                     <button type="submit" 
                                         class="btn btn-primary btn-block"
-                                        @click="btnGetProcess();"
+                                        @click="getProcess();"
                                         v-bind:disabled="submitStatus === 'PENDING'">
                                         <i class="fas fa-search"
                                             v-if="submitStatus !== 'PENDING' ||  submitStatus === null"></i>
@@ -96,7 +96,7 @@
                                 </div>
 
                             </div>
-                            
+
                         </form>
 
                         <!-- <pre>{{ $v.form }}</pre> -->
@@ -437,11 +437,6 @@
                                             v-model.trim="$v.form_process.position.$model"
                                             @focusout="touchedVuelidate($v.form_process.position);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.position.required && $v.form_process.position.$error && $v.form_process.position.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
-                                    </div>
                                 </div>
 
                             </div>
@@ -508,12 +503,14 @@
                                             name="start_date"
                                             placeholder="Fecha inicial"
                                             maxlength="10"
+                                            disabled
+                                            readonly
                                             data-target="#startdate_datepicker" 
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form_process.start_date)"
                                             v-bind:value="form_process.start_date"
                                             v-model.trim="$v.form_process.start_date.$model"
-                                            @focusout="touchedVuelidate($v.form_process.start_date);">
+                                            @focusout="touchedVuelidate($v.form_process.start_date); calculateDaysToEndDate();">
                                     </div>
                                     <div class="mt-0" v-if="!$v.form_process.start_date.required && $v.form_process.start_date.$error && $v.form_process.start_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
@@ -666,7 +663,8 @@
                                             <td>
                                                 <button type="button"
                                                     class="btn btn-primary"
-                                                    @click="btnAddRadicado();">
+                                                    @click="btnAddRadicado();"
+                                                    v-bind:disabled="$v.form_process.$invalid">
                                                     <i class="fas fa-plus-circle"></i>
                                                     Adicionar
                                                 </button>
@@ -697,28 +695,37 @@
                                     <th data-priority="1">ID</th>
                                     <th>Radicado</th>
                                     <th>Observación</th>
-                                    <th>Días</th>
                                     <th>Fecha inicial</th>
+                                    <th>Días</th>
+                                    <th>Fecha final</th>
                                     <th>Asignado a</th>
                                     <th>Fecha audiencia</th>
                                     <th>Hora audiencia</th>
                                     <th>Observación audiencia</th>
                                     <th>A despacho</th>
+                                    <th>Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="(radicado, index) in radicados_executory_list" :key="index">
                                     <th scope="row">{{ radicado.id_radicado }}</th>
                                     <td>{{ radicado.radicado }}</td>
-                                    <td>{{ radicado.observation }}</td>
-                                    <td>{{ radicado.days }}</td>
+                                    <td>{{ actions_folder_list[radicado.additional_observation - 1].acc_descripcion }}</td>
+                                    <!-- TODO: Organizar la forma en que se consulta la observacion -->
                                     <td>{{ radicado.start_date }}</td>
+                                    <td>{{ radicado.days }}</td>
+                                    <td>{{ radicado.end_date }}</td>
                                     <td>{{ radicado.assigned_to }}</td>
                                     <td>{{  }}</td>
                                     <td>{{  }}</td>
                                     <td>{{  }}</td>
+                                    <td>{{  }}</td>
                                     <td>
-                                        Boton
+                                        <button type="button"
+                                            class="btn btn-danger"
+                                            @click="btnRemoveRadicado(index);">
+                                            <i class="fas fa-minus-circle"></i>
+                                        </button>
                                         <!-- <button type="button"
                                             class="btn btn-primary btn-block" 
                                             @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
@@ -748,6 +755,11 @@
                             class="btn btn-primary"
                             @click="btnRegisterExecutory();">
                             Registrar
+                        </button>
+                        <button type="reset" 
+                            class="btn btn-primary"
+                            @click="btnCleanForms();">
+                            Limpiar
                         </button>
 
                     </div>

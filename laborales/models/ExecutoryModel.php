@@ -30,7 +30,7 @@
             $query = 
                 "SELECT * 
                 FROM accion_expediente 
-                ORDER BY acc_descripcion";
+                ORDER BY id ASC";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             if ($response->execute()) {
                 $data = $response->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@
                 "SELECT * 
                 FROM pa_usuario 
                 WHERE nombre_usuario NOT LIKE '%D%'
-                ORDER BY empleado";
+                ORDER BY id ASC";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             if ($response->execute()) {
                 $data = $response->fetchAll(PDO::FETCH_ASSOC);

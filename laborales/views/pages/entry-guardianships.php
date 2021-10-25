@@ -172,7 +172,7 @@
                             </button>
                             <button type="reset" 
                                 class="btn btn-primary"
-                                @click="$v.$reset">
+                                @click="btnCleanForm();">
                                 Limpiar
                             </button>
                             

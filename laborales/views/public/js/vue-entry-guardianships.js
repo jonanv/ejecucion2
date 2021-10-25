@@ -93,6 +93,14 @@ const app = new Vue({
                     }
                 });
         },
+        btnCleanForm: function() {
+            app.form = {
+                start_date: '',
+                end_date: '',
+                radicado: '',
+            }
+            this.$v.form.$reset();
+        },
         // PROCEDIMIENTOS
         // Listar
         getEntryGuardianships: function() {

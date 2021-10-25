@@ -2,13 +2,20 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <img src="<?php echo SERVERURL ?>views/public/img/AdminLTELogo.png" 
-            alt="SIEPRO Laborales" 
-            class="brand-image img-circle elevation-3" 
-            style="opacity: .8">
-        <span class="brand-text font-weight-light">SIEPRO Laborales</span>
-    </a>
+    <div class="d-flex flex-row justify-content-center align-items-center" 
+        style="border-bottom: 1px solid #4b545c;">
+        <a href="index3.html" class="brand-link" 
+            style="border-bottom: none;">
+            <img src="<?php echo SERVERURL ?>views/public/img/AdminLTELogo.png" 
+                alt="SIEPRO Laborales" 
+                class="brand-image img-circle elevation-3" 
+                style="opacity: .8">
+            <span class="brand-text font-weight-light">SIEPRO Laborales</span>
+        </a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+            <i class="fas fa-times-circle"></i>
+        </a>
+    </div>
 
     <!-- Sidebar -->
     <div class="sidebar">

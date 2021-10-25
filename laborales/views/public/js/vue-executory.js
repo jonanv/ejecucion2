@@ -1,36 +1,3 @@
-const NEXT_DAY = {
-    SUNDAY: 0,
-    MONDAY: 1,
-    TUESDAY: 2,
-    WEDNESDAY: 3,
-    THURSDAY: 4,
-    FRIDAY: 5,
-    SATURDAY: 6,
-    NONE: 7
-}
-const EASTER_WEEK_HOLIDAYS = [
-    { day: -3, daysToSum: NEXT_DAY.NONE, celebration: 'Jueves Santo' },
-    { day: -2, daysToSum: NEXT_DAY.NONE, celebration: 'Viernes Santo' },
-    { day: 39, daysToSum: NEXT_DAY.MONDAY, celebration: 'Ascensión del Señor' },
-    { day: 60, daysToSum: NEXT_DAY.MONDAY, celebration: 'Corphus Christi' },
-    { day: 68, daysToSum: NEXT_DAY.MONDAY, celebration: 'Sagrado Corazón de Jesús' }
-];
-const HOLIDAYS = [
-    { day: '01-01', daysToSum: NEXT_DAY.NONE, celebration: 'Año Nuevo' },
-    { day: '05-01', daysToSum: NEXT_DAY.NONE, celebration: 'Día del Trabajo' },
-    { day: '07-20', daysToSum: NEXT_DAY.NONE, celebration: 'Día de la Independencia' },
-    { day: '08-07', daysToSum: NEXT_DAY.NONE, celebration: 'Batalla de Boyacá' },
-    { day: '12-08', daysToSum: NEXT_DAY.NONE, celebration: 'Día de la Inmaculada Concepción' },
-    { day: '12-25', daysToSum: NEXT_DAY.NONE, celebration: 'Día de Navidad' },
-    { day: '01-06', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de los Reyes Magos' },
-    { day: '03-19', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de San José' },
-    { day: '06-29', daysToSum: NEXT_DAY.MONDAY, celebration: 'San Pedro y San Pablo' },
-    { day: '08-15', daysToSum: NEXT_DAY.MONDAY, celebration: 'La Asunción de la Virgen' },
-    { day: '10-12', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de la Raza' },
-    { day: '11-01', daysToSum: NEXT_DAY.MONDAY, celebration: 'Todos los Santos' },
-    { day: '11-11', daysToSum: NEXT_DAY.MONDAY, celebration: 'Independencia de Cartagena' }
-];
-const MILLISECONDS_DAY = 86400000;
 const url = 'api/Api.php';
 const app = new Vue({
     el: '#app-executory',
@@ -62,7 +29,8 @@ const app = new Vue({
         submitStatus: null,
         actions_folder_list: [],
         users: [],
-        radicados_executory_list: []
+        radicados_executory_list: [],
+        radicados_executory: []
     },
     validations: {
         form: {
@@ -100,7 +68,6 @@ const app = new Vue({
                 required
             },
             position: {
-                required
             },
             additional_observation: {
                 required
@@ -156,29 +123,98 @@ const app = new Vue({
             validation.$touch();
         },
         // BOTONES
-        btnGetProcess: function() {
-            console.log(app.form_process);
-
-            app.getProcess(app.form.radicado);
-        },
         btnAddRadicado: function() {
-            console.log(app.form_process);
-            app.radicados_executory_list.push(app.form_process);
-            
+            // console.log(app.form_process);
+            if (!this.$v.form_process.$invalid) {
+                let isInArray = app.radicados_executory.includes(app.form_process.radicado);
+                if (isInArray) {
+                    Swal.fire({
+                        title: '!El radicado ya existe!',
+                        text: 'El radicado ' + app.form_process.radicado + ' ya existe en la tabla',
+                        icon: 'error',
+                        confirmButtonColor: '#3085d6',
+                        allowOutsideClick: false
+                    });
+                } else {
+                    app.radicados_executory_list.push(app.form_process);
+                    app.radicados_executory.push(app.form_process.radicado);
+                    
+                    $('#table_datatable').DataTable().destroy();
+                    let init = this;
+                    init.$nextTick(function() {
+                        init.initDataTables();
+                    });
+    
+                    app.form_process = {
+                        id_radicado: '',
+                        radicado: '',
+                        id_plaintiff: '',
+                        plaintiff: '',
+                        id_defendant: '',
+                        defendant: '',
+                        original_court: '',
+                        destination_court: '',
+                        process_class: '',
+                        position: '',
+                        additional_observation: '',
+                        start_date: '',
+                        days: '',
+                        end_date: '',
+                        assigned_to: '',
+                        date: '',
+                        user: '',
+                        observation: '',
+                    }
+                    this.$v.form_process.$reset();
+                }
+            }
+        },
+        btnRemoveRadicado: function(index) {
+            app.radicados_executory_list.splice(index, 1);
+            app.radicados_executory.splice(index, 1);
+                
             $('#table_datatable').DataTable().destroy();
             let init = this;
             init.$nextTick(function() {
                 init.initDataTables();
             });
         },
+        btnCleanForms: function() {
+            app.form = {
+                radicado: ''
+            }
+            app.form_process = {
+                id_radicado: '',
+                radicado: '',
+                id_plaintiff: '',
+                plaintiff: '',
+                id_defendant: '',
+                defendant: '',
+                original_court: '',
+                destination_court: '',
+                process_class: '',
+                position: '',
+                additional_observation: '',
+                start_date: '',
+                days: '',
+                end_date: '',
+                assigned_to: '',
+                date: '',
+                user: '',
+                observation: '',
+            }
+            this.$v.form.$reset();
+            this.$v.form_process.$reset();
+        },
         btnRegisterExecutory: function() {
             this.$v.form_process.$touch();
+            // TODO: Falta cuerpo del metodo
         },
         // PROCEDIMIENTOS
         getAllActionsFolder: function() {
             axios.post(url, {option: 'getAllActionsFolder'})
                 .then((response) => {
-                    // console.log(response);
+                    console.log(response);
                     app.actions_folder_list = response.data;
                 });
         },
@@ -189,8 +225,8 @@ const app = new Vue({
                     app.users = response.data;
                 });
         },
-        getProcess: function(radicado) {
-            let radicado_format = radicado.replace(/\-/g, '');
+        getProcess: function() {
+            let radicado_format = app.form.radicado.replace(/\-/g, '');
 
             this.$v.form.$touch();
             if (this.$v.form.$invalid) {
@@ -212,6 +248,7 @@ const app = new Vue({
                         app.form_process.destination_court = response.data.jd;
                         app.form_process.process_class = response.data.claseproceso;
                         app.form_process.position = response.data.posicion;
+                        app.form_process.start_date = new moment().format('DD/MM/YYYY');
                         app.form_process.date = response.data.fecha;
                         app.form_process.user = response.data.empleado;
                         app.form_process.observation = response.data.observacion;
@@ -220,28 +257,29 @@ const app = new Vue({
             }
         },
         calculateDaysToEndDate: function() {
-            let days = app.form_process.days;
-            
-            // 0: "Sunday"
-            // 1: "Monday"
-            // 2: "Tuesday"
-            // 3: "Wednesday"
-            // 4: "Thursday"
-            // 5: "Friday"
-            // 6: "Saturday"
-            let end_date = '';
-            for (let day = 1; day <= days; day++) {
-                let date = moment(app.form_process.start_date, 'DD/MM/YYYY');
-                end_date = date.add(parseInt(day), 'days');
-                // console.log(end_date.format('DD/MM/YYYY'));
-
-                let dayWeek = end_date.day();
-                // console.log(dayWeek);
-                if (dayWeek === 0 || dayWeek === 6 || this.isHoliday(end_date)) {
-                    days++;
+            if (app.form_process.start_date && app.form_process.days) {
+                let days = app.form_process.days;
+                // 0: "Sunday"
+                // 1: "Monday"
+                // 2: "Tuesday"
+                // 3: "Wednesday"
+                // 4: "Thursday"
+                // 5: "Friday"
+                // 6: "Saturday"
+                let end_date = '';
+                for (let day = 1; day <= days; day++) {
+                    let date = moment(app.form_process.start_date, 'DD/MM/YYYY');
+                    end_date = date.add(parseInt(day), 'days');
+                    // console.log(end_date.format('DD/MM/YYYY'));
+    
+                    let dayWeek = end_date.day();
+                    // console.log(dayWeek);
+                    if (dayWeek === 0 || dayWeek === 6 || this.isHoliday(end_date)) {
+                        days++;
+                    }
                 }
+                app.form_process.end_date = end_date.format('DD/MM/YYYY');
             }
-            app.form_process.end_date = end_date.format('DD/MM/YYYY');
         },
         isHoliday: function(end_date) {
             let date = end_date.format('YYYY-MM-DD');
