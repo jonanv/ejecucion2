@@ -548,8 +548,8 @@
                                             v-bind:class="status($v.form_process.days)"
                                             v-bind:value="form_process.days"
                                             v-model.trim="$v.form_process.days.$model"
-                                            @focusout="touchedVuelidate($v.form_process.days);">
-                                    </div>
+                                            @focusout="touchedVuelidate($v.form_process.days); calculateDaysToEndDate();">
+                                        </div>
                                     <div class="mt-0" v-if="!$v.form_process.days.required && $v.form_process.days.$error && $v.form_process.days.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
@@ -659,13 +659,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr v-if="form_process.id_radicado !== ''">
                                             <th scope="row">{{ form_process.date }}</th>
                                             <td>{{ form_process.observation }}</td>
                                             <td>{{ form_process.user }}</td>
                                             <td>
                                                 <button type="button"
-                                                    class="btn btn-primary">
+                                                    class="btn btn-primary"
+                                                    @click="btnAddRadicado();">
                                                     <i class="fas fa-plus-circle"></i>
                                                     Adicionar
                                                 </button>
@@ -707,16 +708,17 @@
                             </thead>
                             <tbody>
                                 <tr v-for="(radicado, index) in radicados_executory_list" :key="index">
-                                    <th scope="row">{{ (index + 1) }}</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row">{{ radicado.id_radicado }}</th>
+                                    <td>{{ radicado.radicado }}</td>
+                                    <td>{{ radicado.observation }}</td>
+                                    <td>{{ radicado.days }}</td>
+                                    <td>{{ radicado.start_date }}</td>
+                                    <td>{{ radicado.assigned_to }}</td>
+                                    <td>{{  }}</td>
+                                    <td>{{  }}</td>
+                                    <td>{{  }}</td>
                                     <td>
+                                        Boton
                                         <!-- <button type="button"
                                             class="btn btn-primary btn-block" 
                                             @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"

@@ -128,6 +128,16 @@ const app = new Vue({
 
             app.getProcess(app.form.radicado);
         },
+        btnAddRadicado: function() {
+            console.log(app.form_process);
+            app.radicados_executory_list.push(app.form_process);
+            
+            $('#table_datatable').DataTable().destroy();
+            let init = this;
+            init.$nextTick(function() {
+                init.initDataTables();
+            });
+        },
         btnRegisterExecutory: function() {
             this.$v.form_process.$touch();
         },
@@ -172,10 +182,41 @@ const app = new Vue({
                         app.form_process.date = response.data.fecha;
                         app.form_process.user = response.data.empleado;
                         app.form_process.observation = response.data.observacion;
-                        app.form_process.start_date = document.getElementById('start_date').value;
                         this.submitStatus = 'OK'
                     });
             }
+        },
+        calculateDaysToEndDate: function() {
+            // app.form_process.start_date = document.getElementById('start_date').value;
+            // app.form_process.days = document.getElementById('days').value;
+
+            let days = app.form_process.days;
+            
+            // 0: "Sunday"
+            // 1: "Monday"
+            // 2: "Tuesday"
+            // 3: "Wednesday"
+            // 4: "Thursday"
+            // 5: "Friday"
+            // 6: "Saturday"
+            for (let day = 1; day <= days; day++) {
+                let date = moment(app.form_process.start_date, 'DD/MM/YYYY');
+                let date_end = date.add(parseInt(day), 'days');
+                console.log(date_end.format('DD/MM/YYYY'));
+
+                let dayWeek = date_end.day();
+                console.log(dayWeek);
+                if (dayWeek === 0 || dayWeek === 6) {
+                    console.log('fin de semana');
+                } else {
+                    console.log('dia de semana');
+                }
+            }
+            // let dayWeek = moment().day();
+            // console.log(dayWeek);
+            // console.log(moment().isoWeekday(dayWeek));
+
+            // app.form_process.end_date = date_end.format('DD/MM/YYYY');
         },
         // CONFIGURACIONES
         initDatetimepicker: function() {
