@@ -4,7 +4,7 @@
     <div class="container">
 
         <a href="<?php echo SERVERURL ?>" class="navbar-brand">
-            <img src="<?php echo SERVERURL ?>views/public/img/AdminLTELogo.png" 
+            <img src="<?php echo SERVERURL ?>views/public/img/logo.png" 
                 alt="AdminLTE Logo" 
                 class="brand-image img-circle elevation-3" 
                 style="opacity: .8">
@@ -27,10 +27,10 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="index3.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="<?php SERVERURL ?>?route=admin" class="nav-link">
+                        <!-- <i class="fas fa-home nav-icon"></i> -->
+                        Inicio
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
@@ -172,6 +172,12 @@
             <li class="nav-item">
                 <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                     <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="<?php SERVERURL ?>?route=logout" class="nav-link" title="Cerrar sesión">
+                    <i class="fas fa-sign-out-alt nav-icon"></i>
                 </a>
             </li>
         </ul>

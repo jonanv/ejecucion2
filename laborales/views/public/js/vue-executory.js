@@ -27,6 +27,7 @@ const app = new Vue({
         },
         loading: true,
         submitStatus: null,
+        registerStatus: null,
         actions_folder_list: [],
         users: [],
         radicados_executory_list: [],
@@ -78,18 +79,14 @@ const app = new Vue({
                 maxLength: maxLength(10)
             },
             days: {
-                required,
                 numeric
             },
             end_date: {
-                required,
                 minLength: minLength(10),
                 maxLength: maxLength(10)
             },
             assigned_to: {
-                required
             },
-
         }
     },
     beforeCreate() {
@@ -207,8 +204,16 @@ const app = new Vue({
             this.$v.form_process.$reset();
         },
         btnRegisterExecutory: function() {
-            this.$v.form_process.$touch();
             // TODO: Falta cuerpo del metodo
+            this.$v.form_process.$touch();
+            if (this.$v.form_process.$invalid) {
+                this.registerStatus = 'ERROR';
+            } else {
+                this.registerStatus = 'PENDING';
+                setTimeout(() => {
+                    this.registerStatus = 'OK';
+                }, 4000);
+            }
         },
         // PROCEDIMIENTOS
         getAllActionsFolder: function() {
@@ -257,7 +262,7 @@ const app = new Vue({
             }
         },
         calculateDaysToEndDate: function() {
-            if (app.form_process.start_date && app.form_process.days) {
+            if (app.form_process.start_date && Number.isInteger(parseInt(app.form_process.days))) {
                 let days = app.form_process.days;
                 // 0: "Sunday"
                 // 1: "Monday"
@@ -279,6 +284,8 @@ const app = new Vue({
                     }
                 }
                 app.form_process.end_date = end_date.format('DD/MM/YYYY');
+            } else if (app.form_process.days === '') {
+                app.form_process.end_date = '';
             }
         },
         isHoliday: function(end_date) {

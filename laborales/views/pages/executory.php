@@ -546,15 +546,10 @@
                                             v-bind:value="form_process.days"
                                             v-model.trim="$v.form_process.days.$model"
                                             @focusout="touchedVuelidate($v.form_process.days); calculateDaysToEndDate();">
-                                        </div>
-                                    <div class="mt-0" v-if="!$v.form_process.days.required && $v.form_process.days.$error && $v.form_process.days.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
                                     </div>
                                     <div class="mt-0" v-if="!$v.form_process.days.numeric && $v.form_process.days.$error && $v.form_process.days.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar un numero</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar un número</span>
                                         </div>
                                     </div>
                                 </div>
@@ -590,11 +585,6 @@
                                             v-bind:value="form_process.end_date"
                                             v-model.trim="$v.form_process.end_date.$model"
                                             @focusout="touchedVuelidate($v.form_process.end_date);">
-                                    </div>
-                                    <div class="mt-0" v-if="!$v.form_process.end_date.required && $v.form_process.end_date.$error && $v.form_process.end_date.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
                                     </div>
                                     <div class="mt-0" v-if="!$v.form_process.end_date.minLength && $v.form_process.end_date.$error && $v.form_process.end_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
@@ -632,11 +622,6 @@
                                                 {{ user.empleado }}
                                             </option>
                                         </select>
-                                    </div>
-                                    <div class="mt-0" v-if="!$v.form_process.assigned_to.required && $v.form_process.assigned_to.$error && $v.form_process.assigned_to.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -722,39 +707,26 @@
                                     <td>{{  }}</td>
                                     <td>
                                         <button type="button"
-                                            class="btn btn-danger"
+                                            class="btn btn-danger btn-block"
                                             @click="btnRemoveRadicado(index);">
                                             <i class="fas fa-minus-circle"></i>
                                         </button>
-                                        <!-- <button type="button"
-                                            class="btn btn-primary btn-block" 
-                                            @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
-                                            v-bind:disabled="migrateStatus === 'PENDING'"
-                                            v-if="process_exist_list[index] === false">
-                                            <span class="spinner-border spinner-border-sm" 
-                                                role="status" 
-                                                aria-hidden="true"
-                                                v-bind:class="{ 'd-none': migrateStatus !== 'PENDING'}">
-                                            </span>
-                                            <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
-                                            <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
-                                                <i class="fas fa-cloud-download-alt"></i>
-                                                Migrar tutela
-                                            </span>
-                                        </button>
-                                        <span class="badge badge-success"
-                                            v-else>
-                                            TUTELA MIGRADA
-                                        </span> -->
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
 
                         <button type="submit"
-                            class="btn btn-primary"
-                            @click="btnRegisterExecutory();">
-                            Registrar
+                            class="btn btn-primary" 
+                            @click="btnRegisterExecutory();"
+                            v-bind:disabled="registerStatus === 'PENDING'">
+                            <span class="spinner-border spinner-border-sm" 
+                                role="status" 
+                                aria-hidden="true"
+                                v-bind:class="{ 'd-none': registerStatus !== 'PENDING'}">
+                            </span>
+                            <span v-if="registerStatus === 'PENDING'">Registrando...</span>
+                            <span v-if="registerStatus !== 'PENDING' ||  registerStatus === null">Registrar</span>
                         </button>
                         <button type="reset" 
                             class="btn btn-primary"

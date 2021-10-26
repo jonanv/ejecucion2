@@ -4,9 +4,9 @@
     <!-- Brand Logo -->
     <div class="d-flex flex-row justify-content-center align-items-center" 
         style="border-bottom: 1px solid #4b545c;">
-        <a href="index3.html" class="brand-link" 
+        <a href="<?php echo SERVERURL ?>?route=admin" class="brand-link" 
             style="border-bottom: none;">
-            <img src="<?php echo SERVERURL ?>views/public/img/AdminLTELogo.png" 
+            <img src="<?php echo SERVERURL ?>views/public/img/logo.png" 
                 alt="SIEPRO Laborales" 
                 class="brand-image img-circle elevation-3" 
                 style="opacity: .8">
@@ -45,42 +45,60 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <?php
+                    if (isset($_GET['route'])) {
+                        $route = explode("/", $_GET['route']);
+                        $response = $route[0];
+                    } else {
+                        $response = "index";
+                    }
+                ?>
+
                 <li class="nav-item">
                     <a href="<?php echo SERVERURL ?>?route=logout" class="nav-link">
                         <i class="fas fa-sign-out-alt nav-icon"></i>
                         <p>Cerrar sesión</p>
                     </a>
                 </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                <li class="nav-item <?php echo $response == "executory" 
+                                                    ? "menu-open" : "" ?>">
+                    <a href="#" class="nav-link <?php echo $response == "executory" 
+                                                            ? "active" : "" ?>">
+                        <i class="nav-icon fas fa-desktop"></i>
                         <p>
-                            Dashboard
+                            SIEPRO
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v3</p>
+                            <a href="<?php echo SERVERURL ?>?route=executory" 
+                                class="nav-link <?php echo $response == "executory" 
+                                                            ? "active" : "" ?>">
+                                <i class="fas fa-running nav-icon"></i>
+                                <p>Ejecutoria</p>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a href="<?php echo SERVERURL ?>?route=admin" 
+                        class="nav-link <?php echo $response == "admin" 
+                                                    ? "active" : "" ?>">
+                        <i class="fas fa-database nav-icon"></i>
+                        <p>Justicia XXI</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?php echo SERVERURL ?>?route=entry-guardianships" 
+                        class="nav-link <?php echo $response == "entry-guardianships" 
+                                                    ? "active" : "" ?>">
+                        <i class="fas fa-file-alt nav-icon"></i>
+                        <p>Entrada de tutelas</p>
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item">
                     <a href="pages/widgets.html" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
@@ -681,7 +699,7 @@
                         <i class="nav-icon far fa-circle text-info"></i>
                         <p>Informational</p>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

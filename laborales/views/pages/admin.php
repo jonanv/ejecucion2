@@ -39,7 +39,7 @@
                         <div class="icon">
                             <i class="fas fa-desktop"></i>
                         </div>
-                        <a href="#" class="small-box-footer">Ir <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo SERVERURL ?>?route=admin" class="small-box-footer">Ir <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -53,7 +53,7 @@
                         <div class="icon">
                             <i class="fas fa-database"></i>
                         </div>
-                        <a href="#" class="small-box-footer">Ir <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo SERVERURL ?>?route=admin" class="small-box-footer">Ir <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
