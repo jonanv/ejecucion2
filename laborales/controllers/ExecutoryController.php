@@ -14,4 +14,9 @@
             $response = ExecutoryModel::getAllUsersModel();
             return $response;
         }
+
+        public static function registerExecutoryController($radicados_executory_list, $id_usuario, $nombre_usuario) {
+            $response = ExecutoryModel::registerExecutoryModel($radicados_executory_list, $id_usuario, $nombre_usuario);
+            return $response;
+        }
     }

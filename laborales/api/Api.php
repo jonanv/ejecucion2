@@ -80,6 +80,14 @@
             $response = ExecutoryController::getAllUsersController();
             echo json_encode($response);
         }
+
+        public function registerExecutory($radicados_executory_list) {
+            session_start();
+            $id_usuario = $_SESSION['idUsuario'];
+            $nombre_usuario = $_SESSION['nombre'];
+            $response = ExecutoryController::registerExecutoryController($radicados_executory_list, $id_usuario, $nombre_usuario);
+            echo json_encode($response);
+        }
     }
 
     // Necesario para recibir parametros con Axios
@@ -97,6 +105,10 @@
     // Login
     $id_employee_login = (isset($_POST['id_employee_login'])) ? $_POST['id_employee_login'] : '';
     $password_login = (isset($_POST['password_login'])) ? $_POST['password_login'] : '';
+    
+    // Executory
+    $radicados_executory_list = (isset($_POST['radicados_executory_list'])) ? $_POST['radicados_executory_list'] : '';
+    
 
     $obj = new Api();
     switch ($option) {
@@ -123,6 +135,7 @@
             break;
 
         // Login
+        // TODO: Recordar que login funciona de la forma antigua
         // case 'getLogin':
         //     $data = array(
         //         "id_employee_login" => $id_employee_login,
@@ -142,6 +155,10 @@
 
         case 'getAllUsers': //
             $obj->getAllUsers();
+            break;
+
+        case 'registerExecutory':
+            $obj->registerExecutory($radicados_executory_list);
             break;
     }
 

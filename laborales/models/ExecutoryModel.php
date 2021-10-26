@@ -56,4 +56,161 @@
             return $data;
             $response = null;
         }
+
+        public static function registerExecutoryModel($radicados_executory_list, $id_usuario, $nombre_usuario) {
+            foreach ($radicados_executory_list as $key => $value) {
+
+            }
+            return $radicados_executory_list;
+
+            date_default_timezone_set('America/Bogota');
+		    $date = date('Y-m-d g:ia');
+            $datehour = explode(" ", $date);
+            $fechalog   = $datehour[0];
+            // TODO: Organizar fecha con DATE_FORMAT(NOW(),'%Y-%m-%d')
+            $horalog    = $datehour[1];
+            
+            $accion  = "Se Realiza Registro de Ejecutoria En el Sistema (SIEPRO)";
+            $detalle = $nombre_usuario . " " . $accion . " " . $fechalog . " " . "a las: " . $horalog;
+            $tipolog = 1;
+            
+            try {
+                $conn = ConnectionModel::connectMySQL();
+                $conn->beginTransaction();
+
+                // TODO: Metodo repetido en otro modelo, revisar si es posible sacarlo de la transaccion
+                $query = 
+                        "INSERT INTO log (fecha, accion, detalle, idusuario, idtipolog) 
+                        VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :accion, :detalle, :idusuario, :tipolog)";
+                $response = $conn->prepare($query);
+                $response->bindParam(":accion", $accion, PDO::PARAM_STR);
+                $response->bindParam(":detalle", $detalle, PDO::PARAM_STR);
+                $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
+                $response->bindParam(":tipolog", $tipolog, PDO::PARAM_INT);
+                if ($response->execute()) {
+
+                    foreach ($radicados_executory_list as $key => $value) {
+                        $id_radicado = $value['id_radicado'];
+                        $radicado = $value['radicado'];
+                        $observation = $value['observation'];
+
+                        //PARA AUDIENCIA
+                        $date_audience = $value[''];
+                        $hour_audience = $value[''];
+                        $observation_audience = $value[''];
+
+                        //SI VA PARA DESPACHO
+                        $to_dispatch = $value[''];
+
+
+
+                        $idradicado2 = $datospartes_2[0];
+                        $radi        = $datospartes_2[1];
+                        $obser       = utf8_decode($datospartes_2[2]);
+                        
+                        
+                        $fechaaudi = $datospartes_2[8];
+                        $horaaudi  = $datospartes_2[9];
+                        $obsaudi   = utf8_decode($datospartes_2[10]);
+                        
+                        $a_despacho = $datospartes_2[11];
+
+                        if ($date_audience == "SIN TRAMITE" && $hour_audience == "SIN TRAMITE" && $observation_audience == "SIN TRAMITE" ) {
+    
+                            $query = 
+                                "INSERT INTO detalle_correspondencia (idcorrespondencia, fecha, observacion, estadoobs, a_despacho, idusuario) 
+                                VALUES(:id_radicado, :date, :observation, 0, :to_dispatch, :idusuario)";
+                            $response = $conn->prepare($query);
+                            $response->bindParam(":id_radicado", $id_radicado, PDO::PARAM_STR);
+                            $response->bindParam(":date", $date, PDO::PARAM_STR);
+                            $response->bindParam(":observation", $observation, PDO::PARAM_STR);
+                            $response->bindParam(":to_dispatch", $to_dispatch, PDO::PARAM_STR);
+                            $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
+                        } else {
+                            //SE SELECCIONO DE LA LISTA 'OBSERVACION' AUDIENCIA
+                            $obser = $observation . ", FECHA:" . $date_audience . ", HORA:" . $hour_audience . ", " . $observation_audience;
+                            $query = 
+                                "INSERT INTO detalle_correspondencia (idcorrespondencia, fecha, observacion, fechaaudi, horaaudi, obsaudi, siaudi, idusuario) 
+                                VALUES(:id_radicado, :date, :observation, :date_audience, :hour_audience, :observation_audience, 1, :idusuario)";
+                            $response = $conn->prepare($query);
+                            $response->bindParam(":id_radicado", $id_radicado, PDO::PARAM_STR);
+                            $response->bindParam(":date", $date, PDO::PARAM_STR);
+                            $response->bindParam(":observation", $obser, PDO::PARAM_STR);
+                            $response->bindParam(":date_audience", $date_audience, PDO::PARAM_STR);
+                            $response->bindParam(":hour_audience", $hour_audience, PDO::PARAM_STR);
+                            $response->bindParam(":observation_audience", $observation_audience, PDO::PARAM_STR);
+                            $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
+                            $response->execute();
+    
+                            $query = 
+                                "INSERT INTO siepro_audiencia (idradicado, fechaaudi, horaaudi, obsaudi, fecharegistro, idusuario) 
+                                VALUES(:id_radicado, :date_audience, :hour_audience, :observation_audience, DATE_FORMAT(NOW(),'%Y-%m-%d'), :idusuario)";
+                            $response = $conn->prepare($query);
+                            $response->bindParam(":id_radicado", $id_radicado, PDO::PARAM_STR);
+                            $response->bindParam(":date_audience", $date_audience, PDO::PARAM_STR);
+                            $response->bindParam(":hour_audience", $hour_audience, PDO::PARAM_STR);
+                            $response->bindParam(":observation_audience", $observation_audience, PDO::PARAM_STR);
+                            $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
+                            $response->execute();
+                        }
+
+                        $actu_accion      = $datospartes_2[3];
+                        $actu_fechai      = $datospartes_2[4];
+                        $actu_dias        = $datospartes_2[5];
+                        $actu_fechaf      = $datospartes_2[6];
+                        $actu_asignadoa   = $datospartes_2[7];
+                        
+                        //if (empty($actu_accion) || empty($actu_fechai) || empty($actu_dias) || empty($actu_fechaf) || empty($actu_asignadoa)) {
+                        if ($actu_accion == "SIN TRAMITE" && $actu_fechai == "SIN TRAMITE" && $actu_dias == "SIN TRAMITE" && $actu_fechaf == "SIN TRAMITE" && $actu_asignadoa == "SIN TRAMITE" ) {
+            
+                            $bandera = 0;
+                        }
+                        else{
+                        
+                            
+                            $actu_accion    = explode("-",$datospartes_2[3]);
+                            $id_actu_accion = $actu_accion[0];
+                            $desaccion      = utf8_decode($actu_accion[1]);
+                            
+                            
+                            $actu_asignadoa    = explode("-",$datospartes_2[7]);
+                            $id_actu_asignadoa = $actu_asignadoa[0];
+                            $asignadoaccionA   = $actu_asignadoa[1];
+                            
+                            $desaccion_B = "TRAMITE INTERNO DE PROCESO, FECHA INICIAL: ".$actu_fechai." DIAS: ".$actu_dias." FECHA FINAL: ".$actu_fechaf.
+                                        ", TRAMITE: ".$desaccion.", ASIGNADO A: ".$asignadoaccionA;
+                                        
+                                        
+                            
+                            $this->db->exec("INSERT INTO detalle_correspondencia(idcorrespondencia,fecha,observacion,idusuario)
+                                            VALUES ('$idradicado2','$fecharegistro','$desaccion_B','$idusuario')");
+                                            
+                            
+                            $this->db->exec("INSERT INTO actuacion_expediente (idusuario,actu_radicado,actu_accion,actu_fechai,actu_dias,actu_fechaf,actu_asignadoa) 
+                                            VALUES ('$idusuario','$idradicado2','$id_actu_accion','$actu_fechai','$actu_dias','$actu_fechaf','$id_actu_asignadoa');");				 			   
+                        
+                            
+                            $this->db->exec("INSERT INTO actuacion_expediente_historial (idusuario,actu_radicado,actu_accion,actu_fechai,actu_dias,actu_fechaf,actu_asignadoa) 
+                                            VALUES ('$idusuario','$idradicado2','$id_actu_accion','$actu_fechai','$actu_dias','$actu_fechaf','$id_actu_asignadoa');");
+                        
+                        }
+                    }
+
+
+
+
+
+
+                    $data = "ok";
+                    $conn->commit();
+                } else {
+                    $data = "error";
+                }
+                return $data;
+                $response = null;
+            } catch (Exception $e) {
+                $conn->rollBack();
+                echo $e->getMessage();
+            }
+        }
     }

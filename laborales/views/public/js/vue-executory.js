@@ -204,15 +204,22 @@ const app = new Vue({
             this.$v.form_process.$reset();
         },
         btnRegisterExecutory: function() {
-            // TODO: Falta cuerpo del metodo
-            this.$v.form_process.$touch();
-            if (this.$v.form_process.$invalid) {
+            if (app.radicados_executory_list.length == 0) {
                 this.registerStatus = 'ERROR';
+                Swal.fire({
+                    title: '!Error!',
+                    text: 'No se ha adicionado ningún radicado a la tabla radicado',
+                    icon: 'error',
+                    confirmButtonColor: '#3085d6',
+                    allowOutsideClick: false
+                });
             } else {
                 this.registerStatus = 'PENDING';
-                setTimeout(() => {
-                    this.registerStatus = 'OK';
-                }, 4000);
+                axios.post(url, {option: 'registerExecutory', radicados_executory_list:app.radicados_executory_list})
+                    .then((response) => {
+                        console.log(response);
+                        this.registerStatus = 'OK';
+                    });
             }
         },
         // PROCEDIMIENTOS
