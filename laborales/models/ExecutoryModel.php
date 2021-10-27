@@ -160,38 +160,51 @@
                         $actu_fechaf      = $datospartes_2[6];
                         $actu_asignadoa   = $datospartes_2[7];
                         
-                        //if (empty($actu_accion) || empty($actu_fechai) || empty($actu_dias) || empty($actu_fechaf) || empty($actu_asignadoa)) {
-                        if ($actu_accion == "SIN TRAMITE" && $actu_fechai == "SIN TRAMITE" && $actu_dias == "SIN TRAMITE" && $actu_fechaf == "SIN TRAMITE" && $actu_asignadoa == "SIN TRAMITE" ) {
-            
+                        $observation = $value['observation'];
+                        $start_date = $value['start_date'];
+                        $days = $value['days'];
+                        $end_date = $value['end_date'];
+                        $assigned_to = $value['assigned_to'];
+                        
+                        if ($observation == "SIN TRAMITE" && 
+                            $start_date == "SIN TRAMITE" && 
+                            $days == "SIN TRAMITE" && 
+                            $end_date == "SIN TRAMITE" && 
+                            $assigned_to == "SIN TRAMITE" ) {
                             $bandera = 0;
                         }
                         else{
                         
                             
-                            $actu_accion    = explode("-",$datospartes_2[3]);
-                            $id_actu_accion = $actu_accion[0];
-                            $desaccion      = utf8_decode($actu_accion[1]);
+                            $internal_action = explode("-",$datospartes_2[3]);
+                            $id_internal_accion = $internal_action[0];
+                            $description_internal_action = utf8_decode($internal_action[1]);
                             
                             
                             $actu_asignadoa    = explode("-",$datospartes_2[7]);
                             $id_actu_asignadoa = $actu_asignadoa[0];
                             $asignadoaccionA   = $actu_asignadoa[1];
                             
-                            $desaccion_B = "TRAMITE INTERNO DE PROCESO, FECHA INICIAL: ".$actu_fechai." DIAS: ".$actu_dias." FECHA FINAL: ".$actu_fechaf.
-                                        ", TRAMITE: ".$desaccion.", ASIGNADO A: ".$asignadoaccionA;
+                            $description_action_B = "TRAMITE INTERNO DE PROCESO, FECHA INICIAL: " . $actu_fechai . " DIAS: " . $actu_dias . " FECHA FINAL: " . $actu_fechaf .
+                                        ", TRAMITE: " . $description_internal_action . ", ASIGNADO A: " . $asignadoaccionA;
                                         
                                         
-                            
-                            $this->db->exec("INSERT INTO detalle_correspondencia(idcorrespondencia,fecha,observacion,idusuario)
-                                            VALUES ('$idradicado2','$fecharegistro','$desaccion_B','$idusuario')");
+                            $query = 
+                                "INSERT INTO detalle_correspondencia(idcorrespondencia,fecha,observacion,idusuario)
+                                VALUES ('$idradicado2','$fecharegistro','$description_action_B','$idusuario')";
+                            $response = $conn->prepare($query);
                                             
                             
-                            $this->db->exec("INSERT INTO actuacion_expediente (idusuario,actu_radicado,actu_accion,actu_fechai,actu_dias,actu_fechaf,actu_asignadoa) 
-                                            VALUES ('$idusuario','$idradicado2','$id_actu_accion','$actu_fechai','$actu_dias','$actu_fechaf','$id_actu_asignadoa');");				 			   
+                            $query = 
+                                "INSERT INTO actuacion_expediente (idusuario,actu_radicado,actu_accion,actu_fechai,actu_dias,actu_fechaf,actu_asignadoa) 
+                                VALUES ('$idusuario','$idradicado2','$id_internal_accion','$actu_fechai','$actu_dias','$actu_fechaf','$id_actu_asignadoa')";
+                            $response = $conn->prepare($query);				 			   
                         
                             
-                            $this->db->exec("INSERT INTO actuacion_expediente_historial (idusuario,actu_radicado,actu_accion,actu_fechai,actu_dias,actu_fechaf,actu_asignadoa) 
-                                            VALUES ('$idusuario','$idradicado2','$id_actu_accion','$actu_fechai','$actu_dias','$actu_fechaf','$id_actu_asignadoa');");
+                            $query = 
+                                "INSERT INTO actuacion_expediente_historial (idusuario,actu_radicado,actu_accion,actu_fechai,actu_dias,actu_fechaf,actu_asignadoa) 
+                                VALUES ('$idusuario','$idradicado2','$id_internal_accion','$actu_fechai','$actu_dias','$actu_fechaf','$id_actu_asignadoa')";
+                            $response = $conn->prepare($query);
                         
                         }
                     }

@@ -16,6 +16,9 @@ const NEXT_DAY = {
     NONE: 7
 }
 const EASTER_WEEK_HOLIDAYS = [
+    { day: -3, daysToSum: NEXT_DAY.NONE, celebration: 'Lunes Santo' },
+    { day: -3, daysToSum: NEXT_DAY.NONE, celebration: 'Martes Santo' },
+    { day: -3, daysToSum: NEXT_DAY.NONE, celebration: 'Miercoles Santo' },
     { day: -3, daysToSum: NEXT_DAY.NONE, celebration: 'Jueves Santo' },
     { day: -2, daysToSum: NEXT_DAY.NONE, celebration: 'Viernes Santo' },
     { day: 39, daysToSum: NEXT_DAY.MONDAY, celebration: 'Ascensión del Señor' },
@@ -35,6 +38,9 @@ const HOLIDAYS = [
     { day: '08-15', daysToSum: NEXT_DAY.MONDAY, celebration: 'La Asunción de la Virgen' },
     { day: '10-12', daysToSum: NEXT_DAY.MONDAY, celebration: 'Día de la Raza' },
     { day: '11-01', daysToSum: NEXT_DAY.MONDAY, celebration: 'Todos los Santos' },
-    { day: '11-11', daysToSum: NEXT_DAY.MONDAY, celebration: 'Independencia de Cartagena' }
+    { day: '11-11', daysToSum: NEXT_DAY.MONDAY, celebration: 'Independencia de Cartagena' },
+    { day: '12-17', daysToSum: NEXT_DAY.NONE, celebration: 'Día de la Rama Judicial' },
+    { day: '12-20', daysToSum: NEXT_DAY.NONE, celebration: 'Vacaciones de la Rama Judicial' },
+    { day: '01-10', daysToSum: NEXT_DAY.NONE, celebration: 'Vacaciones de la Rama Judicial' },
 ];
 const MILLISECONDS_DAY = 86400000;
