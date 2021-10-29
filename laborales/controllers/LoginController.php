@@ -24,7 +24,7 @@
                         $response["nombre_usuario"] == $id_employee_login &&
                         $response["contrasena"] == $encriptar
                     ) {
-                        $_SESSION["validate_sesion"] = "ok";
+                        $_SESSION["validate_sesion_laborales"] = "ok";
                         $_SESSION['id'] = $response['usua_perfil'];
                         $_SESSION['nombre'] = $response['usua_empleado'];
                         $_SESSION['idUsuario'] = $response['usua_id'];

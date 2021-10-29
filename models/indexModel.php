@@ -65,6 +65,7 @@ class indexModel extends modelBase
 		$_SESSION['id_juzgado']   = $id_juzgado;
 		$_SESSION['tipousuario']  = $tipousuario;
 		$_SESSION['ipplataforma'] = $ipplataforma;
+		$_SESSION["validate_sesion_laborales"] = "ok";
 
 
 		if ($usua_perfil == "Administrador") {
