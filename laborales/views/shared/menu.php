@@ -60,6 +60,7 @@
                         <p>Cerrar sesión</p>
                     </a>
                 </li>
+                
                 <li class="nav-item <?php echo $response == "executory" 
                                                     ? "menu-open" : "" ?>">
                     <a href="#" class="nav-link <?php echo $response == "executory" 
@@ -81,14 +82,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="<?php echo SERVERURL ?>?route=admin" 
-                        class="nav-link <?php echo $response == "admin" 
-                                                    ? "active" : "" ?>">
-                        <i class="fas fa-database nav-icon"></i>
-                        <p>Justicia XXI</p>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="<?php echo SERVERURL ?>?route=entry-guardianships" 
                         class="nav-link <?php echo $response == "entry-guardianships" 

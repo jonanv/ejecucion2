@@ -45,20 +45,6 @@
                 <!-- ./col -->
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
-                            <p>Justicia XXI</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <a href="<?php echo SERVERURL ?>?route=admin" class="small-box-footer">Ir <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
                             <h3>44</h3>
