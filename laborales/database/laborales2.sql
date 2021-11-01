@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 01-11-2021 a las 03:18:33
+-- Tiempo de generación: 01-11-2021 a las 05:07:29
 -- Versión del servidor: 5.7.34
 -- Versión de PHP: 7.4.21
 
@@ -59,7 +59,7 @@ CREATE TABLE `correspondence` (
 --
 
 CREATE TABLE `defendant` (
-  `id_defendant` int(11) NOT NULL,
+  `id_defendant` bigint(11) NOT NULL,
   `defendant_identification` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `defendant_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -96,7 +96,7 @@ CREATE TABLE `dossier` (
   `digital_dossier` tinyint(1) NOT NULL,
   `pages_dossier` int(11) NOT NULL,
   `notebooks_dossier` int(11) NOT NULL,
-  `id_location_dossier` int(11) NOT NULL,
+  `id_location_dossier` int(11) DEFAULT NULL,
   `id_defendant` bigint(20) NOT NULL,
   `id_plaintiff` bigint(20) NOT NULL,
   `id_dossier_registration` int(11) NOT NULL,
@@ -170,6 +170,7 @@ CREATE TABLE `dossier_term` (
   `dossier_term_registration_date` datetime NOT NULL,
   `dossier_term_observation` text COLLATE utf8_spanish_ci NOT NULL,
   `dossier_term_revised` tinyint(1) NOT NULL,
+  `id_dossier` bigint(20) NOT NULL,
   `id_term_type` int(11) NOT NULL,
   `id_employee` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -364,7 +365,11 @@ ALTER TABLE `blocked_type`
 -- Indices de la tabla `correspondence`
 --
 ALTER TABLE `correspondence`
-  ADD PRIMARY KEY (`id_correspondence`);
+  ADD PRIMARY KEY (`id_correspondence`),
+  ADD KEY `id_document_type` (`id_document_type`),
+  ADD KEY `id_request_type` (`id_request_type`),
+  ADD KEY `id_dossier` (`id_dossier`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `defendant`
@@ -382,43 +387,61 @@ ALTER TABLE `document_type`
 -- Indices de la tabla `dossier`
 --
 ALTER TABLE `dossier`
-  ADD PRIMARY KEY (`id_dossier`);
+  ADD PRIMARY KEY (`id_dossier`),
+  ADD KEY `id_location_dossier` (`id_location_dossier`),
+  ADD KEY `id_defendant` (`id_defendant`),
+  ADD KEY `id_plaintiff` (`id_plaintiff`),
+  ADD KEY `id_dossier_registration` (`id_dossier_registration`),
+  ADD KEY `id_dossier_archived` (`id_dossier_archived`),
+  ADD KEY `id_dossier_blocked` (`id_dossier_blocked`),
+  ADD KEY `id_dossier_type` (`id_dossier_type`);
 
 --
 -- Indices de la tabla `dossier_annotation`
 --
 ALTER TABLE `dossier_annotation`
-  ADD PRIMARY KEY (`id_dossier_annotation`) USING BTREE;
+  ADD PRIMARY KEY (`id_dossier_annotation`) USING BTREE,
+  ADD KEY `id_dossier` (`id_dossier`);
 
 --
 -- Indices de la tabla `dossier_archived`
 --
 ALTER TABLE `dossier_archived`
-  ADD PRIMARY KEY (`id_dossier_archived`);
+  ADD PRIMARY KEY (`id_dossier_archived`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `dossier_blocked`
 --
 ALTER TABLE `dossier_blocked`
-  ADD PRIMARY KEY (`id_dossier_bloqued`);
+  ADD PRIMARY KEY (`id_dossier_bloqued`),
+  ADD KEY `id_blocked_type` (`id_blocked_type`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `dossier_registration`
 --
 ALTER TABLE `dossier_registration`
-  ADD PRIMARY KEY (`id_dossier_registration`);
+  ADD PRIMARY KEY (`id_dossier_registration`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `dossier_term`
 --
 ALTER TABLE `dossier_term`
-  ADD PRIMARY KEY (`id_dossier_term`);
+  ADD PRIMARY KEY (`id_dossier_term`),
+  ADD KEY `id_term_type` (`id_term_type`),
+  ADD KEY `id_dossier` (`id_dossier`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `dossier_title`
 --
 ALTER TABLE `dossier_title`
-  ADD PRIMARY KEY (`id_dossier_title`);
+  ADD PRIMARY KEY (`id_dossier_title`),
+  ADD KEY `id_title_type` (`id_title_type`),
+  ADD KEY `id_dossier` (`id_dossier`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `dossier_type`
@@ -430,7 +453,9 @@ ALTER TABLE `dossier_type`
 -- Indices de la tabla `employee`
 --
 ALTER TABLE `employee`
-  ADD PRIMARY KEY (`id_employee`);
+  ADD PRIMARY KEY (`id_employee`),
+  ADD KEY `id_job_title` (`id_job_title`),
+  ADD KEY `id_profile` (`id_profile`);
 
 --
 -- Indices de la tabla `job_title`
@@ -442,7 +467,8 @@ ALTER TABLE `job_title`
 -- Indices de la tabla `location_dossier`
 --
 ALTER TABLE `location_dossier`
-  ADD PRIMARY KEY (`id_location_dossier`);
+  ADD PRIMARY KEY (`id_location_dossier`),
+  ADD KEY `id_location_type` (`id_location_type`);
 
 --
 -- Indices de la tabla `location_type`
@@ -454,7 +480,9 @@ ALTER TABLE `location_type`
 -- Indices de la tabla `log`
 --
 ALTER TABLE `log`
-  ADD PRIMARY KEY (`id_log`);
+  ADD PRIMARY KEY (`id_log`),
+  ADD KEY `id_log_type` (`id_log_type`),
+  ADD KEY `id_employee` (`id_employee`);
 
 --
 -- Indices de la tabla `log_type`
@@ -512,7 +540,7 @@ ALTER TABLE `correspondence`
 -- AUTO_INCREMENT de la tabla `defendant`
 --
 ALTER TABLE `defendant`
-  MODIFY `id_defendant` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_defendant` bigint(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `document_type`
@@ -627,6 +655,92 @@ ALTER TABLE `term_type`
 --
 ALTER TABLE `title_type`
   MODIFY `id_title_type` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `correspondence`
+--
+ALTER TABLE `correspondence`
+  ADD CONSTRAINT `correspondence_ibfk_1` FOREIGN KEY (`id_document_type`) REFERENCES `document_type` (`id_document_type`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `correspondence_ibfk_2` FOREIGN KEY (`id_request_type`) REFERENCES `request_type` (`id_request_type`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `correspondence_ibfk_3` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `correspondence_ibfk_4` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier`
+--
+ALTER TABLE `dossier`
+  ADD CONSTRAINT `dossier_ibfk_1` FOREIGN KEY (`id_location_dossier`) REFERENCES `location_dossier` (`id_location_dossier`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_ibfk_2` FOREIGN KEY (`id_defendant`) REFERENCES `defendant` (`id_defendant`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_ibfk_3` FOREIGN KEY (`id_plaintiff`) REFERENCES `plaintiff` (`id_plaintiff`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_ibfk_4` FOREIGN KEY (`id_dossier_registration`) REFERENCES `dossier_registration` (`id_dossier_registration`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_ibfk_5` FOREIGN KEY (`id_dossier_archived`) REFERENCES `dossier_archived` (`id_dossier_archived`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_ibfk_6` FOREIGN KEY (`id_dossier_blocked`) REFERENCES `dossier_blocked` (`id_dossier_bloqued`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_ibfk_7` FOREIGN KEY (`id_dossier_type`) REFERENCES `dossier_type` (`id_dossier_type`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier_annotation`
+--
+ALTER TABLE `dossier_annotation`
+  ADD CONSTRAINT `dossier_annotation_ibfk_1` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier_archived`
+--
+ALTER TABLE `dossier_archived`
+  ADD CONSTRAINT `dossier_archived_ibfk_1` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier_blocked`
+--
+ALTER TABLE `dossier_blocked`
+  ADD CONSTRAINT `dossier_blocked_ibfk_1` FOREIGN KEY (`id_blocked_type`) REFERENCES `blocked_type` (`id_blocked_type`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_blocked_ibfk_2` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier_registration`
+--
+ALTER TABLE `dossier_registration`
+  ADD CONSTRAINT `dossier_registration_ibfk_1` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier_term`
+--
+ALTER TABLE `dossier_term`
+  ADD CONSTRAINT `dossier_term_ibfk_1` FOREIGN KEY (`id_term_type`) REFERENCES `term_type` (`id_term_type`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_term_ibfk_2` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_term_ibfk_3` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dossier_title`
+--
+ALTER TABLE `dossier_title`
+  ADD CONSTRAINT `dossier_title_ibfk_1` FOREIGN KEY (`id_title_type`) REFERENCES `title_type` (`id_title_type`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_title_ibfk_2` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossier_title_ibfk_3` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `employee`
+--
+ALTER TABLE `employee`
+  ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`id_job_title`) REFERENCES `job_title` (`id_job_title`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `employee_ibfk_2` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id_profile`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `location_dossier`
+--
+ALTER TABLE `location_dossier`
+  ADD CONSTRAINT `location_dossier_ibfk_1` FOREIGN KEY (`id_location_type`) REFERENCES `location_type` (`id_location_type`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `log`
+--
+ALTER TABLE `log`
+  ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`id_log_type`) REFERENCES `log_type` (`id_log_type`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `log_ibfk_2` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
