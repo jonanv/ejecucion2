@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-01T05:32:58.899Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="ySoEQT5vkxFfi1ulYa5o" version="15.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-01T05:34:36.061Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="Sge_2P-TKZcWJQ5NKoT9" version="15.0.2" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="2486" dy="1523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -813,6 +813,15 @@
             <mxPoint x="-390" y="880" as="sourcePoint" />
             <mxPoint x="-290" y="780" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="mpsy4wO5Bwl3DI2ihhuN-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="mpsy4wO5Bwl3DI2ihhuN-34" source="mpsy4wO5Bwl3DI2ihhuN-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-530" y="270" as="targetPoint" />
+            <mxPoint x="-815" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mpsy4wO5Bwl3DI2ihhuN-34" value="- Abogado&lt;br&gt;- Empresa" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" vertex="1" parent="1">
+          <mxGeometry x="-785" y="220" width="120" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
