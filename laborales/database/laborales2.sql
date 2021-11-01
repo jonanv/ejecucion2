@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 01-11-2021 a las 05:07:29
+-- Tiempo de generación: 01-11-2021 a las 05:25:32
 -- Versión del servidor: 5.7.34
 -- Versión de PHP: 7.4.21
 
@@ -347,7 +347,7 @@ CREATE TABLE `term_type` (
 
 CREATE TABLE `title_type` (
   `id_title_type` int(11) NOT NULL,
-  `title_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `title_type_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `title_type_description` text COLLATE utf8_spanish_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
