@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 01-11-2021 a las 00:52:47
+-- Tiempo de generación: 01-11-2021 a las 03:18:33
 -- Versión del servidor: 5.7.34
 -- Versión de PHP: 7.4.21
 
@@ -48,7 +48,8 @@ CREATE TABLE `correspondence` (
   `pages_correspondence` int(11) NOT NULL,
   `id_document_type` int(11) NOT NULL,
   `id_request_type` int(11) NOT NULL,
-  `id_dossier` bigint(20) NOT NULL
+  `id_dossier` bigint(20) NOT NULL,
+  `id_employee` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
