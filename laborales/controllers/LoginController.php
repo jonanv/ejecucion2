@@ -11,6 +11,7 @@
                 ) {
                     $id_employee_login = str_replace('.', '', $id_employee_login);
                     // $encriptar = LoginModel::encryption($password_login);
+                    // TODO: Solucionar el en md5 con el encriptar
                     $encriptar = md5($password_login);
 
                     $data = array(
@@ -21,34 +22,32 @@
                     $response = LoginModel::getLoginModel($data);
 
                     if (
-                        $response["nombre_usuario"] == $id_employee_login &&
-                        $response["contrasena"] == $encriptar
+                        $response["id_employee"] == str_replace('.', '', $_POST["id_employee_login"]) &&
+                        $response["password"] == $encriptar
                     ) {
                         $_SESSION["validate_sesion_laborales"] = "ok";
-                        $_SESSION['id'] = $response['usua_perfil'];
-                        $_SESSION['nombre'] = $response['usua_empleado'];
-                        $_SESSION['idUsuario'] = $response['usua_id'];
-                        $_SESSION['nomusu'] = $response['usua_nom'];
-                        $_SESSION['foto'] = $response['foto'];
-                        $_SESSION['tipo_perfil'] = $response['tipo_perfil'];
-                        $_SESSION['pantalla'] = $response['pantalla'];
-                        $_SESSION['ingreso'] = $response['estado'];
-                        $_SESSION['id_juzgado'] = $response['id_juzgado'];
-                        $_SESSION['tipousuario'] = $response['tipousuario'];
-                        $_SESSION['ipplataforma'] = $response['ipplataforma'];
+                        $_SESSION["id_employee"] = $response["id_employee"];
+                        $_SESSION["firstname"] = $response["firstname"];
+                        $_SESSION["lastname"] = $response["lastname"];
+                        $_SESSION["email"] = $response["email"];
+                        $_SESSION["id_job_title"] = $response["id_job_title"];
+                        $_SESSION["id_profile"] = $response["id_profile"];
+                        $_SESSION["enable_employee"] = $response["enable_employee"];
+                        $_SESSION["employee_image"] = $response["employee_image"];
 
+                        echo isset($_POST["remember"]);
                         if (isset($_POST["remember"])) {
-                            setcookie("nombre_usuario", str_replace('.', '', $_POST["id_employee_login"]), time() + (60 * 60 * 24 * 30));
-                            setcookie("contrasena", $_POST["password_login"], time() + (60 * 60 * 24 * 30));
+                            echo "Entro aca";
+                            setcookie("id_employee_login", str_replace('.', '', $_POST["id_employee_login"]), time() + (60 * 60 * 24 * 30));
+                            setcookie("password_login", $_POST["password_login"], time() + (60 * 60 * 24 * 30));
                         } else {
-                            setcookie("nombre_usuario", null);
-                            setcookie("contrasena", null);
+                            setcookie("id_employee_login", null);
+                            setcookie("password_login", null);
                         }
 
                         echo '<script>
                                     window.location = "' . SERVERURL . '?route=admin";
                                 </script>';
-                        // return $response;
                     } else {
                         echo '<script>
                                     Swal.fire({

@@ -47,7 +47,7 @@
                                 placeholder="Cédula" 
                                 required
                                 min="0"
-                                value="<?php if (isset($_COOKIE['nombre_usuario'])) { echo $_COOKIE['nombre_usuario']; } ?>"
+                                value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['id_employee_login']; } ?>"
                                 v-bind:class="status($v.form.id_employee_login)"
                                 v-bind:value="form.id_employee_login"
                                 v-model.trim="$v.form.id_employee_login.$model"
@@ -84,7 +84,7 @@
                                 name="password_login"
                                 id="password_login"
                                 required
-                                value="<?php if (isset($_COOKIE['nombre_usuario'])) { echo $_COOKIE['contrasena']; } ?>"
+                                value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['password_login']; } ?>"
                                 v-bind:class="status($v.form.password_login)"
                                 v-bind:value="form.password_login"
                                 v-model.trim="$v.form.password_login.$model"
@@ -108,7 +108,7 @@
                                 <input type="checkbox" 
                                     id="remember"
                                     name="remember"
-                                    <?php if (isset($_COOKIE['nombre_usuario'])) { ?>
+                                    <?php if (isset($_COOKIE['id_employee_login'])) { ?>
                                         checked
                                     <?php } ?>>
                                 <label for="remember">

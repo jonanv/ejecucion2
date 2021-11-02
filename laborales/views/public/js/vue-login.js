@@ -4,7 +4,8 @@ const app = new Vue({
     data: {
         form: {
             id_employee_login: '',
-            password_login: ''
+            password_login: '',
+            remember: ''
         },
         submitStatus: null
     },
