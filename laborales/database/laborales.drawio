@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-02T14:54:54.755Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="wPwPixhxP5UPk0_mXI4u" version="15.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-02T15:09:24.617Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="HTWIesiW8JdNVwId67a1" version="15.6.2" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="2802" dy="1682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="2802" dy="1625" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,10 +25,10 @@
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-13" value="+ id_job_title: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
           <mxGeometry y="156" width="190" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="99nmjj4Q9bfn7_SC2MuP-16" value="+ id_profile: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
+        <mxCell id="TnUPyRHLWNfPNA_BWNht-5" value="+ id_profession: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="99nmjj4Q9bfn7_SC2MuP-7">
           <mxGeometry y="182" width="190" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="TnUPyRHLWNfPNA_BWNht-5" value="+ id_profession: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="99nmjj4Q9bfn7_SC2MuP-7">
+        <mxCell id="99nmjj4Q9bfn7_SC2MuP-16" value="+ id_profile: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
           <mxGeometry y="208" width="190" height="26" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-14" value="+ enable_employee: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
@@ -56,7 +56,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-29" value="profile" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-770" y="1156" width="180" height="104" as="geometry" />
+          <mxGeometry x="-770" y="1280" width="180" height="104" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-30" value="+ id_profile: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-29" vertex="1">
           <mxGeometry y="26" width="180" height="26" as="geometry" />
@@ -642,7 +642,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-141" value="- Superadministrador&lt;br&gt;- Administrador&lt;br&gt;- Archivador&lt;br&gt;- Correspondencia" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="-970" y="1170" width="140" height="76" as="geometry" />
+          <mxGeometry x="-970" y="1294" width="140" height="76" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-142" value="OFICIOS&lt;br&gt;&lt;br&gt;&lt;div&gt;Oficio a Juzgados y Otros&lt;/div&gt;&lt;div&gt;Oficio Acumulacion de Embargo&lt;/div&gt;&lt;div&gt;Oficio Cambio de Cuenta pagador&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Bancos&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Bancos y Vigencia Otro Juzgado&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Camara Comercio&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Camara Comercio y Vigencia Otro Juzgado&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Pagador&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Pagador y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Registro&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Registro y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Transito&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Transito y Prenda&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Transito y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Embargo de Remanentes&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Embargo de Remanentes y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Hipoteca Notario&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Hipoteca y Patrimonio o Afectacion a Vivienda Notaria&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Camara de Comercio&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Bancos&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Contrato&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo de Acciones&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Pagador&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Registro&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Transito&lt;/div&gt;&lt;div&gt;Oficio deja a Disposicion Remanentes&lt;/div&gt;&lt;div&gt;Oficio Designacion Amparo de Pobreza&lt;/div&gt;&lt;div&gt;Oficio Designacion Curador&lt;/div&gt;&lt;div&gt;Oficio Designacion Perito&lt;/div&gt;&lt;div&gt;Oficio Designacion Secuestre&lt;/div&gt;&lt;div&gt;Oficio Embargo del Credito&lt;/div&gt;&lt;div&gt;Oficio Embargo Remanentes&lt;/div&gt;&lt;div&gt;Oficio General&lt;/div&gt;&lt;div&gt;Oficio Reitera Cambio Cuenta Pagador&lt;/div&gt;&lt;div&gt;Oficio Remanentes no Surte Efecto&lt;/div&gt;&lt;div&gt;Oficio Remanentes Surte Efecto&lt;/div&gt;&lt;div&gt;Oficio Requiere Designe Apoderado&lt;/div&gt;&lt;div&gt;Oficio Requiere Pagador&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Entrega&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Notificacion Personal&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Preste Poliza&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Rinda Informes&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCC99;" parent="1" vertex="1">
           <mxGeometry x="1415" y="-336" width="305" height="690" as="geometry" />
@@ -827,7 +827,7 @@
           <mxGeometry x="-785" y="220" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="TnUPyRHLWNfPNA_BWNht-1" value="profession" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-770" y="1286" width="180" height="104" as="geometry" />
+          <mxGeometry x="-770" y="1156" width="180" height="104" as="geometry" />
         </mxCell>
         <mxCell id="TnUPyRHLWNfPNA_BWNht-2" value="+ id_profession: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="TnUPyRHLWNfPNA_BWNht-1">
           <mxGeometry y="26" width="180" height="26" as="geometry" />
@@ -851,7 +851,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TnUPyRHLWNfPNA_BWNht-8" value="- Abogado&lt;br&gt;- Ingeniero en Sistemas&lt;br&gt;- Ingeniero Industrial&lt;br&gt;- Contador" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" vertex="1" parent="1">
-          <mxGeometry x="-970" y="1300" width="140" height="76" as="geometry" />
+          <mxGeometry x="-970" y="1170" width="140" height="76" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
