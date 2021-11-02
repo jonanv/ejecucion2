@@ -25,8 +25,7 @@
                     autocomplete="off"
                     novalidate
                     method="post"
-                    >
-                    <!-- v-on:submit.prevent -->
+                    v-on:submit.prevent>
 
                     <div class="form-group">
                         <div class="input-group">
@@ -47,7 +46,6 @@
                                 placeholder="Cédula" 
                                 required
                                 min="0"
-                                value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['id_employee_login']; } ?>"
                                 v-bind:class="status($v.form.id_employee_login)"
                                 v-bind:value="form.id_employee_login"
                                 v-model.trim="$v.form.id_employee_login.$model"
@@ -84,7 +82,6 @@
                                 name="password_login"
                                 id="password_login"
                                 required
-                                value="<?php if (isset($_COOKIE['id_employee_login'])) { echo $_COOKIE['password_login']; } ?>"
                                 v-bind:class="status($v.form.password_login)"
                                 v-bind:value="form.password_login"
                                 v-model.trim="$v.form.password_login.$model"
@@ -108,9 +105,9 @@
                                 <input type="checkbox" 
                                     id="remember"
                                     name="remember"
-                                    <?php if (isset($_COOKIE['id_employee_login'])) { ?>
-                                        checked
-                                    <?php } ?>>
+                                    v-bind:value="form.remember"
+                                    v-bind:checked="form.remember"
+                                    v-model.trim="$v.form.remember.$model">
                                 <label for="remember">
                                     Recordarme
                                 </label>
@@ -120,7 +117,7 @@
                         <div class="col-12 mb-1">
                             <button type="submit" 
                                 class="btn btn-primary btn-block"
-                                @click="btnLogin();"
+                                @click="getLogin();"
                                 v-bind:disabled="submitStatus === 'PENDING'">
                                 <span class="spinner-border spinner-border-sm" 
                                     role="status" 
@@ -160,7 +157,7 @@
                 window.location = '" . SERVERURL . "?route=admin';
             </script>";
     }
-    if (isset($_POST["id_employee_login"]) && isset($_POST["password_login"])) {
-        LoginController::getLoginController();
-    }
+    // if (isset($_POST["id_employee_login"]) && isset($_POST["password_login"])) {
+    //     LoginController::getLoginController();
+    // }
 ?>

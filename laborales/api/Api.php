@@ -105,6 +105,7 @@
     // Login
     $id_employee_login = (isset($_POST['id_employee_login'])) ? $_POST['id_employee_login'] : '';
     $password_login = (isset($_POST['password_login'])) ? $_POST['password_login'] : '';
+    $remember = (isset($_POST['remember'])) ? $_POST['remember'] : '';
     
     // Executory
     $radicados_executory_list = (isset($_POST['radicados_executory_list'])) ? $_POST['radicados_executory_list'] : '';
@@ -136,13 +137,14 @@
 
         // Login
         // TODO: Recordar que login funciona de la forma antigua
-        // case 'getLogin':
-        //     $data = array(
-        //         "id_employee_login" => $id_employee_login,
-        //         "password_login" => $password_login,
-        //     );
-        //     $obj->getLogin($data);
-        //     break;
+        case 'getLogin':
+            $data = array(
+                "id_employee_login" => $id_employee_login,
+                "password_login" => $password_login,
+                "remember" => $remember,
+            );
+            $obj->getLogin($data);
+            break;
         
         // Executory
         case 'getProcess': //

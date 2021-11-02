@@ -18,6 +18,9 @@ const app = new Vue({
             password_login: {
                 required,
                 minLength: minLength(5)
+            },
+            remember: {
+
             }
         }
     },
@@ -25,10 +28,19 @@ const app = new Vue({
         
     },
     created() {
-        
+        let cookies_list = [];
+        let cookies = document.cookie.split('; ');
+        cookies.forEach(cookie => {
+            let temp = cookie.split('=');
+            cookies_list[temp[0]] = temp[1];
+        });
+        // console.log(cookies_list);
+        this.form.id_employee_login = cookies_list.id_employee_login;
+        this.form.password_login = cookies_list.password_login;
+        this.form.remember = cookies_list.id_employee_login ? true : false;
     },
     computed: {
-
+        
     },
     methods: {
         // VALIDACIÓN
@@ -43,29 +55,39 @@ const app = new Vue({
             validation.$touch();
         },
         // BOTONES
-        btnLogin: function() {
-            app.form.id_employee_login = document.getElementById('id_employee_login').value;
-            app.form.password_login = document.getElementById('password_login').value;
-            
-            app.login(app.form.id_employee_login, app.form.password_login);
-        },
         // PROCEDIMIENTOS
-        login: function(id_employee_login, password_login) {
-            console.log(id_employee_login);
-            console.log(password_login);
+        getLogin: function() {
+            // console.log(app.form.id_employee_login);
+            // console.log(app.form.password_login);
+            // console.log(app.form.remember);
 
             this.$v.$touch();
-            // if (this.$v.$invalid) {
-            //     this.submitStatus = 'ERROR';
-            // } else {
-            //     this.submitStatus = 'PENDING';
+            if (this.$v.$invalid) {
+                this.submitStatus = 'ERROR';
+            } else {
+                this.submitStatus = 'PENDING';
 
-            //     axios.post(url, {option: 'getLogin', id_employee_login:id_employee_login, password_login:password_login})
-            //         .then((response) => {
-            //             console.log(response);
-            //             this.submitStatus = 'OK';
-            //         });
-            // }
+                axios.post(url, {option: 'getLogin', id_employee_login:app.form.id_employee_login, password_login:app.form.password_login, remember:app.form.remember})
+                    .then((response) => {
+                        console.log(response);
+                        app.setCookie('id_employee_login', app.form.id_employee_login);
+                        app.setCookie('password_login', app.form.password_login);
+
+                        app.deleteCookie('id_employee_login');
+                        app.deleteCookie('password_login');
+                        
+                        this.submitStatus = 'OK';
+                    });
+            }
+        },
+        setCookie(cookie_name, cookie_value) {
+            const date = new Date();
+            date.setTime(date.getTime() + (60 * 60 * 24 * 30));
+            let expires = "Expires="+ date.toUTCString();
+            document.cookie = cookie_name + "=" + cookie_value + ";" + expires;
+        },
+        deleteCookie(cookie_name) {
+            document.cookie = cookie_name +'=;expires=Thu, 01 Jan 1970';
         }
         // CONFIGURACIONES
     },

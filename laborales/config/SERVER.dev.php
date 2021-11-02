@@ -17,7 +17,7 @@
 
         // WINDOWS MySQL
         $_ENV["host"] = 'localhost';
-        $_ENV["db"] = 'laborales';
+        $_ENV["db"] = 'laborales2';
         $_ENV["user"] = 'root';
         $_ENV["pass"] = 'Ejecuc10n2014';
         $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
@@ -43,7 +43,7 @@
 
         // SERVIDOR - ramajudicial
         $_ENV["host"] = 'localhost';
-        $_ENV["db"] = 'laborales';
+        $_ENV["db"] = 'laborales2';
         $_ENV["user"] = 'laborales2021';
         $_ENV["pass"] = 'Ejecuc10n2014';
         $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
