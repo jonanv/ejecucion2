@@ -358,17 +358,17 @@ CREATE TABLE `employee` (
   `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `id_job_title` int(11) NOT NULL,
-  `id_profile` int(11) NOT NULL,
   `id_profession` int(11) NOT NULL,
+  `id_profile` int(11) NOT NULL,
   `enable_employee` tinyint(1) NOT NULL,
   `employee_image` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_employee`),
   KEY `id_job_title` (`id_job_title`),
   KEY `id_profile` (`id_profile`),
   KEY `id_profession` (`id_profession`),
-  CONSTRAINT `employee_ibfk_3` FOREIGN KEY (`id_profession`) REFERENCES `profession` (`id_profession`) ON UPDATE CASCADE,
   CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`id_job_title`) REFERENCES `job_title` (`id_job_title`) ON UPDATE CASCADE,
-  CONSTRAINT `employee_ibfk_2` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id_profile`) ON UPDATE CASCADE
+  CONSTRAINT `employee_ibfk_2` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id_profile`) ON UPDATE CASCADE,
+  CONSTRAINT `employee_ibfk_3` FOREIGN KEY (`id_profession`) REFERENCES `profession` (`id_profession`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -376,6 +376,8 @@ CREATE TABLE `employee` (
 --
 
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+INSERT INTO `employee` (`id_employee`,`firstname`,`lastname`,`password`,`email`,`id_job_title`,`id_profession`,`id_profile`,`enable_employee`,`employee_image`) VALUES 
+ (1053816080,'Johanny','Vargas González','admin','jvargasgo@cendoj.ramajudicial.gov.co',4,2,1,1,'avatar0.png');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 
 
@@ -561,7 +563,7 @@ CREATE TABLE `profile` (
 /*!40000 ALTER TABLE `profile` DISABLE KEYS */;
 INSERT INTO `profile` (`id_profile`,`profile_name`,`profile_description`) VALUES 
  (1,'Superadministrador',NULL),
- (2,'Adinistrador',NULL),
+ (2,'Administrador',NULL),
  (3,'Archivador',NULL),
  (4,'Correspondencia',NULL);
 /*!40000 ALTER TABLE `profile` ENABLE KEYS */;
