@@ -1,5 +1,6 @@
 <?php
     // Config
+    require_once "../config/APP.php";
     require_once "../config/SERVER.php";
 
     // Models
@@ -62,7 +63,9 @@
         // Login
         public function getLogin($data) {
             $response = LoginController::getLoginController($data);
-            echo json_encode($response);
+            $url = SERVERURL . "?route=admin";
+            $response_login = array($url, $response);
+            echo json_encode($response_login);
         }
 
         // Executory
@@ -136,7 +139,6 @@
             break;
 
         // Login
-        // TODO: Recordar que login funciona de la forma antigua
         case 'getLogin':
             $data = array(
                 "id_employee_login" => $id_employee_login,

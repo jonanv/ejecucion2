@@ -66,16 +66,56 @@ const app = new Vue({
                 this.submitStatus = 'ERROR';
             } else {
                 this.submitStatus = 'PENDING';
-
                 axios.post(url, {option: 'getLogin', id_employee_login:app.form.id_employee_login, password_login:app.form.password_login, remember:app.form.remember})
                     .then((response) => {
-                        console.log(response);
-                        app.setCookie('id_employee_login', app.form.id_employee_login);
-                        app.setCookie('password_login', app.form.password_login);
+                        // console.log(response);
 
-                        app.deleteCookie('id_employee_login');
-                        app.deleteCookie('password_login');
-                        
+                        if (response.data[1].enable_employee == 1) {
+                            if (app.form.remember) {
+                                app.setCookie('id_employee_login', app.form.id_employee_login);
+                                app.setCookie('password_login', app.form.password_login);
+                            } else {
+                                app.deleteCookie('id_employee_login');
+                                app.deleteCookie('password_login');
+                            }
+                            window.location = response.data[0];
+                        } else {
+                            switch (response.data[1]) {
+                                case 'usuario inactivo':
+                                    Swal.fire({
+                                        title: "¡ERROR AL INGRESAR!",
+                                        text: "¡Su usuario se encuentra inactivo!",
+                                        icon: "error",
+                                        confirmButtonText: "Cerrar",
+                                        confirmButtonColor: "#3085d6",
+                                        allowOutsideClick: false,
+                                        showCloseButton: false
+                                    });
+                                    break;
+                                case 'no coinciden credenciales':
+                                    Swal.fire({
+                                        title: "¡ERROR AL INGRESAR!",
+                                        text: "¡Por favor revise que el usuario o la contraseña coincida con la registrada!",
+                                        icon: "error",
+                                        confirmButtonText: "Cerrar",
+                                        confirmButtonColor: "#3085d6",
+                                        allowOutsideClick: false,
+                                        showCloseButton: false
+                                    });
+                                    break;
+                                case 'caracteres especiales':
+                                    Swal.fire({
+                                        title: "¡ERROR!",
+                                        text: "¡Error al ingresar al sistema, no se permiten caracteres especiales!",
+                                        icon: "error",
+                                        confirmButtonText: "Cerrar",
+                                        confirmButtonColor: "#3085d6",
+                                        allowOutsideClick: false,
+                                        showCloseButton: false
+                                    });
+                                    break;
+                            }
+                        }
                         this.submitStatus = 'OK';
                     });
             }

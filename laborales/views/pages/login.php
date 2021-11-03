@@ -151,13 +151,9 @@
 </div>
 
 <?php
-    // TODO: Implementar login por la forma vue que va al API
     if (isset($_SESSION["validate_sesion_laborales"]) && $_SESSION["validate_sesion_laborales"] == "ok") {
         echo "<script>
                 window.location = '" . SERVERURL . "?route=admin';
             </script>";
     }
-    // if (isset($_POST["id_employee_login"]) && isset($_POST["password_login"])) {
-    //     LoginController::getLoginController();
-    // }
 ?>
