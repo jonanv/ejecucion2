@@ -59,7 +59,6 @@
                                                 </i>
                                             </div>
                                         </div>
-                                        <!-- TODO: Validar que las fechas sean correctas, la final no puede ser menor que la inicial -->
                                         <input type="text"
                                             class="input-vuelidate datetimepicker-input" 
                                             id="start_date" 
@@ -72,7 +71,7 @@
                                             v-bind:class="status($v.form.start_date)"
                                             v-bind:value="form.start_date"
                                             v-model.trim="$v.form.start_date.$model"
-                                            @focusout="touchedVuelidate($v.form.start_date);">
+                                            @focusout="touchedVuelidate($v.form.start_date); validateDates($v.form.end_date);">
                                     </div>
                                     <div class="mt-0" v-if="!$v.form.start_date.required && $v.form.start_date.$error && $v.form.start_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
@@ -115,7 +114,7 @@
                                             v-bind:class="status($v.form.end_date)"
                                             v-bind:value="form.end_date"
                                             v-model.trim="$v.form.end_date.$model"
-                                            @focusout="touchedVuelidate($v.form.end_date);">
+                                            @focusout="touchedVuelidate($v.form.end_date); validateDates($v.form.end_date);">
                                     </div>
                                     <div class="mt-0" v-if="!$v.form.end_date.required && $v.form.end_date.$error && $v.form.end_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">

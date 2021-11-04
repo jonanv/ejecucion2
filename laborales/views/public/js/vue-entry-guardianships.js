@@ -88,8 +88,12 @@ const app = new Vue({
                             });
                     }
                     else {
-                        // NO EXISTEN DATOS EN JUSTICIA XXI, NO ES POSIBLE MIGRAR TUTELA
-                        // TODO: aplicar sweetAlert
+                        Swal.fire({
+                            title: 'No existen datos en justicia xxi, no es posible migrar tutela',
+                            icon: 'error',
+                            confirmButtonColor: '#3085d6',
+                            allowOutsideClick: false
+                        });
                     }
                 });
         },
@@ -147,6 +151,27 @@ const app = new Vue({
                             init.initDataTables();
                         });
                     });
+            }
+        },
+        validateDates: function(validation) {
+            if (app.form.start_date > app.form.end_date) {
+                app.form.end_date = '';
+                validation.$touch();
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                });
+                Toast.fire({
+                    title: 'La fecha final no puede ser inferior a la inicial!',
+                    icon: 'error'
+                });
             }
         },
         // CONFIGURACIONES
