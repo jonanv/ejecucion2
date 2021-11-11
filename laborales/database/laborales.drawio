@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T03:03:15.607Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="-IHhWrZHFs8bSAWkGrSB" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T03:04:13.774Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="pdJNAi4JQxUCFzYnLKGo" version="15.7.0" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="2572" dy="1559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -1205,7 +1205,7 @@
           <mxGeometry y="78" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-31" value="dossier_actuation (expe_historial)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="860" y="1375" width="220" height="442" as="geometry" />
+          <mxGeometry x="860" y="1375" width="220" height="468" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-32" value="+ id_dossier_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="OqHATmE9yE6C7j0-I17L-31" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -1254,6 +1254,9 @@
         </mxCell>
         <mxCell id="rQy6I5jSdBG7i_t-9aFB-19" value="+ order_document: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="OqHATmE9yE6C7j0-I17L-31">
           <mxGeometry y="416" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="rQy6I5jSdBG7i_t-9aFB-21" value="+ other: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="OqHATmE9yE6C7j0-I17L-31">
+          <mxGeometry y="442" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-35" value="notebook_type (expe_cuaderno)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="885" y="1850" width="240" height="156" as="geometry" />
