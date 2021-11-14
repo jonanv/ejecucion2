@@ -49,8 +49,7 @@
                                         data-target-input="nearest">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"
-                                                data-target="#startdate_datepicker" 
-                                                data-toggle="datetimepicker">
+                                                data-target="#startdate_datepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
                                                         'text-danger': $v.form.start_date.$error && $v.form.start_date.$invalid, 
@@ -67,6 +66,7 @@
                                             required
                                             maxlength="10"
                                             data-target="#startdate_datepicker" 
+                                            data-toggle="datetimepicker"
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form.start_date)"
                                             v-bind:value="form.start_date"
@@ -92,8 +92,7 @@
                                         data-target-input="nearest">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"
-                                                data-target="#enddate_datepicker" 
-                                                data-toggle="datetimepicker">
+                                                data-target="#enddate_datepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
                                                         'text-danger': $v.form.end_date.$error && $v.form.end_date.$invalid, 
@@ -110,6 +109,7 @@
                                             required
                                             maxlength="10"
                                             data-target="#enddate_datepicker" 
+                                            data-toggle="datetimepicker"
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form.end_date)"
                                             v-bind:value="form.end_date"
@@ -267,15 +267,15 @@
                                             <button type="button"
                                                 class="btn btn-primary btn-block" 
                                                 @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
-                                                v-bind:disabled="migrateStatus === 'PENDING'"
+                                                v-bind:disabled="migrateStatus === 'PENDING_' + guardianship.A103LLAVPROC"
                                                 v-if="process_exist_list[index] === false">
                                                 <span class="spinner-border spinner-border-sm" 
                                                     role="status" 
                                                     aria-hidden="true"
-                                                    v-bind:class="{ 'd-none': migrateStatus !== 'PENDING'}">
+                                                    v-bind:class="{ 'd-none': migrateStatus !== 'PENDING_' + guardianship.A103LLAVPROC}">
                                                 </span>
-                                                <span v-if="migrateStatus === 'PENDING'">Migrando...</span>
-                                                <span v-if="migrateStatus !== 'PENDING' ||  migrateStatus === null">
+                                                <span v-if="migrateStatus === 'PENDING_' + guardianship.A103LLAVPROC">Migrando...</span>
+                                                <span v-if="migrateStatus !== 'PENDING_' + guardianship.A103LLAVPROC ||  migrateStatus === null">
                                                     <i class="fas fa-cloud-download-alt"></i>
                                                     Migrar tutela
                                                 </span>

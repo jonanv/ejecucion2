@@ -68,34 +68,41 @@ const app = new Vue({
         },
         btnMigrateGuardianship: function(radicado) {
             // TODO: partcionar radicado y enviar junto con partes
-            // this.migrateStatus = 'PENDING';
+            // this.migrateStatus = 'PENDING' + radicado;
 
             // setTimeout(() => {
             //     console.log('Proceso migrada');
-            //     this.migrateStatus = 'OK';
+            //     this.migrateStatus = 'OK' + radicado;
             // }, 4000);
 
-            console.log(radicado);
-
-            axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
-                .then((response) => {
-                    console.log(response);
-                    if (response.data) {
-                        axios.post(url, {option: 'migrateGuardianship', radicado:radicado, process:response.data})
-                            .then((response) => {
-                                console.log(response);
-                                app.getEntryGuardianships();
+            
+            if (radicado === '') {
+                this.submitStatus = 'ERROR_' + radicado;
+            } else {
+                console.log(radicado);
+                this.migrateStatus = 'PENDING_' + radicado;
+    
+                axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
+                    .then((response) => {
+                        console.log(response);
+                        if (response.data) {
+                            axios.post(url, {option: 'migrateGuardianship', radicado:radicado, process:response.data})
+                                .then((response) => {
+                                    console.log(response);
+                                    this.migrateStatus = 'OK_' + radicado;
+                                    app.getEntryGuardianships();
+                                });
+                        }
+                        else {
+                            Swal.fire({
+                                title: 'No existen datos en justicia xxi, no es posible migrar tutela',
+                                icon: 'error',
+                                confirmButtonColor: '#3085d6',
+                                allowOutsideClick: false
                             });
-                    }
-                    else {
-                        Swal.fire({
-                            title: 'No existen datos en justicia xxi, no es posible migrar tutela',
-                            icon: 'error',
-                            confirmButtonColor: '#3085d6',
-                            allowOutsideClick: false
-                        });
-                    }
-                });
+                        }
+                    });
+            }
         },
         btnCleanForm: function() {
             app.form = {
