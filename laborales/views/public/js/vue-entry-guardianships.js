@@ -154,7 +154,8 @@ const app = new Vue({
             }
         },
         validateDates: function(validation) {
-            if (app.form.start_date > app.form.end_date) {
+            if (app.form.start_date > app.form.end_date &&
+                app.form.end_date != '') {
                 app.form.end_date = '';
                 validation.$touch();
                 const Toast = Swal.mixin({

@@ -109,7 +109,7 @@
                                             placeholder="dd/mm/yyyy"
                                             required
                                             maxlength="10"
-                                            data-target="#startdate_datepicker" 
+                                            data-target="#enddate_datepicker" 
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form.end_date)"
                                             v-bind:value="form.end_date"
