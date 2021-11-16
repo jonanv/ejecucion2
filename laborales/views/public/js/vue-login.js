@@ -13,6 +13,7 @@ const app = new Vue({
         form: {
             id_employee_login: {
                 required,
+                numeric,
                 minLength: minLength(6)
             },
             password_login: {

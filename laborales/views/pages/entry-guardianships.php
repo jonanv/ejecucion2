@@ -159,7 +159,7 @@
 
                             <button type="submit" 
                                 class="btn btn-primary"
-                                @click="btnGetProcessesInJusticia();"
+                                @click="getProcessesInJusticia();"
                                 v-bind:disabled="submitStatus === 'PENDING'">
                                 <i class="spinner-border spinner-border-sm" 
                                     role="status" 
@@ -263,10 +263,9 @@
                                         <td>{{ moment(guardianship.A103FECHREPA, 'YYYY-MM-DD h:mm:ss').format('YYYY-MM-DD') }}</td>
                                         <td>{{ moment(guardianship.A103HORAREPA, 'h:mm:ss').format('LTS') }}</td>
                                         <td>
-                                            <!-- TODO: independizar el loading para los diferentes botones de la tabla -->
                                             <button type="button"
                                                 class="btn btn-primary btn-block" 
-                                                @click="btnMigrateGuardianship(guardianship.A103LLAVPROC);"
+                                                @click="migrateGuardianship(guardianship.A103LLAVPROC);"
                                                 v-bind:disabled="migrateStatus === 'PENDING_' + guardianship.A103LLAVPROC"
                                                 v-if="process_exist_list[index] === false">
                                                 <span class="spinner-border spinner-border-sm" 

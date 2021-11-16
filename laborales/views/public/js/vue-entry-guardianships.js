@@ -59,51 +59,6 @@ const app = new Vue({
             validation.$touch();
         },
         // BOTONES
-        btnGetProcessesInJusticia: function() {
-            // app.form.start_date = document.getElementById('start_date').value;
-            // app.form.end_date = document.getElementById('end_date').value;
-            // app.form.radicado = document.getElementById('radicado').value;
-            
-            app.getProcessesInJusticia(app.form.start_date, app.form.end_date, app.form.radicado);
-        },
-        btnMigrateGuardianship: function(radicado) {
-            // TODO: partcionar radicado y enviar junto con partes
-            // this.migrateStatus = 'PENDING' + radicado;
-
-            // setTimeout(() => {
-            //     console.log('Proceso migrada');
-            //     this.migrateStatus = 'OK' + radicado;
-            // }, 4000);
-
-            
-            if (radicado === '') {
-                this.submitStatus = 'ERROR_' + radicado;
-            } else {
-                console.log(radicado);
-                this.migrateStatus = 'PENDING_' + radicado;
-    
-                axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
-                    .then((response) => {
-                        console.log(response);
-                        if (response.data) {
-                            axios.post(url, {option: 'migrateGuardianship', radicado:radicado, process:response.data})
-                                .then((response) => {
-                                    console.log(response);
-                                    this.migrateStatus = 'OK_' + radicado;
-                                    app.getEntryGuardianships();
-                                });
-                        }
-                        else {
-                            Swal.fire({
-                                title: 'No existen datos en justicia xxi, no es posible migrar tutela',
-                                icon: 'error',
-                                confirmButtonColor: '#3085d6',
-                                allowOutsideClick: false
-                            });
-                        }
-                    });
-            }
-        },
         btnCleanForm: function() {
             app.form = {
                 start_date: '',
@@ -129,13 +84,40 @@ const app = new Vue({
                     });
                 });
         },
-        migrateGuardianship: function() {
-
+        migrateGuardianship: async function(radicado) {
+            // TODO: partcionar radicado y enviar junto con partes
+            if (radicado === '') {
+                this.submitStatus = 'ERROR_' + radicado;
+            } else {
+                console.log(radicado);
+                this.migrateStatus = 'PENDING_' + radicado;
+    
+                await axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
+                    .then((response) => {
+                        console.log(response);
+                        if (response.data) {
+                            axios.post(url, {option: 'migrateGuardianship', radicado:radicado, process:response.data})
+                                .then((response) => {
+                                    console.log(response);
+                                    this.migrateStatus = 'OK_' + radicado;
+                                    app.getEntryGuardianships();
+                                });
+                        }
+                        else {
+                            Swal.fire({
+                                title: 'No existen datos en justicia xxi, no es posible migrar tutela',
+                                icon: 'error',
+                                confirmButtonColor: '#3085d6',
+                                allowOutsideClick: false
+                            });
+                        }
+                    });
+            }
         },
-        getProcessesInJusticia: function(start_date, end_date, radicado) {
-            let start_date_format = moment(start_date, 'DD/MM/YYYY').format('YYYY-MM-DD');
-            let end_date_format = moment(end_date, 'DD/MM/YYYY').format('YYYY-MM-DD');;
-            let radicado_format = radicado.replace(/\-/g, '');
+        getProcessesInJusticia: function() {
+            let start_date_format = moment(app.form.start_date, 'DD/MM/YYYY').format('YYYY-MM-DD');
+            let end_date_format = moment(app.form.end_date, 'DD/MM/YYYY').format('YYYY-MM-DD');;
+            let radicado_format = app.form.radicado.replace(/\-/g, '');
             this.loading = true;
 
             this.$v.$touch();

@@ -69,34 +69,7 @@
             $response = null;
         }
 
-        public static function migrateGuardianshipModel($radicado, $process, $id_usuario, $nombre_usuario) {
-            $zip_code = substr($radicado, 0, 5);
-            $corporation = substr($radicado, 5, 2);
-            $specialty = substr($radicado, 7, 2);
-            $original_court = substr($radicado, 9, 3);
-            $year = substr($radicado, 12, 4);
-            $consecutive = substr($radicado, 16, 5);
-            $instance = substr($radicado, 21, 2);
-
-            date_default_timezone_set('America/Bogota');
-		    $date = date('Y-m-d g:ia');
-            $datehour = explode(" ", $date);
-            $fechalog   = $datehour[0];
-            // TODO: Organizar fecha con DATE_FORMAT(NOW(),'%Y-%m-%d')
-            $horalog    = $datehour[1];
-            
-            $accion  = "Se realiza Migracion de Tutela: " . $radicado;
-            $detalle = $nombre_usuario . " " . $accion . " " . $fechalog . " " . "a las: " . $horalog;
-            $tipolog = 1;
-
-            if ($original_court == '001') {
-                $idjuzgado = 15;
-            }else if ($original_court == '002') {
-                $idjuzgado = 16;
-            }
-            // TODO: Implementar el codigo 003 para laborales (3) y su juzgado
-            // TODO: Oganizar metodo para que quede mas limpio
-
+        public static function migrateGuardianshipModel($radicado, $process, $id_usuario, $accion, $detalle, $tipolog, $idjuzgado) {
             try {
                 $conn = ConnectionModel::connectMySQL();
                 $conn->beginTransaction();

@@ -63,15 +63,8 @@
             }
             return $radicados_executory_list;
 
-            date_default_timezone_set('America/Bogota');
-		    $date = date('Y-m-d g:ia');
-            $datehour = explode(" ", $date);
-            $fechalog   = $datehour[0];
-            // TODO: Organizar fecha con DATE_FORMAT(NOW(),'%Y-%m-%d')
-            $horalog    = $datehour[1];
-            
-            $accion  = "Se Realiza Registro de Ejecutoria En el Sistema (SIEPRO)";
-            $detalle = $nombre_usuario . " " . $accion . " " . $fechalog . " " . "a las: " . $horalog;
+            $accion  = "Se realiza registro de Ejecutoria en el sistema (SIEPRO)";
+            $detalle = $nombre_usuario . " realiza registro de Ejecutoria en el sistema (SIEPRO) " . " " . date('Y-m-d') . " " . "a las: " . date('h:i:sa');
             $tipolog = 1;
             
             try {
