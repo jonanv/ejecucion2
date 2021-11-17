@@ -2,6 +2,84 @@
     "ok",
     [
         {
+            "A103LLAVPROC": "17001400301120210069800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "07:43"
+        },
+        {
+            "A103LLAVPROC": "17873408900220210029401",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "08:11"
+        },
+        {
+            "A103LLAVPROC": "17001311000720210023100",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "08:40"
+        },
+        {
+            "A103LLAVPROC": "17001400301120210069900",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "08:42"
+        },
+        {
+            "A103LLAVPROC": "17001311000220210029600",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:10"
+        },
+        {
+            "A103LLAVPROC": "17001400301020210058500",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:22"
+        },
+        {
+            "A103LLAVPROC": "17001311000420210028100",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:23"
+        },
+        {
+            "A103LLAVPROC": "17001400301220210053602",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:31"
+        },
+        {
+            "A103LLAVPROC": "17001430300120210015800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:35"
+        },
+        {
+            "A103LLAVPROC": "17001311000420210028200",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:53"
+        },
+        {
+            "A103LLAVPROC": "17001400300120190055502",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:56"
+        },
+        {
+            "A103LLAVPROC": "17001410500120210072300",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "09:57"
+        },
+        {
+            "A103LLAVPROC": "17001311000520210028700",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "10:03"
+        },
+        {
             "A103LLAVPROC": "17001310500120210048000",
             "A103ANOTACTS": "Radicación y reparto",
             "A103FECHREPA": "2021-10-11 00:00:00.000",
@@ -14,10 +92,64 @@
             "A103HORAREPA": "10:39"
         },
         {
+            "A103LLAVPROC": "17001410500120210072400",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "10:41"
+        },
+        {
+            "A103LLAVPROC": "17001310500320190080402",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:05"
+        },
+        {
             "A103LLAVPROC": "17001310500320210046400",
             "A103ANOTACTS": "Radicación y reparto",
             "A103FECHREPA": "2021-10-11 00:00:00.000",
             "A103HORAREPA": "11:12"
+        },
+        {
+            "A103LLAVPROC": "17001400300820210068400",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:34"
+        },
+        {
+            "A103LLAVPROC": "17001400300920210062700",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:35"
+        },
+        {
+            "A103LLAVPROC": "17001400301220210059800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:46"
+        },
+        {
+            "A103LLAVPROC": "17001400301120210070000",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:51"
+        },
+        {
+            "A103LLAVPROC": "17001400301120210070100",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:59"
+        },
+        {
+            "A103LLAVPROC": "17873408900220210035301",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "11:59"
+        },
+        {
+            "A103LLAVPROC": "17001400300920210057002",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "12:01"
         },
         {
             "A103LLAVPROC": "17001310500120210048100",
@@ -32,19 +164,275 @@
             "A103HORAREPA": "13:18"
         },
         {
+            "A103LLAVPROC": "17001410500120210072500",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "13:20"
+        },
+        {
+            "A103LLAVPROC": "17001400300820210068500",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "13:35"
+        },
+        {
+            "A103LLAVPROC": "17001400300220210050100",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "13:40"
+        },
+        {
+            "A103LLAVPROC": "17001400300820210068600",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "13:46"
+        },
+        {
+            "A103LLAVPROC": "17001410500120210072600",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "13:51"
+        },
+        {
+            "A103LLAVPROC": "17001310500220190051502",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "13:55"
+        },
+        {
+            "A103LLAVPROC": "17001310500220190058002",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:01"
+        },
+        {
+            "A103LLAVPROC": "17001410500120210072700",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:04"
+        },
+        {
+            "A103LLAVPROC": "17001310500320210043802",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:04"
+        },
+        {
+            "A103LLAVPROC": "17001410500120210072800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:14"
+        },
+        {
+            "A103LLAVPROC": "17001310500320180049902",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:14"
+        },
+        {
+            "A103LLAVPROC": "17873408900220200041902",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:24"
+        },
+        {
+            "A103LLAVPROC": "17001310300620210022800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:34"
+        },
+        {
+            "A103LLAVPROC": "17001221300020210019200",
+            "A103ANOTACTS": "OF. 1664 SE REMITEN ARCHIVOS DIGITALES A LA OFICINA DE APOYO JUDICIAL PARA REPARTO ENTRE JUZGADOS DEL CIRCUITO",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:42"
+        },
+        {
+            "A103LLAVPROC": "17001400300120210077600",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "14:51"
+        },
+        {
+            "A103LLAVPROC": "17001400301120210070200",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:00"
+        },
+        {
+            "A103LLAVPROC": "17001400300720210056500",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:04"
+        },
+        {
+            "A103LLAVPROC": "17001400300720210056600",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:14"
+        },
+        {
+            "A103LLAVPROC": "17541408900120210008401",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:17"
+        },
+        {
+            "A103LLAVPROC": "17001400300520210054300",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:20"
+        },
+        {
+            "A103LLAVPROC": "17001430300220210016000",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:36"
+        },
+        {
+            "A103LLAVPROC": "17614311200120210008801",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:37"
+        },
+        {
+            "A103LLAVPROC": "17001410500120210072900",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:37"
+        },
+        {
+            "A103LLAVPROC": "17001400301220210059900",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "15:51"
+        },
+        {
+            "A103LLAVPROC": "17001310500320190056403",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:06"
+        },
+        {
+            "A103LLAVPROC": "17001310500320190056003",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:08"
+        },
+        {
+            "A103LLAVPROC": "17001400300320210066100",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:11"
+        },
+        {
+            "A103LLAVPROC": "17001400300820210068700",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:12"
+        },
+        {
+            "A103LLAVPROC": "17001311000520210028800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:17"
+        },
+        {
+            "A103LLAVPROC": "17001400300620210063700",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:24"
+        },
+        {
+            "A103LLAVPROC": "17001310300420210022100",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:25"
+        },
+        {
             "A103LLAVPROC": "17001310500320210046500",
             "A103ANOTACTS": "Radicación y reparto",
             "A103FECHREPA": "2021-10-11 00:00:00.000",
             "A103HORAREPA": "16:25"
         },
         {
+            "A103LLAVPROC": "17001410500120210073000",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:28"
+        },
+        {
+            "A103LLAVPROC": "17001430300220210014402",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:28"
+        },
+        {
+            "A103LLAVPROC": "17001400300720210056700",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:32"
+        },
+        {
+            "A103LLAVPROC": "17001310300220210021800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:40"
+        },
+        {
+            "A103LLAVPROC": "17001400301020210058600",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:41"
+        },
+        {
             "A103LLAVPROC": "17001310500120210048200",
             "A103ANOTACTS": "Radicación y reparto",
             "A103FECHREPA": "2021-10-11 00:00:00.000",
             "A103HORAREPA": "16:50"
+        },
+        {
+            "A103LLAVPROC": "17001400300720210056800",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:51"
+        },
+        {
+            "A103LLAVPROC": "17001400301120210070300",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:55"
+        },
+        {
+            "A103LLAVPROC": "17001400300320210066200",
+            "A103ANOTACTS": "Radicación y reparto",
+            "A103FECHREPA": "2021-10-11 00:00:00.000",
+            "A103HORAREPA": "16:58"
         }
     ],
     [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false,
         false,
@@ -233,6 +621,42 @@
             "radiblodes": null
         },
         false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
         {
             "0": "46504",
             "1": "8",
@@ -324,6 +748,9 @@
             "horablodes": null,
             "iduserblodes": null,
             "radiblodes": null
-        }
+        },
+        false,
+        false,
+        false
     ]
 ]

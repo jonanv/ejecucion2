@@ -58,9 +58,6 @@
         }
 
         public static function registerExecutoryModel($radicados_executory_list, $id_usuario, $nombre_usuario) {
-            foreach ($radicados_executory_list as $key => $value) {
-
-            }
             return $radicados_executory_list;
 
             $accion  = "Se realiza registro de Ejecutoria en el sistema (SIEPRO)";
@@ -108,7 +105,9 @@
                         
                         $a_despacho = $datospartes_2[11];
 
-                        if ($date_audience == "SIN TRAMITE" && $hour_audience == "SIN TRAMITE" && $observation_audience == "SIN TRAMITE" ) {
+                        if ($date_audience == "SIN TRAMITE" && 
+                            $hour_audience == "SIN TRAMITE" && 
+                            $observation_audience == "SIN TRAMITE" ) {
     
                             $query = 
                                 "INSERT INTO detalle_correspondencia (idcorrespondencia, fecha, observacion, estadoobs, a_despacho, idusuario) 

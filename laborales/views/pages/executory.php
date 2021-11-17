@@ -487,8 +487,7 @@
                                         data-target-input="nearest">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"
-                                                data-target="#startdate_datepicker" 
-                                                data-toggle="datetimepicker">
+                                                data-target="#startdate_datepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
                                                         'text-danger': $v.form_process.start_date.$error && $v.form_process.start_date.$invalid, 
@@ -506,6 +505,7 @@
                                             disabled
                                             readonly
                                             data-target="#startdate_datepicker" 
+                                            data-toggle="datetimepicker"
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form_process.start_date)"
                                             v-bind:value="form_process.start_date"
@@ -561,8 +561,7 @@
                                         data-target-input="nearest">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"
-                                                data-target="#enddate_datepicker" 
-                                                data-toggle="datetimepicker">
+                                                data-target="#enddate_datepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
                                                         'text-danger': $v.form_process.end_date.$error && $v.form_process.end_date.$invalid, 
@@ -580,6 +579,7 @@
                                             disabled
                                             readonly
                                             data-target="#enddate_datepicker" 
+                                            data-toggle="datetimepicker"
                                             v-mask="'##/##/####'"
                                             v-bind:class="status($v.form_process.end_date)"
                                             v-bind:value="form_process.end_date"
