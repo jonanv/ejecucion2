@@ -25,7 +25,7 @@ $selectDestino=$_GET["select"]; $opcionSeleccionada=$_GET["opcion"];
 if(validaSelect($selectDestino) && validaOpcion($opcionSeleccionada))
 {
 	$tabla=$listadoSelects[$selectDestino];
-	mysql_connect("localhost", "root", "Ejecuc10n2014");
+	mysql_connect("localhost", "javo2", "Ejecuc10n2014");
     mysql_select_db("ejecucion");
 	$consulta=mysql_query("SELECT id, nombre FROM $tabla WHERE iddepartamento='$opcionSeleccionada' order by nombre") or die(mysql_error());
 	mysql_close();;

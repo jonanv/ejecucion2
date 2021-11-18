@@ -245,7 +245,7 @@ while($x < $longtras110){
 		//$pdf->Image('escudo.jpg' , X ,Y, LARGO , ANCHO,'JPG', '');
 		//$pdf->Image('nfirmasecre.jpg' , 82 ,202, 50 , 20,'JPG', '');
 		
-		$pdf->Cell(0,6,'ANDRES GRAJALES DELGADO',0,1,'C');
+		$pdf->Cell(0,6,'NANCY DAHIANA RINCON ARREDONDO',0,1,'C');
 		$pdf->Cell(0,6,'SECRETARIO',0,1,'C');
 		
 		

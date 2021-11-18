@@ -2171,7 +2171,8 @@ class Funciones {
 					  t1.fecha_registro,t1.hora_registro,t1.estado,t1.gestion,t1.rutaarchivo,t1.fecha_gestion,t1.hora_gestion 
 			          FROM (gc_actividad t1 
 					  INNER JOIN pa_usuario t2 ON t1.idrespobsable = t2.id)
-					  WHERE t1.idaccion = '$id_accion'";
+					  WHERE t1.idaccion = '$id_accion'
+					  ORDER BY t1.fecha_inicial,t1.fecha_final";
 		
 			$sql = mysql_query($query);
 			//$row = mysql_fetch_array($sql);

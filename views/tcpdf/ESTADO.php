@@ -60,7 +60,7 @@ $pdf->SetTitle('Estado '.$nun_estado);
 //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 048', PDF_HEADER_STRING);
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\laborales\views\tcpdf\examples\images
+//C:\wamp\www\ejecucion\views\tcpdf\examples\images
 $pdf->SetHeaderData('tcpdf_logo4.jpg', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 
@@ -269,11 +269,11 @@ $pdf->SetFont('helvetica', '', 11);
 
 						//NOTA: SE PONE utf8_encode POR QUE SI EL CAMPO TIENE TILDE NO NO SE MUESTRA EN EL REPORTE
 						//TODO EL REGISTRO
-						//El elemento HTML <nobr> previene que una lï¿½nea de texto se divida en una nueva lï¿½nea, 
-						//asï¿½, se presentarï¿½ en una lï¿½nea larga por lo que puede ser necesario hacer un
-						//desplazamiento de pantalla. Esta etiqueta no es un estï¿½ndar HTML y no deberï¿½a ser usada, 
+						//El elemento HTML <nobr> previene que una línea de texto se divida en una nueva línea, 
+						//así, se presentará en una línea larga por lo que puede ser necesario hacer un
+						//desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, 
 						//en su lugar use la propiedad CSS white-space como en este ejemplo:
-						//<span style="white-space: nowrap">Lï¿½nea larga sin saltos</span>
+						//<span style="white-space: nowrap">Línea larga sin saltos</span>
 						
 						//MultiCell($w, $h, $txt, $border=0, $align='J', $fill=false, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0, $valign='T', $fitcell=false) {
 						

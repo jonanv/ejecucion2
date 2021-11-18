@@ -55,16 +55,18 @@ for($y=2014; $y<=date('Y') + 1; $y++){
 			$esfestivo = $dias_festivos->esFestivo($d,$m);
 			
 			if($date == 'Sat' or $date == 'Sun' or $esfestivo == 1){
+			
 				$inhabiles[] = date("j/n/Y", mktime(0,0,0,$m,$d,$y));
 			}
 			else{
+			
 				if(!in_array(date("j/n/Y", mktime(0,0,0,$m,$d,$y)),$inhabiles)){
 					$habiles[] = date("j/n/Y", mktime(0,0,0,$m,$d,$y));
 				}
 			}
 			
 			//-------------------PARA DIAS FESTIVOS---------------------------------------------
-			//DE ESTA FORMA TOCARIA SABER CADA DIA DE FIESTA DE UN Aï¿½O Y HACER LA
+			//DE ESTA FORMA TOCARIA SABER CADA DIA DE FIESTA DE UN AÑO Y HACER LA
 			//PREGUNTA Y INHABILITARLO, SUPONGAMOS AQUI SOLO ESTA NOVIEMBRE Y DICIEMBRE DEL 2014
 			/*if($m == 11 && $y == 2014){
 				

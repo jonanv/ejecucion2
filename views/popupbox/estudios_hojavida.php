@@ -182,7 +182,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 		if(validar == 0){
 		
 			
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 			
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -288,7 +288,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 		if(validar == 0){
 		
 			
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 			
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -430,7 +430,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 			//alert($('#datospartes').val());
 			
 
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 			
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -672,7 +672,7 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 				
 				dataString += '&id_msg='+id_msg;
 				
-				/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+				/*Ejecutamos la función ajax de jQuery*/		
 				$.ajax({
 				
 					//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -747,10 +747,10 @@ effects to the end user's experience. For more help, check https://xhr.spec.what
 	$('#JQueryFTD_Demo').fileTree({
 			      //root: '/windows/',
 				  
-				  //root: '/wamp/www/laborales/HOJASDEVIDA/38/SOPORTES',
+				  //root: '/wamp/www/ejecucion/HOJASDEVIDA/38/SOPORTES',
 				  
   
-				  root: '/wamp/www/laborales/HOJASDEVIDA/'+folder_usuario+'/',
+				  root: '/wamp/www/ejecucion/HOJASDEVIDA/'+folder_usuario+'/',
 				  
 				 
 			      script: 'views/viewstree/jqueryFileTree.php',

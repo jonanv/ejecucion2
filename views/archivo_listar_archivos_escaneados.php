@@ -15,7 +15,7 @@
 	$modelo       = new archivoModel();
 	
 	$idusuario  = $_SESSION['idUsuario'];
-	$ruta       =  "C:\wamp\www\laborales\INCIDENTESALUD";
+	$ruta       =  "C:\wamp\www\ejecucion\INCIDENTESALUD";
 	//$listar     = $modelo->get_lista_archivos($idusuario,$ruta);
 	
 	$listar       = $modelo->get_lista_archivos_2($idusuario,$ruta);
@@ -140,7 +140,7 @@ $(document).ready(function() {
 	
 	//var servidor   = "http://190.217.24.24/";
 	var servidor   = "http://"+ip_servidor+"/";
-	var plataforma = '/wamp/www/laborales/INCIDENTESALUD/';
+	var plataforma = '/wamp/www/ejecucion/INCIDENTESALUD/';
 	
 	
 	$('#JQueryFTD_Demo').fileTree({

@@ -6645,7 +6645,7 @@ while( $row = sqlsrv_fetch_array( $stmt) ) {
 					$registrar = $this->db->prepare("INSERT INTO correspondencia (fecha_registro,radicado,peticionario,tipo_documento,idjuzgado,
 													 fecha_entrega,idjuzgadodestino,idsolicitud,idusuario,folios,generado,existe,idubicacionexpediente,
 													 observacionesm,ruta_local,fecha_creacion)
-													 VALUES ('$fecha','$radicado','$peticionario', '$tipo_documento','$juzgado','$fecha','$juzgadodestino',
+													 VALUES ('$fecha','$radicado','$peticionario', '$tipo_documento','$juzgado','$fecha_entrega','$juzgadodestino',
 													 '$solicitud','$recibe','$folios','$generado','$existes','$idubicacionexpediente',
 													 '$observacionesm','$ruta_local','$fecha_crem')");
 													 
@@ -7014,7 +7014,7 @@ while( $row = sqlsrv_fetch_array( $stmt) ) {
 					
 					
 					$registrar = $this->db->prepare("INSERT INTO correspondencia (fecha_registro,radicado,peticionario,tipo_documento,idjuzgado,fecha_entrega,idjuzgadodestino,idsolicitud,idusuario,folios,generado,existe,idubicacionexpediente,observacionesm)
-													 values ('$fecha','$radicado','$peticionario', '$tipo_documento','$juzgado','$fecha','$juzgadodestino','$solicitud','$recibe','$folios','$generado','$existes','$idubicacionexpediente','$observacionesm')");
+													 values ('$fecha','$radicado','$peticionario', '$tipo_documento','$juzgado','$fecha_entrega','$juzgadodestino','$solicitud','$recibe','$folios','$generado','$existes','$idubicacionexpediente','$observacionesm')");
 					$registrar->execute();
 					
 					$sql = "

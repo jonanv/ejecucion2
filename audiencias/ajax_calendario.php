@@ -6,7 +6,7 @@ error_reporting(-1);
 require_once("config.inc.php");
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/laborales/"); 
+	header("refresh: 0; URL=/ejecucion/"); 
 }
 else{
 
@@ -179,7 +179,7 @@ switch ($_GET["accion"])
 		/* obtenemos el dia de la semana del 1 del mes actual */
 		$primeromes=date("N",mktime(0,0,0,$fecha_calendario[1],1,$fecha_calendario[0]));
 			
-		/* comprobamos si el aï¿½o es bisiesto y creamos array de dï¿½as */
+		/* comprobamos si el año es bisiesto y creamos array de días */
 		if (($fecha_calendario[0] % 4 == 0) && (($fecha_calendario[0] % 100 != 0) || ($fecha_calendario[0] % 400 == 0))) $dias=array("","31","29","31","30","31","30","31","31","30","31","30","31");
 		else $dias=array("","31","28","31","30","31","30","31","31","30","31","30","31");
 		
@@ -204,10 +204,10 @@ switch ($_GET["accion"])
 		
 		$meses=array("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 		
-		/* calculamos los dï¿½as de la semana anterior al dï¿½a 1 del mes en curso */
+		/* calculamos los días de la semana anterior al día 1 del mes en curso */
 		$diasantes=$primeromes-1;
 			
-		/* los dï¿½as totales de la tabla siempre serï¿½n mï¿½ximo 42 (7 dï¿½as x 6 filas mï¿½ximo) */
+		/* los días totales de la tabla siempre serán máximo 42 (7 días x 6 filas máximo) */
 		$diasdespues=42;
 			
 		/* calculamos las filas de la tabla */
@@ -217,7 +217,7 @@ switch ($_GET["accion"])
 			
 		/* empezamos a pintar la tabla */ //<a href='/pubilaciones/index.php?controller=index&action=ruta_base'><img src='/publicaciones/carteles/images/back_f2.png' width='30' height='30' title='Regresar' style='float:right'/></a>";
 		//echo "<h2>PROGRAMACION DE REMATES PARA: ".$meses[intval($fecha_calendario[1])]." de ".$fecha_calendario[0]." <abbr title='LOS NUMEROS DE COLOR ROJO INDICAN QUE EXISTE PROGRAMACION DE REMATE PARA ESE DIA.'>(?)</abbr></h2><a href='/publicaciones/index.php?controller=index&action=ruta_base'><img src='/publicaciones/carteles/images/back_f2.png' width='30' height='30' title='Regresar' style='float:right'/></a>";
-		echo "<h2>PROGRAMACION DE AUDIENCIAS PARA: ".$meses[intval($fecha_calendario[1])]." de ".$fecha_calendario[0]."</h2><a href='/laborales/index.php?controller=archivo&action=listarUbicacionExpediente'><img src='/laborales/audiencias/images/back_f2.png' width='30' height='30' title='Regresar' style='float:right'/></a>";
+		echo "<h2>PROGRAMACION DE AUDIENCIAS PARA: ".$meses[intval($fecha_calendario[1])]." de ".$fecha_calendario[0]."</h2><a href='/ejecucion/index.php?controller=archivo&action=listarUbicacionExpediente'><img src='/ejecucion/audiencias/images/back_f2.png' width='30' height='30' title='Regresar' style='float:right'/></a>";
 		if (isset($mostrar)) echo $mostrar;
 			
 		echo "<table class='calendario' cellspacing='0' cellpadding='0'>";
@@ -261,7 +261,7 @@ switch ($_GET["accion"])
 						
 						echo "'>";
 						
-						/* recorremos el array de eventos para mostrar los eventos del dï¿½a de hoy */
+						/* recorremos el array de eventos para mostrar los eventos del día de hoy */
 						if ($hayevento>0) 
 							
 							echo "<font color='blue' size = '2'>".$hayevento." Audiencia(s) "."</font>"."<br>"."<a href='#' data-evento='#evento".$dia_actual."' class='modal' rel='".$fecha_completa."' title='Existe(n) ".$hayevento." Audiencias'>".$dia."</a>";

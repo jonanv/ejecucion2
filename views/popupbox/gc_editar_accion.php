@@ -54,6 +54,7 @@ $valor_id = trim($_POST['idaccion']);
 		<table class="editinplace">
 			<tr>
 				<th style="color:#FF0000; font-size:10px">ID</th>
+				<th style="color:#FF0000; font-size:10px">Numero Accion</th>
 				<th style="font-size:10px">CLASE</th>
 				<th style="font-size:10px">NUMERAL NORMA</th>
 				<th style="font-size:10px">DES HALLAZGO</th>
@@ -93,6 +94,7 @@ $valor_id = trim($_POST['idaccion']);
 				registro+="<tr>"
 					
 					registro+="<td class='id'>"+json[i].id+"</td>"
+					registro+="<td class='editable' data-campo='numero_accion' data-tipocampo=1><span>"+json[i].numero_accion+"</span></td>"
 					registro+="<td class='editable' data-campo='id_clase' data-tipocampo=4 data-idlista=1><span>"+json[i].clase+"</span></td>"
 					registro+="<td class='editable' data-campo='id_numeral_norma' data-tipocampo=4 data-idlista=2><span>"+json[i].numeral+"</span></td>"
 					registro+="<td class='editable' data-campo='descripcion' data-tipocampo=3><span>"+json[i].descripcion+"</span></td>"

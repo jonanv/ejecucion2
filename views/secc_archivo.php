@@ -41,7 +41,7 @@
 					  <ul class="submenu">
 					  
 							 <?php 
-								if($_SESSION['idUsuario'] == 8 || $_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario'] == 48 || $_SESSION['idUsuario'] == 51 || $_SESSION['idUsuario'] == 5 || $_SESSION['idUsuario'] == 42 || $_SESSION['idUsuario'] == 43 || $_SESSION['idUsuario'] == 59 || $_SESSION['idUsuario'] == 68){?>
+								if($_SESSION['idUsuario'] == 8 || $_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario'] == 48 || $_SESSION['idUsuario'] == 51 || $_SESSION['idUsuario'] == 5 || $_SESSION['idUsuario'] == 42 || $_SESSION['idUsuario'] == 43 || $_SESSION['idUsuario'] == 59 || $_SESSION['idUsuario'] == 68){?>
 								
 									<li><a href="index.php?controller=archivo&amp;action=regUbicacionExpediente">Registrar Ubicaci&oacute;n Expedientes</a></li>
 							 <?php 
@@ -50,11 +50,11 @@
 								   <li><a href="index.php?controller=archivo&amp;action=listarUbicacionExpediente">Listar Ubicaci&oacute;n Expedientes</a></li>
 
 							<?php 
-								if(/*$_SESSION['idUsuario'] == 8 ||*/ $_SESSION['idUsuario'] == 48 || $_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario'] == 51){?>   
+								if(/*$_SESSION['idUsuario'] == 8 ||*/ $_SESSION['idUsuario'] == 48 || $_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario'] == 51){?>   
 									
 									 
 									<li>
-										<a href="/laborales/repartomasivo/index.php">Reparto Masivo</a>
+										<a href="/ejecucion/repartomasivo/index.php">Reparto Masivo</a>
 									</li>
 													
 							<?php 
@@ -62,7 +62,7 @@
 							?>
 							
 							<?php 
-								if($_SESSION['idUsuario'] == 38){?>   
+								if($_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario'] == 78){?>   
 									
 									 
 									<li>
@@ -74,7 +74,7 @@
 							?>
 							
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==2 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==43 || $_SESSION['idUsuario']==49 || $_SESSION['idUsuario'] == 51 || $_SESSION['idUsuario'] == 26 || $_SESSION['idUsuario'] == 19 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 76){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==2 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==43 || $_SESSION['idUsuario']==49 || $_SESSION['idUsuario'] == 51 || $_SESSION['idUsuario'] == 26 || $_SESSION['idUsuario'] == 19 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 76 || $_SESSION['idUsuario'] == 83){?>   
 									
 									 
 									<li>
@@ -86,7 +86,7 @@
 							?>
 							
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario'] == 51){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario'] == 51){?>   
 									
 									 
 									<li>
@@ -99,9 +99,9 @@
 							
 							
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8  || $_SESSION['idUsuario']==3  || $_SESSION['idUsuario']==19 || 
-								   $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==49 || $_SESSION['idUsuario']==63 || 
-								   $_SESSION['idUsuario']==68 || $_SESSION['idUsuario']==73 || $_SESSION['idUsuario']== 76){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8  || $_SESSION['idUsuario']==3   || $_SESSION['idUsuario']==19 || 
+								   $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==49  || $_SESSION['idUsuario']==63 || 
+								   $_SESSION['idUsuario']==68 || $_SESSION['idUsuario']==73 || $_SESSION['idUsuario']== 76 || $_SESSION['idUsuario']== 83){?>   
 									
 									 
 									<li>
@@ -117,7 +117,7 @@
 							?>
 							
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==25){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==25){?>   
 									
 									 
 									<li>
@@ -129,7 +129,7 @@
 							?>
 							
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']== 83){?>   
 									
 									 
 									<li>
@@ -142,7 +142,7 @@
 							
 							
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==39){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==39 || $_SESSION['idUsuario']== 83){?>   
 									
 									 
 									<li>
@@ -186,7 +186,7 @@
 													
 							 	<!-- SE REALIZA ESTE AJUSTE YA QUE EN ALGUNAS VISTAS SE TENDRIA QUE DEFINIR 
 								$modelo    = new archivoModel(); -->
-							 	<?php if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==53 || $_SESSION['idUsuario']==62 || $_SESSION['idUsuario']==64){//if ( in_array( $_SESSION['idUsuario'],$usuariosa_JUZ_2,true ) ){ ?>
+							 	<?php if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==53 || $_SESSION['idUsuario']==62 || $_SESSION['idUsuario']==64){//if ( in_array( $_SESSION['idUsuario'],$usuariosa_JUZ_2,true ) ){ ?>
 							 
 										<li>
 											<a href= "index.php?controller=archivo&action=Adicionar_Obs">Asignar Observacion</a>
@@ -200,9 +200,9 @@
 								
 								
 								<?php if(
-										 	$_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==19 || 
+										 	$_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==19 || 
 								         	$_SESSION['idUsuario']==52 || $_SESSION['idUsuario']==57 || $_SESSION['idUsuario']==67 ||
-										 	$_SESSION['idUsuario']==53 || $_SESSION['idUsuario']==62 || $_SESSION['idUsuario']==64 || $_SESSION['idUsuario']==68
+										 	$_SESSION['idUsuario']==53 || $_SESSION['idUsuario']==62 || $_SESSION['idUsuario']==64 || $_SESSION['idUsuario']==68 || $_SESSION['idUsuario']== 83
 									   
 									   	){ ?>
 							 
@@ -239,7 +239,7 @@
 								</li> -->
 							
 							<!-- <li>
-								<a href="http://172.16.176.194/laborales/mejora_continua">mejora continua</a>
+								<a href="http://172.16.176.194/ejecucion/mejora_continua">mejora continua</a>
 							</li> -->
 
 
@@ -295,7 +295,7 @@
 					  
 							 
 							<?php 
-								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario'] == 51){?>   
+								if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario'] == 51){?>   
 									
 									 
 									<li>
@@ -318,7 +318,7 @@
 			  
 			  
 			  <?php 
-				if($_SESSION['idUsuario'] == 55 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==51){
+				if($_SESSION['idUsuario'] == 55 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']== 83){
 			  ?>
 			  
 			  <div id="sep">|</div>
@@ -382,11 +382,11 @@
 							
 							
 							<?php 
-							if($_SESSION['idUsuario']==38){
+							if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario'] == 78){
 						    ?>
 							
 							<!-- PROCESOS MASIVOS DESDE FORMUARIO SIEPRO OPCION ACTUACION JUSTICIA XXI MASIVA 
-							Auto aprueba liquidaciï¿½n crï¿½dito
+							Auto aprueba liquidación crédito
 							Auto modifica liquidacion presentada 
 							Fijacion estado -->
 							
@@ -396,7 +396,7 @@
 								
 							</li> 
 							
-							<!-- Auto aprueba liquidaciï¿½n crï¿½dito -->
+							<!-- Auto aprueba liquidación crédito -->
 							
 							<!-- <li>
 								<a href="index.php?controller=archivo&action=Registrar_AALC_L1">Auto aprueba liquidacion credito</a>

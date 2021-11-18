@@ -15,7 +15,7 @@
 	//$modelo       = new archivoModel();
 	
 	//$idusuario  = $_SESSION['idUsuario'];
-	//$ruta       =  "C:\wamp\www\laborales\DOCUMENTOS_ESCRITORIO";
+	//$ruta       =  "C:\wamp\www\ejecucion\DOCUMENTOS_ESCRITORIO";
 	
 	//$ruta         ="C:\Users\Administrador\Documents\compartida";
 	//$listar     = $modelo->get_lista_archivos($idusuario,$ruta);
@@ -135,7 +135,7 @@ $(document).ready(function() {
 				  
 				  //root:   'file:///C:/Users/Administrador/Documents/compartida/',
 				 
-				  root: '/wamp/www/laborales/DOCUMENTOS_ESCRITORIO/',
+				  root: '/wamp/www/ejecucion/DOCUMENTOS_ESCRITORIO/',
 				 
 			      script: 'views/viewstree/jqueryFileTree.php',
 			      expandSpeed: 1000,

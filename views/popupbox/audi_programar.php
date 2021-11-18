@@ -104,7 +104,7 @@ $('document').ready(function(){
 		//OCULTAR GIF CARGANDO
 		$('#fila_cargando').hide();
 
-		 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
+		 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
 		 $.datepicker.regional['es'] = {
 		 closeText: 'Cerrar',
 		 prevText: '< Ant',
@@ -112,8 +112,8 @@ $('document').ready(function(){
 		 currentText: 'Hoy',
 		 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 		 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-		 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miï¿½rcoles', 'Jueves', 'Viernes', 'Sï¿½bado'],
-		 dayNamesShort: ['Dom','Lun','Mar','Miï¿½','Juv','Vie','Sï¿½b'],
+		 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+		 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
 		 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
 		 weekHeader: 'Sm',
 		 dateFormat: 'yy-mm-dd',
@@ -263,7 +263,7 @@ $('document').ready(function(){
 					
 					
 					
-					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+					/*Ejecutamos la función ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -355,7 +355,7 @@ $('document').ready(function(){
 				//alert(id);
 				
 
-				window.open("http://"+ipservidor+"/laborales/views/PHPPdf/Reporte_Cartel.php?id="+id);
+				window.open("http://"+ipservidor+"/ejecucion/views/PHPPdf/Reporte_Cartel.php?id="+id);
 				
 		});
 		
@@ -368,7 +368,7 @@ $('document').ready(function(){
 				//alert(id);
 				
 
-				window.open("http://"+ipservidor+"/laborales/views/tcpdf/HISTORIAL_PROCESO.php?id="+idrad);
+				window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/HISTORIAL_PROCESO.php?id="+idrad);
 				
 		});
 		
@@ -474,7 +474,7 @@ $('document').ready(function(){
 					
 					
 					
-					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+					/*Ejecutamos la función ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -613,7 +613,7 @@ $('document').ready(function(){
 					
 					
 					
-					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+					/*Ejecutamos la función ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1548,7 +1548,7 @@ function cargar_causal(idestado,id_fila){
 								<img src="views/images/new3.jpg" width="25" height="25" title="ADICIONAR AUDIENCIA" onClick="Adicionar_Audi()"/>
 								<a class="registrar_audi" href="javascript:void(0);"><img id="btnregistrar_audi" src="views/images/save.png" width="25" height="25" title="REGISTRAR AUDIENCIA"/></a>
 								
-								<a href="/laborales/audienciasjuz/index.php" style="float:right"><img src="views/images/calendario.jpg" width="55" height="45" title="CALENDARIO"/></a>
+								<a href="/ejecucion/audienciasjuz/index.php" style="float:right"><img src="views/images/calendario.jpg" width="55" height="45" title="CALENDARIO"/></a>
 								
 								
 								

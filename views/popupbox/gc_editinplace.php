@@ -120,7 +120,7 @@ if($conexion > 0){
 						t1.id_ai,
 						t6.des AS metodologia,t6.id AS id_metodologia,
 						t7.des AS generada,t7.id AS id_generada,
-						t1.fecha_registro,t1.hora_registro,t1.estado
+						t1.fecha_registro,t1.hora_registro,t1.estado,t1.numero_accion
 						FROM (((((gc_acciones t1
 						LEFT JOIN gc_lista t2 ON t1.id_clase = t2.id)
 						LEFT JOIN gc_lista t3 ON t1.id_numeral_norma = t3.id)
@@ -159,7 +159,8 @@ if($conexion > 0){
 							"metodologia"        =>utf8_encode($accion["metodologia"]),
 							"id_generada"        =>$accion["id_generada"],
 							"generada"           =>utf8_encode($accion["generada"]),
-							"estado"             =>utf8_encode($accion["estado"])
+							"estado"             =>utf8_encode($accion["estado"]),
+							"numero_accion"      =>$accion["numero_accion"]
 							
 							
 			);

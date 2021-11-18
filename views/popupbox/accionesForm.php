@@ -2,7 +2,7 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/laborales/"); 
+	header("refresh: 0; URL=/ejecucion/"); 
 }
 else{
 $everadicado = trim($_POST['everadicado']);
@@ -58,7 +58,7 @@ $resultado = mysql_query($sql);
 </table>
 
 <div class="buttonsBar">
-	<button id="cancel" type="button" name="boton_cancelar" title="Cerrar"><img src="/laborales/eventos/imagenes/cancel2.png" width="15" height="15"/></button>
+	<button id="cancel" type="button" name="boton_cancelar" title="Cerrar"><img src="/ejecucion/eventos/imagenes/cancel2.png" width="15" height="15"/></button>
 </div>
 
 <?php } mysql_close($conexion); ?>

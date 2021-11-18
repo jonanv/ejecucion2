@@ -10,7 +10,7 @@ ini_set('display_errors', '1');
  */
 $sql_details = array(
 	"type" => "Mysql",   // Database type: "Mysql", "Postgres", "Sqlserver", "Sqlite" or "Oracle"
-	"user" => "root",        // Database user name
+	"user" => "javo2",        // Database user name
 	"pass" => "Ejecuc10n2014",        // Database password
 	"host" => "localhost",        // Database host
 	"port" => "3306",        // Database connection port (can be left empty for default)

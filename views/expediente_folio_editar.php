@@ -784,7 +784,36 @@ if($bandera_46 == 1){
             <!-- <input type="text" name="obs[]" class="form-control" placeholder="Ingrese Observacion"/> -->
         </div>	
 		
-		<div class="row">
+		<div class="alert alert-info alert-dismissable">
+		 
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<strong>!RECOMENDACION! Es muy importante que leas este mensaje.</strong>
+			<br>
+			- EL NOMBRE DEL FOLIO(S) DEBE SER SIN TILDES,SIN ESPACIOS,SIN PUNTOS Y FORMATO PDF / WORD<br>
+			- NOMBRES CONFORMADOS POR LETRAS O NUMEROS Y TODO PEGADO<br>
+				
+		</div>
+				
+		<div class="form-group">
+			
+			<label>Folio(s)</label>
+			<!-- <input type="hidden" name="Foto" value="<?php //echo $d7MF; ?>" /> -->
+			<input type="file" name="Foto" class="form-control" placeholder="Ingrese una imagen" />
+						
+		</div>
+		
+		<!-- <div class="col-xs-8">
+				<?php //if($d7MF != ''): ?>
+					<div class="img-thumbnail text-center">
+						<!--  <img src="uploads/<?php //echo $alm->__GET('Foto'); ?>" style="width:50%;" /> -->
+						<!-- <img src="views/images/pdf-icono.png" width="35" height="35"/>
+					</div> -->
+				<?php //endif; ?>            
+		<!-- </div>  -->
+		
+		
+		<!-- <div class="row">
+		
 			<div class="col-xs-6">
 				<div class="form-group">
 				
@@ -799,20 +828,20 @@ if($bandera_46 == 1){
 					<br>
 					<br>
 				   <label>Folio(s)</label>
-				   <input type="hidden" name="Foto" value="<?php echo $d7MF; ?>" />
+				   <input type="hidden" name="Foto" value="<?php //echo $d7MF; ?>" />
 				   <input type="file" name="Foto" placeholder="Ingrese una imagen" />
 					
 				</div>     
-			</div>
+			</div> 
+			
 			<div class="col-xs-6">
-				<?php if($d7MF != ''): ?>
+				<?php //if($d7MF != ''): ?>
 					<div class="img-thumbnail text-center">
-					   <!--  <img src="uploads/<?php //echo $alm->__GET('Foto'); ?>" style="width:50%;" /> -->
 						<img src="views/images/pdf-icono.png" width="35" height="35"/>
-					</div>
-				<?php endif; ?>            
+					</div> 
+				<?php //endif; ?>            
 			</div>
-		</div>
+		</div>  --> 
 		
 	  <!--   <hr /> -->
 		
@@ -826,11 +855,13 @@ if($bandera_46 == 1){
 			
 		</div>
 		
+		
 		<div id="fila_cargando" class="text-center">
         
 			<img src="views/images/18.gif" name="imgcargar" id="imgcargar" width="50" height="50" style="visibility:visible"/> 
 		
      	</div>
+		
 		
 	
 	</div>
@@ -921,7 +952,7 @@ if($bandera_46 == 1){
 		
 		//alert(des_otra);
 		
-		if(des_otra == "NINGUNA"){
+		if(des_otra == "NINGUNA" || des_otra == ''){
 		
 			$('#otrad').hide();
 			

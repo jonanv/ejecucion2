@@ -12,7 +12,7 @@ class DB{
 	     
 		$this->BaseDatos = "ejecucion";        
 		$this->Servidor  = "localhost";        
-		$this->Usuario   = "root";        
+		$this->Usuario   = "javo2";        
 		$this->Clave     = "Ejecuc10n2014";   
 	}      
 	function conectar() {  

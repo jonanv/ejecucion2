@@ -2356,6 +2356,92 @@ $(document).ready(function() {
 			
 								 
 		});
+		
+		
+		$(".exportar_excel").click(function(evento){
+	
+			//alert("BUSCANDO...");
+			
+			var idjuzgado_repartoX = "<?php echo $Jid_juzgado_4x; ?>";
+			
+			//alert(idjuzgado_repartoX);
+			
+			
+			if( 
+				
+			   /*$('#filtro1').val().length   == 0 && */
+			   $('#filtro2').val().length   == 0 &&
+			   $('#filtro3').val().length   == 0 &&
+			   $('#filtro4').val().length   == 0 &&
+			   $('#filtro5').val().length   == 0 &&
+			   $('#filtro6').val().length   == 0 &&
+			   $('#filtro7').val().length   == 0 &&
+			   $('#filtro8').val().length   == 0 
+			   
+			  
+			   
+			) {
+				
+				alert("Definir Algun Filtro Para Realizar la Busquedad");
+		
+				//document.getElementById('filtro1').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro2').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro3').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro4').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro5').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro6').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro7').style.borderColor  =  '#FF0000';
+				document.getElementById('filtro8').style.borderColor  =  '#FF0000';
+				
+				
+			}
+			else{
+				
+				//alert("BUSCANDO...");
+		
+		
+				dato_0 = 19000;
+				
+				//FECHAS REGISTRO
+				dato_1 = $('#filtro2').val(); 
+				dato_2 = $('#filtro3').val();
+				
+				//FECHAS A DESPACHO
+				dato_3 = $('#filtro7').val(); 
+				dato_4 = $('#filtro8').val();
+				
+				//datox1 = $('#filtro1').val();
+				datox1 = 1;//no se usa, es posible a futuro con ids
+				datox2 = $('#filtro4').val();
+				datox3 = $('#filtro5').val();
+				datox4 = $('#filtro6').val();
+				
+				
+				//alert(datox4);
+				
+				//SOLITAR SIEMPRE EL VALOR DEL ESTADO, PARA UN MEJOR FILTRO,
+				//YA QUE PUEDE PASAR QUE SIN ESTE AL ESCOGER CON UN FILTRO DE FECHA
+				//A DESPACHO CARGUE PROCESOS DE ESTADO CERRADOS A LA FECHA ACTUAL
+				//PERCATANDOCE QUE ESTAN ABIERTAS Y ESTO SE DA YA QUE AL AGRUPAR POR RADICADO
+				//Y SIN UN RADICADO YA TIENE TAREAS CERRADAS EN FECHAS ANTERIORES, PUEDE AGRUPAR POR LA CERRADA
+				if( $('#filtro6').val().length   == 0 ){
+				
+					alert("Definir Estado");
+				
+				}
+				else{
+				
+					//location.href="index.php?controller=archivo&action=Busquedad_Filtro&dato_0="+dato_0+"&dato_1="+dato_1+"&dato_2="+dato_2+"&datox1="+datox1+"&datox2="+datox2+"&datox3="+datox3+"&datox4="+datox4+"&dato_3="+dato_3+"&dato_4="+dato_4;
+				
+					location.href="index.php?controller=archivo&action=Generar_Excel_Adespacho_Juzgados&opcion="+dato_0+"&dato_1="+dato_1+"&dato_2="+dato_2+"&datox1="+datox1+"&datox2="+datox2+"&datox3="+datox3+"&datox4="+datox4+"&dato_3="+dato_3+"&dato_4="+dato_4+"&idjuzgado_repartoX="+idjuzgado_repartoX;
+				
+				}
+				
+				
+			}
+			
+		
+		});
 	
 
 	
@@ -2655,6 +2741,14 @@ function registrar_devolucion_2(idactu,idfila){
 			
 	</a>
 	
+	<a class="exportar_excel" href="javascript:void(0);">
+	
+		<button type="button" class="btn btn-default" title="EXPORTAR A EXCEL">
+			<span class="glyphicon glyphicon-list-alt"></span>EXPORTAR A EXCEL
+		</button>
+				
+	</a>
+	
 </center>
 
 <!-- <form id="frmfiltro"> -->
@@ -2829,6 +2923,13 @@ function registrar_devolucion_2(idactu,idfila){
 		  
 		</div>
 		
+		<!-- <div class="form-group col-md-6">
+			<a class="exportar_excel" href="javascript:void(0);">
+				<img src="views/images/excel_2.jpg" width="40" height="40" title="EXPORTAR A EXCEL"/>
+				EXPORTAR A EXCEL
+			</a>
+		</div>
+		 -->
 		
 	</div>
    

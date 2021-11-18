@@ -144,7 +144,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		
 			
 			
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 				
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -297,7 +297,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		
 			//ANULAR
 			
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 				
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -713,7 +713,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		
 			//alert(dataString);
 			
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 				
 				//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1252,9 +1252,9 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 					
 					//var ipservidor = "172.16.176.194";
 		
-					//window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?fechae_2A="+valor1+"&fechae_2B="+valor2+"&nun_estado="+valor3+"&juzgadoauto="+valor4);
+					//window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?fechae_2A="+valor1+"&fechae_2B="+valor2+"&nun_estado="+valor3+"&juzgadoauto="+valor4);
 					
-					//window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liqui="+d0x);
+					//window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liqui="+d0x);
 					
 					if( $("#radioacuerdo1").is(':checked') ) {  
 					
@@ -1325,7 +1325,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 									//alert(fff);
 									
 		
-									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 														
 								});
 							
@@ -1376,7 +1376,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 								//alert(fff);
 								
 	
-								window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+								window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 													
 							});
 						
@@ -1436,7 +1436,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 										//alert(fff);
 										
 			
-										window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+										window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 															
 									});
 								
@@ -1487,7 +1487,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 									//alert(fff);
 									
 		
-									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 														
 								});
 							
@@ -1547,9 +1547,9 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 										//alert(fff);
 										
 			
-										window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+										window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 										
-										//document.location = "http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
+										//document.location = "http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
 															
 									});
 								
@@ -1603,10 +1603,10 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 									
 									
 		
-									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 									
 									
-									//document.location = "http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
+									//document.location = "http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
 									
 									
 									
@@ -1668,7 +1668,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 										//alert(fff);
 										
 			
-										window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+										window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 															
 									});
 								
@@ -1719,7 +1719,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 									//alert(fff);
 									
 		
-									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 														
 								});
 							
@@ -1757,7 +1757,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		
 		//var ipservidor = "172.16.176.194";
 		
-		window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_APROBAR_COSTAS.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc);
+		window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_APROBAR_COSTAS.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc);
 		
 	});
 	
@@ -1780,7 +1780,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		var nunestado    = $('#nunestado').val();
 		var fecha_estado = $('#fecha_estado').val();
 		
-		window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+		window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 		
 		
 		
@@ -1804,7 +1804,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		var nunestado    = $('#nunestado').val();
 		var fecha_estado = $('#fecha_estado').val();
 		
-		window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO_APROBAR.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+		window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO_APROBAR.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 		
 		
 		
@@ -1828,7 +1828,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 		
 		//var ipservidor = "172.16.176.194";
 		
-		window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO_TLC.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+		window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO_TLC.php?id_liqui_apc="+id_liqui_apc+"&radicado="+radicado+"&fecha_liqui_a_apc="+fecha_liqui_a_apc+"&juzgado_apc="+juzgado_apc+"&observacionsr_a_apc="+observacionsr_a_apc+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 		
 		
 		

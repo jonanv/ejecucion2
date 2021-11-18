@@ -221,7 +221,7 @@ for ($i=0; $i<$numfilas; $i++){
 	$pdf->Row(array('', 'Término que empieza a correr el '.$fecha.' a las 8:00 a.m. y vence el '.$fechab.', a las 6:00 p.m.'));
 	
 	$pdf->Ln(20);
-	$pdf->Cell(0,6,'ANDRES GRAJALES DELGADO',0,1,'C');
+	$pdf->Cell(0,6,'NANCY DAHIANA RINCON ARREDONDO',0,1,'C');
 	$pdf->Cell(0,6,'SECRETARIO',0,1,'C');
 	//$pdf->Cell(0,6,'Código: F-TLC-01                                                 Versión: 01',0,1,'L');
 	

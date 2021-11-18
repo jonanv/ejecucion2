@@ -10,18 +10,18 @@ $idusuario = $_SESSION['idUsuario'];
 
 //------------DATOS PARA LA CONEXION BD------------
 $dbhost           ='localhost';
-$dbusername       ='root';
+$dbusername       ='javo2';
 $dbuserpassword   ='Ejecuc10n2014';
 $dbdefault_dbname ='ejecucion';
 
 $link = mysql_connect($dbhost, $dbusername, $dbuserpassword);
 
 if(!$link){
-	echo "Fallo en la Conexiï¿½n al host $dbhost";
+	echo "Fallo en la Conexión al host $dbhost";
 	//return 0;
 }
 else if(empty($dbname) && !mysql_select_db($dbdefault_dbname)){
-	echo "Fallo en la Conexiï¿½n al host $dbhost";
+	echo "Fallo en la Conexión al host $dbhost";
 	//return 0;
 }
 
@@ -124,7 +124,7 @@ $pdf->SetTitle('Avoca Conocimiento / Aprobar Costas');
 
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\laborales\views\tcpdf\examples\images
+//C:\wamp\www\ejecucion\views\tcpdf\examples\images
 //$pdf->SetHeaderData('tcpdf_logo4.jpg', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 
@@ -217,7 +217,7 @@ $tbl_noti = '
 				 
 			<tr>
 					  
-				<td style="border-bottom-color:#FFFFFF">'.utf8_encode('NOTIFï¿½QUESE').'</td>
+				<td style="border-bottom-color:#FFFFFF">'.utf8_encode('NOTIFÍQUESE').'</td>
 				
 			</tr>
 			
@@ -273,7 +273,7 @@ $pdf->SetFont('helvetica', 'B', 12);
 $pdf->Write(0, utf8_encode('INFORME SECRETARIAL'), '', 0, 'L', true, 0, false, false, 0);
 $pdf->Ln(4);
 $pdf->SetFont('helvetica', '', 12);
-$pdf->Write(0, utf8_encode('A Despacho del seï¿½or Juez el presente proceso el cual fue asignado a dicho Juzgado en virtud a lo dispuesto por el '.$Leyenda.' expedido por la Sala Administrativa del Consejo Superior de la Judicatura'), '', 0, 'J', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('A Despacho del señor Juez el presente proceso el cual fue asignado a dicho Juzgado en virtud a lo dispuesto por el '.$Leyenda.' expedido por la Sala Administrativa del Consejo Superior de la Judicatura'), '', 0, 'J', true, 0, false, false, 0);
 $pdf->Ln(4);
 $pdf->Write(0, utf8_encode('La parte demandada goza del beneficio de amparo de pobreza'), '', 0, 'J', true, 0, false, false, 0);
 $pdf->Ln(4);
@@ -290,7 +290,7 @@ $pdf->Write(0, $secretario, '', 0, 'C', true, 0, false, false, 0);
 $pdf->Write(0, 'Secretario', '', 0, 'C', true, 0, false, false, 0);
 					 
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('REPï¿½BLICA DE COLOMBIA'), '', 0, 'C', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('REPÚBLICA DE COLOMBIA'), '', 0, 'C', true, 0, false, false, 0);
 
 //$pdf->Image('examples/images/escudo.jpg', 98, 74, 15, 15, 'JPG', '', '', true, 150, '', false, false, 1, false, false, false);
 
@@ -312,7 +312,7 @@ $fechafijacion_b = explode("-",$fecha_liqui_a_apc);
 $fechafijacion_c = $fechafijacion_b[2];
 $dia_letra       = $funcion-> numtoletras_para_fecha($fechafijacion_c,1);
 
-//Aï¿½O
+//AÑO
 $fechafijacion_d = $fechafijacion_b[0];
 $dia_letra_2     = $funcion-> numtoletras_para_fecha($fechafijacion_d,1);
 
@@ -367,18 +367,18 @@ $pdf->SetMargins(20,5,20);
 $pdf->Ln(4);
 $pdf->SetFont('helvetica', '', 12);
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('Atendiendo la constancia secretarial que antecede, se AVOCA CONOCIMIENTO del presente proceso al cual se ordena imprimirle el trï¿½mite de rigor.'), '', 0, 'L', true, 0, false, false, 0);		
+$pdf->Write(0, utf8_encode('Atendiendo la constancia secretarial que antecede, se AVOCA CONOCIMIENTO del presente proceso al cual se ordena imprimirle el trámite de rigor.'), '', 0, 'L', true, 0, false, false, 0);		
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('Lo anterior, con ocasiï¿½n a la creaciï¿½n de este Juzgado mediante Acuerdo No. PSAA13-9962 de julio 31 de 2013 expedido por la Sala Administrativa del Consejo Superior de la Judicatura.'), '', 0, 'J', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('Lo anterior, con ocasión a la creación de este Juzgado mediante Acuerdo No. PSAA13-9962 de julio 31 de 2013 expedido por la Sala Administrativa del Consejo Superior de la Judicatura.'), '', 0, 'J', true, 0, false, false, 0);
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('De igual forma, cï¿½rrase traslado a la liquidaciï¿½n de crï¿½dito presentada de conformidad con el articulo 110 del Cï¿½digo general del Proceso.'), '', 0, 'L', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('De igual forma, córrase traslado a la liquidación de crédito presentada de conformidad con el articulo 110 del Código general del Proceso.'), '', 0, 'L', true, 0, false, false, 0);
 $pdf->Ln(4);
 //$pdf->Write(0, utf8_encode($dato8e), '', 0, 'L', true, 0, false, false, 0);		
 $pdf->Write(0, utf8_encode(str_replace('<br />', PHP_EOL, $dato8e)), '', 0, 'J', true, 0, false, false, 0);	
 
 $pdf->Ln(8);
 $pdf->SetFont('helvetica','B',12);
-/*$pdf->Write(0, utf8_encode('NOTIFï¿½QUESE'), '', 0, 'C', true, 0, false, false, 0);
+/*$pdf->Write(0, utf8_encode('NOTIFÍQUESE'), '', 0, 'C', true, 0, false, false, 0);
 $pdf->Ln(16);
 $pdf->MultiCell(0,6,$dato2,0,'C',false);
 $pdf->Cell(0,6,'JUEZ',0,1,'C');*/
@@ -392,8 +392,8 @@ $pdf->SetFont('helvetica','',9);
 //$pdf->SetTextColor(0);
 $pdf->Ln(8);
 
-$linea_2 = utf8_encode("MANIZALES ï¿½ CALDAS");
-$linea_3 = utf8_encode("NOTIFICACIï¿½N POR ESTADO");
+$linea_2 = utf8_encode("MANIZALES – CALDAS");
+$linea_3 = utf8_encode("NOTIFICACIÓN POR ESTADO");
 $linea_4 = utf8_encode("La providencia anterior se notifica en el Estado");
 //$linea_5 = utf8_encode("No. ____ del ___________ de ".date('Y'));
 setlocale(LC_TIME, "Spanish");
@@ -402,9 +402,9 @@ $linea_5 = utf8_encode("No. ".$nunestado." del ".$fecha_estado_2);
 $linea_6 = utf8_encode($secretario);
 $linea_7 = utf8_encode("SECRETARIO");
 
-//$recuadro = $dato1."\n"."MANIZALES ï¿½ CALDAS"."\n"."NOTIFICACIï¿½N POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"; 
+//$recuadro = $dato1."\n"."MANIZALES – CALDAS"."\n"."NOTIFICACIÓN POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"; 
 
-//$recuadro = utf8_encode($dato1."\n"."MANIZALES ï¿½ CALDAS"."\n"."NOTIFICACIï¿½N POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"); 
+//$recuadro = utf8_encode($dato1."\n"."MANIZALES – CALDAS"."\n"."NOTIFICACIÓN POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"); 
 
 $tbl_5 = '
 		<table border="1" nobr="true">
@@ -505,8 +505,8 @@ $tbl_6 = '
 				 
 			<tr>
 					 
-				<td style="width:250px; text-align:left">'.utf8_encode('Cï¿½digo: F-LC-01').'</td>
-				<td style="width:250px; text-align:left">'.utf8_encode('Versiï¿½n: 01').'</td>
+				<td style="width:250px; text-align:left">'.utf8_encode('Código: F-LC-01').'</td>
+				<td style="width:250px; text-align:left">'.utf8_encode('Versión: 01').'</td>
 			</tr>
 		
 			

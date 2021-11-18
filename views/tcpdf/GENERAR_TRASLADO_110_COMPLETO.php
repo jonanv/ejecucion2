@@ -10,18 +10,18 @@ $idusuario = $_SESSION['idUsuario'];
 
 //------------DATOS PARA LA CONEXION BD------------
 $dbhost           ='localhost';
-$dbusername       ='root';
+$dbusername       ='javo2';
 $dbuserpassword   ='Ejecuc10n2014';
 $dbdefault_dbname ='ejecucion';
 
 $link = mysql_connect($dbhost, $dbusername, $dbuserpassword);
 
 if(!$link){
-	echo "Fallo en la Conexiï¿½n al host $dbhost";
+	echo "Fallo en la Conexión al host $dbhost";
 	//return 0;
 }
 else if(empty($dbname) && !mysql_select_db($dbdefault_dbname)){
-	echo "Fallo en la Conexiï¿½n al host $dbhost";
+	echo "Fallo en la Conexión al host $dbhost";
 	//return 0;
 }
 
@@ -55,7 +55,7 @@ $pdf->SetTitle('TRASLADO EN LISTA 110');
 
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\laborales\views\tcpdf\examples\images
+//C:\wamp\www\ejecucion\views\tcpdf\examples\images
 //$pdf->SetHeaderData('tcpdf_logo4.jpg', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 
@@ -143,7 +143,7 @@ while($x < $longtras110){
 	$pdf->SetFont('helvetica','B',12);
 	
 	$pdf->Ln(4);
-	$pdf->Cell(0,6,utf8_encode('REPï¿½BLICA DE COLOMBIA'),0,1,'C');
+	$pdf->Cell(0,6,utf8_encode('REPÚBLICA DE COLOMBIA'),0,1,'C');
 	$pdf->Ln(10);
 	$pdf->Image('examples/images/escudo.jpg' , 98 ,15, 20 , 15,'JPG', '');
 	
@@ -250,7 +250,7 @@ while($x < $longtras110){
 					<tr>
 							  
 						<td style="width:150px; text-align:left">ASUNTO:</td>
-						<td style="width:250px; text-align:left">'.utf8_encode('LIQUIDACIï¿½N DEL CRï¿½DITO').'</td>
+						<td style="width:250px; text-align:left">'.utf8_encode('LIQUIDACIÓN DEL CRÉDITO').'</td>
 					
 					</tr>
 					
@@ -263,7 +263,7 @@ while($x < $longtras110){
 					
 					<tr>
 							  
-						<td style="width:150px; text-align:left">'.utf8_encode('FIJACIï¿½N:').'</td>
+						<td style="width:150px; text-align:left">'.utf8_encode('FIJACIÓN:').'</td>
 						<td style="width:250px; text-align:left">'.$fechaf.'</td>
 					
 					</tr>
@@ -279,7 +279,7 @@ while($x < $longtras110){
 					<tr>
 							  
 						<td style="width:150px; text-align:left">'.utf8_encode('TRASLADO:').'</td>
-						<td style="width:250px; text-align:left">'.utf8_encode('TRES (3) Dï¿½AS').'</td>
+						<td style="width:250px; text-align:left">'.utf8_encode('TRES (3) DÍAS').'</td>
 					
 					</tr>
 					
@@ -293,7 +293,7 @@ while($x < $longtras110){
 					<tr>
 							  
 						<td style="width:150px; text-align:left"></td>
-						<td style="width:250px; text-align:left">'.utf8_encode('Tï¿½rmino que empieza a correr el '.$fecha.' a las 8:00 a.m. y vence el '.$fechab.' a las 6:00 p.m.').'</td>
+						<td style="width:250px; text-align:left">'.utf8_encode('Término que empieza a correr el '.$fecha.' a las 8:00 a.m. y vence el '.$fechab.' a las 6:00 p.m.').'</td>
 					
 					</tr>
 						 
@@ -334,8 +334,8 @@ while($x < $longtras110){
 						 
 					<tr>
 							 
-						<td style="width:250px; text-align:left">'.utf8_encode('Cï¿½digo: F-TLC-01').'</td>
-						<td style="width:250px; text-align:left">'.utf8_encode('Versiï¿½n: 01').'</td>
+						<td style="width:250px; text-align:left">'.utf8_encode('Código: F-TLC-01').'</td>
+						<td style="width:250px; text-align:left">'.utf8_encode('Versión: 01').'</td>
 					</tr>
 				
 					

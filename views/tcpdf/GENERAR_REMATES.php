@@ -7,18 +7,18 @@ require_once('tcpdf.php');
 
 //------------DATOS PARA LA CONEXION BD------------
 $dbhost           ='localhost';
-$dbusername       ='root';
+$dbusername       ='javo2';
 $dbuserpassword   ='Ejecuc10n2014';
 $dbdefault_dbname ='ejecucion';
 
 $link = mysql_connect($dbhost, $dbusername, $dbuserpassword);
 
 if(!$link){
-	echo "Fallo en la Conexiï¿½n al host $dbhost";
+	echo "Fallo en la Conexión al host $dbhost";
 	//return 0;
 }
 else if(empty($dbname) && !mysql_select_db($dbdefault_dbname)){
-	echo "Fallo en la Conexiï¿½n al host $dbhost";
+	echo "Fallo en la Conexión al host $dbhost";
 	//return 0;
 }
 
@@ -129,7 +129,7 @@ $pdf->SetTitle('Remates');
 //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 048', PDF_HEADER_STRING);
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\laborales\views\tcpdf\examples\images
+//C:\wamp\www\ejecucion\views\tcpdf\examples\images
 //$pdf->SetHeaderData('encabezadoacceso.png', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 

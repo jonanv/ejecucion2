@@ -289,6 +289,7 @@ $(document).ready(function() {
 				data.append('dato4U',$('#dato4U').val());//CORREO
 				data.append('dato5U',$('#dato5U').val());//ES ABOGADO
 				data.append('dato6U',$('#dato6U').val());//CELULAR
+				data.append('dato7U',$('#dato7U').val());//ES ENTIDAD
 				
 				//CAMPOS OCULTOS
 				data.append('iduser',$('#iduser').val());
@@ -408,6 +409,17 @@ $(document).ready(function() {
 		
 		
 		$('#dato6U').val(recipient_2[5]);//CELULAR
+		
+		//ES ENTIDAD
+		if(recipient_2[7] == "SI"){
+			$('#dato7U').val("SI");
+		}
+		if(recipient_2[7] == "NO"){
+			$('#dato7U').val("NO");
+		}
+		if(recipient_2[3] == "ESTUDIANTEDEDERECHO"){
+			$('#dato5U').val(3);
+		}
 		
 		/*$('#cuaderno').html('');
 		$("#cuaderno").load('funciones/traer_datos_lista.php?id='+recipient_2[1]+"&idsql="+8);
@@ -926,6 +938,7 @@ function Eliminar_Tabla(idtabla){
 			 <th style="width:180px; font-size:12px">N.C.C. o NIT</th>
 			 <th style="width:180px; font-size:12px">NOMBRE</th>
 			 <th style="width:180px; font-size:12px">ABOGADO</th>
+			 <th style="width:180px; font-size:12px">ENTIDAD</th>
 			 <th style="width:180px; font-size:12px">CORREO</th>
 			 <th style="width:180px; font-size:12px">CELULAR</th>
 			 <th style="width:180px; font-size:12px">EDITAR</th>
@@ -958,6 +971,7 @@ function Eliminar_Tabla(idtabla){
 				$d5M = utf8_encode($fila[correo]);
 				$d6M = $fila[celular];
 				$d7M = $fila[contrasena];
+				$d8M = $fila[esentidad];
 				
 				
 		?>
@@ -988,9 +1002,15 @@ function Eliminar_Tabla(idtabla){
 				
 			</td>
 			
-			  <td style="width:180px; font-size:12px">
+			<td style="width:180px; font-size:12px">
 			
 				<?php echo $d4M; //ES ABOGADO ?>
+				
+			</td>
+			
+			<td style="width:180px; font-size:12px">
+			
+				<?php echo $d8M; //ES ENTIDAD ?>
 				
 			</td>
 			
@@ -1010,7 +1030,7 @@ function Eliminar_Tabla(idtabla){
 			
 				<!-- <a class="glyphicon glyphicon-pencil" href="index.php?controller=archivo&amp;action=Editar_Folio&datosexpEF=<?php //echo $id_radi."******".$nradi."******".$d0M."******".$d13M."******".$d11M; ?>" title="EDITAR USUARIO"></a> -->
 	
-				<a class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#exampleModal" title="EDITAR USUARIO" data-whatever="<?php echo utf8_encode($d1M."*/*/*".$d2M."*/*/*".$d3M."*/*/*".$d4M."*/*/*".$d5M."*/*/*".$d6M."*/*/*".$d7M); ?>"></a>
+				<a class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#exampleModal" title="EDITAR USUARIO" data-whatever="<?php echo utf8_encode($d1M."*/*/*".$d2M."*/*/*".$d3M."*/*/*".$d4M."*/*/*".$d5M."*/*/*".$d6M."*/*/*".$d7M."*/*/*".$d8M); ?>"></a>
 	
 				
 			</td>
@@ -1130,7 +1150,8 @@ function Eliminar_Tabla(idtabla){
 																					
 											<option value="" selected="selected">Seleccionar Opcion</option>
 											<option value="1">ABOGADO</option>
-											<option value="2">NO ABOGADO</option>  
+											<option value="2">NO ABOGADO</option> 
+											<option value="3">ESTUDIANTE DE DERECHO</option> 
 																								
 											
 								</select>
@@ -1153,6 +1174,37 @@ function Eliminar_Tabla(idtabla){
 					
 				</tr> 
 				
+				
+				<tr>
+																	
+					<td>
+							
+						<div class="form-row">
+	  
+		
+							<div class="form-group col-md-6">
+							
+								  <label for="input_7">Es Entidad:</label>
+								 
+								  <select class="form-control" name="dato7U" id="dato7U" data-validacion-tipo="requerido">
+																					
+											<option value="" selected="selected">Seleccionar Opcion</option>
+											<option value="SI">SI</option>
+											<option value="NO">NO</option>  
+																								
+											
+								</select>
+							
+							</div>
+								
+							
+						</div>
+						
+					</td>
+				
+				
+					
+				</tr>
 				
 				<tr>
 				

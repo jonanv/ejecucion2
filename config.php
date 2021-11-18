@@ -7,11 +7,11 @@ $config->set('viewsFolder', 'views/');
 
 $config->set('dbhost', 'localhost');
 $config->set('dbname', 'ejecucion');
-$config->set('dbuser', 'root');
+$config->set('dbuser', 'javo2');
 $config->set('dbpass', 'Ejecuc10n2014');
 
-define('titulo','Laborales'); 
-define('rutabase','/laborales/'); 
+define('titulo',' - Oficina Ejecuci&oacute;n de Sentencias -'); 
+define('rutabase','/ejecucion/'); 
 
 
 ?>

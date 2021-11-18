@@ -33,7 +33,7 @@ function Reporte_Excel(){
 
 	//alert (datos_reporte_3);
 
-	location.href="/laborales/index.php?controller=empleados&action=listadoExcel&datos_reporte_3="+datos_reporte_3;
+	location.href="/ejecucion/index.php?controller=empleados&action=listadoExcel&datos_reporte_3="+datos_reporte_3;
 	
 }
 

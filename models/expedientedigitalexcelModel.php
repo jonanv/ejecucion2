@@ -644,6 +644,13 @@ if($opcion == 2){
 	$inicio38 = 1;
 	$inicio39 = 1;
 	$inicio40 = 1;
+	$inicio41 = 1;
+	$inicio42 = 1;
+	$inicio43 = 1;
+	$inicio44 = 1;
+	$inicio45 = 1;
+	$inicio46 = 1;
+	$inicio47 = 1;
 	
 	
 	
@@ -1194,6 +1201,90 @@ if($opcion == 2){
 						$inicio40 = $suma40P  + 1;
 						
 					}
+					
+					//CUADERNO DE MEDIDAS SECUESTRE
+					if ( $d6M == 41 ){
+					
+						$suma41P  = $suma41P + $d4M;
+						
+						$d4M_2    = "$inicio41 - $suma41P";
+						
+						
+						$inicio41 = $suma41P  + 1;
+						
+					}
+					
+					//CUADERNO IMPUGNACION TUTELA
+					if ( $d6M == 42 ){
+					
+						$suma42P  = $suma42P + $d4M;
+						
+						$d4M_2    = "$inicio42 - $suma42P";
+						
+						
+						$inicio42 = $suma42P  + 1;
+						
+					}
+					
+					//CUADERNO TUTELA 2
+					if ( $d6M == 43 ){
+					
+						$suma43P  = $suma43P + $d4M;
+						
+						$d4M_2    = "$inicio43 - $suma43P";
+						
+						
+						$inicio43 = $suma43P  + 1;
+						
+					}
+					
+					//CUADERNO IMPUGNACION TUTELA 2
+					if ( $d6M == 44 ){
+					
+						$suma44P  = $suma44P + $d4M;
+						
+						$d4M_2    = "$inicio44 - $suma44P";
+						
+						
+						$inicio44 = $suma44P  + 1;
+						
+					}
+					
+					//CUADERNO PROCESO VERBAL
+					if ( $d6M == 45 ){
+					
+						$suma45P  = $suma45P + $d4M;
+						
+						$d4M_2    = "$inicio45 - $suma45P";
+						
+						
+						$inicio45 = $suma45P  + 1;
+						
+					}
+					
+					//CUADERNO OPOSICION
+					if ( $d6M == 46 ){
+					
+						$suma46P  = $suma46P + $d4M;
+						
+						$d4M_2    = "$inicio46 - $suma46P";
+						
+						
+						$inicio46 = $suma46P  + 1;
+						
+					}
+					
+					//CUADERNO DE INSOLVENCIA
+					if ( $d6M == 47 ){
+					
+						$suma47P  = $suma47P + $d4M;
+						
+						$d4M_2    = "$inicio47 - $suma47P";
+						
+						
+						$inicio47 = $suma47P  + 1;
+						
+					}
 				
 			
 			}
@@ -1686,6 +1777,89 @@ if($opcion == 2){
 						
 					}
 				
+					//CUADERNO DE MEDIDAS SECUESTRE
+					if ( $d6M == 41 ){
+					
+						$suma41P  = $suma41P + $d4M;
+						
+						$d4M_2    = "$inicio41 - $suma41P";
+						
+						
+						$inicio41 = $suma41P  + 1;
+						
+					}
+					
+					//CUADERNO IMPUGNACION TUTELA
+					if ( $d6M == 42 ){
+					
+						$suma42P  = $suma42P + $d4M;
+						
+						$d4M_2    = "$inicio42 - $suma42P";
+						
+						
+						$inicio42 = $suma42P  + 1;
+						
+					}
+					
+					//CUADERNO TUTELA 2
+					if ( $d6M == 43 ){
+					
+						$suma43P  = $suma43P + $d4M;
+						
+						$d4M_2    = "$inicio43 - $suma43P";
+						
+						
+						$inicio43 = $suma43P  + 1;
+						
+					}
+					
+					//CUADERNO IMPUGNACION TUTELA 2
+					if ( $d6M == 44 ){
+					
+						$suma44P  = $suma44P + $d4M;
+						
+						$d4M_2    = "$inicio44 - $suma44P";
+						
+						
+						$inicio44 = $suma44P  + 1;
+						
+					}
+					
+					//CUADERNO PROCESO VERBAL
+					if ( $d6M == 45 ){
+					
+						$suma45P  = $suma45P + $d4M;
+						
+						$d4M_2    = "$inicio45 - $suma45P";
+						
+						
+						$inicio45 = $suma45P  + 1;
+						
+					}
+					
+					//CUADERNO OPOSICION
+					if ( $d6M == 46 ){
+					
+						$suma46P  = $suma46P + $d4M;
+						
+						$d4M_2    = "$inicio46 - $suma46P";
+						
+						
+						$inicio46 = $suma46P  + 1;
+						
+					}
+					
+					//CUADERNO DE INSOLVENCIA
+					if ( $d6M == 47 ){
+					
+						$suma47P  = $suma47P + $d4M;
+						
+						$d4M_2    = "$inicio47 - $suma47P";
+						
+						
+						$inicio47 = $suma47P  + 1;
+						
+					}
 			
 			
 			}
@@ -2179,6 +2353,13 @@ if($opcion == 4){
 		$inicio38 = 1;
 		$inicio39 = 1;
 		$inicio40 = 1;
+		$inicio41 = 1;
+		$inicio42 = 1;
+		$inicio43 = 1;
+		$inicio44 = 1;
+		$inicio45 = 1;
+		$inicio46 = 1;
+		$inicio47 = 1;
 		
 		
 		while($field = $vector_datos->fetch() )
@@ -2725,8 +2906,91 @@ if($opcion == 4){
 							$inicio40 = $suma40P  + 1;
 							
 						}
+						
+						//CUADERNO DE MEDIDAS SECUESTRE
+						if ( $d6M == 41 ){
 					
-				
+							$suma41P  = $suma41P + $d4M;
+							
+							$d4M_2    = "$inicio41 - $suma41P";
+							
+							
+							$inicio41 = $suma41P  + 1;
+							
+						}
+						
+						//CUADERNO IMPUGNACION TUTELA
+						if ( $d6M == 42 ){
+						
+							$suma42P  = $suma42P + $d4M;
+							
+							$d4M_2    = "$inicio42 - $suma42P";
+							
+							
+							$inicio42 = $suma42P  + 1;
+							
+						}
+						
+						//CUADERNO TUTELA 2
+						if ( $d6M == 43 ){
+						
+							$suma43P  = $suma43P + $d4M;
+							
+							$d4M_2    = "$inicio43 - $suma43P";
+							
+							
+							$inicio43 = $suma43P  + 1;
+							
+						}
+						
+						//CUADERNO IMPUGNACION TUTELA 2
+						if ( $d6M == 44 ){
+						
+							$suma44P  = $suma44P + $d4M;
+							
+							$d4M_2    = "$inicio44 - $suma44P";
+							
+							
+							$inicio44 = $suma44P  + 1;
+							
+						}
+						
+						//CUADERNO PROCESO VERBAL
+						if ( $d6M == 45 ){
+						
+							$suma45P  = $suma45P + $d4M;
+							
+							$d4M_2    = "$inicio45 - $suma45P";
+							
+							
+							$inicio45 = $suma45P  + 1;
+							
+						}
+						
+						//CUADERNO OPOSICION
+						if ( $d6M == 46 ){
+						
+							$suma46P  = $suma46P + $d4M;
+							
+							$d4M_2    = "$inicio46 - $suma46P";
+							
+							
+							$inicio46 = $suma46P  + 1;
+							
+						}
+						
+						//CUADERNO DE INSOLVENCIA
+						if ( $d6M == 47 ){
+						
+							$suma47P  = $suma47P + $d4M;
+							
+							$d4M_2    = "$inicio47 - $suma47P";
+							
+							
+							$inicio47 = $suma47P  + 1;
+							
+						}
+						
 				}
 				else{
 					
@@ -3215,6 +3479,89 @@ if($opcion == 4){
 							
 							
 							$inicio40 = $suma40P  + 1;
+							
+						}
+						//CUADERNO DE MEDIDAS SECUESTRE
+						if ( $d6M == 41 ){
+						
+							$suma41P  = $suma41P + $d4M;
+							
+							$d4M_2    = "$inicio41 - $suma41P";
+							
+							
+							$inicio41 = $suma41P  + 1;
+							
+						}
+						
+						//CUADERNO IMPUGNACION TUTELA
+						if ( $d6M == 42 ){
+						
+							$suma42P  = $suma42P + $d4M;
+							
+							$d4M_2    = "$inicio42 - $suma42P";
+							
+							
+							$inicio42 = $suma42P  + 1;
+							
+						}
+						
+						//CUADERNO TUTELA 2
+						if ( $d6M == 43 ){
+						
+							$suma43P  = $suma43P + $d4M;
+							
+							$d4M_2    = "$inicio43 - $suma43P";
+							
+							
+							$inicio43 = $suma43P  + 1;
+							
+						}
+						
+						//CUADERNO IMPUGNACION TUTELA 2
+						if ( $d6M == 44 ){
+						
+							$suma44P  = $suma44P + $d4M;
+							
+							$d4M_2    = "$inicio44 - $suma44P";
+							
+							
+							$inicio44 = $suma44P  + 1;
+							
+						}
+						
+						//CUADERNO PROCESO VERBAL
+						if ( $d6M == 45 ){
+						
+							$suma45P  = $suma45P + $d4M;
+							
+							$d4M_2    = "$inicio45 - $suma45P";
+							
+							
+							$inicio45 = $suma45P  + 1;
+							
+						}
+						
+						//CUADERNO OPOSICION
+						if ( $d6M == 46 ){
+						
+							$suma46P  = $suma46P + $d4M;
+							
+							$d4M_2    = "$inicio46 - $suma46P";
+							
+							
+							$inicio46 = $suma46P  + 1;
+							
+						}
+						
+						//CUADERNO DE INSOLVENCIA
+						if ( $d6M == 47 ){
+						
+							$suma47P  = $suma47P + $d4M;
+							
+							$d4M_2    = "$inicio47 - $suma47P";
+							
+							
+							$inicio47 = $suma47P  + 1;
 							
 						}
 					

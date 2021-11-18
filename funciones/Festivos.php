@@ -166,6 +166,10 @@ class Festivos
 		$this->festivos[$ano][3][29] = true;
 		$this->festivos[$ano][3][30] = true;	
 		$this->festivos[$ano][3][31] = true;
+		
+		//DIAS SIN ESTADO, POR CAMBIO DE SECRETARIO
+		$this->festivos[$ano][11][2] = true;
+		$this->festivos[$ano][11][3] = true;
 		//-------------------------------------------------------------------------------
 		
 		//**********************************************************************************************

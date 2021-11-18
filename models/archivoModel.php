@@ -85,7 +85,7 @@ class archivoModel extends modelBase{
 
 	  {
 
-	    $_SESSION['elemento'] = "Actualizaciï¿½n del Reparto Incorrecta, Faltan Valores por Definir en el Reparto, Verificar clic en Reparto, Fecha, Juzgado Reparto y Cambio Ponente";
+	    $_SESSION['elemento'] = "Actualización del Reparto Incorrecta, Faltan Valores por Definir en el Reparto, Verificar clic en Reparto, Fecha, Juzgado Reparto y Cambio Ponente";
 
 	    $_SESSION['elem_reparto'] = true;
 
@@ -545,7 +545,7 @@ LIMIT 15");
 
       $detalle=$_SESSION['nombre']." "."Registro un nuevo seguimiento ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -610,7 +610,7 @@ values ('$idusuario','$fecha','$idjuzgado','$desde', '$hasta', '$procesos', '$co
 
  /***********************************************************************************/
 
-  /*------------------------------ Registrar Informe Gestiï¿½n --------------------------------*/
+  /*------------------------------ Registrar Informe Gestión --------------------------------*/
 
   /***********************************************************************************/
 
@@ -1184,7 +1184,7 @@ values ('$ano','$idjuzgado','$j12cm_enero','$j12cm_febrero','$j12cm_marzo', '$j1
 
       $detalle=$_SESSION['nombre']." "."Resgistr&oacute; informe de gesti&oacute;n ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -1203,7 +1203,7 @@ values ('$ano','$idjuzgado','$j12cm_enero','$j12cm_febrero','$j12cm_marzo', '$j1
 
  /***********************************************************************************/
 
-  /*------------------------------ Consultar Informe Gestiï¿½n --------------------------------*/
+  /*------------------------------ Consultar Informe Gestión --------------------------------*/
 
   /***********************************************************************************/
 
@@ -1239,7 +1239,7 @@ order by ig.id;");
 
  /***********************************************************************************/
 
-  /*------------------------------ Modificar Informe Gestiï¿½n --------------------------------*/
+  /*------------------------------ Modificar Informe Gestión --------------------------------*/
 
   /***********************************************************************************/
 
@@ -1294,7 +1294,7 @@ order by ig.id;");
 
       $detalle=$_SESSION['nombre']." "."Actualiz&oacute; informe de gesti&oacute;n ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -1352,7 +1352,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
 
   /***********************************************************************************/
 
-  /*---------------------------  Listar usuarios empleados del ï¿½rea archivo --------------------*/
+  /*---------------------------  Listar usuarios empleados del área archivo --------------------*/
 
   /***********************************************************************************/
 
@@ -1373,7 +1373,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
   }
   /***********************************************************************************/
 
-  /*---------------------------  Listar usuarios empleados con el jef de ï¿½rea archivo --------------------*/
+  /*---------------------------  Listar usuarios empleados con el jef de área archivo --------------------*/
 
   /***********************************************************************************/
 
@@ -1417,7 +1417,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
   
 /***********************************************************************************/
 
-  /*------------------------------  Listar Aï¿½os Seguimiento -------------------------*/
+  /*------------------------------  Listar Años Seguimiento -------------------------*/
 
   /***********************************************************************************/
 
@@ -1543,7 +1543,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
 
       $detalle=$_SESSION['nombre']." "."Modifico un nuevo seguimiento ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	 $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -1593,7 +1593,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
 	    $idres = $_SESSION['idUsuario'];
         $detalle=$_SESSION['nombre']." "."Elimino un seguimiento ".$fechal." "."a las: ".$hora;
 	 
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	    $tipolog=1;
 
         $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -1655,7 +1655,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
 	    $idres = $_SESSION['idUsuario'];
         $detalle=$_SESSION['nombre']." "."Elimino Acta de recibido ".$fechal." "."a las: ".$hora;
 	 
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	    $tipolog=1;
 
         $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -1719,7 +1719,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado) ");
 	    $idres = $_SESSION['idUsuario'];
         $detalle=$_SESSION['nombre']." "."Elimino Acta de entrega ".$fechal." "."a las: ".$hora;
 	 
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	    $tipolog=1;
 
         $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -1915,7 +1915,7 @@ inner join pa_juzgado as juzgado  on (juzgado.id=segui.idjuzgado)  WHERE segui.i
 
       $detalle=$_SESSION['nombre']." "."Registro acta de recibido ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -2098,7 +2098,7 @@ values('$idtipoinventario','$consecutivo_acta','$fecha_acta','$idjuzgado','$resp
 
       $detalle=$_SESSION['nombre']." "."Modifico acta de recibido ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -2256,7 +2256,7 @@ values('$idtipoinventario','$consecutivo_acta','$fecha_acta','$idjuzgado','$resp
 
       $detalle=$_SESSION['nombre']." "."Registro acta de entrega ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -2328,7 +2328,7 @@ values('$idtipoinventario','$consecutivo_acta','$fecha_acta','$idjuzgado','$resp
 
       $detalle=$_SESSION['nombre']." "."Modifico acta de entrega ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -2898,7 +2898,7 @@ WHERE inv.id='$id'");
 
       $detalle=$_SESSION['nombre']." "."Entreg&oacute; Acta Recibida ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -2967,7 +2967,7 @@ WHERE inv.id='$id'");
 
 /***********************************************************************************/
 
-  /*---------------------------  Listar Ubicaciï¿½n Expedientes --------------------*/
+  /*---------------------------  Listar Ubicación Expedientes --------------------*/
 
   /***********************************************************************************/
 
@@ -3370,7 +3370,7 @@ else{
 
    /***********************************************************************************/
 
-  /*------------------------------ Registrar Posiciï¿½n Expediente --------------------------------*/
+  /*------------------------------ Registrar Posición Expediente --------------------------------*/
 
   /***********************************************************************************/
 
@@ -3425,12 +3425,12 @@ else{
       
 	  $hora=$horaa[1]; 
 	  
-	  $accion='Resgistr&oacute; una nueva ubicaciï¿½n';
+	  $accion='Resgistr&oacute; una nueva ubicación';
 	  $idres = $_SESSION['idUsuario'];
 
-      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicaciï¿½n ".$fechal." "."a las: ".$hora;
+      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicación ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 	        $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
 
@@ -3542,12 +3542,12 @@ if($idclase_proceso!=''){
       
 	  $hora=$horaa[1]; 
 	  
-	  $accion='Resgistr&oacute; una nueva ubicaciï¿½n';
+	  $accion='Resgistr&oacute; una nueva ubicación';
 	  $idres = $_SESSION['idUsuario'];
 
-      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicaciï¿½n ".$fechal." "."a las: ".$hora;
+      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicación ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -3589,7 +3589,7 @@ if( $conn ) {
 $sql = "
 declare @cad integer 
 
-UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', a103fechdess = GETDATE(), a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', a103fechdess = GETDATE(), a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 WHERE a103llavproc='$radicado';
 
 SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radicado' 
@@ -3597,7 +3597,7 @@ SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radica
 INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 A110RENUTERM) values('$radicado',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
-'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',GETDATE(),'NO','NO')
+'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',GETDATE(),'NO','NO')
 ";
 
 $params = array();
@@ -3667,12 +3667,12 @@ if ($row_count === false)
       
 	  $hora=$horaa[1]; 
 	  
-	  $accion='Resgistr&oacute; una nueva ubicaciï¿½n';
+	  $accion='Resgistr&oacute; una nueva ubicación';
 	  $idres = $_SESSION['idUsuario'];
 
-      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicaciï¿½n ".$fechal." "."a las: ".$hora;
+      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicación ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 
       $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
@@ -3697,7 +3697,7 @@ if ($row_count === false)
   
    /***********************************************************************************/
 
-  /*------------------------------ Registrar Tï¿½tulos --------------------------------*/
+  /*------------------------------ Registrar Títulos --------------------------------*/
 
   /***********************************************************************************/
 
@@ -3738,12 +3738,12 @@ if ($row_count === false)
       
 	  $hora=$horaa[1]; 
 	  
-	  $accion='Resgistr&oacute; una nueva ubicaciï¿½n';
+	  $accion='Resgistr&oacute; una nueva ubicación';
 	  $idres = $_SESSION['idUsuario'];
 
-      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicaciï¿½n ".$fechal." "."a las: ".$hora;
+      $detalle=$_SESSION['nombre']." "."Registro una nueva ubicación ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=1;
 	  
 $i=1;
@@ -3838,32 +3838,45 @@ $j=1;
 
   /***********************************************************************************/
 
-  public function listarEstados() {
-	$idestado=$_GET['nombre'];
+  public function listarEstados()
 
-	$listar = $this->db->prepare("select * from estado order by nombre ");
-	$listar->execute();
+  {
 
-	return $listar;
+ 
+  $idestado=$_GET['nombre'];
+
+  $listar = $this->db->prepare("select * from estado order by nombre ");
+  $listar->execute();
+
+  return $listar;
+
+  
+
   }
   
-  /***********************************************************************************/
+     /***********************************************************************************/
 
   /*------------------------------  Listar Clase Proceso --------------------*/
 
   /***********************************************************************************/
 
-  public function listarClaseProceso() {
-	$idestado=$_GET['nombre'];
+  public function listarClaseProceso()
 
-	$listar = $this->db->prepare("select * from pa_clase_proceso order by nombre ");
-	$listar->execute();
+  {
 
-	return $listar;
+ 
+  $idestado=$_GET['nombre'];
+
+  $listar = $this->db->prepare("select * from pa_clase_proceso order by nombre ");
+  $listar->execute();
+
+  return $listar;
+
+  
+
   }
-
   /*------------------------------  Clase Proceso Siglo XXI de un Proceso especifico--------------------*/
-  public function ClaseProcesoSigloXXI() {
+  public function ClaseProcesoSigloXXI(){
   
   		$j=0;
 	   	unset($vector);
@@ -3920,6 +3933,7 @@ $j=1;
 		}
   
   		return $vector;
+  
   }
   /***********************************************************************************/
 
@@ -4196,7 +4210,7 @@ $listar = $this->db->prepare("SELECT ubi.id, user.empleado , ubi.fecha,ubi.fecha
 	
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	 //////////////////////////////////////////////Justicia XXI Actuaciï¿½n de Reparto/////////////////////////////////////////////////
+	 //////////////////////////////////////////////Justicia XXI Actuación de Reparto/////////////////////////////////////////////////
       $sininstancia = $radicado;
 	  $sin = substr($sininstancia, 0, 21);
 	  $listareparto = $this->db->prepare("select ct.idjuzgado_reparto, ct.fecha_reparto, ct.userquearchiva, ct.fechaquearchiva from ubicacion_expediente ct where ct.id='$id'");
@@ -4254,15 +4268,15 @@ $listar = $this->db->prepare("SELECT ubi.id, user.empleado , ubi.fecha,ubi.fecha
 				}  
 				$sql = ("declare @cad integer 
 				
-				UPDATE t103dainfoproc SET a103descacts='Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias', a103codiacts='30023582', a103codipads='30011102', a103fechdess = GETDATE(), a103anotacts = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias'
+				UPDATE t103dainfoproc SET a103descacts='Redistribución a Juzgados de Ejecución de Sentencias', a103codiacts='30023582', a103codipads='30011102', a103fechdess = GETDATE(), a103anotacts = 'Actuación Registrada por la Oficina de Ejecución de Sentencias'
 				WHERE a103llavproc='$radicado';
 				
 				SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radicado' 
 				
 				INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 				A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-				A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
-				'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
+				A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribución a Juzgados de Ejecución de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+				'Actuación Registrada por la Oficina de Ejecución de Sentencias',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
 								
 				$params = array();
 				$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
@@ -4301,7 +4315,7 @@ $listar = $this->db->prepare("SELECT ubi.id, user.empleado , ubi.fecha,ubi.fecha
 
       $detalle=$_SESSION['nombre']." "."Modifico Archivo ".$fechal." "."a las: ".$hora.", ID RADICADO: ".$id." RADICADO: ".$radicado;
 	  
-	   //es de tipo 2 porque va asociado al mï¿½dulo de correspondencia 
+	   //es de tipo 2 porque va asociado al módulo de correspondencia 
 	  $tipolog=1;
 	  $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
       $insertarlog->execute();	
@@ -4924,7 +4938,7 @@ public function modificarArchivo_Otro_SIN_JXXI(){
 	
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	 //////////////////////////////////////////////Justicia XXI Actuaciï¿½n de Reparto/////////////////////////////////////////////////
+	 //////////////////////////////////////////////Justicia XXI Actuación de Reparto/////////////////////////////////////////////////
       $sininstancia = $radicado;
 	  $sin = substr($sininstancia, 0, 21);
 	  $listareparto = $this->db->prepare("select ct.idjuzgado_reparto, ct.fecha_reparto, ct.userquearchiva, ct.fechaquearchiva from ubicacion_expediente ct where ct.id='$id'");
@@ -4982,15 +4996,15 @@ public function modificarArchivo_Otro_SIN_JXXI(){
 				}  
 				$sql = ("declare @cad integer 
 				
-				UPDATE t103dainfoproc SET a103descacts='Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias', a103codiacts='30023582', a103codipads='30011102', a103fechdess = GETDATE(), a103anotacts = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias'
+				UPDATE t103dainfoproc SET a103descacts='Redistribución a Juzgados de Ejecución de Sentencias', a103codiacts='30023582', a103codipads='30011102', a103fechdess = GETDATE(), a103anotacts = 'Actuación Registrada por la Oficina de Ejecución de Sentencias'
 				WHERE a103llavproc='$radicado';
 				
 				SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radicado' 
 				
 				INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 				A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-				A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
-				'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
+				A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribución a Juzgados de Ejecución de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+				'Actuación Registrada por la Oficina de Ejecución de Sentencias',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
 								
 				$params = array();
 				$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
@@ -5029,7 +5043,7 @@ public function modificarArchivo_Otro_SIN_JXXI(){
 
       $detalle=$_SESSION['nombre']." "."Modifico Archivo ".$fechal." "."a las: ".$hora.", ID RADICADO: ".$id." RADICADO: ".$radicado;
 	  
-	   //es de tipo 2 porque va asociado al mï¿½dulo de correspondencia 
+	   //es de tipo 2 porque va asociado al módulo de correspondencia 
 	  $tipolog=1;
 	  $insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
       $insertarlog->execute();	
@@ -5314,13 +5328,15 @@ public function get_lista_usuario_acciones($campos,$nombrelista,$idaccion,$campo
 										t2.nombre AS memorial,
 										t1.fecha_incorpora,
 										t1.ruta_local,
-										t1.id_memo_externo
+										t1.id_memo_externo,
+										t3.esentidad
 										
-										FROM (((detalle_correspondencia ds
+										FROM ((((detalle_correspondencia ds
 										
-										LEFT JOIN pa_usuario fu      ON ds.idusuario = fu.id)
-										LEFT JOIN correspondencia t1 ON t1.id        = ds.id_memorial)
-										LEFT JOIN pa_solicitud t2    ON t2.id        = t1.idsolicitud)
+										LEFT JOIN pa_usuario      fu ON ds.idusuario            = fu.id)
+										LEFT JOIN correspondencia t1 ON t1.id                   = ds.id_memorial)
+										LEFT JOIN pa_solicitud    t2 ON t2.id                   = t1.idsolicitud)
+										LEFT JOIN pa_usuario_expe t3 ON t1.id_memo_peticionario = t3.id)
 										
 										WHERE ds.idcorrespondencia ='$id'
 										
@@ -5336,7 +5352,7 @@ public function get_lista_usuario_acciones($campos,$nombrelista,$idaccion,$campo
   
    /***********************************************************************************/
 
-  /*----------------------- Listar Ultima Actuaciï¿½n-------------------------------------*/
+  /*----------------------- Listar Ultima Actuación-------------------------------------*/
 
   /***********************************************************************************/
 
@@ -5528,7 +5544,7 @@ if ($row_count === false)
 
       $detalle=$_SESSION['nombre']." "."Modifico Ponente ".$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 2 porque va asociado al mï¿½dulo de correspondencia 
+	   //es de tipo 2 porque va asociado al módulo de correspondencia 
 	  $tipolog=1;
 	$insertarlog = $this->db->prepare("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', '$accion','$detalle','$idres','$tipolog');");
 
@@ -5539,7 +5555,7 @@ if ($row_count === false)
   //--------------------AGREGADO POR JORGE ANDRES VALENCIA OROZCO 04 DICIEMBRE 2014---------------------------------------
    /***********************************************************************************/
 
-  /*----------------------- Listar Ultima Actuaciï¿½n Despacho-------------------------------------*/
+  /*----------------------- Listar Ultima Actuación Despacho-------------------------------------*/
 
   /***********************************************************************************/
 
@@ -5742,7 +5758,7 @@ if ($row_count === false)
 
       $detalle=$_SESSION['nombre']." ".$accion.$fechal." "."a las: ".$hora;
 	  
-	   //es de tipo 1 porque va asociado al mï¿½dulo de archivo 
+	   //es de tipo 1 porque va asociado al módulo de archivo 
 	  $tipolog=3;
 	  
 	  //echo "INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) VALUES ('$fechaa', //'$accion','$detalle','$idres','$tipolog');";
@@ -5807,7 +5823,7 @@ if ($row_count === false)
 		$ff         = $ff."."."000";
 		
 	
-		$observacion = "Traslado reposiciï¿½n"."Fec Fijacion: ".$fechafijacion." Fec Inicial: ".$fechainicial." Fec Final: ".$fechafinal;
+		$observacion = "Traslado reposición"."Fec Fijacion: ".$fechafijacion." Fec Inicial: ".$fechainicial." Fec Final: ".$fechafinal;
 		
 		$juzgadodestino     = trim($_GET['juzgadodestino']);
 		
@@ -5822,7 +5838,7 @@ if ($row_count === false)
 		$horalog    = $datosfecha[1];
 			
 			
-		$tiporegistro = "Confirmar Traslado reposiciï¿½n";
+		$tiporegistro = "Confirmar Traslado reposición";
 		$accion  = "Registra ".$tiporegistro." En el Sistema (SIEPRO)";
 		$detalle = $_SESSION['nombre']." ".$accion." ".$fechalog." "."a las: ".$horalog;
 		$tipolog = 1;
@@ -5852,7 +5868,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -5866,7 +5882,7 @@ if ($row_count === false)
 	  		$sin = substr($sininstancia, 0, 21);
 		
 			//COMO ESTABA
-			/*UPDATE T103DAINFOPROC SET a103descacts ='Traslado reposiciï¿½n', a103codiacts ='30023087', a103codipads =@var,
+			/*UPDATE T103DAINFOPROC SET a103descacts ='Traslado reposición', a103codiacts ='30023087', a103codipads =@var,
 					A103FECHINIS = convert(datetime, '$fi', 121),A103FECHFINS = convert(datetime, '$ff', 121),a103fechdess = GETDATE(),
 					A103ANOTACTS ='$observacion'
 					WHERE a103llavproc='$radicado';*/
@@ -5879,7 +5895,7 @@ if ($row_count === false)
 					INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,
 					A110NUMDTERM,A110FECHINIC,A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,
 					A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,A110RENUTERM) 
-					VALUES('$radicado',@cad,'$sin','00','30023087','30023086','Traslado reposiciï¿½n','N','NO','N',NULL,NULL,NULL,
+					VALUES('$radicado',@cad,'$sin','00','30023087','30023086','Traslado reposición','N','NO','N',NULL,NULL,NULL,
 					GETDATE(),NULL,NULL,'0000',NULL,GETDATE(),
 					NULL,NULL,NULL,'D','P',GETDATE(),NULL,NULL)
 			
@@ -5887,7 +5903,7 @@ if ($row_count === false)
 					WHERE A110CONSACTU = (SELECT MAX(A110CONSACTU) - 1 AS MAXIMO FROM T110DRACTUPROC WHERE A110LLAVPROC ='$radicado') 
 					AND A110LLAVPROC ='$radicado'
 					
-					UPDATE T103DAINFOPROC SET a103descactd ='Traslado reposiciï¿½n', a103codiactd ='30023087', a103codipadd =@var,
+					UPDATE T103DAINFOPROC SET a103descactd ='Traslado reposición', a103codiactd ='30023087', a103codipadd =@var,
 					A103FECHINID = NULL,A103FECHFIND = NULL,a103fechdesd = GETDATE(),
 					A103ANOTACTD ='$observacion'
 					WHERE a103llavproc='$radicado';");
@@ -5902,7 +5918,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -6053,7 +6069,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -6114,7 +6130,7 @@ if ($row_count === false)
 					
 	
 					UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', a103fechdess = GETDATE(), 
-					a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 					WHERE a103llavproc='$radicado';
 					
 					SELECT @cad2 =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radicado' 
@@ -6122,7 +6138,7 @@ if ($row_count === false)
 					INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 					A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 					A110RENUTERM) values('$radicado',@cad2,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
-					'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
+					'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
 		}
 		else{  
 		
@@ -6157,7 +6173,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -6321,7 +6337,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -6344,7 +6360,7 @@ if ($row_count === false)
 		$sql = ("DECLARE @cad integer
 					 
 					UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', a103fechdess = GETDATE(), 
-					a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 					WHERE a103llavproc='$radicado';
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radicado' 
@@ -6354,7 +6370,7 @@ if ($row_count === false)
 					A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 					A110RENUTERM) values('$radicado',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,
 					 NULL,NULL,NULL,
-					'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
+					'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
 				
 		
 		$params = array();
@@ -6364,7 +6380,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -6503,7 +6519,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -6552,7 +6568,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -7323,7 +7339,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -7500,7 +7516,7 @@ if ($row_count === false)
 										
 					}
 									
-					//Iniciar la transacciï¿½n.
+					//Iniciar la transacción.
 					if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 						$error_transaccion = 1;
@@ -7606,16 +7622,24 @@ if ($row_count === false)
 						
 							$idjuzgado = 2;
 							
-							$id_user_asignada = 59;
+							//Maria Carolina Henao Rodriguez
+							//$id_user_asignada = 59;
+							
+							//Sebastian Tamayo Hincapie
+							$id_user_asignada = 82;
 						
 							if($traslador == "NO"){
 								
-								$obs = "PASA A Maria Carolina Henao Rodriguez CON ".$cuadernor." CUADERNOS PARA COSTAS";
+								//$obs = "PASA A Maria Carolina Henao Rodriguez CON ".$cuadernor." CUADERNOS PARA COSTAS";
+								
+								$obs = "PASA A Sebastian Tamayo Hincapie CON ".$cuadernor." CUADERNOS PARA COSTAS";
 							}
 								
 							if($traslador == "SI"){
 							
-								$obs = "PASA A Maria Carolina Henao Rodriguez CON ".$cuadernor." CUADERNOS PARA COSTAS Y TRASLADO 110";
+								//$obs = "PASA A Maria Carolina Henao Rodriguez CON ".$cuadernor." CUADERNOS PARA COSTAS Y TRASLADO 110";
+								
+								$obs = "PASA A Sebastian Tamayo Hincapie CON ".$cuadernor." CUADERNOS PARA COSTAS Y TRASLADO 110";
 							}
 							
 							//CALCULAR LA FECHA INICIAL Y FINAL, DESDE EL MOMENTO
@@ -7729,11 +7753,11 @@ if ($row_count === false)
 			
 										UPDATE t103dainfoproc SET 
 										
-										a103descacts = 'Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias', 
+										a103descacts = 'Redistribución a Juzgados de Ejecución de Sentencias', 
 										a103codiacts = '30023582', 
 										a103codipads = '30011102',
 										a103fechdess = GETDATE(), 
-										a103anotacts = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias',
+										a103anotacts = 'Actuación Registrada por la Oficina de Ejecución de Sentencias',
 										A103ENTIRADI = '$juzgador_2', 
 										A103ESPERADI = '$juzgador_3', 
 										A103NUENRADI = '$juzgador_4', 
@@ -7781,7 +7805,7 @@ if ($row_count === false)
 										
 										INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 										A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-										A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+										A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribución a Juzgados de Ejecución de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
 										'$A110ANOTACTU',NULL,NULL,'S','D',GETDATE(),'NO','NO')	
 																	
 																	
@@ -7823,7 +7847,7 @@ if ($row_count === false)
 						
 										UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30023334', a103codipads='30023333', 
 										a103fechdess = GETDATE(), 
-										a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+										a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 										WHERE a103llavproc='$radicado';
 																
 																	
@@ -7871,7 +7895,7 @@ if ($row_count === false)
 											A110RENUTERM) 
 											VALUES('$radicado',@cad_2,'$sin','00','30023334','30023333','A Despacho','N','NO','N',0,NULL,NULL,
 											GETDATE(),NULL,NULL,NULL,NULL,NULL,
-											'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',
+											'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',
 											GETDATE(),'NO','NO') ");
 												
 												
@@ -7922,7 +7946,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						sqlsrv_rollback( $conn );
 									
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						sqlsrv_close( $conn );
 									
 									
@@ -7967,7 +7991,7 @@ if ($row_count === false)
 				//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 				sqlsrv_rollback( $conn );
 					
-				// Cerrar la conexiï¿½n.
+				// Cerrar la conexión.
 				sqlsrv_close( $conn );
 					
 				//echo "Fallo: " . $e->getMessage();
@@ -8069,7 +8093,7 @@ if ($row_count === false)
 										
 					}
 									
-					//Iniciar la transacciï¿½n.
+					//Iniciar la transacción.
 					if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 						$error_transaccion = 1;
@@ -8191,8 +8215,8 @@ if ($row_count === false)
 				
 							$sql = ("	DECLARE @cad integer 
 				
-										UPDATE t103dainfoproc SET a103descacts='Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias', a103codiacts='30023582', a103codipads='30011102',
-										a103fechdess = GETDATE(), a103anotacts = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias',
+										UPDATE t103dainfoproc SET a103descacts='Redistribución a Juzgados de Ejecución de Sentencias', a103codiacts='30023582', a103codipads='30011102',
+										a103fechdess = GETDATE(), a103anotacts = 'Actuación Registrada por la Oficina de Ejecución de Sentencias',
 										A103ENTIRADI = '$juzgador_2', A103ESPERADI = '$juzgador_3', A103NUENRADI = '$juzgador_4', A103CODIPONE = '$juzgador_0', A103NOMBPONE = '$juzgador_1'
 										WHERE a103llavproc='$radicado';
 										
@@ -8200,7 +8224,7 @@ if ($row_count === false)
 										
 										INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 										A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-										A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+										A110RENUTERM) values('$radicado',@cad,'$sin','00','30023582','30011102','Redistribución a Juzgados de Ejecución de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
 										'$A110ANOTACTU',NULL,NULL,'S','D',GETDATE(),'NO','NO')
 										
 									");	
@@ -8262,7 +8286,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						sqlsrv_rollback( $conn );
 									
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						sqlsrv_close( $conn );
 									
 									
@@ -8307,7 +8331,7 @@ if ($row_count === false)
 				//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 				sqlsrv_rollback( $conn );
 					
-				// Cerrar la conexiï¿½n.
+				// Cerrar la conexión.
 				sqlsrv_close( $conn );
 					
 				//echo "Fallo: " . $e->getMessage();
@@ -8373,7 +8397,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -8502,7 +8526,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -8605,9 +8629,17 @@ if ($row_count === false)
   public function get_vence_terminos($fecha_terminos){
 	
 		
+		/*$listar     = $this->db->prepare("SELECT ubi.id,ubi.radicado,ubi.fecha_terminos,ubi.termino_revisado,ubi.observacion_termino
+										  FROM ubicacion_expediente ubi 
+									      WHERE ubi.fecha_terminos = '$fecha_terminos'");*/
+										  
+		//SE CAMBIA A ESTA SQL A LA FECHA 3 DE NOVIEMBRE 2021, YA QUE EL ANTIGUO SECRETARIO TRABAJO HASTA EL 
+		//29 DE OCTUBRE 2021
 		$listar     = $this->db->prepare("SELECT ubi.id,ubi.radicado,ubi.fecha_terminos,ubi.termino_revisado,ubi.observacion_termino
 										  FROM ubicacion_expediente ubi 
-									      WHERE ubi.fecha_terminos = '$fecha_terminos'");
+									      WHERE ubi.termino_revisado != 'SI' 
+										  AND (ubi.fecha_terminos > '2021-10-29' AND ubi.fecha_terminos <= '$fecha_terminos')
+										  ORDER BY ubi.fecha_terminos,ubi.radicado");								  
 	
   		$listar->execute();
 
@@ -9136,7 +9168,7 @@ if ($row_count === false)
 							if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
 							{
 													
-								$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (Aï¿½oMesDiaHoramilitarMinutosSegundos)
+								$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
 								$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
 								//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
 								$ruta           = $raiz.'/'.$nom.'/'.$idradicado.'/'.$nombre_archivo;
@@ -9162,7 +9194,7 @@ if ($row_count === false)
 														
 							}
 							
-							if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+							if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 							{
 								$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 														
@@ -9592,7 +9624,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -9622,7 +9654,7 @@ if ($row_count === false)
 					A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 					A110RENUTERM) values('$cadenaradicados_3[1]',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,
 					convert(datetime, '2016-04-05', 121),NULL,NULL,NULL,NULL,NULL,
-					'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',
+					'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',
 					convert(datetime, '2016-04-05', 121),'NO','NO')");
 					
 					
@@ -9636,7 +9668,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -9717,14 +9749,14 @@ if ($row_count === false)
 	
 	//ESTA ES LA MISMA FUCNION QUE SE USA ACTUALMENTE VARIANDO SUS UPDATE Y INSERT PARA LAS TABLA St103dainfoproc Y T110DRACTUPROC
 	
-	//ESTE INSERT SE USA PARA CREAR UNA ACTUACION CON Auto termina proceso por desistimiento tï¿½cito 
+	//ESTE INSERT SE USA PARA CREAR UNA ACTUACION CON Auto termina proceso por desistimiento tácito 
 	
 	/*INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,
 	  A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 	  A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,
 	  A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 	  A110RENUTERM) 
-	  values('17001400300120100038800',38,'170014003001201000388','00','30000031','30000031','Auto termina proceso por desistimiento tï¿½cito','N','NO','N',0,NULL,NULL,convert(datetime, '2016-02-04', 121),NULL,NULL,NULL,NULL,NULL,
+	  values('17001400300120100038800',38,'170014003001201000388','00','30000031','30000031','Auto termina proceso por desistimiento tácito','N','NO','N',0,NULL,NULL,convert(datetime, '2016-02-04', 121),NULL,NULL,NULL,NULL,NULL,
 	  '',NULL,NULL,'D','P',convert(datetime, '2016-02-04', 121),'NO','NO')
 	  
 	  //ESTE INSERT SE USA PARA CREAR UNA ACTUACION CON Fijacion estado 
@@ -9740,7 +9772,7 @@ if ($row_count === false)
 	  //ESTE UPDATE SE USA PARA ACTUALIZAR LA ULTIMA ACTAUCION DE DESPACHO Y SECRETARIA
 	  
 	  //DESPACHO
-	  a103descactd='Auto termina proceso por desistimiento tï¿½cito'
+	  a103descactd='Auto termina proceso por desistimiento tácito'
 	  //SECRETARIA
 	  a103descacts='Fijacion estado'
 	  
@@ -9749,8 +9781,8 @@ if ($row_count === false)
 	  //NOTA: CUANDO SE FIJA LA ACTUACION FIJACION ESTADO LA FECHA INICIAL Y FINAL DEBEN SER UNA MAS A LA FECHA DE ACTUACION
 	  //ES DECIR SI LA FECHA DE ACTUACION ES 2016-02-04 LA INICIAL Y FINAL SON 2016-02-05
 	  
-	  UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tï¿½cito', a103codiacts='30000031', a103codipads='30000031', a103fechdess = convert(datetime, '2016-02-04', 121),a103fechdesd = convert(datetime, '2016-02-04', 121), 
-	  a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+	  UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tácito', a103codiacts='30000031', a103codipads='30000031', a103fechdess = convert(datetime, '2016-02-04', 121),a103fechdesd = convert(datetime, '2016-02-04', 121), 
+	  a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 	  WHERE a103llavproc='$cadenaradicados_3[1]'
 	  
 	  */
@@ -9917,7 +9949,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -10037,7 +10069,7 @@ if ($row_count === false)
 													 
 													UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', 
 													a103fechdess = convert(datetime, '$fechacarga', 121), 
-													a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+													a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 													WHERE a103llavproc='$radicado';
 													
 													SELECT @cad = MAX(A110CONSACTU)+1 FROM T110DRACTUPROC WHERE a110Llavproc='$radicado' 
@@ -10049,7 +10081,7 @@ if ($row_count === false)
 													A110RENUTERM) 
 													VALUES('$radicado',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,
 													convert(datetime, '$fechacarga', 121),NULL,NULL,NULL,NULL,NULL,
-													'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',
+													'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',
 													convert(datetime, '$fechacarga', 121),'NO','NO') ");
 										
 										
@@ -10092,7 +10124,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 									
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -10137,7 +10169,7 @@ if ($row_count === false)
 					//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 					sqlsrv_rollback( $conn );
 					
-					// Cerrar la conexiï¿½n.
+					// Cerrar la conexión.
 					sqlsrv_close( $conn );
 					
 					//echo "Fallo: " . $e->getMessage();
@@ -10707,7 +10739,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -10922,7 +10954,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -10953,7 +10985,7 @@ if ($row_count === false)
 					 
 					UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', 
 					a103fechdess = convert(datetime, '2016-12-12', 121), 
-					a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 					WHERE a103llavproc='$cadenaradicados_3[1]';
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$cadenaradicados_3[1]' 
@@ -10964,7 +10996,7 @@ if ($row_count === false)
 					A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 					A110RENUTERM) values('$cadenaradicados_3[1]',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,
 					convert(datetime, '2016-12-12', 121),NULL,NULL,NULL,NULL,NULL,
-					'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',
+					'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',
 					convert(datetime, '2016-12-12', 121),'NO','NO')");
 					
 					
@@ -10978,7 +11010,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -11151,7 +11183,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -11178,7 +11210,7 @@ if ($row_count === false)
 	  	$sin = substr($sininstancia, 0, 21);
 		
 					
-		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tï¿½cito
+		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tácito
 		//EN LA TABLA t103dainfoproc ES DONDE SE ACTUALIZA LA ACTUACION TANTO DE DESPACHO COMO DE SECRETARIA
 		//Y EN LA TABLA T110DRACTUPROC SE INSERTA LA ULTIMA ACTUACION DE DESPACHO
 		
@@ -11214,11 +11246,11 @@ if ($row_count === false)
 		
 		$sql = ("DECLARE @cad integer
 					 
-					UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tï¿½cito', 
+					UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tácito', 
 					a103codiacts='30000031', a103codipads='30000031', 
 					a103fechdess = convert(datetime, '2019-03-27', 121),
 					a103fechdesd = convert(datetime, '2019-03-27', 121), 
-	  				a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+	  				a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 	                WHERE a103llavproc='$cadenaradicados_3[1]'
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$cadenaradicados_3[1]' 
@@ -11246,7 +11278,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -11385,7 +11417,7 @@ if ($row_count === false)
 		$observaciondespacho   = 'Auto resuelve sustitucion poder';
 		$observaciondespacho_2 = 'ESTADO DE 19 DE SEPTIEMBRE DE 2017';
 		
-		$OBST110 = "Actuaciï¿½n registrada el ".$fechalog." a las: ".$horalog;
+		$OBST110 = "Actuación registrada el ".$fechalog." a las: ".$horalog;
 		
 
 		date_default_timezone_set('America/Bogota'); 
@@ -11415,7 +11447,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -11442,7 +11474,7 @@ if ($row_count === false)
 	  	$sin = substr($sininstancia, 0, 21);
 		
 					
-		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tï¿½cito
+		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tácito
 		//EN LA TABLA t103dainfoproc ES DONDE SE ACTUALIZA LA ACTUACION TANTO DE DESPACHO COMO DE SECRETARIA
 		//Y EN LA TABLA T110DRACTUPROC SE INSERTA LA ULTIMA ACTUACION DE DESPACHO
 		
@@ -11478,7 +11510,7 @@ if ($row_count === false)
 		
 		$sql = ("DECLARE @cad integer
 					 
-					UPDATE t103dainfoproc SET a103descactd='Auto resuelve sustituciï¿½n poder', 
+					UPDATE t103dainfoproc SET a103descactd='Auto resuelve sustitución poder', 
 					a103codiactd='30020081', a103codipadd='30023118', 
 					a103fechdesd = convert(datetime, '2017-09-18', 121)
 	                WHERE a103llavproc='$cadenaradicados_3[1]'
@@ -11508,7 +11540,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -11542,7 +11574,7 @@ if ($row_count === false)
 				$this->db->beginTransaction();
 				
 			  
-					//Auto resuelve sustituciï¿½n poder
+					//Auto resuelve sustitución poder
 			
 					$this->db->exec("UPDATE ubicacion_expediente SET fecha='2017-09-18',idjuzgadodestino ='$cadenaradicados_3[2]',
 					                 fechasalida=NULL,fechadevolucion = '2017-09-18',idusuario = '$idusuario'
@@ -11655,7 +11687,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -11694,7 +11726,7 @@ if ($row_count === false)
 				    A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,
 				    A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 				    A110RENUTERM) 
-				    values('$cadenaradicados_3[1]',@cad,'$sin','00','30023388','30023138','Auto termina proceso por desistimiento tï¿½cito','N','NO','N',NULL,
+				    values('$cadenaradicados_3[1]',@cad,'$sin','00','30023388','30023138','Auto termina proceso por desistimiento tácito','N','NO','N',NULL,
 					NULL,
 					NULL,
 					convert(datetime, '2019-03-27', 121),
@@ -11712,7 +11744,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -11829,7 +11861,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -11868,7 +11900,7 @@ if ($row_count === false)
 				    A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,
 				    A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 				    A110RENUTERM) 
-				    values('$cadenaradicados_3[1]',@cad,'$sin','00','30020081','30023023','Auto resuelve sustituciï¿½n poder','N','NO','N',NULL,
+				    values('$cadenaradicados_3[1]',@cad,'$sin','00','30020081','30023023','Auto resuelve sustitución poder','N','NO','N',NULL,
 					NULL,
 					NULL,
 					convert(datetime, '2017-09-18', 121),
@@ -11886,7 +11918,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -12063,7 +12095,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -12093,7 +12125,7 @@ if ($row_count === false)
 		/*$sql = ("DECLARE @cad integer
 					 
 					UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', a103fechdess = '2015-12-03 00:00:00.000', 
-					a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 					WHERE a103llavproc='$cadenaradicados_3[1]';
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$cadenaradicados_3[1]' 
@@ -12101,14 +12133,14 @@ if ($row_count === false)
 					INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 					A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 					A110RENUTERM) values('$cadenaradicados_3[1]',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,'2015-12-03 00:00:00.000',NULL,NULL,NULL,NULL,NULL,
-					'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D','2015-12-03 00:00:00.000','NO','NO')");*/
+					'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D','2015-12-03 00:00:00.000','NO','NO')");*/
 					
 					
-		//PARA QUE EN SECRETRAIA SE FIJE ESTADO Y EN DESPACHO Auto termina proceso por desistimiento tï¿½cito
+		//PARA QUE EN SECRETRAIA SE FIJE ESTADO Y EN DESPACHO Auto termina proceso por desistimiento tácito
 		/*$sql = ("DECLARE @cad integer
 					 
-					UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tï¿½cito', a103codiacts='30000031', a103codipads='30000031', a103fechdess = convert(datetime, '2016-02-24', 121),a103fechdesd = convert(datetime, '2016-02-24', 121), 
-	  				a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tácito', a103codiacts='30000031', a103codipads='30000031', a103fechdess = convert(datetime, '2016-02-24', 121),a103fechdesd = convert(datetime, '2016-02-24', 121), 
+	  				a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 	                WHERE a103llavproc='$cadenaradicados_3[1]'
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$cadenaradicados_3[1]' 
@@ -12129,7 +12161,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		/*if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -12251,6 +12283,9 @@ if ($row_count === false)
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------
 
+	
+		
+		
 			try {  
 			
 				$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12259,25 +12294,24 @@ if ($row_count === false)
 				$this->db->beginTransaction();
 				
 			  
-					$this->db->exec(
-						"UPDATE ubicacion_expediente 
-						SET fecha='$fechalog', idusuario = '$idusuario', fecha_terminos = '$fechatermino', termino_revisado = '', observacion_termino = '$obst' 
-						WHERE id='$id'");
+					$this->db->exec("UPDATE ubicacion_expediente SET fecha='$fechalog',idusuario = '$idusuario',
+					                 fecha_terminos = '$fechatermino',termino_revisado = '',observacion_termino = '$obst' 
+									 where id='$id'");
 						
-					$this->db->exec("INSERT INTO detalle_correspondencia (idcorrespondencia, fecha, observacion, idusuario) 
-					                 VALUES('$id', '$fecharegistro', '$observacion', '$idusuario')");
+					$this->db->exec("INSERT INTO detalle_correspondencia (idcorrespondencia,fecha,observacion,idusuario) 
+					                 VALUES('$id','$fecharegistro','$observacion','$idusuario')");
 						
-					$this->db->exec("INSERT INTO log (fecha, accion, detalle,idusuario, idtipolog) 
+					$this->db->exec("INSERT INTO log (fecha, accion,detalle,idusuario,idtipolog) 
 					                 VALUES ('$fechalog', '$accion','$detalle','$idusuario','$tipolog')");
 					
-
+					
+					
+				
 				//SE TERMINA LA TRANSACCION  
 				$this->db->commit();
 				
 				
-				print'<script languaje="Javascript">
-						location.href="index.php?controller=archivo&action=mensajes&nombre=2"
-					</script>';
+				print'<script languaje="Javascript">location.href="index.php?controller=archivo&action=mensajes&nombre=2"</script>';
 			  
 			} 
 			catch (Exception $e) {
@@ -13397,7 +13431,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -13427,7 +13461,7 @@ if ($row_count === false)
 		/*$sql = ("DECLARE @cad integer
 					 
 					UPDATE t103dainfoproc SET a103descacts='A Despacho', a103codiacts='30000031', a103codipads='30000031', a103fechdess = '2015-12-03 00:00:00.000', 
-					a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 					WHERE a103llavproc='$cadenaradicados_3[1]';
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$cadenaradicados_3[1]' 
@@ -13435,14 +13469,14 @@ if ($row_count === false)
 					INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 					A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 					A110RENUTERM) values('$cadenaradicados_3[1]',@cad,'$sin','00','30000031','30000031','A Despacho','N','NO','N',0,NULL,NULL,'2015-12-03 00:00:00.000',NULL,NULL,NULL,NULL,NULL,
-					'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D','2015-12-03 00:00:00.000','NO','NO')");*/
+					'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D','2015-12-03 00:00:00.000','NO','NO')");*/
 					
 					
-		//PARA QUE EN SECRETRAIA SE FIJE ESTADO Y EN DESPACHO Auto termina proceso por desistimiento tï¿½cito
+		//PARA QUE EN SECRETRAIA SE FIJE ESTADO Y EN DESPACHO Auto termina proceso por desistimiento tácito
 		/*$sql = ("DECLARE @cad integer
 					 
-					UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tï¿½cito', a103codiacts='30000031', a103codipads='30000031', a103fechdess = convert(datetime, '2016-02-24', 121),a103fechdesd = convert(datetime, '2016-02-24', 121), 
-	  				a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+					UPDATE t103dainfoproc SET a103descacts='Fijacion estado',a103descactd='Auto termina proceso por desistimiento tácito', a103codiacts='30000031', a103codipads='30000031', a103fechdess = convert(datetime, '2016-02-24', 121),a103fechdesd = convert(datetime, '2016-02-24', 121), 
+	  				a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 	                WHERE a103llavproc='$cadenaradicados_3[1]'
 					
 					SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$cadenaradicados_3[1]' 
@@ -13463,7 +13497,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		/*if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -13558,7 +13592,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -13591,7 +13625,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -14602,11 +14636,11 @@ if ($row_count === false)
 
 						//NOTA: SE PONE utf8_encode POR QUE SI EL CAMPO TIENE TILDE NO NO SE MUESTRA EN EL REPORTE
 						//TODO EL REGISTRO
-						//El elemento HTML <nobr> previene que una lï¿½nea de texto se divida en una nueva lï¿½nea, 
-						//asï¿½, se presentarï¿½ en una lï¿½nea larga por lo que puede ser necesario hacer un
-						//desplazamiento de pantalla. Esta etiqueta no es un estï¿½ndar HTML y no deberï¿½a ser usada, 
+						//El elemento HTML <nobr> previene que una línea de texto se divida en una nueva línea, 
+						//así, se presentará en una línea larga por lo que puede ser necesario hacer un
+						//desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, 
 						//en su lugar use la propiedad CSS white-space como en este ejemplo:
-						//<span style="white-space: nowrap">Lï¿½nea larga sin saltos</span>
+						//<span style="white-space: nowrap">Línea larga sin saltos</span>
 						
 						//MultiCell($w, $h, $txt, $border=0, $align='J', $fill=false, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0, $valign='T', $fitcell=false) {
 						
@@ -15013,7 +15047,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -15179,7 +15213,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 								
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -15225,7 +15259,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						sqlsrv_rollback( $conn );
 					
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						sqlsrv_close( $conn );
 						
 						
@@ -15822,7 +15856,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						//sqlsrv_rollback( $conn );
 					
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						//sqlsrv_close( $conn );
 						
 						
@@ -16346,7 +16380,7 @@ if ($row_count === false)
 			$listar = $this->db->prepare("	
 											SELECT t1.id,t2.des AS clase,t3.des AS numeral,t1.descripcion,t1.analisis_causas,
 											t4.des AS procesoresponsable,/*t5.des AS procesoafectado*/t1.id_ai,t6.des AS metodologia,t7.des AS generada,
-											t1.fecha_registro,t1.hora_registro,t1.estado
+											t1.fecha_registro,t1.hora_registro,t1.estado,t1.numero_accion
 											FROM (((((gc_acciones t1
 											LEFT JOIN gc_lista t2 ON t1.id_clase = t2.id)
 											LEFT JOIN gc_lista t3 ON t1.id_numeral_norma = t3.id)
@@ -16355,8 +16389,9 @@ if ($row_count === false)
 											LEFT JOIN gc_lista t6 ON t1.id_metodologia = t6.id)
 											LEFT JOIN gc_lista t7 ON t1.id_generada = t7.id)
 											WHERE t1.id >= '1' 
-											ORDER BY t1.id DESC
-											LIMIT 30
+											/*ORDER BY t1.id DESC*/
+											ORDER BY t1.numero_accion
+											LIMIT 40
 											
 										");
 											
@@ -16477,7 +16512,7 @@ if ($row_count === false)
 			$listar = $this->db->prepare("	
 											SELECT t1.id,t2.des AS clase,t3.des AS numeral,t1.descripcion,t1.analisis_causas,
 											t4.des AS procesoresponsable,/*t5.des AS procesoafectado*/t1.id_ai,t6.des AS metodologia,t7.des AS generada,
-											t1.fecha_registro,t1.hora_registro,t1.estado
+											t1.fecha_registro,t1.hora_registro,t1.estado,t1.numero_accion
 											FROM (((((gc_acciones t1
 											LEFT JOIN gc_lista t2 ON t1.id_clase = t2.id)
 											LEFT JOIN gc_lista t3 ON t1.id_numeral_norma = t3.id)
@@ -16486,8 +16521,9 @@ if ($row_count === false)
 											LEFT JOIN gc_lista t6 ON t1.id_metodologia = t6.id)
 											LEFT JOIN gc_lista t7 ON t1.id_generada = t7.id)
 											WHERE t1.id >= '1'" .$filtrox. "
-											ORDER BY t1.id DESC
-											LIMIT 30
+											/*ORDER BY t1.id DESC*/
+											ORDER BY t1.numero_accion
+											LIMIT 40
 											
 										");   
 			
@@ -17546,7 +17582,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						//sqlsrv_rollback( $conn );
 					
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						//sqlsrv_close( $conn );
 						
 						
@@ -17997,7 +18033,7 @@ if ($row_count === false)
 			
 			//FECHA INCIAL
 			$inicio    = new DateTime($fecharegistro);
-			//Un dï¿½a es P1D,Dos dï¿½as es P2D, 
+			//Un día es P1D,Dos días es P2D, 
 			//es decir que si la fecha inicial es 2015-05-19 y la final es 2015-05-27
 			//el intervalos iria de 2015-05-19 2015-05-20 2015-05-21 2015-05-22 2015-05-23 2015-05-24 2015-05-25 2015-05-26
 			$intervalo = new DateInterval('P1D');
@@ -18011,12 +18047,12 @@ if ($row_count === false)
     			//echo $fecha->format('Y-m-d')."\n";
 				//$dias_diferencia = $dias_diferencia." ".$fecha->format('Y-m-d')."\n";
 				
-				//OBTENGO FECHA A FECHA, DESDE LA INCIAL A LA FINAL Y CAPTURO SU Aï¿½O,MES,DIA
+				//OBTENGO FECHA A FECHA, DESDE LA INCIAL A LA FINAL Y CAPTURO SU AÑO,MES,DIA
 				$fechaperiodo = explode("-",$fecha->format('Y-m-d'));
 				$y            = trim($fechaperiodo[0]);
 			    $m            = trim($fechaperiodo[1]);
 			    $d            = trim($fechaperiodo[2]);
-				//OBTENGO EL DIA SEGUN LA FECHA PASADA A $fechaperiodo CON SUS PARTES Aï¿½O,MES,DIA
+				//OBTENGO EL DIA SEGUN LA FECHA PASADA A $fechaperiodo CON SUS PARTES AÑO,MES,DIA
 				$date         = date('D', mktime(0,0,0,$m,$d,$y));
 				
 				//PARA DIAS FESTIVOS, SE INSTANCIA LA CLASE Y SE LLAMA LA FUNCION PARA SABER SI UN DIA ES FESTIVO
@@ -18404,7 +18440,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -18510,7 +18546,7 @@ if ($row_count === false)
 													A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,
 													A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,A110RENUTERM) 
 													VALUES('$radicado',@cad,'$sin','00','$A110CODIACTU','$A110CODIPADR','$actuacion','N','NO','N',NULL,
-													NULL,NULL,GETDATE(),NULL,NULL,'0002',NULL,GETDATE(),
+													NULL,NULL,GETDATE(),NULL,NULL,'0021',NULL,GETDATE(),
 													'$nota_actu',NULL,NULL,'D','P',GETDATE(),NULL,NULL)
 												   
 												   
@@ -18618,7 +18654,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 								
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -18654,7 +18690,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						sqlsrv_rollback( $conn );
 					
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						sqlsrv_close( $conn );
 						
 						$msgError = $e->getMessage();
@@ -18786,7 +18822,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -19036,7 +19072,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 								
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -19100,7 +19136,7 @@ if ($row_count === false)
 						//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 						sqlsrv_rollback( $conn );
 					
-						// Cerrar la conexiï¿½n.
+						// Cerrar la conexión.
 						sqlsrv_close( $conn );
 						
 						$msgError = $e->getMessage();
@@ -19169,7 +19205,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -19303,7 +19339,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -20100,17 +20136,17 @@ if ($row_count === false)
 						
 						//PROCESOS MASIVOS 
 						
-						//Auto aprueba liquidaciï¿½n crï¿½dito
+						//Auto aprueba liquidación crédito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
 	//********************************************************************************************
 	
-	//PRIMERO SE REGISTRA LA ACTUACION Auto aprueba liquidaciï¿½n crï¿½dito Y LUEGO LA DE Fijacion estado
+	//PRIMERO SE REGISTRA LA ACTUACION Auto aprueba liquidación crédito Y LUEGO LA DE Fijacion estado
 	
 	
-	//ACTUACION =  Auto aprueba liquidaciï¿½n crï¿½dito
-	//AALC      = Auto aprueba liquidaciï¿½n crï¿½dito
+	//ACTUACION =  Auto aprueba liquidación crédito
+	//AALC      = Auto aprueba liquidación crédito
   	public function Registrar_AALC(){
   
 
@@ -20159,7 +20195,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -20202,7 +20238,7 @@ if ($row_count === false)
 				    A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,
 				    A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
 				    A110RENUTERM) 
-				    values('$cadenaradicados_3[1]',@cad,'$sin','00','30023402','30023118','Auto aprueba liquidaciï¿½n crï¿½dito','N','NO','N',NULL,
+				    values('$cadenaradicados_3[1]',@cad,'$sin','00','30023402','30023118','Auto aprueba liquidación crédito','N','NO','N',NULL,
 					NULL,
 					NULL,
 					convert(datetime, '2020-05-27', 121),
@@ -20223,7 +20259,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -20286,7 +20322,7 @@ if ($row_count === false)
 	
 	
 	//ACTUACION = Fijacion estado 
-	//AALC      = Auto aprueba liquidaciï¿½n crï¿½dito
+	//AALC      = Auto aprueba liquidación crédito
 	public function Registrar_FE_AALC(){
   
 
@@ -20330,7 +20366,7 @@ if ($row_count === false)
 		$observaciondespacho   = 'Auto aprueba liquidacion credito';
 		$observaciondespacho_2 = 'ESTADO DE 28 DE MAYO DE 2020';
 		
-		$OBST110 = "Actuaciï¿½n registrada el ".$fechalog." a las: ".$horalog;
+		$OBST110 = "Actuación registrada el ".$fechalog." a las: ".$horalog;
 		
 
 		date_default_timezone_set('America/Bogota'); 
@@ -20360,7 +20396,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -20387,7 +20423,7 @@ if ($row_count === false)
 	  	$sin = substr($sininstancia, 0, 21);
 		
 					
-		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tï¿½cito
+		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tácito
 		//EN LA TABLA t103dainfoproc ES DONDE SE ACTUALIZA LA ACTUACION TANTO DE DESPACHO COMO DE SECRETARIA
 		//Y EN LA TABLA T110DRACTUPROC SE INSERTA LA ULTIMA ACTUACION DE DESPACHO
 		
@@ -20426,7 +20462,7 @@ if ($row_count === false)
 					DECLARE @cad integer
 					 
 					UPDATE t103dainfoproc SET 
-					a103descactd = 'Auto aprueba liquidaciï¿½n crï¿½dito', 
+					a103descactd = 'Auto aprueba liquidación crédito', 
 					a103codiactd = '30023402', 
 					a103codipadd = '30023118', 
 					a103fechdesd =  convert(datetime, '2020-05-27', 121),
@@ -20460,7 +20496,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -20494,7 +20530,7 @@ if ($row_count === false)
 				$this->db->beginTransaction();
 				
 			  
-					//Auto resuelve sustituciï¿½n poder
+					//Auto resuelve sustitución poder
 			
 					$this->db->exec("UPDATE ubicacion_expediente SET 
 					                 fecha            ='2020-05-27',
@@ -20612,7 +20648,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -20675,7 +20711,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -20791,7 +20827,7 @@ if ($row_count === false)
 		$observaciondespacho   = 'Auto modifica liquidacion presentada';
 		$observaciondespacho_2 = 'ESTADO DE 28 DE MAYO DE 2020';
 		
-		$OBST110 = "Actuaciï¿½n registrada el ".$fechalog." a las: ".$horalog;
+		$OBST110 = "Actuación registrada el ".$fechalog." a las: ".$horalog;
 		
 
 		date_default_timezone_set('America/Bogota'); 
@@ -20821,7 +20857,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $conn ) === false ) {
 			 
 			 $error_transaccion = 1;
@@ -20848,7 +20884,7 @@ if ($row_count === false)
 	  	$sin = substr($sininstancia, 0, 21);
 		
 					
-		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tï¿½cito
+		//PARA QUE EN SECRETRAIA (OECM) SE APLIQUE LA ACTUACION FIJE ESTADO Y EN DESPACHO LA ACTUACION Auto termina proceso por desistimiento tácito
 		//EN LA TABLA t103dainfoproc ES DONDE SE ACTUALIZA LA ACTUACION TANTO DE DESPACHO COMO DE SECRETARIA
 		//Y EN LA TABLA T110DRACTUPROC SE INSERTA LA ULTIMA ACTUACION DE DESPACHO
 		
@@ -20921,7 +20957,7 @@ if ($row_count === false)
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -20955,7 +20991,7 @@ if ($row_count === false)
 				$this->db->beginTransaction();
 				
 			  
-					//Auto resuelve sustituciï¿½n poder
+					//Auto resuelve sustitución poder
 			
 					$this->db->exec("UPDATE ubicacion_expediente SET 
 					                 fecha            ='2020-05-27',
@@ -21012,7 +21048,7 @@ if ($row_count === false)
   //********************************************************************************************
 						
 						//FIN PROCESOS MASIVOS 
-						//Auto aprueba liquidaciï¿½n crï¿½dito
+						//Auto aprueba liquidación crédito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
@@ -21026,7 +21062,7 @@ if ($row_count === false)
 	
 						
 						//PROCESOS MASIVOS DESDE FORMUARIO SIEPRO OPCION ACTUACION JUSTICIA XXI MASIVA 
-						//Auto aprueba liquidaciï¿½n crï¿½dito
+						//Auto aprueba liquidación crédito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
@@ -21073,7 +21109,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -21173,7 +21209,7 @@ if ($row_count === false)
 		
 		$lactutext = utf8_decode(trim($_POST['lactutext']));//PARTE TEXTO DE LA ACTUACION
 		
-		//Auto aprueba liquidaciï¿½n crï¿½dito
+		//Auto aprueba liquidación crédito
 		if($lactu_1 == '30023402'){
 		
 			$A110CODIPROV = '0021';
@@ -21298,7 +21334,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -21423,7 +21459,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 									
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -21467,7 +21503,7 @@ if ($row_count === false)
 					//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 					sqlsrv_rollback( $conn );
 					
-					// Cerrar la conexiï¿½n.
+					// Cerrar la conexión.
 					sqlsrv_close( $conn );
 					
 					//echo "Fallo: " . $e->getMessage();
@@ -21545,7 +21581,7 @@ if ($row_count === false)
 		//$observaciondespacho_2 = 'ESTADO DE 26 DE MAYO DE 2020';
 		$observaciondespacho_2 = 'ESTADO '.strtoupper($fecha_estado);
 		
-		$OBST110 = "Actuaciï¿½n registrada el ".$fechalog." a las: ".$horalog;
+		$OBST110 = "Actuación registrada el ".$fechalog." a las: ".$horalog;
 		
 
 		date_default_timezone_set('America/Bogota'); 
@@ -21669,7 +21705,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -21809,7 +21845,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 									
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -21854,7 +21890,7 @@ if ($row_count === false)
 					//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 					sqlsrv_rollback( $conn );
 					
-					// Cerrar la conexiï¿½n.
+					// Cerrar la conexión.
 					sqlsrv_close( $conn );
 					
 					//echo "Fallo: " . $e->getMessage();
@@ -21914,13 +21950,13 @@ if ($row_count === false)
 		
 		$lactutext = utf8_decode(trim($_POST['lactutext']));//PARTE TEXTO DE LA ACTUACION
 		
-		//Auto aprueba liquidaciï¿½n crï¿½dito ï¿½ Auto aprueba liquidaciï¿½n de costas
+		//Auto aprueba liquidación crédito Ó Auto aprueba liquidación de costas
 		if($lactu_1 == '30023402' || $lactu_1 == '30023317'){
 		
 			$A110CODIPROV = '0021';
 		
 		}
-		//Auto modifica liquidacion presentada ï¿½ Auto termina proceso por desistimiento tï¿½cito
+		//Auto modifica liquidacion presentada Ó Auto termina proceso por desistimiento tácito
 		if($lactu_1 == '30023324' || $lactu_1 == '30023388'){
 		
 			$A110CODIPROV = '0020';
@@ -21953,7 +21989,7 @@ if ($row_count === false)
 		//$observaciondespacho_2 = 'ESTADO DE 26 DE MAYO DE 2020';
 		$observaciondespacho_2 = 'ESTADO '.strtoupper($fecha_estado);
 		
-		$OBST110 = "Actuaciï¿½n registrada el ".$fechalog." a las: ".$horalog;
+		$OBST110 = "Actuación registrada el ".$fechalog." a las: ".$horalog;
 		
 
 		date_default_timezone_set('America/Bogota'); 
@@ -22074,7 +22110,7 @@ if ($row_count === false)
 										
 								}
 									
-								//Iniciar la transacciï¿½n.
+								//Iniciar la transacción.
 								if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 										$error_transaccion = 1;
@@ -22127,7 +22163,7 @@ if ($row_count === false)
 										//YA QUE LOS PROCESOS PASADOS POR EL AREA DEL CONTADOR, PARA APROBAR O MODIFICAR LIQUIDACION
 										//PRIMERO VAN A DESPACHO
 										
-										//Auto modifica liquidacion presentada ï¿½ Auto aprueba liquidaciï¿½n crï¿½dito
+										//Auto modifica liquidacion presentada Ó Auto aprueba liquidación crédito
 										//DESISTIMIENTO YA FUE ENVIADO ADESPACHO
 										if($lactu_1 == '30023324' || $lactu_1 == '30023402'){
 										
@@ -22187,14 +22223,14 @@ if ($row_count === false)
 										//PRIMERO VAN A DESPACHO
 										
 										
-										//Auto modifica liquidacion presentada ï¿½ Auto aprueba liquidaciï¿½n crï¿½dito
+										//Auto modifica liquidacion presentada Ó Auto aprueba liquidación crédito
 										//DESISTIMIENTO YA FUE ENVIADO ADESPACHO
 										if($lactu_1 == '30023324' || $lactu_1 == '30023402'){
 										
 											//NOTA: SE CAMBIA GETDATE() A convert(datetime, '$fechae', 121)
 											//YA QUE AL MOMENTO DE MOSTRAR EL ORDEN LAS ACTUACIONES LA ULTIMA QUE QUEDA
 											//ES A DESPACHO POR QUE LA FECHA TOMA CON HORA,MINUTOS Y SEGUNDOS QUEDANDO
-											//MAYO QUE LA DE Auto modifica liquidacion presentada ï¿½ Auto aprueba liquidaciï¿½n crï¿½dito
+											//MAYO QUE LA DE Auto modifica liquidacion presentada Ó Auto aprueba liquidación crédito
 											//Y FIJA ESTADO 19 DE MAYO 2021
 											$sql_300 = ("	
 							
@@ -22205,7 +22241,7 @@ if ($row_count === false)
 															a103codiacts = '30023334', 
 															a103codipads = '30023333', 
 															a103fechdess =  convert(datetime, '$fechae', 121), 
-															a103anotacts = 'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal'
+															a103anotacts = 'Enviado por la Oficina de Ejecución Civil Municipal'
 															
 														WHERE a103llavproc ='$radicado';
 																				
@@ -22254,7 +22290,7 @@ if ($row_count === false)
 															A110RENUTERM) 
 															VALUES('$radicado',@cad_2,'$sin','00','30023334','30023333','A Despacho','N','NO','N',0,NULL,NULL,
 															convert(datetime, '$fechae', 121),NULL,NULL,NULL,NULL,NULL,
-															'Enviado por la Oficina de Ejecuciï¿½n Civil Municipal',NULL,NULL,'S','D',
+															'Enviado por la Oficina de Ejecución Civil Municipal',NULL,NULL,'S','D',
 															convert(datetime, '$fechae', 121),'NO','NO') ");
 																
 																
@@ -22459,7 +22495,7 @@ if ($row_count === false)
 									//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 									sqlsrv_rollback( $conn );
 									
-									// Cerrar la conexiï¿½n.
+									// Cerrar la conexión.
 									sqlsrv_close( $conn );
 									
 									
@@ -22505,7 +22541,7 @@ if ($row_count === false)
 					//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 					sqlsrv_rollback( $conn );
 					
-					// Cerrar la conexiï¿½n.
+					// Cerrar la conexión.
 					sqlsrv_close( $conn );
 					
 					//echo "Fallo: " . $e->getMessage();
@@ -22582,7 +22618,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -22667,7 +22703,7 @@ if ($row_count === false)
 	
 						
 						//FIN PROCESOS MASIVOS DESDE FORMUARIO SIEPRO OPCION ACTUACION JUSTICIA XXI MASIVA 
-						//Auto aprueba liquidaciï¿½n crï¿½dito
+						//Auto aprueba liquidación crédito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
@@ -22781,29 +22817,36 @@ if ($row_count === false)
 											
 										);*/
 										
-			$listar = $this->db->prepare("SELECT
+			$listar = $this->db->prepare("
+			
+										 	SELECT
 											t1.id,t1.idradicado,t1.fecha,t1.hora,t1.folios,
 											t1.folio_i,t1.folio_f,t1.cuaderno,
 											t1.foto,t1.tipo,t1.ruta,t1.des,t1.idusuario,
 											t2.empleado AS registra,
 											CONCAT(t3.empleado,'/',t1.fechaedita,'/',t1.horaedita) AS edita,
-											t4.des AS descuaderno,
-											t4.orden,t1.idcorrespondencia,t5.id_memo_externo,t6.nombre AS dependencia,
+											t4.des AS descuaderno,t4.orden,t1.idcorrespondencia,t5.id_memo_externo,t6.nombre AS dependencia,
 											t1.fecha_creacion,t1.fecha_de,t1.fecha_a,t1.origen,t1.obs,t7.origen AS norigen,t1.orden_documento,
-											t1.para_estado,t1.fecha_estado,t1.otra
-											FROM ((((((expe_digital t1
-											INNER JOIN pa_usuario     t2 ON t1.idusuario         = t2.id)
-											LEFT JOIN pa_usuario      t3 ON t1.idusuarioedita    = t3.id)
-											LEFT JOIN expe_cuaderno   t4 ON t1.cuaderno          = t4.id)
-											LEFT JOIN correspondencia t5 ON t1.idcorrespondencia = t5.id)
-											LEFT JOIN pa_juzgado      t6 ON t1.id_dependencia    = t6.id)
-											LEFT JOIN expe_origen     t7 ON t1.origen            = t7.id)
+											t1.para_estado,t1.fecha_estado,t1.otra,t8.esentidad
+											FROM (((((((expe_digital t1
+											INNER JOIN pa_usuario     t2 ON t1.idusuario            = t2.id)
+											LEFT JOIN pa_usuario      t3 ON t1.idusuarioedita       = t3.id)
+											LEFT JOIN expe_cuaderno   t4 ON t1.cuaderno             = t4.id)
+											LEFT JOIN correspondencia t5 ON t1.idcorrespondencia    = t5.id)
+											LEFT JOIN pa_juzgado      t6 ON t1.id_dependencia       = t6.id)
+											LEFT JOIN expe_origen     t7 ON t1.origen               = t7.id)
+											LEFT JOIN pa_usuario_expe t8 ON t5.id_memo_peticionario = t8.id)
 											WHERE t1.idradicado = '$id_radi'
 											AND t1.estado != 3
 											ORDER BY t4.orden,t1.orden_documento"
 											/*ORDER BY t1.cuaderno,folio_i*/
+											
 										);
 										
+										
+										
+			
+			
 			/*$SQL = "
 			
 										 	SELECT
@@ -22979,14 +23022,15 @@ if ($row_count === false)
 												CONCAT(t3.empleado,'/',t1.fechaedita,'/',t1.horaedita) AS edita,
 												t4.des AS descuaderno,t4.orden,t1.idcorrespondencia,t5.id_memo_externo,t6.nombre AS dependencia,
 												t1.fecha_creacion,t1.fecha_de,t1.fecha_a,t1.origen,t1.obs,t7.origen AS norigen,t1.orden_documento,
-												t1.para_estado,t1.fecha_estado,t1.otra
-												FROM ((((((expe_digital t1
-												INNER JOIN pa_usuario     t2 ON t1.idusuario         = t2.id)
-												LEFT JOIN pa_usuario      t3 ON t1.idusuarioedita    = t3.id)
-												LEFT JOIN expe_cuaderno   t4 ON t1.cuaderno          = t4.id)
-												LEFT JOIN correspondencia t5 ON t1.idcorrespondencia = t5.id)
-												LEFT JOIN pa_juzgado      t6 ON t1.id_dependencia    = t6.id)
-												LEFT JOIN expe_origen     t7 ON t1.origen            = t7.id)
+												t1.para_estado,t1.fecha_estado,t1.otra,t8.esentidad
+												FROM (((((((expe_digital t1
+												INNER JOIN pa_usuario     t2 ON t1.idusuario            = t2.id)
+												LEFT JOIN pa_usuario      t3 ON t1.idusuarioedita       = t3.id)
+												LEFT JOIN expe_cuaderno   t4 ON t1.cuaderno             = t4.id)
+												LEFT JOIN correspondencia t5 ON t1.idcorrespondencia    = t5.id)
+												LEFT JOIN pa_juzgado      t6 ON t1.id_dependencia       = t6.id)
+												LEFT JOIN expe_origen     t7 ON t1.origen               = t7.id)
+												LEFT JOIN pa_usuario_expe t8 ON t5.id_memo_peticionario = t8.id)
 												WHERE t1.id >= '1'" .$filtrox. "
 												AND t1.idradicado = '$id_radi'
 												AND t1.estado != 3
@@ -23156,7 +23200,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -23866,7 +23910,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -24505,7 +24549,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -24736,7 +24780,7 @@ if ($row_count === false)
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -24978,7 +25022,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -25957,7 +26001,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -26835,7 +26879,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -27541,7 +27585,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -27828,7 +27872,7 @@ if ($row_count === false)
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -28216,7 +28260,7 @@ if ($row_count === false)
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -28639,7 +28683,7 @@ if ($row_count === false)
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -30610,10 +30654,16 @@ if ($row_count === false)
 		
 					
 					//SQL A EJECUTAR 
-					$SQL_1 = "UPDATE ubicacion_expediente 
-								SET digitalizado = 1
-								WHERE id = '$id_radi_digi'";			
+	
+					$SQL_1 = "UPDATE ubicacion_expediente SET
+					
+								  digitalizado = 1
+								  
+							  WHERE id    = '$id_radi_digi'";			
 											
+						
+					
+					
 					$error_transaccion   = 0; //variable para detectar error
 					$msg = " ";
 					
@@ -30833,14 +30883,14 @@ if ($row_count === false)
     {
 	
 	
-		// Tiempo mï¿½ximo de ejecuciï¿½n de ï¿½ste script en segundos.
+		// Tiempo máximo de ejecución de éste script en segundos.
 		//ini_set('max_execution_time','240000000000');  
 		
 		
-		/*Tamaï¿½o mï¿½ximo que el script puede usar de la memoria, mientras se ejecuta.*/
+		/*Tamaño máximo que el script puede usar de la memoria, mientras se ejecuta.*/
 		//ini_set("memory_limit" , "2048M"); 
 		  
-		//Que no haya lï¿½mite en la ejecuciï¿½n del script
+		//Que no haya límite en la ejecución del script
 		set_time_limit (0);
 		 
 		
@@ -30849,7 +30899,7 @@ if ($row_count === false)
 		
 		//NOTA 2 : YA NO SE ENVIAN LAS RUTAS CONCATENADAS, SI NO QUE SE ENVIAN EN ARRY DE FORMA
 		//implode(",", $ruta_descarga) 
-		//la funciï¿½n implode, esta funciï¿½n lo que hace es dado una cadena y un array, coge cada elemento, lo separa por esa cadena y nos lo devuelve en esa cadena 
+		//la función implode, esta función lo que hace es dado una cadena y un array, coge cada elemento, lo separa por esa cadena y nos lo devuelve en esa cadena 
 		//Y SE RECIBEN $ruta_descarga = explode(",",trim($_GET['ruta_descarga']));
 		//ESTO CON EL OBJETO DE QUE CUANDO ERAN CADENAS MUY LARGAS EL SISTEMA PODIA SACAR INCONSISTENCIAS
 		//AL REALIZAR LA DESCARGA, SE HACE EL CAMBIO EL 1 DE OCTUBRE 2020
@@ -30874,15 +30924,15 @@ if ($row_count === false)
 		 $zip = new ZipArchive();
 		// Creamos y abrimos un archivo zip temporal
 		 $zip->open("expdigi.zip",ZipArchive::CREATE);
-		 // Aï¿½adimos un directorio
+		 // Añadimos un directorio
 		 //$dir = 'miDirectorio';
 		 $dir = $ruta_descarga_3;
 		 $zip->addEmptyDir($dir);
-		 // Aï¿½adimos un archivo en la raid del zip.
+		 // Añadimos un archivo en la raid del zip.
 		 //$zip->addFile("imagen1.jpg","mi_imagen1.jpg");
 		 //$zip->addFile("17001400300120200022800ACTA.pdf","mi_17001400300120200022800ACTA.pdf");
 		 
-		 //Aï¿½adimos un archivo dentro del directorio que hemos creado
+		 //Añadimos un archivo dentro del directorio que hemos creado
 		 //$zip->addFile("imagen2.jpg",$dir."/mi_imagen2.jpg");
 		 
 		 $i = 0;
@@ -30913,7 +30963,7 @@ if ($row_count === false)
 		 
 		 
 		 
-		 // Una vez aï¿½adido los archivos deseados cerramos el zip.
+		 // Una vez añadido los archivos deseados cerramos el zip.
 		 $zip->close();
 		 // Creamos las cabezeras que forzaran la descarga del archivo como archivo zip.
 		 /*header("Content-type: application/octet-stream");
@@ -30944,7 +30994,7 @@ if ($row_count === false)
 		 
 		 // leemos el archivo creado
 		 readfile('expdigi.zip');
-		 // Por ï¿½ltimo eliminamos el archivo temporal creado
+		 // Por último eliminamos el archivo temporal creado
 		 unlink('expdigi.zip');//Destruye el archivo temporal
 		 
 		 exit;
@@ -30955,9 +31005,9 @@ if ($row_count === false)
 	
 	
 	/**
-	* Esta funciï¿½n devuelve el nï¿½mero de pï¿½ginas de un archivo pdf
+	* Esta función devuelve el número de páginas de un archivo pdf
 		$count = max($matches);
- 	* Tiene que recibir la ubicaciï¿½n y nombre del archivo
+ 	* Tiene que recibir la ubicación y nombre del archivo
 	*/
 	public function numeroPaginasPdf($archivoPDF){
 
@@ -32805,7 +32855,7 @@ if ($row_count === false)
 		$solicitud1 = explode("-", $solicitud);
 		$finsol     = $solicitud1[1];
 		$solicitud  = $solicitud1[0];
-		$actu       = "Recepciï¿½n Memorial por " .utf8_decode($finsol);
+		$actu       = "Recepción Memorial por " .utf8_decode($finsol);
 		
 		$fecha_entrega = $modelo->get_fecha_actual_amd();
 		$hora_militar  = $modelo->get_hora_actual_24horas();
@@ -32866,7 +32916,7 @@ if ($row_count === false)
 														
 				}
 													
-				//Iniciar la transacciï¿½n.
+				//Iniciar la transacción.
 				if ( sqlsrv_begin_transaction( $conn ) === false ) {
 														 
 					$error_transaccion = 1;
@@ -33024,7 +33074,7 @@ if ($row_count === false)
 							$cadena_juzgado;
 							$valorradicado_8 = substr($valorradicado, 10, 2);
 							$J;
-							// Recorremos cada carï¿½cter de la cadena
+							// Recorremos cada carácter de la cadena
 							for($i=0; $i<strlen($valorradicado_8); $i++){
 								
 								if($valorradicado_8[0] == 0){
@@ -33216,7 +33266,7 @@ if ($row_count === false)
 						
 							
 			
-							UPDATE t103dainfoproc SET a103descacts='Recepciï¿½n Memorial', a103codiacts='30000123', a103codipads='30000123', 
+							UPDATE t103dainfoproc SET a103descacts='Recepción Memorial', a103codiacts='30000123', a103codipads='30000123', 
 							a103fechdess = GETDATE(), a103anotacts = '$actu'
 							WHERE a103llavproc='$radicado';
 															
@@ -33259,7 +33309,7 @@ if ($row_count === false)
 														
 							INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 							A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-							A110RENUTERM) values('$radicado',@cad,'$sin','00','30000123','30000123','Recepciï¿½n Memorial','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+							A110RENUTERM) values('$radicado',@cad,'$sin','00','30000123','30000123','Recepción Memorial','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
 							'$actu',NULL,NULL,'S','D',GETDATE(),'NO','NO')	
 														
 														
@@ -33308,7 +33358,7 @@ if ($row_count === false)
 							//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 							sqlsrv_rollback( $conn );
 											
-							// Cerrar la conexiï¿½n.
+							// Cerrar la conexión.
 							sqlsrv_close( $conn );
 												
 												
@@ -33364,7 +33414,7 @@ if ($row_count === false)
 				//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 				sqlsrv_rollback( $conn );
 											
-				// Cerrar la conexiï¿½n.
+				// Cerrar la conexión.
 				sqlsrv_close( $conn );
 											
 											
@@ -33438,7 +33488,7 @@ if ($row_count === false)
 		$solicitud1 = explode("-", $solicitud);
 		$finsol     = $solicitud1[1];
 		$solicitud  = $solicitud1[0];
-		$actu       = "Recepciï¿½n Memorial por " .$finsol;
+		$actu       = "Recepción Memorial por " .$finsol;
 		
 		$fecha_entrega = $modelo->get_fecha_actual_amd();
 		$hora_militar  = $modelo->get_hora_actual_24horas();
@@ -33499,7 +33549,7 @@ if ($row_count === false)
 														
 				}
 													
-				//Iniciar la transacciï¿½n.
+				//Iniciar la transacción.
 				if ( sqlsrv_begin_transaction( $conn ) === false ) {
 														 
 					$error_transaccion = 1;
@@ -33621,7 +33671,7 @@ if ($row_count === false)
 							$cadena_juzgado;
 							$valorradicado_8 = substr($valorradicado, 10, 2);
 							$J;
-							// Recorremos cada carï¿½cter de la cadena
+							// Recorremos cada carácter de la cadena
 							for($i=0; $i<strlen($valorradicado_8); $i++){
 								
 								if($valorradicado_8[0] == 0){
@@ -33813,7 +33863,7 @@ if ($row_count === false)
 						
 							
 			
-							UPDATE t103dainfoproc SET a103descacts='Recepciï¿½n Memorial', a103codiacts='30000123', a103codipads='30000123', 
+							UPDATE t103dainfoproc SET a103descacts='Recepción Memorial', a103codiacts='30000123', a103codipads='30000123', 
 							a103fechdess = GETDATE(), a103anotacts = '$actu'
 							WHERE a103llavproc='$radicado';
 															
@@ -33856,7 +33906,7 @@ if ($row_count === false)
 														
 							INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 							A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-							A110RENUTERM) values('$radicado',@cad,'$sin','00','30000123','30000123','Recepciï¿½n Memorial','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+							A110RENUTERM) values('$radicado',@cad,'$sin','00','30000123','30000123','Recepción Memorial','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
 							'$actu',NULL,NULL,'S','D',GETDATE(),'NO','NO')	
 														
 														
@@ -33905,7 +33955,7 @@ if ($row_count === false)
 							//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 							sqlsrv_rollback( $conn );
 											
-							// Cerrar la conexiï¿½n.
+							// Cerrar la conexión.
 							sqlsrv_close( $conn );
 												
 												
@@ -33961,7 +34011,7 @@ if ($row_count === false)
 				//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 				sqlsrv_rollback( $conn );
 											
-				// Cerrar la conexiï¿½n.
+				// Cerrar la conexión.
 				sqlsrv_close( $conn );
 											
 											
@@ -34220,7 +34270,7 @@ if ($row_count === false)
 						if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
 						{
 												
-							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (Aï¿½oMesDiaHoramilitarMinutosSegundos)
+							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
 							$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
 							//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
 							$ruta           = $raiz.'/'.$nom.'/'.$idradicado.'/'.$nombre_archivo;
@@ -34261,7 +34311,7 @@ if ($row_count === false)
 													
 						}
 						
-						if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+						if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 						{
 							$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 													
@@ -34538,7 +34588,7 @@ if ($row_count === false)
 						if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
 						{
 												
-							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (Aï¿½oMesDiaHoramilitarMinutosSegundos)
+							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
 							$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
 							//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
 							$ruta           = $raiz.'/'.$nom.'/'.$idmemoexterno.'/'.$nombre_archivo;
@@ -34580,7 +34630,7 @@ if ($row_count === false)
 													
 						}
 						
-						if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+						if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 						{
 							$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 													
@@ -34788,7 +34838,7 @@ if ($row_count === false)
 			
 		}
 		
-		//Iniciar la transacciï¿½n.
+		//Iniciar la transacción.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -34987,7 +35037,7 @@ if ($row_count === false)
 					if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
 					{
 											
-						$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (Aï¿½oMesDiaHoramilitarMinutosSegundos)
+						$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
 						$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
 						//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
 						$ruta           = $raiz.'/'.$nom.'/'.$idradicado.'/'.$nombre_archivo;
@@ -35204,7 +35254,7 @@ if ($row_count === false)
 												
 					}
 					
-					if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+					if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 					{
 						$msg .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -35383,7 +35433,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -35736,7 +35786,7 @@ if ($row_count === false)
 												move_uploaded_file ($_FILES['archivo_carga']['tmp_name'][$i],$ruta);
 												
 												
-												//usleep ï¿½ Retrasar la ejecuciï¿½n en microsegundos
+												//usleep — Retrasar la ejecución en microsegundos
 												//Esperar 1 segundos
 												//SE APLICA ESTA ACCION PARA QUE EL ID CAMBIE EN UN SEGUNDO date('ymdhis') 
 												//Y NO SEA EL MISMO
@@ -35947,7 +35997,7 @@ if ($row_count === false)
 		$cadena_juzgado;
 		$valorradicado_8 = substr($valorradicado, 10, 2);
 		$J;
-		// Recorremos cada carï¿½cter de la cadena
+		// Recorremos cada carácter de la cadena
 		for($i=0; $i<strlen($valorradicado_8); $i++){
 			
 			if($valorradicado_8[0] == 0){
@@ -36544,14 +36594,14 @@ if ($row_count === false)
 		
 		}
 		
-		//El elemento ï¿½210409112903ï¿½ se elimina, pero la posiciï¿½n que tenï¿½a se mantiene. Si imprimimos el array el resultado serï¿½
-		//Posiciï¿½n 0 = null
-		//Posiciï¿½n 1 = xxx
-		//Posiciï¿½n 2 = xxx
+		//El elemento «210409112903» se elimina, pero la posición que tenía se mantiene. Si imprimimos el array el resultado será
+		//Posición 0 = null
+		//Posición 1 = xxx
+		//Posición 2 = xxx
 		//Por eso aplicamos array_values
-		//Para reordenar las posiciones, el resultado serï¿½
-		//Posiciï¿½n 0 = xxx
-		//Posiciï¿½n 1 = xxx
+		//Para reordenar las posiciones, el resultado será
+		//Posición 0 = xxx
+		//Posición 1 = xxx
 		$letras = array_values($letras);
 		
 		//RECORREMOS EL VECTOR $letras Y CONSTRUIMOS EL NOMBRE DEL ARCHIVO NUEVO
@@ -36746,14 +36796,14 @@ if ($row_count === false)
 		
 		}
 		
-		//El elemento ï¿½210409112903ï¿½ se elimina, pero la posiciï¿½n que tenï¿½a se mantiene. Si imprimimos el array el resultado serï¿½
-		//Posiciï¿½n 0 = null
-		//Posiciï¿½n 1 = xxx
-		//Posiciï¿½n 2 = xxx
+		//El elemento «210409112903» se elimina, pero la posición que tenía se mantiene. Si imprimimos el array el resultado será
+		//Posición 0 = null
+		//Posición 1 = xxx
+		//Posición 2 = xxx
 		//Por eso aplicamos array_values
-		//Para reordenar las posiciones, el resultado serï¿½
-		//Posiciï¿½n 0 = xxx
-		//Posiciï¿½n 1 = xxx
+		//Para reordenar las posiciones, el resultado será
+		//Posición 0 = xxx
+		//Posición 1 = xxx
 		$letras = array_values($letras);
 		
 		//RECORREMOS EL VECTOR $letras Y CONSTRUIMOS EL NOMBRE DEL ARCHIVO NUEVO
@@ -37083,7 +37133,7 @@ if ($row_count === false)
 															
 					$nueva_ruta_expediente = "EXPEDIENTE_DIGITAL_2/".$nom."/".date('ymdhis') . '-' .$nuevo_nombre_archivo.".".$nombre_archivo_tipo[1];
 					
-					//usleep ï¿½ Retrasar la ejecuciï¿½n en microsegundos
+					//usleep — Retrasar la ejecución en microsegundos
 					//Esperar 1 segundos
 					//SE APLICA ESTA ACCION PARA QUE EL ID CAMBIE EN UN SEGUNDO date('ymdhis') 
 					//Y NO SEA EL MISMO
@@ -37323,7 +37373,7 @@ if ($row_count === false)
 																
 					$nueva_ruta_expediente   = "EXPEDIENTE_DIGITAL_2/".$nom."/".date('ymdhis') . '-' .$nuevo_nombre_archivo.".".$nombre_archivo_tipo[1];
 					
-					//usleep ï¿½ Retrasar la ejecuciï¿½n en microsegundos
+					//usleep — Retrasar la ejecución en microsegundos
 					//Esperar 1 segundos
 					//SE APLICA ESTA ACCION PARA QUE EL ID CAMBIE EN UN SEGUNDO date('ymdhis') 
 					//Y NO SEA EL MISMO
@@ -37618,7 +37668,7 @@ if ($row_count === false)
 															
 					$nueva_ruta_expediente = "EXPEDIENTE_DIGITAL_2/".$nom."/".date('ymdhis') . '-' .$nuevo_nombre_archivo.".".$nombre_archivo_tipo[1];
 					
-					//usleep ï¿½ Retrasar la ejecuciï¿½n en microsegundos
+					//usleep — Retrasar la ejecución en microsegundos
 					//Esperar 1 segundos
 					//SE APLICA ESTA ACCION PARA QUE EL ID CAMBIE EN UN SEGUNDO date('ymdhis') 
 					//Y NO SEA EL MISMO
@@ -37920,7 +37970,7 @@ if ($row_count === false)
 																
 					$nueva_ruta_expediente   = "EXPEDIENTE_DIGITAL_2/".$nom."/".date('ymdhis') . '-' .$nuevo_nombre_archivo.".".$nombre_archivo_tipo[1];
 					
-					//usleep ï¿½ Retrasar la ejecuciï¿½n en microsegundos
+					//usleep — Retrasar la ejecución en microsegundos
 					//Esperar 1 segundos
 					//SE APLICA ESTA ACCION PARA QUE EL ID CAMBIE EN UN SEGUNDO date('ymdhis') 
 					//Y NO SEA EL MISMO
@@ -38671,7 +38721,7 @@ if ($row_count === false)
 						if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
 						{
 												
-							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (Aï¿½oMesDiaHoramilitarMinutosSegundos)
+							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
 							$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
 							//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
 							$ruta           = $raiz.'/'.$nom.'/'.$idmemoexterno.'/'.$nombre_archivo;
@@ -38716,7 +38766,7 @@ if ($row_count === false)
 													
 						}
 						
-						if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+						if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 						{
 							$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 													
@@ -38796,7 +38846,1703 @@ if ($row_count === false)
 				
   	}
 	
+	//NUEVO 5 DE AGOSTO 2021
 	
+	public function listar_memoriales_radicados_entidades(){
+	
+	
+			set_time_limit (240000000);
+			
+			
+			$modelo = new archivoModel();
+			
+			
+			$fecha_actual = $modelo->get_fecha_actual_amd();
+			
+			
+			$idusuario     = $_SESSION['idUsuario'];
+			
+			$nivel_user    = trim($_SESSION['nivelusuario']);
+			
+			$listar = $this->db->prepare("
+				
+												SELECT t1.id,t2.id AS idradicado,t2.radicado,t2.idjuzgado,t2.idjuzgado_reparto,t2.digitalizado,
+												t3.id AS idregistra,t3.nombre_usuario,t3.empleado,t3.correo,t1.fecha,t1.hora,t1.des,t1.folios,
+												t1.vizualizar,t1.respuesta,t1.idedita,t1.fechaedita,t1.horaedita,t3.celular
+												FROM ((expe_entidad_memo t1
+												INNER JOIN ubicacion_expediente t2 ON t1.idradicado = t2.id)
+												INNER JOIN pa_usuario_expe      t3 ON t1.idsolicitante   = t3.id)
+												WHERE (t1.vizualizar = 1)
+												ORDER BY t1.id DESC"
+												
+											);
+								
+
+  			$listar->execute();
+
+  			return $listar;
+	
+  	}
+	
+	public function listar_memoriales_radicados_filtro_entidades($datoJXX1,$datoJXX3,$datoJXX5,$datoJXX2,$datoJXX4,$datoJXX6){
+	
+	
+			set_time_limit (240000000);
+	
+			$idusuario  = $_SESSION['idUsuario'];
+			
+			$nivel_user = trim($_SESSION['nivelusuario']);
+			
+		
+			$filtrox;
+			
+			$filtrof;
+			
+			$filtro1;
+			$filtro2;
+			$filtro4;
+			$filtro6;
+			
+		
+			/*$fechad    = trim($_GET['dato_1']);
+			$fechah    = trim($_GET['dato_2']);
+			
+			$datox1    = trim($_GET['datox1']);
+			$datox2    = trim($_GET['datox2']);
+			$datox4    = trim($_GET['datox4']);*/
+			
+			
+			
+			
+			if ( !empty($datoJXX3) && !empty($datoJXX5) ) {
+			
+				$filtrof   = " AND (t1.fecha >= '$datoJXX3' AND t1.fecha <= '$datoJXX5')";
+				
+				
+			}
+			
+			
+			if ( !empty($datoJXX1) ) {
+			
+				
+				
+				$filtro1 = " AND t2.radicado LIKE '%$datoJXX1%' ";
+			
+			}
+			if ( !empty($datoJXX2) ) {
+			
+				
+				$filtro2 = " AND t3.nombre_usuario = '$datoJXX2' ";
+			
+			}
+			
+			if ( !empty($datoJXX4) ) {
+			
+	
+				$filtro4 = " AND t3.empleado LIKE '%$datoJXX4%' ";
+			
+			}
+			
+			if ( !empty($datoJXX6) ||  $datoJXX6 == 0) {
+			
+				
+				$filtro6 = " AND t1.vizualizar = '$datoJXX6' ";
+			
+			}
+			
+			$filtrox = $filtro1." ".$filtro2." ".$filtro4." ".$filtro6." ".$filtrof;
+		
+			
+			$listar = $this->db->prepare("
+					
+													SELECT t1.id,t2.id AS idradicado,t2.radicado,t2.idjuzgado,t2.idjuzgado_reparto,t2.digitalizado,
+													t3.id AS idregistra,t3.nombre_usuario,t3.empleado,t3.correo,t1.fecha,t1.hora,t1.des,t1.folios,
+													t1.vizualizar,t1.respuesta,t1.idedita,t1.fechaedita,t1.horaedita,t3.celular
+													FROM ((expe_entidad_memo t1
+													INNER JOIN ubicacion_expediente t2 ON t1.idradicado    = t2.id)
+													INNER JOIN pa_usuario_expe      t3 ON t1.idsolicitante = t3.id)
+													WHERE t1.id >= '1'" .$filtrox. "
+													/*AND (t1.vizualizar = 1 || t1.vizualizar = 0 || t1.vizualizar = 2)*/
+													ORDER BY t1.id DESC"
+													
+													
+											);
+			
+			
+  			$listar->execute();
+			
+			
+
+  			return $listar;
+	
+  	}
+	
+	
+	public function descargar_multiples_archivos_entidad()
+    {
+	
+		//set_time_limit (240000000);
+		
+		//Que no haya límite en la ejecución del script
+		set_time_limit (0);
+		
+		//NOTA: DE ESTA FORMA LLEGAN LOS DATOS A public function descargar_multiples_archivos()
+		//RECEPCION_DEMANDAS/2/525/2.pdf******RECEPCION_DEMANDAS/2/525/1.pdf******undefined
+		
+		//NOTA 2 : YA NO SE ENVIAN LAS RUTAS CONCATENADAS, SI NO QUE SE ENVIAN EN ARRY DE FORMA
+		//ruta_descarga.join()
+		//EJEMPLO :
+		//const elements = ['Fire', 'Air', 'Water'];
+		//console.log(elements.join());
+		//expected output: "Fire,Air,Water"
+		//la función join, esta función lo que hace es dado una cadena y un array, coge cada elemento, lo separa por esa cadena y nos lo devuelve en esa cadena 
+		//Y SE RECIBEN $ruta_descarga = explode(",",trim($_GET['ruta_descarga']));
+		//ESTO CON EL OBJETO DE QUE CUANDO ERAN CADENAS MUY LARGAS EL SISTEMA PODIA SACAR INCONSISTENCIAS
+		//AL REALIZAR LA DESCARGA, SE HACE EL CAMBIO EL 26 DE OCTUBRE 2020
+		//join() APLICA CUANDO SE ENVIA $_GET['ruta_descarga'] DESDE JAVASCRIPT
+		//implode() APLICA CUANDO SE ENVIA $_GET['ruta_descarga'] DESDE PHP
+
+		//print_r(trim($_GET['ruta_descarga']));
+		
+		//$ruta_descarga = explode("******",trim($_GET['ruta_descarga']));
+		
+		$ruta_descarga = explode(",",trim($_GET['ruta_descarga']));
+		
+		//print_r($ruta_descarga);
+		
+		$ruta_descarga_1 = explode("/",$ruta_descarga[0]);
+		$ruta_descarga_3 = $ruta_descarga_1[2];
+		
+		$long_ruta = count($ruta_descarga);
+		
+		//"memos.zip"
+		//$memos = "memos".$ruta_descarga_3."zip";
+		
+		// Creamos un instancia de la clase ZipArchive
+		 $zip = new ZipArchive();
+		// Creamos y abrimos un archivo zip temporal
+		 $zip->open("memos.zip",ZipArchive::CREATE);
+		 // Añadimos un directorio
+		 //$dir = 'miDirectorio';
+		 $dir = $ruta_descarga_3;
+		 $zip->addEmptyDir($dir);
+		 // Añadimos un archivo en la raid del zip.
+		 //$zip->addFile("imagen1.jpg","mi_imagen1.jpg");
+		 //$zip->addFile("17001400300120200022800ACTA.pdf","mi_17001400300120200022800ACTA.pdf");
+		 
+		 //Añadimos un archivo dentro del directorio que hemos creado
+		 //$zip->addFile("imagen2.jpg",$dir."/mi_imagen2.jpg");
+		 
+		 $i = 0;
+		//SE QUITA EL -1 YA QUE NO ES UNA CADENA SI NO ARRAY
+		 //while($i < $long_ruta - 1){
+		 while($i < $long_ruta){
+		 
+		 	$datos_archivo = explode("/",$ruta_descarga[$i]);
+			$nomarchivo    = trim($datos_archivo[4]);
+		 
+			 $zip->addFile($ruta_descarga[$i],$dir."/".$nomarchivo);
+			 
+			 $i = $i + 1;
+		}
+		 
+		 // Una vez añadido los archivos deseados cerramos el zip.
+		 $zip->close();
+		 // Creamos las cabezeras que forzaran la descarga del archivo como archivo zip.
+		 //header("Content-type: application/octet-stream");
+		 //header("Content-disposition: attachment; filename=dda.zip");
+		 
+		 header('Content-Type: application/zip');
+		 header('Content-length: ' . filesize('memos.zip'));
+		 header('Content-Disposition: attachment; filename=memos.zip');
+		 
+	
+		 ob_end_flush();
+		 
+		 // leemos el archivo creado
+		 readfile('memos.zip');
+		 // Por último eliminamos el archivo temporal creado
+		 unlink('memos.zip');//Destruye el archivo temporal
+		 
+		 exit;
+		 
+		 
+    }
+	
+	public function radicar_memorial_entidad(){
+	
+		
+
+		$modelo = new archivoModel();
+		
+		
+		//SE OBTIENEN LOS DATOS
+		$idusuario      = $_SESSION['idUsuario'];
+		
+		$tipo_documento = utf8_decode(trim($_POST['tipo_documento']));
+		$juzgadodestino = trim($_POST['juzgadodestino']);
+		$solicitud      = trim($_POST['solicitud']);	
+		$peticionario   = utf8_decode(trim($_POST['peticionario']));
+		$folios         = trim($_POST['folios']);		
+		$recibe         = trim($_POST['recibe']);
+		$cuaderno       = trim($_POST['cuaderno']);	
+		$a_despacho     = trim($_POST['a_despacho']);
+		$correo         = utf8_decode(trim($_POST['correo']));		
+		$telefono       = utf8_decode(trim($_POST['telefono']));
+		$observacionesm	= utf8_decode(trim($_POST['observacionesm']));
+		
+		//CAMPOS OCULTOS
+		$idubicacionexpediente = trim($_POST['nombre']);
+		$radicado              = trim($_POST['radicado']);
+		$idmemoexterno         = trim($_POST['idmemoexterno']);
+		$juzgado               = trim($_POST['idjuzgado']);
+		$digital               = trim($_POST['digital']);
+		
+		$text_lista_ts            = utf8_decode(trim($_POST['text_lista_ts']));
+		$nombre_archivo_solicitud = utf8_decode(trim($_POST['text_lista_na']));
+		
+		//$archivomemo           = trim($_POST['archivomemo']);
+		$cedula                = trim($_POST['cedula']);
+		$id_memo_peticionario  = trim($_POST['id_memo_peticionario']);
+		$fecha_crem            = trim($_POST['fecha_crem']);
+		
+		$solicitud1 = explode("-", $solicitud);
+		$finsol     = $solicitud1[1];
+		$solicitud  = $solicitud1[0];
+		$actu       = "Recepción Memorial por " .utf8_decode($finsol);
+		
+		$fecha_entrega = $modelo->get_fecha_actual_amd();
+		$hora_militar  = $modelo->get_hora_actual_24horas();
+		
+		date_default_timezone_set('America/Bogota');
+		$fecha = date('Y-m-d g:i');
+		
+		
+		//***********************************PARA EL ARCHIVO***************************************
+			
+		//CREO EL DIRECTORIO DEL USUARIO QUE NO ES MAS QUE EL ID DEL USUARIO DE LA TABLA pa_usuario 
+		$raiz = "MEMORIALES";
+		//ID DEL USUARIO DE LA TABLA pa_usuario
+		$nom  = trim($_SESSION['idUsuario']);
+		//IDENTIFICA ERROR EN CARGA DEL ARCHIVO
+		$erro_archivo = 0;
+						
+		//***********************************FIN PARA EL ARCHIVO***************************************
+								
+		$cadena_archivos = "";
+				
+		$error_transaccion = 0; //variable para detectar error
+		$msgError          = "";
+		
+		//CONEXION BASE DE DATOS JUSTICIA XXI
+		$datosbd   = $modelo->get_datos_basededatos(1);
+		$datosbd_b = $datosbd->fetch();
+		$datosbd_1 = $datosbd_b[ip];
+		$datosbd_2 = $datosbd_b[bd];
+		$datosbd_3 = $datosbd_b[usuario];
+		$datosbd_4 = $datosbd_b[clave];
+		
+		
+
+		//-------------------------SE REGISTRAN LOS DATOS EN LA TABLA-----------------------------------------
+										
+		try {  
+										 
+				$ENTRE = 0;
+						
+				$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				
+				//EMPIEZA LA TRANSACCION
+				$this->db->beginTransaction();
+											
+											
+											
+				//*********************************NUEVA CONEXON**************************************************
+						
+				$serverName     = $datosbd_1; //serverName\instanceName
+				$connectionInfo = array( "Database"=>$datosbd_2, "UID"=>$datosbd_3, "PWD"=>$datosbd_4);
+				$conn           = sqlsrv_connect( $serverName, $connectionInfo);
+													
+													
+				if( $conn === false ) {
+														
+					$error_transaccion = 1;
+													
+					$ENTRE = 1;
+													
+					if( ($errors = sqlsrv_errors() ) != null) {
+														
+						foreach( $errors as $error ) {
+															
+							$msgError .= "ERROR EN REGISTRO: "." SQLSTATE: ".$error[ 'SQLSTATE'].", CODE: ".$error[ 'code'].", MENSAJE: ".$error[ 'message'];
+							
+						}
+					}
+														
+					//echo "ENTRE 1";
+														
+				}
+													
+				//Iniciar la transacción.
+				if ( sqlsrv_begin_transaction( $conn ) === false ) {
+														 
+					$error_transaccion = 1;
+													
+					$ENTRE = 2;
+													
+					if( ($errors = sqlsrv_errors() ) != null) {
+														
+						foreach( $errors as $error ) {
+															
+							$msgError .= "ERROR EN REGISTRO: "." SQLSTATE: ".$error[ 'SQLSTATE'].", CODE: ".$error[ 'code'].", MENSAJE: ".$error[ 'message'];
+							
+						}
+						
+					}
+														 
+					//echo "ENTRE 2";
+														 
+				}
+											
+											
+											
+				if($existe==true){
+												
+					$existes =  "no";
+					
+				}
+				else{
+											
+					$existes = "si";
+												
+				}	
+				
+				
+				//---------------------VALIDAR RENOMBRAR-NOMBRE ARCHIVO 15 DE ABRIL 2021----------------------------------------
+				
+				
+				//DOCUMENTOS CARGADOS EN expe_digital 
+				$cantidad_documentos      = $modelo->get_cantidad_documentos($cuaderno,$idubicacionexpediente);
+				$filadoc                  = $cantidad_documentos->fetch();
+				$cantidad_doc             = $filadoc[numero];
+				
+				//SI TIENE CARGADOS, Y SEGUN EL CUEADERNO SELECCIONADO
+				//SE TRAE EL NUMERO SIGUIENTE DE LA COLUMNA orden_documento TABLA expe_digital 
+				//PARA CONCATER CON EL NOMBRE DEL ARCHIVO QUE SE ESTA SUBIENDO
+				//EJEMPLO: 01CONSTANCIAS.pdf
+				if($cantidad_doc >= 1){
+														
+					$datos_orden_documento    = $modelo->get_orden_documento_siguente($cuaderno,$idubicacionexpediente);
+					$filaod                   = $datos_orden_documento->fetch();
+					$orden_documento_siguente = $filaod[orden_documento_siguente];
+					
+					$orden_documento          = $orden_documento_siguente;
+															
+				}
+				//SI NO TIENE CARGADOS, SERIA EL PRIMERO,
+				//INDEPENDIENTE DEL CUADERNO QUE SE SELECCIONE
+				else{
+															
+					$orden_documento_siguente = 1;
+					
+					$orden_documento          = $orden_documento_siguente;
+				}
+				
+				if($orden_documento_siguente >= 1 && $orden_documento_siguente <= 9){												
+			
+					$orden_documento_siguente = "0".$orden_documento_siguente;
+				}
+				
+				
+				//------------------------------------SUBIR LOS ARCHIVOS-----------------------------------------------------------------------
+											
+				//AQUI SE CREA EL DIRECTORIO
+				if(is_dir($raiz.'/'.$nom)){$bandera=0;}
+				else{mkdir($raiz.'/'.$nom, 0, true);}
+		
+				$mensage       = '';//Declaramos una variable mensaje quue almacenara el resultado de las operaciones.
+				$archivo_error = 0;
+											
+				foreach ($_FILES as $key) //Iteramos el arreglo de archivos
+				{
+					if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
+					{
+													
+						$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
+						$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
+						//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
+						$ruta           = $raiz.'/'.$nom.'/'.$nombre_archivo;
+														
+						move_uploaded_file($temporal, utf8_decode($ruta)); //Movemos el archivo temporal a la ruta especificada		
+								
+						//usleep — Retrasar la ejecución en microsegundos
+						//Esperar 1 segundos
+						//SE APLICA ESTA ACCION PARA QUE EL ID CAMBIE EN UN SEGUNDO date('ymdhis') 
+						//Y NO SEA EL MISMO
+						usleep(1000000);
+														
+					}
+											
+					if ($key['error']=='') //Si no existio ningun error, retornamos un mensaje por cada archivo subido
+					{
+								
+						//$mensage .= '-> Archivo <b>'.$NombreOriginal.'</b> Subido correctamente. <br>';
+														
+						$rutaarchivo = utf8_decode($raiz.'/'.$nom.'/'.$nombre_archivo);
+														
+								
+						$cadena_archivos .= $rutaarchivo."******";
+								
+								
+					}
+							
+					if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
+					{
+						//$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
+						$msgError .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error'];
+														
+						$archivo_error = 1;
+					}
+												
+				}
+											
+				//echo $mensage;// Regresamos los mensajes generados al cliente
+											
+				//------------------------------------FIN SUBIR LOS ARCHIVOS-----------------------------------------------------------------------			
+				
+				
+				//RENOMBRAR ARCHIVO CARGADO A $ruta = $raiz.'/'.$nom.'/'.$nombre_archivo;
+				
+				$nombre_archivo_solicitud = date('ymdhis').'-'.$orden_documento_siguente.$nombre_archivo_solicitud."."."pdf";
+				
+				if ( rename($ruta, 'C:/wamp/www/ejecucion/'.'MEMORIALES/'.$idusuario.'/'.$nombre_archivo_solicitud) ) {
+				
+					$error_transaccion = 0;
+					
+					//$rutaarchivo = $raiz.'/'.$nom.'/'.$nombre_archivo_solicitud;
+					
+					$ruta_local = "MEMORIALES/".$idusuario."/".$nombre_archivo_solicitud;
+	
+				} 
+				else{
+				
+					$error_transaccion = 1;
+					$msgError .= "1B.ERROR AL RENOMBRAR EL ARCHIVO...\n";
+				
+					
+				}
+				
+		
+				//---------------------FIN VALIDAR RENOMBRAR-NOMBRE ARCHIVO-----------------------------------------------------					
+														  
+				
+				//ADICIONADO EL 19 DE ABRIL 2021
+				if($error_transaccion == 0){
+				
+											
+				$this->db->exec("INSERT INTO correspondencia (fecha_registro,radicado,peticionario,cedula,telefono,tipo_documento,idjuzgado,fecha_entrega,idjuzgadodestino,
+								 idsolicitud,idusuario,folios,generado,existe,idubicacionexpediente,observacionesm,ruta_local,
+								 id_memo_externo,id_memo_peticionario,memo_correo,fecha_creacion)
+								 VALUES ('$fecha','$radicado','$peticionario','$cedula','$telefono','$tipo_documento','$juzgado','$fecha_entrega','$juzgadodestino',
+								'$solicitud','$idusuario','$folios','no','$existes','$idubicacionexpediente','$observacionesm','$ruta_local',
+								'$idmemoexterno','$id_memo_peticionario','$correo','$fecha_crem')");				  	  
+												
+												
+											
+				//SE REFIERE AL TIPO DE SOLICITUD (SOLICITUD OFICIOS)
+				//Y NO SE ADICIONA AL EXPEDIENTE DIGITAL
+				//ADICIONADO EL 24 DE AGOSTO2020
+				//if($solicitud != 118){
+				
+					  
+					 	 //-------------------SE REGISTRA LA TABLA expe_digital Y ALIMENTAR EL EXPEDIENTE DIGITAL DESDE EL AREA DE MEMORIALES-----------------
+						 
+						 $last_id_memo = $this->db->lastInsertId();
+						 
+						 
+						 //SE VERIFICA QUE EXISTA INFORMACIONE EN LA TABLA expe_digital, PARA ADICIONAR EL MEMORIAL
+						 $numero_doc = $this->db->prepare("SELECT COUNT(id) AS numero FROM expe_digital
+				 										   WHERE idradicado = '$idubicacionexpediente'");
+				
+					  	 $numero_doc->execute(); 
+						 $doc_cant     = $numero_doc->fetch();
+						 $numero_doc_2 = $doc_cant[numero];
+					  	 //$numero_doc_2 = $numero_doc->rowCount();
+						 
+						
+						 
+						 if($numero_doc_2 >= 1){
+						 
+						 
+						 
+							 //$last_id_memo = $this->db->lastInsertId();
+							 
+							 
+							 
+							 //-----------ARMAR DIRECTORIO RADICADO--------------
+			
+							//EJ: 17001400300220140017100 ---> 220140017100
+							//EJ: 17001400301220140017100 ---> 1220140017100
+							
+							$valorradicado = $radicado;
+							
+							$cadena_juzgado;
+							$valorradicado_8 = substr($valorradicado, 10, 2);
+							$J;
+							// Recorremos cada carácter de la cadena
+							for($i=0; $i<strlen($valorradicado_8); $i++){
+								
+								if($valorradicado_8[0] == 0){
+									
+									$cadena_juzgado = substr($valorradicado, 11, 13);
+									
+									$i = strlen($valorradicado_8);
+									
+									$J = "J".substr($valorradicado, 11, 1);
+								}
+								
+								if($valorradicado_8[0] == 1){
+									
+									$cadena_juzgado = substr($valorradicado, 10, 13);
+									
+									$i = strlen($valorradicado_8);
+									
+									$J = "J".substr($valorradicado, 10, 2);
+								}
+								
+								
+							}
+							
+							$nom_2 = trim($J."/".$cadena_juzgado);
+							
+							//-----------FIN ARMAR DIRECTORIO RADICADO---------
+							 
+							 
+				
+							//SE REALIZA OPERACION SI EL EXPEDIENTE ESTA DIGITALIZADO
+							/*$digital       = trim($_POST['digital']);
+							$cuaderno      = trim($_POST['cuaderno']);
+							$a_despacho    = trim($_POST['a_despacho']);
+							$text_lista_ts = trim($_POST['text_lista_ts']);*/
+							
+										
+							if($digital == 1){
+							
+							
+									//MOVER MEMORIAL DE PLATAFORMA PUBLICACIONES A PLATAFORMA EJECUCION A LA CARPETA EXPEDIENTE_DIGITAL_2
+									$memo_digital_ejecucion = 'C:/wamp/www/ejecucion/EXPEDIENTE_DIGITAL_2/'.$nom_2."/".$nombre_archivo_solicitud;
+									
+						
+									if (copy($ruta_local,$memo_digital_ejecucion)) {
+									//if (move_uploaded_file($memo_publicaciones,$memo_digital_ejecucion)) {
+									
+									
+										$erro_archivo = 0;
+										
+														
+									}
+									else{ 
+									
+										$erro_archivo = 1;
+										
+										$error_transaccion = 1;
+										$msgError .= "2.ERROR AL MOVER EL MEMORIAL DE PLATAFORMA PUBLICACIONES A PLATAFORMA EJECUCION A LA CARPETA EXPEDIENTE_DIGITAL_2...\n";
+												
+									}
+									
+									
+									//---------------------VALIDAR RENOMBRAR-NOMBRE ARCHIVO 15 DE ABRIL 2021----------------------------------------
+			
+									/*if ( rename($memo_digital_ejecucion, 'C:/wamp/www/ejecucion/EXPEDIENTE_DIGITAL_2/'.$nom_2."/".$nombre_archivo_solicitud) ) {
+									
+										$erro_archivo      = 0;
+										$error_transaccion = 0;
+										
+										$memo_digital_ejecucion = 'C:/wamp/www/ejecucion/EXPEDIENTE_DIGITAL_2/'.$nom_2."/".$nombre_archivo_solicitud;
+						
+									} 
+									else{
+									
+										$erro_archivo      = 1;
+										$error_transaccion = 1;
+										
+										$msgError .= "1C.ERROR AL RENOMBRAR EL ARCHIVO...\n";
+									
+										
+									}*/
+									
+									
+									//---------------------FIN VALIDAR RENOMBRAR-NOMBRE ARCHIVO-----------------------------------------------------
+									
+									
+												
+																
+									if($erro_archivo == 0){
+											
+										$idradicado = $idubicacionexpediente;
+										$fecha_2    = $modelo->get_fecha_actual_amd();
+										$hora_2     = $modelo->get_hora_actual_24horas();
+										$des        = $observacionesm;
+										
+										//---------------------------------------------------------------------------------------------------------------------------- 
+										
+										//SE INCORPORA MEMORIAL AL PROCESO DESDE SU REGISTRO
+										//ADICINADO EL 8 DE SEPTIEMBRE DE 2020
+										$this->db->exec("UPDATE correspondencia SET 
+							
+															 incorporaexpediente  = 1,
+															 fecha_incorpora      = '$fecha_2'
+															
+														 WHERE id = '$last_id_memo'");
+														 
+														 
+										
+										/*$notaexp = "SE AGREGA MEMORIAL AL EXPEDIENTE, ID MEMORIAL.: ".$last_id_memo; 	 
+										
+										date_default_timezone_set('America/Bogota'); 
+										$fecharegistro_INC = date('Y-m-d g:i');
+										$this->db->exec("INSERT INTO detalle_correspondencia (idcorrespondencia,fecha,observacion,id_memorial,idusuario) 
+									     				 VALUES('$idradicado','$fecharegistro_INC','$notaexp','$last_id_memo','$idusuario')");*/				
+														 
+														 
+										
+										//--------------------------------------FIN------------------------------------------------------------------------------------ 
+										
+										
+										//OBSERVACION tipo documento + tipo de solicitud
+										date_default_timezone_set('America/Bogota'); 
+										$fecharegistro = date('Y-m-d g:i');
+										
+										$obs_M = $tipo_documento." - ".$text_lista_ts." - ".$des;
+										$this->db->exec("INSERT INTO detalle_correspondencia (idcorrespondencia,fecha,observacion,estadoobs,id_memorial,a_despacho,idusuario) 
+														 VALUES('$idradicado','$fecharegistro','$obs_M',0,'$last_id_memo','$a_despacho','$idusuario')"); 
+										
+										
+										//$ruta = 'EXPEDIENTE_DIGITAL_2/'.$nom_2."/".$ruta_memo_2;
+										
+										$ruta = 'EXPEDIENTE_DIGITAL_2/'.$nom_2."/".$nombre_archivo_solicitud;
+												
+																
+										$this->db->exec("INSERT INTO expe_digital (idradicado,fecha,hora,folios,cuaderno,tipo,ruta,des,idusuario,estado,idcorrespondencia,id_dependencia,
+										                 fecha_creacion,fecha_de,fecha_a,origen,orden_documento) 
+														 VALUES ('$idradicado','$fecha_2','$hora_2','$folios','$cuaderno','application/pdf','$ruta','$obs_M','$idusuario',1,'$last_id_memo',18,
+														 '$fecha_crem','0000-00-00','0000-00-00',2,'$orden_documento')");
+																
+										//OBTENGO EL ULTIMO ID REGISTRADO DEL ULTIMO INSERT EN LA TABLA siepro_audiencia_juzgado
+										$last_id_2 = $this->db->lastInsertId();
+															
+																 
+																
+										//HISTORIAL
+										$actuacion = 'REGISTRO FOLIO(S)';
+										$tablas    = 'expe_digital';
+										$tipo      = 'RF';
+										$this->db->exec("INSERT INTO expe_historial(idda,idusuario,fecha,hora,actuacion,tablas,archivos,tipo,idexpdigi,id_dependencia,
+										                 fecha_creacion,fecha_de,fecha_a,origen,orden_documento)
+														 VALUES('$idradicado','$idusuario','$fecha_2','$hora_2','$actuacion','$tablas','$ruta','$tipo','$last_id_2',18,
+														 '$fecha_crem','0000-00-00','0000-00-00',2,'$orden_documento')");
+											
+																 
+											
+									}
+									 
+									
+							} 
+							
+						
+						}
+						
+						//---------------FIN SE REGISTRA LA TABLA expe_digital Y ALIMENTAR EL EXPEDIENTE DIGITAL DESDE EL AREA DE MEMORIALES------------------------
+					  
+					  
+				//}// FIN if($solicitud != 118){
+											
+				
+				//PARA INDICAR QUE EL MEMORIAL RADICADO POR EL ABOGADO O PARTE (DDTE O DDO)
+				//YA FUE PROCESADO POR EL AREA DE MEMORIALES DE LAOFICINA DE EJECUCION
+				$this->db->exec("UPDATE expe_entidad_memo SET 
+							
+									vizualizar  = 0
+															
+								 WHERE id = '$idmemoexterno'");
+											
+											
+				//REGISTRAR ACTUACION EN JUSTICIA XXI
+										
+				$sininstancia = $radicado;
+				$sin          = substr($sininstancia, 0, 21);
+				
+				
+				$sql = ("	
+						
+							
+			
+							UPDATE t103dainfoproc SET a103descacts='Recepción Memorial', a103codiacts='30000123', a103codipads='30000123', 
+							a103fechdess = GETDATE(), a103anotacts = '$actu'
+							WHERE a103llavproc='$radicado';
+															
+								
+						");	
+												
+												
+				
+						$params  = array();
+						$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+						$stmt = sqlsrv_query( $conn, $sql , $params, $options );
+													
+													
+						if( $stmt === false ) {
+													
+							$error_transaccion = 1;
+												
+							$ENTRE = 5;
+													
+							if( ($errors = sqlsrv_errors() ) != null) {
+														
+								foreach( $errors as $error ) {
+															
+									$msgError .= "ERROR EN REGISTRO: "." SQLSTATE: ".$error[ 'SQLSTATE'].", CODE: ".$error[ 'code'].", MENSAJE: ".$error[ 'message'];
+								}
+							}
+												
+						}	
+										
+						sqlsrv_free_stmt( $stmt);
+						
+						
+				
+				$sql_2 = ("	
+						
+							declare @cad integer 
+			
+																		
+							SELECT @cad =MAX(A110CONSACTU)+1 FROM T110DRACTUPROC where a110Llavproc='$radicado' 
+														
+							INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
+							A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
+							A110RENUTERM) values('$radicado',@cad,'$sin','00','30000123','30000123','Recepción Memorial','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+							'$actu',NULL,NULL,'S','D',GETDATE(),'NO','NO')	
+														
+														
+													
+														
+						");
+												
+												
+				
+						$params_2  = array();
+						$options_2 =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+						$stmt_2    = sqlsrv_query( $conn, $sql_2 , $params_2, $options_2 );
+													
+													
+						if( $stmt_2 === false ) {
+													
+							$error_transaccion = 1;
+												
+							$ENTRE = 6;
+													
+							if( ($errors = sqlsrv_errors() ) != null) {
+														
+								foreach( $errors as $error ) {
+															
+									$msgError .= "ERROR EN REGISTRO: "." SQLSTATE: ".$error[ 'SQLSTATE'].", CODE: ".$error[ 'code'].", MENSAJE: ".$error[ 'message'];
+								}
+							}
+												
+						}	
+										
+						sqlsrv_free_stmt( $stmt_2);		
+											
+											
+											
+						if($error_transaccion) {
+							
+			
+							
+							echo "ERROR EN LA OPERACION MYSQL ".mysql_errno($conexion). ": " . mysql_error($conexion)."<br>"."<br>"." ,ERROR JUSTICIA XXI: ".$msgError." ,ENTRE: ".$ENTRE;
+												
+											
+							//NO TERMINA LA TRANSACCION SE PRESENTO UN ERROR
+							$this->db->rollBack();
+												
+											
+							//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
+							sqlsrv_rollback( $conn );
+											
+							// Cerrar la conexión.
+							sqlsrv_close( $conn );
+												
+												
+												
+										
+						} //FIN if($error_transaccion) 
+						else {
+												
+							//SE TERMINA LA TRANSACCION  
+		  					$this->db->commit();		
+												
+												
+							//SE TERMINA LA TRANSACCION EN JUSTICIA XXI  
+							sqlsrv_commit( $conn );	
+							
+							echo "PROCESO SE REALIZA CORRECTAMENTE";
+												
+												
+								/*echo '<script languaje="JavaScript"> 
+							
+
+										var id_radi = "'.$idubicacionexpediente.'";
+												
+										alert("PROCESO SE REALIZA CORRECTAMENTE");
+															
+										location.href="index.php?controller=archivo&action=adicionar_memorial&nombre="+id_radi;
+																	
+									</script>';*/
+												
+												
+												
+									
+												
+						}
+												
+				
+				
+				}//FIN if($error_transaccion == 0){
+				else{
+				
+					echo $msgError;
+				}					
+						
+										
+		}//FIN TRY
+		catch (Exception $e) {
+										
+				//NO TERMINA LA TRANSACCION SE PRESENTO UN ERROR
+				$this->db->rollBack();
+
+								
+				echo "Fallo: " . $e->getMessage();
+											
+				//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
+				sqlsrv_rollback( $conn );
+											
+				// Cerrar la conexión.
+				sqlsrv_close( $conn );
+											
+											
+				//location.href="index.php?controller=archivo&action=adicionar_memorial&nombre="+id_radi;
+				
+		}
+		
+		
+		
+
+
+	}//FIN FUNCION RADICAR MEMORIAL ENTIDAD
+	
+	
+	public function radicar_devolucion_memo_entidad(){
+	
+		
+		$modelo     = new archivoModel();
+				
+		$fecha_entrega = $modelo->get_fecha_actual_amd();
+		$hora_militar  = $modelo->get_hora_actual_24horas();
+		
+		
+		//SE OBTIENEN LOS DATOS
+		$idusuario = $_SESSION['idUsuario'];
+		
+		$respuestaoecm = utf8_decode(trim($_POST['resdevo']));//RESPUESTA
+	
+		$idmemoexterno = trim($_POST['idmemoexternodevo']);//ID REGISTRO TABLA expe_solicitud_titulos
+		
+		
+	
+		$SQL_1 = "	UPDATE expe_entidad_memo SET
+					
+					
+						vizualizar = 2,
+						respuesta  = '$respuestaoecm',
+						idedita    = '$idusuario',
+						fechaedita = '$fecha_entrega',
+						horaedita  = '$hora_militar'
+								 
+					WHERE id = '$idmemoexterno'";
+											
+						
+					
+					
+		$error_transaccion   = 0; //variable para detectar error
+		$msg = " ";
+					
+				
+					
+		try {  
+						
+			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+							
+			//EMPIEZA LA TRANSACCION
+			$this->db->beginTransaction();
+							
+							
+				$this->db->exec($SQL_1);
+				
+				
+				//HISTORIAL
+				$actuacion = 'REGISTRO DEVOLUCION MEMORIAL';
+				$tablas    = 'expe_solicitud_memo';
+				$tipo      = 'RDVM';
+				//$cadena_archivos = "MUCHOS";
+				$this->db->exec("INSERT INTO expe_historial(idda,idusuario,fecha,hora,actuacion,tablas,tipo)
+								 VALUES('$idmemoexterno','$idusuario','$fecha_entrega','$hora_militar','$actuacion','$tablas','$tipo')");
+				
+				
+				$msg = "PROCESO SE REALIZA CORRECTAMENTE";
+				
+				
+															
+			//SE TERMINA LA TRANSACCION  
+			$this->db->commit();
+											
+			echo $msg;
+								
+						
+						  
+		} 
+		catch (Exception $e) {
+						
+							
+			$msg = "ERROR EN PROCESO: ".$e->getMessage();
+							
+							
+			//NO TERMINA LA TRANSACCION SE PRESENTO UN ERROR
+			$this->db->rollBack();
+							
+						
+			echo $msg;
+							
+							
+		}
+		
+				
+  	}
+	
+	//NUEVO 30 DE SEPTIEMBRE 2021
+	
+	public function get_VISUALIZAR_SOLICITUD_ENTIDAD_OECM(){
+	
+		$idusuario  = $_SESSION['idUsuario'];
+		
+		
+		//SQL SOLICITUDES EN PROCESO t1.bandera_res = 1
+		$listar = $this->db->prepare("	
+										SELECT t1.id,t1.idradicado,t2.radicado,t3.nombre_usuario,t3.empleado,t1.fecha,t1.hora,
+										t1.respuesta,t1.fecha_res,t1.hora_res,t1.bandera_res,t1.idusuario_res,t1.experemate,
+										t1.fecha_visual,t3.correo
+										FROM ((expe_entidad_solicitud t1
+										INNER JOIN ubicacion_expediente t2 ON t1.idradicado    = t2.id)
+										INNER JOIN pa_usuario_expe      t3 ON t1.idsolicitante = t3.id)
+										WHERE t1.bandera_res = 1
+										
+										
+									");
+								
+		$listar->execute();
+									
+		return $listar;				
+					
+		
+	}
+	
+	public function get_VISUALIZAR_SOLICITUD_ENTIDAD_OECM_Filtro($datoJXX1,$datoJXX2,$datoJXX3,$datoJXX4,$datoJXX5,$datoJXX6){
+	
+	
+			set_time_limit (240000000);
+	
+			$idusuario  = $_SESSION['idUsuario'];
+			
+		
+			$filtrox;
+			
+			$filtrof;
+			
+			$filtro1;
+			$filtro4;
+			$filtro5;
+			$filtro6;
+			
+			
+		
+			/*$fechad    = trim($_GET['dato_1']);
+			$fechah    = trim($_GET['dato_2']);
+			
+			$datox1    = trim($_GET['datox1']);
+			$datox2    = trim($_GET['datox2']);
+			$datox4    = trim($_GET['datox4']);*/
+			
+			
+			
+			if ( !empty($datoJXX1) ) {
+			
+	
+				$filtro1 = " AND t2.radicado LIKE '%$datoJXX1%' ";
+			
+			}
+			
+			if ( !empty($datoJXX2) && !empty($datoJXX3) ) {
+			
+				$filtrof   = " AND (t1.fecha >= '$datoJXX2' AND t1.fecha <= '$datoJXX3')";
+				
+				
+			}
+			
+			//if ( !empty($datoJXX4) || $datoJXX4 == 1 ) {
+			if ( !empty($datoJXX4) ) {
+			
+				
+				$filtro4 = " AND t1.bandera_res = '$datoJXX4' ";
+			
+			}
+			
+			if ( !empty($datoJXX5) ) {
+			
+	
+				$filtro5 = " AND t3.nombre_usuario = '$datoJXX5' ";
+			
+			}
+			
+			if ( !empty($datoJXX6) ) {
+			
+	
+				$filtro6 = " AND t3.empleado LIKE '%$datoJXX6%' ";
+			
+			}
+			
+			
+			$filtrox = $filtro1." ".$filtro4." ".$filtro5." ".$filtro6." ".$filtrof;
+		
+			
+			
+			$listar = $this->db->prepare("
+				
+												SELECT t1.id,t1.idradicado,t2.radicado,t3.nombre_usuario,t3.empleado,t1.fecha,t1.hora,
+												t1.respuesta,t1.fecha_res,t1.hora_res,t1.bandera_res,t1.idusuario_res,t1.experemate,
+												t1.fecha_visual,t3.correo
+												FROM ((expe_entidad_solicitud t1
+												INNER JOIN ubicacion_expediente t2 ON t1.idradicado    = t2.id)
+												INNER JOIN pa_usuario_expe      t3 ON t1.idsolicitante = t3.id)
+												WHERE t1.id >= '1'" .$filtrox. "
+												
+												
+										");
+											
+			
+			
+  			$listar->execute();
+			
+			
+
+  			return $listar;
+	
+  	}
+	
+	public function radicar_solicitud_visualizar_entidad(){
+	
+		
+		$modelo     = new archivoModel();
+				
+		$fecha_entrega = $modelo->get_fecha_actual_amd();
+		$hora_militar  = $modelo->get_hora_actual_24horas();
+		
+		
+		//SE OBTIENEN LOS DATOS
+		$idusuario = $_SESSION['idUsuario'];
+		
+		$flv = utf8_decode(trim($_POST['flv']));//RESPUESTA
+	
+		$idmemoexterno = trim($_POST['idmemoexterno']);//ID REGISTRO TABLA expe_solicitud
+		
+		
+		//***********************************PARA EL ARCHIVO***************************************
+		
+		/*$sin_archivo   = trim($_POST['sin_archivo']);
+	
+		//CREO EL DIRECTORIO DEL USUARIO QUE NO ES MAS QUE EL ID DEL USUARIO DE LA TABLA pa_usuario 
+		$raiz = "SOLICITUD_RESPUESTA";
+		//ID DEL USUARIO DE LA TABLA pa_usuario
+		$nom = trim($_SESSION['idUsuario']);
+		//IDENTIFICA ERROR EN CARGA DEL ARCHIVO
+		$erro_archivo = 0;*/
+				
+		
+		//***********************************FIN PARA EL ARCHIVO***************************************
+		
+		$cadena_archivos     = "";						
+		$error_transaccion   = 0; //variable para detectar error
+		$msg = " ";
+					
+				
+					
+		try {  
+						
+			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+							
+			//EMPIEZA LA TRANSACCION
+			$this->db->beginTransaction();
+							
+				
+	
+				//DEFINE ARCHIVO
+				/*if($sin_archivo == 1){					
+								
+					//------------------------------------SUBIR LOS ARCHIVOS-----------------------------------------------------------------------
+										
+					//AQUI SE CREA EL DIRECTORIO, CON EL ID ASIGNADO A LA DEMANDA
+					if(is_dir($raiz.'/'.$nom.'/'.$idmemoexterno)){$bandera=0;}
+					else{mkdir($raiz.'/'.$nom.'/'.$idmemoexterno, 0, true);}
+	
+					$mensage       = '';//Declaramos una variable mensaje quue almacenara el resultado de las operaciones.
+					$archivo_error = 0;
+										
+					foreach ($_FILES as $key) //Iteramos el arreglo de archivos
+					{
+						if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
+						{
+												
+							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
+							$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
+							//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
+							$ruta           = $raiz.'/'.$nom.'/'.$idmemoexterno.'/'.$nombre_archivo;
+													
+							move_uploaded_file($temporal, utf8_decode($ruta)); //Movemos el archivo temporal a la ruta especificada		
+													
+						}
+										
+						if ($key['error']=='') //Si no existio ningun error, retornamos un mensaje por cada archivo subido
+						{
+							
+							//$mensage .= '-> Archivo <b>'.$NombreOriginal.'</b> Subido correctamente. <br>';
+													
+							$rutaarchivo = utf8_decode($raiz.'/'.$nom.'/'.$idmemoexterno.'/'.$nombre_archivo);
+							
+													
+							//TABLA expe_solicitud
+							
+							$this->db->exec(
+							
+												"UPDATE expe_solicitud SET
+									
+													respuesta      = '$respuestaoecm',
+													fecha_res      = '$fecha_entrega',
+													hora_res       = '$hora_militar',
+													bandera_res    = 1,
+													idusuario_res  = '$idusuario',
+													ruta_respuesta = '$rutaarchivo'
+																			 
+												WHERE id = '$idmemoexterno'"
+															
+											
+							);				
+											
+								
+											
+							
+							
+													
+							$cadena_archivos .= $rutaarchivo."******";
+							
+													
+						}
+						
+						if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
+						{
+							$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
+													
+							$archivo_error = 1;
+						}
+											
+					}
+										
+					//echo $mensage;// Regresamos los mensajes generados al cliente
+										
+					//------------------------------------FIN SUBIR LOS ARCHIVOS-----------------------------------------------------------------------
+					
+					
+					
+				}*/			
+				//NO DEFINE ARCHIVO
+				//else{
+				
+							//TABLA expe_entidad_solicitud
+							
+							$this->db->exec(
+							
+												"UPDATE expe_entidad_solicitud SET
+									
+													
+													fecha_res      = '$fecha_entrega',
+													hora_res       = '$hora_militar',
+													bandera_res    = 2,
+													idusuario_res  = '$idusuario',
+													fecha_visual   = '$flv'
+													
+												WHERE id = '$idmemoexterno'"
+															
+											
+							);				
+				
+				//}
+							
+			
+				
+				
+				//HISTORIAL
+				$actuacion = 'REGISTRO RESPUESTA SOLICITUD VISUALIZAR EXPEDIENTE ENTIDAD TERCEROS';
+				$tablas    = 'expe_entidad_solicitud';
+				$tipo      = 'RRESSVEET';
+				//$cadena_archivos = "MUCHOS";
+				$this->db->exec("INSERT INTO expe_historial(idda,idusuario,fecha,hora,actuacion,tablas,tipo)
+								 VALUES('$idmemoexterno','$idusuario','$fecha_entrega','$hora_militar','$actuacion','$tablas','$tipo')");
+												 
+				
+				$msg = "PROCESO SE REALIZA CORRECTAMENTE";
+				
+				
+															
+			//SE TERMINA LA TRANSACCION  
+			$this->db->commit();
+											
+			echo $msg;
+								
+						
+						  
+		} 
+		catch (Exception $e) {
+						
+							
+			$msg = "ERROR EN PROCESO: ".$e->getMessage();
+							
+							
+			//NO TERMINA LA TRANSACCION SE PRESENTO UN ERROR
+			$this->db->rollBack();
+							
+						
+			echo $msg;
+							
+							
+		}
+		
+				
+  	}
+	
+	
+	public function registrar_devolucion_solicitud(){
+	
+		
+		$modelo     = new archivoModel();
+				
+		$fecha_entrega = $modelo->get_fecha_actual_amd();
+		$hora_militar  = $modelo->get_hora_actual_24horas();
+		
+		
+		//SE OBTIENEN LOS DATOS
+		$idusuario = $_SESSION['idUsuario'];
+		
+		$respuestaoecm = utf8_decode(trim($_POST['resexpedigi']));//RESPUESTA
+	
+		$idmemoexterno = trim($_POST['idmemoexterno']);//ID REGISTRO TABLA expe_solicitud
+		
+		
+		//***********************************PARA EL ARCHIVO***************************************
+		
+		/*$sin_archivo   = trim($_POST['sin_archivo']);
+	
+		//CREO EL DIRECTORIO DEL USUARIO QUE NO ES MAS QUE EL ID DEL USUARIO DE LA TABLA pa_usuario 
+		$raiz = "SOLICITUD_RESPUESTA";
+		//ID DEL USUARIO DE LA TABLA pa_usuario
+		$nom = trim($_SESSION['idUsuario']);
+		//IDENTIFICA ERROR EN CARGA DEL ARCHIVO
+		$erro_archivo = 0;*/
+				
+		//***********************************FIN PARA EL ARCHIVO***************************************
+		
+		$cadena_archivos     = "";						
+		$error_transaccion   = 0; //variable para detectar error
+		$msg = " ";
+					
+				
+					
+		try {  
+						
+			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+							
+			//EMPIEZA LA TRANSACCION
+			$this->db->beginTransaction();
+							
+				
+	
+				//DEFINE ARCHIVO
+				/*if($sin_archivo == 1){					
+								
+					//------------------------------------SUBIR LOS ARCHIVOS-----------------------------------------------------------------------
+										
+					//AQUI SE CREA EL DIRECTORIO, CON EL ID ASIGNADO A LA DEMANDA
+					if(is_dir($raiz.'/'.$nom.'/'.$idmemoexterno)){$bandera=0;}
+					else{mkdir($raiz.'/'.$nom.'/'.$idmemoexterno, 0, true);}
+	
+					$mensage       = '';//Declaramos una variable mensaje quue almacenara el resultado de las operaciones.
+					$archivo_error = 0;
+										
+					foreach ($_FILES as $key) //Iteramos el arreglo de archivos
+					{
+						if($key['error'] == UPLOAD_ERR_OK )//Si el archivo se paso correctamente Ccontinuamos 
+						{
+												
+							$nombre_archivo = date('ymdHis'). '-' .$key['name'];//Obtenemos el nombre original del archivo y lo concatenamos con (AñoMesDiaHoramilitarMinutosSegundos)
+							$temporal       = $key['tmp_name']; //Obtenemos la ruta Original del archivo
+							//$Destino        = $ruta.$NombreOriginal;//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
+							$ruta           = $raiz.'/'.$nom.'/'.$idmemoexterno.'/'.$nombre_archivo;
+													
+							move_uploaded_file($temporal, utf8_decode($ruta)); //Movemos el archivo temporal a la ruta especificada		
+													
+						}
+										
+						if ($key['error']=='') //Si no existio ningun error, retornamos un mensaje por cada archivo subido
+						{
+							
+							//$mensage .= '-> Archivo <b>'.$NombreOriginal.'</b> Subido correctamente. <br>';
+													
+							$rutaarchivo = utf8_decode($raiz.'/'.$nom.'/'.$idmemoexterno.'/'.$nombre_archivo);
+							
+													
+							//TABLA expe_solicitud
+							
+							$this->db->exec(
+							
+												"UPDATE expe_solicitud SET
+									
+													respuesta      = '$respuestaoecm',
+													fecha_res      = '$fecha_entrega',
+													hora_res       = '$hora_militar',
+													bandera_res    = 1,
+													idusuario_res  = '$idusuario',
+													ruta_respuesta = '$rutaarchivo'
+																			 
+												WHERE id = '$idmemoexterno'"
+															
+											
+							);				
+											
+								
+											
+							
+							
+													
+							$cadena_archivos .= $rutaarchivo."******";
+							
+													
+						}
+						
+						if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
+						{
+							$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
+													
+							$archivo_error = 1;
+						}
+											
+					}
+										
+					//echo $mensage;// Regresamos los mensajes generados al cliente
+										
+					//------------------------------------FIN SUBIR LOS ARCHIVOS-----------------------------------------------------------------------
+					
+					
+					
+				}			
+				//NO DEFINE ARCHIVO
+				else{*/
+				
+							//TABLA expe_entidad_solicitud
+							
+							$this->db->exec(
+							
+												"UPDATE expe_entidad_solicitud SET
+									
+													respuesta      = '$respuestaoecm',
+													fecha_res      = '$fecha_entrega',
+													hora_res       = '$hora_militar',
+													bandera_res    = 3,
+													idusuario_res  = '$idusuario'
+													
+												WHERE id = '$idmemoexterno'"
+															
+											
+							);				
+				
+				//}
+							
+			
+				
+				
+				//HISTORIAL
+				$actuacion = 'REGISTRO DEVOLUCION SOLICITUD VISUALIZAR EXPEDIENTE ENTIDAD TERCEROS';
+				$tablas    = 'expe_entidad_solicitud';
+				$tipo      = 'RDSVEET';
+				//$cadena_archivos = "MUCHOS";
+				$this->db->exec("INSERT INTO expe_historial(idda,idusuario,fecha,hora,actuacion,tablas,tipo)
+								 VALUES('$idmemoexterno','$idusuario','$fecha_entrega','$hora_militar','$actuacion','$tablas','$tipo')");
+												 
+				
+				$msg = "PROCESO SE REALIZA CORRECTAMENTE";
+				
+				
+															
+			//SE TERMINA LA TRANSACCION  
+			$this->db->commit();
+											
+			echo $msg;
+								
+						
+						  
+		} 
+		catch (Exception $e) {
+						
+							
+			$msg = "ERROR EN PROCESO: ".$e->getMessage();
+							
+							
+			//NO TERMINA LA TRANSACCION SE PRESENTO UN ERROR
+			$this->db->rollBack();
+							
+						
+			echo $msg;
+							
+							
+		}
+		
+				
+  	}
+	
+	
+	public function radicar_solicitud_entidadOECM(){
+	
+	
+		set_time_limit (240000000);
+		
+		
+		$modelo = new archivoModel();
+		
+		
+		$flag = 1;
+		
+		$msg = " ";
+		
+		//NOTA: el $idusuario es siempre 1, ya que corresponde al usuario Andrea Arbelaez Mendoza
+		//que en la plataforma publicaciones es de ID = 1 y es siempro ella puede realizar solicitudes
+		//para que los expedientes para remate se visualizen.
+		
+		//ES POSIBLE REALIZAR EL REGISTRO 
+		if($flag == 1){
+		
+				
+			$fechalog = $modelo->get_fecha_actual_amd();
+			$horalog  = $modelo->get_hora_actual_24horas();
+			
+			//SE OBTIENEN LOS DATOS
+			$idusuario     = $_SESSION['idUsuario'];
+			$premate       = trim("SI");
+			$id_radisoliV1 = trim($_POST['id_radisoliV1']);
+			$radisoliV1    = trim($_POST['radisoliV1']);
+			//$des	    = utf8_decode(trim($_POST['solicitud']));
+			
+			//EXISTE EN LA BASE DE DATOS LOCAL DE EJECUCION Y ES POSIBLE REALIZAR REGISTRO
+			$datos_segundo_filtro = $modelo->get_datos_PROCESOX_2($radisoliV1);
+			$fila_proc            = $datos_segundo_filtro->fetch();
+			$idproc               = $fila_proc[id];
+			$digitalizado         = $fila_proc[digitalizado];
+			
+			
+			if($idproc >= 1){
+			
+				
+				$idradicado = trim($idproc);
+				
+				//SE IDENTIFICA QUE YA EXISTE UNA SOLICITUD EN PROCESO O ACTIVA DEL EXPEDIENTE PARA SU VISUALIZACION
+				//Y NO REALIZA UN NUEVO REGISTRO, ESTAS SOLICITUDES LAS PUEDE VER CUALQUIER ABOGAO
+				if($premate == "SI"){
+				
+					$datos_tercer_filtro = $modelo->Existe_Solicitud_Entidad(1,$idradicado,$idusuario);
+					$tercer_filtro_1     = $datos_tercer_filtro->fetch();
+					$tercer_filtro_2     = $tercer_filtro_1[cantregis];
+				}
+				else{
+				
+					$datos_tercer_filtro = $modelo->Existe_Solicitud_Entidad(2,$idradicado,$idusuario);
+					$tercer_filtro_1     = $datos_tercer_filtro->fetch();
+					$tercer_filtro_2     = $tercer_filtro_1[cantregis];
+				}
+				
+				if($tercer_filtro_2 == 0){
+	
+					$error_transaccion = 0; //variable para detectar error
+					$msg = " ";
+											
+								
+					try {  
+												
+						$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+													
+						//EMPIEZA LA TRANSACCION
+						$this->db->beginTransaction();
+													
+							
+							
+							$this->db->exec("INSERT INTO expe_entidad_solicitud(idradicado,idsolicitante,fecha,hora,bandera_res,experemate)
+											 VALUES('$idradicado',1,'$fechalog','$horalog',1,'$premate')");
+															
+									
+									
+							//OBTENGO EL ULTIMO ID REGISTRADO DEL ULTIMO INSERT EN LA TABLA expe_entidad_memo
+							$last_id = $this->db->lastInsertId();							
+											
+							
+							//HISTORIAL
+							
+							if($premate == "SI"){
+								$msg_premate = "REMATE";
+							}
+							
+							
+							$actuacion = 'REGISTRO SOLICITUD VISUALIZAR EXPEDIENTE DIGITAL '.$msg_premate;
+							$tablas    = 'expe_entidad_solicitud';
+							$tipo      = 'RSVED'.$msg_premate;
+							//$cadena_archivos = "MUCHOS";
+							$this->db->exec("INSERT INTO expe_historial(idda,idusuario,fecha,hora,actuacion,tablas,tipo,idexpdigi)
+											 VALUES('$idradicado',1,'$fechalog','$horalog','$actuacion','$tablas','$tipo','$last_id')");
+											 
+												
+											
+						$msg = "PROCESO SE REALIZA CORRECTAMENTE";
+																					
+						//SE TERMINA LA TRANSACCION  
+						$this->db->commit();
+																	
+						//echo $msg;
+														
+					} 
+					catch (Exception $e) {
+												
+										
+						//$msg = "2"."******"."ERROR"."******"."EN PROCESO: ".$e->getMessage();
+						
+						$msg = "ERROR EN PROCESO: ".$e->getMessage();
+										
+						
+						//NO TERMINA LA TRANSACCION SE PRESENTO UN ERROR
+						$this->db->rollBack();
+						
+										
+						//echo $msg;
+													
+						$error_transaccion   = 1;
+													
+					}
+												
+					if($error_transaccion){
+										
+						echo $msg;
+										
+					}
+					else{
+								
+						//SE TERMINA LA TRANSACCION  
+						//$this->db->commit();
+												
+						//$msg = "1"."******"."PROCESO SE REALIZA CORRECTAMENTE"."******".$last_id."******".$fechalog."******".$horalog;
+											
+						echo $msg;
+									
+					}
+					
+					
+				
+				}//FIN if($tercer_filtro_2 >= 1){
+				else{
+				
+					$msg = "NO ES POSIBLE REALIZAR LA SOLICITUD, YA EXISTE UNA SOLICITUD EN PROCESO O ACTIVA DEL EXPEDIENTE: ".$radicado." DIRIGIRSE A LA OPCION (VISUALIZAR EXPEDIENTE DIGITAL) PARA SU VISUALIZACION";
+					
+					echo $msg;
+				}
+				
+				
+			}//FIN if($idproc >= 1){
+			//RADICADO NO EXIXTE
+			else{
+			
+				$msg = "EL NUMERO DE RADICADO NO SE ENCUENTRA EN LOS JUZGADOS DE EJECUCION: ".$radicado;
+				
+				//$msg = "3"."******"."EL NUMERO DE RADICADO NO SE ENCUENTRA EN LOS JUZGADOS DE EJECUCION: ".$radicado;
+										
+				echo $msg;
+				
+				
+			}
+		
+		
+		
+		}//FIN if($flag == 1){
+					
+		
+				
+  	}
+	
+	public function get_datos_PROCESOX_2($datoJXX1){
+	
+		
+		$listar = $this->db->prepare("SELECT * FROM ubicacion_expediente 
+		                              WHERE radicado = '$datoJXX1'");
+								
+		$listar->execute();
+									
+		return $listar;							
+		
+		
+		
+	}
+	
+	//FUNCION PARA DETERMINAR SI SE REALIZA OTRO REGISTRO DE LA SOLICITUD SEGUN EL TIPO
+	public function Existe_Solicitud_Entidad($idsql,$idradicado,$idusuario){
+	
+		
+		//PARA VISUALIZAR PROCESOS PARA REMATES, Y CUALQUIER ABOGADO LOS PUEDE VER
+		if($idsql == 1){
+		
+			$listar = $this->db->prepare("SELECT COUNT(id) AS cantregis FROM expe_entidad_solicitud
+									      WHERE idradicado = '$idradicado'
+									      AND ( fecha_visual IS NULL OR fecha_visual = '0000-00-00' OR (SELECT CURDATE() <= fecha_visual) )
+									      AND experemate = 'SI'");
+										  
+		}
+		//PARA VISUALIZAR PROCESOS QUE NO SON PARA REMATE, PERO UN ABOGADO PIDE SU VISUALIZACION
+		if($idsql == 2){
+		
+			$listar = $this->db->prepare("SELECT COUNT(id) AS cantregis FROM expe_entidad_solicitud
+									      WHERE idradicado = '$idradicado'
+									      AND ( fecha_visual IS NULL OR fecha_visual = '0000-00-00' OR (SELECT CURDATE() <= fecha_visual) )
+									      AND experemate = 'NO'
+										  AND idsolicitante = '$idusuario'");
+										  
+		}
+		
+								
+		$listar->execute();
+									
+		return $listar;							
+		
+		
+		
+	}
 	
 	//-----------------------------------FIN EXPEDIENTE DIGITAL---------------------------------------
 	

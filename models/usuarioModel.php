@@ -284,7 +284,7 @@ class usuarioModel extends modelBase{
 						
 						
 						//ABOGADO, DEPARTAMENTO Y MUNICIPIO NULL
-						if($idparte_X == 1){
+						if($idparte_X == 1 || $idparte_X == 3){
 						
 							$dato4 = 'NULL';
 							$dato5 = 'NULL';
@@ -292,6 +292,8 @@ class usuarioModel extends modelBase{
 						}
 						
 						$dato6	   = utf8_decode(trim($datospartes_1B[5]));
+						
+						$dato8	   = utf8_decode(trim($datospartes_1B[6]));
 						
 				
 						$error_transaccion   = 0; //variable para detectar error
@@ -311,15 +313,24 @@ class usuarioModel extends modelBase{
 										
 								
 								//ABOGADO			
-								if($idparte_X == 1){
+								if($idparte_X == 1 || $idparte_X == 3){
+								
+									if($idparte_X == 1){
+										$pantalla = "ABOGADO";
+										$esabogado = "SI";
+									}
+									if($idparte_X == 3){
+										$pantalla  = "ESTUDIANTEDEDERECHO";
+										$esabogado = $pantalla;
+									}
 									
 									
 									$this->db->exec("INSERT INTO pa_usuario_expe (nombre_usuario,idperfil,tipo_perfil,empleado,contrasena,
 													 foto,idareaempleado,pantalla,fecha,hora,tipousuario,iddepartamento,idmunicipio,esabogado,correo,plataforma,ipplataforma,ingreso_activo,
-													 hi,hf,hi2,hf2,celular)
+													 hi,hf,hi2,hf2,celular,esentidad)
 													 VALUES ('$dato0',1,'admin','$dato2','$dato1',
-													 'views/fotos/usuario.png',7,'ABOGADO','$fechalog','$horalog','PUBLICO',NULL,NULL,'SI','$dato3','EJECUCION','$servidor_pdf',1,
-													 '$hi','$hf','$hi2','$hf2','$dato6')");
+													 'views/fotos/usuario.png',7,'ABOGADO','$fechalog','$horalog','PUBLICO',NULL,NULL,'$esabogado','$dato3','EJECUCION','$servidor_pdf',1,
+													 '$hi','$hf','$hi2','$hf2','$dato6','$dato8')");
 													 
 													 
 									
@@ -333,10 +344,10 @@ class usuarioModel extends modelBase{
 								
 									$this->db->exec("INSERT INTO pa_usuario_expe (nombre_usuario,idperfil,tipo_perfil,empleado,contrasena,
 													 foto,idareaempleado,pantalla,fecha,hora,tipousuario,iddepartamento,idmunicipio,esabogado,correo,plataforma,ipplataforma,ingreso_activo,
-													 hi,hf,hi2,hf2,celular)
+													 hi,hf,hi2,hf2,celular,esentidad)
 													 VALUES ('$dato0',1,'admin','$dato2','$dato1',
 													 'views/fotos/usuario.png',7,'PARTE','$fechalog','$horalog','PUBLICO',NULL,NULL,'NO','$dato3','EJECUCION','$servidor_pdf',1,
-													 '$hi','$hf','$hi2','$hf2','$dato6')");
+													 '$hi','$hf','$hi2','$hf2','$dato6','$dato8')");
 								
 								
 								}
@@ -407,7 +418,6 @@ class usuarioModel extends modelBase{
 					
 				
   	}
-	
 	
 	
 	public function listar_usuarios_2($idusuario){
@@ -573,6 +583,7 @@ class usuarioModel extends modelBase{
 						$dato3	   = utf8_decode(trim($datospartes_1B[3]));//CORREO
 						$dato4	   = utf8_decode(trim($datospartes_1B[4]));//CELULAR
 						$dato5	   = utf8_decode(trim($datospartes_1B[5]));//ES ABOGADO
+						$dato6	   = utf8_decode(trim($datospartes_1B[6]));//ENTIDAD
 						
 						if($dato5 == "SI"){
 							
@@ -581,6 +592,10 @@ class usuarioModel extends modelBase{
 						if($dato5 == "NO"){
 						
 							$pantalla = "PARTE";
+						}
+						if($dato5 == "ESTUDIANTEDEDERECHO"){
+						
+							$pantalla = "ESTUDIANTEDEDERECHO";
 						}
 						
 						$existeU   = trim($datospartes_1B[6]);//USUARIO EXISTE
@@ -614,10 +629,10 @@ class usuarioModel extends modelBase{
 										
 										$this->db->exec("INSERT INTO pa_usuario_expe (nombre_usuario,idperfil,tipo_perfil,empleado,contrasena,
 													 	 foto,idareaempleado,pantalla,fecha,hora,tipousuario,iddepartamento,idmunicipio,esabogado,correo,plataforma,ipplataforma,ingreso_activo,
-													     hi,hf,hi2,hf2,celular)
+													     hi,hf,hi2,hf2,celular,esentidad)
 													     VALUES ('$dato1',1,'admin','$dato2','$contrasena',
 													     'views/fotos/usuario.png',7,'$pantalla','$fechalog','$horalog','PUBLICO',NULL,NULL,'$dato5','$dato3','EJECUCION','$servidor_pdf',1,
-													     '$hi','$hf','$hi2','$hf2','$dato4')");
+													     '$hi','$hf','$hi2','$hf2','$dato4','$dato6')");
 														 
 														 
 									}
@@ -1747,7 +1762,7 @@ class usuarioModel extends modelBase{
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -2114,7 +2129,7 @@ class usuarioModel extends modelBase{
 												$cadena_archivos .= $rutaarchivo."******";
 												
 											}
-										if ($key['error']!='')//Si existio algï¿½n error retornamos un el error por cada archivo.
+										if ($key['error']!='')//Si existio algún error retornamos un el error por cada archivo.
 											{
 												$mensage .= '-> No se pudo subir el archivo <b>'.$nombre_archivo.'</b> debido al siguiente Error: n'.$key['error']; 
 												
@@ -2298,7 +2313,7 @@ class usuarioModel extends modelBase{
 		session_unset();
 		session_destroy();
 		
-		header("refresh: 0;URL=/laborales/");
+		header("refresh: 0;URL=/ejecucion/");
 		die();
     }
 	
@@ -2315,7 +2330,7 @@ class usuarioModel extends modelBase{
 		$nombre_user = $_SESSION['nombre'];
 		
 		/*$dato1U = trim($_POST['dato1U']);//DOC INDENTIDAD
-		$dato2U = md5(trim($_POST['dato2U']));//CONTRASEï¿½A	
+		$dato2U = md5(trim($_POST['dato2U']));//CONTRASEÑA	
 		$dato3U = utf8_decode(trim($_POST['dato3U']));//NOMBRE
 		$dato4U = utf8_decode(trim($_POST['dato4U']));//CORREO	
 		$dato5U = trim($_POST['dato5U']);//ES ABOGADO
@@ -2327,12 +2342,12 @@ class usuarioModel extends modelBase{
 		//QUE ALGUNOS CAMPOS NO SE DEFINAN Y DEBEN QUEDAR NULL
 		//EN LA BASE DE DATOS
 		$dato1U   = (!empty($_POST['dato1U'])) ?  $_POST['dato1U']   : NULL ;//DOC IDENTIDAD
-		//$dato2U   = (!empty($_POST['dato2U'])) ?  $_POST['dato2U']   : NULL ;//CONTRASEï¿½A	
+		//$dato2U   = (!empty($_POST['dato2U'])) ?  $_POST['dato2U']   : NULL ;//CONTRASEÑA	
 		$dato3U   = (!empty($_POST['dato3U'])) ?  $_POST['dato3U']   : NULL ;//NOMBRE
 		$dato4U   = (!empty($_POST['dato4U'])) ?  $_POST['dato4U']   : NULL ;//CORREO	
 		
 		
-		//SI SE DEFINE UNA NUEVA CONTRASEï¿½A EN EL FORMULARIO
+		//SI SE DEFINE UNA NUEVA CONTRASEÑA EN EL FORMULARIO
 		if(!empty($_POST['dato2U'])){
 		
 			//$dato2U   = (!empty($_POST['dato2U']))   ?  $_POST['dato2U']   : NULL ;
@@ -2346,9 +2361,15 @@ class usuarioModel extends modelBase{
 		
 			if($_POST['dato5U'] == 1){
 				$dato5U   = "SI";
+				$pantalla = "ABOGADO";
 			}
 			if($_POST['dato5U'] == 2){
 				$dato5U   = "NO";
+				$pantalla = "PARTE";
+			}
+			if($_POST['dato5U'] == 3){
+				$dato5U   = "ESTUDIANTEDEDERECHO";
+				$pantalla = "ESTUDIANTEDEDERECHO";
 			}
 		}
 		else{
@@ -2358,6 +2379,9 @@ class usuarioModel extends modelBase{
 		}
 		
 		$dato6U   = (!empty($_POST['dato6U']))   ?  $_POST['dato6U']   : NULL ;//CELULAR
+		
+		
+		$dato7U   = (!empty($_POST['dato7U']))   ?  $_POST['dato7U']   : NULL ;//ES ENTIDAD
 		
 		
 		//CAMPOS OCULTOS
@@ -2404,7 +2428,7 @@ class usuarioModel extends modelBase{
 								");	*/		
 								
 				
-					//SI SE DEFINE UNA NUEVA CONTRASEï¿½A EN EL FORMULARIO
+					//SI SE DEFINE UNA NUEVA CONTRASEÑA EN EL FORMULARIO
 					if(!empty($_POST['dato2U'])){
 				
 						$stmt = $this->db->prepare("
@@ -2416,7 +2440,9 @@ class usuarioModel extends modelBase{
 															empleado       = :dato3U,
 															correo         = :dato4U,
 															esabogado      = :dato5U,
-															celular        = :dato6U
+															celular        = :dato6U,
+															esentidad      = :dato7U,
+															pantalla       = :pantalla
 																				
 														WHERE id = :iduser
 																			
@@ -2433,7 +2459,9 @@ class usuarioModel extends modelBase{
 															empleado       = :dato3U,
 															correo         = :dato4U,
 															esabogado      = :dato5U,
-															celular        = :dato6U
+															celular        = :dato6U,
+															esentidad      = :dato7U,
+															pantalla       = :pantalla
 																				
 														WHERE id = :iduser
 																			
@@ -2443,7 +2471,7 @@ class usuarioModel extends modelBase{
 					
 					$stmt->bindParam(':dato1U', $dato1U);
 					
-					//SI SE DEFINE UNA NUEVA CONTRASEï¿½A EN EL FORMULARIO
+					//SI SE DEFINE UNA NUEVA CONTRASEÑA EN EL FORMULARIO
 					if(!empty($_POST['dato2U'])){
 					
 						$stmt->bindParam(':dato2U', md5($dato2U));
@@ -2453,6 +2481,8 @@ class usuarioModel extends modelBase{
 					$stmt->bindParam(':dato4U', utf8_decode($dato4U));
 					$stmt->bindParam(':dato5U', $dato5U);
 					$stmt->bindParam(':dato6U', $dato6U);
+					$stmt->bindParam(':dato7U', $dato7U);
+					$stmt->bindParam(':pantalla', $pantalla);
 					$stmt->bindParam(':iduser', $iduser);
 					$stmt->execute();			
 											

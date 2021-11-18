@@ -1940,6 +1940,24 @@ $(document).ready(function() {
 			
 								 
 		});
+		
+		$(".cargar_expe").click(function(evento){
+	
+				
+				var idradicado = $(this).attr('data-idradicado');
+				var radicado   = $(this).attr('data-radicado');
+				
+				
+				var datosexpF = idradicado+"******"+radicado;
+				
+				
+				var configuracion_ventana = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+				
+				window.open('index.php?controller=archivo&action=Expediente_Digital&datosexp='+datosexpF,"EXPEDIENTE DIGITAL", configuracion_ventana);
+				
+				
+				 
+		});
 	
 
 	
@@ -2340,6 +2358,8 @@ function registrar_devolucion_2(idactu,idfila){
 			
 			<th style="width:180px; font-size:12px">FECHA SALIDA</th>
 			
+			<th style="width:180px; font-size:12px">EXPEDIENTE</th>
+			
 			<th style="width:180px; font-size:12px">ACUMULADA(S)</th>
 			<th style="width:180px; font-size:12px">PROCESO ACUMULADO A</th>
 			
@@ -2510,6 +2530,17 @@ function registrar_devolucion_2(idactu,idfila){
 				<?php } ?>
 			</td>
 			
+			<td>
+			
+				<a class="cargar_expe" data-idradicado="<?php echo $d1M ;?>" data-radicado="<?php echo $d2M;?>" title="EXPEDIENTE">				
+						
+							
+					<button class="btn btn-default"><span class="glyphicon glyphicon-folder-open"></span></button> 
+							
+					
+				</a>
+				
+			</td>
 			
 			<td>
 			

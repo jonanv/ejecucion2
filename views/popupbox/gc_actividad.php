@@ -59,9 +59,11 @@ $('document').ready(function(){
 
 
 
-		var ipservidor = "172.16.176.194";
+		//var ipservidor = "172.16.176.194";
+		
+		var ipservidor = "190.217.24.24";
 
-		 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
+		 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
 		 $.datepicker.regional['es'] = {
 		 closeText: 'Cerrar',
 		 prevText: '< Ant',
@@ -69,9 +71,9 @@ $('document').ready(function(){
 		 currentText: 'Hoy',
 		 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 		 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-		 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miï¿½rcoles', 'Jueves', 'Viernes', 'Sï¿½bado'],
-		 dayNamesShort: ['Dom','Lun','Mar','Miï¿½','Juv','Vie','Sï¿½b'],
-		 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sï¿½'],
+		 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+		 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+		 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
 		 weekHeader: 'Sm',
 		 dateFormat: 'yy-mm-dd',
 		 firstDay: 1,
@@ -205,7 +207,7 @@ $('document').ready(function(){
 					
 					
 					
-					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+					/*Ejecutamos la función ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -273,7 +275,7 @@ $('document').ready(function(){
 				//alert(id);
 				
 
-				window.open("http://"+ipservidor+"/laborales/views/PHPPdf/Reporte_Cartel.php?id="+id);
+				window.open("http://"+ipservidor+"/ejecucion/views/PHPPdf/Reporte_Cartel.php?id="+id);
 				
 		});
 		
@@ -286,7 +288,7 @@ $('document').ready(function(){
 				//alert(id);
 				
 
-				window.open("http://"+ipservidor+"/laborales/views/tcpdf/HISTORIAL_PROCESO.php?id="+idrad);
+				window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/HISTORIAL_PROCESO.php?id="+idrad);
 				
 		});
 		
@@ -392,7 +394,7 @@ $('document').ready(function(){
 					
 					
 					
-					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+					/*Ejecutamos la función ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -531,7 +533,7 @@ $('document').ready(function(){
 					
 					
 					
-					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+					/*Ejecutamos la función ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos

@@ -398,6 +398,8 @@ $(document).ready(function() {
 				
 				d7hRC2  = document.getElementById("t_raC").rows[r].cells[5].innerText;
 				
+				d8hRC2  = document.getElementById("t_raC").rows[r].cells[6].innerText;
+				
 				
 				
 				
@@ -409,7 +411,7 @@ $(document).ready(function() {
 						//CONCATENO TODOS LOS REGISTROS DE LA TABLA
 						//idspermisoRC2 = d0hRC2+"//////"+d1hRC2+"//////"+d2hRC2+"//////"+d3hRC2+"//////"+d4hRC2+"//////"+d5hRC2+"//////"+d6hRC2+"******"+idspermisoRC2;
 						
-						idspermisoRC2 = d0hRC2+"//////"+d1hRC2+"//////"+d2hRC2+"//////"+d3hRC2+"//////"+d6hRC2+"//////"+d7hRC2+"******"+idspermisoRC2;
+						idspermisoRC2 = d0hRC2+"//////"+d1hRC2+"//////"+d2hRC2+"//////"+d3hRC2+"//////"+d6hRC2+"//////"+d7hRC2+"//////"+d8hRC2+"******"+idspermisoRC2;
 						
 						idspermiso_realC2 = 1;
 						
@@ -673,6 +675,7 @@ function Adicionar_Parte(){
 			//var valor_6  = document.getElementById('lista2').value;
 			var valor_7  = document.getElementById('dato5').value+"-"+dato5.options[dato5.selectedIndex].text;
 			var valor_8  = document.getElementById('dato6').value;
+			var valor_9  = document.getElementById('dato7').value;
 			
 			
 			//CAROGO VECTOR CON LOS ID DE LAS PARTES
@@ -777,7 +780,7 @@ function Adicionar_Parte(){
 					
 					tabla_raC+='<td>'+valor_8+'</td>';
 					
-					
+					tabla_raC+='<td>'+valor_9+'</td>';
 					
 					tabla_raC+='<td><button type=button name=eliminarreparto id=eliminarreparto onclick="Eliminar_Fila_RAC(this.parentNode.parentNode.rowIndex)"><img src="views/images/eliminar.png" width="20" height="20" title="Eliminar Fila"/></button></td>';
 										
@@ -835,6 +838,7 @@ function Adicionar_Parte(){
 					
 					tabla_raC+='<td>'+valor_8+'</td>';
 					
+					tabla_raC+='<td>'+valor_9+'</td>';
 					
 					tabla_raC+='<td><button type=button name=eliminarreparto id=eliminarreparto onclick="Eliminar_Fila_RAC(this.parentNode.parentNode.rowIndex)"><img src="views/images/eliminar.png" width="20" height="20" title="Eliminar Fila"/></button></td>';
 					
@@ -898,7 +902,7 @@ function Validar_Campos_Agregar_RAC(){
 	
 	valor8  = document.getElementById('dato6').value;
 	
-	
+	valor9  = document.getElementById('dato7').value;
 	
 	if( valor1 == null || valor1.length == 0 || /^\s+$/.test(valor1) ) {
   		
@@ -1002,7 +1006,16 @@ function Validar_Campos_Agregar_RAC(){
 	}
 	
 	
+	if( valor9 == null || valor9.length == 0 || /^\s+$/.test(valor9) ) {
 	
+		
+		alert("Defina es Entidad");
+		document.getElementById('dato7').style.borderColor = '#FF0000';
+		validar = 1;
+		return validar;
+		
+		
+	}
 	
 	
 	
@@ -1023,9 +1036,11 @@ function Limpiar_Campos_3_RAC(){
 	document.getElementById('dato4').value = "";
 	//document.getElementById('lista1').selectedIndex = 0;
 	//document.getElementById('lista2').selectedIndex = 0;
-	document.getElementById('dato5').value = "";
+	//document.getElementById('dato5').value = "";
+	document.getElementById('dato5').selectedIndex = 0;
 	document.getElementById('dato6').value = "";
 	
+	document.getElementById('dato7').selectedIndex = 0;
 	
 	
 }
@@ -1303,6 +1318,7 @@ function number_format(amount, decimals) {
 						<option value="" selected="selected">Seleccionar Opcion</option>
 						<option value="1">ABOGADO</option>
 						<option value="2">NO ABOGADO</option>  
+						<option value="3">ESTUDIANTE DE DERECHO</option>
 																			
 						
 			</select>
@@ -1322,6 +1338,29 @@ function number_format(amount, decimals) {
 		
 	</div>
 	
+	
+	<div class="form-row">
+	  
+		
+    	
+	
+		<div class="form-group col-md-6">
+		
+			  <label for="input_7">Es Entidad:</label>
+			 
+			  <select class="form-control" name="dato7" id="dato7" data-validacion-tipo="requerido">
+																
+						<option value="" selected="selected">Seleccionar Opcion</option>
+						<option value="SI">SI</option>
+						<option value="NO">NO</option>  
+																			
+						
+			</select>
+		
+		</div>
+			
+		
+	</div>
 	
 	
     
@@ -1434,6 +1473,10 @@ function number_format(amount, decimals) {
 			
 			<td>
 				<strong style="font-size:12px; color:#0066CC">Celular</strong>
+			</td>
+			
+			<td>
+				<strong style="font-size:12px; color:#0066CC">Entidad</strong>
 			</td>
 			
 			<td>

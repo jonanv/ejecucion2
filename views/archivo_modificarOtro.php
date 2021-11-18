@@ -10,7 +10,7 @@
 	//SE CAPTURA DE LA TABLA ubicacion_expediente
 	$digitalizado_1 = $modelo->get_proceso_digitalizado($id_radicado_2);
 	$digitalizado_2 = $digitalizado_1->fetch();
-	$digitalizado_3 = $digitalizado_2['digitalizado'];
+	$digitalizado_3 = $digitalizado_2[digitalizado];
 	
 	//echo $digitalizado_3;
 	
@@ -299,10 +299,10 @@ $(document).ready(function() {
 		/*var adespacho;
 		
 		if($("#ckdespacho").is(':checked')) {  
-            //alert("Estï¿½ activado"); 
+            //alert("Está activado"); 
 			adespacho = 1; 
         } else {  
-            //alert("No estï¿½ activado"); 
+            //alert("No está activado"); 
 			adespacho = 0; 
         }  
 		
@@ -389,10 +389,10 @@ $(document).ready(function() {
 		//alert(juzgadodestino);
 		
 		if($("#ckdespacho").is(':checked')) {  
-            //alert("Estï¿½ activado"); 
+            //alert("Está activado"); 
 			adespacho = 1; 
         } else {  
-            //alert("No estï¿½ activado"); 
+            //alert("No está activado"); 
 			adespacho = 0; 
         }  
 		
@@ -670,7 +670,7 @@ $(document).ready(function() {
 			
 			$.get("funciones/traer_fecha_termino_2.php?fechat="+fechat, function(cadena){
 			
-				// alert(cadena);
+				//alert(cadena);
 			
 				//location.href="index.php?controller=archivo&action=Registrar_Termino&id="+id+"&radicado="+radicado+"&fechatermino="+fechat+"&obst="+obst;
 				
@@ -720,10 +720,10 @@ $(document).ready(function() {
 		//alert(juzgadodestino);
 		
 		if($("#ckautoaprueba").is(':checked')) {  
-            //alert("Estï¿½ activado"); 
+            //alert("Está activado"); 
 			autoaprueba = 1; 
         } else {  
-            //alert("No estï¿½ activado"); 
+            //alert("No está activado"); 
 			autoaprueba = 0; 
         }  
 		
@@ -845,7 +845,7 @@ $(document).ready(function() {
 			document.frm.asignadoa.value.length      == 0 
 		){
 		
-			alert("Definir Actuaciï¿½n Interna, Fecha Final y Asignado A");
+			alert("Definir Actuación Interna, Fecha Final y Asignado A");
 			document.getElementById('fecha_actusfti').style.borderColor='#FF0000';
 			document.getElementById('actuacion').style.borderColor='#FF0000';
 			document.getElementById('asignadoa').style.borderColor='#FF0000';
@@ -999,7 +999,7 @@ $(document).ready(function() {
 			document.frm.decision_proc.value.length        == 0 
 		){
 		
-			alert("Definir Observacion, Folios y Cuadernos");
+			alert("Definir Observacion, Folios, Cuadernos y Decision");
 			document.getElementById('observacionesarchivo').style.borderColor = '#FF0000';
 			document.getElementById('folio_proc').style.borderColor           = '#FF0000';
 			document.getElementById('cuaderno_proc').style.borderColor        = '#FF0000';
@@ -1040,10 +1040,10 @@ $(document).ready(function() {
 		//alert(juzgadodestino);
 		
 		if($("#ckenanaquelt").is(':checked')) {  
-            //alert("Estï¿½ activado"); 
+            //alert("Está activado"); 
 			enanaquel = 1; 
         } else {  
-            //alert("No estï¿½ activado"); 
+            //alert("No está activado"); 
 			enanaquel = 0; 
         }  
 		
@@ -1164,7 +1164,7 @@ $(document).ready(function() {
 								
 									
 									
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 										
 					//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1213,6 +1213,16 @@ $(document).ready(function() {
 			
 	});
 	
+	$(".descarga_recibido_entidad").click(function(evento){
+	
+		
+			var idrecibido = $(this).attr('data-idrecibido');
+			
+			window.open("views/tcpdf/RECIBIDO_ENTIDAD.php?iddda_acta="+idrecibido);
+
+			
+		});
+	
 	
 	
 	//BLOQUEAR PROCESO
@@ -1235,7 +1245,7 @@ $(document).ready(function() {
 								
 									
 									
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 										
 					//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1295,7 +1305,7 @@ $(document).ready(function() {
 								
 									
 									
-			/*Ejecutamos la funciï¿½n ajax de jQuery*/		
+			/*Ejecutamos la función ajax de jQuery*/		
 			$.ajax({
 										
 					//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1318,6 +1328,68 @@ $(document).ready(function() {
 											
 											
 							location.href="index.php?controller=archivo&action=edit_archivoOtro&nombre="+id_radibloc1;
+											
+							
+											
+						},3000);
+										
+									
+			});
+									
+									
+									
+								
+		}
+	
+	
+	});
+	
+	
+	//SOLICITUD VISUALIZAR EXPEDIENTE REMATE PARA ENTIDADES Y TERCEROS
+	$("#soli_VE").click(function(evento){
+	
+	
+		var id_radisoliV1 = $(this).attr('data-id');
+		var radisoliV1    = $(this).attr('data-radicado');
+		
+		//alert(id_radi_digi);
+		
+		var data = new FormData();
+						
+		data.append('id_radisoliV1',id_radisoliV1);
+		data.append('radisoliV1',radisoliV1);
+		
+		
+		if (confirm ("ESTA SEGURO DE REALIZAR EL PROCESO")) {
+								
+								
+									
+									
+			/*Ejecutamos la función ajax de jQuery*/		
+			$.ajax({
+										
+					//url:'views/popupbox/subir.php', //Url a donde la enviaremos
+					url:'index.php?controller=archivo&action=Solicitud_Expediente_Remate',
+					type:'POST', //Metodo que usaremos
+					contentType:false, //Debe estar en false para que pase el objeto sin procesar
+					//data:dataString, //Le pasamos el objeto que creamos con los archivos
+					data:data,
+					processData:false, //Debe estar en false para que JQuery no procese los datos a enviar
+					cache:false //Para que el formulario no guarde cache
+			}).done(function(msg){//Escuchamos la respuesta y capturamos el mensaje msg
+										
+					$('.mensage').html(msg);//A el div con la clase msg, le insertamos el mensaje en formato  thml
+					$('.mensage').show('slow');//Mostramos el div.
+										
+					//DESAPARECER
+					setTimeout(function() {
+											
+						$(".mensage").fadeOut(1500);
+											
+											
+							//location.href="index.php?controller=archivo&action=edit_archivoOtro&nombre="+id_radibloc1;
+							
+							location.href="index.php?controller=archivo&action=listarUbicacionExpediente";
 											
 							
 											
@@ -1398,7 +1470,7 @@ function requerirFecha(frm)
 	
 	if(fecha_reparto=!"")
 	{
-		if(userid == 8 || userid == 48 || userid == 38 || userid == 51 || userid == 58){
+		if(userid == 8 || userid == 48 || userid == 38 || userid == 51 || userid == 58 || userid == 78){
 		
 			frm.idjuzdes.disabled=false;
 			frm.idjuzdes.required=true;
@@ -1472,7 +1544,7 @@ function crearFormAccionado(form,frm) {
   ele = document.createElement('input'); 
   ele.type = '<label>'; 
   ele.name = 'apellido1'+numf2; 
-  ele.value= 'Descripciï¿½n: ';
+  ele.value= 'Descripción: ';
   ele.id= 'estilo_medio';
   ele.disabled= 'true';
   contenedor.appendChild(ele); 
@@ -1683,7 +1755,7 @@ function construir_posicion(frm)
 }
 
 
-
+--> 
 function vinculo4(variable)
 {
 //alert(variable);
@@ -1717,7 +1789,7 @@ location.href="index.php?controller=correspondencia&action=listarDocumentos";
 </script>
 
 <style type="text/css">
-
+<!--
 .Estilo2 {
 color: #0000CC;
 cursor:pointer;
@@ -1735,14 +1807,14 @@ text-decoration: underline;
 		}
 
 
-
+-->
 </style>
 </head>
 
 <body>
-
+<!---->
 <?php require 'header.php'; ?>
-
+<!---->
 <?php require 'secc_archivo.php'; ?>
 
 <?php require 'funciones/Funciones.php'; 
@@ -1751,7 +1823,7 @@ $funcion = new Funciones();
 
 <div id ="block"></div>
 <div id="popupbox"></div>
-
+<!---->
 <table border="0" cellspacing="0" cellpadding="0" align="center">
   <!-- <tr>
     <td><img src="views/images/crm_fondo_top.png" width="954" height="40" /></td>
@@ -1822,7 +1894,7 @@ $funcion = new Funciones();
 				$fechaquearchiva = $field[fechaquearchiva];
 			}
 		   	
-			//VARIABLE CUANDO SE LE DA FIï¿½ECHA DE FIN DE TERMINO A PROCESO
+			//VARIABLE CUANDO SE LE DA FIÇECHA DE FIN DE TERMINO A PROCESO
 			//PARA QUE APAREZCA EN LAS ALERTAS DE VENCE TERMINOS
 			$fecha_terminos  = $field[fecha_terminos];
 			
@@ -1953,6 +2025,15 @@ $funcion = new Funciones();
 						</button>
 						
 					</a> -->
+					
+					
+					<a id="soli_VE" href="javascript:void(0);" data-id="<?php echo  $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>" style="float:right" title="Solicitud Visualizar Expediente Remate para Entidades y Terceros">
+					
+						<button type="button" class="btn btn-primary">
+							<span class="glyphicon glyphicon-hand-right"></span> Solicitud Visualizar Expediente
+						</button>
+						
+					</a>
 							
 				</td>
 						
@@ -2022,13 +2103,13 @@ $i=$k=0;
   		
        <td>
 	   
-	   	<input type="text" name="fecha" id="txt_input" class="required" value="<?php echo $fecha;?>" readonly="readonly" title="Fecha del dï¿½a Actual"/>
+	   	<input type="text" name="fecha" id="txt_input" class="required" value="<?php echo $fecha;?>" readonly="readonly" title="Fecha del día Actual"/>
          <input name="cantidad" type="hidden" id="cantidad" value="0" />
          <input name="cantidad1" type="hidden" id="cantidad1" value="0" />
          <input type="hidden" name="temp" id="temp" />
-		<!-- <a id="new" href="javascript:void(0);" title="Acciones del Proceso"><img src="/laborales/eventos/imagenes/toggle_f2.png" width="35" height="35" title="Acciones del Proceso"/>Acciones del Proceso</a> -->
+		<!-- <a id="new" href="javascript:void(0);" title="Acciones del Proceso"><img src="/ejecucion/eventos/imagenes/toggle_f2.png" width="35" height="35" title="Acciones del Proceso"/>Acciones del Proceso</a> -->
 		<br>
-		<input type="text" name="fechaactualsistema" id="txt_input" class="required" value="<?php echo $field[fecha];?>" readonly="readonly" title="Fecha de la ultima actualizaciï¿½n del Proceso por parte de un Funcionario de la Oficina de Ejecuciï¿½n de Sentencias"/>
+		<input type="text" name="fechaactualsistema" id="txt_input" class="required" value="<?php echo $field[fecha];?>" readonly="readonly" title="Fecha de la ultima actualización del Proceso por parte de un Funcionario de la Oficina de Ejecución de Sentencias"/>
 		<br>
 		<input type="text" name="fechacarga" id="txt_input" class="required" value="<?php echo $field[fecharegistrosistema];?>" readonly="readonly" title="Fecha de Registro del Proceso Cuando es Cargado al Sistema por Primera vez"/>
 		
@@ -2235,7 +2316,7 @@ $i=$k=0;
              <td><input type="text" name="demandante" id="txt_input" maxlength="1000" class=""  onchange="" value="<?php echo $field[demandante]; ?>"/></td>
              </tr>
              <tr>
-             <td>Cï¿½dula Demandado: </td>
+             <td>Cédula Demandado: </td>
              <td><input type="text" name="cedula_demandado" id="txt_input" maxlength="1000" class=""  onchange="" value="<?php echo $field[cedula_demandado]; ?>"/></td>
              </tr>
              <tr>
@@ -2347,7 +2428,7 @@ $i=$k=0;
 		  
 		  <?php
 		   
-		  if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
+		  if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
 		   
           <tr>
              <td>Archivador:</td>
@@ -2367,7 +2448,7 @@ $i=$k=0;
            <td><input type="text" name="caja" id="txt_input_corto" class="" maxlength="3"  onchange="construir_posicion(frm)" value="<?php echo $caja; ?>"/></td>
            </tr>
           <tr>
-          <td>Posiciï¿½n</td>
+          <td>Posición</td>
           <td><input type="text" name="posicion" id="posicion" readonly="readonly" class="" value="<?php echo  $posicion; ?>" />
 		  <input type="hidden" name="posicion_antigua" id="posicion_antigua" value="<?php echo $posicion;?>" /></td>
           </tr>
@@ -2394,7 +2475,7 @@ $i=$k=0;
            <td><input type="text" name="caja" id="txt_input_corto" readonly="readonly" class="" maxlength="3"  onchange="construir_posicion(frm)" value="<?php echo $caja; ?>"/></td>
            </tr>
           <tr>
-          <td>Posiciï¿½n</td>
+          <td>Posición</td>
           <td><input type="text" name="posicion" id="posicion" readonly="readonly" class="" value="<?php echo  $posicion; ?>" />
 		  <input type="hidden" name="posicion_antigua" id="posicion_antigua" value="<?php echo $posicion;?>" /></td>
           </tr>
@@ -2409,10 +2490,10 @@ $i=$k=0;
 		  //SI NO ES EL USUARIO ESPECIFICADO SE CARGA EL CAMPO OBSERBACION INACTIVO
 		  if( $field[observacion_archivo] == "PROCESO TERMINADO OFICINA AUXILIAR" ){ 
 		  
-			  if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
+			  if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
 			  
 					<tr>
-						<td>Observaciï¿½n</td>
+						<td>Observación</td>
 						<td><textarea name="observacionesarchivo" id="observacionesarchivo" cols="45" rows="5" maxlength = "1000" ><?php echo $field[observacion_archivo]; ?></textarea> </td>
 					</tr>
 		  <?php }?>
@@ -2421,10 +2502,10 @@ $i=$k=0;
 		  }
 		  else{
 		  
-		  	if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
+		  	if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==1 || $_SESSION['idUsuario']==47 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==36)) {  ?>
 				
 				<tr>
-					<td>Observaciï¿½n</td>
+					<td>Observación</td>
 					<td><textarea name="observacionesarchivo" id="observacionesarchivo" cols="45" rows="5" maxlength = "1000"><?php echo $field[observacion_archivo]; ?></textarea> </td>
 				</tr>
 		
@@ -2433,7 +2514,7 @@ $i=$k=0;
 			else{  ?>
 			
 				<tr>
-					<td>Observaciï¿½n</td>
+					<td>Observación</td>
 					<td><textarea name="observacionesarchivo" id="observacionesarchivo" cols="45" rows="5" maxlength = "1000" readonly="readonly"><?php echo $field[observacion_archivo]; ?></textarea> </td>
 				</tr>
 		<?php
@@ -2523,7 +2604,7 @@ $i=$k=0;
 			   		
 				   <table>
 						<tr>
-							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ï¿½LTIMA ACTUACIï¿½N DESPACHO</strong></div></td>
+							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ÚLTIMA ACTUACIÓN DESPACHO</strong></div></td>
 						</tr>
 						
 						<tr>
@@ -2552,7 +2633,7 @@ $i=$k=0;
 			   
 				   <table> 
 						<tr>
-							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ï¿½LTIMA ACTUACIï¿½N SECRETARIA</strong></div></td>
+							<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>ÚLTIMA ACTUACIÓN SECRETARIA</strong></div></td>
 						</tr>
 						
 						<tr>
@@ -2581,22 +2662,22 @@ $i=$k=0;
 		   <!-- ENVIO DE FORMA OCULTA EL CODIGO DEL RADICADO PARA SER INSERTADO EN LA TABLA actuacion_expediente, 
 		   DEFINO QUE USUARIOS TIENEN ACCESO A ESTA ZONA--> 
 		   
-		   <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51)) { ?>
+		   <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==83)) { ?>
 		   
 		   
 		  
 			
 		   <tr>
-				<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>TRï¿½MITE INTERNO DE PROCESO</strong></div>
+				<td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>TRÁMITE INTERNO DE PROCESO</strong></div>
 				<input type="hidden" name="codradicado" id="codradicad" value="<?php echo $field[id]; ?>" /></td>
 		   </tr>
 			
 		   
 		   <tr>
-				<td width="288">Actuaciï¿½n Interna:</td>
+				<td width="288">Actuación Interna:</td>
 				<td width="501"><select name="actuacion" id="actuacion" style="width:258px">
 				
-					<option value="" selected="selected">Seleccionar Actuaciï¿½n</option>
+					<option value="" selected="selected">Seleccionar Actuación</option>
 					 <?php
 						while($row = $datos_actuacion->fetch()){
 				
@@ -2609,7 +2690,7 @@ $i=$k=0;
             </tr>
 			
 			<tr>
-				<!-- ES LA FECHA DE ESTADO DE LA ï¿½LTIMA ACTUACIï¿½N SECRETARIA
+				<!-- ES LA FECHA DE ESTADO DE LA ÚLTIMA ACTUACIÓN SECRETARIA
 				SE UTILIZA EL FORMATO Y-n-j EN VEZ DE Y-m-d YA QUE AL REALIZAR LA OPERACION
 				DE CALCULAR LA FECHA FINAL SEGUN LOS DIAS LA FECHA INICIAL DEBE ESTAR DE LA SIGUIENTE 
 				MANERA 2014-11-5 (Y-n-j) Y NO DE ESTA 2014-11-05 (Y-m-d) YA QUE EL CERO DEL DIA
@@ -2620,7 +2701,7 @@ $i=$k=0;
 			</tr>
 			
 			<tr>
-                <td>Dï¿½as</td>
+                <td>Días</td>
                 <td><input type="text" name="diasti" id="diasti" onkeyup="DiasHabiles()" value="<?php echo $dias; ?>"/></td>
             </tr>
 			
@@ -2667,7 +2748,7 @@ $i=$k=0;
            <td colspan="2" bgcolor="#CDE3F6"><div align="center"><strong>REPARTO</strong></div></td>
            </tr>
            <tr>
-           <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43)) { ?>
+           <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43)) { ?>
            <td>Repartir:
            </td>
            <td>
@@ -2681,7 +2762,7 @@ $i=$k=0;
 		   INDICAR A QUE USUARIOS SE LE DEBE ACTIVA LA LISTA DE Juzgado Reparto--> 
 		   <input type="hidden" name="user_id" id="user_id" value="<?php echo $_SESSION['idUsuario'];?>" />
 		   
-		   <?php if( ($_SESSION['idUsuario']== 8 || $_SESSION['idUsuario']== 38 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43) ) { ?>
+		   <?php if( ($_SESSION['idUsuario']== 8 || $_SESSION['idUsuario']== 38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43) ) { ?>
 		   
 		   <input name="fecha_reparto" onchange="requerirFecha(frm)" type="text" class="tinicio" id="txt_input" value="<?php echo $fecha_ant=$field[fecha_reparto];?>"/>
 		   
@@ -2712,7 +2793,7 @@ $i=$k=0;
 			   <!-- SE INDICA QUE SOLO EL USUARIO CON ID 8 SE LE DEBE ACTIVA LA LISTA DE Juzgado Reparto -->
 			   <td>
 			   	   
-				   <?php if( ($_SESSION['idUsuario']== 8 || $_SESSION['idUsuario']== 38 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43) ) { ?>
+				   <?php if( ($_SESSION['idUsuario']== 8 || $_SESSION['idUsuario']== 38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43) ) { ?>
 					
 				   <!-- SE CIERRA ESTA LINEA PARA QUE NO SOLICITE ESTE DATO AL DAR CLIC EN ACTUALIZAR, ESTA VALIDACION SE REALIZA EN
 				   archivoModel.php en la funcion modificarArchivo_Otro() en la parte if($ckreparto == true) -->	
@@ -2721,7 +2802,7 @@ $i=$k=0;
 				   
 				   <?php } ?>
 					   
-				   <?php if( ($_SESSION['idUsuario']!= 8 && $_SESSION['idUsuario']!= 38 && $_SESSION['idUsuario']!= 48 && $_SESSION['idUsuario']!=51 && $_SESSION['idUsuario']!=42 && $_SESSION['idUsuario'] != 58 && $_SESSION['idUsuario'] != 43) ) { ?>
+				   <?php if( ($_SESSION['idUsuario']!= 8 && $_SESSION['idUsuario']!= 38 && $_SESSION['idUsuario']!=78 && $_SESSION['idUsuario']!= 48 && $_SESSION['idUsuario']!=51 && $_SESSION['idUsuario']!=42 && $_SESSION['idUsuario'] != 58 && $_SESSION['idUsuario'] != 43) ) { ?>
 					
 				   <select name="idjuzdes" class="" id="sl_input" requerid="requerid" disabled="disabled">
 				   
@@ -2747,7 +2828,7 @@ $i=$k=0;
 			 
            </tr>
 		   
-		   <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43)) { ?>
+		   <?php if(($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==48 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario'] == 58 || $_SESSION['idUsuario'] == 43)) { ?>
            <tr>
            <td>Cambiar Ponente:</td><?php $j=0; $cont_desp=count($datos_despachos);?>
            <td><select name="despacho" id="sl_input"><!-- se cierra por el mismo caso comentado anteriormente --><!-- <select name="despacho" class="required" id="sl_input"> -->
@@ -2846,13 +2927,36 @@ $i=$k=0;
 												<br>
 												<br>
 																
-												<?php if( $fieldd[id_memo_externo] >= 1 ){?>
+												<?php 
+												
+												if( $fieldd[id_memo_externo] >= 1 ){
+												
+												if ( $fieldd[esentidad] == "NO" ){
+												
+												?>
 																
 														<a class="descarga_recibido" href="javascript:void(0);" title="Recibido" data-idrecibido="<?php echo $fieldd[id_memo_externo]; ?>">
 														<button type="button" class="btn btn-success btn-xs">RECIBIDO</button>
 														</a> 	
 																
-												<?php } ?>
+												<?php 
+												}
+												//EL USUARIO QUE REGISTRO EL MEMORIAL 
+												//POR LA PLATAFORMA PUBLICACIONES ES ENTIDAD
+												//SE DIRECCIONA A OTRO RECIBIDO
+												else{	
+												
+												?>
+													<a class="descarga_recibido_entidad" href="javascript:void(0);" title="Recibido" data-idrecibido="<?php echo $fieldd[id_memo_externo]; ?>">
+													<button type="button" class="btn btn-success btn-xs">RECIBIDO</button>
+													</a> 	
+													 
+												<?php
+												
+												}
+												
+												}//if( $fieldd[id_memo_externo] >= 1 ){ 
+												?>
 												
 												
 											</span>
@@ -2867,37 +2971,37 @@ $i=$k=0;
              <tr>
                <td>&nbsp;</td>
                <td>
-<input type="button" name="btn_input_accionado" id="btn_input_grande" value="Adicionar Descripciï¿½n"  onclick="crearFormAccionado(this,frm)" />					
+<input type="button" name="btn_input_accionado" id="btn_input_grande" value="Adicionar Descripción"  onclick="crearFormAccionado(this,frm)" />					
 					
 			
-					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==51){ ?>
+					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==51){ ?>
 							<!-- <span style="cursor:pointer"><img src="views/images/salir.png"  width="30" alt="" title="Registrar Salida" onclick="vinculoSalida(<?php echo $field[id];?>)" style="float:right " /></span> -->
 					<?php } ?>
 					
-					<?php if( $_SESSION['idUsuario']==2 || $_SESSION['idUsuario']==3 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==76){ ?>
+					<?php if( $_SESSION['idUsuario']==2 || $_SESSION['idUsuario']==3 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==76){ ?>
 							<span style="cursor:pointer"><img src="views/images/add_memo.png" alt="" width="30" height="30" title="Adicionar Memorial"  onclick="vinculoMemorial(<?php echo $field[id];?>)" style="float:right "  /></span>
 					<?php } ?>
 					
 					
 					
-					<?php if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==2 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==43 || $_SESSION['idUsuario']==49 || $_SESSION['idUsuario']==51|| $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==58 || $_SESSION['idUsuario']==63){ ?>
+					<?php if($_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==2 || $_SESSION['idUsuario']==42 || $_SESSION['idUsuario']==43 || $_SESSION['idUsuario']==49 || $_SESSION['idUsuario']==51|| $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==58 || $_SESSION['idUsuario']==63){ ?>
 							<a class="adicionarfotocopia" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>" data-juzgadodestino="<?php echo $field['idjuzrep'];?>"><img src="views/images/fotocopias2.png" width="40" height="40" title="ADICIONAR FOTOCOPIA" style="float:right "/></a>
 					<?php } ?>
 					
 					
 					
 					
-					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==59){ ?>
+					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==83){ ?>
 							<a class="fijardespacho" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>" data-juzgadodestino="<?php echo $field['idjuzrep'];?>"><img src="views/images/idespacho.jpg" width="40" height="40" title="A DESPACHO" style="float:right "/></a>
 					<?php } ?>
 					
 					
-					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==59){ ?>
+					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==59){ ?>
 							<a class="encustodia" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>" data-juzgadodestino="<?php echo $field['idjuzrep'];?>"><img src="views/images/money.png" width="40" height="40" title="TITULOS MATERIALIZADOS" style="float:right "/></a>
 					<?php } ?>
 					
 					
-					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario']==51){ ?>
+					<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==28 || $_SESSION['idUsuario']==51){ ?>
 							<a class="reg_titulos" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>"><img src="views/images/caja.png" width="40" height="40" title="Registrar T&iacute;tulo" style="float:right "/></a>
 					<?php } ?>
 					
@@ -3133,14 +3237,19 @@ $i=$k=0;
 		
 		
 			<!-- APLICAR TRASLADO ART. 108 -->	
-			<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==26 || $_SESSION['idUsuario']==44 || $_SESSION['idUsuario']==29 || $_SESSION['idUsuario']==39 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==5 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==73 || $_SESSION['idUsuario']==74 || $_SESSION['idUsuario']==77){ ?>
+			<?php if($_SESSION['idUsuario']==8  || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario'] == 19 || 
+			         $_SESSION['idUsuario']==4  || $_SESSION['idUsuario']==26 || $_SESSION['idUsuario'] == 44 || 
+					 $_SESSION['idUsuario']==29 || $_SESSION['idUsuario']==39 || $_SESSION['idUsuario'] == 51 || 
+					 $_SESSION['idUsuario']==5  || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario'] == 73 || 
+					 $_SESSION['idUsuario']==74 || $_SESSION['idUsuario']==77 || $_SESSION['idUsuario'] == 82 || 
+					 $_SESSION['idUsuario']==83){ ?>
 			<tr>
 	
 				<td colspan="2">
 					<a id="bt108" href="javascript:void(0);"><img src="views/images/t108.png" width="30" height="30" title="TRASLADO ART. 108"/><button type="button" class="btn btn-primary btn-xs">TRASLADO ART. 110</button></a>
 				</td>
 				<!-- <td>
-					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRï¿½MITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRï¿½MITE"/>Desactivar</a>
+					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRÁMITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRÁMITE"/>Desactivar</a>
 				</td> -->
 				
 			</tr>
@@ -3167,7 +3276,7 @@ $i=$k=0;
 		  
 		  
 		 <!-- APLICAR TRASLADO REPOSICION -->	
-			<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==5 || $_SESSION['idUsuario']==63 || $_SESSION['idUsuario']==74 || $_SESSION['idUsuario']==77){ ?>
+			<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==5 || $_SESSION['idUsuario']==63 || $_SESSION['idUsuario']==74 || $_SESSION['idUsuario']==77 || $_SESSION['idUsuario']==83){ ?>
 			<tr>
 	
 				<td colspan="2">
@@ -3195,17 +3304,14 @@ $i=$k=0;
 		  
 		  
 		  <!-- TERMINOS -->	
-			<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==59){ ?>
+			<?php if($_SESSION['idUsuario']==8 || $_SESSION['idUsuario']==38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario']==19 || $_SESSION['idUsuario']==51 || $_SESSION['idUsuario']==4 || $_SESSION['idUsuario']==59 || $_SESSION['idUsuario']==83){ ?>
 			<tr>
 	
 				<td colspan="2">
-					<a id="btterminos" href="javascript:void(0);">
-						<img src="views/images/terminos.jpg" width="30" height="30" title="TERMINOS"/>
-						<button type="button" class="btn btn-primary btn-xs">TERMINOS</button>
-					</a>
+					<a id="btterminos" href="javascript:void(0);"><img src="views/images/terminos.jpg" width="30" height="30" title="TERMINOS"/><button type="button" class="btn btn-primary btn-xs">TERMINOS</button></a>
 				</td>
 				<!-- <td>
-					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRï¿½MITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRï¿½MITE"/>Desactivar</a>
+					<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRÁMITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRÁMITE"/>Desactivar</a>
 				</td> -->
 				
 			</tr>
@@ -3223,9 +3329,7 @@ $i=$k=0;
 			<td>
 				<br><label style="width:180px; height:23px; border-color:#000000; font-size:14px ">Observacion</label><br>
             	<input name="obsertermino" id="obsertermino" type="text" size="50">
-				<a class="fijartermino" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>">
-					<img src="views/images/terminos.jpg" width="30" height="30" title="FIJAR FECHA TERMINO"/>
-				</a>
+				<a class="fijartermino" href="javascript:void(0);" data-id="<?php echo $field['id'];?>" data-radicado="<?php echo $field['radicado'];?>"><img src="views/images/terminos.jpg" width="30" height="30" title="FIJAR FECHA TERMINO"/></a>
 				
 			</td>
 			
@@ -3236,7 +3340,7 @@ $i=$k=0;
 		  
 		  
 		   <!-- AUTO APRUEBA LIQUIDACION -->	
-			<?php if($_SESSION['idUsuario'] == 8 || $_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario'] == 39 || $_SESSION['idUsuario'] == 51 || $_SESSION['idUsuario']==59){ ?>
+			<?php if($_SESSION['idUsuario'] == 8 || $_SESSION['idUsuario'] == 38 || $_SESSION['idUsuario']==78 || $_SESSION['idUsuario'] == 39 || $_SESSION['idUsuario'] == 51 || $_SESSION['idUsuario']==59){ ?>
 			<tr>
 	
 				<td colspan="2">

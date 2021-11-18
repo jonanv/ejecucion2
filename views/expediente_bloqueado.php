@@ -467,7 +467,7 @@ $(document).ready(function() {
 	
 	
 	//DESBLOQUEAR PROCESO
-	$("#desbloquear_proceso").click(function(evento){
+	$(".desbloquear_proceso").click(function(evento){
 	
 	
 		var id_radibloc1 = $(this).attr('data-id');
@@ -953,7 +953,7 @@ if($bandera_ADMIN_EXPE == 1){
 				?>   
 				<td style="width:120px; text-align:center"> 
 				
-					<a id="desbloquear_proceso" href="javascript:void(0);" data-id="<?php echo $d0M;?>" data-radicado="<?php echo $d4M;?>" style="float:right" title="DESBLOQUEAR PROCESO">
+					<a class="desbloquear_proceso" href="javascript:void(0);" data-id="<?php echo $d0M;?>" data-radicado="<?php echo $d4M;?>" style="float:right" title="DESBLOQUEAR PROCESO">
 					
 						<button type="button" class="btn btn-primary">
 							<span class="glyphicon glyphicon-ok-circle"></span> Desbloquear Proceso

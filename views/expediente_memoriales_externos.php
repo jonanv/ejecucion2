@@ -2929,6 +2929,34 @@ if($bandera_ADMIN_EXPE == 1){
 				
 			</li>
 			
+			<?php
+			if($bandera_ADMIN_MEMO == 1){
+			?>
+			<li role="separator" class="divider"></li>
+			<?php
+			}
+			?>
+			
+			<li>	
+				<?php
+				if($bandera_ADMIN_MEMO == 1){
+				?>
+				
+				
+				
+				<a class="glyphicon glyphicon-list-alt" href="index.php?controller=archivo&amp;action=Memoriales_Entidad_Radicados" title="Memoriales-Radicados_Entidad">
+				
+					Memoriales-Radicados_Entidad
+					
+					
+				</a>  
+				
+				<?php
+				}
+				?>
+				
+			</li>
+			
 			
 			<?php
 			if($bandera_ADMIN_TITULO == 1){

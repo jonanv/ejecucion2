@@ -287,6 +287,7 @@ $(document).ready(function() {
 				d3R  = document.getElementById("tsoli").rows[r].cells[3].innerText;//CORREO
 				d4R  = document.getElementById("tsoli").rows[r].cells[4].innerText;//CELULAR
 				d5R  = document.getElementById("tsoli").rows[r].cells[5].innerText;//ES ABOGADO
+				d6R  = document.getElementById("tsoli").rows[r].cells[6].innerText;//ES ENTIDAD
 				
 				
 				
@@ -306,7 +307,7 @@ $(document).ready(function() {
 						}
 						
 						//CONCATENO TODOS LOS REGISTROS DE LA TABLA
-						idspermisoR = d0R+"//////"+d1R+"//////"+d2R+"//////"+d3R+"//////"+d4R+"//////"+d5R+"//////"+existeU+"******"+idspermisoR;
+						idspermisoR = d0R+"//////"+d1R+"//////"+d2R+"//////"+d3R+"//////"+d4R+"//////"+d5R+"//////"+d6R+"//////"+existeU+"******"+idspermisoR;
 						
 						idspermiso_real = 1;
 						
@@ -1442,6 +1443,7 @@ function Eliminar_Tabla(idtabla){
 			<th style="width:180px; font-size:12px">CORREO</th>
 			<th style="width:180px; font-size:12px">CELULAR</th>
 			<th style="width:180px; font-size:12px">ABOGADO</th>
+			<th style="width:180px; font-size:12px">ENTIDAD</th>
 			<th style="width:180px; font-size:12px">FECHA</th>
 			<th style="width:180px; font-size:12px">HORA</th>
 			
@@ -1508,7 +1510,7 @@ function Eliminar_Tabla(idtabla){
 				$d7M = $fila[celular];
 				$d8M = $fila[esabogado];
 				
-				
+				$d9M = $fila[esentidad];
 				
 				
 		?>
@@ -1561,6 +1563,11 @@ function Eliminar_Tabla(idtabla){
 				
 			</td>
 			
+			<td style="width:180px; font-size:12px">
+			
+				<?php echo $d9M; //ES ENTIDAD ?>
+				
+			</td>
 			
 			<td style="width:180px; font-size:12px">
 			

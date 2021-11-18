@@ -5,7 +5,7 @@ session_start();
 require_once("config.inc.php");
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/laborales/"); 
+	header("refresh: 0; URL=/ejecucion/"); 
 }
 else{
 
@@ -192,7 +192,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 				var id  = $(this).attr("rel");
 				
 		
-				//window.open("http://"+ipservidor+"/laborales/index.php?controller=documentos&action=GenerarDocumentoSaliente&opcion=1&id="+id);
+				//window.open("http://"+ipservidor+"/ejecucion/index.php?controller=documentos&action=GenerarDocumentoSaliente&opcion=1&id="+id);
 				
 				window.open("http://"+ipservidor+"/publicaciones/views/PHPPdf/Reporte_Cartel.php?id="+id);
 				

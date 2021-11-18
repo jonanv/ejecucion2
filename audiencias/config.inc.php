@@ -12,7 +12,7 @@ $tabla  = "tcalendario";*/
 
 $dbhost = "localhost";
 $dbname = "ejecucion";
-$dbuser = "root";
+$dbuser = "javo2";
 $dbpass = "Ejecuc10n2014";
 $tabla  = "siepro_audiencia";
 

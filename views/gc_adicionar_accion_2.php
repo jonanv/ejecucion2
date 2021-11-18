@@ -1363,8 +1363,9 @@ text-decoration: underline;
 										
 		<tr> 
 											
-			<th style="color:#FF0000; font-size:10px">ID</th>
-			<th style="font-size:10px">CLASE</th>
+			<!-- <th style="color:#FF0000; font-size:10px">ID</th> -->
+			<th style="color:#FF0000; font-size:10px">NUM ACCION</th
+			><th style="font-size:10px">CLASE</th>
 			<th style="font-size:10px">NUMERAL NORMA</th>
 			<th style="font-size:10px">DES HALLAZGO</th>
 			<th style="font-size:10px">PROCESO RESPONSABLE</th>
@@ -1421,17 +1422,27 @@ text-decoration: underline;
 				$d10M = $fila[fecha_registro];
 				$d11M = $fila[hora_registro];
 				$d12M = $fila[estado];
+				$d13M = $fila[numero_accion];
 															
 												
 		?>
 											
 								
 				<tr>
+				
+					<!-- SE OCULTA A PEDIDO DE LA DIRECCION OECM 25 DE AGOSTO 2021 -->
 																
+					<!-- <td style="color:#FF0000; font-size:10px ">
+						<?php 
+																													  
+							//echo $d1M;  
+						?>
+					</td> -->
+					
 					<td style="color:#FF0000; font-size:10px ">
 						<?php 
 																													  
-							echo $d1M;  
+							echo $d13M;  
 						?>
 					</td>
 					
@@ -1535,7 +1546,7 @@ text-decoration: underline;
 					</td>
 					
 					<td>
-						<a class="editar_accion" href="javascript:void(0);" title="EDITAR ACCION" data-id="<?php echo trim($d1M);?>"><img src="views/images/editar_1.png" width="25" height="25" title="EDITAR ACCION"/></a>
+						<a class="editar_accion" href="javascript:void(0);" title="EDITAR ACCION" data-id="<?php echo trim($d1M);?>"><img src="views/images/editar_1.png" width="25" height="25" title="<?php echo "EDITAR ACCION: ".$d1M;?>"/></a>
 					</td>
 					
 					<td>
