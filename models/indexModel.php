@@ -73,7 +73,7 @@ class indexModel extends modelBase
 		
 	
 			$_SESSION['rol'] = 'Administrador';	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 			die();		
 
 			}
@@ -83,7 +83,7 @@ class indexModel extends modelBase
 		
 
 			$_SESSION['rol'] = 'Archivo';
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 			die();
 
 			}
@@ -92,7 +92,7 @@ class indexModel extends modelBase
 		    //echo "entre_model";
 
 			$_SESSION['rol'] = 'Correspondencia';
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 			die();
 
 			}

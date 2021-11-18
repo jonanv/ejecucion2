@@ -5,9 +5,9 @@ session_start();
 if($_SESSION['id']!=""){
 
 /*$dbhost ="localhost";
-$dbname ="ejecucion";
+$dbname ="laborales";
 $dbuser ="root";
-$dbpass ="Ejecuc10n2014";
+$dbpass ="admin";
 $db     = new mysqli($dbhost,$dbuser,$dbpass,$dbname);*/
 
 $idusuarioX  = $_SESSION['idUsuario'];
@@ -430,7 +430,7 @@ if($conexion > 0){
 										
 					}
 									
-				    //Iniciar la transacción.
+				    //Iniciar la transacciï¿½n.
 					if ( sqlsrv_begin_transaction( $conn ) === false ) {
 										 
 						$error_transaccion = 1;
@@ -673,7 +673,7 @@ if($conexion > 0){
 			//NO TERMINA LA TRANSACCION ERROR AL INGRESAR LOS DEATOS A SIGLO XXI
 			sqlsrv_rollback( $conn );
 								
-			// Cerrar la conexión.
+			// Cerrar la conexiï¿½n.
 			sqlsrv_close( $conn );
 			
 			
@@ -806,7 +806,7 @@ if($conexion > 0){
 else{
 
 	//echo $conexion; 
-	echo "Fallo en la Conexión";
+	echo "Fallo en la Conexiï¿½n";
 }
 
 }//CIERRE IF SESSION 

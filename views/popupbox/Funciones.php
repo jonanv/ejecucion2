@@ -1333,7 +1333,7 @@ class Funciones {
 			
 		}
 		
-		//Iniciar la transacción.
+		//Iniciar la transacciï¿½n.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -1470,7 +1470,7 @@ class Funciones {
 			
 		}
 		
-		//Iniciar la transacción.
+		//Iniciar la transacciï¿½n.
 		if ( sqlsrv_begin_transaction( $connX ) === false ) {
 			 
 			$error_transaccionX = 1;
@@ -2113,17 +2113,17 @@ class Funciones {
 			//------------DATOS PARA LA CONEXION BD------------
 			$dbhost           ='localhost';
 			$dbusername       ='root';
-			$dbuserpassword   ='Ejecuc10n2014';
-			$dbdefault_dbname ='ejecucion';
+			$dbuserpassword   ='admin';
+			$dbdefault_dbname ='laborales';
 			
 			$link = mysql_connect($dbhost, $dbusername, $dbuserpassword);
 			
 			if(!$link){
-				echo "Fallo en la Conexión al host $dbhost";
+				echo "Fallo en la Conexiï¿½n al host $dbhost";
 				//return 0;
 			}
 			else if(empty($dbname) && !mysql_select_db($dbdefault_dbname)){
-				echo "Fallo en la Conexión al host $dbhost";
+				echo "Fallo en la Conexiï¿½n al host $dbhost";
 				//return 0;
 			}
 			

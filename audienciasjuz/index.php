@@ -75,7 +75,7 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 	</div>
 
 
-	<!-- <a href="http://172.16.176.254/ejecucion/index.php?controller=archivo&action=listarUbicacionExpediente" class="icon-arrow-left"></a>Volver al Menu  -->
+	<!-- <a href="http://172.16.176.254/laborales/index.php?controller=archivo&action=listarUbicacionExpediente" class="icon-arrow-left"></a>Volver al Menu  -->
 	
 	<a onClick="form_audi()" class="icon-arrow-left"></a>Volver al Menu
 	
@@ -254,9 +254,9 @@ $ip_plataforma = trim($_SESSION['ipplataforma']);
 
 			
 			
-			//location.href="http://"+ipservidor+"/ejecucion/index.php?controller=archivo&action=listarUbicacionExpediente&msgaudi="+1;
+			//location.href="http://"+ipservidor+"/laborales/index.php?controller=archivo&action=listarUbicacionExpediente&msgaudi="+1;
 			
-			location.href="http://"+ipservidor+"/ejecucion/";
+			location.href="http://"+ipservidor+"/laborales/";
 		}
 	
 	

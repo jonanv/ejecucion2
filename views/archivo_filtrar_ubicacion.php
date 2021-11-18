@@ -537,7 +537,7 @@ $(document).ready(function() {
 								"sProcessing":     "Procesando...",
 								"sLengthMenu":     "Mostrar _MENU_ registros",
 								"sZeroRecords":    "No se encontraron resultados",
-								"sEmptyTable":     "Ningún dato disponible en esta tabla",
+								"sEmptyTable":     "Ningï¿½n dato disponible en esta tabla",
 								"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
 								"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
 								"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
@@ -548,7 +548,7 @@ $(document).ready(function() {
 								"sLoadingRecords": "Cargando...",
 								"oPaginate": {
 									"sFirst":    "Primero",
-									"sLast":     "Último",
+									"sLast":     "ï¿½ltimo",
 									"sNext":     "Siguiente",
 									"sPrevious": "Anterior"
 								},
@@ -575,7 +575,7 @@ $(document).ready(function() {
 								"sProcessing":     "Procesando...",
 								"sLengthMenu":     "Mostrar _MENU_ registros",
 								"sZeroRecords":    "No se encontraron resultados",
-								"sEmptyTable":     "Ningún dato disponible en esta tabla",
+								"sEmptyTable":     "Ningï¿½n dato disponible en esta tabla",
 								"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
 								"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
 								"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
@@ -586,7 +586,7 @@ $(document).ready(function() {
 								"sLoadingRecords": "Cargando...",
 								"oPaginate": {
 									"sFirst":    "Primero",
-									"sLast":     "Último",
+									"sLast":     "ï¿½ltimo",
 									"sNext":     "Siguiente",
 									"sPrevious": "Anterior"
 								},
@@ -771,7 +771,7 @@ $(document).ready(function() {
 	
 	
 	
-	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
+	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
 	 $.datepicker.regional['es'] = {
 	 closeText: 'Cerrar',
 	 prevText: '< Ant',
@@ -779,9 +779,9 @@ $(document).ready(function() {
 	 currentText: 'Hoy',
 	 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 	 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-	 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miï¿½rcoles', 'Jueves', 'Viernes', 'Sï¿½bado'],
+	 dayNamesShort: ['Dom','Lun','Mar','Miï¿½','Juv','Vie','Sï¿½b'],
+	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sï¿½'],
 	 weekHeader: 'Sm',
 	 dateFormat: 'yy-mm-dd',
 	 firstDay: 1,
@@ -1804,7 +1804,7 @@ function ExcelDetalleObservaciones_USER(){
 			valor_3 == null || valor_3.length == 0 || /^\s+$/.test(valor_3)*/ 
 	) {
 				
-			alert("Defina Fecha Observación Inicial y Fecha Observación Final");
+			alert("Defina Fecha Observaciï¿½n Inicial y Fecha Observaciï¿½n Final");
 			document.getElementById('fechaoi').style.borderColor = '#FF0000';
 			document.getElementById('fechaof').style.borderColor = '#FF0000';
 			//document.getElementById('idusuario').style.borderColor = '#FF0000';
@@ -2192,9 +2192,9 @@ if($tiene_ta_3 >= 1){
 	
 	<tr>
 	
-      <td width="157">Fecha Observación Inicial:</td>
+      <td width="157">Fecha Observaciï¿½n Inicial:</td>
       <td width="346"><input name="fechaoi" type="text" id="fechaoi" value="<?php echo $_GET['nombre16b'];?>" readonly="readonly" style="width:254px; height:23px "/></td>
-      <td width="107">Fecha Observación Final:</td>
+      <td width="107">Fecha Observaciï¿½n Final:</td>
       <td width="148"><input name="fechaof" type="text"  id="fechaof" value="<?php echo $_GET['nombre17b'];?>" readonly="readonly" style="width:254px; height:23px "/></td>
 	  
     </tr>
@@ -2227,7 +2227,7 @@ if($tiene_ta_3 >= 1){
              <td><input type="text" name="demandante" id="txt_input" maxlength="50" class=""   onchange="" value="<?php echo $_GET['nombre11'];?>"/></td>
       </tr> 
       <tr>
-      <td>Cédula Demandado: </td>
+      <td>Cï¿½dula Demandado: </td>
              <td><input type="text" name="cedula_demandado" id="txt_input" maxlength="25" class=""  onchange="" value="<?php echo $_GET['nombre12'];?>"/></td>
              <td>Nombre Demandado: </td>
              <td><input type="text" name="demandado" id="txt_input" maxlength="50" class=""  onchange="" value="<?php echo $_GET['nombre13'];?>"/></td>
@@ -2564,7 +2564,7 @@ if($tiene_ta_3 >= 1){
    
     <!-- ---------------------------------------CODIGO ORGANIZADO POR JORGE ANDRES VALENCIA OROZCO 04 DE DICIEMBRE 2014--------------------------------------------- -->
    <tr>
-   		<td colspan="4" bgcolor="#CDE3F6"><div align="center"><strong>TRÁMITE INTERNO</strong></div></td>
+   		<td colspan="4" bgcolor="#CDE3F6"><div align="center"><strong>TRï¿½MITE INTERNO</strong></div></td>
    </tr>
    
    <tr>
@@ -2665,10 +2665,10 @@ if($tiene_ta_3 >= 1){
 	<!-- <tr>
 	
 		<td>
-			<a id="enlaceajax_3" href="javascript:void(0);" title="LISTAR TRÁMITE"><img src="views/images/next_f2.png" width="20" height="20" title="LISTAR TRÁMITE"/>Listar</a>
+			<a id="enlaceajax_3" href="javascript:void(0);" title="LISTAR TRï¿½MITE"><img src="views/images/next_f2.png" width="20" height="20" title="LISTAR TRï¿½MITE"/>Listar</a>
 		</td>
 		<td>
-			<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRÁMITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRÁMITE"/>Desactivar</a>
+			<a class="fila" href="javascript:void(0);" title="DESACTIVAR LISTA TRï¿½MITE"><img src="views/images/next.png" width="20" height="20" title="DESACTIVAR LISTA TRï¿½MITE"/>Desactivar</a>
 		</td>
 		<td colspan="2">
 			<a href="javascript:void(0);" onclick="Reporte_Excel()" title="GENERAR EXCEL"><img src="views/images/excel.jpg" width="20" height="20" title="GENERAR EXCEL"/>Generar Excel</a>
@@ -2695,7 +2695,7 @@ if($tiene_ta_3 >= 1){
 					<th bgcolor="#CDE3F6">CLASE PROCESO</th>
 					<th bgcolor="#CDE3F6">FECHA FINAL</th>
 					<th bgcolor="#CDE3F6">ASIGNADO</th>
-					<th bgcolor="#CDE3F6">ACTUACIÓN</th>
+					<th bgcolor="#CDE3F6">ACTUACIï¿½N</th>
 				</tr> 
 			</thead> 
 			
@@ -3005,7 +3005,7 @@ if($tiene_ta_3 >= 1){
 				
 				
 					<td colspan="4">
-						<a id="btaudi" href="/ejecucion/audiencias/index.php"><img src="views/images/audi.png" width="30" height="30" title="AGENDA AUDIENCIAS"/>AGENDA AUDIENCIAS</a> 
+						<a id="btaudi" href="/laborales/audiencias/index.php"><img src="views/images/audi.png" width="30" height="30" title="AGENDA AUDIENCIAS"/>AGENDA AUDIENCIAS</a> 
 						
 						<!-- <marquee behavior="alternate" bgcolor="#EFEFEF" scrollamount="2" scrolldelay="10" width="150" height="20">ALERTA</marquee> -->
 						
@@ -3344,7 +3344,7 @@ if($opcion!=1){
   <p>Lista de Ubicaci&oacute;n de Expedientes</p>
   </div>
 
-<!-- El atributo rules establece qué lados de los bordes interiores de la tabla son visibles. Los valores posibles son none (ningún borde), 
+<!-- El atributo rules establece quï¿½ lados de los bordes interiores de la tabla son visibles. Los valores posibles son none (ningï¿½n borde), 
 all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada columna)  -->
 <table cellpadding="0" cellspacing="0" rules="rows" border="1" class="display" id="frm_editar1">
 
@@ -3482,11 +3482,11 @@ all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada
 					
 					?>
 					
-										<td><span style="cursor:pointer"><img src="views/images/edit.png" alt="" title="Modificar Ubicación" onclick="vinculo1(<?php echo $field[id];?>)" /></span></td>
+										<td><span style="cursor:pointer"><img src="views/images/edit.png" alt="" title="Modificar Ubicaciï¿½n" onclick="vinculo1(<?php echo $field[id];?>)" /></span></td>
 							
 							<?php }else{ ?>
 							
-										<td><span style="cursor:pointer"><img src="views/images/historial2.png" alt="" title="Modificar Ubicación SIN JXXI" width="30" height="30" onclick="vinculo1_SIN_JXXI(<?php echo $field[id];?>)" /></span></td> 
+										<td><span style="cursor:pointer"><img src="views/images/historial2.png" alt="" title="Modificar Ubicaciï¿½n SIN JXXI" width="30" height="30" onclick="vinculo1_SIN_JXXI(<?php echo $field[id];?>)" /></span></td> 
 										
 							<?php } ?>
 							
@@ -3534,7 +3534,7 @@ if($opcion==1){
   <p>Lista de Ubicaci&oacute;n de Expedientes</p>
   </div>
 
-<!-- El atributo rules establece qué lados de los bordes interiores de la tabla son visibles. Los valores posibles son none (ningún borde), 
+<!-- El atributo rules establece quï¿½ lados de los bordes interiores de la tabla son visibles. Los valores posibles son none (ningï¿½n borde), 
 all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada columna)  -->
 <table cellpadding="0" cellspacing="0" rules="rows" border="1" class="display" id="frm_editar2">
                 
@@ -3561,7 +3561,7 @@ all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada
 							<th width="96"><img src="views/images/reparto.jpg" width="30" height="30" alt="Reparto" title="Reparto" onclick="vinculoExcelReparto(<?php echo $field[idubi];?>)" /></th>
 							<th width="120"><img src="views/images/excel.jpg" width="30" height="30" alt="Exportar Excel" title="Exportar Excel" onclick="vinculoExcel(<?php echo $field[idubi];?>)" /></th>
 						   <?php //$id = $field[idubi]; { ?>
-							<th width="96"><img src="views/images/vertitulos.png" width="30" height="50" alt="Ver Títulos" title="Ver Títulos" onclick="prueba(frm)"  /></th>
+							<th width="96"><img src="views/images/vertitulos.png" width="30" height="50" alt="Ver Tï¿½tulos" title="Ver Tï¿½tulos" onclick="prueba(frm)"  /></th>
 						  <?php //}?>
 					</tr>
   				</thead> -->
@@ -3591,8 +3591,8 @@ all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada
 							<th><img src="views/images/excel.jpg" width="30" height="30" alt="Exportar Excel" title="Exportar Excel" onclick="vinculoExcel(<?php echo $field[idubi];?>)" /></th>
 							<th><img src="views/images/listatramite.png" width="30" height="30" alt="Generar Excel Tramite Interno" title="Generar Excel Tramite Interno" onclick="Reporte_Excel(1)" /></th>
 						   <?php $id = $field[idubi]; { ?>
-							<th><img src="views/images/vertitulos.png" width="30" height="50" alt="Ver Títulos" title="Ver Títulos" onclick="prueba(frm)"  /></th>
-							<th><img src="views/images/exceltitulos.png" width="30" height="40" alt="Ver Títulos" title="Exportar a Excel T&iacute;tulos" onclick="exportaexceltitulos()"  /></th>
+							<th><img src="views/images/vertitulos.png" width="30" height="50" alt="Ver Tï¿½tulos" title="Ver Tï¿½tulos" onclick="prueba(frm)"  /></th>
+							<th><img src="views/images/exceltitulos.png" width="30" height="40" alt="Ver Tï¿½tulos" title="Exportar a Excel T&iacute;tulos" onclick="exportaexceltitulos()"  /></th>
 							<!-- <th></th> -->
 						  <?php }?>
 						    <th><img src="views/images/toggle_f3.png" width="30" height="30" alt="Exportar Excel" title="Exportar Excel Detalle Observaciones" onclick="vinculoExcelDetalleObservaciones(<?php echo $field[idubi];?>)" /></th>
@@ -3696,11 +3696,11 @@ all (todos los bordes), rows (los bordes de cada fila), cols (los bordes de cada
 					
 					?>
 					
-										<td><span style="cursor:pointer"><img src="views/images/edit.png" alt="" title="Modificar Ubicación" onclick="vinculo1(<?php echo $field[idubi];?>)" /></span></td>
+										<td><span style="cursor:pointer"><img src="views/images/edit.png" alt="" title="Modificar Ubicaciï¿½n" onclick="vinculo1(<?php echo $field[idubi];?>)" /></span></td>
 							
 							<?php }else{ ?>
 							
-										<td><span style="cursor:pointer"><img src="views/images/historial2.png" alt="" title="Modificar Ubicación SIN JXXI" width="30" height="30" onclick="vinculo1_SIN_JXXI(<?php echo $field[idubi];?>)" /></span></td> 
+										<td><span style="cursor:pointer"><img src="views/images/historial2.png" alt="" title="Modificar Ubicaciï¿½n SIN JXXI" width="30" height="30" onclick="vinculo1_SIN_JXXI(<?php echo $field[idubi];?>)" /></span></td> 
 										
 							<?php } ?>
 							

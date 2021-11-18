@@ -9,9 +9,9 @@ if($_SESSION['id']!=""){
 
 
 /*$dbhost ="localhost";
-$dbname   ="ejecucion";
-$dbuser   ="javo2";
-$dbpass   ="Ejecuc10n2014";
+$dbname   ="laborales";
+$dbuser   ="root";
+$dbpass   ="admin";
 $db       = new mysqli($dbhost,$dbuser,$dbpass,$dbname);*/
 
 $conexion = db_connect($dbdefault_dbname);
@@ -152,7 +152,7 @@ if($conexion > 0){
 else{
 
 	//echo $conexion; 
-	echo "Fallo en la Conexión";
+	echo "Fallo en la Conexiï¿½n";
 }
 
 mysql_free_result($resultado);

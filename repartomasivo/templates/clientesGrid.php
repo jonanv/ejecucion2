@@ -18,17 +18,17 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/ejecucion/"); 
+	header("refresh: 0; URL=/laborales/"); 
 }
 else{
 
 ?>
 
 <div class="bar">
-	<!-- esta es la forma original al defininir class = "button" toma el diseño de esta clase -->
+	<!-- esta es la forma original al defininir class = "button" toma el diseï¿½o de esta clase -->
    <!--  <a id="new" class="button" href="javascript:void(0);" title="Nuevo Evento">Nuevo Evento</a> -->
    
-	<a id="new" href="javascript:void(0);" title="Nuevo Reparto"><img src="/ejecucion/repartomasivo/imagenes/add.png" width="30" height="30" title="Nuevo Reparto"/></a>
+	<a id="new" href="javascript:void(0);" title="Nuevo Reparto"><img src="/laborales/repartomasivo/imagenes/add.png" width="30" height="30" title="Nuevo Reparto"/></a>
 
 	<label>Filtro</label>
 	<input type="text" name="filtro_buscar" id="filtro_buscar" size="25"/>
@@ -39,11 +39,11 @@ else{
 	<label>Fecha Hasta</label>
 	<input name="fechah" id="fechah" type="text" readonly="true" size="8">
 	
-	<a class="filtro_buscar" href="javascript:void(0);"><img src="/ejecucion/repartomasivo/imagenes/filtro.jpg" width="30" height="30" title="Filtrar"/></a>
+	<a class="filtro_buscar" href="javascript:void(0);"><img src="/laborales/repartomasivo/imagenes/filtro.jpg" width="30" height="30" title="Filtrar"/></a>
 	
-	<a href="javascript:void(0);" onclick="Reporte_Excel_Reparto()"><img src="/ejecucion/repartomasivo/imagenes/excel1.jpg" width="30" height="30" title="Generar Excel" style="float:none"/></a>
+	<a href="javascript:void(0);" onclick="Reporte_Excel_Reparto()"><img src="/laborales/repartomasivo/imagenes/excel1.jpg" width="30" height="30" title="Generar Excel" style="float:none"/></a>
 	
-	<a class="recargar" href="javascript:void(0);"><img src="/ejecucion/repartomasivo/imagenes/reload_f2.png" width="30" height="30" title="Recargar" style="float:none"/></a>
+	<a class="recargar" href="javascript:void(0);"><img src="/laborales/repartomasivo/imagenes/reload_f2.png" width="30" height="30" title="Recargar" style="float:none"/></a>
 	
 	<!-- FUNCIONA FORMA JQUERY ES MAS RAPIDO PERO NO ME FILTRA, USA EL ARCHIVO functions.js-->
 	<!-- <a class="btnExport" href="javascript:void(0);"><img src="/ejecucionprueba/eventos/imagenes/excel2.png" width="30" height="30" title="Generar Excel"/></a> -->
@@ -52,7 +52,7 @@ else{
 	<!-- <a href="javascript:void(0);" onclick="Listar_Reporte(1)"><img src="/ejecucionprueba/eventos/imagenes/excel2.png" width="30" height="30" title="Generar Excel"/></a> -->
 	
 	
-	<a href="/ejecucion/index.php?controller=menu&action=mod_archivo"><img src="/ejecucion/repartomasivo/imagenes/back_f2.png" width="30" height="30" title="Regresar" style="float:right"/></a>
+	<a href="/laborales/index.php?controller=menu&action=mod_archivo"><img src="/laborales/repartomasivo/imagenes/back_f2.png" width="30" height="30" title="Regresar" style="float:right"/></a>
 	
 </div>
 
@@ -120,8 +120,8 @@ SALE DESCONFIGURADO -->
 				<td><?php echo htmlentities($cliente['juzgadoreparto']);?></td>
 				<td><?php echo $cliente['ponente'];?></td>
 				
-                <!-- <td><a class="edit" href="javascript:void(0);" data-id="<?php //echo $cliente['id'];?>"><img src="/ejecucion/eventos/imagenes/edit_f2.png" width="20" height="20" title="Editar"/></a></td>
-				<td><a class="delete" href="javascript:void(0);" data-id="<?php //echo $cliente['id'];?>"><img src="/ejecucion/eventos/imagenes/cancel.png" width="20" height="20" title="Borrar"/></a></td> -->
+                <!-- <td><a class="edit" href="javascript:void(0);" data-id="<?php //echo $cliente['id'];?>"><img src="/laborales/eventos/imagenes/edit_f2.png" width="20" height="20" title="Editar"/></a></td>
+				<td><a class="delete" href="javascript:void(0);" data-id="<?php //echo $cliente['id'];?>"><img src="/laborales/eventos/imagenes/cancel.png" width="20" height="20" title="Borrar"/></a></td> -->
             </tr>
         <?php endforeach; ?>
 	

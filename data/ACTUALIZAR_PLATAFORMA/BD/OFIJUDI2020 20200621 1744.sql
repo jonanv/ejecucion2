@@ -3545,7 +3545,7 @@ INSERT INTO `pa_base_datos` (`id`,`ip`,`bd`,`usuario`,`clave`) VALUES
  (4,'192.168.89.22','Spenal','sa','M4nt3n1m13nt0'),
  (5,'192.168.56.46','pruebapenal','sa','penal'),
  (6,'172.16.177.42','bd_salud_replica','salud','Salud52'),
- (7,'127.0.0.1','bd_salud_replica','root','Ejecuc10n2014'),
+ (7,'127.0.0.1','bd_salud_replica','root','admin'),
  (8,'192.168.89.28','bd_oficina_judicial','oe_salud','Salud52+');
 /*!40000 ALTER TABLE `pa_base_datos` ENABLE KEYS */;
 

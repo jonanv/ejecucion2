@@ -5,9 +5,9 @@ session_start();
 if($_SESSION['id']!=""){
 
 /*$dbhost ="localhost";
-$dbname ="ejecucion";
+$dbname ="laborales";
 $dbuser ="root";
-$dbpass ="Ejecuc10n2014";
+$dbpass ="admin";
 $db     = new mysqli($dbhost,$dbuser,$dbpass,$dbname);*/
 
 $idusuarioX  = $_SESSION['idUsuario'];
@@ -178,7 +178,7 @@ if($conexion > 0){
 else{
 
 	//echo $conexion; 
-	echo "Fallo en la Conexión";
+	echo "Fallo en la Conexiï¿½n";
 }
 
 }//CIERRE IF SESSION 

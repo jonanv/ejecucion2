@@ -585,7 +585,7 @@
 								$d22M_A = explode("/", $d22M);
 								$d22M_B = $d22M_A[3]; //nombre archivo
 							?>
-							<a class="descarga_archivo" href="javascript:void(0);" title="<?php echo $d22M_B; ?>" data-idruta="<?php echo "http://" . $servidor_pdf . "/ejecucion/" . $d22M; ?>"><img src="views/images/archivo_3.png" width="35" height="35" /></a>
+							<a class="descarga_archivo" href="javascript:void(0);" title="<?php echo $d22M_B; ?>" data-idruta="<?php echo "http://" . $servidor_pdf . "/laborales/" . $d22M; ?>"><img src="views/images/archivo_3.png" width="35" height="35" /></a>
 						<?php
 							}
 						?>

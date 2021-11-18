@@ -132,7 +132,7 @@ $(document).ready(function() {
 								"sProcessing":     "Procesando...",
 								"sLengthMenu":     "Mostrar _MENU_ registros",
 								"sZeroRecords":    "No se encontraron resultados",
-								"sEmptyTable":     "Ningún dato disponible en esta tabla",
+								"sEmptyTable":     "Ningï¿½n dato disponible en esta tabla",
 								"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
 								"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
 								"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
@@ -143,7 +143,7 @@ $(document).ready(function() {
 								"sLoadingRecords": "Cargando...",
 								"oPaginate": {
 									"sFirst":    "Primero",
-									"sLast":     "Último",
+									"sLast":     "ï¿½ltimo",
 									"sNext":     "Siguiente",
 									"sPrevious": "Anterior"
 								},
@@ -164,8 +164,8 @@ $(document).ready(function() {
 	
 	//var servidor   = "http://190.217.24.24/";
 	var servidor   = "http://"+ip_servidor+"/";
-	//var plataforma = '/wamp/www/ejecucion/INCIDENTESALUD/';
-	var plataforma = 'ejecucion/';
+	//var plataforma = '/wamp/www/laborales/INCIDENTESALUD/';
+	var plataforma = 'laborales/';
 	
 	
 	//ME PERMITE GENERAR INCIDENTE
@@ -173,7 +173,7 @@ $(document).ready(function() {
 			
 		var id_ruta = $(this).attr('data-id_ruta');
 				
-		//window.open("http://"+ipservidor+"/ejecucion/views/PHPPdf/Reporte_Cartel.php?id="+id);
+		//window.open("http://"+ipservidor+"/laborales/views/PHPPdf/Reporte_Cartel.php?id="+id);
 				
 		window.open("http://"+servidor+plataforma+id_ruta);
 				

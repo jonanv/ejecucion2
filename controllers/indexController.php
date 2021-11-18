@@ -33,7 +33,7 @@ class indexController extends controllerBase
 		session_unset();
 		session_destroy();
 		
-		header("refresh: 0;URL=/ejecucion/");
+		header("refresh: 0;URL=/laborales/");
 		die();
     }
 	
@@ -42,7 +42,7 @@ class indexController extends controllerBase
     {
 		
 		
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 		
     }
 	

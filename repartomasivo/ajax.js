@@ -224,7 +224,7 @@ function Reporte_Excel(){
 
 	//alert (datos_reporte);
 
-	location.href="/ejecucion/index.php?controller=archivo&action=listadoExcel&datos_reporte="+datos_reporte;
+	location.href="/laborales/index.php?controller=archivo&action=listadoExcel&datos_reporte="+datos_reporte;
 	
 }
 
@@ -239,7 +239,7 @@ function Reporte_Excel_Reparto(){
 
 	//alert (datos_reporte);
 
-	location.href="/ejecucion/index.php?controller=archivo&action=listadoExcel&datos_reporte_4="+datos_reporte;
+	location.href="/laborales/index.php?controller=archivo&action=listadoExcel&datos_reporte_4="+datos_reporte;
 	
 }
 
@@ -700,7 +700,7 @@ function Adicionar_Reparto(){
 					
 					tabla+='<td><input type=text name=dato6'+z+' id=dato6'+z+' title=dato6'+z+' size="30" readonly="true" value='+dato6+' onClick="PruebaId('+dato6+')"></td>';
 					
-					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onClick="Eliminar_Reparto()"><img src="/ejecucion/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
+					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onClick="Eliminar_Reparto()"><img src="/laborales/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
 					
 					tabla+='</tr></table>';*/
 					
@@ -733,7 +733,7 @@ function Adicionar_Reparto(){
 					
 					tabla+='<td>'+dato13+'</td>';
 					
-					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onclick="Eliminar_Reparto(this.parentNode.parentNode.rowIndex)"><img src="/ejecucion/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
+					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onclick="Eliminar_Reparto(this.parentNode.parentNode.rowIndex)"><img src="/laborales/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
 					
 					tabla+='</tr></table>';
 								
@@ -770,7 +770,7 @@ function Adicionar_Reparto(){
 					
 					tabla+='<td><input type=text name=dato6'+z+' id=dato6'+z+' title=dato6'+z+' size="30" readonly="true" value='+dato6+' onClick="PruebaId('+dato6+')"></td>';
 					
-					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onClick="Eliminar_Reparto()"><img src="/ejecucion/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
+					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onClick="Eliminar_Reparto()"><img src="/laborales/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
 					
 					tabla+='</tr></table>';*/
 					
@@ -803,7 +803,7 @@ function Adicionar_Reparto(){
 					
 					tabla+='<td>'+dato13+'</td>';
 					
-					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onclick="Eliminar_Reparto(this.parentNode.parentNode.rowIndex)"><img src="/ejecucion/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
+					tabla+='<td><button type=button name=eliminarreparto id=eliminarreparto title=Eliminar Reparto onclick="Eliminar_Reparto(this.parentNode.parentNode.rowIndex)"><img src="/laborales/repartomasivo/imagenes/eliminar.png" width="20" height="20" title="Eliminar"/></button></td>';
 					
 					tabla+='</tr></table>';
 								
@@ -999,10 +999,10 @@ function LeerDatosRegistrar_Reparto(){
 				//alert(datos);
 				
 				if(datos == 1){
-					alert('ERROR AL PROCESAR LOS DATOS');location.href='/ejecucion/repartomasivo/index.php';
+					alert('ERROR AL PROCESAR LOS DATOS');location.href='/laborales/repartomasivo/index.php';
 				}
 				else{
-					alert('PROCESAMIENTO DE LOS DATOS OK...');location.href='/ejecucion/repartomasivo/index.php';
+					alert('PROCESAMIENTO DE LOS DATOS OK...');location.href='/laborales/repartomasivo/index.php';
 				}
 				
 				//creo un vector con split para cargar los datos en los lugares adecuados

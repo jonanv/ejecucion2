@@ -259,12 +259,12 @@ class hojavidaModel extends modelBase{
 		$cr_1 = 0;
 		
 	
-		$rutas = array(	'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$id_cedula_user."/SOPORTES_ESTUDIOS/", 
-		               	'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$id_cedula_user."/SOPORTES_EXPERIENCIA_LABORAL/", 
-					   	'C:/wamp/www/ejecucion/HOJASDEVIDA/'.$id_cedula_user."/ANTECEDENTES_CERTIFICADOS/"
+		$rutas = array(	'C:/wamp/www/laborales/HOJASDEVIDA/'.$id_cedula_user."/SOPORTES_ESTUDIOS/", 
+		               	'C:/wamp/www/laborales/HOJASDEVIDA/'.$id_cedula_user."/SOPORTES_EXPERIENCIA_LABORAL/", 
+					   	'C:/wamp/www/laborales/HOJASDEVIDA/'.$id_cedula_user."/ANTECEDENTES_CERTIFICADOS/"
 				 	 );
 					 
-		//$rutas = array('C:/wamp/www/ejecucion/HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_EXPERIENCIA_LABORAL/");			 
+		//$rutas = array('C:/wamp/www/laborales/HOJASDEVIDA/'.$_SESSION['idUsuario']."/SOPORTES_EXPERIENCIA_LABORAL/");			 
 					 
 		
 		$long_rutas = count($rutas);
@@ -471,7 +471,7 @@ class hojavidaModel extends modelBase{
 				echo '<script languaje="JavaScript"> 
 						
 							
-							alert("El Archivo no Cumple con las Caracteristicas Especificas, si es diferente de tipo (vnd.ms-excel,vnd.openxmlformats-officedocument.spreadsheetml.sheet, vnd.openxmlformats-officedocument.wordprocessingml.document,pdf,jpeg,png) y tamaño de archivo < 100000000.");
+							alert("El Archivo no Cumple con las Caracteristicas Especificas, si es diferente de tipo (vnd.ms-excel,vnd.openxmlformats-officedocument.spreadsheetml.sheet, vnd.openxmlformats-officedocument.wordprocessingml.document,pdf,jpeg,png) y tamaï¿½o de archivo < 100000000.");
 							location.href="index.php?controller=hojavida&action=Administrar_HojaVida";
 									
 						 </script>';

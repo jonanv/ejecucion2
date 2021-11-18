@@ -1,9 +1,9 @@
 <?php
 //Configuracion de la conexion a base de datos
 $bd_host = "localhost"; 
-$bd_usuario = "javo2"; 
-$bd_password = "Ejecuc10n2014"; 
-$bd_base = "ejecucion"; 
+$bd_usuario = "root"; 
+$bd_password = "admin"; 
+$bd_base = "laborales"; 
 $con = mysql_connect($bd_host, $bd_usuario, $bd_password); 
 mysql_select_db($bd_base, $con); 
 ?>

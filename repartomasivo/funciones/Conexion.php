@@ -2,8 +2,8 @@
 
 $dbhost           ='localhost';
 $dbusername       ='root';
-$dbuserpassword   ='Ejecuc10n2014';
-$dbdefault_dbname ='ejecucion';
+$dbuserpassword   ='admin';
+$dbdefault_dbname ='laborales';
 
 function db_connect(){
 
@@ -12,11 +12,11 @@ function db_connect(){
 	$link = mysql_connect($dbhost, $dbusername, $dbuserpassword);
 
 	if(!$link){
-		echo "Fallo en la Conexión al host $dbhost";
+		echo "Fallo en la Conexiï¿½n al host $dbhost";
 		return 0;
 	}
 	else if(empty($dbname) && !mysql_select_db($dbdefault_dbname)){
-		echo "Fallo en la Conexión al host $dbhost";
+		echo "Fallo en la Conexiï¿½n al host $dbhost";
 		return 0;
 	}
 	else return $link;

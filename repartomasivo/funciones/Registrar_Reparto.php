@@ -2,7 +2,7 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/ejecucion/"); 
+	header("refresh: 0; URL=/laborales/"); 
 }
 else{
 
@@ -20,7 +20,7 @@ $long  = count($datos);
 //---------------------------------------------------     
 $error_transaccion = 0; //variable para detectar error
 
-//Conexión a la base de datos
+//Conexiï¿½n a la base de datos
 $conexion = db_connect($dbdefault_dbname);
 
 //$conexion = mysql_connect($dbhost, $dbusername, $dbuserpassword) or die(mysql_error($conexion));
@@ -55,7 +55,7 @@ if($conexion > 0){
 		$i= $long + 1;
 	}
 	
-	//Iniciar la transacción.
+	//Iniciar la transacciï¿½n.
 	if ( sqlsrv_begin_transaction( $conn ) === false ) {
 		 //die( print_r( sqlsrv_errors(), true ));
 		 $error_transaccion = 1;
@@ -133,7 +133,7 @@ if($conexion > 0){
 		//SQL 3 ACTUALIZACIONES A SIGLO XXI
 		
 		//SQL PARA PRUEBAS
-		/*$sql = ("UPDATE info1 SET des = 'Actuación Registrada por la Oficina de Ejecución de Sentencias'
+		/*$sql = ("UPDATE info1 SET des = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias'
 			     WHERE radicado ='$d0';
 					
 				 INSERT INTO info2(numero) values('$d0')");*/
@@ -144,8 +144,8 @@ if($conexion > 0){
 		  
 		$sql = ("declare @cad integer 
 				
-				UPDATE t103dainfoproc SET a103descacts='Redistribución a Juzgados de Ejecución de Sentencias', a103codiacts='30023582', a103codipads='30011102',
-				a103fechdess = GETDATE(), a103anotacts = 'Actuación Registrada por la Oficina de Ejecución de Sentencias',
+				UPDATE t103dainfoproc SET a103descacts='Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias', a103codiacts='30023582', a103codipads='30011102',
+				a103fechdess = GETDATE(), a103anotacts = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias',
 				A103ENTIRADI = '$codi_enti', A103ESPERADI = '$codi_espe', A103NUENRADI = '$codi_nume', A103CODIPONE = '$codi_pone', A103NOMBPONE = '$nom_pone'
 				WHERE a103llavproc='$d1';
 				
@@ -153,8 +153,8 @@ if($conexion > 0){
 				
 				INSERT INTO T110DRACTUPROC(A110LLAVPROC,A110CONSACTU,A110NUMEPROC,A110CONSPROC,A110CODIACTU,A110CODIPADR,A110DESCACTU,A110LEGAJUDI,A110FLAGTERM,A110TIPOTERM,A110NUMDTERM,A110FECHINIC,
 				A110FECHFINA,A110FECHREGI,A110FOLIPROC,A110CUADPROC,A110CODIPROV,A110NUMEPROV,A110FECHPROV,A110ANOTACTU,A110FECHOFIC,A110NUMEOFIC,A110FLAGUBIC,A110TIPOACTU,A110FECHDESA,A110BORRTERM,
-				A110RENUTERM) values('$d1',@cad,'$sin','00','30023582','30011102','Redistribución a Juzgados de Ejecución de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
-				'Actuación Registrada por la Oficina de Ejecución de Sentencias',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
+				A110RENUTERM) values('$d1',@cad,'$sin','00','30023582','30011102','Redistribuciï¿½n a Juzgados de Ejecuciï¿½n de Sentencias','N','NO','N',0,NULL,NULL,GETDATE(),NULL,NULL,NULL,NULL,NULL,
+				'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias',NULL,NULL,'S','D',GETDATE(),'NO','NO')");
 				
 		
 		$params = array();
@@ -164,7 +164,7 @@ if($conexion > 0){
 		
 		//SI ES CORRECTO O NO, NO SE CONSOLIDA LA TRANSACCION O ES REVERTIDA
 		//EN ESTA PARTE TODO SE MANEJA MAS ABAJO AL PREGUNTAR POR LA VARIABLE
-		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ó sqlsrv_commit( $conn )
+		//$error_transaccion Y SE EJECUTA sqlsrv_rollback( $conn ) ï¿½ sqlsrv_commit( $conn )
 		//IGUAL QUE EN MySQL
 		if( $stmt ) {
 			 //sqlsrv_commit( $conn );
@@ -179,7 +179,7 @@ if($conexion > 0){
 		
 		//DE ESTA FORMA TAMBIEN FUNCIONA,PREPARANDO y EJECUTANDO CADA SENTENCIA
 		//Preprar y ejecutar la primera sentencia
-		/*$sql1 = "UPDATE info1 SET des = 'Actuación Registrada por la Oficina de Ejecución de Sentencias'
+		/*$sql1 = "UPDATE info1 SET des = 'Actuaciï¿½n Registrada por la Oficina de Ejecuciï¿½n de Sentencias'
 				 WHERE radicado ='$d0'";
 						 
 		//$params1 = array( $orderId, $qty, $productId );
@@ -196,7 +196,7 @@ if($conexion > 0){
 		$options2 =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 		$stmt2    = sqlsrv_query( $conn, $sql2, $params2, $options2 );
 				
-		//Si ambas sentencias finalizaran con éxito, consolidar la transacción.
+		//Si ambas sentencias finalizaran con ï¿½xito, consolidar la transacciï¿½n.
 		//En caso contrario, revertirla. 
 		if( $stmt1 && $stmt2 ) {
 			 //sqlsrv_commit( $conn );
@@ -264,11 +264,11 @@ if($conexion > 0){
 	//-----------------------------------------------------------------
 	/*if($error_transaccion) {
 		//echo $error_transaccion;
-		echo "<HTML><script>alert('ERROR AL PROCESAR LOS DATOS');location.href='/ejecucion/repartomasivo/templates/clientesGrid.php';</script></HTML>";
+		echo "<HTML><script>alert('ERROR AL PROCESAR LOS DATOS');location.href='/laborales/repartomasivo/templates/clientesGrid.php';</script></HTML>";
 	} 
 	else {
 		//echo $error_transaccion;
-		echo "<HTML><script>alert('PROCESAMIENTO DE LOS DATOS OK...');location.href='/ejecucion/repartomasivo/templates/clientesGrid.php';</script></HTML>";
+		echo "<HTML><script>alert('PROCESAMIENTO DE LOS DATOS OK...');location.href='/laborales/repartomasivo/templates/clientesGrid.php';</script></HTML>";
 	}*/
 }
 else{

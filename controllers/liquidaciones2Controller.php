@@ -24,7 +24,7 @@ class liquidaciones2Controller extends controllerBase
 
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -51,7 +51,7 @@ class liquidaciones2Controller extends controllerBase
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -81,7 +81,7 @@ class liquidaciones2Controller extends controllerBase
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -106,7 +106,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -129,7 +129,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -156,7 +156,7 @@ class liquidaciones2Controller extends controllerBase
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -180,7 +180,7 @@ class liquidaciones2Controller extends controllerBase
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -197,7 +197,7 @@ class liquidaciones2Controller extends controllerBase
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -223,7 +223,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -249,7 +249,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -274,7 +274,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -299,7 +299,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -324,7 +324,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -349,7 +349,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -374,7 +374,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -400,7 +400,7 @@ class liquidaciones2Controller extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}

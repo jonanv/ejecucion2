@@ -77,7 +77,7 @@ class liquidacionesController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -191,7 +191,7 @@ class liquidacionesController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -249,7 +249,7 @@ class liquidacionesController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 

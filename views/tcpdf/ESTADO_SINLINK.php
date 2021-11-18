@@ -39,7 +39,7 @@ $pdf->SetTitle('Estado '.$nun_estado);
 //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 048', PDF_HEADER_STRING);
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\ejecucion\views\tcpdf\examples\images
+//C:\wamp\www\laborales\views\tcpdf\examples\images
 $pdf->SetHeaderData('tcpdf_logo4.jpg', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 

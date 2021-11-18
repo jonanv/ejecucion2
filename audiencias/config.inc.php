@@ -11,9 +11,9 @@ $dbpass = "crow";
 $tabla  = "tcalendario";*/
 
 $dbhost = "localhost";
-$dbname = "ejecucion";
-$dbuser = "javo2";
-$dbpass = "Ejecuc10n2014";
+$dbname = "laborales";
+$dbuser = "root";
+$dbpass = "admin";
 $tabla  = "siepro_audiencia";
 
 $db = new mysqli($dbhost,$dbuser,$dbpass,$dbname);

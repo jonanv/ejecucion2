@@ -167,7 +167,7 @@ $(document).ready(function() {
 	 
 	 var ipservidor = ip_servidor;
 	
-	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
+	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
 	 $.datepicker.regional['es'] = {
 	 closeText: 'Cerrar',
 	 prevText: '< Ant',
@@ -175,9 +175,9 @@ $(document).ready(function() {
 	 currentText: 'Hoy',
 	 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 	 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-	 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miï¿½rcoles', 'Jueves', 'Viernes', 'Sï¿½bado'],
+	 dayNamesShort: ['Dom','Lun','Mar','Miï¿½','Juv','Vie','Sï¿½b'],
+	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sï¿½'],
 	 weekHeader: 'Sm',
 	 dateFormat: 'yy-mm-dd',
 	 firstDay: 1,
@@ -232,9 +232,9 @@ $(document).ready(function() {
 					
 					//var ipservidor = "172.16.176.194";
 		
-					//window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?fechae_2A="+valor1+"&fechae_2B="+valor2+"&nun_estado="+valor3+"&juzgadoauto="+valor4);
+					//window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?fechae_2A="+valor1+"&fechae_2B="+valor2+"&nun_estado="+valor3+"&juzgadoauto="+valor4);
 					
-					//window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liqui="+d0x);
+					//window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liqui="+d0x);
 					
 					if( $("#radioacuerdo1").is(':checked') ) {  
 					
@@ -305,7 +305,7 @@ $(document).ready(function() {
 									//alert(fff);
 									
 		
-									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 														
 								});
 							
@@ -356,7 +356,7 @@ $(document).ready(function() {
 								//alert(fff);
 								
 	
-								window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+								window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 													
 							});
 						
@@ -416,7 +416,7 @@ $(document).ready(function() {
 										//alert(fff);
 										
 			
-										window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+										window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 															
 									});
 								
@@ -467,7 +467,7 @@ $(document).ready(function() {
 									//alert(fff);
 									
 		
-									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_LIQUIDACION.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 														
 								});
 							
@@ -527,9 +527,9 @@ $(document).ready(function() {
 										//alert(fff);
 										
 			
-										window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+										window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 										
-										//document.location = "http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
+										//document.location = "http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
 															
 									});
 								
@@ -583,10 +583,10 @@ $(document).ready(function() {
 									
 									
 		
-									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 									
 									
-									//document.location = "http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
+									//document.location = "http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NUEVO.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario;
 									
 									
 									
@@ -648,7 +648,7 @@ $(document).ready(function() {
 										//alert(fff);
 										
 			
-										window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+										window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&agencias="+agencias+"&acuerdo="+acuerdo+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&forma_dte_ddo="+forma_dte_ddo+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 															
 									});
 								
@@ -699,7 +699,7 @@ $(document).ready(function() {
 									//alert(fff);
 									
 		
-									window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
+									window.open("http://"+ipservidor+"/laborales/views/tcpdf/GENERAR_NONUEVO_NOLIQUI.php?nun_liquidacion="+d0x+"&fechafijacion="+fjj+"&fechainicial="+fii+"&fechafinal="+fff+"&cesionario="+cesionario+"&subrogatario="+subrogatario+"&nunestado="+nunestado+"&fecha_estado="+fecha_estado);
 														
 								});
 							

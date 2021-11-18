@@ -10,10 +10,10 @@ class DB{
 	
 	function DB(){ 
 	     
-		$this->BaseDatos = "ejecucion";        
+		$this->BaseDatos = "laborales";        
 		$this->Servidor  = "localhost";        
 		$this->Usuario   = "root";        
-		$this->Clave     = "Ejecuc10n2014";   
+		$this->Clave     = "admin";   
 	}      
 	function conectar() {  
 	      

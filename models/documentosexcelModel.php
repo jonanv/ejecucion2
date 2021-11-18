@@ -1,12 +1,12 @@
 <?php
 
 //set_time_limit(240000000);
-//El tiempo de ejecución máximo, en segundos. Si se pone a cero se impone sin límite de tiempo.
+//El tiempo de ejecuciï¿½n mï¿½ximo, en segundos. Si se pone a cero se impone sin lï¿½mite de tiempo.
 //set_time_limit(0);
 
 //PARA QUE EL REPORTE NO SE CUELGUE Y DE EL MENSAJE
-//Error fatal: Memoria insuficiente (asignada 367263744) (intentó asignar 2097152 bytes) 
-//en C: \ wamp \ www \ ejecucion \ views \ PHPExcel-development \ Classes \ PHPExcel \ CachedObjectStorage \ CacheBase.php en la línea 173
+//Error fatal: Memoria insuficiente (asignada 367263744) (intentï¿½ asignar 2097152 bytes) 
+//en C: \ wamp \ www \ laborales \ views \ PHPExcel-development \ Classes \ PHPExcel \ CachedObjectStorage \ CacheBase.php en la lï¿½nea 173
 ini_set('memory_limit', '2048M');
 
 
@@ -833,7 +833,7 @@ if($opcion == 1){
 	->setCellValue('J1', 'FECHA REMATE');
 	
 	
-	//->setCellValue('C1',  utf8_encode('Cédula Demandante')) //PARA LAS TILDES
+	//->setCellValue('C1',  utf8_encode('Cï¿½dula Demandante')) //PARA LAS TILDES
 	
 	$sheet1->getStyle('A1')->applyFromArray($styleArray);
 	$sheet1->getStyle('B1')->applyFromArray($styleArray);

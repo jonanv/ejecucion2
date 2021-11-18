@@ -30,7 +30,7 @@ class repsController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -67,7 +67,7 @@ class repsController extends controllerBase
 	  }
 	  else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -77,10 +77,10 @@ class repsController extends controllerBase
 
 
 
-/*------------- Registrar Ubicación Expediente -------------------*/
+/*------------- Registrar Ubicaciï¿½n Expediente -------------------*/
 
 	
-/*---------------------- Listar Ubicación Expedientes -------------------*/
+/*---------------------- Listar Ubicaciï¿½n Expedientes -------------------*/
 
 	public function listarIngresoSalida()
 
@@ -124,7 +124,7 @@ class repsController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -182,7 +182,7 @@ class repsController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -244,7 +244,7 @@ class repsController extends controllerBase
 	
 		else{
 	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 	
 		}
 
@@ -276,7 +276,7 @@ class repsController extends controllerBase
 	
 		else{
 	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 	
 		}
 
@@ -302,7 +302,7 @@ class repsController extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -324,7 +324,7 @@ class repsController extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -346,7 +346,7 @@ class repsController extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -368,7 +368,7 @@ class repsController extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -395,7 +395,7 @@ class repsController extends controllerBase
 	
 		else{
 	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 	
 		}
 	}
@@ -417,7 +417,7 @@ class repsController extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -439,7 +439,7 @@ class repsController extends controllerBase
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -467,7 +467,7 @@ class repsController extends controllerBase
 	
 		else{
 	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 	
 		}
 
@@ -498,7 +498,7 @@ class repsController extends controllerBase
 	
 		else{
 	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 	
 		}
 
@@ -518,7 +518,7 @@ class repsController extends controllerBase
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -536,7 +536,7 @@ class repsController extends controllerBase
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -553,7 +553,7 @@ class repsController extends controllerBase
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 

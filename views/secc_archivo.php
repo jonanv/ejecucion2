@@ -54,7 +54,7 @@
 									
 									 
 									<li>
-										<a href="/ejecucion/repartomasivo/index.php">Reparto Masivo</a>
+										<a href="/laborales/repartomasivo/index.php">Reparto Masivo</a>
 									</li>
 													
 							<?php 
@@ -239,7 +239,7 @@
 								</li> -->
 							
 							<!-- <li>
-								<a href="http://172.16.176.194/ejecucion/mejora_continua">mejora continua</a>
+								<a href="http://172.16.176.194/laborales/mejora_continua">mejora continua</a>
 							</li> -->
 
 
@@ -386,7 +386,7 @@
 						    ?>
 							
 							<!-- PROCESOS MASIVOS DESDE FORMUARIO SIEPRO OPCION ACTUACION JUSTICIA XXI MASIVA 
-							Auto aprueba liquidación crédito
+							Auto aprueba liquidaciï¿½n crï¿½dito
 							Auto modifica liquidacion presentada 
 							Fijacion estado -->
 							
@@ -396,7 +396,7 @@
 								
 							</li> 
 							
-							<!-- Auto aprueba liquidación crédito -->
+							<!-- Auto aprueba liquidaciï¿½n crï¿½dito -->
 							
 							<!-- <li>
 								<a href="index.php?controller=archivo&action=Registrar_AALC_L1">Auto aprueba liquidacion credito</a>

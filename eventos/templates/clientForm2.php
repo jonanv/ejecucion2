@@ -13,7 +13,7 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/ejecucion/"); 
+	header("refresh: 0; URL=/laborales/"); 
 }
 else{
 ?>
@@ -113,7 +113,7 @@ else{
     <div>
         <label>Radicado</label>
        <input type="text" name="everadicado" id="everadicado" size="40"  readonly="true" value = "<?php print $view->client->getEveradicado() ?>">
-	   <button type="button" name="boton_adicionar" title="Adicionar Radicado" onClick="Adicionar_Radicado(client.everadicado.value)"><img src="/ejecucion/eventos/imagenes/add.png" width="20" height="20"/></button>
+	   <button type="button" name="boton_adicionar" title="Adicionar Radicado" onClick="Adicionar_Radicado(client.everadicado.value)"><img src="/laborales/eventos/imagenes/add.png" width="20" height="20"/></button>
     </div>
 	
 	<div>
@@ -165,8 +165,8 @@ else{
         <!-- <input id="cancel" type="button" value ="Cancelar" /> -->
         <!-- <input id="submit" type="submit" name="submit" value ="Guardar" /> -->
 		
-		<button id="cancel" type="button" name="boton_cancelar" title="Cancelar"><img src="/ejecucion/eventos/imagenes/cancel2.png" width="30" height="30"/></button>
-		<button id="submit" type="submit" name="boton_registrar" title="Registrar"><img src="/ejecucion/eventos/imagenes/save.png" width="30" height="30"/></button>
+		<button id="cancel" type="button" name="boton_cancelar" title="Cancelar"><img src="/laborales/eventos/imagenes/cancel2.png" width="30" height="30"/></button>
+		<button id="submit" type="submit" name="boton_registrar" title="Registrar"><img src="/laborales/eventos/imagenes/save.png" width="30" height="30"/></button>
 		
     </div>
 	

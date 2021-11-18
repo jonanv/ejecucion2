@@ -112,7 +112,7 @@ class demandaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}

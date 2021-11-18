@@ -30,7 +30,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -77,7 +77,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -135,7 +135,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -180,7 +180,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -224,7 +224,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -332,7 +332,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -440,7 +440,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -471,7 +471,7 @@ class archivoController extends controllerBase
 				
 			}
 			else{
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 
 			}	
 	
@@ -555,7 +555,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -615,7 +615,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -680,7 +680,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -745,7 +745,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -776,7 +776,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -808,7 +808,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -840,7 +840,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -874,7 +874,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -920,7 +920,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1013,7 +1013,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1069,7 +1069,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1077,7 +1077,7 @@ class archivoController extends controllerBase
 
 	}
 
-/*------------- Registrar Ubicación Expediente -------------------*/
+/*------------- Registrar Ubicaciï¿½n Expediente -------------------*/
 
 	public function regUbicacionExpediente()
 
@@ -1131,7 +1131,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1189,7 +1189,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1197,7 +1197,7 @@ class archivoController extends controllerBase
 
 	}
 	
-	/*------------- Registrar Devolución Expediente -------------------*/
+	/*------------- Registrar Devoluciï¿½n Expediente -------------------*/
 
 	public function regDevolucionExpediente()
 
@@ -1248,14 +1248,14 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
 
 
 	}
-	/*------------- Registrar Títulos -------------------*/
+	/*------------- Registrar Tï¿½tulos -------------------*/
 
 	public function regTitulos()
 
@@ -1307,7 +1307,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1343,7 +1343,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1380,7 +1380,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1388,7 +1388,7 @@ class archivoController extends controllerBase
 
 	}
 
-/*---------------------- Listar Ubicación Expedientes -------------------*/
+/*---------------------- Listar Ubicaciï¿½n Expedientes -------------------*/
 
 	public function listarUbicacionExpediente()
 
@@ -1503,7 +1503,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1511,7 +1511,7 @@ class archivoController extends controllerBase
 
 	}
 	
-	/*----------------------Ver Títulos------------------*/
+	/*----------------------Ver Tï¿½tulos------------------*/
 
 	public function verTitulos()
 
@@ -1541,7 +1541,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1620,7 +1620,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1662,7 +1662,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1704,7 +1704,7 @@ class archivoController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1712,7 +1712,7 @@ class archivoController extends controllerBase
 
 	}
 	
-/*------------- Registrar Informe Gestión -----------------------------*/
+/*------------- Registrar Informe Gestiï¿½n -----------------------------*/
 
 	public function regGestion()
 
@@ -1739,12 +1739,12 @@ class archivoController extends controllerBase
 
 	   }
 	  else{
-    	header("refresh: 0; URL=/ejecucion/");
+    	header("refresh: 0; URL=/laborales/");
 		  }
 
 	}
 	
-	/*------------- Consultar Informe Gestión -----------------------------*/
+	/*------------- Consultar Informe Gestiï¿½n -----------------------------*/
 
 	public function consultarGestion()
 
@@ -1764,14 +1764,14 @@ class archivoController extends controllerBase
 
 	   }
 	  else{
-    	header("refresh: 0; URL=/ejecucion/");
+    	header("refresh: 0; URL=/laborales/");
 		  }
 
 	}
 	
 	
 	
-	/*------------- Consultar Informe Gestión -----------------------------*/
+	/*------------- Consultar Informe Gestiï¿½n -----------------------------*/
 
 	public function consultarGestion1()
 
@@ -1791,13 +1791,13 @@ class archivoController extends controllerBase
 
 	   }
 	  else{
-    	header("refresh: 0; URL=/ejecucion/");
+    	header("refresh: 0; URL=/laborales/");
 		  }
 
 	}
 	
 	
-	/*------------- Modificar Informe Gestión -----------------------------*/
+	/*------------- Modificar Informe Gestiï¿½n -----------------------------*/
 
 	public function modificarGestion()
 
@@ -1817,12 +1817,12 @@ class archivoController extends controllerBase
 
 	   }
 	  else{
-    	header("refresh: 0; URL=/ejecucion/");
+    	header("refresh: 0; URL=/laborales/");
 		  }
 
 	}
 	
-	/*------------- Modificar Informe Gestión -----------------------------*/
+	/*------------- Modificar Informe Gestiï¿½n -----------------------------*/
 
 	public function modificarGestion1()
 
@@ -1849,12 +1849,12 @@ class archivoController extends controllerBase
 
 	   }
 	  else{
-    	header("refresh: 0; URL=/ejecucion/");
+    	header("refresh: 0; URL=/laborales/");
 		  }
 
 	}
 	
-/*------------- Modificar Informe Gestión -----------------------------*/
+/*------------- Modificar Informe Gestiï¿½n -----------------------------*/
 
 	/*public function editGestion()
 
@@ -1878,7 +1878,7 @@ class archivoController extends controllerBase
 
 	   }
 	  else{
-    	header("refresh: 0; URL=/ejecucion/");
+    	header("refresh: 0; URL=/laborales/");
 		  }
 
 	}
@@ -1905,10 +1905,10 @@ class archivoController extends controllerBase
 	
 	
 /*******************************************************************************************************************/	
-/************************************************ REPORTES POR MÓDULO **********************************************/
+/************************************************ REPORTES POR Mï¿½DULO **********************************************/
 /*******************************************************************************************************************/
 	
-/******************************************* Reporte Producción Diaria *********************************************/	
+/******************************************* Reporte Producciï¿½n Diaria *********************************************/	
 	
 		public function ReporteProduccionDiaria()
 	{
@@ -1919,11 +1919,11 @@ class archivoController extends controllerBase
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}
 
-/****************** Redirecciona a la generación del gráfico del reporte Producción Diaria *************************/	
+/****************** Redirecciona a la generaciï¿½n del grï¿½fico del reporte Producciï¿½n Diaria *************************/	
 public function  ReporteProduccionDiaria1()
 	{
 	  if($_SESSION['id']!=""){
@@ -1936,12 +1936,12 @@ public function  ReporteProduccionDiaria1()
       }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}	
 	
 
-/**************************************** Reporte Producción Rango de Fechas ********************************************/	
+/**************************************** Reporte Producciï¿½n Rango de Fechas ********************************************/	
 	
 		public function ReporteProduccionRango()
 	{
@@ -1952,11 +1952,11 @@ public function  ReporteProduccionDiaria1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}
 
-/************** Redirecciona a la generación del gráfico del reporte Producción Rango de Fechas ***********************/	
+/************** Redirecciona a la generaciï¿½n del grï¿½fico del reporte Producciï¿½n Rango de Fechas ***********************/	
 public function  ReporteProduccionRango1()
 	{
 	  if($_SESSION['id']!=""){
@@ -1968,12 +1968,12 @@ public function  ReporteProduccionRango1()
       }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}	
 	
 	
-/**************************************** Reporte Producción Juzgado ********************************************/	
+/**************************************** Reporte Producciï¿½n Juzgado ********************************************/	
 	
 		public function ReporteProduccionJuzgado()
 	{
@@ -2006,7 +2006,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}
 	
@@ -2029,7 +2029,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}
 	
@@ -2059,7 +2059,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}
 		
@@ -2085,7 +2085,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}*/
 	
@@ -2112,7 +2112,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}
 	
@@ -2142,7 +2142,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  
 	  else{
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 	  }	
 	}	
 	
@@ -2209,7 +2209,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2242,7 +2242,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2315,7 +2315,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2395,7 +2395,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2421,7 +2421,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2437,7 +2437,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2463,7 +2463,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2483,7 +2483,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2509,7 +2509,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 			
@@ -2527,7 +2527,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2553,7 +2553,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -2571,7 +2571,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2599,7 +2599,7 @@ public function  ReporteProduccionRango1()
 	
 		else{
 	
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 	
 		}
 	}
@@ -2623,7 +2623,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2645,7 +2645,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2668,7 +2668,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -2689,7 +2689,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	}
 
@@ -2716,7 +2716,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 			
@@ -2734,7 +2734,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2751,7 +2751,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2768,7 +2768,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2785,7 +2785,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2802,7 +2802,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2829,7 +2829,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2855,7 +2855,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2882,7 +2882,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2910,7 +2910,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2937,7 +2937,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2962,7 +2962,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -2987,7 +2987,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3014,7 +3014,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3039,7 +3039,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3066,7 +3066,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3092,7 +3092,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -3116,7 +3116,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -3141,7 +3141,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -3167,7 +3167,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3191,7 +3191,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	}
 	
@@ -3216,7 +3216,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3244,7 +3244,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3273,7 +3273,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3301,7 +3301,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3329,7 +3329,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3356,7 +3356,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -3381,7 +3381,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -3404,7 +3404,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -3427,7 +3427,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3454,7 +3454,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 			
@@ -3482,7 +3482,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 			
@@ -3505,7 +3505,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -3522,7 +3522,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -3549,7 +3549,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -3579,7 +3579,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3605,7 +3605,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3638,7 +3638,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 			
@@ -3662,7 +3662,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -3688,7 +3688,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3714,7 +3714,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3735,7 +3735,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -3759,7 +3759,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -3788,7 +3788,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}
 		
@@ -3823,7 +3823,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3851,7 +3851,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3883,7 +3883,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3904,7 +3904,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -3932,7 +3932,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}
 		
@@ -3959,7 +3959,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -3980,7 +3980,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -4006,7 +4006,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4031,7 +4031,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4059,7 +4059,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}
 		
@@ -4085,7 +4085,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -4114,7 +4114,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}
 		
@@ -4139,7 +4139,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -4166,7 +4166,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4193,7 +4193,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4219,7 +4219,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4253,7 +4253,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4297,7 +4297,7 @@ public function  ReporteProduccionRango1()
 				
 			}
 			else{
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 
 			}	
 	
@@ -4322,7 +4322,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4339,7 +4339,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4367,7 +4367,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -4396,7 +4396,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 			
@@ -4431,7 +4431,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4461,7 +4461,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4477,17 +4477,17 @@ public function  ReporteProduccionRango1()
 						
 						//PROCESOS MASIVOS 
 						
-						//Auto aprueba liquidación crédito
+						//Auto aprueba liquidaciï¿½n crï¿½dito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
 	//********************************************************************************************
 	
 	
-	/***************Auto aprueba liquidación crédito***************/
+	/***************Auto aprueba liquidaciï¿½n crï¿½dito***************/
 	
 	
-	//ACTUACION Auto aprueba liquidación crédito 
+	//ACTUACION Auto aprueba liquidaciï¿½n crï¿½dito 
 	public function Registrar_AALC_L1(){
 	
 		if($_SESSION['id']!=""){
@@ -4508,12 +4508,12 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
 	
-	//ACTUACION Fijacion estado Auto aprueba liquidación crédito 
+	//ACTUACION Fijacion estado Auto aprueba liquidaciï¿½n crï¿½dito 
 	public function Registrar_AALC_L2(){
 	
 		if($_SESSION['id']!=""){
@@ -4534,7 +4534,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}	
@@ -4564,7 +4564,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4590,7 +4590,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4599,7 +4599,7 @@ public function  ReporteProduccionRango1()
 	
 						
 						//FIN PROCESOS MASIVOS 
-						//Auto aprueba liquidación crédito
+						//Auto aprueba liquidaciï¿½n crï¿½dito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
@@ -4614,7 +4614,7 @@ public function  ReporteProduccionRango1()
 	
 						
 						//PROCESOS MASIVOS DESDE FORMUARIO SIEPRO OPCION ACTUACION JUSTICIA XXI MASIVA 
-						//Auto aprueba liquidación crédito
+						//Auto aprueba liquidaciï¿½n crï¿½dito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
@@ -4646,7 +4646,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4673,7 +4673,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4682,7 +4682,7 @@ public function  ReporteProduccionRango1()
 	
 						
 						//FIN PROCESOS MASIVOS DESDE FORMUARIO SIEPRO OPCION ACTUACION JUSTICIA XXI MASIVA 
-						//Auto aprueba liquidación crédito
+						//Auto aprueba liquidaciï¿½n crï¿½dito
 						//Auto modifica liquidacion presentada 
 						//Fijacion estado
 						
@@ -4716,7 +4716,7 @@ public function  ReporteProduccionRango1()
 		}
 		else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 		
@@ -4757,7 +4757,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -4792,7 +4792,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -4815,7 +4815,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -4854,7 +4854,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -4889,7 +4889,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -4924,7 +4924,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -4972,7 +4972,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -4998,7 +4998,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5023,7 +5023,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5048,7 +5048,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5073,7 +5073,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5094,7 +5094,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5134,7 +5134,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -5170,7 +5170,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -5204,7 +5204,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5229,7 +5229,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5263,7 +5263,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5288,7 +5288,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5313,7 +5313,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5356,7 +5356,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5381,7 +5381,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5406,7 +5406,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5429,7 +5429,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5451,7 +5451,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5477,7 +5477,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5501,7 +5501,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5523,7 +5523,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5550,7 +5550,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5573,7 +5573,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5595,7 +5595,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5622,7 +5622,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5651,7 +5651,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5677,7 +5677,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5715,7 +5715,7 @@ public function  ReporteProduccionRango1()
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -5751,7 +5751,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -5771,7 +5771,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -5799,7 +5799,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -5838,7 +5838,7 @@ public function  ReporteProduccionRango1()
 	  }
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -5874,7 +5874,7 @@ public function  ReporteProduccionRango1()
 			}
 			else{
 	
-				header("refresh: 0; URL=/ejecucion/");
+				header("refresh: 0; URL=/laborales/");
 			}
 
 
@@ -5904,7 +5904,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5929,7 +5929,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -5951,7 +5951,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5973,7 +5973,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -5997,7 +5997,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -6023,7 +6023,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -6045,7 +6045,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -6071,7 +6071,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -6128,7 +6128,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -6154,7 +6154,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -6177,7 +6177,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -6199,7 +6199,7 @@ public function  ReporteProduccionRango1()
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 
@@ -6225,7 +6225,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -6250,7 +6250,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -6275,7 +6275,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -6293,7 +6293,7 @@ public function  ReporteProduccionRango1()
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -6329,7 +6329,7 @@ public function  ReporteProduccionRango1()
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}

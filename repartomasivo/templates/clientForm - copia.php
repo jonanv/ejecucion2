@@ -13,7 +13,7 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/ejecucion/"); 
+	header("refresh: 0; URL=/laborales/"); 
 }
 else{
 ?>
@@ -146,10 +146,10 @@ else{
         <!-- <input id="cancel" type="button" value ="Cancelar" /> -->
         <!-- <input id="submit" type="submit" name="submit" value ="Guardar" /> -->
 		
-		<button id="cancel" type="button" name="boton_cancelar" title="Cancelar"><img src="/ejecucion/eventos/imagenes/cancel2.png" width="30" height="30"/></button>
-		<!-- <button id="submit" type="submit" name="boton_registrar" title="Registrar"><img src="/ejecucion/eventos/imagenes/save.png" width="30" height="30"/></button> -->
+		<button id="cancel" type="button" name="boton_cancelar" title="Cancelar"><img src="/laborales/eventos/imagenes/cancel2.png" width="30" height="30"/></button>
+		<!-- <button id="submit" type="submit" name="boton_registrar" title="Registrar"><img src="/laborales/eventos/imagenes/save.png" width="30" height="30"/></button> -->
 		
-		<button id="editar" type="button" name="boton_registrar" title="Registrar"><img src="/ejecucion/eventos/imagenes/save.png" width="30" height="30"/></button>
+		<button id="editar" type="button" name="boton_registrar" title="Registrar"><img src="/laborales/eventos/imagenes/save.png" width="30" height="30"/></button>
 		
 		
 		

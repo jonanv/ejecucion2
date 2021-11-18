@@ -1,8 +1,8 @@
 <?php
 /*$dbhost ="localhost";
-$dbname ="ejecucion";
+$dbname ="laborales";
 $dbuser ="root";
-$dbpass ="Ejecuc10n2014";
+$dbpass ="admin";
 $db     = new mysqli($dbhost,$dbuser,$dbpass,$dbname);*/
 
 include_once('Conexionpopupbox.php');
@@ -133,7 +133,7 @@ if($conexion > 0){
 else{
 
 	//echo $conexion; 
-	echo "Fallo en la Conexión";
+	echo "Fallo en la Conexiï¿½n";
 }
 
 mysql_free_result($resultado);

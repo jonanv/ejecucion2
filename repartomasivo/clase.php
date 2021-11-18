@@ -3,7 +3,7 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/ejecucion/"); 
+	header("refresh: 0; URL=/laborales/"); 
 }
 else{
  
@@ -17,8 +17,8 @@ class Conexion  // se declara una clase para hacer la conexion con la base de da
 		// se definen los datos del servidor de base de datos 
 		$conection['server']="localhost";  //host
 		$conection['user']  ="root";         //  usuario
-		$conection['pass']  ="Ejecuc10n2014";             //password
-		$conection['base']  ="ejecucion";           //base de datos
+		$conection['pass']  ="admin";             //password
+		$conection['base']  ="laborales";           //base de datos
 		
 		// crea la conexion pasandole el servidor , usuario y clave
 		$conect= mysql_connect($conection['server'],$conection['user'],$conection['pass']);

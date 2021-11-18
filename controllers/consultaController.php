@@ -30,14 +30,14 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
 	}
 
 
-/*------------- Consultar Títulos -------------------*/
+/*------------- Consultar Tï¿½tulos -------------------*/
 
 	public function consultar()
 
@@ -62,14 +62,14 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
 
 
 	}
-/*------------- Consultar Títulos -------------------*/
+/*------------- Consultar Tï¿½tulos -------------------*/
 
 	public function consulta1()
 
@@ -98,7 +98,7 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -125,7 +125,7 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -156,7 +156,7 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -189,7 +189,7 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -235,7 +235,7 @@ class consultaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 

@@ -16,7 +16,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -41,7 +41,7 @@ class caratulaController extends controllerBase{
 		}
 		else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 
@@ -65,7 +65,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -90,7 +90,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -117,7 +117,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -144,7 +144,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -171,7 +171,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -198,7 +198,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -226,7 +226,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -256,7 +256,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -284,7 +284,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -312,7 +312,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -330,7 +330,7 @@ class caratulaController extends controllerBase{
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -357,7 +357,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 		
@@ -389,7 +389,7 @@ class caratulaController extends controllerBase{
 		}
 		else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 
@@ -414,7 +414,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -438,7 +438,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -454,7 +454,7 @@ class caratulaController extends controllerBase{
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -494,7 +494,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -519,7 +519,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -541,7 +541,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -563,7 +563,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -588,7 +588,7 @@ class caratulaController extends controllerBase{
 				
 		}
 		else{
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 		}	
 	
@@ -624,7 +624,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -658,7 +658,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -682,7 +682,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -706,7 +706,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -740,7 +740,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}
@@ -767,7 +767,7 @@ class caratulaController extends controllerBase{
 	  	}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 
 	}
@@ -783,7 +783,7 @@ class caratulaController extends controllerBase{
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 

@@ -147,7 +147,7 @@ function Reporte_Excel(idreporte){
 	
 		//alert (datos_reporte_3);
 	
-		location.href="/ejecucion/index.php?controller=empleados&action=ReporteExcel&datos_reporte="+datos_reporte;
+		location.href="/laborales/index.php?controller=empleados&action=ReporteExcel&datos_reporte="+datos_reporte;
 	}
 	
 	if(idreporte == 2){

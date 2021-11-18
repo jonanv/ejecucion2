@@ -14,7 +14,7 @@
 session_start(); 
 
 if($_SESSION['id'] == ""){
-	header("refresh: 0; URL=/ejecucion/"); 
+	header("refresh: 0; URL=/laborales/"); 
 }
 else{
 ?>
@@ -54,7 +54,7 @@ else{
 	<div> 
 		<label>Radicado</label><!-- value = "<?php //print $view->client->getDatoradicado() ?>" -->
 		<input type="text" name="datoradicado" id="datoradicado" size="40" value = "170014003" onKeyUp="Buscar_Radicado_Filtro_2(client.datoradicado.value)"/>
-		<button type="button" name="boton_adicionar" id="boton_adicionar" title="Adicionar" onClick="Adicionar_Reparto()"><img src="/ejecucion/repartomasivo/imagenes/add.png" width="20" height="20"/></button>
+		<button type="button" name="boton_adicionar" id="boton_adicionar" title="Adicionar" onClick="Adicionar_Reparto()"><img src="/laborales/repartomasivo/imagenes/add.png" width="20" height="20"/></button>
 	</div>
 	<div> 
 		<label>Ced Demandante</label>
@@ -231,9 +231,9 @@ else{
 			
     </div>
 	
-	<a id="recorrer" href="javascript:void(0);" title="Registrar Reparto" style="float:right "><img src="/ejecucion/repartomasivo/imagenes/save.png" width="30" height="30" title="Registrar Reparto"/></a>
-	<a id="cancel" href="javascript:void(0);" title="Cancelar" style="float:right "><img src="/ejecucion/repartomasivo/imagenes/cancel2.png" width="30" height="30" title="Cancelar"/></a>
-	<a id="eliminar" href="javascript:void(0);" title="Eliminar toda la Tabla" style="float:left" onClick="Eliminar_Tabla()"><img src="/ejecucion/repartomasivo/imagenes/eliminar.png" width="30" height="30" title="Eliminar toda la Tabla"/></a>
+	<a id="recorrer" href="javascript:void(0);" title="Registrar Reparto" style="float:right "><img src="/laborales/repartomasivo/imagenes/save.png" width="30" height="30" title="Registrar Reparto"/></a>
+	<a id="cancel" href="javascript:void(0);" title="Cancelar" style="float:right "><img src="/laborales/repartomasivo/imagenes/cancel2.png" width="30" height="30" title="Cancelar"/></a>
+	<a id="eliminar" href="javascript:void(0);" title="Eliminar toda la Tabla" style="float:left" onClick="Eliminar_Tabla()"><img src="/laborales/repartomasivo/imagenes/eliminar.png" width="30" height="30" title="Eliminar toda la Tabla"/></a>
 	
 	<table>
 
@@ -300,8 +300,8 @@ else{
         <!-- <input id="cancel" type="button" value ="Cancelar" /> -->
         <!-- <input id="submit" type="submit" name="submit" value ="Guardar" /> -->
 		
-		<!-- <button id="cancel" type="button" name="boton_cancelar" title="Cancelar"><img src="/ejecucion/repartomasivo/imagenes/cancel2.png" width="30" height="30"/></button>
-		<button id="submit" type="submit" name="boton_registrar" title="Registrar"><img src="/ejecucion/repartomasivo/imagenes/save.png" width="30" height="30"/></button>
+		<!-- <button id="cancel" type="button" name="boton_cancelar" title="Cancelar"><img src="/laborales/repartomasivo/imagenes/cancel2.png" width="30" height="30"/></button>
+		<button id="submit" type="submit" name="boton_registrar" title="Registrar"><img src="/laborales/repartomasivo/imagenes/save.png" width="30" height="30"/></button>
 		
     </div> -->
 	

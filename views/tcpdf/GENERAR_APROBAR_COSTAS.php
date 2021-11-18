@@ -10,18 +10,18 @@ $idusuario = $_SESSION['idUsuario'];
 
 //------------DATOS PARA LA CONEXION BD------------
 $dbhost           ='localhost';
-$dbusername       ='javo2';
-$dbuserpassword   ='Ejecuc10n2014';
-$dbdefault_dbname ='ejecucion';
+$dbusername       ='root';
+$dbuserpassword   ='admin';
+$dbdefault_dbname ='laborales';
 
 $link = mysql_connect($dbhost, $dbusername, $dbuserpassword);
 
 if(!$link){
-	echo "Fallo en la Conexión al host $dbhost";
+	echo "Fallo en la Conexiï¿½n al host $dbhost";
 	//return 0;
 }
 else if(empty($dbname) && !mysql_select_db($dbdefault_dbname)){
-	echo "Fallo en la Conexión al host $dbhost";
+	echo "Fallo en la Conexiï¿½n al host $dbhost";
 	//return 0;
 }
 
@@ -107,7 +107,7 @@ $pdf->SetTitle('Aprobar Costas');
 
 
 //PARA QUE CARGUE LA IMAGEN DEBE IR UBICADA EN 
-//C:\wamp\www\ejecucion\views\tcpdf\examples\images
+//C:\wamp\www\laborales\views\tcpdf\examples\images
 //$pdf->SetHeaderData('tcpdf_logo4.jpg', 68, '', '');
 //$pdf->setFooterData(array(0,64,0), array(0,64,128));
 
@@ -167,7 +167,7 @@ $tbl_noti = '
 				 
 			<tr>
 					  
-				<td style="border-bottom-color:#FFFFFF">'.utf8_encode('NOTIFÍQUESE').'</td>
+				<td style="border-bottom-color:#FFFFFF">'.utf8_encode('NOTIFï¿½QUESE').'</td>
 				
 			</tr>
 			
@@ -219,9 +219,9 @@ $pdf->SetFont('helvetica', 'B', 12);
 $pdf->Write(0, utf8_encode('INFORME SECRETARIAL'), '', 0, 'L', true, 0, false, false, 0);
 $pdf->Ln(4);
 $pdf->SetFont('helvetica', '', 12);
-$pdf->Write(0, utf8_encode('Manizales, '.$fecha_liqui.'. En la fecha paso Despacho del señor Juez el presente proceso informándole que la liquidación de costas efectuada por '.$juzgado_apc.' de la ciudad, se corrio traslado a las partes. Las mismas guardaron silencio'), '', 0, 'J', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('Manizales, '.$fecha_liqui.'. En la fecha paso Despacho del seï¿½or Juez el presente proceso informï¿½ndole que la liquidaciï¿½n de costas efectuada por '.$juzgado_apc.' de la ciudad, se corrio traslado a las partes. Las mismas guardaron silencio'), '', 0, 'J', true, 0, false, false, 0);
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('Sírvase proveer.'), '', 0, 'L', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('Sï¿½rvase proveer.'), '', 0, 'L', true, 0, false, false, 0);
 $pdf->Ln(4);
 
 //$pdf->SetFont('helvetica', 'B', 12);
@@ -233,7 +233,7 @@ $pdf->Write(0, $secretario, '', 0, 'C', true, 0, false, false, 0);
 $pdf->Write(0, 'Secretario', '', 0, 'C', true, 0, false, false, 0);
 					 
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('REPÚBLICA DE COLOMBIA'), '', 0, 'C', true, 0, false, false, 0);
+$pdf->Write(0, utf8_encode('REPï¿½BLICA DE COLOMBIA'), '', 0, 'C', true, 0, false, false, 0);
 
 //$pdf->Image('examples/images/escudo.jpg', 98, 74, 15, 15, 'JPG', '', '', true, 150, '', false, false, 1, false, false, false);
 
@@ -255,7 +255,7 @@ $fechafijacion_b = explode("-",$fecha_liqui_a_apc);
 $fechafijacion_c = $fechafijacion_b[2];
 $dia_letra       = $funcion-> numtoletras_para_fecha($fechafijacion_c,1);
 
-//AÑO
+//Aï¿½O
 $fechafijacion_d = $fechafijacion_b[0];
 $dia_letra_2     = $funcion-> numtoletras_para_fecha($fechafijacion_d,1);
 
@@ -310,14 +310,14 @@ $pdf->SetMargins(20,5,20);
 $pdf->Ln(4);
 $pdf->SetFont('helvetica', '', 12);
 $pdf->Ln(4);
-$pdf->Write(0, utf8_encode('Atendiendo la constancia secretarial que antecede, conforme lo establece el artículo 366 del código General del Proceso, se aprueba la LIQUIDACIÓN DE COSTAS efectuada por '.$juzgado_apc."."), '', 0, 'J', true, 0, false, false, 0);		
+$pdf->Write(0, utf8_encode('Atendiendo la constancia secretarial que antecede, conforme lo establece el artï¿½culo 366 del cï¿½digo General del Proceso, se aprueba la LIQUIDACIï¿½N DE COSTAS efectuada por '.$juzgado_apc."."), '', 0, 'J', true, 0, false, false, 0);		
 
 $pdf->Ln(4);
 $pdf->Write(0, utf8_encode($dato8e), '', 0, 'L', true, 0, false, false, 0);		
 
 $pdf->Ln(8);
 $pdf->SetFont('helvetica','B',12);
-/*$pdf->Write(0, utf8_encode('NOTIFÍQUESE'), '', 0, 'C', true, 0, false, false, 0);
+/*$pdf->Write(0, utf8_encode('NOTIFï¿½QUESE'), '', 0, 'C', true, 0, false, false, 0);
 $pdf->Ln(16);
 $pdf->MultiCell(0,6,$dato2,0,'C',false);
 $pdf->Cell(0,6,'JUEZ',0,1,'C');*/
@@ -331,16 +331,16 @@ $pdf->SetFont('helvetica','',9);
 //$pdf->SetTextColor(0);
 $pdf->Ln(8);
 
-$linea_2 = utf8_encode("MANIZALES – CALDAS");
-$linea_3 = utf8_encode("NOTIFICACIÓN POR ESTADO");
+$linea_2 = utf8_encode("MANIZALES ï¿½ CALDAS");
+$linea_3 = utf8_encode("NOTIFICACIï¿½N POR ESTADO");
 $linea_4 = utf8_encode("La providencia anterior se notifica en el Estado");
 $linea_5 = utf8_encode("No. ____ del ___________ de ".date('Y'));
 $linea_6 = utf8_encode($secretario);
 $linea_7 = utf8_encode("SECRETARIO");
 
-//$recuadro = $dato1."\n"."MANIZALES – CALDAS"."\n"."NOTIFICACIÓN POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"; 
+//$recuadro = $dato1."\n"."MANIZALES ï¿½ CALDAS"."\n"."NOTIFICACIï¿½N POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"; 
 
-//$recuadro = utf8_encode($dato1."\n"."MANIZALES – CALDAS"."\n"."NOTIFICACIÓN POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"); 
+//$recuadro = utf8_encode($dato1."\n"."MANIZALES ï¿½ CALDAS"."\n"."NOTIFICACIï¿½N POR ESTADO"."\n"."\n"."La providencia anterior se notifica en el Estado"."\n"."No. ____ del ___________"."\n".$secretario."\n"."SECRETARIA"); 
 
 $tbl_5 = '
 		<table border="1" nobr="true">
@@ -435,8 +435,8 @@ $tbl_6 = '
 				 
 			<tr>
 					 
-				<td style="width:250px; text-align:left">'.utf8_encode('Código: F-LC-01').'</td>
-				<td style="width:250px; text-align:left">'.utf8_encode('Versión: 01').'</td>
+				<td style="width:250px; text-align:left">'.utf8_encode('Cï¿½digo: F-LC-01').'</td>
+				<td style="width:250px; text-align:left">'.utf8_encode('Versiï¿½n: 01').'</td>
 			</tr>
 		
 			

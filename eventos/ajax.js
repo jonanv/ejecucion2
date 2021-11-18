@@ -173,7 +173,7 @@ function Reporte_Excel(){
 
 	//alert (datos_reporte);
 
-	location.href="/ejecucion/index.php?controller=archivo&action=listadoExcel&datos_reporte="+datos_reporte;
+	location.href="/laborales/index.php?controller=archivo&action=listadoExcel&datos_reporte="+datos_reporte;
 	
 }
 

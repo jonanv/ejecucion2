@@ -30,7 +30,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -79,7 +79,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -140,7 +140,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -205,7 +205,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -278,7 +278,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -330,7 +330,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -365,7 +365,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -406,7 +406,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -460,7 +460,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -511,7 +511,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -563,7 +563,7 @@ class correspondenciaController extends controllerBase
 	  }
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -606,7 +606,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -648,7 +648,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -893,7 +893,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -968,7 +968,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1028,7 +1028,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1097,7 +1097,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1148,7 +1148,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1190,7 +1190,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1262,7 +1262,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1309,7 +1309,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1377,7 +1377,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1459,7 +1459,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1528,7 +1528,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1572,7 +1572,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1631,7 +1631,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1669,7 +1669,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1677,7 +1677,7 @@ class correspondenciaController extends controllerBase
 
 	}
 	
-/*------------- Informe Dirección Word -------------------*/
+/*------------- Informe Direcciï¿½n Word -------------------*/
 
 	public function informeDireccion()
 
@@ -1709,7 +1709,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1718,7 +1718,7 @@ class correspondenciaController extends controllerBase
 	}
 	
 
-/*------------- Reportte Notificaión Incidentes -------------------*/
+/*------------- Reportte Notificaiï¿½n Incidentes -------------------*/
 
 	public function ReporteNotificacionIncidentes()
 
@@ -1754,7 +1754,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1788,7 +1788,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1796,7 +1796,7 @@ class correspondenciaController extends controllerBase
 
 	}
 
-/*---------------------- Modificar Actuación -------------------*/
+/*---------------------- Modificar Actuaciï¿½n -------------------*/
 
 	public function editarActuaciones()
 
@@ -1839,7 +1839,7 @@ class correspondenciaController extends controllerBase
 
 			{
 
-			$lu->modificarActuación();
+			$lu->modificarActuaciï¿½n();
 		   }
 
 		
@@ -1852,7 +1852,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1861,7 +1861,7 @@ class correspondenciaController extends controllerBase
 	}
 
 
-	 /*------------- Eliminar Actuación -------------------------*/
+	 /*------------- Eliminar Actuaciï¿½n -------------------------*/
 
 	public function elim_actuacion()
 
@@ -1885,7 +1885,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1945,7 +1945,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -1975,7 +1975,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2009,7 +2009,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2046,7 +2046,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2088,7 +2088,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2126,7 +2126,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2173,7 +2173,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2215,7 +2215,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2265,7 +2265,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2305,7 +2305,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2345,7 +2345,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2381,7 +2381,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2419,7 +2419,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2468,7 +2468,7 @@ class correspondenciaController extends controllerBase
 
 	  else{
 
-		header("refresh: 0; URL=/ejecucion/");
+		header("refresh: 0; URL=/laborales/");
 
 	  }
 
@@ -2490,7 +2490,7 @@ class correspondenciaController extends controllerBase
 		}
 	  	else{
 
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 
 	  	}
 
@@ -2520,7 +2520,7 @@ class correspondenciaController extends controllerBase
 		}
 		else{
 		  
-			header("refresh: 0; URL=/ejecucion/");
+			header("refresh: 0; URL=/laborales/");
 		}
 	
 	}

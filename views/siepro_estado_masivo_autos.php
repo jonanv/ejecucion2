@@ -126,7 +126,7 @@ $(document).ready(function() {
 	
 	var ip_servidor    = "<?php echo $ip_plataforma ; ?>";
 	
-	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
+	 //-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
 	 $.datepicker.regional['es'] = {
 	 closeText: 'Cerrar',
 	 prevText: '< Ant',
@@ -134,9 +134,9 @@ $(document).ready(function() {
 	 currentText: 'Hoy',
 	 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 	 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-	 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miï¿½rcoles', 'Jueves', 'Viernes', 'Sï¿½bado'],
+	 dayNamesShort: ['Dom','Lun','Mar','Miï¿½','Juv','Vie','Sï¿½b'],
+	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sï¿½'],
 	 weekHeader: 'Sm',
 	 dateFormat: 'yy-mm-dd',
 	 firstDay: 1,
@@ -378,7 +378,7 @@ $(document).ready(function() {
 			
 			ipservidor = ip_servidor;
 			
-			window.open("http://"+ipservidor+"/ejecucion/views/tcpdf/ESTADO_SINLINK.php?fechae_2A="+valor1+"&fechae_2B="+valor2+"&nun_estado="+valor3+"&juzgadoauto="+valor4);
+			window.open("http://"+ipservidor+"/laborales/views/tcpdf/ESTADO_SINLINK.php?fechae_2A="+valor1+"&fechae_2B="+valor2+"&nun_estado="+valor3+"&juzgadoauto="+valor4);
 			
 		}
 	
@@ -446,12 +446,12 @@ $(document).ready(function() {
 				<div id="contenido">
 					
 					
-					<!-- EL REPORTE C:\wamp\www\ejecucion\views\tcpdf\ESTADO.php
+					<!-- EL REPORTE C:\wamp\www\laborales\views\tcpdf\ESTADO.php
 					FUNCIONA GENERANDO EL EXCEL DE LOS ESTADOS Y GRABANDONDOLO ESTILO CSV(DELIMITADO POR COMAS)
 					SE REEMPLAZA POR ESTADO_2.php YA QUE NO SE NECESITARIA DICHOEXCEL
 					NOTA: EL REPORTE ESTADO_2.php NECESITA CONEXION A JUSTICIA XXI-->
-					<form action= <?php echo "http://".$ip_plataforma."/ejecucion/views/tcpdf/ESTADO.php"; ?> id="frm_masivo2B" name="frm_masivo2B"  method="post" enctype="multipart/form-data">
-					<!-- <form action= "http://190.217.24.24/ejecucion/views/tcpdf/ESTADO_2.php" id="frm_masivo2B" name="frm_masivo2B"  method="post" enctype="multipart/form-data"> -->
+					<form action= <?php echo "http://".$ip_plataforma."/laborales/views/tcpdf/ESTADO.php"; ?> id="frm_masivo2B" name="frm_masivo2B"  method="post" enctype="multipart/form-data">
+					<!-- <form action= "http://190.217.24.24/laborales/views/tcpdf/ESTADO_2.php" id="frm_masivo2B" name="frm_masivo2B"  method="post" enctype="multipart/form-data"> -->
 					
 					
 					 	<div id="titulo_frm"><?php echo strtoupper($titulo_2); ?></div>

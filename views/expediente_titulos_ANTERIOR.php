@@ -205,7 +205,7 @@ $(document).ready(function() {
 
 
 
-	//-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAÑOL--------------------------------------------------------------------
+	//-----------------------------------PARA QUE LAS FECHA SALGA EN ESPAï¿½OL--------------------------------------------------------------------
 	 $.datepicker.regional['es'] = {
 	 closeText: 'Cerrar',
 	 prevText: '< Ant',
@@ -214,7 +214,7 @@ $(document).ready(function() {
 	 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 	 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
 	 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
-	 dayNamesShort: ['Dom','Lun','Mar','Mie','Juv','Vie','Sáb'],
+	 dayNamesShort: ['Dom','Lun','Mar','Mie','Juv','Vie','Sï¿½b'],
 	 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
 	 weekHeader: 'Sm',
 	 dateFormat: 'yy-mm-dd',
@@ -507,7 +507,7 @@ $(document).ready(function() {
 									
 						if(nom_archivo == 0){
 									
-							data.append('archivo'+i,archivo[i]); //Añadimos cada archivo a el arreglo con un indice direfente
+							data.append('archivo'+i,archivo[i]); //Aï¿½adimos cada archivo a el arreglo con un indice direfente
 						}
 						
 						
@@ -550,7 +550,7 @@ $(document).ready(function() {
 											$('#fila_cargando').show();
 						
 						
-											//Ejecutamos la función ajax de jQuery		
+											//Ejecutamos la funciï¿½n ajax de jQuery		
 											$.ajax({
 												
 												//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -738,7 +738,7 @@ $(document).ready(function() {
 											
 												
 												
-							/*Ejecutamos la función ajax de jQuery*/		
+							/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 							$.ajax({
 													
 										//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -903,7 +903,7 @@ $(document).ready(function() {
 					
 					
 					
-					/*Ejecutamos la función ajax de jQuery*/		
+					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1050,7 +1050,7 @@ $(document).ready(function() {
 					
 					
 					
-					/*Ejecutamos la función ajax de jQuery*/		
+					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1272,7 +1272,7 @@ $(document).ready(function() {
 						
 						
 						
-						/*Ejecutamos la función ajax de jQuery*/		
+						/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 						$.ajax({
 							
 							//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1426,7 +1426,7 @@ $(document).ready(function() {
 					
 					
 					
-					/*Ejecutamos la función ajax de jQuery*/		
+					/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 					$.ajax({
 						
 						//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -1522,7 +1522,7 @@ $(document).ready(function() {
 						
 							
 							
-							/*Ejecutamos la función ajax de jQuery*/		
+							/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 							$.ajax({
 								
 								//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -2180,7 +2180,7 @@ $(document).ready(function() {
 						
 							
 							
-							/*Ejecutamos la función ajax de jQuery*/		
+							/*Ejecutamos la funciï¿½n ajax de jQuery*/		
 							$.ajax({
 								
 								//url:'views/popupbox/subir.php', //Url a donde la enviaremos
@@ -3086,7 +3086,7 @@ if($bandera_ADMIN_EXPE == 1){
 								
 						?>
 							
-								<a class="descarga_archivo" href="javascript:void(0);" title="<?php echo $d22M_B;?>" data-idruta="<?php echo "http://".$servidor_pdf."/ejecucion/".$d22M; ?>"><img src="views/images/archivo_3.png" width="35" height="35"/></a> 
+								<a class="descarga_archivo" href="javascript:void(0);" title="<?php echo $d22M_B;?>" data-idruta="<?php echo "http://".$servidor_pdf."/laborales/".$d22M; ?>"><img src="views/images/archivo_3.png" width="35" height="35"/></a> 
 							
 						<?php
 							
@@ -3409,7 +3409,7 @@ if($bandera_ADMIN_EXPE == 1){
 	<div class="col-xs-12">
      	<footer class="text-center">
        		<hr />
-        	<p>Plataforma <?php echo utf8_encode(' Diseñada'); ?> por Ingeniera Industrial Andrea Arbelaez Mendoza (Oficina de Ejecucion Civil Municipal Manizales)</p>
+        	<p>Plataforma <?php echo utf8_encode(' Diseï¿½ada'); ?> por Ingeniera Industrial Andrea Arbelaez Mendoza (Oficina de Ejecucion Civil Municipal Manizales)</p>
 			<p>Plataforma Desarrollado por</p>
 			<p>Ingeniero de Sistemas Jorge Andres Valencia Orozco (Oficina de Ejecucion Civil Municipal Manizales)</p>       
         </footer>                

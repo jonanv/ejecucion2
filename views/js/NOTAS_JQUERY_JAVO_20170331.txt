@@ -14,7 +14,7 @@ LOS CAMPOS FECHAS ENTONCES
 SE USA jquery.validate_NV Y SUS ESTILOS CSS
 UBICADOS EN
 
-C:\wamp\www\ejecucion\views\css\pepper-grinder
+C:\wamp\www\laborales\views\css\pepper-grinder
 
 USANDOSE ui.alL_NV Y SU CARPETA images_NV, 
 PARA USAR ESTA CARPETA DE IMAGENES SE DEBE 
