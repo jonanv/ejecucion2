@@ -467,7 +467,7 @@
                                         </option>
                                         <option v-for="(action_folder, index) in actions_folder_list" :key="index"
                                             :value="action_folder.id">
-                                            {{ action_folder.acc_descripcion }}
+                                            {{ action_folder.observacion }}
                                         </option>
                                     </select>
                                 </div>
@@ -695,7 +695,7 @@
                                 <tr v-for="(radicado, index) in radicados_executory_list" :key="index">
                                     <th scope="row">{{ radicado.id_radicado }}</th>
                                     <td>{{ radicado.radicado }}</td>
-                                    <td>{{ actions_folder_list[radicado.additional_observation - 1].acc_descripcion }}</td>
+                                    <td>{{ actions_folder_list[radicado.additional_observation - 1].observacion }}</td>
                                     <!-- TODO: Organizar la forma en que se consulta la observacion -->
                                     <td>{{ radicado.start_date }}</td>
                                     <td>{{ radicado.days }}</td>

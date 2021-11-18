@@ -29,7 +29,7 @@
         public static function getAllActionsFolderModel() {
             $query = 
                 "SELECT * 
-                FROM accion_expediente 
+                FROM siepro_pa_observaciones 
                 ORDER BY id ASC";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             if ($response->execute()) {
