@@ -10,43 +10,26 @@
 /VISTAS_ANTERIORES
 /views/word/
 
-# CONFIGURACION BASE DE DATOS
-# /audienciasjuz/Conexion.php
-# /audiencias
+# CONFIGURACION BASE DE DATOS MySQL
 # /audiencias/config.inc.php
-# /audienciasjuz
-# /audienciasjuz/PHPPdf
 # /audienciasjuz/PHPPdf/conexion.php
+# /audienciasjuz/Conexion.php
 # /audienciasjuz/Funciones.php
-# /eventos
-# /eventos/funciones
-# /eventos/funciones/Conexion.php
 # /eventos/clase.php
-# /funciones
 # /funciones/Conexion.php
-# /funciones/expediente_digital_SOLICITUDES.php
-# /libs
 # /libs/conexion.php
 # /libs/Conexion_Funciones.php
-# /models
-# /models/documentosexcelModel.php
-# /models/hojavidaModel.php
-# /models/indexModel.php
 # /models/select_dependientes_proceso.php
-# /repartomasivo
-# /repartomasivo/funciones
 # /repartomasivo/funciones/Conexion.php
 # /repartomasivo/clase.php
-# /views
-# /views/PHPPdf
 # /views/PHPPdf/conexion.php
-# /views/popupbox
 # /views/popupbox/audi_editinplace.php
 # /views/popupbox/auto_edit_remates.php
 # /views/popupbox/Conexion.php
 # /views/popupbox/Conexionpopupbox.php
 # /views/popupbox/editinplace.php
 # /views/popupbox/editinplace_3.php
+# /views/popupbox/expe_archivos_memorial_entidad.php
 # /views/popupbox/expediente_digital_actuaciones.php
 # /views/popupbox/expediente_digital_acumulada.php
 # /views/popupbox/expediente_digital_acumulada_2.php
@@ -60,7 +43,6 @@
 # /views/popupbox/juz_editinplace_obs.php
 # /views/popupbox/juz_obtener_expe.php
 # /views/popupbox/so_editinplace_soli.php
-# /views/tcpdf
 # /views/tcpdf/GENERAR_APROBAR_COSTAS.php
 # /views/tcpdf/GENERAR_AUDIENCIAS.php
 # /views/tcpdf/GENERAR_AVOCA_CONOCIMIENTO.php
@@ -77,14 +59,10 @@
 # /views/tcpdf/HISTORIAL_PROCESO.php
 # /views/tcpdf/HOJA_VIDA.php
 # /views/tcpdf/RECIBIDO.php
-# /views/viewstablas
-# /views/viewstablas/Data_table_2
-# /views/viewstablas/Data_table_2/php
+# /views/tcpdf/RECIBIDO_ENTIDAD.php
 # /views/viewstablas/Data_table_2/php/config.php
 # /views/viewstablas/Conexion.php
 # /views/viewstablas/Conexion2.php
-# /views/viewstree
 # /views/viewstree/conexion.php
-# /views/siepro_estado_masivo_autos.php
 # /conectar.php
 # /config.php
