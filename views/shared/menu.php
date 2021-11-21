@@ -7,10 +7,10 @@
         <a href="<?php echo SERVERURL ?>?route=admin" class="brand-link" 
             style="border-bottom: none;">
             <img src="<?php echo SERVERURL ?>views/public/img/logo.png" 
-                alt="SIEPRO Laborales" 
+                alt="SIEPRO Ejecución" 
                 class="brand-image img-circle elevation-3" 
                 style="opacity: .8">
-            <span class="brand-text font-weight-light">SIEPRO Laborales</span>
+            <span class="brand-text font-weight-light">SIEPRO Ejecución</span>
         </a>
         <a class="nav-link" data-widget="pushmenu" href="#" role="button">
             <i class="fas fa-times-circle"></i>

@@ -151,7 +151,7 @@
 </div>
 
 <?php
-    if (isset($_SESSION["validate_sesion_laborales"]) && $_SESSION["validate_sesion_laborales"] == "ok") {
+    if (isset($_SESSION["validate_sesion_ejecucion"]) && $_SESSION["validate_sesion_ejecucion"] == "ok") {
         echo "<script>
                 window.location = '" . SERVERURL . "?route=admin';
             </script>";

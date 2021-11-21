@@ -26,7 +26,7 @@
                     ) {
                         if ($response["enable_employee"] == 1) {
                             session_start();
-                            $_SESSION["validate_sesion_laborales"] = "ok";
+                            $_SESSION["validate_sesion_ejecucion"] = "ok";
                             $_SESSION["id_employee"] = $response["id_employee"];
                             $_SESSION["firstname"] = $response["firstname"];
                             $_SESSION["lastname"] = $response["lastname"];

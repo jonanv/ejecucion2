@@ -1,12 +1,12 @@
 <?php
     // Rutal local
-    // const SERVERURL = "http://localhost:8888/laborales/"; // MAC
-    const SERVERURL = "http://localhost/laborales/"; // WINDOWS
+    // const SERVERURL = "http://localhost:8888/ejecucion2/"; // MAC
+    const SERVERURL = "http://localhost/ejecucion2/"; // WINDOWS
 
     // Ruta del servidor
-    // const SERVERURL = "https://laborales.naufragodev.com.co/"; // SERVER NAUFRAGO
-    // const SERVERURL = "http://190.217.24.24/laborales/"; // SERVER RAMAJUDICIAL
-    const COMPANY   = "SIEPRO laborales";
+    // const SERVERURL = "https://ejecucion.naufragodev.com.co/"; // SERVER NAUFRAGO
+    // const SERVERURL = "http://190.217.24.24/ejecucion/"; // SERVER RAMAJUDICIAL
+    const COMPANY   = "SIEPRO ejecucion";
     date_default_timezone_set("America/Bogota");
     // Server settings
     const CHARSET = 'UTF-8';
