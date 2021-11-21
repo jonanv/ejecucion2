@@ -1,6 +1,0 @@
-2010-09-24;Comida;Si;cliente1;CiudadCotizacion;confirmada
-2010-09-24;Alojamiento;Si;cliente 2;CiudadCotizacion;no confirmada
-2010-09-28;Capacitaci&Atilde;&sup3;n;Si;cliente1;Manizales;no confirmada
-
-Total cotizaciones (3)
-Realizaron Visita Si

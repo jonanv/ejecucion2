@@ -1,5 +1,0 @@
-2010-09-24;Comida;cliente1;23334;CiudadCotizacion
-2010-09-24;Alojamiento;cliente 2;6765656;CiudadCotizacion
-2010-09-28;Capacitación;cliente1;300000;Manizales
-Total  (3)
-Desde la fecha 2010-09-02 hasta 2010-10-01

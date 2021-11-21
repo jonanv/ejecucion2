@@ -1,5 +1,0 @@
-cliente1;gonzales;10537700;89043;dddd
-cliente 2; Aristizabal;8100;8868;Empresa
-cliente nuevo;ijij;6767;888;kjkjkjk
-Total  (3)
-Desde la fecha 2010-01-01 hasta 2010-10-28

@@ -1,4 +1,0 @@
-DAR FORMATO A LOS NUMEROS DE LAS GRAFICAS CON FusionCharts
-DE PHP
-
-http://docs.fusioncharts.com/charts/contents/advanced/number-format/Number_Basics.html
