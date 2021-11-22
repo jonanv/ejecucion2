@@ -69,7 +69,7 @@ const app = new Vue({
                 this.submitStatus = 'PENDING';
                 axios.post(url, {option: 'getLogin', id_employee_login:app.form.id_employee_login, password_login:app.form.password_login, remember:app.form.remember})
                     .then((response) => {
-                        // console.log(response);
+                        console.log(response);
 
                         if (response.data[1].enable_employee == 1) {
                             if (app.form.remember) {
