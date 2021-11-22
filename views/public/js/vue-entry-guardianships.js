@@ -84,6 +84,34 @@ const app = new Vue({
                     });
                 });
         },
+        getProcessesInJusticia: function() {
+            let start_date_format = moment(app.form.start_date, 'DD/MM/YYYY').format('YYYY-MM-DD');
+            let end_date_format = moment(app.form.end_date, 'DD/MM/YYYY').format('YYYY-MM-DD');;
+            let radicado_format = app.form.radicado.replace(/\-/g, '');
+            this.loading = true;
+
+            this.$v.$touch();
+            if (this.$v.$invalid) {
+                this.submitStatus = 'ERROR';
+                this.loading = false;
+            } else {
+                this.submitStatus = 'PENDING';
+
+                axios.post(url, {option: 'getProcessesInJusticia', start_date:start_date_format, end_date:end_date_format, radicado:radicado_format})
+                    .then((response) => {
+                        console.log(response);
+                        app.entry_guardianships_list = response.data[1];
+                        app.process_exist_list = response.data[2];
+
+                        this.submitStatus = 'OK';
+                        this.loading = false;
+                        let init = this;
+                        init.$nextTick(function() {
+                            init.initDataTables();
+                        });
+                    });
+            }
+        },
         migrateGuardianship: async function(radicado) {
             // TODO: partcionar radicado y enviar junto con partes
             if (radicado === '') {
@@ -111,34 +139,6 @@ const app = new Vue({
                                 allowOutsideClick: false
                             });
                         }
-                    });
-            }
-        },
-        getProcessesInJusticia: function() {
-            let start_date_format = moment(app.form.start_date, 'DD/MM/YYYY').format('YYYY-MM-DD');
-            let end_date_format = moment(app.form.end_date, 'DD/MM/YYYY').format('YYYY-MM-DD');;
-            let radicado_format = app.form.radicado.replace(/\-/g, '');
-            this.loading = true;
-
-            this.$v.$touch();
-            if (this.$v.$invalid) {
-                this.submitStatus = 'ERROR';
-                this.loading = false;
-            } else {
-                this.submitStatus = 'PENDING';
-
-                axios.post(url, {option: 'getProcessesInJusticia', start_date:start_date_format, end_date:end_date_format, radicado:radicado_format})
-                    .then((response) => {
-                        console.log(response);
-                        app.entry_guardianships_list = response.data[1];
-                        app.process_exist_list = response.data[2];
-
-                        this.submitStatus = 'OK';
-                        this.loading = false;
-                        let init = this;
-                        init.$nextTick(function() {
-                            init.initDataTables();
-                        });
                     });
             }
         },

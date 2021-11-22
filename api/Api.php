@@ -14,6 +14,14 @@
     require_once "../controllers/ExecutoryController.php";
 
     class Api {
+        // Login
+        public function getLogin($data) {
+            $response = LoginController::getLoginController($data);
+            $url = SERVERURL . "?route=admin";
+            $response_login = array($url, $response);
+            echo json_encode($response_login);
+        }
+
         // EntryGuardianships
         public function getEntryGuardianships() {
             $response_entry_guardianships = EntryGuardianshipsController::getGuardianshipsOfDayController();
@@ -28,19 +36,6 @@
                 }
             }
             $response = array("ok", $response_entry_guardianships, $response_guardianships);
-            echo json_encode($response);
-        }
-
-        public function getProcessInJusticia($radicado) {
-            $response = EntryGuardianshipsController::getProcessInJusticiaController($radicado);
-            echo json_encode($response);
-        }
-
-        public function migrateGuardianship($radicado, $process) {
-            session_start();
-            $id_usuario = $_SESSION['idUsuario'];
-            $nombre_usuario = $_SESSION['nombre'];
-            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process, $id_usuario, $nombre_usuario);
             echo json_encode($response);
         }
 
@@ -60,12 +55,17 @@
             echo json_encode($response);
         }
 
-        // Login
-        public function getLogin($data) {
-            $response = LoginController::getLoginController($data);
-            $url = SERVERURL . "?route=admin";
-            $response_login = array($url, $response);
-            echo json_encode($response_login);
+        public function getProcessInJusticia($radicado) {
+            $response = EntryGuardianshipsController::getProcessInJusticiaController($radicado);
+            echo json_encode($response);
+        }
+
+        public function migrateGuardianship($radicado, $process) {
+            session_start();
+            $id_usuario = $_SESSION['idUsuario'];
+            $nombre_usuario = $_SESSION['nombre'];
+            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process, $id_usuario, $nombre_usuario);
+            echo json_encode($response);
         }
 
         // Executory
@@ -99,16 +99,16 @@
     // Recepcion de los datos enviados mediante POST desde main.js
     $option = (isset($_POST['option'])) ? $_POST['option'] : '';
 
+    // Login
+    $id_employee_login = (isset($_POST['id_employee_login'])) ? $_POST['id_employee_login'] : '';
+    $password_login = (isset($_POST['password_login'])) ? $_POST['password_login'] : '';
+    $remember = (isset($_POST['remember'])) ? $_POST['remember'] : '';
+
     // EntryGuardianships
     $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
     $process = (isset($_POST['process'])) ? $_POST['process'] : '';
     $start_date = (isset($_POST['start_date'])) ? $_POST['start_date'] : '';
     $end_date = (isset($_POST['end_date'])) ? $_POST['end_date'] : '';
-    
-    // Login
-    $id_employee_login = (isset($_POST['id_employee_login'])) ? $_POST['id_employee_login'] : '';
-    $password_login = (isset($_POST['password_login'])) ? $_POST['password_login'] : '';
-    $remember = (isset($_POST['remember'])) ? $_POST['remember'] : '';
     
     // Executory
     $radicados_executory_list = (isset($_POST['radicados_executory_list'])) ? $_POST['radicados_executory_list'] : '';
@@ -116,6 +116,16 @@
 
     $obj = new Api();
     switch ($option) {
+        // Login
+        case 'getLogin':
+            $data = array(
+                "id_employee_login" => $id_employee_login,
+                "password_login" => $password_login,
+                "remember" => $remember,
+            );
+            $obj->getLogin($data);
+            break;
+        
         // EntryGuardianships
         case 'getEntryGuardianships': // 
             $obj->getEntryGuardianships();
@@ -136,16 +146,6 @@
                 "radicado" => $radicado
             );
             $obj->getProcessesInJusticia($data);
-            break;
-
-        // Login
-        case 'getLogin':
-            $data = array(
-                "id_employee_login" => $id_employee_login,
-                "password_login" => $password_login,
-                "remember" => $remember,
-            );
-            $obj->getLogin($data);
             break;
         
         // Executory

@@ -29,16 +29,7 @@ const app = new Vue({
         
     },
     created() {
-        let cookies_list = [];
-        let cookies = document.cookie.split('; ');
-        cookies.forEach(cookie => {
-            let temp = cookie.split('=');
-            cookies_list[temp[0]] = temp[1];
-        });
-        // console.log(cookies_list);
-        this.form.id_employee_login = cookies_list.id_employee_login;
-        this.form.password_login = cookies_list.password_login;
-        this.form.remember = cookies_list.id_employee_login ? true : false;
+        this.getCookie();
     },
     computed: {
         
@@ -121,13 +112,25 @@ const app = new Vue({
                     });
             }
         },
-        setCookie(cookie_name, cookie_value) {
+        getCookie: function() {
+            let cookies_list = [];
+            let cookies = document.cookie.split('; ');
+            cookies.forEach(cookie => {
+                let temp = cookie.split('=');
+                cookies_list[temp[0]] = temp[1];
+            });
+            // console.log(cookies_list);
+            this.form.id_employee_login = cookies_list.id_employee_login;
+            this.form.password_login = cookies_list.password_login;
+            this.form.remember = cookies_list.id_employee_login ? true : false;
+        },
+        setCookie: function(cookie_name, cookie_value) {
             const date = new Date();
             date.setTime(date.getTime() + (60 * 60 * 24 * 30));
             let expires = "Expires="+ date.toUTCString();
             document.cookie = cookie_name + "=" + cookie_value + ";" + expires;
         },
-        deleteCookie(cookie_name) {
+        deleteCookie: function(cookie_name) {
             document.cookie = cookie_name +'=;expires=Thu, 01 Jan 1970';
         }
         // CONFIGURACIONES

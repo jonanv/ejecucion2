@@ -10,6 +10,11 @@
             return $response;
         }
 
+        public static function getProcessesInJusticiaController($data) {
+            $response = EntryGuardianshipsModel::getProcessesInJusticiaModel($data);
+            return $response;
+        }
+
         public static function getProcessInJusticiaController($radicado) {
             $response = EntryGuardianshipsModel::getProcessInJusticiaModel($radicado);
             return $response;
@@ -38,11 +43,6 @@
             }
 
             $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_usuario, $accion, $detalle, $tipolog, $idjuzgado);
-            return $response;
-        }
-
-        public static function getProcessesInJusticiaController($data) {
-            $response = EntryGuardianshipsModel::getProcessesInJusticiaModel($data);
             return $response;
         }
     }
