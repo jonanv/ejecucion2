@@ -14,8 +14,8 @@
                 WHERE [A103FECHREPA] = '2021-10-11'
                 AND [A103ANOTACTS] LIKE '%reparto%' 
                 AND [A103CONSPROC] NOT IN(01, 02, 03, 04, 05, 06, 07, 08, 09, 10) 
-                AND [A103LLAVPROC] LIKE '%170014303%'
-                AND [A103LLAVPROC] LIKE '%170014003%'
+                AND ([A103LLAVPROC] LIKE '%170014303%'
+                OR [A103LLAVPROC] LIKE '%170014003%')
                 ORDER BY [A103HORAREPA] ASC";
             $response = ConnectionModel::connectSQLServer()->prepare($query);
             $response->execute();
