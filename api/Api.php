@@ -62,9 +62,10 @@
 
         public function migrateGuardianship($radicado, $process) {
             session_start();
-            $id_usuario = $_SESSION['idUsuario'];
-            $nombre_usuario = $_SESSION['nombre'];
-            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process, $id_usuario, $nombre_usuario);
+            $id_employee = $_SESSION["id_employee"];
+            $employee_full_name = $_SESSION["firstname"] . " " . $_SESSION["lastname"];
+            // TODO: Organizar el envio de usuario
+            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process, $id_employee, $employee_full_name);
             echo json_encode($response);
         }
 

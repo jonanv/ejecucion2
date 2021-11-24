@@ -20,7 +20,8 @@
             return $response;
         }
 
-        public static function migrateGuardianshipController($radicado, $process, $id_usuario, $nombre_usuario) {
+        public static function migrateGuardianshipController($radicado, $process, $id_employee, $employee_full_name) {
+            // 17001-40-03-007-2021-00567-00
             $zip_code = substr($radicado, 0, 5);
             $corporation = substr($radicado, 5, 2);
             $specialty = substr($radicado, 7, 2);
@@ -30,7 +31,7 @@
             $instance = substr($radicado, 21, 2);
             
             $accion  = "Se realiza Migración de Tutela: " . $radicado;
-            $detalle = $nombre_usuario . " realiza Migración de Tutela: " . $radicado . " " . date('Y-m-d') . " " . "a las: " . date('h:i:sa');
+            $detalle = $employee_full_name . " realiza Migración de Tutela: " . $radicado . " " . date('Y-m-d') . " " . "a las: " . date('h:i:sa');
             $tipolog = 1;
 
             switch ($original_court) {
@@ -41,8 +42,9 @@
                     $idjuzgado = 16;
                     break;
             }
+            // TODO: Preguntar sobre los juzgados de origen cuando el codigo no es una tutela, es decir 4003
 
-            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_usuario, $accion, $detalle, $tipolog, $idjuzgado);
+            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_employee, $accion, $detalle, $tipolog, $idjuzgado);
             return $response;
         }
     }

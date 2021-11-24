@@ -14,8 +14,10 @@
                 WHERE [A103FECHREPA] = '2021-10-11'
                 AND [A103ANOTACTS] LIKE '%reparto%' 
                 AND [A103CONSPROC] NOT IN(01, 02, 03, 04, 05, 06, 07, 08, 09, 10) 
-                AND ([A103LLAVPROC] LIKE '%170014303%'
-                OR [A103LLAVPROC] LIKE '%170014003%')
+                AND 
+                --(
+                    [A103LLAVPROC] LIKE '%170014303%'
+                --OR [A103LLAVPROC] LIKE '%170014003%')
                 ORDER BY [A103HORAREPA] ASC";
             $response = ConnectionModel::connectSQLServer()->prepare($query);
             $response->execute();
@@ -106,19 +108,19 @@
             $response = null;
         }
 
-        public static function migrateGuardianshipModel($radicado, $process, $id_usuario, $accion, $detalle, $tipolog, $idjuzgado) {
+        public static function migrateGuardianshipModel($radicado, $process, $id_employee, $accion, $detalle, $tipolog, $idjuzgado) {
             try {
                 $conn = ConnectionModel::connectMySQL();
                 $conn->beginTransaction();
 
                 $query = 
-                    "INSERT INTO log (fecha, accion, detalle, idusuario, idtipolog) 
-                    VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :accion, :detalle, :idusuario, :tipolog)";
+                    "INSERT INTO log (log_date, log_action, log_detail, id_log_type, id_employee) 
+                    VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :accion, :detalle, :tipolog, :idusuario)";
                 $response = $conn->prepare($query);
                 $response->bindParam(":accion", $accion, PDO::PARAM_STR);
                 $response->bindParam(":detalle", $detalle, PDO::PARAM_STR);
-                $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
                 $response->bindParam(":tipolog", $tipolog, PDO::PARAM_INT);
+                $response->bindParam(":idusuario", $id_employee, PDO::PARAM_INT);
                 if ($response->execute()) {
                     $query = 
                         "INSERT INTO correspondencia_tutelas (radicado, idjuzgado, fecha, Tutela_Incidente) 
