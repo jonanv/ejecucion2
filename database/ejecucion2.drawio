@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-24T21:26:56.483Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="bA_lPz1S-qyo98ch8VD7" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-24T21:29:33.167Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="S3kQq4RMZUZ2Eqs6eqWg" version="15.7.3" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3652" dy="2782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -602,8 +602,8 @@
             <mxPoint x="-260" y="845" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-135" value="- Archivo&lt;br&gt;- Correspondencia&lt;br&gt;- Arancel" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="-1070" y="721.5" width="140" height="55" as="geometry" />
+        <mxCell id="kAV78_8R-8U5BCedtc6I-135" value="- Archivo&lt;br&gt;- Correspondencia&lt;br&gt;- Arancel&lt;br&gt;- SIREG&lt;br&gt;- Administrar&lt;br&gt;- MOLIC&lt;br&gt;- Hoja de vida&lt;br&gt;- Expediente digital" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
+          <mxGeometry x="-1070" y="697" width="140" height="128.5" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-14" target="kAV78_8R-8U5BCedtc6I-137" edge="1">
           <mxGeometry relative="1" as="geometry">
