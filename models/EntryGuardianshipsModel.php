@@ -7,7 +7,7 @@
 		    $date = date('Y-m-d');
 
             // CONVERT(DATETIME, '$date', 121)
-
+            // SQLServer
             $query = 
                 "SELECT A103LLAVPROC, A103ANOTACTS, A103FECHREPA, A103HORAREPA
                 FROM T103DAINFOPROC
@@ -47,6 +47,7 @@
 
         public static function getProcessesInJusticiaModel($data) {
             if ($data['radicado'] == null) {
+                // SQLServer
                 $query = 
                     "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
                     FROM [T103DAINFOPROC]
@@ -58,6 +59,7 @@
                 $response->bindParam(":start_date", $data['start_date'], PDO::PARAM_STR);
                 $response->bindParam(":end_date", $data['end_date'], PDO::PARAM_STR);
             } else {
+                // SQLServer
                 $query = 
                     "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
                     FROM [T103DAINFOPROC]
@@ -82,6 +84,7 @@
         }
 
         public static function getProcessInJusticiaModel($radicado) {
+            // SQLServer
             $query = 
                 "SELECT [A103CODICLAS], [A053DESCCLAS], [A103CODISUBC], [A071DESCSUBC],
                 [A112LLAVPROC], [A112CODISUJE], [A112NUMESUJE], [A112NOMBSUJE], [A112FLAGDETE],
