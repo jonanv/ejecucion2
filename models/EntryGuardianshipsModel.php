@@ -110,26 +110,27 @@
             $response = null;
         }
 
-        public static function migrateGuardianshipModel($radicado, $process, $id_employee, $accion, $detalle, $tipolog, $idjuzgado) {
+        public static function migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance) {
             try {
                 $conn = ConnectionModel::connectMySQL();
                 $conn->beginTransaction();
 
                 $query = 
                     "INSERT INTO log (log_date, log_action, log_detail, id_log_type, id_employee) 
-                    VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :accion, :detalle, :tipolog, :idusuario)";
+                    VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :log_action, :log_detail, 1, :id_employee)";
                 $response = $conn->prepare($query);
-                $response->bindParam(":accion", $accion, PDO::PARAM_STR);
-                $response->bindParam(":detalle", $detalle, PDO::PARAM_STR);
-                $response->bindParam(":tipolog", $tipolog, PDO::PARAM_INT);
-                $response->bindParam(":idusuario", $id_employee, PDO::PARAM_INT);
+                $response->bindParam(":log_action", $log_action, PDO::PARAM_STR);
+                $response->bindParam(":log_detail", $log_detail, PDO::PARAM_STR);
+                $response->bindParam(":id_employee", $id_employee, PDO::PARAM_INT);
                 if ($response->execute()) {
                     $query = 
-                        "INSERT INTO correspondencia_tutelas (radicado, idjuzgado, fecha, Tutela_Incidente) 
-                        VALUES (:radicado, :idjuzgado, DATE_FORMAT(NOW(),'%Y-%m-%d'), 'Tutela')";
+                        "INSERT INTO dossier (radicado, instance, id_court_origin, id_defendant, id_plaintiff, id_dossier_registration, id_dossier_type, digital_dossier) 
+                        VALUES (:radicado, :instance, :id_court, )";
+                        //  DATE_FORMAT(NOW(),'%Y-%m-%d'), 'Tutela'
                     $response = $conn->prepare($query);
                     $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
-                    $response->bindParam(":idjuzgado", $idjuzgado, PDO::PARAM_INT);
+                    $response->bindParam(":instance", $instance, PDO::PARAM_STR);
+                    $response->bindParam(":id_court", $id_court, PDO::PARAM_INT);
                     if ($response->execute()) {
                         $lastIdRadicado = $conn->lastInsertId();
 
