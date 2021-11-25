@@ -23,16 +23,28 @@
         // Conexion a la base de datos SQLServer
         public static function connectSQLServer() {
             try {
-                $conn = new PDO( "sqlsrv:Server=" . $_ENV['serverName'] . ";Database=" . $_ENV['databaseName'] . "",
-                    "" . $_ENV['uid'] . "", 
-                    "" . $_ENV['pwd'] . ""
+                $conn = new PDO(
+                    // SQLServer Window
+                    // "sqlsrv:Server=" . $_ENV['serverName'] . ";Database=" . $_ENV['databaseName'] . "",
+                    // "" . $_ENV['uid'] . "", 
+                    // "" . $_ENV['pwd'] . ""
+
+                    // MySQL MAC
+                    "mysql:host=" . $_ENV["serverName"] . ";dbname=" . $_ENV["databaseName"] . "",
+                    "" . $_ENV["uid"] . "",
+                    "" . $_ENV["pwd"] . "",
+                    array(
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+                    )
                 );
                 // echo "Connected successfully";
                 return $conn;
             } catch (PDOException $e) {
-                echo "Drivers disponiveis: " . implode( ",", PDO::getAvailableDrivers() );
-                echo "\nError: " . $e->getMessage();
-                exit;
+                // echo "Drivers disponiveis: " . implode( ",", PDO::getAvailableDrivers() );
+                // echo "\nError: " . $e->getMessage();
+                // exit;
+                echo "Connection failed: " . $e->getMessage();
             }
         }
 

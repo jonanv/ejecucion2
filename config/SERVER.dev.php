@@ -8,7 +8,8 @@
 
     if ($enviroment == "dev") {
         // base de datos
-        // MAC
+        // ********************** MYSQL **********************
+        // MAC MySQL
         // $_ENV["host"] = 'localhost';
         // $_ENV["db"] = 'ejecucion2';
         // $_ENV["user"] = 'root';
@@ -22,6 +23,7 @@
         $_ENV["pass"] = 'Ejecuc10n2014';
         $_ENV["cripter"] = '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$';
 
+        // ********************** SQLServer **********************
         // WINDOWS SQLServer
         // $_ENV['serverName'] = 'C07003-OF13319\SQLEXPRESS'; // serverName\instanceName
         // $_ENV['uid'] = 'sa';
@@ -33,6 +35,12 @@
         $_ENV['uid'] = 'usuariooecm';
         $_ENV['pwd'] = 'OficinaECM';
         $_ENV['databaseName'] = 'consejoPN';
+
+        // MAC MySQL(consejoPN) SQLServer - ramajudicial
+        // $_ENV['serverName'] = 'localhost'; // serverName\instanceName
+        // $_ENV['uid'] = 'root';
+        // $_ENV['pwd'] = 'admin';
+        // $_ENV['databaseName'] = 'consejoPN';
     } else {
         // SERVIDOR - naufragodev
         // $_ENV["host"] = 'localhost';
