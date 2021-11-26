@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-26T19:03:25.675Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="SjdaZ07bQZ77pNdlEaUt" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-26T19:50:01.628Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="eQLo_v8Auh7SmiZVTvRc" version="15.7.3" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="3652" dy="2782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="6958" dy="4528" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,10 +37,10 @@
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-15" value="+ employee_image: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
           <mxGeometry y="260" width="230" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="WMeFY94fwu9JhdbWC9ym-3" value="+ employee_registration_date: datetime" style="text;strokeColor=none;fillColor=#FFCC99;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
+        <mxCell id="WMeFY94fwu9JhdbWC9ym-3" value="+ employee_registration_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
           <mxGeometry y="286" width="230" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="WMeFY94fwu9JhdbWC9ym-4" value="+ employee_modification_date: datetime" style="text;strokeColor=none;fillColor=#FFCC99;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
+        <mxCell id="WMeFY94fwu9JhdbWC9ym-4" value="+ employee_modification_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-7" vertex="1">
           <mxGeometry y="312" width="230" height="26" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-24" value="job_title" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -157,7 +157,7 @@
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-91" value="+ id_dossier_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-47" vertex="1">
           <mxGeometry y="442" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="99nmjj4Q9bfn7_SC2MuP-61" value="+ digital_dossier: boolean" style="text;strokeColor=none;fillColor=#FFCC99;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-47" vertex="1">
+        <mxCell id="99nmjj4Q9bfn7_SC2MuP-61" value="+ digital_dossier: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-47" vertex="1">
           <mxGeometry y="468" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-72" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" source="mON6WonRohZX_aaUOoLF-20" target="99nmjj4Q9bfn7_SC2MuP-53" edge="1">
@@ -191,7 +191,7 @@
           <mxGeometry y="78" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-80" value="log" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-860" y="830" width="220" height="182" as="geometry" />
+          <mxGeometry x="-950" y="573" width="220" height="182" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-81" value="+ id_log: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-80" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -213,12 +213,12 @@
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-87" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" source="99nmjj4Q9bfn7_SC2MuP-89" target="99nmjj4Q9bfn7_SC2MuP-86" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-320" y="770" as="sourcePoint" />
-            <mxPoint x="-220" y="670" as="targetPoint" />
+            <mxPoint x="-410" y="513" as="sourcePoint" />
+            <mxPoint x="-310" y="413" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-88" value="log_type (pa_tipolog)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-860" y="697" width="220" height="104" as="geometry" />
+          <mxGeometry x="-950" y="440" width="220" height="104" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-89" value="+ id_log_type: int(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-88" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -574,12 +574,12 @@
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="99nmjj4Q9bfn7_SC2MuP-88" target="kAV78_8R-8U5BCedtc6I-135" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-440" y="876" as="targetPoint" />
-            <mxPoint x="-260" y="845" as="sourcePoint" />
+            <mxPoint x="-530" y="619" as="targetPoint" />
+            <mxPoint x="-350" y="588" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-135" value="- Archivo&lt;br&gt;- Correspondencia&lt;br&gt;- Arancel&lt;br&gt;- SIREG&lt;br&gt;- Administrar&lt;br&gt;- MOLIC&lt;br&gt;- Hoja de vida&lt;br&gt;- Expediente digital" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="-1070" y="697" width="140" height="128.5" as="geometry" />
+          <mxGeometry x="-1160" y="440" width="140" height="128.5" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-14" target="kAV78_8R-8U5BCedtc6I-137" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -1454,6 +1454,48 @@
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="810" y="1079" as="sourcePoint" />
             <mxPoint x="742.5" y="1099.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-1" value="permission (pa_usuario_acciones)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-1090" y="870" width="220" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-2" value="+ id_permission: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zX6q9PSeDQ9ZzKakYrvz-1">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-3" value="+ permission_name: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zX6q9PSeDQ9ZzKakYrvz-1">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-4" value="+ permission_description: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zX6q9PSeDQ9ZzKakYrvz-1">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-5" value="employee_permission" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="910" width="180" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-9" value="+ id_employee: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zX6q9PSeDQ9ZzKakYrvz-5">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-10" value="+ id_permission: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zX6q9PSeDQ9ZzKakYrvz-5">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-11" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="99nmjj4Q9bfn7_SC2MuP-8" target="zX6q9PSeDQ9ZzKakYrvz-9">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="-410" y="1362" as="sourcePoint" />
+            <mxPoint x="-310" y="1262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-12" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="zX6q9PSeDQ9ZzKakYrvz-2" target="zX6q9PSeDQ9ZzKakYrvz-10">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="-500" y="784" as="sourcePoint" />
+            <mxPoint x="-600" y="1354" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-13" value="&lt;div&gt;Listar Todos los documentos de los usurios, vista documentos_listar.php&lt;/div&gt;&lt;div&gt;Filtro Usuarios, vista documentos_listar.php&lt;/div&gt;&lt;div&gt;En la vista archivo_modificarOtro.php al actualizar solo se toca las tablas actuacion_expediente y actuacion_expediente_historial, si son los usuarios indicados&lt;/div&gt;&lt;div&gt;En la vista siepro_listar_titulos_otrosjuzgados.php que solo los usuarios especificos puedan asignar una fecha de pago&lt;/div&gt;&lt;div&gt;En la vista archivo_modificarOtro.php accion prestamo de proceso en ventanilla&lt;/div&gt;&lt;div&gt;En la vista archivo_filtrar_ubicacion.php para que solo cargue los usuarios de ventanilla en CONSULTA EN VENTANILLA DE PROCESOS&lt;/div&gt;&lt;div&gt;En excelModel.php funcion listarProcesosConMemorialIncorporado reprte if($t_reporte == 7000) identifcar que usuarios pasan con memorial al area de secretaria&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN INGRESAR AL MODULO DE ADMINISTRACION&lt;/div&gt;&lt;div&gt;SE USA LA (D) PARA DESACTIVAR ACCION, ID USURIOS PERTENECIENTES AL JUZGADO J1, J2 ESTO CON EL OBJETO QUE EL USUARIO DE UN JUZGADO NO VEA LA INFORMACION DEL OTRO&lt;/div&gt;&lt;div&gt;SE USA LA (D) PARA DESACTIVAR ACCION,ID USURIOS PERTENECIENTES AL JUZGADO J1, J2&amp;nbsp; QUE NO PUEDEN ENTRAR A OTRO MODULO QUE NO SEA SIEPRO&lt;/div&gt;&lt;div&gt;USUARIOS QUE PUEDEN INCORPORAR MEMORIALES AL PROCESO&lt;/div&gt;&lt;div&gt;ID DE pa_solicitud QUE DEBEN SALIR EN LAS ALERTAS DE INCORPORAR MEMORIALES AL PROCESO&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN GESTIONAR ACCIONES MODULO CALIDAD&lt;/div&gt;&lt;div&gt;ID USUARIOS PARA VISUALIZAR ALERTA REPARTO MASIVO&lt;/div&gt;&lt;div&gt;PARA VISUALIZAR ALERTA VENCE TERMINOS&lt;/div&gt;&lt;div&gt;PARA&amp;nbsp; VISUALIZAR ALERTA EN FIRME PASA A CONTADOR PARA LIQUIDAR&lt;/div&gt;&lt;div&gt;Visualizar Remate Sin Aprobar PARA GENERAR LA ALERTA&lt;/div&gt;&lt;div&gt;ID USUARIOS J2, PARA PARAMETRIZAR LOS DIAS QUE SE GENERA LAS ALERTAS DE PROCESOS EN LA PLATAFORMA ALERTA TUTELAS&lt;/div&gt;&lt;div&gt;ID USUARIO JUEZ JEFE J2 DE EJECUCION Y SUS SERVIDORES JUDICIALES&lt;/div&gt;&lt;div&gt;ID USUARIO JUEZ JEFE J2 DE EJECUCION Y SUS SERVIDORES JUDICIALES, PARA VISTA juz_adicionar_obs.php&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VER MENU&amp;nbsp; &amp;nbsp;REPORTES PERMISOS&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VER Y APROBAR TODOS LOS PERMISOS&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VER TODA LA LISTA DE JUZGADOS MUNICIPALES PARA GENERAR NUEVO EXCEL EN LA VISTA siepro_estado_masivo_autos.php&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VER ALERTA Y AGENDA AUDIENCIAS&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VER TODAS LAS SOLICITUDES DE SOPORTE TECNICO DE USUARIOS Y VER LA LISTA Usuario DE LA VISTA so_ticket.php DE LA CARPETA popupbox&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VER Y REGISTRAR&amp;nbsp; AUDIENCIAS, TANTO DEL J1 Y J2 DE EJECUCION, Y PERSONAL OECM, DIRECTORA(8), SECRETARIO(19), ING SISTEMAS(38)&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN ARCHIVAR Y SE VISUALIZA CAMPOS FOLIOS Y CUADERNOS&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VISUALIZAR ALERTA DE EN TITULOS&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VISUALIZAR&amp;nbsp; HOJA CONTROL DE ENTREGA DE TITULOS&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUEDEN VISUALIZAR&amp;nbsp; REPORTE EXCEL VARIAS SOLICITUDES&lt;/div&gt;&lt;div&gt;ID USUARIOS QUE PUDEN VISUALIZAR EXPEDIENTE DIGITAL&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE CARGAN AUTOS AL EXPEDIENTE DIGITAL Y SE IDENTIFICA PARA EL ESTADO DEL DIA SIGUIENTE&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE ENTRAN A LA VISTA DE A DESPACHO JUZGADOS Y SOLO VEN SUS TAREAS&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE CARGAN AUTOS AL EXPEDIENTE DIGITAL Y AL CARGAR EL AUTO SE CIERRA LA TAREA AUTOMATICAMENTE&lt;/div&gt;&lt;div&gt;ID USUARIOS, PARA VISUALIZAR ALERTA DE TAREAS QUE AUN NO SE HAN CERRARDO, EN EL AREA DESPACHOS&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE CARGAN AUTOS AL EXPEDIENTE DIGITAL Y AL CARGAR EL AUTO SE VISUALIZA OPCION REVISAR, YA QUE EN LA VISTA DELJUEZ LOS IDENTIFICA COMO PROCESOS QUE LE ENTRARON MEMORIALES Y AUN SUS COSTAS NO ESTAN HECHAS&lt;/div&gt;&lt;div&gt;ID USUARIOS, PARA VISUALIZAR SOLICITUDES DE EXPEDIENTES A DIGITALIZAR Y CREAR USUARIOS PARA LA CONSULTA DE EXPEDIENTES POR ABOGADOS&lt;/div&gt;&lt;div&gt;ID USUARIOS, PARA VISUALIZAR MEMORIALES RADICADOS DESDE LA PLATAFORMA PUBLICACIONES&lt;/div&gt;&lt;div&gt;ID USUARIOS, PARA VISUALIZAR PROGRAMACION Y CONSULTA DE TITULOS DESDE LA PLATAFORMA PUBLICACIONES&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN LA ALERTA DE SOLICITUD DE USURIOS DESDE EL PORTAL PUBLICACIONES&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE NO VISUALIZAN EL MENU ADMINISTAR&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN LISTA DEPENDENCIA VISTA NUEVO Y EDITA FOLIO&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN LISTA DEPENDENCIA 1 AL 12 JUZGADO MUNICIPAL&amp;nbsp; Y OFICINA DE EJECUCION&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN LISTA DEPENDENCIA 1 JUZGADO EJECUCION&amp;nbsp; Y OFICINA DE EJECUCION&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN LISTA DEPENDENCIA 2 JUZGADO EJECUCION&amp;nbsp; Y OFICINA DE EJECUCION&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN LISTA DEPENDENCIA 1 Y 2&amp;nbsp; JUZGADO EJECUCION&amp;nbsp; Y OFICINA DE EJECUCION&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE PERTENECEN AL J1 JUZGADO1 DE EJECUCION&amp;nbsp; Y NO QUE VISUALIZAN LISTA DEPENDENCIA YA QUE EL SISTEMA AUTOMATICAMENTE ASIGNA 15 EN id_dependencia DE LA TABLA pa_usuario&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE PERTENECEN AL J2 JUZGADO1 DE EJECUCION&amp;nbsp; Y NO QUE VISUALIZAN LISTA DEPENDENCIA YA QUE EL SISTEMA AUTOMATICAMENTE ASIGNA 16 EN id_dependencia DE LA TABLA pa_usuario&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN BOTONES CARGAR INDICE ELECTRONICO Y LISTAR INDICE ELECTRONICO, Y REALIZAR DICHAS TAREAS&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN BOTON ORDENAR EXPEDIENTE&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN BOTON PARA RENOMBRAR LOS ARCHIVOS DE UN EXPEDIENTE&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE PUEDEN BLOQUEAR Y DESBLOQUEAR PROCESOS&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN EN EL EXPEDIENTE DIGITAL SI ALGUN ARCHIVO NO ES ENCONTRADO EN LA UBICACION QUE TIENE GUARDADA EN SU COLUMNA ruta DE LA TABLA expe_digital&lt;/div&gt;&lt;div&gt;ID USUARIOS, QUE VISUALIZAN EL MENU SOLICITUD VISUALIZAR EXPEDIENTE ENTEDIDAD Y TERCEROS&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" vertex="1" parent="1">
+          <mxGeometry x="-2530" y="501" width="1280" height="844" as="geometry" />
+        </mxCell>
+        <mxCell id="zX6q9PSeDQ9ZzKakYrvz-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zX6q9PSeDQ9ZzKakYrvz-1" target="zX6q9PSeDQ9ZzKakYrvz-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-850" y="1092" as="targetPoint" />
+            <mxPoint x="-760" y="1092" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
       </root>
