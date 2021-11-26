@@ -15,8 +15,9 @@
                 AND A103ANOTACTS LIKE '%reparto%' 
                 AND A103CONSPROC NOT IN(01, 02, 03, 04, 05, 06, 07, 08, 09, 10) 
                 AND 
-                    (A103LLAVPROC LIKE '%170014303%'
-                    OR A103LLAVPROC LIKE '%170014003%')
+                    -- (
+                        A103LLAVPROC LIKE '%170014303%'
+                    -- OR A103LLAVPROC LIKE '%170014003%')
                 ORDER BY A103HORAREPA ASC";
             $response = ConnectionModel::connectSQLServer()->prepare($query);
             $response->execute();
@@ -49,25 +50,26 @@
             if ($data['radicado'] == null) {
                 // SQLServer
                 $query = 
-                    "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
-                    FROM [T103DAINFOPROC]
-                    WHERE [A103ANOTACTS] LIKE '%reparto%'
-                    AND [A103FECHREPA] >= CONVERT(DATETIME, :start_date, 121) 
-                    AND [A103FECHREPA] <= CONVERT(DATETIME, :end_date, 121)
-                    ORDER BY [A103HORAREPA] ASC";
+                    "SELECT A103LLAVPROC, A103ANOTACTS, A103FECHREPA, A103HORAREPA
+                    FROM T103DAINFOPROC
+                    WHERE A103ANOTACTS LIKE '%reparto%'
+                    AND A103FECHREPA >= CONVERT(DATETIME, :start_date, 121) 
+                    AND A103FECHREPA <= CONVERT(DATETIME, :end_date, 121)
+                    ORDER BY A103HORAREPA ASC";
                 $response = ConnectionModel::connectSQLServer()->prepare($query);
                 $response->bindParam(":start_date", $data['start_date'], PDO::PARAM_STR);
                 $response->bindParam(":end_date", $data['end_date'], PDO::PARAM_STR);
             } else {
                 // SQLServer
                 $query = 
-                    "SELECT [A103LLAVPROC], [A103ANOTACTS], [A103FECHREPA], [A103HORAREPA]
-                    FROM [T103DAINFOPROC]
-                    WHERE [A103ANOTACTS] LIKE '%reparto%'
-                    AND ( [A103FECHREPA] >= CONVERT(DATETIME, :start_date, 121) 
-                    AND [A103FECHREPA] <= CONVERT(DATETIME, :end_date, 121) )
-                    AND [A103LLAVPROC] LIKE '%' + :radicado + '%'
-                    ORDER BY [A103HORAREPA] ASC";
+                    "SELECT A103LLAVPROC, A103ANOTACTS, A103FECHREPA, A103HORAREPA
+                    FROM T103DAINFOPROC
+                    WHERE A103ANOTACTS LIKE '%reparto%'
+                    AND 
+                        ( A103FECHREPA >= CONVERT(DATETIME, :start_date, 121) 
+                        AND A103FECHREPA <= CONVERT(DATETIME, :end_date, 121) )
+                    AND A103LLAVPROC LIKE '%' + :radicado + '%'
+                    ORDER BY A103HORAREPA ASC";
                 $response = ConnectionModel::connectSQLServer()->prepare($query);
                 $response->bindParam(":start_date", $data['start_date'], PDO::PARAM_STR);
                 $response->bindParam(":end_date", $data['end_date'], PDO::PARAM_STR);
@@ -86,19 +88,19 @@
         public static function getProcessInJusticiaModel($radicado) {
             // SQLServer
             $query = 
-                "SELECT [A103CODICLAS], [A053DESCCLAS], [A103CODISUBC], [A071DESCSUBC],
-                [A112LLAVPROC], [A112CODISUJE], [A112NUMESUJE], [A112NOMBSUJE], [A112FLAGDETE],
-                [A057DESCSUJE], [A103ENTIRADI], [A051DESCENTI], [A103ESPERADI], [A062DESCESPE],
-                [A103CODIPROC], [A052DESCPROC], [A103CODIPONE], [A103NOMBPONE]
-                FROM [T103DAINFOPROC] 
-                LEFT JOIN [T112DRSUJEPROC] ON A103LLAVPROC = A112LLAVPROC 
-                LEFT JOIN [T057BASUJEGENE] ON A112CODISUJE = A057CODISUJE
-                LEFT JOIN [T053BACLASGENE] ON A103CODICLAS = A053CODICLAS
-                LEFT JOIN [T071BASUBCGENE] ON A103CODISUBC = A071CODISUBC
-                LEFT JOIN [T051BAENTIGENE] ON A103ENTIRADI = A051CODIENTI
-                LEFT JOIN [T062BAESPEGENE] ON A103ESPERADI = A062CODIESPE
-                LEFT JOIN [T052BAPROCGENE] ON A103CODIPROC = A052CODIPROC
-                WHERE [A103LLAVPROC] IN (:radicado)";
+                "SELECT A103CODICLAS, A053DESCCLAS, A103CODISUBC, A071DESCSUBC,
+                A112LLAVPROC, A112CODISUJE, A112NUMESUJE, A112NOMBSUJE, A112FLAGDETE,
+                A057DESCSUJE, A103ENTIRADI, A051DESCENTI, A103ESPERADI, A062DESCESPE,
+                A103CODIPROC, A052DESCPROC, A103CODIPONE, A103NOMBPONE
+                FROM T103DAINFOPROC 
+                LEFT JOIN T112DRSUJEPROC ON A103LLAVPROC = A112LLAVPROC 
+                LEFT JOIN T057BASUJEGENE ON A112CODISUJE = A057CODISUJE
+                LEFT JOIN T053BACLASGENE ON A103CODICLAS = A053CODICLAS
+                LEFT JOIN T071BASUBCGENE ON A103CODISUBC = A071CODISUBC
+                LEFT JOIN T051BAENTIGENE ON A103ENTIRADI = A051CODIENTI
+                LEFT JOIN T062BAESPEGENE ON A103ESPERADI = A062CODIESPE
+                LEFT JOIN T052BAPROCGENE ON A103CODIPROC = A052CODIPROC
+                WHERE A103LLAVPROC IN (:radicado)";
             $response = ConnectionModel::connectSQLServer()->prepare($query);
             $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
             if ($response->execute()) {
@@ -110,7 +112,7 @@
             $response = null;
         }
 
-        public static function migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance) {
+        public static function migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance, $id_dossier_type) {
             try {
                 $conn = ConnectionModel::connectMySQL();
                 $conn->beginTransaction();
@@ -147,15 +149,24 @@
                         $response->execute();
                     }
 
+                    $query =
+                        "INSERT INTO dossier_registration (id_employee, dossier_registration_date)
+                        VALUES (:id_employee, NOW()";
+                    $response = $conn->prepare($query);
+                    $response->bindParam(":id_employee", $id_employee, PDO::PARAM_INT);
+                    $response->execute();
+                    $id_dossier_registration = $conn->lastInsertId();
+
                     // $query = 
                     //     "INSERT INTO dossier (radicado, instance, id_court_origin, id_defendant, id_plaintiff, id_dossier_registration, id_dossier_type, digital_dossier) 
-                    //     VALUES (:radicado, :instance, :id_court, )";
+                    //     VALUES (:radicado, :instance, :id_court, , , :id_dossier_registration, :id_dossier_type, )";
                     //     //  DATE_FORMAT(NOW(),'%Y-%m-%d'), 'Tutela'
                     // $response = $conn->prepare($query);
                     // $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
                     // $response->bindParam(":instance", $instance, PDO::PARAM_STR);
                     // $response->bindParam(":id_court", $id_court, PDO::PARAM_INT);
-                    // $lastIdRadicado = $conn->lastInsertId();
+                    // $response->bindParam(":id_dossier_registration", $id_dossier_registration, PDO::PARAM_INT);
+                    // $response->bindParam(":id_dossier_type", $id_dossier_type, PDO::PARAM_INT);
 
                     $query = 
                         "INSERT INTO ubicacion_expediente (idusuario, fecha, fecharegistrosistema, piso, idjuzgado,

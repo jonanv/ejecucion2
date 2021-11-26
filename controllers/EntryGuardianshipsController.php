@@ -36,6 +36,7 @@
             // Tutelas
             if ($corporation == '43' && 
                 $specialty == '03') {
+                $id_dossier_type = 1;
                 switch ($original_court) {
                     case '001':
                         $id_court = 13;
@@ -48,6 +49,7 @@
             // Proceso ejecutivo
             // if ($corporation == '40' && 
             //     $specialty == '03') {
+            //     $id_dossier_type = 2;
             //     switch ($original_court) {
             //         case '001':
             //             $id_court = 1;
@@ -88,7 +90,7 @@
             //     }
             // }
 
-            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance);
+            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance, $id_dossier_type);
             return $response;
         }
     }
