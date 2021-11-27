@@ -125,30 +125,6 @@
                 $response->bindParam(":log_detail", $log_detail, PDO::PARAM_STR);
                 $response->bindParam(":id_employee", $id_employee, PDO::PARAM_INT);
                 if ($response->execute()) {
-                    foreach ($process as $key => $value) {
-                        //DEMANDANTE - ACCIONANTE
-                        if ($value['A112CODISUJE'] == '0001') {
-                            $docdemandante = $value['A112NUMESUJE'];
-                            $nomdemandante = $value['A112NOMBSUJE'];
-                            $tipo_parte = "Accionante";
-                        }
-                        //DEMANDADO - ACCIONADO
-                        if ($value['A112CODISUJE'] == '0002') {
-                            $docdemandado = $value['A112NUMESUJE'];
-                            $nomdemandado = $value['A112NOMBSUJE'];
-                            $tipo_parte = "Accionado";
-                        }
-
-                        $query = 
-                            "INSERT INTO accionante_accionado_vinculado (idcorrespondencia_tutelas, accionante_accionado_vinculado, esaccionante_accionado_vinculado) 
-                            VALUES (:lastIdRadicado, :nombreparte, :tipo_parte)";
-                        $response = $conn->prepare($query);
-                        $response->bindParam(":lastIdRadicado", $lastIdRadicado, PDO::PARAM_INT);
-                        $response->bindParam(":nombreparte", $value['A112NOMBSUJE'], PDO::PARAM_STR);
-                        $response->bindParam(":tipo_parte", $tipo_parte, PDO::PARAM_STR);
-                        $response->execute();
-                    }
-
                     $query =
                         "INSERT INTO dossier_registration (id_employee, dossier_registration_date)
                         VALUES (:id_employee, NOW()";
@@ -157,31 +133,57 @@
                     $response->execute();
                     $id_dossier_registration = $conn->lastInsertId();
 
-                    // $query = 
-                    //     "INSERT INTO dossier (radicado, instance, id_court_origin, id_defendant, id_plaintiff, id_dossier_registration, id_dossier_type, digital_dossier) 
-                    //     VALUES (:radicado, :instance, :id_court, , , :id_dossier_registration, :id_dossier_type, )";
-                    //     //  DATE_FORMAT(NOW(),'%Y-%m-%d'), 'Tutela'
-                    // $response = $conn->prepare($query);
-                    // $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
-                    // $response->bindParam(":instance", $instance, PDO::PARAM_STR);
-                    // $response->bindParam(":id_court", $id_court, PDO::PARAM_INT);
-                    // $response->bindParam(":id_dossier_registration", $id_dossier_registration, PDO::PARAM_INT);
-                    // $response->bindParam(":id_dossier_type", $id_dossier_type, PDO::PARAM_INT);
-
                     $query = 
-                        "INSERT INTO ubicacion_expediente (idusuario, fecha, fecharegistrosistema, piso, idjuzgado,
-                        radicado, demandante, cedula_demandante, demandado, cedula_demandado, idclase_proceso) 
-                        VALUES (:idusuario, DATE_FORMAT(NOW(),'%Y-%m-%d'), DATE_FORMAT(NOW(),'%Y-%m-%d'), 4, :idjuzgado,
-                        :radicado, :nomdemandante, :docdemandante, :nomdemandado, :docdemandado, 12)";
+                        "INSERT INTO dossier (radicado, instance, id_court_origin, id_dossier_registration, id_dossier_type, digital_dossier) 
+                        VALUES (:radicado, :instance, :id_court, :id_dossier_registration, :id_dossier_type, true)";
                     $response = $conn->prepare($query);
-                    $response->bindParam(":idusuario", $id_usuario, PDO::PARAM_INT);
-                    $response->bindParam(":idjuzgado", $idjuzgado, PDO::PARAM_INT);
                     $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
-                    $response->bindParam(":nomdemandante", $nomdemandante, PDO::PARAM_STR);
-                    $response->bindParam(":docdemandante", $docdemandante, PDO::PARAM_STR);
-                    $response->bindParam(":nomdemandado", $nomdemandado, PDO::PARAM_STR);
-                    $response->bindParam(":docdemandado", $docdemandado, PDO::PARAM_STR);
+                    $response->bindParam(":instance", $instance, PDO::PARAM_STR);
+                    $response->bindParam(":id_court", $id_court, PDO::PARAM_INT);
+                    $response->bindParam(":id_dossier_registration", $id_dossier_registration, PDO::PARAM_INT);
+                    $response->bindParam(":id_dossier_type", $id_dossier_type, PDO::PARAM_INT);
                     if ($response->execute()) {
+                        $id_dossier = $conn->lastInsertId();
+                        foreach ($process as $key => $value) {
+                            //DEMANDANTE - ACCIONANTE
+                            if ($value['A112CODISUJE'] == '0001') {
+                                $query = 
+                                    "INSERT INTO plaintiff (plaintiff_identification, plaintiff_name)
+                                    VALUES (:plaintiff_identification, :plaintiff_name)";
+                                $response = $conn->prepare($query);
+                                $response->bindParam(":plaintiff_identification", $value['A112NUMESUJE'], PDO::PARAM_STR);
+                                $response->bindParam(":plaintiff_name", $value['A112NOMBSUJE'], PDO::PARAM_STR);
+                                $response->execute();
+                                $id_plaintiff = $conn->lastInsertId();
+
+                                $query = 
+                                    "INSERT INTO dossier_plaintiff (id_dossier, id_plaintiff)
+                                    VALUES (:id_dossier, :id_plaintiff)";
+                                $response = $conn->prepare($query);
+                                $response->bindParam(":id_dossier", $id_dossier, PDO::PARAM_INT);
+                                $response->bindParam(":id_plaintiff", $id_plaintiff, PDO::PARAM_INT);
+                                $response->execute();
+                            }
+                            //DEMANDADO - ACCIONADO
+                            if ($value['A112CODISUJE'] == '0002') {
+                                $query = 
+                                    "INSERT INTO defendant (defendant_identification, defendant_name)
+                                    VALUES (:defendant_identification, :defendant_name)";
+                                $response = $conn->prepare($query);
+                                $response->bindParam(":defendant_identification", $value['A112NUMESUJE'], PDO::PARAM_STR);
+                                $response->bindParam(":defendant_name", $value['A112NOMBSUJE'], PDO::PARAM_STR);
+                                $response->execute();
+                                $id_defendant = $conn->lastInsertId();
+
+                                $query = 
+                                    "INSERT INTO dossier_defendant (id_dossier, id_defendant)
+                                    VALUES (:id_dossier, :id_defendant)";
+                                $response = $conn->prepare($query);
+                                $response->bindParam(":id_dossier", $id_dossier, PDO::PARAM_INT);
+                                $response->bindParam(":id_defendant", $id_defendant, PDO::PARAM_INT);
+                                $response->execute();
+                            }
+                        }
                         $data = "ok";
                         $conn->commit();
                     } else {
