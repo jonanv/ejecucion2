@@ -119,7 +119,7 @@
 
                 $query = 
                     "INSERT INTO log (log_date, log_action, log_detail, id_log_type, id_employee) 
-                    VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :log_action, :log_detail, 1, :id_employee)";
+                    VALUES (NOW(), :log_action, :log_detail, 1, :id_employee)";
                 $response = $conn->prepare($query);
                 $response->bindParam(":log_action", $log_action, PDO::PARAM_STR);
                 $response->bindParam(":log_detail", $log_detail, PDO::PARAM_STR);
@@ -127,7 +127,7 @@
                 if ($response->execute()) {
                     $query =
                         "INSERT INTO dossier_registration (id_employee, dossier_registration_date)
-                        VALUES (:id_employee, NOW()";
+                        VALUES (:id_employee, NOW())";
                     $response = $conn->prepare($query);
                     $response->bindParam(":id_employee", $id_employee, PDO::PARAM_INT);
                     $response->execute();
