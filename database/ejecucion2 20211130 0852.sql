@@ -291,7 +291,7 @@ DROP TABLE IF EXISTS `dossier_term`;
 CREATE TABLE `dossier_term` (
   `id_dossier_term` int(11) NOT NULL AUTO_INCREMENT,
   `dossier_term_date` datetime NOT NULL,
-  `dossier_term_registration_date` datetime NOT NULL,
+  `dossier_term_registered_date` datetime NOT NULL,
   `dossier_term_observation` text COLLATE utf8_spanish_ci NOT NULL,
   `dossier_term_revised` tinyint(1) NOT NULL,
   `id_dossier` bigint(20) NOT NULL,
@@ -321,12 +321,12 @@ CREATE TABLE `dossier_term` (
 DROP TABLE IF EXISTS `dossier_title`;
 CREATE TABLE `dossier_title` (
   `id_dossier_title` int(11) NOT NULL AUTO_INCREMENT,
-  `title_dossier_date` datetime NOT NULL,
+  `title_dossier_registered_date` datetime NOT NULL,
   `title_dossier_value` bigint(20) NOT NULL,
   `title_dossier_beneficiary` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `title_dossier_quantity` int(11) NOT NULL,
   `title_dossier_payment_date` datetime DEFAULT NULL,
-  `title_dossier_modification_date` datetime DEFAULT NULL,
+  `title_dossier_modified_date` datetime DEFAULT NULL,
   `id_title_type` int(11) NOT NULL,
   `id_dossier` bigint(20) NOT NULL,
   `id_employee` bigint(20) NOT NULL,
@@ -386,8 +386,8 @@ CREATE TABLE `employee` (
   `id_profile` int(11) NOT NULL,
   `enable_employee` tinyint(1) NOT NULL,
   `employee_image` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `employee_registration_date` datetime NOT NULL,
-  `employee_modification_date` datetime DEFAULT NULL,
+  `employee_registered_date` datetime NOT NULL,
+  `employee_modified_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id_employee`),
   KEY `id_job_title` (`id_job_title`),
   KEY `id_profile` (`id_profile`),
@@ -402,7 +402,7 @@ CREATE TABLE `employee` (
 --
 
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` (`id_employee`,`firstname`,`lastname`,`password`,`email`,`id_job_title`,`id_profession`,`id_profile`,`enable_employee`,`employee_image`,`employee_registration_date`,`employee_modification_date`) VALUES 
+INSERT INTO `employee` (`id_employee`,`firstname`,`lastname`,`password`,`email`,`id_job_title`,`id_profession`,`id_profile`,`enable_employee`,`employee_image`,`employee_registered_date`,`employee_modified_date`) VALUES 
  (1053816080,'Johanny','Vargas González','VDFoVmJUSEh6ZlRnMjM4M3RGZkNHZz09','jvargasgo@cendoj.ramajudicial.gov.co',3,2,1,1,'avatar0.png','0000-00-00 00:00:00',NULL);
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 
