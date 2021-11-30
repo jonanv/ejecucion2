@@ -125,22 +125,14 @@
                 $response->bindParam(":log_detail", $log_detail, PDO::PARAM_STR);
                 $response->bindParam(":id_employee", $id_employee, PDO::PARAM_INT);
                 if ($response->execute()) {
-                    $query =
-                        "INSERT INTO dossier_registration (id_employee, dossier_registration_date)
-                        VALUES (:id_employee, NOW())";
-                    $response = $conn->prepare($query);
-                    $response->bindParam(":id_employee", $id_employee, PDO::PARAM_INT);
-                    $response->execute();
-                    $id_dossier_registration = $conn->lastInsertId();
-
                     $query = 
-                        "INSERT INTO dossier (radicado, instance, id_court_origin, id_dossier_registration, id_dossier_type, digital_dossier) 
-                        VALUES (:radicado, :instance, :id_court, :id_dossier_registration, :id_dossier_type, true)";
+                        "INSERT INTO dossier (radicado, instance, id_court_origin, id_employee_registered, dossier_registered_date, dossier_archived, dossier_bloqued, id_dossier_type, digital_dossier, electronic_dossier) 
+                        VALUES (:radicado, :instance, :id_court, :id_employee_registered, NOW(), false, false, :id_dossier_type, true, false)";
                     $response = $conn->prepare($query);
                     $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
                     $response->bindParam(":instance", $instance, PDO::PARAM_STR);
                     $response->bindParam(":id_court", $id_court, PDO::PARAM_INT);
-                    $response->bindParam(":id_dossier_registration", $id_dossier_registration, PDO::PARAM_INT);
+                    $response->bindParam(":id_employee_registered", $id_employee, PDO::PARAM_INT);
                     $response->bindParam(":id_dossier_type", $id_dossier_type, PDO::PARAM_INT);
                     if ($response->execute()) {
                         $id_dossier = $conn->lastInsertId();
