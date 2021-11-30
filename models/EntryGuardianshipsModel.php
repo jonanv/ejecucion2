@@ -127,7 +127,8 @@
                 if ($response->execute()) {
                     $query = 
                         "INSERT INTO dossier (radicado, instance, id_court_origin, id_employee_registered, dossier_registered_date, dossier_archived, dossier_bloqued, id_dossier_type, digital_dossier, electronic_dossier) 
-                        VALUES (:radicado, :instance, :id_court, :id_employee_registered, NOW(), false, false, :id_dossier_type, true, false)";
+                        VALUES (:radicado, :instance, :id_court, :id_employee_registered, NOW(), false, false, :id_dossier_type, false, true)";
+                        // TODO: considerar digital_dossier cuando es digital de acuerdo al año para saber si se convirtio de físico a escaneado
                     $response = $conn->prepare($query);
                     $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
                     $response->bindParam(":instance", $instance, PDO::PARAM_STR);

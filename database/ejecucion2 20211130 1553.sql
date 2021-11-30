@@ -124,13 +124,17 @@ CREATE TABLE `defendant` (
   `defendant_identification` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `defendant_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_defendant`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `defendant`
 --
 
 /*!40000 ALTER TABLE `defendant` DISABLE KEYS */;
+INSERT INTO `defendant` (`id_defendant`,`defendant_identification`,`defendant_name`) VALUES 
+ (1,'17271','EVE DISTRIBUCIONES SA'),
+ (2,'816007943','CORPORACION I.P.S EJE CAFETERO'),
+ (3,'901097473','MEDIMAS EPS');
 /*!40000 ALTER TABLE `defendant` ENABLE KEYS */;
 
 
@@ -204,13 +208,15 @@ CREATE TABLE `dossier` (
   CONSTRAINT `dossier_ibfk_6` FOREIGN KEY (`id_employee_blocked`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE,
   CONSTRAINT `dossier_ibfk_7` FOREIGN KEY (`id_blocked_type`) REFERENCES `blocked_type` (`id_blocked_type`) ON UPDATE CASCADE,
   CONSTRAINT `dossier_ibfk_8` FOREIGN KEY (`id_dossier_type`) REFERENCES `dossier_type` (`id_dossier_type`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `dossier`
 --
 
 /*!40000 ALTER TABLE `dossier` DISABLE KEYS */;
+INSERT INTO `dossier` (`id_dossier`,`radicado`,`instance`,`date_last_action`,`delivery_date`,`date_in_dispach`,`date_out_dispach`,`fault_dossier`,`fault_dossier_date`,`end_settlement_date`,`id_location_dossier`,`id_court_origin`,`id_court_destination`,`id_employee_registered`,`dossier_registered_date`,`id_employee_archived`,`dossier_archived_date`,`dossier_archived`,`id_employee_blocked`,`dossier_blocked_date`,`id_employee_unblocked`,`dossier_unblocked_date`,`dossier_bloqued`,`id_blocked_type`,`id_dossier_type`,`digital_dossier`,`electronic_dossier`) VALUES 
+ (1,'17001430300220210016000','00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14,NULL,1053816080,'2021-11-30 09:30:12',NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,1,0,1);
 /*!40000 ALTER TABLE `dossier` ENABLE KEYS */;
 
 
@@ -257,6 +263,10 @@ CREATE TABLE `dossier_defendant` (
 --
 
 /*!40000 ALTER TABLE `dossier_defendant` DISABLE KEYS */;
+INSERT INTO `dossier_defendant` (`id_dossier`,`id_defendant`) VALUES 
+ (1,1),
+ (1,2),
+ (1,3);
 /*!40000 ALTER TABLE `dossier_defendant` ENABLE KEYS */;
 
 
@@ -280,6 +290,8 @@ CREATE TABLE `dossier_plaintiff` (
 --
 
 /*!40000 ALTER TABLE `dossier_plaintiff` DISABLE KEYS */;
+INSERT INTO `dossier_plaintiff` (`id_dossier`,`id_plaintiff`) VALUES 
+ (1,1);
 /*!40000 ALTER TABLE `dossier_plaintiff` ENABLE KEYS */;
 
 
@@ -495,13 +507,15 @@ CREATE TABLE `log` (
   KEY `id_employee` (`id_employee`),
   CONSTRAINT `log_ibfk_1` FOREIGN KEY (`id_log_type`) REFERENCES `log_type` (`id_log_type`) ON UPDATE CASCADE,
   CONSTRAINT `log_ibfk_2` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `log`
 --
 
 /*!40000 ALTER TABLE `log` DISABLE KEYS */;
+INSERT INTO `log` (`id_log`,`log_date`,`log_action`,`log_detail`,`id_log_type`,`id_employee`) VALUES 
+ (1,'2021-11-30 09:30:12','Se realiza Migración de Tutela: 17001430300220210016000','Johanny Vargas González realiza Migración de Tutela: 17001430300220210016000 2021-11-30 a las: 09:30:12am',1,1053816080);
 /*!40000 ALTER TABLE `log` ENABLE KEYS */;
 
 
@@ -544,13 +558,15 @@ CREATE TABLE `plaintiff` (
   `plaintiff_identification` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `plaintiff_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_plaintiff`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `plaintiff`
 --
 
 /*!40000 ALTER TABLE `plaintiff` DISABLE KEYS */;
+INSERT INTO `plaintiff` (`id_plaintiff`,`plaintiff_identification`,`plaintiff_name`) VALUES 
+ (1,'24300647','MARIA NOELIA - LONDOÑO GIRALDO');
 /*!40000 ALTER TABLE `plaintiff` ENABLE KEYS */;
 
 
