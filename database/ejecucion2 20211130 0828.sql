@@ -173,26 +173,37 @@ CREATE TABLE `dossier` (
   `id_location_dossier` int(11) DEFAULT NULL,
   `id_court_origin` int(11) NOT NULL,
   `id_court_destination` int(11) DEFAULT NULL,
-  `id_dossier_registration` int(11) NOT NULL,
-  `id_dossier_archived` int(11) DEFAULT NULL,
-  `id_dossier_blocked` int(11) DEFAULT NULL,
+  `id_employee_registered` bigint(20) NOT NULL,
+  `dossier_registered_date` datetime NOT NULL,
+  `id_employee_archived` bigint(20) DEFAULT NULL,
+  `dossier_archived_date` datetime DEFAULT NULL,
+  `dossier_archived` tinyint(4) NOT NULL,
+  `id_employee_blocked` bigint(20) DEFAULT NULL,
+  `dossier_blocked_date` datetime DEFAULT NULL,
+  `id_employee_unblocked` bigint(20) DEFAULT NULL,
+  `dossier_unblocked_date` datetime DEFAULT NULL,
+  `dossier_bloqued` tinyint(4) NOT NULL,
+  `id_blocked_type` int(11) DEFAULT NULL,
   `id_dossier_type` int(11) NOT NULL,
   `digital_dossier` tinyint(1) NOT NULL,
+  `electronic_dossier` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_dossier`),
   KEY `id_location_dossier` (`id_location_dossier`),
-  KEY `id_dossier_registration` (`id_dossier_registration`),
-  KEY `id_dossier_archived` (`id_dossier_archived`),
-  KEY `id_dossier_blocked` (`id_dossier_blocked`),
   KEY `id_dossier_type` (`id_dossier_type`),
   KEY `id_court_origin` (`id_court_origin`),
   KEY `id_court_destination` (`id_court_destination`),
+  KEY `id_employee_registered` (`id_employee_registered`),
+  KEY `id_employee_archived` (`id_employee_archived`),
+  KEY `id_employee_blocked` (`id_employee_blocked`),
+  KEY `id_blocked_type` (`id_blocked_type`),
   CONSTRAINT `dossier_ibfk_1` FOREIGN KEY (`id_location_dossier`) REFERENCES `location_dossier` (`id_location_dossier`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_ibfk_4` FOREIGN KEY (`id_dossier_registration`) REFERENCES `dossier_registration` (`id_dossier_registration`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_ibfk_5` FOREIGN KEY (`id_dossier_archived`) REFERENCES `dossier_archived` (`id_dossier_archived`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_ibfk_6` FOREIGN KEY (`id_dossier_blocked`) REFERENCES `dossier_blocked` (`id_dossier_bloqued`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_ibfk_7` FOREIGN KEY (`id_dossier_type`) REFERENCES `dossier_type` (`id_dossier_type`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_ibfk_8` FOREIGN KEY (`id_court_origin`) REFERENCES `court` (`id_court`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_ibfk_9` FOREIGN KEY (`id_court_destination`) REFERENCES `court` (`id_court`) ON UPDATE CASCADE
+  CONSTRAINT `dossier_ibfk_2` FOREIGN KEY (`id_court_origin`) REFERENCES `court` (`id_court`) ON UPDATE CASCADE,
+  CONSTRAINT `dossier_ibfk_3` FOREIGN KEY (`id_court_destination`) REFERENCES `court` (`id_court`) ON UPDATE CASCADE,
+  CONSTRAINT `dossier_ibfk_4` FOREIGN KEY (`id_employee_registered`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE,
+  CONSTRAINT `dossier_ibfk_5` FOREIGN KEY (`id_employee_archived`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE,
+  CONSTRAINT `dossier_ibfk_6` FOREIGN KEY (`id_employee_blocked`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE,
+  CONSTRAINT `dossier_ibfk_7` FOREIGN KEY (`id_blocked_type`) REFERENCES `blocked_type` (`id_blocked_type`) ON UPDATE CASCADE,
+  CONSTRAINT `dossier_ibfk_8` FOREIGN KEY (`id_dossier_type`) REFERENCES `dossier_type` (`id_dossier_type`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -224,56 +235,6 @@ CREATE TABLE `dossier_annotation` (
 
 /*!40000 ALTER TABLE `dossier_annotation` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dossier_annotation` ENABLE KEYS */;
-
-
---
--- Definition of table `dossier_archived`
---
-
-DROP TABLE IF EXISTS `dossier_archived`;
-CREATE TABLE `dossier_archived` (
-  `id_dossier_archived` int(11) NOT NULL AUTO_INCREMENT,
-  `id_employee` bigint(20) NOT NULL,
-  `dossier_archived_date` datetime NOT NULL,
-  `dossier_archived` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id_dossier_archived`),
-  KEY `id_employee` (`id_employee`),
-  CONSTRAINT `dossier_archived_ibfk_1` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `dossier_archived`
---
-
-/*!40000 ALTER TABLE `dossier_archived` DISABLE KEYS */;
-/*!40000 ALTER TABLE `dossier_archived` ENABLE KEYS */;
-
-
---
--- Definition of table `dossier_blocked`
---
-
-DROP TABLE IF EXISTS `dossier_blocked`;
-CREATE TABLE `dossier_blocked` (
-  `id_dossier_bloqued` int(11) NOT NULL AUTO_INCREMENT,
-  `id_employee` bigint(20) NOT NULL,
-  `dossier_blocked_date` datetime NOT NULL,
-  `dossier_unblocked_date` datetime DEFAULT NULL,
-  `dossier_bloqued` tinyint(1) NOT NULL,
-  `id_blocked_type` int(11) NOT NULL,
-  PRIMARY KEY (`id_dossier_bloqued`),
-  KEY `id_blocked_type` (`id_blocked_type`),
-  KEY `id_employee` (`id_employee`),
-  CONSTRAINT `dossier_blocked_ibfk_1` FOREIGN KEY (`id_blocked_type`) REFERENCES `blocked_type` (`id_blocked_type`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_blocked_ibfk_2` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `dossier_blocked`
---
-
-/*!40000 ALTER TABLE `dossier_blocked` DISABLE KEYS */;
-/*!40000 ALTER TABLE `dossier_blocked` ENABLE KEYS */;
 
 
 --
@@ -320,28 +281,6 @@ CREATE TABLE `dossier_plaintiff` (
 
 /*!40000 ALTER TABLE `dossier_plaintiff` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dossier_plaintiff` ENABLE KEYS */;
-
-
---
--- Definition of table `dossier_registration`
---
-
-DROP TABLE IF EXISTS `dossier_registration`;
-CREATE TABLE `dossier_registration` (
-  `id_dossier_registration` int(11) NOT NULL AUTO_INCREMENT,
-  `id_employee` bigint(20) NOT NULL,
-  `dossier_registration_date` datetime NOT NULL,
-  PRIMARY KEY (`id_dossier_registration`),
-  KEY `id_employee` (`id_employee`),
-  CONSTRAINT `dossier_registration_ibfk_1` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `dossier_registration`
---
-
-/*!40000 ALTER TABLE `dossier_registration` DISABLE KEYS */;
-/*!40000 ALTER TABLE `dossier_registration` ENABLE KEYS */;
 
 
 --
@@ -556,7 +495,7 @@ CREATE TABLE `log` (
   KEY `id_employee` (`id_employee`),
   CONSTRAINT `log_ibfk_1` FOREIGN KEY (`id_log_type`) REFERENCES `log_type` (`id_log_type`) ON UPDATE CASCADE,
   CONSTRAINT `log_ibfk_2` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `log`
