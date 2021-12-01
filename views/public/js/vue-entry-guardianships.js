@@ -113,7 +113,6 @@ const app = new Vue({
             }
         },
         migrateGuardianship: async function(radicado) {
-            // TODO: partcionar radicado y enviar junto con partes
             if (radicado === '') {
                 this.submitStatus = 'ERROR_' + radicado;
             } else {
