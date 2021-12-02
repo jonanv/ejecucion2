@@ -22,6 +22,47 @@ CREATE DATABASE IF NOT EXISTS ejecucion2;
 USE ejecucion2;
 
 --
+-- Definition of table `annotation_type`
+--
+
+DROP TABLE IF EXISTS `annotation_type`;
+CREATE TABLE `annotation_type` (
+  `id_annotation_type` int(11) NOT NULL AUTO_INCREMENT,
+  `annotation_type_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `annotation_type_description` text COLLATE utf8_spanish_ci,
+  PRIMARY KEY (`id_annotation_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `annotation_type`
+--
+
+/*!40000 ALTER TABLE `annotation_type` DISABLE KEYS */;
+INSERT INTO `annotation_type` (`id_annotation_type`,`annotation_type_name`,`annotation_type_description`) VALUES 
+ (1,'Ubicar en juzgado de origen',NULL),
+ (2,'Elaborar comisorios',NULL),
+ (3,'Elaborar costas',NULL),
+ (4,'Archivar',NULL),
+ (5,'Elaborar oficio - memorial',NULL),
+ (6,'Elaborar telegrama',NULL),
+ (7,'Enviar a remates',NULL),
+ (8,'Pasa al contador',NULL),
+ (9,'Pasa para recurso',NULL),
+ (10,'Proceso con orden de pago',NULL),
+ (11,'Audiencia',NULL),
+ (12,'Enviar al despacho una vez ejecutoriado el auto',NULL),
+ (13,'Hacer Desglose',NULL),
+ (14,'Hacer título',NULL),
+ (15,'Hacer traslado',NULL),
+ (16,'Proceso suspendido por términos',NULL),
+ (17,'Realizar edicto emplazatorio',NULL),
+ (18,'Remitir expediente digital',NULL),
+ (19,'Revisar la liquidación del contador',NULL),
+ (20,'Términos',NULL);
+/*!40000 ALTER TABLE `annotation_type` ENABLE KEYS */;
+
+
+--
 -- Definition of table `blocked_type`
 --
 
@@ -228,10 +269,12 @@ DROP TABLE IF EXISTS `dossier_annotation`;
 CREATE TABLE `dossier_annotation` (
   `id_dossier_annotation` int(11) NOT NULL AUTO_INCREMENT,
   `dossier_annotation_date` datetime NOT NULL,
-  `dossier_annotation_observation` text COLLATE utf8_spanish_ci NOT NULL,
+  `id_annotation_type` int(11) NOT NULL,
   `id_dossier` bigint(20) NOT NULL,
   PRIMARY KEY (`id_dossier_annotation`) USING BTREE,
   KEY `id_dossier` (`id_dossier`),
+  KEY `id_annotation_type` (`id_annotation_type`),
+  CONSTRAINT `dossier_annotation_ibfk_2` FOREIGN KEY (`id_annotation_type`) REFERENCES `annotation_type` (`id_annotation_type`) ON UPDATE CASCADE,
   CONSTRAINT `dossier_annotation_ibfk_1` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 

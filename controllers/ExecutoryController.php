@@ -5,8 +5,8 @@
             return $response;
         }
 
-        public static function getAllActionsFolderController() {
-            $response = ExecutoryModel::getAllActionsFolderModel();
+        public static function getAllDossierAnnotationsTypeController() {
+            $response = ExecutoryModel::getAllDossierAnnotationsTypeModel();
             return $response;
         }
 

@@ -28,7 +28,7 @@ const app = new Vue({
         loading: true,
         submitStatus: null,
         registerStatus: null,
-        actions_folder_list: [],
+        dossier_annotations: [],
         users: [],
         radicados_executory_list: [],
         radicados_executory: []
@@ -98,7 +98,7 @@ const app = new Vue({
         });
     },
     created() {
-        this.getAllActionsFolder();
+        this.getAllDossierAnnotationsType();
         this.getAllUsers();
     },
     computed: {
@@ -223,11 +223,11 @@ const app = new Vue({
             }
         },
         // PROCEDIMIENTOS
-        getAllActionsFolder: function() {
-            axios.post(url, {option: 'getAllActionsFolder'})
+        getAllDossierAnnotationsType: function() {
+            axios.post(url, {option: 'getAllDossierAnnotationsType'})
                 .then((response) => {
                     console.log(response);
-                    app.actions_folder_list = response.data;
+                    app.dossier_annotations = response.data;
                 });
         },
         getAllUsers: function() {

@@ -26,11 +26,10 @@
             $response = null;
         }
 
-        public static function getAllActionsFolderModel() {
+        public static function getAllDossierAnnotationsTypeModel() {
             $query = 
                 "SELECT * 
-                FROM siepro_pa_observaciones 
-                ORDER BY id ASC";
+                FROM annotation_type";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             if ($response->execute()) {
                 $data = $response->fetchAll(PDO::FETCH_ASSOC);

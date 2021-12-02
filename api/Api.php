@@ -75,8 +75,8 @@
             echo json_encode($response);
         }
 
-        public function getAllActionsFolder() {
-            $response = ExecutoryController::getAllActionsFolderController();
+        public function getAllDossierAnnotationsType() {
+            $response = ExecutoryController::getAllDossierAnnotationsTypeController();
             echo json_encode($response);
         }
 
@@ -154,8 +154,8 @@
             $obj->getProcess($radicado);
             break;
 
-        case 'getAllActionsFolder': //
-            $obj->getAllActionsFolder();
+        case 'getAllDossierAnnotationsType': //
+            $obj->getAllDossierAnnotationsType();
             break;
 
         case 'getAllUsers': //
