@@ -16,8 +16,28 @@
                 // WHERE ubi.radicado LIKE CONCAT('%', :radicado, '%')
                 // ORDER BY dc.fecha DESC";
                 "SELECT *
-                FROM dossier
+                FROM dossier AS d
+                INNER JOIN dossier_plaintiff AS dp ON (dp.id_dossier = d.id_dossier)
+                INNER JOIN plaintiff AS p ON (p.id_plaintiff = dp.id_plaintiff)
+                INNER JOIN dossier_defendant AS dd ON (dd.id_dossier = d.id_dossier)
+                INNER JOIN defendant AS def ON (def.id_defendant = dd.id_defendant)
                 WHERE radicado = :radicado";
+
+                // - Demanda - Ejecutivo con título hipotecario
+                // - Demanda - Ejecutivo singular
+                // - Demanda - Ejecutivo Mixto
+                // - Demanda - Ejecutivo con título prendario
+                // - Verbal (Oralidad)
+                // - Verbal (1)
+                // - Verbal sumario
+                // - Divisorios
+                // - Abreviado
+                // - Ordinario
+                // - Sucesión
+                // - Acciones de tutela (R)
+                // - Habeas corpus
+                // - Especial
+                // - No registra
             $response = ConnectionModel::connectMySQL()->prepare($query);
             $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
             if ($response->execute()) {

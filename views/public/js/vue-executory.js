@@ -252,10 +252,10 @@ const app = new Vue({
                         this.$v.form_process.$touch();
                         app.form_process.id_radicado = response.data.id_dossier;
                         app.form_process.radicado = response.data.radicado;
-                        app.form_process.id_plaintiff = response.data.id_plaintiff;
-                        app.form_process.plaintiff = response.data.plaintiff;
-                        app.form_process.id_defendant = response.data.id_defendant;
-                        app.form_process.defendant = response.data.defendant;
+                        app.form_process.id_plaintiff = response.data.plaintiff_identification;
+                        app.form_process.plaintiff = response.data.plaintiff_name;
+                        app.form_process.id_defendant = response.data.defendant_identification;
+                        app.form_process.defendant = response.data.defendant_name;
                         app.form_process.original_court = response.data.id_court_origin;
                         app.form_process.destination_court = response.data.id_court_destination;
                         app.form_process.process_class = response.data.id_dossier_type;

@@ -31,7 +31,7 @@ CREATE TABLE `annotation_type` (
   `annotation_type_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `annotation_type_description` text COLLATE utf8_spanish_ci,
   PRIMARY KEY (`id_annotation_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `annotation_type`
@@ -58,7 +58,8 @@ INSERT INTO `annotation_type` (`id_annotation_type`,`annotation_type_name`,`anno
  (17,'Realizar edicto emplazatorio',NULL),
  (18,'Remitir expediente digital',NULL),
  (19,'Revisar la liquidación del contador',NULL),
- (20,'Términos',NULL);
+ (20,'Términos',NULL),
+ (21,'Responder requerimiento',NULL);
 /*!40000 ALTER TABLE `annotation_type` ENABLE KEYS */;
 
 
@@ -126,8 +127,8 @@ CREATE TABLE `court` (
   `id_court` int(11) NOT NULL AUTO_INCREMENT,
   `court_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `court_email` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `id_siglo_xxi` int(11) DEFAULT NULL,
-  `identification_siglo_xxi` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `id_court_siglo_xxi` int(11) DEFAULT NULL,
+  `court_identification_siglo_xxi` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`id_court`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -136,7 +137,7 @@ CREATE TABLE `court` (
 --
 
 /*!40000 ALTER TABLE `court` DISABLE KEYS */;
-INSERT INTO `court` (`id_court`,`court_name`,`court_email`,`id_siglo_xxi`,`identification_siglo_xxi`) VALUES 
+INSERT INTO `court` (`id_court`,`court_name`,`court_email`,`id_court_siglo_xxi`,`court_identification_siglo_xxi`) VALUES 
  (1,'Juzgado 1 Civil Municipal de Manizales',NULL,2001,'t101.A101CODIPONE IN(\'2001\',\'9011\')'),
  (2,'Juzgado 2 Civil Municipal de Manizales',NULL,2002,'t101.A101CODIPONE IN(\'2002\',\'9021\')'),
  (3,'Juzgado 3 Civil Municipal de Manizales',NULL,2003,'t101.A101CODIPONE IN(\'2003\',\'9031\')'),
@@ -411,6 +412,7 @@ CREATE TABLE `dossier_type` (
   `id_dossier_type` int(11) NOT NULL AUTO_INCREMENT,
   `dossier_type_name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `dossier_type_description` text COLLATE utf8_spanish_ci,
+  `id_dossier_type_siglo_xxi` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_dossier_type`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -419,9 +421,9 @@ CREATE TABLE `dossier_type` (
 --
 
 /*!40000 ALTER TABLE `dossier_type` DISABLE KEYS */;
-INSERT INTO `dossier_type` (`id_dossier_type`,`dossier_type_name`,`dossier_type_description`) VALUES 
- (1,'Tutela',NULL),
- (2,'Demanda','Proceso ejecutivo');
+INSERT INTO `dossier_type` (`id_dossier_type`,`dossier_type_name`,`dossier_type_description`,`id_dossier_type_siglo_xxi`) VALUES 
+ (1,'Tutela',NULL,NULL),
+ (2,'Demanda','Proceso ejecutivo',NULL);
 /*!40000 ALTER TABLE `dossier_type` ENABLE KEYS */;
 
 
