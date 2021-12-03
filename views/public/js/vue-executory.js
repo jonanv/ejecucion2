@@ -29,7 +29,7 @@ const app = new Vue({
         submitStatus: null,
         registerStatus: null,
         dossier_annotations: [],
-        users: [],
+        employees: [],
         radicados_executory_list: [],
         radicados_executory: []
     },
@@ -99,7 +99,7 @@ const app = new Vue({
     },
     created() {
         this.getAllDossierAnnotationsType();
-        this.getAllUsers();
+        this.getAllEmployees();
     },
     computed: {
 
@@ -230,11 +230,11 @@ const app = new Vue({
                     app.dossier_annotations = response.data;
                 });
         },
-        getAllUsers: function() {
-            axios.post(url, {option: 'getAllUsers'})
+        getAllEmployees: function() {
+            axios.post(url, {option: 'getAllEmployees'})
                 .then((response) => {
-                    // console.log(response);
-                    app.users = response.data;
+                    console.log(response);
+                    app.employees = response.data;
                 });
         },
         getProcess: function() {

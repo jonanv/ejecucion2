@@ -617,9 +617,9 @@
                                             <option value="" disabled="" selected="">
                                                 Seleccione una opción
                                             </option>
-                                            <option v-for="(user, index) in users" :key="index"
-                                                :value="user.id">
-                                                {{ user.empleado }}
+                                            <option v-for="(employee, index) in employees" :key="index"
+                                                :value="employee.id_employee">
+                                                {{ employee.firstname + ' ' + employee.lastname }}
                                             </option>
                                         </select>
                                     </div>

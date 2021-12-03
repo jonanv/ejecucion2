@@ -80,8 +80,8 @@
             echo json_encode($response);
         }
 
-        public function getAllUsers() {
-            $response = ExecutoryController::getAllUsersController();
+        public function getAllEmployees() {
+            $response = ExecutoryController::getAllEmployeesController();
             echo json_encode($response);
         }
 
@@ -158,8 +158,8 @@
             $obj->getAllDossierAnnotationsType();
             break;
 
-        case 'getAllUsers': //
-            $obj->getAllUsers();
+        case 'getAllEmployees': //
+            $obj->getAllEmployees();
             break;
 
         case 'registerExecutory':

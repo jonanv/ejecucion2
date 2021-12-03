@@ -40,12 +40,11 @@
             $response = null;
         }
 
-        public static function getAllUsersModel() {
+        public static function getAllEmployeesModel() {
             $query = 
                 "SELECT * 
-                FROM pa_usuario 
-                WHERE nombre_usuario NOT LIKE '%D%'
-                ORDER BY id ASC";
+                FROM employee 
+                WHERE enable_employee = true";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             if ($response->execute()) {
                 $data = $response->fetchAll(PDO::FETCH_ASSOC);

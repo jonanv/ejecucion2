@@ -10,8 +10,8 @@
             return $response;
         }
 
-        public static function getAllUsersController() {
-            $response = ExecutoryModel::getAllUsersModel();
+        public static function getAllEmployeesController() {
+            $response = ExecutoryModel::getAllEmployeesModel();
             return $response;
         }
 
