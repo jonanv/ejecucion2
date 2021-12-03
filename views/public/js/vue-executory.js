@@ -250,19 +250,19 @@ const app = new Vue({
                         console.log(response);
 
                         this.$v.form_process.$touch();
-                        app.form_process.id_radicado = response.data.idradicado;
+                        app.form_process.id_radicado = response.data.id_dossier;
                         app.form_process.radicado = response.data.radicado;
-                        app.form_process.id_plaintiff = response.data.cedula_demandante;
-                        app.form_process.plaintiff = response.data.demandante;
-                        app.form_process.id_defendant = response.data.cedula_demandado;
-                        app.form_process.defendant = response.data.demandado;
-                        app.form_process.original_court = response.data.jo;
-                        app.form_process.destination_court = response.data.jd;
-                        app.form_process.process_class = response.data.claseproceso;
+                        app.form_process.id_plaintiff = response.data.id_plaintiff;
+                        app.form_process.plaintiff = response.data.plaintiff;
+                        app.form_process.id_defendant = response.data.id_defendant;
+                        app.form_process.defendant = response.data.defendant;
+                        app.form_process.original_court = response.data.id_court_origin;
+                        app.form_process.destination_court = response.data.id_court_destination;
+                        app.form_process.process_class = response.data.id_dossier_type;
                         app.form_process.position = response.data.posicion;
                         app.form_process.start_date = new moment().format('DD/MM/YYYY');
-                        app.form_process.date = response.data.fecha;
-                        app.form_process.user = response.data.empleado;
+                        app.form_process.date = response.data.dossier_registered_date;
+                        app.form_process.user = response.data.id_employee_registered;
                         app.form_process.observation = response.data.observacion;
                         this.submitStatus = 'OK'
                     });
