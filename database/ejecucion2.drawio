@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-03T14:36:45.516Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="4MXzYOhllzBZnztdmGdK" version="15.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-03T22:05:49.175Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="lbs2yPYOAci8PGLana9T" version="15.8.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3652" dy="2782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -1351,17 +1351,17 @@
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-2" value="&lt;div&gt;- Ubicar en juzgado de origen&lt;/div&gt;&lt;div&gt;- Elaborar comisorios&lt;/div&gt;&lt;div&gt;- Elaborar costas&lt;/div&gt;&lt;div&gt;- Archivar&lt;/div&gt;&lt;div&gt;- Elaborar oficio - memorial&lt;/div&gt;&lt;div&gt;- Elaborar telegrama&lt;/div&gt;&lt;div&gt;- Enviar a remates&lt;/div&gt;&lt;div&gt;- Pasa al contador&lt;/div&gt;&lt;div&gt;- Pasa para recurso&lt;/div&gt;&lt;div&gt;- Proceso con orden de pago&lt;/div&gt;&lt;div&gt;- Audiencia&lt;/div&gt;&lt;div&gt;- Enviar al despacho una vez ejecutoriado el auto&lt;/div&gt;&lt;div&gt;- Hacer Desglose&lt;/div&gt;&lt;div&gt;- Hacer título&lt;/div&gt;&lt;div&gt;- Hacer traslado&lt;/div&gt;&lt;div&gt;- Proceso suspendido por términos&lt;/div&gt;&lt;div&gt;- Realizar edicto emplazatorio&lt;/div&gt;&lt;div&gt;- Remitir expediente digital&lt;/div&gt;&lt;div&gt;- Revisar la liquidación del contador&lt;/div&gt;&lt;div&gt;- Términos&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
           <mxGeometry x="1110" y="432.5" width="350" height="307.5" as="geometry" />
         </mxCell>
-        <mxCell id="JLPfwYuVppmMRg6Ym0iC-3" value="annotation_type (siepro_pa_observaciones)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="990" y="250" width="310" height="104" as="geometry" />
+        <mxCell id="JLPfwYuVppmMRg6Ym0iC-3" value="annotation_type (siepro_pa_observaciones - accion_expediente)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="990" y="250" width="370" height="104" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-4" value="+ id_annotation_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="JLPfwYuVppmMRg6Ym0iC-3" vertex="1">
-          <mxGeometry y="26" width="310" height="26" as="geometry" />
+          <mxGeometry y="26" width="370" height="26" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-5" value="+ annotation_type_name: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="JLPfwYuVppmMRg6Ym0iC-3" vertex="1">
-          <mxGeometry y="52" width="310" height="26" as="geometry" />
+          <mxGeometry y="52" width="370" height="26" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-6" value="+ annotation_type_description: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="JLPfwYuVppmMRg6Ym0iC-3" vertex="1">
-          <mxGeometry y="78" width="310" height="26" as="geometry" />
+          <mxGeometry y="78" width="370" height="26" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-8" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;" parent="1" source="JLPfwYuVppmMRg6Ym0iC-4" target="kAV78_8R-8U5BCedtc6I-11" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
