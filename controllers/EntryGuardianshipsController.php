@@ -36,7 +36,7 @@
             // Tutelas
             if ($corporation == '43' && 
                 $specialty == '03') {
-                $id_dossier_type = 1;
+                $id_dossier_type = 2;
                 switch ($original_court) {
                     case '001':
                         $id_court = 13;
