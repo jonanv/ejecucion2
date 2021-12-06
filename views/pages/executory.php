@@ -181,10 +181,11 @@
                                 </div>
 
                             </div>
-
+                            
+                            <!-- TODO: Crear la forma de que se los demandantes y demandados se vean dinamicamente -->
                             <div class="form-row">
 
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-4">
                                     <label for="id_plaintiff">Cédula demandante</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -216,7 +217,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-8">
                                     <label for="plaintiff">Demandante</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -248,7 +249,11 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-2">
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group col-md-4">
                                     <label for="id_defendant">Cédula demandado</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -280,7 +285,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-8">
                                     <label for="defendant">Demandado</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">

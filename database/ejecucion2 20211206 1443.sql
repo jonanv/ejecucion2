@@ -258,7 +258,7 @@ CREATE TABLE `dossier` (
 
 /*!40000 ALTER TABLE `dossier` DISABLE KEYS */;
 INSERT INTO `dossier` (`id_dossier`,`radicado`,`instance`,`date_last_action`,`delivery_date`,`date_in_dispach`,`date_out_dispach`,`fault_dossier`,`fault_dossier_date`,`end_settlement_date`,`id_location_dossier`,`id_court_origin`,`id_court_destination`,`id_employee_registered`,`dossier_registered_date`,`id_employee_archived`,`dossier_archived_date`,`dossier_archived`,`id_employee_blocked`,`dossier_blocked_date`,`id_employee_unblocked`,`dossier_unblocked_date`,`dossier_bloqued`,`id_blocked_type`,`id_dossier_type`,`digital_dossier`,`electronic_dossier`) VALUES 
- (1,'17001430300220210016000','00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14,NULL,1053816080,'2021-11-30 09:30:12',NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,1,0,1);
+ (1,'17001430300220210016000','00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14,NULL,1053816080,'2021-11-30 09:30:12',NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,2,0,1);
 /*!40000 ALTER TABLE `dossier` ENABLE KEYS */;
 
 
@@ -414,7 +414,7 @@ CREATE TABLE `dossier_type` (
   `dossier_type_description` text COLLATE utf8_spanish_ci,
   `id_dossier_type_siglo_xxi` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_dossier_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `dossier_type`
@@ -422,8 +422,21 @@ CREATE TABLE `dossier_type` (
 
 /*!40000 ALTER TABLE `dossier_type` DISABLE KEYS */;
 INSERT INTO `dossier_type` (`id_dossier_type`,`dossier_type_name`,`dossier_type_description`,`id_dossier_type_siglo_xxi`) VALUES 
- (1,'Tutela',NULL,NULL),
- (2,'Demanda','Proceso ejecutivo',NULL);
+ (1,'No registra',NULL,0),
+ (2,'Acciones de tutela (R)',NULL,7),
+ (16,'Habeas corpus',NULL,417),
+ (17,'Ordinario',NULL,3001),
+ (18,'Abreviado',NULL,3002),
+ (19,'Verbal sumario',NULL,3004),
+ (20,'Verbal (Oralidad)',NULL,3015),
+ (21,'Verbal (1)',NULL,3016),
+ (22,'Ejecutivo mixto','Proceso ejecutivo',3051),
+ (23,'Divisorios',NULL,3054),
+ (24,'Ejecutivo singular','Proceso ejecutivo',3056),
+ (25,'Ejecutivo con título hipotecario','Proceso ejecutivo',3057),
+ (26,'Ejecutivo con título prendario','Proceso ejecutivo',3058),
+ (27,'Especial',NULL,6005),
+ (28,'Sucesión',NULL,9911);
 /*!40000 ALTER TABLE `dossier_type` ENABLE KEYS */;
 
 

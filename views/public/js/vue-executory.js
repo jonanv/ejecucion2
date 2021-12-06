@@ -8,9 +8,9 @@ const app = new Vue({
         form_process: {
             id_radicado: '',
             radicado: '',
-            id_plaintiff: '',
+            id_plaintiff: '', // TODO: Debe ser un arreglo
             plaintiff: '',
-            id_defendant: '',
+            id_defendant: '', // TODO: Debe ser un arreglo
             defendant : '',
             original_court: '',
             destination_court: '',
@@ -63,7 +63,6 @@ const app = new Vue({
                 required
             },
             destination_court: {
-                required
             },
             process_class: {
                 required
@@ -250,6 +249,7 @@ const app = new Vue({
                         console.log(response);
 
                         this.$v.form_process.$touch();
+                        // Datos del proceso
                         app.form_process.id_radicado = response.data.id_dossier;
                         app.form_process.radicado = response.data.radicado;
                         app.form_process.id_plaintiff = response.data.plaintiff_identification;
@@ -257,10 +257,12 @@ const app = new Vue({
                         app.form_process.id_defendant = response.data.defendant_identification;
                         app.form_process.defendant = response.data.defendant_name;
                         app.form_process.original_court = response.data.court_name;
+                        // TODO: Revisar los nomsbres destination_court = id_court_destination
                         app.form_process.destination_court = response.data.id_court_destination;
                         app.form_process.process_class = response.data.dossier_type_name;
                         app.form_process.position = response.data.posicion;
                         app.form_process.start_date = new moment().format('DD/MM/YYYY');
+                        // Ultima obervacion
                         app.form_process.date = response.data.dossier_registered_date;
                         app.form_process.user = response.data.id_employee_registered;
                         app.form_process.observation = response.data.observacion;
