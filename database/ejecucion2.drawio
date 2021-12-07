@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-07T15:21:37.386Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="ozptksvKj2AoxbnnPPGJ" version="15.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-07T15:22:08.279Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="DSYSBsZzQioMylG8sKkQ" version="15.8.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3652" dy="2782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -277,10 +277,10 @@
         <mxCell id="kAV78_8R-8U5BCedtc6I-9" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-7" vertex="1">
           <mxGeometry y="78" width="310" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-11" value="+ id_annotation_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-7" vertex="1">
+        <mxCell id="f20lI9CqllbguwWoPn-i-1" value="+ id_employee: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kAV78_8R-8U5BCedtc6I-7">
           <mxGeometry y="104" width="310" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="f20lI9CqllbguwWoPn-i-1" value="+ id_employee: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kAV78_8R-8U5BCedtc6I-7">
+        <mxCell id="kAV78_8R-8U5BCedtc6I-11" value="+ id_annotation_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-7" vertex="1">
           <mxGeometry y="130" width="310" height="26" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-13" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" source="99nmjj4Q9bfn7_SC2MuP-48" target="kAV78_8R-8U5BCedtc6I-9" edge="1">
