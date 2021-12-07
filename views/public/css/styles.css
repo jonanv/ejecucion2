@@ -99,3 +99,8 @@ select.select-vuelidate:focus-visible {
 .error:focus {
     outline-color: #F99 !important;
 }
+
+/* ------------------------------ SIEPRO ------------------------------ */
+div .card-plaintiff-defendant {
+    background-color: rgba(105, 113, 121, .2) !important;
+}

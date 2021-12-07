@@ -81,7 +81,7 @@
                                 <div class="form-group col-md-2">
                                     <button type="submit" 
                                         class="btn btn-primary btn-block"
-                                        @click="getProcess();"
+                                        @click="getDossier();"
                                         v-bind:disabled="submitStatus === 'PENDING'">
                                         <i class="fas fa-search"
                                             v-if="submitStatus !== 'PENDING' ||  submitStatus === null"></i>
@@ -183,209 +183,227 @@
                             </div>
                             
                             <!-- TODO: Crear la forma de que se los demandantes y demandados se vean dinamicamente -->
-                            <div class="form-row">
-
-                                <div class="form-group col-md-4">
-                                    <label for="id_plaintiff">Cédula demandante</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <i class="fas fa-id-card"
-                                                    v-bind:class="{ 
-                                                        'text-danger': $v.form_process.id_plaintiff.$error && $v.form_process.id_plaintiff.$invalid, 
-                                                        'text-success': !$v.form_process.id_plaintiff.$error && !$v.form_process.id_plaintiff.$invalid && $v.form_process.id_plaintiff.$dirty 
-                                                    }">
-                                                </i>
+                            <div class="card card-plaintiff-defendant">
+                                <div class="card-header">
+                                    DEMANDANTES
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-row">
+        
+                                        <div class="form-group col-md-4">
+                                            <label for="id_plaintiff">Cédula demandante</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="fas fa-id-card"
+                                                            v-bind:class="{ 
+                                                                'text-danger': $v.form_process.id_plaintiff.$error && $v.form_process.id_plaintiff.$invalid, 
+                                                                'text-success': !$v.form_process.id_plaintiff.$error && !$v.form_process.id_plaintiff.$invalid && $v.form_process.id_plaintiff.$dirty 
+                                                            }">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <input type="text"
+                                                    class="input-vuelidate"
+                                                    id="id_plaintiff"
+                                                    name="id_plaintiff"
+                                                    placeholder="Cédula demandante"
+                                                    disabled
+                                                    readonly
+                                                    v-bind:class="status($v.form_process.id_plaintiff)"
+                                                    v-bind:value="form_process.id_plaintiff"
+                                                    v-model.trim="$v.form_process.id_plaintiff.$model"
+                                                    @focusout="touchedVuelidate($v.form_process.id_plaintiff);">
+                                            </div>
+                                            <div class="mt-0" v-if="!$v.form_process.id_plaintiff.required && $v.form_process.id_plaintiff.$error && $v.form_process.id_plaintiff.$invalid">
+                                                <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                                    <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <input type="text"
-                                            class="input-vuelidate"
-                                            id="id_plaintiff"
-                                            name="id_plaintiff"
-                                            placeholder="Cédula demandante"
-                                            disabled
-                                            readonly
-                                            v-bind:class="status($v.form_process.id_plaintiff)"
-                                            v-bind:value="form_process.id_plaintiff"
-                                            v-model.trim="$v.form_process.id_plaintiff.$model"
-                                            @focusout="touchedVuelidate($v.form_process.id_plaintiff);">
-                                    </div>
-                                    <div class="mt-0" v-if="!$v.form_process.id_plaintiff.required && $v.form_process.id_plaintiff.$error && $v.form_process.id_plaintiff.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group col-md-8">
-                                    <label for="plaintiff">Demandante</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <i class="fas fa-user"
-                                                    v-bind:class="{ 
-                                                        'text-danger': $v.form_process.plaintiff.$error && $v.form_process.plaintiff.$invalid, 
-                                                        'text-success': !$v.form_process.plaintiff.$error && !$v.form_process.plaintiff.$invalid && $v.form_process.plaintiff.$dirty 
-                                                    }">
-                                                </i>
+        
+                                        <div class="form-group col-md-8">
+                                            <label for="plaintiff">Demandante</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="fas fa-user"
+                                                            v-bind:class="{ 
+                                                                'text-danger': $v.form_process.plaintiff.$error && $v.form_process.plaintiff.$invalid, 
+                                                                'text-success': !$v.form_process.plaintiff.$error && !$v.form_process.plaintiff.$invalid && $v.form_process.plaintiff.$dirty 
+                                                            }">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <input type="text"
+                                                    class="input-vuelidate"
+                                                    id="plaintiff"
+                                                    name="plaintiff"
+                                                    placeholder="Demandante"
+                                                    disabled
+                                                    readonly
+                                                    v-bind:class="status($v.form_process.plaintiff)"
+                                                    v-bind:value="form_process.plaintiff"
+                                                    v-model.trim="$v.form_process.plaintiff.$model"
+                                                    @focusout="touchedVuelidate($v.form_process.plaintiff);">
+                                            </div>
+                                            <div class="mt-0" v-if="!$v.form_process.plaintiff.required && $v.form_process.plaintiff.$error && $v.form_process.plaintiff.$invalid">
+                                                <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                                    <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <input type="text"
-                                            class="input-vuelidate"
-                                            id="plaintiff"
-                                            name="plaintiff"
-                                            placeholder="Demandante"
-                                            disabled
-                                            readonly
-                                            v-bind:class="status($v.form_process.plaintiff)"
-                                            v-bind:value="form_process.plaintiff"
-                                            v-model.trim="$v.form_process.plaintiff.$model"
-                                            @focusout="touchedVuelidate($v.form_process.plaintiff);">
-                                    </div>
-                                    <div class="mt-0" v-if="!$v.form_process.plaintiff.required && $v.form_process.plaintiff.$error && $v.form_process.plaintiff.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
+        
                                     </div>
                                 </div>
-
+                            </div>
+                            
+                            <div class="card card-plaintiff-defendant">
+                                <div class="card-header">
+                                    DEMANDADOS
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-row">
+        
+                                        <div class="form-group col-md-4">
+                                            <label for="id_defendant">Cédula demandado</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="fas fa-id-card"
+                                                            v-bind:class="{ 
+                                                                'text-danger': $v.form_process.id_defendant.$error && $v.form_process.id_defendant.$invalid, 
+                                                                'text-success': !$v.form_process.id_defendant.$error && !$v.form_process.id_defendant.$invalid && $v.form_process.id_defendant.$dirty 
+                                                            }">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <input type="text"
+                                                    class="input-vuelidate"
+                                                    id="id_defendant"
+                                                    name="id_defendant"
+                                                    placeholder="Cédula demandado"
+                                                    disabled
+                                                    readonly
+                                                    v-bind:class="status($v.form_process.id_defendant)"
+                                                    v-bind:value="form_process.id_defendant"
+                                                    v-model.trim="$v.form_process.id_defendant.$model"
+                                                    @focusout="touchedVuelidate($v.form_process.id_defendant);">
+                                            </div>
+                                            <div class="mt-0" v-if="!$v.form_process.id_defendant.required && $v.form_process.id_defendant.$error && $v.form_process.id_defendant.$invalid">
+                                                <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                                    <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group col-md-8">
+                                            <label for="defendant">Demandado</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="fas fa-user"
+                                                            v-bind:class="{ 
+                                                                'text-danger': $v.form_process.defendant.$error && $v.form_process.defendant.$invalid, 
+                                                                'text-success': !$v.form_process.defendant.$error && !$v.form_process.defendant.$invalid && $v.form_process.defendant.$dirty 
+                                                            }">
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                                <input type="text"
+                                                    class="input-vuelidate"
+                                                    id="defendant"
+                                                    name="defendant"
+                                                    placeholder="Demandado"
+                                                    disabled
+                                                    readonly
+                                                    v-bind:class="status($v.form_process.defendant)"
+                                                    v-bind:value="form_process.defendant"
+                                                    v-model.trim="$v.form_process.defendant.$model"
+                                                    @focusout="touchedVuelidate($v.form_process.defendant);">
+                                            </div>
+                                            <div class="mt-0" v-if="!$v.form_process.defendant.required && $v.form_process.defendant.$error && $v.form_process.defendant.$invalid">
+                                                <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                                    <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-row">
 
-                                <div class="form-group col-md-4">
-                                    <label for="id_defendant">Cédula demandado</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <i class="fas fa-id-card"
-                                                    v-bind:class="{ 
-                                                        'text-danger': $v.form_process.id_defendant.$error && $v.form_process.id_defendant.$invalid, 
-                                                        'text-success': !$v.form_process.id_defendant.$error && !$v.form_process.id_defendant.$invalid && $v.form_process.id_defendant.$dirty 
-                                                    }">
-                                                </i>
-                                            </div>
-                                        </div>
-                                        <input type="text"
-                                            class="input-vuelidate"
-                                            id="id_defendant"
-                                            name="id_defendant"
-                                            placeholder="Cédula demandado"
-                                            disabled
-                                            readonly
-                                            v-bind:class="status($v.form_process.id_defendant)"
-                                            v-bind:value="form_process.id_defendant"
-                                            v-model.trim="$v.form_process.id_defendant.$model"
-                                            @focusout="touchedVuelidate($v.form_process.id_defendant);">
-                                    </div>
-                                    <div class="mt-0" v-if="!$v.form_process.id_defendant.required && $v.form_process.id_defendant.$error && $v.form_process.id_defendant.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group col-md-8">
-                                    <label for="defendant">Demandado</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <i class="fas fa-user"
-                                                    v-bind:class="{ 
-                                                        'text-danger': $v.form_process.defendant.$error && $v.form_process.defendant.$invalid, 
-                                                        'text-success': !$v.form_process.defendant.$error && !$v.form_process.defendant.$invalid && $v.form_process.defendant.$dirty 
-                                                    }">
-                                                </i>
-                                            </div>
-                                        </div>
-                                        <input type="text"
-                                            class="input-vuelidate"
-                                            id="defendant"
-                                            name="defendant"
-                                            placeholder="Demandado"
-                                            disabled
-                                            readonly
-                                            v-bind:class="status($v.form_process.defendant)"
-                                            v-bind:value="form_process.defendant"
-                                            v-model.trim="$v.form_process.defendant.$model"
-                                            @focusout="touchedVuelidate($v.form_process.defendant);">
-                                    </div>
-                                    <div class="mt-0" v-if="!$v.form_process.defendant.required && $v.form_process.defendant.$error && $v.form_process.defendant.$invalid">
-                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="form-row">
-
-                                <div class="form-group col-md-3">
-                                    <label for="original_court">Juzgado origen</label>
+                                <div class="form-group col-md-6">
+                                    <label for="court_origin">Juzgado origen</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-gavel"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.original_court.$error && $v.form_process.original_court.$invalid, 
-                                                        'text-success': !$v.form_process.original_court.$error && !$v.form_process.original_court.$invalid && $v.form_process.original_court.$dirty 
+                                                        'text-danger': $v.form_process.court_origin.$error && $v.form_process.court_origin.$invalid, 
+                                                        'text-success': !$v.form_process.court_origin.$error && !$v.form_process.court_origin.$invalid && $v.form_process.court_origin.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate"
-                                            id="original_court"
-                                            name="original_court"
+                                            id="court_origin"
+                                            name="court_origin"
                                             placeholder="Juzgado origen"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.original_court)"
-                                            v-bind:value="form_process.original_court"
-                                            v-model.trim="$v.form_process.original_court.$model"
-                                            @focusout="touchedVuelidate($v.form_process.original_court);">
+                                            v-bind:class="status($v.form_process.court_origin)"
+                                            v-bind:value="form_process.court_origin"
+                                            v-model.trim="$v.form_process.court_origin.$model"
+                                            @focusout="touchedVuelidate($v.form_process.court_origin);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.original_court.required && $v.form_process.original_court.$error && $v.form_process.original_court.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_process.court_origin.required && $v.form_process.court_origin.$error && $v.form_process.court_origin.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-3">
-                                    <label for="destination_court">Juzgado destino</label>
+                                <div class="form-group col-md-6">
+                                    <label for="court_destination">Juzgado destino</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-gavel"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.destination_court.$error && $v.form_process.destination_court.$invalid, 
-                                                        'text-success': !$v.form_process.destination_court.$error && !$v.form_process.destination_court.$invalid && $v.form_process.destination_court.$dirty 
+                                                        'text-danger': $v.form_process.court_destination.$error && $v.form_process.court_destination.$invalid, 
+                                                        'text-success': !$v.form_process.court_destination.$error && !$v.form_process.court_destination.$invalid && $v.form_process.court_destination.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate"
-                                            id="destination_court"
-                                            name="destination_court"
+                                            id="court_destination"
+                                            name="court_destination"
                                             placeholder="Juzgado destino"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.destination_court)"
-                                            v-bind:value="form_process.destination_court"
-                                            v-model.trim="$v.form_process.destination_court.$model"
-                                            @focusout="touchedVuelidate($v.form_process.destination_court);">
+                                            v-bind:class="status($v.form_process.court_destination)"
+                                            v-bind:value="form_process.court_destination"
+                                            v-model.trim="$v.form_process.court_destination.$model"
+                                            @focusout="touchedVuelidate($v.form_process.court_destination);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.destination_court.required && $v.form_process.destination_court.$error && $v.form_process.destination_court.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_process.court_destination.required && $v.form_process.court_destination.$error && $v.form_process.court_destination.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
                                 </div>
+                            
+                            </div>
 
-                                <div class="form-group col-md-3">
+                            <div class="form-row">
+
+                                <div class="form-group col-md-6">
                                     <label for="process_class">Clase proceso</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -417,7 +435,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-6">
                                     <label for="position">Posición</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">

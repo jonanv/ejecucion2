@@ -12,8 +12,8 @@ const app = new Vue({
             plaintiff: '',
             id_defendant: '', // TODO: Debe ser un arreglo
             defendant : '',
-            original_court: '',
-            destination_court: '',
+            court_origin: '',
+            court_destination: '',
             process_class: '',
             position: '',
             additional_observation: '',
@@ -59,10 +59,10 @@ const app = new Vue({
             defendant: {
                 required
             },
-            original_court: {
+            court_origin: {
                 required
             },
-            destination_court: {
+            court_destination: {
             },
             process_class: {
                 required
@@ -148,8 +148,8 @@ const app = new Vue({
                         plaintiff: '',
                         id_defendant: '',
                         defendant: '',
-                        original_court: '',
-                        destination_court: '',
+                        court_origin: '',
+                        court_destination: '',
                         process_class: '',
                         position: '',
                         additional_observation: '',
@@ -186,8 +186,8 @@ const app = new Vue({
                 plaintiff: '',
                 id_defendant: '',
                 defendant: '',
-                original_court: '',
-                destination_court: '',
+                court_origin: '',
+                court_destination: '',
                 process_class: '',
                 position: '',
                 additional_observation: '',
@@ -236,7 +236,7 @@ const app = new Vue({
                     app.employees = response.data;
                 });
         },
-        getProcess: function() {
+        getDossier: function() {
             let radicado_format = app.form.radicado.replace(/\-/g, '');
 
             this.$v.form.$touch();
@@ -244,9 +244,19 @@ const app = new Vue({
                 this.submitStatus = 'ERROR';
             } else {
                 this.submitStatus = 'PENDING'
-                axios.post(url, {option: 'getProcess', radicado:radicado_format})
+                axios.post(url, {option: 'getDossier', radicado:radicado_format})
                     .then((response) => {
                         console.log(response);
+
+                        axios.post(url, {option: 'getAllPlaintiffOfDossier', id_dossier:response.data.id_dossier})
+                            .then((response) => {
+                                console.log(response);
+                            });
+
+                        axios.post(url, {option: 'getAllDefendantOfDossier', id_dossier:response.data.id_dossier})
+                            .then((response) => {
+                                console.log(response);
+                            });
 
                         this.$v.form_process.$touch();
                         // Datos del proceso
@@ -256,9 +266,8 @@ const app = new Vue({
                         app.form_process.plaintiff = response.data.plaintiff_name;
                         app.form_process.id_defendant = response.data.defendant_identification;
                         app.form_process.defendant = response.data.defendant_name;
-                        app.form_process.original_court = response.data.court_name;
-                        // TODO: Revisar los nomsbres destination_court = id_court_destination
-                        app.form_process.destination_court = response.data.id_court_destination;
+                        app.form_process.court_origin = response.data.court_origin_name;
+                        app.form_process.court_destination = response.data.court_destination_name;
                         app.form_process.process_class = response.data.dossier_type_name;
                         app.form_process.position = response.data.posicion;
                         app.form_process.start_date = new moment().format('DD/MM/YYYY');

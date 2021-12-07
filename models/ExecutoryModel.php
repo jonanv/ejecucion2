@@ -2,7 +2,7 @@
     require_once "ConnectionModel.php";
 
     class ExecutoryModel {
-        public static function getProcessModel($radicado) {
+        public static function getDossierModel($radicado) {
             $query = 
                 // "SELECT ubi.id AS idradicado, ubi.radicado, ubi.cedula_demandante, ubi.demandante, ubi.cedula_demandado, 
                 // ubi.demandado, pc.nombre AS claseproceso, pj.nombre AS jo, pj.id AS idjo, pr.nombre AS jd, ubi.posicion, 
@@ -15,14 +15,21 @@
                 // LEFT JOIN pa_usuario u ON dc.idusuario = u.id
                 // WHERE ubi.radicado LIKE CONCAT('%', :radicado, '%')
                 // ORDER BY dc.fecha DESC";
-                "SELECT *
+                "SELECT d.*, pla.*, def.*, 
+                co.id_court AS id_court_origin, co.court_name AS court_origin_name, 
+                cd.id_court AS id_court_destination, cd.court_name AS court_destination_name, 
+                dt.*
                 FROM dossier AS d
                 INNER JOIN dossier_plaintiff AS dp ON (dp.id_dossier = d.id_dossier)
-                INNER JOIN plaintiff AS p ON (p.id_plaintiff = dp.id_plaintiff)
+                INNER JOIN plaintiff AS pla ON (pla.id_plaintiff = dp.id_plaintiff)
                 INNER JOIN dossier_defendant AS dd ON (dd.id_dossier = d.id_dossier)
                 INNER JOIN defendant AS def ON (def.id_defendant = dd.id_defendant)
-                INNER JOIN court AS c ON (c.id_court = d.id_court_origin)
+                INNER JOIN court AS co ON (co.id_court = d.id_court_origin)
+                INNER JOIN court AS cd ON (cd.id_court = d.id_court_destination)
                 INNER JOIN dossier_type AS dt ON (dt.id_dossier_type = d.id_dossier_type)
+                -- INNER JOIN location_dossier AS ld ON (ld.id_location_dossier = d.id_location_dossier)
+                -- INNER JOIN dossier_annotation AS da ON (da.id_dossier = d.id_dossier)
+                -- INNER JOIN employee AS e ON (e.id_employee = da.id_employee)
                 WHERE radicado = :radicado";
             $response = ConnectionModel::connectMySQL()->prepare($query);
             $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
@@ -55,6 +62,42 @@
                 FROM employee 
                 WHERE enable_employee = true";
             $response = ConnectionModel::connectMySQL()->prepare($query);
+            if ($response->execute()) {
+                $data = $response->fetchAll(PDO::FETCH_ASSOC);
+            } else {
+                $data = "error";
+            }
+            return $data;
+            $response = null;
+        }
+
+        public static function getAllPlaintiffOfDossierModel($id_dossier) {
+            $query = 
+                "SELECT pla.*
+                FROM plaintiff AS pla
+                INNER JOIN dossier_plaintiff AS dp ON (dp.id_plaintiff = pla.id_plaintiff)
+                INNER JOIN dossier AS d ON (d.id_dossier = dp.id_dossier)
+                WHERE d.id_dossier = :id_dossier";
+            $response = ConnectionModel::connectMySQL()->prepare($query);
+            $response->bindParam(":id_dossier", $id_dossier, PDO::PARAM_INT);
+            if ($response->execute()) {
+                $data = $response->fetchAll(PDO::FETCH_ASSOC);
+            } else {
+                $data = "error";
+            }
+            return $data;
+            $response = null;
+        }
+
+        public static function getAllDefendantOfDossierModel($id_dossier) {
+            $query = 
+                "SELECT def.*
+                FROM defendant AS def
+                INNER JOIN dossier_defendant AS dp ON (dp.id_defendant = def.id_defendant)
+                INNER JOIN dossier AS d ON (d.id_dossier = dp.id_dossier)
+                WHERE d.id_dossier = :id_dossier";
+            $response = ConnectionModel::connectMySQL()->prepare($query);
+            $response->bindParam(":id_dossier", $id_dossier, PDO::PARAM_INT);
             if ($response->execute()) {
                 $data = $response->fetchAll(PDO::FETCH_ASSOC);
             } else {

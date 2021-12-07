@@ -70,8 +70,8 @@
         }
 
         // Executory
-        public function getProcess($radicado) {
-            $response = ExecutoryController::getProcessController($radicado);
+        public function getDossier($radicado) {
+            $response = ExecutoryController::getDossierController($radicado);
             echo json_encode($response);
         }
 
@@ -82,6 +82,16 @@
 
         public function getAllEmployees() {
             $response = ExecutoryController::getAllEmployeesController();
+            echo json_encode($response);
+        }
+
+        public function getAllPlaintiffOfDossier($id_dossier) {
+            $response = ExecutoryController::getAllPlaintiffOfDossierController($id_dossier);
+            echo json_encode($response);
+        }
+
+        public function getAllDefendantOfDossier($id_dossier) {
+            $response = ExecutoryController::getAllDefendantOfDossierController($id_dossier);
             echo json_encode($response);
         }
 
@@ -113,6 +123,7 @@
     
     // Executory
     $radicados_executory_list = (isset($_POST['radicados_executory_list'])) ? $_POST['radicados_executory_list'] : '';
+    $id_dossier = (isset($_POST['id_dossier'])) ? $_POST['id_dossier'] : '';
     
 
     $obj = new Api();
@@ -150,8 +161,8 @@
             break;
         
         // Executory
-        case 'getProcess': //
-            $obj->getProcess($radicado);
+        case 'getDossier': //
+            $obj->getDossier($radicado);
             break;
 
         case 'getAllDossierAnnotationsType': //
@@ -160,6 +171,14 @@
 
         case 'getAllEmployees': //
             $obj->getAllEmployees();
+            break;
+
+        case 'getAllPlaintiffOfDossier': //
+            $obj->getAllPlaintiffOfDossier($id_dossier);
+            break;
+
+        case 'getAllDefendantOfDossier': //
+            $obj->getAllDefendantOfDossier($id_dossier);
             break;
 
         case 'registerExecutory':

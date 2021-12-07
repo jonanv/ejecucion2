@@ -258,7 +258,7 @@ CREATE TABLE `dossier` (
 
 /*!40000 ALTER TABLE `dossier` DISABLE KEYS */;
 INSERT INTO `dossier` (`id_dossier`,`radicado`,`instance`,`date_last_action`,`delivery_date`,`date_in_dispach`,`date_out_dispach`,`fault_dossier`,`fault_dossier_date`,`end_settlement_date`,`id_location_dossier`,`id_court_origin`,`id_court_destination`,`id_employee_registered`,`dossier_registered_date`,`id_employee_archived`,`dossier_archived_date`,`dossier_archived`,`id_employee_blocked`,`dossier_blocked_date`,`id_employee_unblocked`,`dossier_unblocked_date`,`dossier_bloqued`,`id_blocked_type`,`id_dossier_type`,`digital_dossier`,`electronic_dossier`) VALUES 
- (1,'17001430300220210016000','00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14,NULL,1053816080,'2021-11-30 09:30:12',NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,2,0,1);
+ (1,'17001430300220210016000','00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14,1,1053816080,'2021-11-30 09:30:12',NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,2,0,1);
 /*!40000 ALTER TABLE `dossier` ENABLE KEYS */;
 
 
@@ -270,13 +270,16 @@ DROP TABLE IF EXISTS `dossier_annotation`;
 CREATE TABLE `dossier_annotation` (
   `id_dossier_annotation` int(11) NOT NULL AUTO_INCREMENT,
   `dossier_annotation_date` datetime NOT NULL,
-  `id_annotation_type` int(11) NOT NULL,
   `id_dossier` bigint(20) NOT NULL,
+  `id_employee` bigint(20) NOT NULL,
+  `id_annotation_type` int(11) NOT NULL,
   PRIMARY KEY (`id_dossier_annotation`) USING BTREE,
   KEY `id_dossier` (`id_dossier`),
   KEY `id_annotation_type` (`id_annotation_type`),
+  KEY `id_employee` (`id_employee`),
+  CONSTRAINT `dossier_annotation_ibfk_1` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE,
   CONSTRAINT `dossier_annotation_ibfk_2` FOREIGN KEY (`id_annotation_type`) REFERENCES `annotation_type` (`id_annotation_type`) ON UPDATE CASCADE,
-  CONSTRAINT `dossier_annotation_ibfk_1` FOREIGN KEY (`id_dossier`) REFERENCES `dossier` (`id_dossier`) ON UPDATE CASCADE
+  CONSTRAINT `dossier_annotation_ibfk_3` FOREIGN KEY (`id_employee`) REFERENCES `employee` (`id_employee`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --

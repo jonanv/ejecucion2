@@ -1,7 +1,7 @@
 <?php
     class ExecutoryController {
-        public static function getProcessController($radicado) {
-            $response = ExecutoryModel::getProcessModel($radicado);
+        public static function getDossierController($radicado) {
+            $response = ExecutoryModel::getDossierModel($radicado);
             return $response;
         }
 
@@ -12,6 +12,16 @@
 
         public static function getAllEmployeesController() {
             $response = ExecutoryModel::getAllEmployeesModel();
+            return $response;
+        }
+
+        public static function getAllPlaintiffOfDossierController($id_dossier) {
+            $response = ExecutoryModel::getAllPlaintiffOfDossierModel($id_dossier);
+            return $response;
+        }
+        
+        public static function getAllDefendantOfDossierController($id_dossier) {
+            $response = ExecutoryModel::getAllDefendantOfDossierModel($id_dossier);
             return $response;
         }
 
