@@ -251,11 +251,13 @@ const app = new Vue({
                         axios.post(url, {option: 'getAllPlaintiffOfDossier', id_dossier:response.data.id_dossier})
                             .then((response) => {
                                 console.log(response);
+                                // plaintiffs
                             });
 
                         axios.post(url, {option: 'getAllDefendantOfDossier', id_dossier:response.data.id_dossier})
                             .then((response) => {
                                 console.log(response);
+                                // defendants
                             });
 
                         this.$v.form_process.$touch();

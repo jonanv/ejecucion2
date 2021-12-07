@@ -15,15 +15,15 @@
                 // LEFT JOIN pa_usuario u ON dc.idusuario = u.id
                 // WHERE ubi.radicado LIKE CONCAT('%', :radicado, '%')
                 // ORDER BY dc.fecha DESC";
-                "SELECT d.*, pla.*, def.*, 
+                "SELECT d.*, -- pla.*, def.*, 
                 co.id_court AS id_court_origin, co.court_name AS court_origin_name, 
                 cd.id_court AS id_court_destination, cd.court_name AS court_destination_name, 
                 dt.*
                 FROM dossier AS d
-                INNER JOIN dossier_plaintiff AS dp ON (dp.id_dossier = d.id_dossier)
-                INNER JOIN plaintiff AS pla ON (pla.id_plaintiff = dp.id_plaintiff)
-                INNER JOIN dossier_defendant AS dd ON (dd.id_dossier = d.id_dossier)
-                INNER JOIN defendant AS def ON (def.id_defendant = dd.id_defendant)
+                -- INNER JOIN dossier_plaintiff AS dp ON (dp.id_dossier = d.id_dossier)
+                -- INNER JOIN plaintiff AS pla ON (pla.id_plaintiff = dp.id_plaintiff)
+                -- INNER JOIN dossier_defendant AS dd ON (dd.id_dossier = d.id_dossier)
+                -- INNER JOIN defendant AS def ON (def.id_defendant = dd.id_defendant)
                 INNER JOIN court AS co ON (co.id_court = d.id_court_origin)
                 INNER JOIN court AS cd ON (cd.id_court = d.id_court_destination)
                 INNER JOIN dossier_type AS dt ON (dt.id_dossier_type = d.id_dossier_type)
