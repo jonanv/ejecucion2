@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-04T04:14:23.158Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36" etag="SWEGeoWUalzhQjirCXiV" version="15.8.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-07T13:07:00.742Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="TLeUrydZ_AfS4wHVZwV1" version="15.8.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="3336" dy="2623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="3652" dy="2782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -206,7 +206,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-77" value="dossier_type (pa_clase_proceso)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="517.5" y="1260" width="255" height="130" as="geometry" />
+          <mxGeometry x="510" y="1262" width="255" height="130" as="geometry" />
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-78" value="+ id_dossier_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-77" vertex="1">
           <mxGeometry y="26" width="255" height="26" as="geometry" />
@@ -506,8 +506,8 @@
             <mxPoint x="880" y="1325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-125" value="- Tutela&lt;br&gt;- Demanda (Proceso ejecutivo)&lt;br&gt;&lt;br&gt;- Ejecutivo con título hipotecario&lt;br&gt;- Ejecutivo singular&lt;br&gt;- Divisorios&lt;br&gt;- Ejecutivo Mixto&lt;br&gt;- Abreviado&lt;br&gt;- Ejecutivo con título prendario&lt;br&gt;- Ordinario&lt;br&gt;- Sucesión&lt;br&gt;- Verbal (Oralidad)&lt;br&gt;- Verbal (1)&lt;br&gt;- No registra&lt;br&gt;- Acción de tutela (R)&lt;br&gt;- Especial&lt;br&gt;- Verbal sumario&lt;br&gt;- Habeas corpus" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="840" y="1305" width="230" height="285" as="geometry" />
+        <mxCell id="kAV78_8R-8U5BCedtc6I-125" value="- No registra&lt;br&gt;- Acción de tutela (R)&lt;br&gt;- Habeas corpus&lt;br&gt;- Ordinario&lt;br&gt;- Abreviado&lt;br&gt;- Verbal sumario&lt;br&gt;- Verbal (Oralidad)&lt;br&gt;- Verbal (1)&lt;br&gt;- Ejecutivo mixto (Proceso ejecutivo)&lt;br&gt;- Divisorios&lt;br&gt;- Ejecutivo singular (Proceso ejecutivo)&lt;br&gt;- Ejecutivo con título hipotecario (Proceso ejecutivo)&lt;br&gt;- Ejecutivo con título prendario (Proceso ejecutivo)&lt;br&gt;- Especial&lt;br&gt;- Sucesión" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1330" width="280" height="285" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-81" target="kAV78_8R-8U5BCedtc6I-129" edge="1">
           <mxGeometry relative="1" as="geometry">
