@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-07T13:07:00.742Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="TLeUrydZ_AfS4wHVZwV1" version="15.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-07T13:07:12.730Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="kdvpeuNkKgUt8_4HSjBP" version="15.8.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3652" dy="2782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -507,7 +507,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-125" value="- No registra&lt;br&gt;- Acción de tutela (R)&lt;br&gt;- Habeas corpus&lt;br&gt;- Ordinario&lt;br&gt;- Abreviado&lt;br&gt;- Verbal sumario&lt;br&gt;- Verbal (Oralidad)&lt;br&gt;- Verbal (1)&lt;br&gt;- Ejecutivo mixto (Proceso ejecutivo)&lt;br&gt;- Divisorios&lt;br&gt;- Ejecutivo singular (Proceso ejecutivo)&lt;br&gt;- Ejecutivo con título hipotecario (Proceso ejecutivo)&lt;br&gt;- Ejecutivo con título prendario (Proceso ejecutivo)&lt;br&gt;- Especial&lt;br&gt;- Sucesión" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="810" y="1330" width="280" height="285" as="geometry" />
+          <mxGeometry x="810" y="1344" width="280" height="235" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-81" target="kAV78_8R-8U5BCedtc6I-129" edge="1">
           <mxGeometry relative="1" as="geometry">
