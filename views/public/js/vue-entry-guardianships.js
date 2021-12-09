@@ -118,7 +118,8 @@ const app = new Vue({
             } else {
                 console.log(radicado);
                 this.migrateStatus = 'PENDING_' + radicado;
-    
+                
+                // TODO: cambiar nombre del metodo getProcessInJusticia -> getDossierPartsInJusticia
                 await axios.post(url, {option: 'getProcessInJusticia', radicado:radicado})
                     .then((response) => {
                         console.log(response);

@@ -16,14 +16,14 @@ const app = new Vue({
             court_destination_name: '',
             dossier_type_name: '',
             position: '',
-            additional_observation: '',
+            annotation_type: '',
             start_date: '',
             days: '',
             end_date: '',
             assigned_to: '',
-            date: '',
-            user: '',
-            observation: ''
+            date: '', // dossier_annotation_date_last TODO: organizar ultima actuacion
+            user: '', // id_employee_last
+            observation: '' // id_annotation_type_last
         },
         loading: true,
         submitStatus: null,
@@ -71,7 +71,7 @@ const app = new Vue({
             },
             position: {
             },
-            additional_observation: {
+            annotation_type: {
                 required
             },
             start_date: {
@@ -122,7 +122,7 @@ const app = new Vue({
         },
         // BOTONES
         btnAddRadicado: function() {
-            // console.log(app.form_dossier);
+            console.log(app.form_dossier);
             if (!this.$v.form_dossier.$invalid) {
                 let isInArray = app.radicados_executory.includes(app.form_dossier.radicado);
                 if (isInArray) {
@@ -146,15 +146,15 @@ const app = new Vue({
                     app.form_dossier = {
                         id_dossier: '',
                         radicado: '',
-                        id_plaintiff: '',
-                        plaintiff: '',
-                        id_defendant: '',
-                        defendant: '',
+                        id_plaintiff: [],
+                        plaintiff: [],
+                        id_defendant: [],
+                        defendant: [],
                         court_origin_name: '',
                         court_destination_name: '',
                         dossier_type_name: '',
                         position: '',
-                        additional_observation: '',
+                        annotation_type: '',
                         start_date: '',
                         days: '',
                         end_date: '',
@@ -164,6 +164,8 @@ const app = new Vue({
                         observation: '',
                     }
                     this.$v.form_dossier.$reset();
+                    app.plaintiffs = [];
+                    app.defendants = [];
                 }
             }
         },
@@ -184,15 +186,15 @@ const app = new Vue({
             app.form_dossier = {
                 id_dossier: '',
                 radicado: '',
-                id_plaintiff: '',
-                plaintiff: '',
-                id_defendant: '',
-                defendant: '',
+                id_plaintiff: [],
+                plaintiff: [],
+                id_defendant: [],
+                defendant: [],
                 court_origin_name: '',
                 court_destination_name: '',
                 dossier_type_name: '',
                 position: '',
-                additional_observation: '',
+                annotation_type: '',
                 start_date: '',
                 days: '',
                 end_date: '',
@@ -203,6 +205,8 @@ const app = new Vue({
             }
             this.$v.form.$reset();
             this.$v.form_dossier.$reset();
+            app.plaintiffs = [];
+            app.defendants = [];
         },
         btnRegisterExecutory: function() {
             if (app.radicados_executory_list.length == 0) {
@@ -271,6 +275,8 @@ const app = new Vue({
                                     app.form_dossier.defendant.push(defendant.defendant_name);
                                 });
                             });
+
+                        // TODO: Obtener la ultima actuacion del expediente
 
                         this.$v.form_dossier.$touch();
                         // Datos del proceso

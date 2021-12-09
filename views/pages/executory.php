@@ -465,26 +465,26 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="additional_observation">Observacion</label>
+                                <label for="annotation_type">Observacion</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <i class="fas fa-comment"
                                                 v-bind:class="{ 
-                                                    'text-danger': $v.form_dossier.additional_observation.$error && $v.form_dossier.additional_observation.$invalid, 
-                                                    'text-success': !$v.form_dossier.additional_observation.$error && !$v.form_dossier.additional_observation.$invalid && $v.form_dossier.additional_observation.$dirty 
+                                                    'text-danger': $v.form_dossier.annotation_type.$error && $v.form_dossier.annotation_type.$invalid, 
+                                                    'text-success': !$v.form_dossier.annotation_type.$error && !$v.form_dossier.annotation_type.$invalid && $v.form_dossier.annotation_type.$dirty 
                                                 }">
                                             </i>
                                         </div>
                                     </div>
                                     <select class="select-vuelidate" 
-                                        id="additional_observation"
-                                        name="additional_observation" 
+                                        id="annotation_type"
+                                        name="annotation_type" 
                                         placeholder="Observacion"
-                                        v-bind:class="status($v.form_dossier.additional_observation)"
-                                        v-bind:value="form_dossier.additional_observation"
-                                        v-model.trim="$v.form_dossier.additional_observation.$model"
-                                        @focusout="touchedVuelidate($v.form_dossier.additional_observation);">
+                                        v-bind:class="status($v.form_dossier.annotation_type)"
+                                        v-bind:value="form_dossier.annotation_type"
+                                        v-model.trim="$v.form_dossier.annotation_type.$model"
+                                        @focusout="touchedVuelidate($v.form_dossier.annotation_type);">
                                         <option value="" disabled="" selected="">
                                             Seleccione una opción
                                         </option>
@@ -494,7 +494,7 @@
                                         </option>
                                     </select>
                                 </div>
-                                <div class="mt-0" v-if="!$v.form_dossier.additional_observation.required && $v.form_dossier.additional_observation.$error && $v.form_dossier.additional_observation.$invalid">
+                                <div class="mt-0" v-if="!$v.form_dossier.annotation_type.required && $v.form_dossier.annotation_type.$error && $v.form_dossier.annotation_type.$invalid">
                                     <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                         <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                     </div>
@@ -718,8 +718,7 @@
                                 <tr v-for="(radicado, index) in radicados_executory_list" :key="index">
                                     <th scope="row">{{ radicado.id_dossier }}</th>
                                     <td>{{ radicado.radicado }}</td>
-                                    <td>{{ dossier_annotations[radicado.additional_observation - 1].observacion }}</td>
-                                    <!-- TODO: Organizar la forma en que se consulta la observacion -->
+                                    <td>{{ annotation_types[radicado.annotation_type - 1].annotation_type_name }}</td>
                                     <td>{{ radicado.start_date }}</td>
                                     <td>{{ radicado.days }}</td>
                                     <td>{{ radicado.end_date }}</td>

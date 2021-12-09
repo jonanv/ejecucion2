@@ -4,33 +4,18 @@
     class ExecutoryModel {
         public static function getDossierModel($radicado) {
             $query = 
-                // "SELECT ubi.id AS idradicado, ubi.radicado, ubi.cedula_demandante, ubi.demandante, ubi.cedula_demandado, 
-                // ubi.demandado, pc.nombre AS claseproceso, pj.nombre AS jo, pj.id AS idjo, pr.nombre AS jd, ubi.posicion, 
-                // ubi.observacion_archivo, dc.fecha, dc.observacion, u.empleado
-                // FROM ubicacion_expediente ubi 
-                // LEFT JOIN pa_clase_proceso pc ON ubi.idclase_proceso = pc.id
-                // LEFT JOIN pa_juzgado pj ON ubi.idjuzgado = pj.id
-                // LEFT JOIN juzgado_destino pr ON ubi.idjuzgado_reparto = pr.id
-                // LEFT JOIN detalle_correspondencia dc ON ubi.id = dc.idcorrespondencia
-                // LEFT JOIN pa_usuario u ON dc.idusuario = u.id
-                // WHERE ubi.radicado LIKE CONCAT('%', :radicado, '%')
-                // ORDER BY dc.fecha DESC";
-                "SELECT d.*, -- pla.*, def.*, 
+                "SELECT d.*,
                 co.id_court AS id_court_origin, co.court_name AS court_origin_name, 
                 cd.id_court AS id_court_destination, cd.court_name AS court_destination_name, 
-                dt.*
+                dt.*, e.*
                 FROM dossier AS d
-                -- INNER JOIN dossier_plaintiff AS dp ON (dp.id_dossier = d.id_dossier)
-                -- INNER JOIN plaintiff AS pla ON (pla.id_plaintiff = dp.id_plaintiff)
-                -- INNER JOIN dossier_defendant AS dd ON (dd.id_dossier = d.id_dossier)
-                -- INNER JOIN defendant AS def ON (def.id_defendant = dd.id_defendant)
                 INNER JOIN court AS co ON (co.id_court = d.id_court_origin)
                 INNER JOIN court AS cd ON (cd.id_court = d.id_court_destination)
                 INNER JOIN dossier_type AS dt ON (dt.id_dossier_type = d.id_dossier_type)
                 -- INNER JOIN location_dossier AS ld ON (ld.id_location_dossier = d.id_location_dossier)
-                -- INNER JOIN dossier_annotation AS da ON (da.id_dossier = d.id_dossier)
-                -- INNER JOIN employee AS e ON (e.id_employee = da.id_employee)
+                INNER JOIN employee AS e ON (e.id_employee = d.id_employee_registered)
                 WHERE radicado = :radicado";
+                // TODO: Hacer la consulta para que devuelva el expediente con juzgado de destino vacio y si tiene dato
             $response = ConnectionModel::connectMySQL()->prepare($query);
             $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
             if ($response->execute()) {
