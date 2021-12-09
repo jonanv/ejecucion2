@@ -5,8 +5,8 @@
             return $response;
         }
 
-        public static function getAllDossierAnnotationsTypeController() {
-            $response = ExecutoryModel::getAllDossierAnnotationsTypeModel();
+        public static function getAllAnnotationTypesController() {
+            $response = ExecutoryModel::getAllAnnotationTypesModel();
             return $response;
         }
 
@@ -15,13 +15,13 @@
             return $response;
         }
 
-        public static function getAllPlaintiffOfDossierController($id_dossier) {
-            $response = ExecutoryModel::getAllPlaintiffOfDossierModel($id_dossier);
+        public static function getAllPlaintiffsOfDossierController($id_dossier) {
+            $response = ExecutoryModel::getAllPlaintiffsOfDossierModel($id_dossier);
             return $response;
         }
         
-        public static function getAllDefendantOfDossierController($id_dossier) {
-            $response = ExecutoryModel::getAllDefendantOfDossierModel($id_dossier);
+        public static function getAllDefendantsOfDossierController($id_dossier) {
+            $response = ExecutoryModel::getAllDefendantsOfDossierModel($id_dossier);
             return $response;
         }
 

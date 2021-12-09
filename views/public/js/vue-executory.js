@@ -5,16 +5,16 @@ const app = new Vue({
         form: {
             radicado: '',
         },
-        form_process: {
-            id_radicado: '',
+        form_dossier: {
+            id_dossier: '',
             radicado: '',
-            id_plaintiff: '', // TODO: Debe ser un arreglo
-            plaintiff: '',
-            id_defendant: '', // TODO: Debe ser un arreglo
-            defendant : '',
-            court_origin: '',
-            court_destination: '',
-            process_class: '',
+            id_plaintiff: [],
+            plaintiff: [],
+            id_defendant: [],
+            defendant : [],
+            court_origin_name: '',
+            court_destination_name: '',
+            dossier_type_name: '',
             position: '',
             additional_observation: '',
             start_date: '',
@@ -28,10 +28,12 @@ const app = new Vue({
         loading: true,
         submitStatus: null,
         registerStatus: null,
-        dossier_annotations: [],
+        annotation_types: [],
         employees: [],
         radicados_executory_list: [],
-        radicados_executory: []
+        radicados_executory: [],
+        plaintiffs: [],
+        defendants: []
     },
     validations: {
         form: {
@@ -40,8 +42,8 @@ const app = new Vue({
                 minLength: minLength(29)
             }
         },
-        form_process: {
-            id_radicado: {
+        form_dossier: {
+            id_dossier: {
                 required
             },
             radicado: {
@@ -59,12 +61,12 @@ const app = new Vue({
             defendant: {
                 required
             },
-            court_origin: {
+            court_origin_name: {
                 required
             },
-            court_destination: {
+            court_destination_name: {
             },
-            process_class: {
+            dossier_type_name: {
                 required
             },
             position: {
@@ -97,7 +99,7 @@ const app = new Vue({
         });
     },
     created() {
-        this.getAllDossierAnnotationsType();
+        this.getAllAnnotationTypes();
         this.getAllEmployees();
     },
     computed: {
@@ -113,27 +115,27 @@ const app = new Vue({
             }
         },
         touchedVuelidate(validation) {
-            app.form_process.start_date = document.getElementById('start_date').value;
-            app.form_process.end_date = document.getElementById('end_date').value;
+            app.form_dossier.start_date = document.getElementById('start_date').value;
+            app.form_dossier.end_date = document.getElementById('end_date').value;
 
             validation.$touch();
         },
         // BOTONES
         btnAddRadicado: function() {
-            // console.log(app.form_process);
-            if (!this.$v.form_process.$invalid) {
-                let isInArray = app.radicados_executory.includes(app.form_process.radicado);
+            // console.log(app.form_dossier);
+            if (!this.$v.form_dossier.$invalid) {
+                let isInArray = app.radicados_executory.includes(app.form_dossier.radicado);
                 if (isInArray) {
                     Swal.fire({
                         title: '!El radicado ya existe!',
-                        text: 'El radicado ' + app.form_process.radicado + ' ya existe en la tabla',
+                        text: 'El radicado ' + app.form_dossier.radicado + ' ya existe en la tabla',
                         icon: 'error',
                         confirmButtonColor: '#3085d6',
                         allowOutsideClick: false
                     });
                 } else {
-                    app.radicados_executory_list.push(app.form_process);
-                    app.radicados_executory.push(app.form_process.radicado);
+                    app.radicados_executory_list.push(app.form_dossier);
+                    app.radicados_executory.push(app.form_dossier.radicado);
                     
                     $('#table_datatable').DataTable().destroy();
                     let init = this;
@@ -141,16 +143,16 @@ const app = new Vue({
                         init.initDataTables();
                     });
     
-                    app.form_process = {
-                        id_radicado: '',
+                    app.form_dossier = {
+                        id_dossier: '',
                         radicado: '',
                         id_plaintiff: '',
                         plaintiff: '',
                         id_defendant: '',
                         defendant: '',
-                        court_origin: '',
-                        court_destination: '',
-                        process_class: '',
+                        court_origin_name: '',
+                        court_destination_name: '',
+                        dossier_type_name: '',
                         position: '',
                         additional_observation: '',
                         start_date: '',
@@ -161,7 +163,7 @@ const app = new Vue({
                         user: '',
                         observation: '',
                     }
-                    this.$v.form_process.$reset();
+                    this.$v.form_dossier.$reset();
                 }
             }
         },
@@ -179,16 +181,16 @@ const app = new Vue({
             app.form = {
                 radicado: ''
             }
-            app.form_process = {
-                id_radicado: '',
+            app.form_dossier = {
+                id_dossier: '',
                 radicado: '',
                 id_plaintiff: '',
                 plaintiff: '',
                 id_defendant: '',
                 defendant: '',
-                court_origin: '',
-                court_destination: '',
-                process_class: '',
+                court_origin_name: '',
+                court_destination_name: '',
+                dossier_type_name: '',
                 position: '',
                 additional_observation: '',
                 start_date: '',
@@ -200,7 +202,7 @@ const app = new Vue({
                 observation: '',
             }
             this.$v.form.$reset();
-            this.$v.form_process.$reset();
+            this.$v.form_dossier.$reset();
         },
         btnRegisterExecutory: function() {
             if (app.radicados_executory_list.length == 0) {
@@ -222,11 +224,11 @@ const app = new Vue({
             }
         },
         // PROCEDIMIENTOS
-        getAllDossierAnnotationsType: function() {
-            axios.post(url, {option: 'getAllDossierAnnotationsType'})
+        getAllAnnotationTypes: function() {
+            axios.post(url, {option: 'getAllAnnotationTypes'})
                 .then((response) => {
                     console.log(response);
-                    app.dossier_annotations = response.data;
+                    app.annotation_types = response.data;
                 });
         },
         getAllEmployees: function() {
@@ -248,42 +250,48 @@ const app = new Vue({
                     .then((response) => {
                         console.log(response);
 
-                        axios.post(url, {option: 'getAllPlaintiffOfDossier', id_dossier:response.data.id_dossier})
+                        axios.post(url, {option: 'getAllPlaintiffsOfDossier', id_dossier:response.data.id_dossier})
                             .then((response) => {
                                 console.log(response);
                                 // plaintiffs
+                                app.plaintiffs = response.data;
+                                app.plaintiffs.forEach(plaintiff => {
+                                    app.form_dossier.id_plaintiff.push(plaintiff.plaintiff_identification);
+                                    app.form_dossier.plaintiff.push(plaintiff.plaintiff_name);
+                                });
                             });
 
-                        axios.post(url, {option: 'getAllDefendantOfDossier', id_dossier:response.data.id_dossier})
+                        axios.post(url, {option: 'getAllDefendantsOfDossier', id_dossier:response.data.id_dossier})
                             .then((response) => {
                                 console.log(response);
                                 // defendants
+                                app.defendants = response.data;
+                                app.defendants.forEach(defendant => {
+                                    app.form_dossier.id_defendant.push(defendant.defendant_identification);
+                                    app.form_dossier.defendant.push(defendant.defendant_name);
+                                });
                             });
 
-                        this.$v.form_process.$touch();
+                        this.$v.form_dossier.$touch();
                         // Datos del proceso
-                        app.form_process.id_radicado = response.data.id_dossier;
-                        app.form_process.radicado = response.data.radicado;
-                        app.form_process.id_plaintiff = response.data.plaintiff_identification;
-                        app.form_process.plaintiff = response.data.plaintiff_name;
-                        app.form_process.id_defendant = response.data.defendant_identification;
-                        app.form_process.defendant = response.data.defendant_name;
-                        app.form_process.court_origin = response.data.court_origin_name;
-                        app.form_process.court_destination = response.data.court_destination_name;
-                        app.form_process.process_class = response.data.dossier_type_name;
-                        app.form_process.position = response.data.posicion;
-                        app.form_process.start_date = new moment().format('DD/MM/YYYY');
+                        app.form_dossier.id_dossier = response.data.id_dossier;
+                        app.form_dossier.radicado = response.data.radicado;
+                        app.form_dossier.court_origin_name = response.data.court_origin_name;
+                        app.form_dossier.court_destination_name = response.data.court_destination_name;
+                        app.form_dossier.dossier_type_name = response.data.dossier_type_name;
+                        app.form_dossier.position = response.data.posicion;
+                        app.form_dossier.start_date = new moment().format('DD/MM/YYYY');
                         // Ultima obervacion
-                        app.form_process.date = response.data.dossier_registered_date;
-                        app.form_process.user = response.data.id_employee_registered;
-                        app.form_process.observation = response.data.observacion;
+                        app.form_dossier.date = response.data.dossier_registered_date;
+                        app.form_dossier.user = response.data.id_employee_registered;
+                        app.form_dossier.observation = response.data.observacion;
                         this.submitStatus = 'OK'
                     });
             }
         },
         calculateDaysToEndDate: function() {
-            if (app.form_process.start_date && Number.isInteger(parseInt(app.form_process.days))) {
-                let days = app.form_process.days;
+            if (app.form_dossier.start_date && Number.isInteger(parseInt(app.form_dossier.days))) {
+                let days = app.form_dossier.days;
                 // 0: "Sunday"
                 // 1: "Monday"
                 // 2: "Tuesday"
@@ -293,7 +301,7 @@ const app = new Vue({
                 // 6: "Saturday"
                 let end_date = '';
                 for (let day = 1; day <= days; day++) {
-                    let date = moment(app.form_process.start_date, 'DD/MM/YYYY');
+                    let date = moment(app.form_dossier.start_date, 'DD/MM/YYYY');
                     end_date = date.add(parseInt(day), 'days');
                     // console.log(end_date.format('DD/MM/YYYY'));
     
@@ -303,9 +311,9 @@ const app = new Vue({
                         days++;
                     }
                 }
-                app.form_process.end_date = end_date.format('DD/MM/YYYY');
-            } else if (app.form_process.days === '') {
-                app.form_process.end_date = '';
+                app.form_dossier.end_date = end_date.format('DD/MM/YYYY');
+            } else if (app.form_dossier.days === '') {
+                app.form_dossier.end_date = '';
             }
         },
         isHoliday: function(end_date) {

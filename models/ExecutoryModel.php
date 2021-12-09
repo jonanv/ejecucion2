@@ -42,7 +42,7 @@
             $response = null;
         }
 
-        public static function getAllDossierAnnotationsTypeModel() {
+        public static function getAllAnnotationTypesModel() {
             $query = 
                 "SELECT * 
                 FROM annotation_type";
@@ -71,7 +71,7 @@
             $response = null;
         }
 
-        public static function getAllPlaintiffOfDossierModel($id_dossier) {
+        public static function getAllPlaintiffsOfDossierModel($id_dossier) {
             $query = 
                 "SELECT pla.*
                 FROM plaintiff AS pla
@@ -89,7 +89,7 @@
             $response = null;
         }
 
-        public static function getAllDefendantOfDossierModel($id_dossier) {
+        public static function getAllDefendantsOfDossierModel($id_dossier) {
             $query = 
                 "SELECT def.*
                 FROM defendant AS def

@@ -117,31 +117,31 @@
                             <div class="form-row">
 
                                 <div class="form-group col-md-4">
-                                    <label for="id_radicado">Id radicado</label>
+                                    <label for="id_dossier">Id radicado</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-list-ol"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.id_radicado.$error && $v.form_process.id_radicado.$invalid, 
-                                                        'text-success': !$v.form_process.id_radicado.$error && !$v.form_process.id_radicado.$invalid && $v.form_process.id_radicado.$dirty 
+                                                        'text-danger': $v.form_dossier.id_dossier.$error && $v.form_dossier.id_dossier.$invalid, 
+                                                        'text-success': !$v.form_dossier.id_dossier.$error && !$v.form_dossier.id_dossier.$invalid && $v.form_dossier.id_dossier.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate"
-                                            id="id_radicado"
-                                            name="id_radicado"
+                                            id="id_dossier"
+                                            name="id_dossier"
                                             placeholder="Id radicado"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.id_radicado)"
-                                            v-bind:value="form_process.id_radicado"
-                                            v-model.trim="$v.form_process.id_radicado.$model"
-                                            @focusout="touchedVuelidate($v.form_process.id_radicado);">
+                                            v-bind:class="status($v.form_dossier.id_dossier)"
+                                            v-bind:value="form_dossier.id_dossier"
+                                            v-model.trim="$v.form_dossier.id_dossier.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.id_dossier);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.id_radicado.required && $v.form_process.id_radicado.$error && $v.form_process.id_radicado.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.id_dossier.required && $v.form_dossier.id_dossier.$error && $v.form_dossier.id_dossier.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
@@ -155,8 +155,8 @@
                                             <div class="input-group-text">
                                                 <i class="fas fa-file-contract"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.radicado.$error && $v.form_process.radicado.$invalid, 
-                                                        'text-success': !$v.form_process.radicado.$error && !$v.form_process.radicado.$invalid && $v.form_process.radicado.$dirty 
+                                                        'text-danger': $v.form_dossier.radicado.$error && $v.form_dossier.radicado.$invalid, 
+                                                        'text-success': !$v.form_dossier.radicado.$error && !$v.form_dossier.radicado.$invalid && $v.form_dossier.radicado.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -168,12 +168,12 @@
                                             placeholder="Radicado"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.radicado)"
-                                            v-bind:value="form_process.radicado"
-                                            v-model.trim="$v.form_process.radicado.$model"
-                                            @focusout="touchedVuelidate($v.form_process.radicado);">
+                                            v-bind:class="status($v.form_dossier.radicado)"
+                                            v-bind:value="form_dossier.radicado"
+                                            v-model.trim="$v.form_dossier.radicado.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.radicado);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.radicado.required && $v.form_process.radicado.$error && $v.form_process.radicado.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.radicado.required && $v.form_dossier.radicado.$error && $v.form_dossier.radicado.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
@@ -188,7 +188,7 @@
                                     DEMANDANTES
                                 </div>
                                 <div class="card-body">
-                                    <div class="form-row">
+                                    <div class="form-row" v-for="(plaintiff, index) in plaintiffs" :key="index">
         
                                         <div class="form-group col-md-4">
                                             <label for="id_plaintiff">Cédula demandante</label>
@@ -197,8 +197,8 @@
                                                     <div class="input-group-text">
                                                         <i class="fas fa-id-card"
                                                             v-bind:class="{ 
-                                                                'text-danger': $v.form_process.id_plaintiff.$error && $v.form_process.id_plaintiff.$invalid, 
-                                                                'text-success': !$v.form_process.id_plaintiff.$error && !$v.form_process.id_plaintiff.$invalid && $v.form_process.id_plaintiff.$dirty 
+                                                                'text-danger': $v.form_dossier.id_plaintiff.$error && $v.form_dossier.id_plaintiff.$invalid, 
+                                                                'text-success': !$v.form_dossier.id_plaintiff.$error && !$v.form_dossier.id_plaintiff.$invalid && $v.form_dossier.id_plaintiff.$dirty 
                                                             }">
                                                         </i>
                                                     </div>
@@ -210,12 +210,12 @@
                                                     placeholder="Cédula demandante"
                                                     disabled
                                                     readonly
-                                                    v-bind:class="status($v.form_process.id_plaintiff)"
-                                                    v-bind:value="form_process.id_plaintiff"
-                                                    v-model.trim="$v.form_process.id_plaintiff.$model"
-                                                    @focusout="touchedVuelidate($v.form_process.id_plaintiff);">
+                                                    v-bind:class="status($v.form_dossier.id_plaintiff)"
+                                                    v-bind:value="plaintiff.plaintiff_identification"
+                                                    v-model.trim="plaintiff.plaintiff_identification"
+                                                    @focusout="touchedVuelidate($v.form_dossier.id_plaintiff);">
                                             </div>
-                                            <div class="mt-0" v-if="!$v.form_process.id_plaintiff.required && $v.form_process.id_plaintiff.$error && $v.form_process.id_plaintiff.$invalid">
+                                            <div class="mt-0" v-if="!$v.form_dossier.id_plaintiff.required && $v.form_dossier.id_plaintiff.$error && $v.form_dossier.id_plaintiff.$invalid">
                                                 <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                                     <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                                 </div>
@@ -229,8 +229,8 @@
                                                     <div class="input-group-text">
                                                         <i class="fas fa-user"
                                                             v-bind:class="{ 
-                                                                'text-danger': $v.form_process.plaintiff.$error && $v.form_process.plaintiff.$invalid, 
-                                                                'text-success': !$v.form_process.plaintiff.$error && !$v.form_process.plaintiff.$invalid && $v.form_process.plaintiff.$dirty 
+                                                                'text-danger': $v.form_dossier.plaintiff.$error && $v.form_dossier.plaintiff.$invalid, 
+                                                                'text-success': !$v.form_dossier.plaintiff.$error && !$v.form_dossier.plaintiff.$invalid && $v.form_dossier.plaintiff.$dirty 
                                                             }">
                                                         </i>
                                                     </div>
@@ -242,12 +242,12 @@
                                                     placeholder="Demandante"
                                                     disabled
                                                     readonly
-                                                    v-bind:class="status($v.form_process.plaintiff)"
-                                                    v-bind:value="form_process.plaintiff"
-                                                    v-model.trim="$v.form_process.plaintiff.$model"
-                                                    @focusout="touchedVuelidate($v.form_process.plaintiff);">
+                                                    v-bind:class="status($v.form_dossier.plaintiff)"
+                                                    v-bind:value="plaintiff.plaintiff_name"
+                                                    v-model.trim="plaintiff.plaintiff_name"
+                                                    @focusout="touchedVuelidate($v.form_dossier.plaintiff);">
                                             </div>
-                                            <div class="mt-0" v-if="!$v.form_process.plaintiff.required && $v.form_process.plaintiff.$error && $v.form_process.plaintiff.$invalid">
+                                            <div class="mt-0" v-if="!$v.form_dossier.plaintiff.required && $v.form_dossier.plaintiff.$error && $v.form_dossier.plaintiff.$invalid">
                                                 <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                                     <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                                 </div>
@@ -263,7 +263,7 @@
                                     DEMANDADOS
                                 </div>
                                 <div class="card-body">
-                                    <div class="form-row">
+                                    <div class="form-row" v-for="(defendant, index) in defendants" :key="index">
         
                                         <div class="form-group col-md-4">
                                             <label for="id_defendant">Cédula demandado</label>
@@ -272,8 +272,8 @@
                                                     <div class="input-group-text">
                                                         <i class="fas fa-id-card"
                                                             v-bind:class="{ 
-                                                                'text-danger': $v.form_process.id_defendant.$error && $v.form_process.id_defendant.$invalid, 
-                                                                'text-success': !$v.form_process.id_defendant.$error && !$v.form_process.id_defendant.$invalid && $v.form_process.id_defendant.$dirty 
+                                                                'text-danger': $v.form_dossier.id_defendant.$error && $v.form_dossier.id_defendant.$invalid, 
+                                                                'text-success': !$v.form_dossier.id_defendant.$error && !$v.form_dossier.id_defendant.$invalid && $v.form_dossier.id_defendant.$dirty 
                                                             }">
                                                         </i>
                                                     </div>
@@ -285,12 +285,12 @@
                                                     placeholder="Cédula demandado"
                                                     disabled
                                                     readonly
-                                                    v-bind:class="status($v.form_process.id_defendant)"
-                                                    v-bind:value="form_process.id_defendant"
-                                                    v-model.trim="$v.form_process.id_defendant.$model"
-                                                    @focusout="touchedVuelidate($v.form_process.id_defendant);">
+                                                    v-bind:class="status($v.form_dossier.id_defendant)"
+                                                    v-bind:value="defendant.defendant_identification"
+                                                    v-model.trim="defendant.defendant_identification"
+                                                    @focusout="touchedVuelidate($v.form_dossier.id_defendant);">
                                             </div>
-                                            <div class="mt-0" v-if="!$v.form_process.id_defendant.required && $v.form_process.id_defendant.$error && $v.form_process.id_defendant.$invalid">
+                                            <div class="mt-0" v-if="!$v.form_dossier.id_defendant.required && $v.form_dossier.id_defendant.$error && $v.form_dossier.id_defendant.$invalid">
                                                 <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                                     <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                                 </div>
@@ -304,8 +304,8 @@
                                                     <div class="input-group-text">
                                                         <i class="fas fa-user"
                                                             v-bind:class="{ 
-                                                                'text-danger': $v.form_process.defendant.$error && $v.form_process.defendant.$invalid, 
-                                                                'text-success': !$v.form_process.defendant.$error && !$v.form_process.defendant.$invalid && $v.form_process.defendant.$dirty 
+                                                                'text-danger': $v.form_dossier.defendant.$error && $v.form_dossier.defendant.$invalid, 
+                                                                'text-success': !$v.form_dossier.defendant.$error && !$v.form_dossier.defendant.$invalid && $v.form_dossier.defendant.$dirty 
                                                             }">
                                                         </i>
                                                     </div>
@@ -317,12 +317,12 @@
                                                     placeholder="Demandado"
                                                     disabled
                                                     readonly
-                                                    v-bind:class="status($v.form_process.defendant)"
-                                                    v-bind:value="form_process.defendant"
-                                                    v-model.trim="$v.form_process.defendant.$model"
-                                                    @focusout="touchedVuelidate($v.form_process.defendant);">
+                                                    v-bind:class="status($v.form_dossier.defendant)"
+                                                    v-bind:value="defendant.defendant_name"
+                                                    v-model.trim="defendant.defendant_name"
+                                                    @focusout="touchedVuelidate($v.form_dossier.defendant);">
                                             </div>
-                                            <div class="mt-0" v-if="!$v.form_process.defendant.required && $v.form_process.defendant.$error && $v.form_process.defendant.$invalid">
+                                            <div class="mt-0" v-if="!$v.form_dossier.defendant.required && $v.form_dossier.defendant.$error && $v.form_dossier.defendant.$invalid">
                                                 <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                                     <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                                 </div>
@@ -336,31 +336,31 @@
                             <div class="form-row">
 
                                 <div class="form-group col-md-6">
-                                    <label for="court_origin">Juzgado origen</label>
+                                    <label for="court_origin_name">Juzgado origen</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-gavel"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.court_origin.$error && $v.form_process.court_origin.$invalid, 
-                                                        'text-success': !$v.form_process.court_origin.$error && !$v.form_process.court_origin.$invalid && $v.form_process.court_origin.$dirty 
+                                                        'text-danger': $v.form_dossier.court_origin_name.$error && $v.form_dossier.court_origin_name.$invalid, 
+                                                        'text-success': !$v.form_dossier.court_origin_name.$error && !$v.form_dossier.court_origin_name.$invalid && $v.form_dossier.court_origin_name.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate"
-                                            id="court_origin"
-                                            name="court_origin"
+                                            id="court_origin_name"
+                                            name="court_origin_name"
                                             placeholder="Juzgado origen"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.court_origin)"
-                                            v-bind:value="form_process.court_origin"
-                                            v-model.trim="$v.form_process.court_origin.$model"
-                                            @focusout="touchedVuelidate($v.form_process.court_origin);">
+                                            v-bind:class="status($v.form_dossier.court_origin_name)"
+                                            v-bind:value="form_dossier.court_origin_name"
+                                            v-model.trim="$v.form_dossier.court_origin_name.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.court_origin_name);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.court_origin.required && $v.form_process.court_origin.$error && $v.form_process.court_origin.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.court_origin_name.required && $v.form_dossier.court_origin_name.$error && $v.form_dossier.court_origin_name.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
@@ -368,31 +368,31 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label for="court_destination">Juzgado destino</label>
+                                    <label for="court_destination_name">Juzgado destino</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-gavel"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.court_destination.$error && $v.form_process.court_destination.$invalid, 
-                                                        'text-success': !$v.form_process.court_destination.$error && !$v.form_process.court_destination.$invalid && $v.form_process.court_destination.$dirty 
+                                                        'text-danger': $v.form_dossier.court_destination_name.$error && $v.form_dossier.court_destination_name.$invalid, 
+                                                        'text-success': !$v.form_dossier.court_destination_name.$error && !$v.form_dossier.court_destination_name.$invalid && $v.form_dossier.court_destination_name.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate"
-                                            id="court_destination"
-                                            name="court_destination"
+                                            id="court_destination_name"
+                                            name="court_destination_name"
                                             placeholder="Juzgado destino"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.court_destination)"
-                                            v-bind:value="form_process.court_destination"
-                                            v-model.trim="$v.form_process.court_destination.$model"
-                                            @focusout="touchedVuelidate($v.form_process.court_destination);">
+                                            v-bind:class="status($v.form_dossier.court_destination_name)"
+                                            v-bind:value="form_dossier.court_destination_name"
+                                            v-model.trim="$v.form_dossier.court_destination_name.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.court_destination_name);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.court_destination.required && $v.form_process.court_destination.$error && $v.form_process.court_destination.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.court_destination_name.required && $v.form_dossier.court_destination_name.$error && $v.form_dossier.court_destination.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
@@ -404,31 +404,31 @@
                             <div class="form-row">
 
                                 <div class="form-group col-md-6">
-                                    <label for="process_class">Clase proceso</label>
+                                    <label for="dossier_type_name">Clase proceso</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-tag"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.process_class.$error && $v.form_process.process_class.$invalid, 
-                                                        'text-success': !$v.form_process.process_class.$error && !$v.form_process.process_class.$invalid && $v.form_process.process_class.$dirty 
+                                                        'text-danger': $v.form_dossier.dossier_type_name.$error && $v.form_dossier.dossier_type_name.$invalid, 
+                                                        'text-success': !$v.form_dossier.dossier_type_name.$error && !$v.form_dossier.dossier_type_name.$invalid && $v.form_dossier.dossier_type_name.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <input type="text"
                                             class="input-vuelidate"
-                                            id="process_class"
-                                            name="process_class"
+                                            id="dossier_type_name"
+                                            name="dossier_type_name"
                                             placeholder="Clase proceso"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.process_class)"
-                                            v-bind:value="form_process.process_class"
-                                            v-model.trim="$v.form_process.process_class.$model"
-                                            @focusout="touchedVuelidate($v.form_process.process_class);">
+                                            v-bind:class="status($v.form_dossier.dossier_type_name)"
+                                            v-bind:value="form_dossier.dossier_type_name"
+                                            v-model.trim="$v.form_dossier.dossier_type_name.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.dossier_type_name);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.process_class.required && $v.form_process.process_class.$error && $v.form_process.process_class.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.dossier_type_name.required && $v.form_dossier.dossier_type_name.$error && $v.form_dossier.dossier_type_name.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
@@ -442,8 +442,8 @@
                                             <div class="input-group-text">
                                                 <i class="fas fa-map-pin"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.position.$error && $v.form_process.position.$invalid, 
-                                                        'text-success': !$v.form_process.position.$error && !$v.form_process.position.$invalid && $v.form_process.position.$dirty 
+                                                        'text-danger': $v.form_dossier.position.$error && $v.form_dossier.position.$invalid, 
+                                                        'text-success': !$v.form_dossier.position.$error && !$v.form_dossier.position.$invalid && $v.form_dossier.position.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -455,10 +455,10 @@
                                             placeholder="Posición"
                                             disabled
                                             readonly
-                                            v-bind:class="status($v.form_process.position)"
-                                            v-bind:value="form_process.position"
-                                            v-model.trim="$v.form_process.position.$model"
-                                            @focusout="touchedVuelidate($v.form_process.position);">
+                                            v-bind:class="status($v.form_dossier.position)"
+                                            v-bind:value="form_dossier.position"
+                                            v-model.trim="$v.form_dossier.position.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.position);">
                                     </div>
                                 </div>
 
@@ -471,8 +471,8 @@
                                         <div class="input-group-text">
                                             <i class="fas fa-comment"
                                                 v-bind:class="{ 
-                                                    'text-danger': $v.form_process.additional_observation.$error && $v.form_process.additional_observation.$invalid, 
-                                                    'text-success': !$v.form_process.additional_observation.$error && !$v.form_process.additional_observation.$invalid && $v.form_process.additional_observation.$dirty 
+                                                    'text-danger': $v.form_dossier.additional_observation.$error && $v.form_dossier.additional_observation.$invalid, 
+                                                    'text-success': !$v.form_dossier.additional_observation.$error && !$v.form_dossier.additional_observation.$invalid && $v.form_dossier.additional_observation.$dirty 
                                                 }">
                                             </i>
                                         </div>
@@ -481,20 +481,20 @@
                                         id="additional_observation"
                                         name="additional_observation" 
                                         placeholder="Observacion"
-                                        v-bind:class="status($v.form_process.additional_observation)"
-                                        v-bind:value="form_process.additional_observation"
-                                        v-model.trim="$v.form_process.additional_observation.$model"
-                                        @focusout="touchedVuelidate($v.form_process.additional_observation);">
+                                        v-bind:class="status($v.form_dossier.additional_observation)"
+                                        v-bind:value="form_dossier.additional_observation"
+                                        v-model.trim="$v.form_dossier.additional_observation.$model"
+                                        @focusout="touchedVuelidate($v.form_dossier.additional_observation);">
                                         <option value="" disabled="" selected="">
                                             Seleccione una opción
                                         </option>
-                                        <option v-for="(annotation, index) in dossier_annotations" :key="index"
+                                        <option v-for="(annotation, index) in annotation_types" :key="index"
                                             :value="annotation.id_annotation_type">
                                             {{ annotation.annotation_type_name }}
                                         </option>
                                     </select>
                                 </div>
-                                <div class="mt-0" v-if="!$v.form_process.additional_observation.required && $v.form_process.additional_observation.$error && $v.form_process.additional_observation.$invalid">
+                                <div class="mt-0" v-if="!$v.form_dossier.additional_observation.required && $v.form_dossier.additional_observation.$error && $v.form_dossier.additional_observation.$invalid">
                                     <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                         <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                     </div>
@@ -513,8 +513,8 @@
                                                 data-target="#startdate_datepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.start_date.$error && $v.form_process.start_date.$invalid, 
-                                                        'text-success': !$v.form_process.start_date.$error && !$v.form_process.start_date.$invalid && $v.form_process.start_date.$dirty 
+                                                        'text-danger': $v.form_dossier.start_date.$error && $v.form_dossier.start_date.$invalid, 
+                                                        'text-success': !$v.form_dossier.start_date.$error && !$v.form_dossier.start_date.$invalid && $v.form_dossier.start_date.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -530,19 +530,19 @@
                                             data-target="#startdate_datepicker" 
                                             data-toggle="datetimepicker"
                                             v-mask="'##/##/####'"
-                                            v-bind:class="status($v.form_process.start_date)"
-                                            v-bind:value="form_process.start_date"
-                                            v-model.trim="$v.form_process.start_date.$model"
-                                            @focusout="touchedVuelidate($v.form_process.start_date); calculateDaysToEndDate();">
+                                            v-bind:class="status($v.form_dossier.start_date)"
+                                            v-bind:value="form_dossier.start_date"
+                                            v-model.trim="$v.form_dossier.start_date.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.start_date); calculateDaysToEndDate();">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.start_date.required && $v.form_process.start_date.$error && $v.form_process.start_date.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.start_date.required && $v.form_dossier.start_date.$error && $v.form_dossier.start_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.start_date.minLength && $v.form_process.start_date.$error && $v.form_process.start_date.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.start_date.minLength && $v.form_dossier.start_date.$error && $v.form_dossier.start_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_process.start_date.$params.minLength.min }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_dossier.start_date.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -554,8 +554,8 @@
                                             <div class="input-group-text">
                                                 <i class="fas fa-calendar-day"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.days.$error && $v.form_process.days.$invalid, 
-                                                        'text-success': !$v.form_process.days.$error && !$v.form_process.days.$invalid && $v.form_process.days.$dirty 
+                                                        'text-danger': $v.form_dossier.days.$error && $v.form_dossier.days.$invalid, 
+                                                        'text-success': !$v.form_dossier.days.$error && !$v.form_dossier.days.$invalid && $v.form_dossier.days.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -565,12 +565,12 @@
                                             id="days"
                                             name="days"
                                             placeholder="Días"
-                                            v-bind:class="status($v.form_process.days)"
-                                            v-bind:value="form_process.days"
-                                            v-model.trim="$v.form_process.days.$model"
-                                            @focusout="touchedVuelidate($v.form_process.days); calculateDaysToEndDate();">
+                                            v-bind:class="status($v.form_dossier.days)"
+                                            v-bind:value="form_dossier.days"
+                                            v-model.trim="$v.form_dossier.days.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.days); calculateDaysToEndDate();">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.days.numeric && $v.form_process.days.$error && $v.form_process.days.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.days.numeric && $v.form_dossier.days.$error && $v.form_dossier.days.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar un número</span>
                                         </div>
@@ -587,8 +587,8 @@
                                                 data-target="#enddate_datepicker">
                                                 <i class="fas fa-calendar-alt"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.end_date.$error && $v.form_process.end_date.$invalid, 
-                                                        'text-success': !$v.form_process.end_date.$error && !$v.form_process.end_date.$invalid && $v.form_process.end_date.$dirty 
+                                                        'text-danger': $v.form_dossier.end_date.$error && $v.form_dossier.end_date.$invalid, 
+                                                        'text-success': !$v.form_dossier.end_date.$error && !$v.form_dossier.end_date.$invalid && $v.form_dossier.end_date.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -604,14 +604,14 @@
                                             data-target="#enddate_datepicker" 
                                             data-toggle="datetimepicker"
                                             v-mask="'##/##/####'"
-                                            v-bind:class="status($v.form_process.end_date)"
-                                            v-bind:value="form_process.end_date"
-                                            v-model.trim="$v.form_process.end_date.$model"
-                                            @focusout="touchedVuelidate($v.form_process.end_date);">
+                                            v-bind:class="status($v.form_dossier.end_date)"
+                                            v-bind:value="form_dossier.end_date"
+                                            v-model.trim="$v.form_dossier.end_date.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.end_date);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_process.end_date.minLength && $v.form_process.end_date.$error && $v.form_process.end_date.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.end_date.minLength && $v.form_dossier.end_date.$error && $v.form_dossier.end_date.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
-                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_process.end_date.$params.minLength.min }} caracteres</span>
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_dossier.end_date.$params.minLength.min }} caracteres</span>
                                         </div>
                                     </div>
                                 </div>
@@ -623,8 +623,8 @@
                                             <div class="input-group-text">
                                                 <i class="fas fa-user-check"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_process.assigned_to.$error && $v.form_process.assigned_to.$invalid, 
-                                                        'text-success': !$v.form_process.assigned_to.$error && !$v.form_process.assigned_to.$invalid && $v.form_process.assigned_to.$dirty 
+                                                        'text-danger': $v.form_dossier.assigned_to.$error && $v.form_dossier.assigned_to.$invalid, 
+                                                        'text-success': !$v.form_dossier.assigned_to.$error && !$v.form_dossier.assigned_to.$invalid && $v.form_dossier.assigned_to.$dirty 
                                                     }">
                                                 </i>
                                             </div>
@@ -633,10 +633,10 @@
                                             id="assigned_to"
                                             name="assigned_to"
                                             placeholder="Asignado a"
-                                            v-bind:class="status($v.form_process.assigned_to)"
-                                            v-bind:value="form_process.assigned_to"
-                                            v-model.trim="$v.form_process.assigned_to.$model"
-                                            @focusout="touchedVuelidate($v.form_process.assigned_to);">
+                                            v-bind:class="status($v.form_dossier.assigned_to)"
+                                            v-bind:value="form_dossier.assigned_to"
+                                            v-model.trim="$v.form_dossier.assigned_to.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.assigned_to);">
                                             <option value="" disabled="" selected="">
                                                 Seleccione una opción
                                             </option>
@@ -664,15 +664,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-if="form_process.id_radicado !== ''">
-                                            <th scope="row">{{ form_process.date }}</th>
-                                            <td>{{ form_process.observation }}</td>
-                                            <td>{{ form_process.user }}</td>
+                                        <tr v-if="form_dossier.id_dossier !== ''">
+                                            <th scope="row">{{ form_dossier.date }}</th>
+                                            <td>{{ form_dossier.observation }}</td>
+                                            <td>{{ form_dossier.user }}</td>
                                             <td>
                                                 <button type="button"
                                                     class="btn btn-primary"
                                                     @click="btnAddRadicado();"
-                                                    v-bind:disabled="$v.form_process.$invalid">
+                                                    v-bind:disabled="$v.form_dossier.$invalid">
                                                     <i class="fas fa-plus-circle"></i>
                                                     Adicionar
                                                 </button>
@@ -685,7 +685,7 @@
 
                         </form>
 
-                        <!-- <pre>{{ $v.form_process }}</pre> -->
+                        <!-- <pre>{{ $v.form_dossier }}</pre> -->
 
                     </div>
                 </div>
@@ -716,7 +716,7 @@
                             </thead>
                             <tbody>
                                 <tr v-for="(radicado, index) in radicados_executory_list" :key="index">
-                                    <th scope="row">{{ radicado.id_radicado }}</th>
+                                    <th scope="row">{{ radicado.id_dossier }}</th>
                                     <td>{{ radicado.radicado }}</td>
                                     <td>{{ dossier_annotations[radicado.additional_observation - 1].observacion }}</td>
                                     <!-- TODO: Organizar la forma en que se consulta la observacion -->

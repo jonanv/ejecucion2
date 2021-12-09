@@ -75,8 +75,8 @@
             echo json_encode($response);
         }
 
-        public function getAllDossierAnnotationsType() {
-            $response = ExecutoryController::getAllDossierAnnotationsTypeController();
+        public function getAllAnnotationTypes() {
+            $response = ExecutoryController::getAllAnnotationTypesController();
             echo json_encode($response);
         }
 
@@ -85,13 +85,13 @@
             echo json_encode($response);
         }
 
-        public function getAllPlaintiffOfDossier($id_dossier) {
-            $response = ExecutoryController::getAllPlaintiffOfDossierController($id_dossier);
+        public function getAllPlaintiffsOfDossier($id_dossier) {
+            $response = ExecutoryController::getAllPlaintiffsOfDossierController($id_dossier);
             echo json_encode($response);
         }
 
-        public function getAllDefendantOfDossier($id_dossier) {
-            $response = ExecutoryController::getAllDefendantOfDossierController($id_dossier);
+        public function getAllDefendantsOfDossier($id_dossier) {
+            $response = ExecutoryController::getAllDefendantsOfDossierController($id_dossier);
             echo json_encode($response);
         }
 
@@ -165,20 +165,20 @@
             $obj->getDossier($radicado);
             break;
 
-        case 'getAllDossierAnnotationsType': //
-            $obj->getAllDossierAnnotationsType();
+        case 'getAllAnnotationTypes': //
+            $obj->getAllAnnotationTypes();
             break;
 
         case 'getAllEmployees': //
             $obj->getAllEmployees();
             break;
 
-        case 'getAllPlaintiffOfDossier': //
-            $obj->getAllPlaintiffOfDossier($id_dossier);
+        case 'getAllPlaintiffsOfDossier': //
+            $obj->getAllPlaintiffsOfDossier($id_dossier);
             break;
 
-        case 'getAllDefendantOfDossier': //
-            $obj->getAllDefendantOfDossier($id_dossier);
+        case 'getAllDefendantsOfDossier': //
+            $obj->getAllDefendantsOfDossier($id_dossier);
             break;
 
         case 'registerExecutory':
