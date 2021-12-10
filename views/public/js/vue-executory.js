@@ -20,7 +20,9 @@ const app = new Vue({
             start_date: '',
             days: '',
             end_date: '',
-            assigned_to: '',
+            assigned_to_index: '',
+            assigned_to_id_employee: '',
+            assigned_to_name: '',
             dossier_annotation_date_last: '',
             dossier_annotation_type_last: '',
             dossier_annotation_employee_last: ''
@@ -86,7 +88,11 @@ const app = new Vue({
                 minLength: minLength(10),
                 maxLength: maxLength(10)
             },
-            assigned_to: {
+            assigned_to_index: {
+            },
+            assigned_to_id_employee: {
+            },
+            assigned_to_name: {
             },
         }
     },
@@ -134,6 +140,16 @@ const app = new Vue({
                         allowOutsideClick: false
                     });
                 } else {
+                    if (app.form_dossier.assigned_to_index) {
+                        app.form_dossier.assigned_to_id_employee = app.employees[app.form_dossier.assigned_to_index].id_employee;
+                        app.form_dossier.assigned_to_name = app.employees[app.form_dossier.assigned_to_index].firstname + ' ' + app.employees[app.form_dossier.assigned_to_index].lastname;
+                    }
+                    for (const property in app.form_dossier) {
+                        if (app.form_dossier[property]  === '') {
+                            console.log(`${property}: ${app.form_dossier[property]}`);
+                            app.form_dossier[property] = 'SIN TRÁMITE';
+                        }
+                    }
                     app.radicados_executory_list.push(app.form_dossier);
                     app.radicados_executory.push(app.form_dossier.radicado);
                     
@@ -158,7 +174,9 @@ const app = new Vue({
                         start_date: '',
                         days: '',
                         end_date: '',
-                        assigned_to: '',
+                        assigned_to_index: '',
+                        assigned_to_id_employee: '',
+                        assigned_to_name: '',
                         dossier_annotation_date_last: '',
                         dossier_annotation_type_last: '',
                         dossier_annotation_employee_last: '',
@@ -198,7 +216,9 @@ const app = new Vue({
                 start_date: '',
                 days: '',
                 end_date: '',
-                assigned_to: '',
+                assigned_to_index: '',
+                assigned_to_id_employee: '',
+                assigned_to_name: '',
                 dossier_annotation_date_last: '',
                 dossier_annotation_type_last: '',
                 dossier_annotation_employee_last: '',

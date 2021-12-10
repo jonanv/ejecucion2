@@ -616,31 +616,31 @@
                                 </div>
                                 
                                 <div class="form-group col-md-3">
-                                    <label for="assigned_to">Asignado a</label>
+                                    <label for="assigned_to_index">Asignado a</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="fas fa-user-check"
                                                     v-bind:class="{ 
-                                                        'text-danger': $v.form_dossier.assigned_to.$error && $v.form_dossier.assigned_to.$invalid, 
-                                                        'text-success': !$v.form_dossier.assigned_to.$error && !$v.form_dossier.assigned_to.$invalid && $v.form_dossier.assigned_to.$dirty 
+                                                        'text-danger': $v.form_dossier.assigned_to_index.$error && $v.form_dossier.assigned_to_index.$invalid, 
+                                                        'text-success': !$v.form_dossier.assigned_to_index.$error && !$v.form_dossier.assigned_to_index.$invalid && $v.form_dossier.assigned_to_index.$dirty 
                                                     }">
                                                 </i>
                                             </div>
                                         </div>
                                         <select class="select-vuelidate"
-                                            id="assigned_to"
-                                            name="assigned_to"
+                                            id="assigned_to_index"
+                                            name="assigned_to_index"
                                             placeholder="Asignado a"
-                                            v-bind:class="status($v.form_dossier.assigned_to)"
-                                            v-bind:value="form_dossier.assigned_to"
-                                            v-model.trim="$v.form_dossier.assigned_to.$model"
-                                            @focusout="touchedVuelidate($v.form_dossier.assigned_to);">
+                                            v-bind:class="status($v.form_dossier.assigned_to_index)"
+                                            v-bind:value="form_dossier.assigned_to_index"
+                                            v-model.trim="$v.form_dossier.assigned_to_index.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.assigned_to_index);">
                                             <option value="" disabled="" selected="">
                                                 Seleccione una opción
                                             </option>
                                             <option v-for="(employee, index) in employees" :key="index"
-                                                :value="employee.id_employee">
+                                                :value="index">
                                                 {{ employee.firstname + ' ' + employee.lastname }}
                                             </option>
                                         </select>
@@ -721,7 +721,7 @@
                                     <td>{{ radicado.start_date }}</td>
                                     <td>{{ radicado.days }}</td>
                                     <td>{{ radicado.end_date }}</td>
-                                    <td>{{ radicado.assigned_to }}</td>
+                                    <td>{{ radicado.assigned_to_name }}</td>
                                     <!-- TODO: Terminar la tabla -->
                                     <td>{{  }}</td> <!-- Fecha audiencia -->
                                     <td>{{  }}</td> <!-- Hora audiencia -->
