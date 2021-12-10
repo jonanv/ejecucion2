@@ -21,9 +21,9 @@ const app = new Vue({
             days: '',
             end_date: '',
             assigned_to: '',
-            date: '', // dossier_annotation_date_last TODO: organizar ultima actuacion
-            user: '', // id_employee_last
-            observation: '' // id_annotation_type_last
+            dossier_annotation_date_last: '',
+            dossier_annotation_type_last: '',
+            dossier_annotation_employee_last: ''
         },
         loading: true,
         submitStatus: null,
@@ -159,9 +159,9 @@ const app = new Vue({
                         days: '',
                         end_date: '',
                         assigned_to: '',
-                        date: '',
-                        user: '',
-                        observation: '',
+                        dossier_annotation_date_last: '',
+                        dossier_annotation_type_last: '',
+                        dossier_annotation_employee_last: '',
                     }
                     this.$v.form_dossier.$reset();
                     app.plaintiffs = [];
@@ -199,9 +199,9 @@ const app = new Vue({
                 days: '',
                 end_date: '',
                 assigned_to: '',
-                date: '',
-                user: '',
-                observation: '',
+                dossier_annotation_date_last: '',
+                dossier_annotation_type_last: '',
+                dossier_annotation_employee_last: '',
             }
             this.$v.form.$reset();
             this.$v.form_dossier.$reset();
@@ -276,7 +276,14 @@ const app = new Vue({
                                 });
                             });
 
-                        // TODO: Obtener la ultima actuacion del expediente
+                        axios.post(url, {option: 'getLastDossierAnnotation', id_dossier:response.data.id_dossier})
+                            .then((response) => {
+                                console.log(response);
+                                // Ultima observacion
+                                app.form_dossier.dossier_annotation_date_last = response.data.dossier_annotation_date;
+                                app.form_dossier.dossier_annotation_type_last = response.data.annotation_type_name;
+                                app.form_dossier.dossier_annotation_employee_last = response.data.firstname + ' ' + response.data.lastname;
+                            });
 
                         this.$v.form_dossier.$touch();
                         // Datos del proceso
@@ -287,10 +294,6 @@ const app = new Vue({
                         app.form_dossier.dossier_type_name = response.data.dossier_type_name;
                         app.form_dossier.position = response.data.posicion;
                         app.form_dossier.start_date = new moment().format('DD/MM/YYYY');
-                        // Ultima obervacion
-                        app.form_dossier.date = response.data.dossier_registered_date;
-                        app.form_dossier.user = response.data.id_employee_registered;
-                        app.form_dossier.observation = response.data.observacion;
                         this.submitStatus = 'OK'
                     });
             }

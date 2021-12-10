@@ -92,6 +92,26 @@
             $response = null;
         }
 
+        public static function getLastDossierAnnotationModel($id_dossier) {
+            $query = 
+                "SELECT *
+                FROM dossier_annotation AS da
+                INNER JOIN dossier AS d ON (d.id_dossier = da.id_dossier)
+                INNER JOIN employee AS e ON (e.id_employee = da.id_employee)
+                INNER JOIN annotation_type AS at ON (at.id_annotation_type = da.id_annotation_type)
+                WHERE da.id_dossier = :id_dossier
+                ORDER BY da.dossier_annotation_date DESC";
+            $response = ConnectionModel::connectMySQL()->prepare($query);
+            $response->bindParam(":id_dossier", $id_dossier, PDO::PARAM_INT);
+            if ($response->execute()) {
+                $data = $response->fetch();
+            } else {
+                $data = "error";
+            }
+            return $data;
+            $response = null;
+        }
+
         public static function registerExecutoryModel($radicados_executory_list, $id_usuario, $nombre_usuario) {
             return $radicados_executory_list;
 

@@ -15,12 +15,12 @@
             return $response;
         }
 
-        public static function getProcessInJusticiaController($radicado) {
-            $response = EntryGuardianshipsModel::getProcessInJusticiaModel($radicado);
+        public static function getDossierPartsInJusticiaController($radicado) {
+            $response = EntryGuardianshipsModel::getDossierPartsInJusticiaModel($radicado);
             return $response;
         }
 
-        public static function migrateGuardianshipController($radicado, $process, $id_employee, $employee_full_name) {
+        public static function migrateGuardianshipController($radicado, $dossier_parts, $id_employee, $employee_full_name) {
             // 17001-40-03-007-2021-00567-00
             $zip_code = substr($radicado, 0, 5); // 17001
             $corporation = substr($radicado, 5, 2); // 40
@@ -90,7 +90,7 @@
             //     }
             // }
 
-            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance, $id_dossier_type);
+            $response = EntryGuardianshipsModel::migrateGuardianshipModel($radicado, $dossier_parts, $id_employee, $log_action, $log_detail, $id_court, $instance, $id_dossier_type);
             return $response;
         }
     }

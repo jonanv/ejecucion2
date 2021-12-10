@@ -55,17 +55,17 @@
             echo json_encode($response);
         }
 
-        public function getProcessInJusticia($radicado) {
-            $response = EntryGuardianshipsController::getProcessInJusticiaController($radicado);
+        public function getDossierPartsInJusticia($radicado) {
+            $response = EntryGuardianshipsController::getDossierPartsInJusticiaController($radicado);
             echo json_encode($response);
         }
 
-        public function migrateGuardianship($radicado, $process) {
+        public function migrateGuardianship($radicado, $dossier_parts) {
             session_start();
             $id_employee = $_SESSION["id_employee"];
             $employee_full_name = $_SESSION["firstname"] . " " . $_SESSION["lastname"];
             // TODO: Organizar el envio de usuario
-            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $process, $id_employee, $employee_full_name);
+            $response = EntryGuardianshipsController::migrateGuardianshipController($radicado, $dossier_parts, $id_employee, $employee_full_name);
             echo json_encode($response);
         }
 
@@ -95,6 +95,11 @@
             echo json_encode($response);
         }
 
+        public function getLastDossierAnnotation($id_dossier) {
+            $response = ExecutoryController::getLastDossierAnnotationController($id_dossier);
+            echo json_encode($response);
+        }
+
         public function registerExecutory($radicados_executory_list) {
             session_start();
             $id_usuario = $_SESSION['idUsuario'];
@@ -117,7 +122,7 @@
 
     // EntryGuardianships
     $radicado = (isset($_POST['radicado'])) ? $_POST['radicado'] : '';
-    $process = (isset($_POST['process'])) ? $_POST['process'] : '';
+    $dossier_parts = (isset($_POST['dossier_parts'])) ? $_POST['dossier_parts'] : '';
     $start_date = (isset($_POST['start_date'])) ? $_POST['start_date'] : '';
     $end_date = (isset($_POST['end_date'])) ? $_POST['end_date'] : '';
     
@@ -143,12 +148,12 @@
             $obj->getEntryGuardianships();
             break;
 
-        case 'getProcessInJusticia': // 
-            $obj->getProcessInJusticia($radicado);
+        case 'getDossierPartsInJusticia': // 
+            $obj->getDossierPartsInJusticia($radicado);
             break;
 
         case 'migrateGuardianship': // Create
-            $obj->migrateGuardianship($radicado, $process);
+            $obj->migrateGuardianship($radicado, $dossier_parts);
             break;
 
         case 'getProcessesInJusticia': //
@@ -179,6 +184,10 @@
 
         case 'getAllDefendantsOfDossier': //
             $obj->getAllDefendantsOfDossier($id_dossier);
+            break;
+
+        case 'getLastDossierAnnotation': //
+            $obj->getLastDossierAnnotation($id_dossier);
             break;
 
         case 'registerExecutory':

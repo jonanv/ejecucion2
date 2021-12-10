@@ -85,7 +85,7 @@
             $response = null;
         }
 
-        public static function getProcessInJusticiaModel($radicado) {
+        public static function getDossierPartsInJusticiaModel($radicado) {
             // SQLServer
             $query = 
                 "SELECT A103CODICLAS, A053DESCCLAS, A103CODISUBC, A071DESCSUBC,
@@ -112,7 +112,7 @@
             $response = null;
         }
 
-        public static function migrateGuardianshipModel($radicado, $process, $id_employee, $log_action, $log_detail, $id_court, $instance, $id_dossier_type) {
+        public static function migrateGuardianshipModel($radicado, $dossier_parts, $id_employee, $log_action, $log_detail, $id_court, $instance, $id_dossier_type) {
             try {
                 $conn = ConnectionModel::connectMySQL();
                 $conn->beginTransaction();
@@ -137,7 +137,7 @@
                     $response->bindParam(":id_dossier_type", $id_dossier_type, PDO::PARAM_INT);
                     if ($response->execute()) {
                         $id_dossier = $conn->lastInsertId();
-                        foreach ($process as $key => $value) {
+                        foreach ($dossier_parts as $key => $value) {
                             //DEMANDANTE - ACCIONANTE
                             if ($value['A112CODISUJE'] == '0001') {
                                 $query = 

@@ -182,7 +182,6 @@
 
                             </div>
                             
-                            <!-- TODO: Crear la forma de que se los demandantes y demandados se vean dinamicamente -->
                             <div class="card card-plaintiff-defendant">
                                 <div class="card-header">
                                     DEMANDANTES
@@ -665,9 +664,9 @@
                                     </thead>
                                     <tbody>
                                         <tr v-if="form_dossier.id_dossier !== ''">
-                                            <th scope="row">{{ form_dossier.date }}</th>
-                                            <td>{{ form_dossier.observation }}</td>
-                                            <td>{{ form_dossier.user }}</td>
+                                            <th scope="row">{{ form_dossier.dossier_annotation_date_last }}</th>
+                                            <td>{{ form_dossier.dossier_annotation_type_last }}</td>
+                                            <td>{{ form_dossier.dossier_annotation_employee_last }}</td>
                                             <td>
                                                 <button type="button"
                                                     class="btn btn-primary"
@@ -723,10 +722,11 @@
                                     <td>{{ radicado.days }}</td>
                                     <td>{{ radicado.end_date }}</td>
                                     <td>{{ radicado.assigned_to }}</td>
-                                    <td>{{  }}</td>
-                                    <td>{{  }}</td>
-                                    <td>{{  }}</td>
-                                    <td>{{  }}</td>
+                                    <!-- TODO: Terminar la tabla -->
+                                    <td>{{  }}</td> <!-- Fecha audiencia -->
+                                    <td>{{  }}</td> <!-- Hora audiencia -->
+                                    <td>{{  }}</td> <!-- Observación audiencia -->
+                                    <td>{{  }}</td> <!-- A despacho -->
                                     <td>
                                         <button type="button"
                                             class="btn btn-danger btn-block"
