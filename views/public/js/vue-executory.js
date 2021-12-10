@@ -17,6 +17,8 @@ const app = new Vue({
             dossier_type_name: '',
             position: '',
             annotation_type: '',
+            audience_date: '',
+            audience_observation: '',
             start_date: '',
             days: '',
             end_date: '',
@@ -76,6 +78,15 @@ const app = new Vue({
             annotation_type: {
                 required
             },
+            audience_date: {
+                required,
+                minLength: minLength(19),
+                maxLength: maxLength(19)
+            },
+            audience_observation: {
+                required,
+                minLength: minLength(10),
+            },
             start_date: {
                 required,
                 minLength: minLength(10),
@@ -123,6 +134,7 @@ const app = new Vue({
         touchedVuelidate(validation) {
             app.form_dossier.start_date = document.getElementById('start_date').value;
             app.form_dossier.end_date = document.getElementById('end_date').value;
+            app.form_dossier.audience_date = document.getElementById('audience_date').value;
 
             validation.$touch();
         },
@@ -171,6 +183,8 @@ const app = new Vue({
                         dossier_type_name: '',
                         position: '',
                         annotation_type: '',
+                        audience_date: '',
+                        audience_observation: '',
                         start_date: '',
                         days: '',
                         end_date: '',
@@ -213,6 +227,8 @@ const app = new Vue({
                 dossier_type_name: '',
                 position: '',
                 annotation_type: '',
+                audience_date: '',
+                audience_observation: '',
                 start_date: '',
                 days: '',
                 end_date: '',
@@ -437,9 +453,14 @@ const app = new Vue({
         },
         // CONFIGURACIONES
         initDatetimepicker: function() {
-            //Date picker
+            // Date picker
             $('#startdate_datepicker, #enddate_datepicker').datetimepicker({
                 format: 'DD/MM/YYYY'
+            });
+            // Datetime picker
+            $('#audiencedate_datepicker').datetimepicker({
+                format: 'DD/MM/YYYY hh:mm A',
+                icons: { time: 'far fa-clock' }
             });
         },
         initDataTables: function() {

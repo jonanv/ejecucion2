@@ -391,7 +391,7 @@
                                             v-model.trim="$v.form_dossier.court_destination_name.$model"
                                             @focusout="touchedVuelidate($v.form_dossier.court_destination_name);">
                                     </div>
-                                    <div class="mt-0" v-if="!$v.form_dossier.court_destination_name.required && $v.form_dossier.court_destination_name.$error && $v.form_dossier.court_destination.$invalid">
+                                    <div class="mt-0" v-if="!$v.form_dossier.court_destination_name.required && $v.form_dossier.court_destination_name.$error && $v.form_dossier.court_destination_name.$invalid">
                                         <div class="my-1 animate__animated animate__fadeIn animate__fast">
                                             <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                         </div>
@@ -498,6 +498,88 @@
                                         <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group col-md-4">
+                                    <label for="audience_date">Fecha audiencia</label>
+                                    <div class="input-group date"
+                                        id="audiencedate_datepicker" 
+                                        data-target-input="nearest">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"
+                                                data-target="#audiencedate_datepicker">
+                                                <i class="fas fa-calendar-alt"
+                                                    v-bind:class="{ 
+                                                        'text-danger': $v.form_dossier.audience_date.$error && $v.form_dossier.audience_date.$invalid, 
+                                                        'text-success': !$v.form_dossier.audience_date.$error && !$v.form_dossier.audience_date.$invalid && $v.form_dossier.audience_date.$dirty 
+                                                    }">
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <input type="text"
+                                            class="input-vuelidate"
+                                            id="audience_date"
+                                            name="audience_date"
+                                            placeholder="Fecha audiencia"
+                                            maxlength="10"
+                                            data-target="#audiencedate_datepicker" 
+                                            data-toggle="datetimepicker"
+                                            v-mask="'##/##/#### ##:## AM'"
+                                            v-bind:class="status($v.form_dossier.audience_date)"
+                                            v-bind:value="form_dossier.audience_date"
+                                            v-model.trim="$v.form_dossier.audience_date.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.audience_date);">
+                                    </div>
+                                    <div class="mt-0" v-if="!$v.form_dossier.audience_date.required && $v.form_dossier.audience_date.$error && $v.form_dossier.audience_date.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-0" v-if="!$v.form_dossier.audience_date.minLength && $v.form_dossier.audience_date.$error && $v.form_dossier.audience_date.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_dossier.audience_date.$params.minLength.min }} caracteres</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-8">
+                                    <label>Observación audiencia</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="fas fa-comment"
+                                                    v-bind:class="{ 
+                                                        'text-danger': $v.form_dossier.audience_observation.$error && $v.form_dossier.audience_observation.$invalid, 
+                                                        'text-success': !$v.form_dossier.audience_observation.$error && !$v.form_dossier.audience_observation.$invalid && $v.form_dossier.audience_observation.$dirty 
+                                                    }">
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <textarea class="textarea-vuelidate"
+                                            id="audience_observation"
+                                            name="audience_observation"
+                                            placeholder="Obsevación audiencia ..."
+                                            rows="3"
+                                            v-bind:class="status($v.form_dossier.audience_observation)"
+                                            v-bind:value="form_dossier.audience_observation"
+                                            v-model.trim="$v.form_dossier.audience_observation.$model"
+                                            @focusout="touchedVuelidate($v.form_dossier.audience_observation);">
+                                        </textarea>
+                                    </div>
+                                    <div class="mt-0" v-if="!$v.form_dossier.audience_observation.required && $v.form_dossier.audience_observation.$error && $v.form_dossier.audience_observation.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Este campo es requerido</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-0" v-if="!$v.form_dossier.audience_observation.minLength && $v.form_dossier.audience_observation.$error && $v.form_dossier.audience_observation.$invalid">
+                                        <div class="my-1 animate__animated animate__fadeIn animate__fast">
+                                            <span class="badge bg-danger badge-opacity d-block text-left py-1">Debe ingresar mínimo {{ $v.form_dossier.audience_observation.$params.minLength.min }} caracteres</span>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="form-row">
@@ -707,7 +789,6 @@
                                     <th>Fecha final</th>
                                     <th>Asignado a</th>
                                     <th>Fecha audiencia</th>
-                                    <th>Hora audiencia</th>
                                     <th>Observación audiencia</th>
                                     <th>A despacho</th>
                                     <th>Eliminar</th>
@@ -724,7 +805,6 @@
                                     <td>{{ radicado.assigned_to_name }}</td>
                                     <!-- TODO: Terminar la tabla -->
                                     <td>{{  }}</td> <!-- Fecha audiencia -->
-                                    <td>{{  }}</td> <!-- Hora audiencia -->
                                     <td>{{  }}</td> <!-- Observación audiencia -->
                                     <td>{{  }}</td> <!-- A despacho -->
                                     <td>

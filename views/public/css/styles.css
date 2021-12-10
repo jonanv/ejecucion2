@@ -57,7 +57,8 @@ span i.text-success::before {
 /* ------------------------------ vuevalidate ------------------------------ */
 
 input.input-vuelidate,
-select.select-vuelidate {
+select.select-vuelidate,
+textarea.textarea-vuelidate {
     border: 1px solid silver;
     border-radius: 4px;
     background: white;
@@ -66,6 +67,12 @@ select.select-vuelidate {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     width: 1%;
+}
+
+textarea.textarea-vuelidate {
+    height: auto;
+    overflow: auto;
+    resize: vertical;
 }
 
 select.select-vuelidate {
@@ -77,7 +84,8 @@ select.select-vuelidate {
 }
 
 input.input-vuelidate:focus-visible,
-select.select-vuelidate:focus-visible {
+select.select-vuelidate:focus-visible,
+textarea.textarea-vuelidate:focus-visible {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
 }
