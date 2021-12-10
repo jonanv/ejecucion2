@@ -123,7 +123,7 @@
                 $conn = ConnectionModel::connectMySQL();
                 $conn->beginTransaction();
 
-                // TODO: Metodo repetido en otro modelo, revisar si es posible sacarlo de la transaccion
+                // TODO: Metodo repetido en otro modelo, revisar si es posible sacarlo de la transaccion, es posible que sea privado para cada modelo de forma general
                 $query = 
                         "INSERT INTO log (fecha, accion, detalle, idusuario, idtipolog) 
                         VALUES (DATE_FORMAT(NOW(),'%Y-%m-%d'), :accion, :detalle, :idusuario, :tipolog)";
