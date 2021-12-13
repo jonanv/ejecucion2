@@ -483,7 +483,8 @@
                                         v-bind:class="status($v.form_dossier.annotation_type)"
                                         v-bind:value="form_dossier.annotation_type"
                                         v-model.trim="$v.form_dossier.annotation_type.$model"
-                                        @focusout="touchedVuelidate($v.form_dossier.annotation_type);">
+                                        @focusout="touchedVuelidate($v.form_dossier.annotation_type);"
+                                        @click="selectAnnotationTypeAudience();">
                                         <option value="" disabled="" selected="">
                                             Seleccione una opción
                                         </option>
@@ -500,7 +501,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row" v-show="enableAudience">
 
                                 <div class="form-group col-md-4">
                                     <label for="audience_date">Fecha audiencia</label>
@@ -803,9 +804,9 @@
                                     <td>{{ radicado.days }}</td>
                                     <td>{{ radicado.end_date }}</td>
                                     <td>{{ radicado.assigned_to_name }}</td>
+                                    <td>{{ radicado.audience_date }}</td>
+                                    <td>{{ radicado.audience_observation }}</td>
                                     <!-- TODO: Terminar la tabla -->
-                                    <td>{{  }}</td> <!-- Fecha audiencia -->
-                                    <td>{{  }}</td> <!-- Observación audiencia -->
                                     <td>{{  }}</td> <!-- A despacho -->
                                     <td>
                                         <button type="button"

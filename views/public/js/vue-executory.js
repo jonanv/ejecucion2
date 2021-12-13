@@ -1,110 +1,184 @@
 const url = 'api/Api.php';
 const app = new Vue({
     el: '#app-executory',
-    data: {
-        form: {
-            radicado: '',
-        },
-        form_dossier: {
-            id_dossier: '',
-            radicado: '',
-            id_plaintiff: [],
-            plaintiff: [],
-            id_defendant: [],
-            defendant : [],
-            court_origin_name: '',
-            court_destination_name: '',
-            dossier_type_name: '',
-            position: '',
-            annotation_type: '',
-            audience_date: '',
-            audience_observation: '',
-            start_date: '',
-            days: '',
-            end_date: '',
-            assigned_to_index: '',
-            assigned_to_id_employee: '',
-            assigned_to_name: '',
-            dossier_annotation_date_last: '',
-            dossier_annotation_type_last: '',
-            dossier_annotation_employee_last: ''
-        },
-        loading: true,
-        submitStatus: null,
-        registerStatus: null,
-        annotation_types: [],
-        employees: [],
-        radicados_executory_list: [],
-        radicados_executory: [],
-        plaintiffs: [],
-        defendants: []
+    data() {
+        return {
+            form: {
+                radicado: '',
+            },
+            form_dossier: {
+                id_dossier: '',
+                radicado: '',
+                id_plaintiff: [],
+                plaintiff: [],
+                id_defendant: [],
+                defendant : [],
+                court_origin_name: '',
+                court_destination_name: '',
+                dossier_type_name: '',
+                position: '',
+                annotation_type: '',
+                audience_date: '',
+                audience_observation: '',
+                start_date: '',
+                days: '',
+                end_date: '',
+                assigned_to_index: '',
+                assigned_to_id_employee: '',
+                assigned_to_name: '',
+                dossier_annotation_date_last: '',
+                dossier_annotation_type_last: '',
+                dossier_annotation_employee_last: ''
+            },
+            loading: true,
+            submitStatus: null,
+            registerStatus: null,
+            annotation_types: [],
+            employees: [],
+            radicados_executory_list: [],
+            radicados_executory: [],
+            plaintiffs: [],
+            defendants: [],
+            enableAudience: false
+        }
     },
-    validations: {
-        form: {
-            radicado: {
-                required,
-                minLength: minLength(29)
+    validations() {
+        if (!this.enableAudience) {
+            return {
+                form: {
+                    radicado: {
+                        required,
+                        minLength: minLength(29)
+                    }
+                },
+                form_dossier: {
+                    id_dossier: {
+                        required
+                    },
+                    radicado: {
+                        required
+                    },
+                    id_plaintiff: {
+                        required
+                    },
+                    plaintiff: {
+                        required
+                    },
+                    id_defendant: {
+                        required
+                    },
+                    defendant: {
+                        required
+                    },
+                    court_origin_name: {
+                        required
+                    },
+                    court_destination_name: {
+                    },
+                    dossier_type_name: {
+                        required
+                    },
+                    position: {
+                    },
+                    annotation_type: {
+                        required
+                    },
+                    audience_date: {
+                        minLength: minLength(19),
+                        maxLength: maxLength(19)
+                    },
+                    audience_observation: {
+                        minLength: minLength(10),
+                    },
+                    start_date: {
+                        required,
+                        minLength: minLength(10),
+                        maxLength: maxLength(10)
+                    },
+                    days: {
+                        numeric
+                    },
+                    end_date: {
+                        minLength: minLength(10),
+                        maxLength: maxLength(10)
+                    },
+                    assigned_to_index: {
+                    },
+                    assigned_to_id_employee: {
+                    },
+                    assigned_to_name: {
+                    },
+                }
             }
-        },
-        form_dossier: {
-            id_dossier: {
-                required
-            },
-            radicado: {
-                required
-            },
-            id_plaintiff: {
-                required
-            },
-            plaintiff: {
-                required
-            },
-            id_defendant: {
-                required
-            },
-            defendant: {
-                required
-            },
-            court_origin_name: {
-                required
-            },
-            court_destination_name: {
-            },
-            dossier_type_name: {
-                required
-            },
-            position: {
-            },
-            annotation_type: {
-                required
-            },
-            audience_date: {
-                required,
-                minLength: minLength(19),
-                maxLength: maxLength(19)
-            },
-            audience_observation: {
-                required,
-                minLength: minLength(10),
-            },
-            start_date: {
-                required,
-                minLength: minLength(10),
-                maxLength: maxLength(10)
-            },
-            days: {
-                numeric
-            },
-            end_date: {
-                minLength: minLength(10),
-                maxLength: maxLength(10)
-            },
-            assigned_to_index: {
-            },
-            assigned_to_id_employee: {
-            },
-            assigned_to_name: {
-            },
+        } else {
+            return {
+                form: {
+                    radicado: {
+                        required,
+                        minLength: minLength(29)
+                    }
+                },
+                form_dossier: {
+                    id_dossier: {
+                        required
+                    },
+                    radicado: {
+                        required
+                    },
+                    id_plaintiff: {
+                        required
+                    },
+                    plaintiff: {
+                        required
+                    },
+                    id_defendant: {
+                        required
+                    },
+                    defendant: {
+                        required
+                    },
+                    court_origin_name: {
+                        required
+                    },
+                    court_destination_name: {
+                    },
+                    dossier_type_name: {
+                        required
+                    },
+                    position: {
+                    },
+                    annotation_type: {
+                        required
+                    },
+                    audience_date: {
+                        required,
+                        minLength: minLength(19),
+                        maxLength: maxLength(19)
+                    },
+                    audience_observation: {
+                        required,
+                        minLength: minLength(10),
+                    },
+                    start_date: {
+                        required,
+                        minLength: minLength(10),
+                        maxLength: maxLength(10)
+                    },
+                    days: {
+                        numeric
+                    },
+                    end_date: {
+                        minLength: minLength(10),
+                        maxLength: maxLength(10)
+                    },
+                    assigned_to_index: {
+                    },
+                    assigned_to_id_employee: {
+                    },
+                    assigned_to_name: {
+                    },
+                }
+            }
         }
     },
     beforeCreate() {
@@ -198,6 +272,7 @@ const app = new Vue({
                     this.$v.form_dossier.$reset();
                     app.plaintiffs = [];
                     app.defendants = [];
+                    app.enableAudience = false;
                 }
             }
         },
@@ -332,6 +407,15 @@ const app = new Vue({
                         app.form_dossier.start_date = new moment().format('DD/MM/YYYY');
                         this.submitStatus = 'OK'
                     });
+            }
+        },
+        selectAnnotationTypeAudience: function() {
+            let annotation_type = app.form_dossier.annotation_type;
+            if (annotation_type === '11') {
+                // console.log(app.annotation_types[annotation_type - 1].annotation_type_name);
+                app.enableAudience = true;
+            } else {
+                app.enableAudience = false;
             }
         },
         calculateDaysToEndDate: function() {
