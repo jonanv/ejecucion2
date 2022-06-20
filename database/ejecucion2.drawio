@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-20T22:01:54.691Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="92oQtVB-CJjqL6MlF-B9" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-20T22:38:46.954Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="eWS4Zn0Ssxj5pQg982cT" version="20.0.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3690" dy="2708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -1363,7 +1363,7 @@
             <mxPoint x="815" y="496.5" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JLPfwYuVppmMRg6Ym0iC-2" value="&lt;div&gt;- Ubicar en juzgado de origen&lt;/div&gt;&lt;div&gt;- Elaborar comisorios&lt;/div&gt;&lt;div&gt;- Elaborar costas&lt;/div&gt;&lt;div&gt;- Archivar&lt;/div&gt;&lt;div&gt;- Elaborar oficio - memorial&lt;/div&gt;&lt;div&gt;- Elaborar telegrama&lt;/div&gt;&lt;div&gt;- Enviar a remates&lt;/div&gt;&lt;div&gt;- Pasa al contador&lt;/div&gt;&lt;div&gt;- Pasa para recurso&lt;/div&gt;&lt;div&gt;- Proceso con orden de pago&lt;/div&gt;&lt;div&gt;- Audiencia&lt;/div&gt;&lt;div&gt;- Enviar al despacho una vez ejecutoriado el auto&lt;/div&gt;&lt;div&gt;- Hacer Desglose&lt;/div&gt;&lt;div&gt;- Hacer título&lt;/div&gt;&lt;div&gt;- Hacer traslado&lt;/div&gt;&lt;div&gt;- Proceso suspendido por términos&lt;/div&gt;&lt;div&gt;- Realizar edicto emplazatorio&lt;/div&gt;&lt;div&gt;- Remitir expediente digital&lt;/div&gt;&lt;div&gt;- Revisar liquidación contador&lt;/div&gt;&lt;div&gt;- Términos&lt;/div&gt;&lt;div&gt;-&amp;nbsp;Responder requerimiento&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
+        <mxCell id="JLPfwYuVppmMRg6Ym0iC-2" value="&lt;div&gt;- Ubicar en juzgado de origen&lt;/div&gt;&lt;div&gt;- Elaborar comisorios&lt;/div&gt;&lt;div&gt;- Elaborar costas&lt;/div&gt;&lt;div&gt;- Archivar&lt;/div&gt;&lt;div&gt;- Elaborar oficio - memorial&lt;/div&gt;&lt;div&gt;- Elaborar telegrama&lt;/div&gt;&lt;div&gt;- Enviar a remates&lt;/div&gt;&lt;div&gt;- Proceso con orden de pago&lt;/div&gt;&lt;div&gt;- Audiencia&lt;/div&gt;&lt;div&gt;- Enviar al despacho una vez ejecutoriado el auto&lt;/div&gt;&lt;div&gt;- Hacer Desglose&lt;/div&gt;&lt;div&gt;- Hacer título&lt;/div&gt;&lt;div&gt;- Hacer traslado&lt;/div&gt;&lt;div&gt;- Proceso suspendido por términos&lt;/div&gt;&lt;div&gt;- Realizar edicto emplazatorio&lt;/div&gt;&lt;div&gt;- Remitir expediente digital&lt;/div&gt;&lt;div&gt;- Revisar liquidación contador&lt;/div&gt;&lt;div&gt;- Términos&lt;/div&gt;&lt;div&gt;-&amp;nbsp;Responder requerimiento&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
           <mxGeometry x="-652.5" y="1530" width="350" height="307.5" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-3" value="annotation_type (siepro_pa_observaciones - accion_expediente)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -1583,7 +1583,7 @@
           <mxGeometry y="258" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="ky7duF7u2FRwAN61GTPb-51" value="transfer_110" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FF3333;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="370" y="1370" width="220" height="182" as="geometry" />
+          <mxGeometry x="355" y="1384" width="220" height="182" as="geometry" />
         </mxCell>
         <mxCell id="ky7duF7u2FRwAN61GTPb-52" value="+ id_transfer: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ky7duF7u2FRwAN61GTPb-51" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -1616,7 +1616,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mM7dI1g5y5NDbZkcGBi1-19" value="task_status_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="370" y="1750" width="220" height="104" as="geometry" />
+          <mxGeometry x="362.5" y="1780" width="220" height="104" as="geometry" />
         </mxCell>
         <mxCell id="mM7dI1g5y5NDbZkcGBi1-29" value="+ id_task_status: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mM7dI1g5y5NDbZkcGBi1-19" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -1715,7 +1715,7 @@
           <mxGeometry y="208" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="zZBYcX4wvtoDddy9xdaY-34" value="liquidation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FF3333;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="370" y="1570" width="220" height="156" as="geometry" />
+          <mxGeometry x="355" y="1580" width="220" height="156" as="geometry" />
         </mxCell>
         <mxCell id="zZBYcX4wvtoDddy9xdaY-35" value="+ id_liquidation: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -1731,12 +1731,6 @@
         </mxCell>
         <mxCell id="zZBYcX4wvtoDddy9xdaY-44" value="+ id_task: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
           <mxGeometry y="130" width="220" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-43" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="ky7duF7u2FRwAN61GTPb-50" target="zZBYcX4wvtoDddy9xdaY-44">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="125" y="1384" as="sourcePoint" />
-            <mxPoint x="340" y="1600" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="zZBYcX4wvtoDddy9xdaY-46" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="ky7duF7u2FRwAN61GTPb-52" target="zZBYcX4wvtoDddy9xdaY-45">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -1781,6 +1775,12 @@
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="370" y="593" as="sourcePoint" />
             <mxPoint x="210" y="374" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-60" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="ky7duF7u2FRwAN61GTPb-50" target="zZBYcX4wvtoDddy9xdaY-44">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="585" y="1433" as="sourcePoint" />
+            <mxPoint x="590" y="1717" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
