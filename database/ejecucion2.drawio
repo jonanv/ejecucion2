@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-20T20:43:13.119Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="bGDmAzi3cUejeNKFheGR" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-20T22:01:54.691Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="92oQtVB-CJjqL6MlF-B9" version="20.0.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="3442" dy="2597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="3690" dy="2708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -299,7 +299,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-14" value="location_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="1125" y="820.5" width="250" height="104" as="geometry" />
+          <mxGeometry x="1115" y="820.5" width="250" height="104" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-15" value="+ id_location_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-14" vertex="1">
           <mxGeometry y="26" width="250" height="26" as="geometry" />
@@ -330,13 +330,13 @@
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-66" value="+ dossier_term_revised: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
           <mxGeometry y="130" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="WWjFzzvigEe-oElvQ5hi-6" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
+        <mxCell id="kAV78_8R-8U5BCedtc6I-41" value="+ id_term_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
           <mxGeometry y="156" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-175" value="+ id_employee: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
+        <mxCell id="WWjFzzvigEe-oElvQ5hi-6" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
           <mxGeometry y="182" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-41" value="+ id_term_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
+        <mxCell id="kAV78_8R-8U5BCedtc6I-175" value="+ id_employee: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-19" vertex="1">
           <mxGeometry y="208" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-24" value="location_dossier" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -379,7 +379,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-36" value="term_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-50" y="780" width="250" height="130" as="geometry" />
+          <mxGeometry x="360" y="310" width="250" height="130" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-37" value="+ id_term_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-36" vertex="1">
           <mxGeometry y="26" width="250" height="26" as="geometry" />
@@ -400,7 +400,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-43" value="correspondence (correspondencia)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-45" y="-339" width="240" height="312" as="geometry" />
+          <mxGeometry x="-45" y="-500" width="240" height="312" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-44" value="+ id_correspondence: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-43" vertex="1">
           <mxGeometry y="26" width="240" height="26" as="geometry" />
@@ -436,7 +436,7 @@
           <mxGeometry y="286" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-51" value="document_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="535" y="-146" width="245" height="104" as="geometry" />
+          <mxGeometry x="330" y="-528" width="245" height="104" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-57" value="+ id_document_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-51" vertex="1">
           <mxGeometry y="26" width="245" height="26" as="geometry" />
@@ -472,7 +472,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-81" value="request_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="532.5" y="-26" width="245" height="104" as="geometry" />
+          <mxGeometry x="330" y="-400" width="245" height="104" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-82" value="+ id_request_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-81" vertex="1">
           <mxGeometry y="26" width="245" height="26" as="geometry" />
@@ -528,7 +528,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-129" value="&lt;div&gt;SOLICITUDES MEMORIAL&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Acepta Cargo Secuestre&lt;/div&gt;&lt;div&gt;Acepta Designación Como Curador AD LITEM&lt;/div&gt;&lt;div&gt;Acta De Entrega Secuestre&lt;/div&gt;&lt;div&gt;Acumulaciones&lt;/div&gt;&lt;div&gt;Agregar Despacho Comisorio&lt;/div&gt;&lt;div&gt;Apoderados&lt;/div&gt;&lt;div&gt;Aporta Abono&lt;/div&gt;&lt;div&gt;Aporta AvalÃºo&lt;/div&gt;&lt;div&gt;Aporta Caución Póliza Judicial&lt;/div&gt;&lt;div&gt;Aporta Certificado Catastral&lt;/div&gt;&lt;div&gt;Aporta Certificado de Tradición Remate&lt;/div&gt;&lt;div&gt;Aporta Gastos&lt;/div&gt;&lt;div&gt;Aporta Liquidación de Crédito&lt;/div&gt;&lt;div&gt;Aporta Poder&lt;/div&gt;&lt;div&gt;Aporta Publicaciones De Remate&lt;/div&gt;&lt;div&gt;Autorización para Retirar Documentos&lt;/div&gt;&lt;div&gt;Autorización para Revisar Proceso&lt;/div&gt;&lt;div&gt;Bancos&lt;/div&gt;&lt;div&gt;Cambio Dirección Apoderado&lt;/div&gt;&lt;div&gt;Cancelación de Embargo&lt;/div&gt;&lt;div&gt;Cancelación Honorarios&lt;/div&gt;&lt;div&gt;Cancelación Honorarios Secuestre&lt;/div&gt;&lt;div&gt;Certificado De Existencia Y Representación&lt;/div&gt;&lt;div&gt;Certificado De Tradición&lt;/div&gt;&lt;div&gt;Cesión de Crédito&lt;/div&gt;&lt;div&gt;Citación a Tercer Acreedor&lt;/div&gt;&lt;div&gt;Comunicación Embargo&lt;/div&gt;&lt;div&gt;Consignación Excedente Remate&lt;/div&gt;&lt;div&gt;Constancia de Consignación&lt;/div&gt;&lt;div&gt;Constancia Entrega Oficio&lt;/div&gt;&lt;div&gt;Constancia Envío Oficio&lt;/div&gt;&lt;div&gt;Contestación Demanda&lt;/div&gt;&lt;div&gt;Copias&lt;/div&gt;&lt;div&gt;Créditos y Costas&lt;/div&gt;&lt;div&gt;Dependencia Judicial&lt;/div&gt;&lt;div&gt;MemorialDerechoPeticion&lt;/div&gt;&lt;div&gt;Derecho Petición&lt;/div&gt;&lt;div&gt;Desistimiento Tácito&lt;/div&gt;&lt;div&gt;Devolución Expediente&lt;/div&gt;&lt;div&gt;Devolución Incidente de Desacato Circuito&lt;/div&gt;&lt;div&gt;Devolución Notificación Tutela&lt;/div&gt;&lt;div&gt;Devolución Oficio&lt;/div&gt;&lt;div&gt;Devolución Oficio Tutela 472&lt;/div&gt;&lt;div&gt;Direccion Notificaciones&lt;/div&gt;&lt;div&gt;Direccion para Notificación Acreedor Hipotecario&lt;/div&gt;&lt;div&gt;Emplazamiento&lt;/div&gt;&lt;div&gt;Entrega de Inmuebles&lt;/div&gt;&lt;div&gt;Expediente Digital&lt;/div&gt;&lt;div&gt;Fijar Fecha para Remate&lt;/div&gt;&lt;div&gt;Fijar Honorarios&lt;/div&gt;&lt;div&gt;Impugnación Tutela&lt;/div&gt;&lt;div&gt;Incidente&lt;/div&gt;&lt;div&gt;Incidente de Desacato Respuesta&lt;/div&gt;&lt;div&gt;Incidente de Desacato Solicitud&lt;/div&gt;&lt;div&gt;Incidente Desacato en Salud&lt;/div&gt;&lt;div&gt;Incidente Desacato Ingreso&lt;/div&gt;&lt;div&gt;Informe Final&lt;/div&gt;&lt;div&gt;Informe Mensual&lt;/div&gt;&lt;div&gt;Levantamiento de Medidas&lt;/div&gt;&lt;div&gt;Medidas Cautelares&lt;/div&gt;&lt;div&gt;No Acepta Designación Como Curador AD LITEM&lt;/div&gt;&lt;div&gt;Notificaciones&lt;/div&gt;&lt;div&gt;Nueva Dirección Notificaciones&lt;/div&gt;&lt;div&gt;Objecion al Dictamen Pericial&lt;/div&gt;&lt;div&gt;Objeta Liquidación&lt;/div&gt;&lt;div&gt;Otra Solicitudes a Despacho&lt;/div&gt;&lt;div&gt;Otras&lt;/div&gt;&lt;div&gt;Pago Honorarios&lt;/div&gt;&lt;div&gt;Préstamo Expediente&lt;/div&gt;&lt;div&gt;Reanuda Proceso&lt;/div&gt;&lt;div&gt;Reconocimiento de Personería&lt;/div&gt;&lt;div&gt;Recurso de Reposición&lt;/div&gt;&lt;div&gt;Reexpedición Oficios&lt;/div&gt;&lt;div&gt;Remanentes&lt;/div&gt;&lt;div&gt;Renuncia de Poder&lt;/div&gt;&lt;div&gt;Reporte 472&lt;/div&gt;&lt;div&gt;Requerir Al IGAC&lt;/div&gt;&lt;div&gt;Requerir EPS Información Empleado&lt;/div&gt;&lt;div&gt;Requerir Secuestre&lt;/div&gt;&lt;div&gt;Requiere Ordenar Comisión&lt;/div&gt;&lt;div&gt;Requiere Pagador&lt;/div&gt;&lt;div&gt;Respuesta Remanentes&lt;/div&gt;&lt;div&gt;Respuesta Requerimiento&lt;/div&gt;&lt;div&gt;Respuesta Requerimiento Despacho&lt;/div&gt;&lt;div&gt;Respuesta Tutela&lt;/div&gt;&lt;div&gt;Sanción Pagador&lt;/div&gt;&lt;div&gt;Solicita Desglose&lt;/div&gt;&lt;div&gt;Solicita Envío de Expediente para Acumulación&lt;/div&gt;&lt;div&gt;Solicita Que Se Nombre Curador AD LITEM&lt;/div&gt;&lt;div&gt;Solicitud Información&lt;/div&gt;&lt;div&gt;Solicitud Oficios&lt;/div&gt;&lt;div&gt;Subrogación&lt;/div&gt;&lt;div&gt;Suspensión de Remate&lt;/div&gt;&lt;div&gt;Suspensión Proceso&lt;/div&gt;&lt;div&gt;Sustitución de Poder&lt;/div&gt;&lt;div&gt;Terminaciones&lt;/div&gt;&lt;div&gt;Títulos&lt;/div&gt;&lt;div&gt;Tramite Derivado Remate&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCC99;" parent="1" vertex="1">
-          <mxGeometry x="1580" y="-528" width="300" height="1452" as="geometry" />
+          <mxGeometry x="2120" y="-870" width="300" height="1452" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-51" target="kAV78_8R-8U5BCedtc6I-131" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -537,7 +537,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-131" value="- Memorial - entrada&lt;br&gt;- Oficio - salida&lt;br&gt;- Auto&lt;br&gt;- Despachos comisorios" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="902.5" y="-119" width="140" height="73" as="geometry" />
+          <mxGeometry x="700" y="-512.5" width="140" height="73" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-103" target="kAV78_8R-8U5BCedtc6I-133" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -564,7 +564,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-137" value="- Caja de origen - activos&lt;br&gt;- Caja de archivo - archivados" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="1455" y="831" width="170" height="83" as="geometry" />
+          <mxGeometry x="1395" y="831" width="170" height="83" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kAV78_8R-8U5BCedtc6I-36" target="kAV78_8R-8U5BCedtc6I-139" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -573,7 +573,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-139" value="TÉRMINOS&lt;br&gt;- Notificación de términos&lt;br&gt;&lt;br&gt;COSAS QUE PASAN CON LOS TERMINOS&lt;br&gt;- Perentoriedad de los términos y oportunidades procesales&lt;br&gt;- Cómputo de términos&lt;br&gt;- Renuncia de términos&lt;br&gt;- Términos para dictar las provincias judiciales por fuera de la audiencia&lt;br&gt;- Duración del proceso" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCCCC;" parent="1" vertex="1">
-          <mxGeometry x="-640" y="510" width="390" height="152" as="geometry" />
+          <mxGeometry x="665" y="299" width="390" height="152" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="99nmjj4Q9bfn7_SC2MuP-29" target="kAV78_8R-8U5BCedtc6I-141" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -585,10 +585,10 @@
           <mxGeometry x="-970" y="1294" width="140" height="76" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-142" value="OFICIOS&lt;br&gt;&lt;br&gt;&lt;div&gt;Oficio a Juzgados y Otros&lt;/div&gt;&lt;div&gt;Oficio Acumulacion de Embargo&lt;/div&gt;&lt;div&gt;Oficio Cambio de Cuenta pagador&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Bancos&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Bancos y Vigencia Otro Juzgado&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Camara Comercio&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Camara Comercio y Vigencia Otro Juzgado&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Pagador&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Pagador y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Registro&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Registro y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Transito&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Transito y Prenda&lt;/div&gt;&lt;div&gt;Oficio Cancelacion de Embargo Transito y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Embargo de Remanentes&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Embargo de Remanentes y Vigencia&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Hipoteca Notario&lt;/div&gt;&lt;div&gt;Oficio Cancelacion Hipoteca y Patrimonio o Afectacion a Vivienda Notaria&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Camara de Comercio&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Bancos&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Contrato&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo de Acciones&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Pagador&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Registro&lt;/div&gt;&lt;div&gt;Oficio Comunicacion Embargo Transito&lt;/div&gt;&lt;div&gt;Oficio deja a Disposicion Remanentes&lt;/div&gt;&lt;div&gt;Oficio Designacion Amparo de Pobreza&lt;/div&gt;&lt;div&gt;Oficio Designacion Curador&lt;/div&gt;&lt;div&gt;Oficio Designacion Perito&lt;/div&gt;&lt;div&gt;Oficio Designacion Secuestre&lt;/div&gt;&lt;div&gt;Oficio Embargo del Credito&lt;/div&gt;&lt;div&gt;Oficio Embargo Remanentes&lt;/div&gt;&lt;div&gt;Oficio General&lt;/div&gt;&lt;div&gt;Oficio Reitera Cambio Cuenta Pagador&lt;/div&gt;&lt;div&gt;Oficio Remanentes no Surte Efecto&lt;/div&gt;&lt;div&gt;Oficio Remanentes Surte Efecto&lt;/div&gt;&lt;div&gt;Oficio Requiere Designe Apoderado&lt;/div&gt;&lt;div&gt;Oficio Requiere Pagador&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Entrega&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Notificacion Personal&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Preste Poliza&lt;/div&gt;&lt;div&gt;Oficio Requiere Secuestre Rinda Informes&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCC99;" parent="1" vertex="1">
-          <mxGeometry x="1900" y="-528" width="305" height="690" as="geometry" />
+          <mxGeometry x="2440" y="-870" width="305" height="690" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-144" value="&lt;div&gt;AUTOS&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AGREGA DESPACHO COMISORIO SIN DILIGENECIAR&lt;/div&gt;&lt;div&gt;ACEPTA CESION DE CREDITO AV VILLAS&lt;/div&gt;&lt;div&gt;ACEPTA RENUNCIA PODER&lt;/div&gt;&lt;div&gt;AGREGA INFORMES DE SECUESTRE&lt;/div&gt;&lt;div&gt;AGREGA Y PONE EN CONOCIMIENTO OFICIOS ORIPAM&lt;/div&gt;&lt;div&gt;Auto Agrega y Pone en Conocimiento&lt;/div&gt;&lt;div&gt;AUTO APRUEBA AVALUO Y&amp;nbsp; FIJA FECHA REMATE INMUEBLE&lt;/div&gt;&lt;div&gt;CORRE TRASLADO AVALUO COMERCIAL Y OTRO&lt;/div&gt;&lt;div&gt;CORRE TRASLADO AVALUO IGAC&lt;/div&gt;&lt;div&gt;CORRE TRASLADO CUENTAS FINALES SECUESTRE&lt;/div&gt;&lt;div&gt;CORRE TRASLADO DICTAMEN PERITO&lt;/div&gt;&lt;div&gt;DECRETA MEDIDAS BANCOS&lt;/div&gt;&lt;div&gt;DESPACHO COMISORIO DILIGENCIADO&lt;/div&gt;&lt;div&gt;FIJA FECHA REMATE BIENES MUEBLES&lt;/div&gt;&lt;div&gt;FIJA FECHA REMATE VEHICULO&lt;/div&gt;&lt;div&gt;FIJA HONORARIOS SECUESTRE&lt;/div&gt;&lt;div&gt;LEVANTA MEDIDA CAUTELAR&lt;/div&gt;&lt;div&gt;ORDENA COMISION INMUEBLE O MUEBLES&lt;/div&gt;&lt;div&gt;ORDENA COMISION VEHICULO&lt;/div&gt;&lt;div&gt;RECONOCE PERSONERIA&lt;/div&gt;&lt;div&gt;REQUIERE PAGADOR&lt;/div&gt;&lt;div&gt;RESUELVE REMANENTES SI SURTE EFECTOS&lt;/div&gt;&lt;div&gt;REVOCA PODER&lt;/div&gt;&lt;div&gt;SUSPENDE PROCESO&lt;/div&gt;&lt;div&gt;SUSTITUYE PODER NUEVO&lt;/div&gt;&lt;div&gt;TERMINA PROCESO HIPOTECARIO&lt;/div&gt;&lt;div&gt;TERMINA PROCESO POR PAGO SALARIO&lt;/div&gt;&lt;div&gt;TRASLADO DE INCIDENTE A SECUESTRE PREVIO APERTURA&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCC99;" parent="1" vertex="1">
-          <mxGeometry x="2225" y="-528" width="380" height="455" as="geometry" />
+          <mxGeometry x="2765" y="-870" width="380" height="455" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-146" value="AVISO DE REMATE&lt;br&gt;&lt;br&gt;- Aviso de remate inmueble&lt;br&gt;- Aviso de remate mueble&lt;br&gt;- Aviso de remate&amp;nbsp; vehículo" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCC99;" parent="1" vertex="1">
           <mxGeometry x="1365" y="1261" width="230" height="100" as="geometry" />
@@ -597,7 +597,7 @@
           <mxGeometry x="1615" y="1261" width="330" height="200" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-150" value="dossier_title (hcet_encabezado)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-50" y="122" width="250" height="364" as="geometry">
+          <mxGeometry x="-50" y="117" width="250" height="364" as="geometry">
             <mxRectangle x="150" y="122" width="220" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -625,7 +625,7 @@
         <mxCell id="kAV78_8R-8U5BCedtc6I-168" value="+ id_title_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-150" vertex="1">
           <mxGeometry y="208" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-160" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-150" vertex="1">
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-21" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kAV78_8R-8U5BCedtc6I-150">
           <mxGeometry y="234" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="ky7duF7u2FRwAN61GTPb-39" value="+ id_employee_registered: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-150" vertex="1">
@@ -640,14 +640,8 @@
         <mxCell id="kAV78_8R-8U5BCedtc6I-159" value="+ title_dossier_modified_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-150" vertex="1">
           <mxGeometry y="338" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="kAV78_8R-8U5BCedtc6I-161" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" source="99nmjj4Q9bfn7_SC2MuP-48" target="kAV78_8R-8U5BCedtc6I-160" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="420" y="530" as="sourcePoint" />
-            <mxPoint x="520" y="430" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-163" value="title_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-50" width="250" height="104" as="geometry" />
+          <mxGeometry x="370" y="130" width="250" height="104" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-164" value="+ id_title_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kAV78_8R-8U5BCedtc6I-163" vertex="1">
           <mxGeometry y="26" width="250" height="26" as="geometry" />
@@ -671,7 +665,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-172" value="- Títulos valores (Letras)&lt;br&gt;- Títulos judiciales (Se pagan)" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="350" y="130" width="170" height="83" as="geometry" />
+          <mxGeometry x="700" y="140.5" width="170" height="83" as="geometry" />
         </mxCell>
         <mxCell id="kAV78_8R-8U5BCedtc6I-173" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" source="99nmjj4Q9bfn7_SC2MuP-8" target="ky7duF7u2FRwAN61GTPb-39" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -1076,7 +1070,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-1" value="document (expe_digital)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FFCCCC;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="105" y="-1168" width="280" height="494" as="geometry" />
+          <mxGeometry x="720" y="-1120" width="280" height="494" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-2" value="+ id_document: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="OqHATmE9yE6C7j0-I17L-1" vertex="1">
           <mxGeometry y="26" width="280" height="26" as="geometry" />
@@ -1133,7 +1127,7 @@
           <mxGeometry y="468" width="280" height="26" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-31" value="actuation (expe_historial)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="540" y="-1220" width="270" height="286" as="geometry" />
+          <mxGeometry x="1110" y="-1230" width="270" height="286" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-32" value="+ id_actuation: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="OqHATmE9yE6C7j0-I17L-31" vertex="1">
           <mxGeometry y="26" width="270" height="26" as="geometry" />
@@ -1166,7 +1160,7 @@
           <mxGeometry y="260" width="270" height="26" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-35" value="notebook_type (expe_cuaderno)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="532.5" y="-888" width="240" height="156" as="geometry" />
+          <mxGeometry x="1160" y="-898" width="240" height="156" as="geometry" />
         </mxCell>
         <mxCell id="OqHATmE9yE6C7j0-I17L-36" value="+ id_notebook_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="OqHATmE9yE6C7j0-I17L-35" vertex="1">
           <mxGeometry y="26" width="240" height="26" as="geometry" />
@@ -1274,15 +1268,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-5" value="actuation_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="930" y="-1150" width="220" height="104" as="geometry" />
-        </mxCell>
-        <mxCell id="mON6WonRohZX_aaUOoLF-6" value="+ id_actuation_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mON6WonRohZX_aaUOoLF-5" vertex="1">
-          <mxGeometry y="26" width="220" height="26" as="geometry" />
+          <mxGeometry x="1405" y="-1160" width="220" height="104" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-7" value="+ actuation_type_name: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mON6WonRohZX_aaUOoLF-5" vertex="1">
-          <mxGeometry y="52" width="220" height="26" as="geometry" />
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-8" value="+ actuation_type_description: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mON6WonRohZX_aaUOoLF-5" vertex="1">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="mON6WonRohZX_aaUOoLF-6" value="+ id_actuation_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mON6WonRohZX_aaUOoLF-5" vertex="1">
           <mxGeometry y="78" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-9" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;" parent="1" source="mON6WonRohZX_aaUOoLF-6" target="rQy6I5jSdBG7i_t-9aFB-11" edge="1">
@@ -1298,10 +1292,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-11" value="&lt;div&gt;- Cuaderno principal&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Acumulada 1 cuaderno principal&lt;/div&gt;&lt;div&gt;- Acumulada 2 cuaderno principal&lt;/div&gt;&lt;div&gt;- Acumulada 3 cuaderno principal&lt;/div&gt;&lt;div&gt;- Acumulada 4 cuaderno principal&lt;/div&gt;&lt;div&gt;- Acumulada 5 cuaderno principal&lt;/div&gt;&lt;div&gt;- Acumulada 1 cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Acumulada 2 cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Acumulada 3 cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Acumulada 4 cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Acumulada 5 cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Cuaderno principal incidente 1&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas incidente 1&lt;/div&gt;&lt;div&gt;- Cuaderno de recursos&lt;/div&gt;&lt;div&gt;- Cuaderno de restitución&lt;/div&gt;&lt;div&gt;- Cuaderno secuestre&lt;/div&gt;&lt;div&gt;- Cuaderno conflicto de competencias&lt;/div&gt;&lt;div&gt;- Cuaderno proceso rendición espontanea de cuentas&lt;/div&gt;&lt;div&gt;- Cuaderno de títulos&lt;/div&gt;&lt;div&gt;- Cuaderno principal incidente 2&lt;/div&gt;&lt;div&gt;- Cuaderno principal incidente 3&lt;/div&gt;&lt;div&gt;- Cuaderno principal incidente 4&lt;/div&gt;&lt;div&gt;- Despacho comisorio&lt;/div&gt;&lt;div&gt;- Cuaderno pruebas&lt;/div&gt;&lt;div&gt;- Cuaderno de subrogación&lt;/div&gt;&lt;div&gt;- Cuaderno excepciones previas&lt;/div&gt;&lt;div&gt;- Cuaderno responsabilidad civil extracontractual&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas incidente 2&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas incidente 3&lt;/div&gt;&lt;div&gt;- Cuaderno impedimento&lt;/div&gt;&lt;div&gt;- Cuaderno monitorio&lt;/div&gt;&lt;div&gt;- Cuaderno tutela 1&lt;/div&gt;&lt;div&gt;- Cuaderno responsabilidad civil contractual&lt;/div&gt;&lt;div&gt;- Cuaderno principal de restitución&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas de restitución&lt;/div&gt;&lt;div&gt;- Acumulada 6 cuaderno principal&lt;/div&gt;&lt;div&gt;- Acumulada 6 cuaderno de medidas&lt;/div&gt;&lt;div&gt;- Cuaderno ejecutivo a continuación principal&lt;/div&gt;&lt;div&gt;- Cuaderno ejecutivo a continuación medidas&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas secuestre&lt;/div&gt;&lt;div&gt;- Cuaderno impugnación tutela 1&lt;/div&gt;&lt;div&gt;- Cuaderno tutela 2&lt;/div&gt;&lt;div&gt;- Cuaderno impugnación tutela 2&lt;/div&gt;&lt;div&gt;- Cuaderno proceso verbal&lt;/div&gt;&lt;div&gt;- Cuaderno reivindicatorio&lt;/div&gt;&lt;div&gt;- Cuaderno de medidas verbal&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="-1060" width="360" height="690" as="geometry" />
+          <mxGeometry x="1710" y="-1070" width="360" height="690" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-12" value="origen_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="557.5" y="-694" width="220" height="104" as="geometry" />
+          <mxGeometry x="1160" y="-714" width="220" height="104" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-13" value="+ id_origen_type: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mON6WonRohZX_aaUOoLF-12" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -1325,7 +1319,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-18" value="- Digitalizado&lt;br&gt;- Electrónico" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="830" y="-630" width="100" height="40" as="geometry" />
+          <mxGeometry x="1465" y="-672" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-19" value="court (pa_juzgado)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FFCCCC;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="790" y="1041.5" width="240" height="156" as="geometry" />
@@ -1358,10 +1352,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-53" value="- Auto requiere&lt;br&gt;- Auto decreta medida&lt;br&gt;- Auto pone conocimiento&lt;br&gt;- Auto termina&lt;br&gt;- Auto agrega" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="1265" y="-1160" width="175" height="80" as="geometry" />
+          <mxGeometry x="1775" y="-1170" width="175" height="80" as="geometry" />
         </mxCell>
         <mxCell id="1skcdSYpiU9riw8ruw96-4" value="Cuando un usuario radica un memorial se radica en el expediente?&lt;br&gt;&lt;br&gt;Debe de llevar una autorización previa de un usuario" style="whiteSpace=wrap;html=1;align=left;fillColor=#FFCCCC;" parent="1" vertex="1">
-          <mxGeometry x="-150" y="-888" width="180" height="113" as="geometry" />
+          <mxGeometry x="362.5" y="-739" width="180" height="113" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="JLPfwYuVppmMRg6Ym0iC-3" target="JLPfwYuVppmMRg6Ym0iC-2" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -1369,7 +1363,7 @@
             <mxPoint x="815" y="496.5" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JLPfwYuVppmMRg6Ym0iC-2" value="&lt;div&gt;- Ubicar en juzgado de origen&lt;/div&gt;&lt;div&gt;- Elaborar comisorios&lt;/div&gt;&lt;div&gt;- Elaborar costas&lt;/div&gt;&lt;div&gt;- Archivar&lt;/div&gt;&lt;div&gt;- Elaborar oficio - memorial&lt;/div&gt;&lt;div&gt;- Elaborar telegrama&lt;/div&gt;&lt;div&gt;- Enviar a remates&lt;/div&gt;&lt;div&gt;- Pasa al contador&lt;/div&gt;&lt;div&gt;- Pasa para recurso&lt;/div&gt;&lt;div&gt;- Proceso con orden de pago&lt;/div&gt;&lt;div&gt;- Audiencia&lt;/div&gt;&lt;div&gt;- Enviar al despacho una vez ejecutoriado el auto&lt;/div&gt;&lt;div&gt;- Hacer Desglose&lt;/div&gt;&lt;div&gt;- Hacer título&lt;/div&gt;&lt;div&gt;- Hacer traslado&lt;/div&gt;&lt;div&gt;- Proceso suspendido por términos&lt;/div&gt;&lt;div&gt;- Realizar edicto emplazatorio&lt;/div&gt;&lt;div&gt;- Remitir expediente digital&lt;/div&gt;&lt;div&gt;- Revisar la liquidación del contador&lt;/div&gt;&lt;div&gt;- Términos&lt;/div&gt;&lt;div&gt;-&amp;nbsp;Responder requerimiento&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
+        <mxCell id="JLPfwYuVppmMRg6Ym0iC-2" value="&lt;div&gt;- Ubicar en juzgado de origen&lt;/div&gt;&lt;div&gt;- Elaborar comisorios&lt;/div&gt;&lt;div&gt;- Elaborar costas&lt;/div&gt;&lt;div&gt;- Archivar&lt;/div&gt;&lt;div&gt;- Elaborar oficio - memorial&lt;/div&gt;&lt;div&gt;- Elaborar telegrama&lt;/div&gt;&lt;div&gt;- Enviar a remates&lt;/div&gt;&lt;div&gt;- Pasa al contador&lt;/div&gt;&lt;div&gt;- Pasa para recurso&lt;/div&gt;&lt;div&gt;- Proceso con orden de pago&lt;/div&gt;&lt;div&gt;- Audiencia&lt;/div&gt;&lt;div&gt;- Enviar al despacho una vez ejecutoriado el auto&lt;/div&gt;&lt;div&gt;- Hacer Desglose&lt;/div&gt;&lt;div&gt;- Hacer título&lt;/div&gt;&lt;div&gt;- Hacer traslado&lt;/div&gt;&lt;div&gt;- Proceso suspendido por términos&lt;/div&gt;&lt;div&gt;- Realizar edicto emplazatorio&lt;/div&gt;&lt;div&gt;- Remitir expediente digital&lt;/div&gt;&lt;div&gt;- Revisar liquidación contador&lt;/div&gt;&lt;div&gt;- Términos&lt;/div&gt;&lt;div&gt;-&amp;nbsp;Responder requerimiento&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
           <mxGeometry x="-652.5" y="1530" width="350" height="307.5" as="geometry" />
         </mxCell>
         <mxCell id="JLPfwYuVppmMRg6Ym0iC-3" value="annotation_type (siepro_pa_observaciones - accion_expediente)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -1490,7 +1484,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ky7duF7u2FRwAN61GTPb-5" value="title_detail (titulos)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-540" y="162" width="263.75" height="312" as="geometry" />
+          <mxGeometry x="-540" y="156" width="263.75" height="312" as="geometry" />
         </mxCell>
         <mxCell id="ky7duF7u2FRwAN61GTPb-6" value="+ id_title_detail: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ky7duF7u2FRwAN61GTPb-5" vertex="1">
           <mxGeometry y="26" width="263.75" height="26" as="geometry" />
@@ -1554,33 +1548,6 @@
             <mxPoint x="-250" y="971" as="sourcePoint" />
             <mxPoint x="370" y="1061" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="ky7duF7u2FRwAN61GTPb-46" value="request_titles" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FF3333;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-50" y="-610" width="250" height="234" as="geometry" />
-        </mxCell>
-        <mxCell id="ky7duF7u2FRwAN61GTPb-47" value="+ id_ request_titles: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ky7duF7u2FRwAN61GTPb-46" vertex="1">
-          <mxGeometry y="26" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-20" value="+ id_user: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="52" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-25" value="+ request_title_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="78" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-26" value="+ request_title_observation: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="104" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-27" value="+ id_employee_registered: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="130" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-23" value="+ request_title_response_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="156" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-29" value="+ request_title_response_observation: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="182" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="zZBYcX4wvtoDddy9xdaY-21" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
-          <mxGeometry y="208" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="ky7duF7u2FRwAN61GTPb-49" value="task" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="-105" y="1336" width="220" height="284" as="geometry" />
@@ -1649,7 +1616,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mM7dI1g5y5NDbZkcGBi1-19" value="task_status_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="370" y="1577" width="220" height="104" as="geometry" />
+          <mxGeometry x="370" y="1750" width="220" height="104" as="geometry" />
         </mxCell>
         <mxCell id="mM7dI1g5y5NDbZkcGBi1-29" value="+ id_task_status: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mM7dI1g5y5NDbZkcGBi1-19" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
@@ -1718,6 +1685,102 @@
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="369.99999999999955" y="593" as="sourcePoint" />
             <mxPoint x="380" y="-340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ky7duF7u2FRwAN61GTPb-46" value="request_titles" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FF3333;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="-45" y="-146" width="240" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="ky7duF7u2FRwAN61GTPb-47" value="+ id_ request_titles: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ky7duF7u2FRwAN61GTPb-46" vertex="1">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-20" value="+ id_user: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="52" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-25" value="+ request_title_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="78" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-26" value="+ request_title_observation: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="104" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-27" value="+ id_employee: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="130" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-23" value="+ request_title_response_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="156" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-29" value="+ request_title_response_observation: text" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="182" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-58" value="+ id_dossier: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ky7duF7u2FRwAN61GTPb-46">
+          <mxGeometry y="208" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-34" value="liquidation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FF3333;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1570" width="220" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-35" value="+ id_liquidation: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-36" value="+ id_employee_registered: bigint(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-37" value="+ transfer_registered_date: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-45" value="+ id_transfer: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
+          <mxGeometry y="104" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-44" value="+ id_task: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-34">
+          <mxGeometry y="130" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-43" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="ky7duF7u2FRwAN61GTPb-50" target="zZBYcX4wvtoDddy9xdaY-44">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="125" y="1384" as="sourcePoint" />
+            <mxPoint x="340" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-46" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;" edge="1" parent="1" source="ky7duF7u2FRwAN61GTPb-52" target="zZBYcX4wvtoDddy9xdaY-45">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="125" y="1384" as="sourcePoint" />
+            <mxPoint x="380" y="1549" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-47" value="day_operation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="-732" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-48" value="+ id_day_operation: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-47">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-49" value="+ day_week: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-47">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-50" value="+ name_day_operation: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-47">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-51" value="+ enable_day_operation: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-47">
+          <mxGeometry y="104" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-52" value="hour_operation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="-581" width="220" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-53" value="+ id_hour_operation: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-52">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-54" value="+ schedule: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-52">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-55" value="+ name_hour_operation: string(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-52">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-56" value="+ hour_operation: time" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-52">
+          <mxGeometry y="104" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-57" value="+ enable_hour_operation: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zZBYcX4wvtoDddy9xdaY-52">
+          <mxGeometry y="130" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zZBYcX4wvtoDddy9xdaY-59" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" edge="1" parent="1" source="99nmjj4Q9bfn7_SC2MuP-48" target="zZBYcX4wvtoDddy9xdaY-58">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="370" y="593" as="sourcePoint" />
+            <mxPoint x="210" y="374" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
