@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-20T22:38:46.954Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="eWS4Zn0Ssxj5pQg982cT" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-20T22:44:48.915Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="8gcYAoa2xMQUv_-9uM8s" version="20.0.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3690" dy="2708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -195,12 +195,6 @@
         </mxCell>
         <mxCell id="zX6q9PSeDQ9ZzKakYrvz-15" value="+ electronic_dossier: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="99nmjj4Q9bfn7_SC2MuP-47" vertex="1">
           <mxGeometry y="780" width="240" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="99nmjj4Q9bfn7_SC2MuP-76" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=none;" parent="99nmjj4Q9bfn7_SC2MuP-47" source="mM7dI1g5y5NDbZkcGBi1-1" target="uwlaLx61UvlyAh1Fpi0u-3" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-80" y="431" as="sourcePoint" />
-            <mxPoint x="-500" y="591" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="99nmjj4Q9bfn7_SC2MuP-72" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" source="mON6WonRohZX_aaUOoLF-20" target="99nmjj4Q9bfn7_SC2MuP-53" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -1322,7 +1316,7 @@
           <mxGeometry x="1465" y="-672" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-19" value="court (pa_juzgado)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FFCCCC;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="790" y="1041.5" width="240" height="156" as="geometry" />
+          <mxGeometry x="785" y="1028" width="240" height="156" as="geometry" />
         </mxCell>
         <mxCell id="mON6WonRohZX_aaUOoLF-20" value="+ id_court: int(11)" style="text;strokeColor=none;fillColor=#FFCCCC;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mON6WonRohZX_aaUOoLF-19" vertex="1">
           <mxGeometry y="26" width="240" height="26" as="geometry" />
@@ -1391,7 +1385,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xAH6Q3KQfg1zG3wUC4cS-4" value="- Juzgado 1 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 2 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 3 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 4 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 5 Civil Municipal de Manizales&lt;br&gt;- Juzgado 6 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 7 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 8 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 9 Civil Municipal de Manizales&lt;br&gt;- Juzgado 10 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 11 Civil Municipal de Manizales&lt;br&gt;- Juzgado 12 Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 1 de Ejecución Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Juzgado 2 de Ejecución Civil Municipal de Manizales&lt;br&gt;-&amp;nbsp;Oficina de Ejecución Civil Municipal de Manizales" style="whiteSpace=wrap;html=1;align=left;fillColor=#99FF99;" parent="1" vertex="1">
-          <mxGeometry x="1165" y="996" width="320" height="236" as="geometry" />
+          <mxGeometry x="1160" y="988" width="320" height="236" as="geometry" />
         </mxCell>
         <mxCell id="xAH6Q3KQfg1zG3wUC4cS-6" value="dossier_defendant" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="795" y="635" width="220" height="78" as="geometry" />
@@ -1616,7 +1610,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mM7dI1g5y5NDbZkcGBi1-19" value="task_status_type" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="362.5" y="1780" width="220" height="104" as="geometry" />
+          <mxGeometry x="355" y="1760" width="220" height="104" as="geometry" />
         </mxCell>
         <mxCell id="mM7dI1g5y5NDbZkcGBi1-29" value="+ id_task_status: int(11)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="mM7dI1g5y5NDbZkcGBi1-19" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
