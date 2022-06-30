@@ -403,7 +403,7 @@ const app = new Vue({
                         app.form_dossier.court_origin_name = response.data.court_origin_name;
                         app.form_dossier.court_destination_name = response.data.court_destination_name;
                         app.form_dossier.dossier_type_name = response.data.dossier_type_name;
-                        app.form_dossier.position = response.data.posicion;
+                        app.form_dossier.position = response.data.position;
                         app.form_dossier.start_date = new moment().format('DD/MM/YYYY');
                         this.submitStatus = 'OK'
                     });

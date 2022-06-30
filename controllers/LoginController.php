@@ -12,6 +12,9 @@
                     $id_employee_login = str_replace('.', '', $id_employee_login);
                     $encriptar = LoginModel::encryption($password_login);
 
+                    // $pass = LoginModel::decryption('VDFoVmJUSEh6ZlRnMjM4M3RGZkNHZz09');
+                    // return $pass;
+
                     $data = array(
                         "id_employee_login" => $id_employee_login,
                         "password_login" => $encriptar,

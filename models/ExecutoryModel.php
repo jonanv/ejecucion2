@@ -7,15 +7,14 @@
                 "SELECT d.*,
                 co.id_court AS id_court_origin, co.court_name AS court_origin_name, 
                 cd.id_court AS id_court_destination, cd.court_name AS court_destination_name, 
-                dt.*, e.*
+                dt.*, ld.*, e.*
                 FROM dossier AS d
                 INNER JOIN court AS co ON (co.id_court = d.id_court_origin)
-                INNER JOIN court AS cd ON (cd.id_court = d.id_court_destination)
+                LEFT JOIN court AS cd ON (cd.id_court = d.id_court_destination)
                 INNER JOIN dossier_type AS dt ON (dt.id_dossier_type = d.id_dossier_type)
-                -- INNER JOIN location_dossier AS ld ON (ld.id_location_dossier = d.id_location_dossier)
+                LEFT JOIN location_dossier AS ld ON (ld.id_location_dossier = d.id_location_dossier)
                 INNER JOIN employee AS e ON (e.id_employee = d.id_employee_registered)
                 WHERE radicado = :radicado";
-                // TODO: Hacer la consulta para que devuelva el expediente con juzgado de destino vacio y si tiene dato
             $response = ConnectionModel::connectMySQL()->prepare($query);
             $response->bindParam(":radicado", $radicado, PDO::PARAM_STR);
             if ($response->execute()) {

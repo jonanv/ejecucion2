@@ -2,6 +2,7 @@
     require_once "ConnectionModel.php";
 
     class EntryGuardianshipsModel {
+        
         public static function getGuardianshipsOfDayModel() {
             date_default_timezone_set('America/Bogota');
 		    $date = date('Y-m-d');
